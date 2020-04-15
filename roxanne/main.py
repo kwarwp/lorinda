@@ -8,10 +8,10 @@ HOMEM_ARANHA = "https://static3.tcdn.com.br/img/img_prod/460977/pre_venda_boneco
 BOB_ESPONJA = "https://cdn-ofuxico.akamaized.net/img/upload/noticias/2020/02/27/bob-esponja-episodio-especial-melhores-momentos-nickelodeon_372085_36.jpg"
 
 class jujuba():
-      sanduiche = Cena(img= SANDUICHE)
-      escola = Cena(img= ESCOLA)
-      homem_aranha = Elemento(img= HOMEM_ARANHA)
-      bob_esponja = Elemento (img= BOB_ESPONJA)
+      sanduiche = Cena(img=SANDUICHE)
+      escola = Cena(img=ESCOLA)
+      homem_aranha = Elemento(img=HOMEM_ARANHA)
+      bob_esponja = Elemento (img=BOB_ESPONJA)
       sanduiche.direita= escola
       escola.esquerda=sanduiche
       homem_aranha.entra(sanduiche)
