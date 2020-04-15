@@ -63,3 +63,10 @@ NameError: name 'jujuba' is not defined
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Tue Apr 14 2020 22:06:13.34 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 22
+  jujuba() 
+  ^
+IndentationError: unexpected indent
+'''},
