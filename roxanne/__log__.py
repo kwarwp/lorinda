@@ -31,3 +31,10 @@ SyntaxError: invalid syntax
            ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Apr 14 2020 22:04:19.383 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 22
+  jujuba():
+           ^
+SyntaxError: invalid syntax
+'''},
