@@ -12,7 +12,7 @@ class jujuba():
       escola = Cena(img=ESCOLA)
       homem_aranha = Elemento(img=HOMEM_ARANHA)
       bob_esponja = Elemento (img=BOB_ESPONJA)
-      sanduiche.direita= escola
+      sanduiche.direita=escola
       escola.esquerda=sanduiche
       homem_aranha.entra(sanduiche)
       bob_esponja.entra(escola)
