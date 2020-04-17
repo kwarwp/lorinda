@@ -30,3 +30,10 @@ Traceback (most recent call last):
   module <module> line 3
     from _spy.vitollino.main import Inventaio as inv
 '''},
+{'date': 'Fri Apr 17 2020 18:46:53.408 GMt-0300 (GMT-03:00) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 6
+  PLAYER = 
+            ^
+SyntaxError: invalid syntax
+'''},
