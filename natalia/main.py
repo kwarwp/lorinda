@@ -11,7 +11,7 @@ CASA = "https://www.tudoconstrucao.com/wp-content/uploads/2014/12/casa-de-praia-
 QUADROS = "https://staticcdns3.bidu.com.br/jamal/uploads/2016/11/06164925/3b1.jpg"
 TOUR = "https://s2.glbimg.com/zYpJy77kEUuJR3sRh3kiTdzZ4Bk=/620x455/e.glbimg.com/og/ed/f/original/2014/02/27/cj688paisagismo130.jpg"
 COFRE = "https://a-static.mlcdn.com.br/618x463/cofre-concretado-com-boca-de-lobo-ct30bl-30x36x26-segredo-mecanico-cofresventura/cofresventura/5030/aeae22f74a1dac4ebacb09409c0875bd.jpg"
-
+HEREDOGRAMA = "https://pt-static.z-dn.net/files/d71/7bf7ab4461bea11a7a1c561ed2584a48.png"
 
 class gameg():
 
@@ -38,7 +38,8 @@ class gameg():
         tour.direita=quadros
         zezinho.entra(quadros)#zezinho ajeita o quadro e quando irá arrumar outro quadro e ele está muito pesado, ao tirar da parde encontra um cofre
         cofre = Cena(img = COFRE)# ESSE COFRE PRECISA TER UM HEREDPGRAMA PARA ABRIR
-        
+        #NAO ENTENDI A GAVETA COM LETRAS
+        heredograma= Elemento( img = HEREDOGRAMA)# ESTAR COMO UM QUADRO
         
         
         
