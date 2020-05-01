@@ -24,11 +24,13 @@ class gameg():
         
         quadros = Cena( img = QUADROS)
         casa.direita=quadros
+        quadros.esquerda=casa
         zezinho.entra(quadros)#colocar mesnagem confusa de zezinho em relação aos quadros
         rosalinda.entra(quadros)
         
         tour= Cena( img = TOUR)
         quadros.direita=tour
+        tour.esquerda=quadros
         zezinho.entra(tour)
         rosalinda.entra(tour)#recebe um telfonema e diz que zezinho pode ficar a vontade, mas ela tera que se ausentar
         
