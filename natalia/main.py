@@ -9,6 +9,8 @@ ZEZINHO = "https://i.imgur.com/94lhgKo.png"
 ROSALINDA = "https://i.imgur.com/qvuwHvs.png"
 CASA = "https://www.tudoconstrucao.com/wp-content/uploads/2014/12/casa-de-praia-colorida-simples.jpg"
 QUADROS = "https://staticcdns3.bidu.com.br/jamal/uploads/2016/11/06164925/3b1.jpg"
+TOUR = "https://s2.glbimg.com/zYpJy77kEUuJR3sRh3kiTdzZ4Bk=/620x455/e.glbimg.com/og/ed/f/original/2014/02/27/cj688paisagismo130.jpg"
+
 
 class gameg():
 
@@ -24,6 +26,11 @@ class gameg():
         casa.direita=quadros
         zezinho.entra(quadros)#colocar mesnagem confusa de zezinho em relação aos quadros
         rosalinda.entra(quadros)
+        
+        tour= Cena( img = TOUR)
+        quadros.direita=tour
+        zezinho.entra(tour)
+        rosalinda.entra(tour)#recebe um telfonema e diz que zezinho pode ficar a vontade, mas ela tera que se ausentar
         
         
         
