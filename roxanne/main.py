@@ -1,6 +1,9 @@
 # lorinda.roxanne.main.py
-from _spy.vitollino.main import Cena,Elemento,Texto 
+from _spy.vitollino.main import Cena,Elemento,Texto, STYLE
 from _spy.vitollino.main import Inventario as inv
+
+STYLE["width"] = 800
+STYLE["height"] = "600px"
 
 SANDUICHE = "https://www.estudopratico.com.br/wp-content/uploads/2016/12/o-palacio-do-planalto-sede-do-poder-executivo-federal-1200x675.jpg"
 ESCOLA = "https://www.hypeness.com.br/wp-content/uploads/2019/09/escla4.jpg"
