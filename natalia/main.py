@@ -10,6 +10,7 @@ ROSALINDA = "https://i.imgur.com/qvuwHvs.png"
 CASA = "https://www.tudoconstrucao.com/wp-content/uploads/2014/12/casa-de-praia-colorida-simples.jpg"
 QUADROS = "https://staticcdns3.bidu.com.br/jamal/uploads/2016/11/06164925/3b1.jpg"
 TOUR = "https://s2.glbimg.com/zYpJy77kEUuJR3sRh3kiTdzZ4Bk=/620x455/e.glbimg.com/og/ed/f/original/2014/02/27/cj688paisagismo130.jpg"
+COFRE = "https://a-static.mlcdn.com.br/618x463/cofre-concretado-com-boca-de-lobo-ct30bl-30x36x26-segredo-mecanico-cofresventura/cofresventura/5030/aeae22f74a1dac4ebacb09409c0875bd.jpg"
 
 
 class gameg():
@@ -31,8 +32,14 @@ class gameg():
         tour= Cena( img = TOUR)
         quadros.direita=tour
         tour.esquerda=quadros
-        zezinho.entra(tour)
+        zezinho.entra(tour)#zezinha volta para ver o quadros pois ficou encafifado
         rosalinda.entra(tour)#recebe um telfonema e diz que zezinho pode ficar a vontade, mas ela tera que se ausentar
+        
+        tour.direita=quadros
+        zezinho.entra(quadros)#zezinho ajeita o quadro e quando irá arrumar outro quadro e ele está muito pesado, ao tirar da parde encontra um cofre
+        cofre = Cena(img = COFRE)# ESSE COFRE PRECISA TER UM HEREDPGRAMA PARA ABRIR
+        
+        
         
         
         
