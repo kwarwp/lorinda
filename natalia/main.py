@@ -11,7 +11,7 @@ CASA = "https://www.tudoconstrucao.com/wp-content/uploads/2014/12/casa-de-praia-
 
 class gameg():
 
-        casa = Cena( img = Casa)
+        casa = Cena( img = CASA)
         zezinho = Elemento( img = ZEZINHO)
         rosalinda = Elemento( img = ROSALINDA)
         zezinho.entra(casa)
