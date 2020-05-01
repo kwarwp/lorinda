@@ -161,3 +161,23 @@ AttributeError: 'oi' object has no attribute 'habilita'
     self.quadro.entra(sala1)
 NameError: name 'sala1' is not defined
 '''},
+{'date': 'Thu Apr 30 2020 21:20:49.46 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 160
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 20
+    oi()
+  module <module> line 17
+    self.botao.entra(self.sala1)
+  module _spy.vitollino.main line 472
+    self.scorer.update(valor=cena.nome, move=self.xy,
+AttributeError: 'Texto' object has no attribute 'nome'
+'''},
