@@ -355,3 +355,10 @@ NameError: name 'quadro' is not defined
 'error': '''
 Exception: <TypeError: innermost.C.tree[0].args.indexOf is not a function>
 '''},
+{'date': 'Sun May 03 2020 04:15:46.223 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 23
+  DOIS TRAÇOS
+        ^
+SyntaxError: invalid syntax
+'''},
