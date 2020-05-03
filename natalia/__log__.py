@@ -362,3 +362,7 @@ Exception: <TypeError: innermost.C.tree[0].args.indexOf is not a function>
         ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Sun May 03 2020 04:15:54.391 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: innermost.C.tree[0].args.indexOf is not a function>
+'''},
