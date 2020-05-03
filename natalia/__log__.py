@@ -351,3 +351,7 @@ NameError: name 'quadro' is not defined
     rosalinda.entra(quadro)
 NameError: name 'quadro' is not defined
 '''},
+{'date': 'Sun May 03 2020 01:10:09.195 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: innermost.C.tree[0].args.indexOf is not a function>
+'''},
