@@ -285,3 +285,10 @@ AttributeError: 'Sala' object has no attribute 'vai'
                                 ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Mon May 04 2020 18:18:43.579 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 44
+  self.sistema.vai=self.um.sul)
+                            ^
+SyntaxError: invalid syntax
+'''},
