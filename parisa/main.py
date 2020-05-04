@@ -24,8 +24,9 @@ class oi:
         Texto(self.um.norte, "Seja bem vindo, cientista! Hoje iremos aprender um pouquinho sobre biologia com o auxilio da nossa maravilhosa tecnologia. Vamos nessa?").vai()
 
         
-        self.botao=Elemento(img=BOTAO,tit="ligar",
-        style=dict(left=330, top=230, width=80, heigth="2px")) 
+        #self.botao=Elemento(img=BOTAO,tit="ligar",
+        #style=dict(left=330, top=230, width=80, heigth="2px")) 
+        self.botao=Elemento(img=BOTAO,tit="ligar", x=330, y=430, w=80) 
         self.botao.entra(um.norte)
         self.botao.vai=self.um.leste.vai
         
