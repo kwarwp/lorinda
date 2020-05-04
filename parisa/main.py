@@ -34,14 +34,27 @@ class oi:
         self.voltar1.entra(um.leste)
         self.voltar1.vai=self.um.norte.vai
         
+        
+        self.sistema = Elemento (img= "https://i.imgur.com/n4R7Cs6.png",
+        style=dict(left=330, top=400, width=150, heigth="2px"))
+        self.sistema.entra(um.leste)
+        self.sistema.vai=self.um.sul.vai
+        
+        self.cadeia = Elemento (img = "https://i.imgur.com/a2E0TI7.png", tit= "senha",
+        style=dict(left=730, top=400, width=150, heigth="2px"))
+        self.cadeia.entra(um.leste)
+        self.cadeia.vai
+        
+        
+        self.somatico = Elemento (img = "https://i.imgur.com/V5RQYKz.png", tit ="senha",
+        style=dict(left=530, top=400, width=150, heigth="2px"))
+        self.somatico.entra(um.leste)
+        self.somatico.vai
+
         self.pasta = Elemento (img="https://i.imgur.com/bPsIZws.png", tit = "pasta", 
         style=dict(left=330, top=230, width=80, heigth="2px")) 
         self.pasta.entra(um.sul)
-
-        self.sistema = Elemento (img= "https://i.imgur.com/n4R7Cs6.png",
-        style=dict(left=330, top=300, width=150, heigth="2px"))
-        self.sistema.entra(um.leste)
-        self.sistema.vai
+        self.pasta.vai=self.um.oeste.vai
 
 
 
