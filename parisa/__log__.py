@@ -278,3 +278,10 @@ AttributeError: 'oi' object has no attribute 'sala1'
     self.um.vai()
 AttributeError: 'Sala' object has no attribute 'vai'
 '''},
+{'date': 'Mon May 04 2020 16:35:16.575 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 30
+  self.botao.vai=self.um.leste.vai)
+                                ^
+SyntaxError: invalid syntax
+'''},
