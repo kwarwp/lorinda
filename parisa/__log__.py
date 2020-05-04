@@ -310,3 +310,10 @@ SyntaxError: invalid syntax
     self.somatico.vai
 AttributeError: 'oi' object has no attribute 'somatico'
 '''},
+{'date': 'Mon May 04 2020 20:05:43.763 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 62
+  self.aminoacido= Elemento(img= "https://i.imgur.com/YF2cXp3.png", tit "Aminoácido",
+                                                                         ^
+SyntaxError: invalid syntax
+'''},
