@@ -217,3 +217,10 @@ AttributeError: 'oi' object has no attribute 'botao'
     self.falamenino= Texto(sala1, "Muito obrigado, Senhora Neide")
 NameError: name 'sala1' is not defined
 '''},
+{'date': 'Mon May 04 2020 16:29:34.807 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 40
+  self.pasta.entra(self
+                                                                                                                                     ^
+SyntaxError: invalid syntax
+'''},
