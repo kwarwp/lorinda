@@ -317,3 +317,21 @@ AttributeError: 'oi' object has no attribute 'somatico'
                                                                          ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Mon May 04 2020 20:06:33.467 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 160
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 70
+    oi()
+  module <module> line 65
+    self.falaamido= Texto(todos.leste, "Muito obrigado, Senhora Neide")
+NameError: name 'todos' is not defined
+'''},
