@@ -5,12 +5,21 @@ STYLE["width"] = 1150
 STYLE["height"] = "600px"
 #quadro negro
 BOTAO = "https://pngimage.net/wp-content/uploads/2018/05/bot%C3%A3o-power-png-7.png"
+#
+
 #saladeinformatica 1 CENA
-SALA ="https://i.imgur.com/bnapnxL.png"
-TELACOMPUTER = "https://i.imgur.com/307pZY8.png"
+SALA1 ="https://i.imgur.com/bnapnxL.png"
+  #teladocomputador
+SALA2 = "https://i.imgur.com/307pZY8.png"
+#tela das pastas
+SALA3 = "https://i.imgur.com/uGG1xMk.png"
+#
+SALA4 = "
 
 class oi:
     def __init__(self):
+        self.um = um = Sala(n=SALA1, l=SALA2, s=SALA3, o= SALA4)
+        
         self.sala1=Cena(img=SALA)
        
         
