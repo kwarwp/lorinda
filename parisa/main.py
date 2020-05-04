@@ -15,7 +15,7 @@ class oi:
        
         
         self.botao=Elemento(img=BOTAO,tit="ligar",
-        style=dict(left=330, top=230, width=80, heigth="2000000000px")) 
+        style=dict(left=330, top=230, width=80, heigth="2px")) 
         self.botao.entra(self.sala1)
         self.computer=Cena(img = TELACOMPUTER)
         self.botao.vai=self.computer.vai
