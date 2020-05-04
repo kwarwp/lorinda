@@ -13,28 +13,37 @@ SALA1 ="https://i.imgur.com/bnapnxL.png"
 SALA2 = "https://i.imgur.com/307pZY8.png"
 #tela das pastas
 SALA3 = "https://i.imgur.com/uGG1xMk.png"
-#
-SALA4 = "
+#mar
+SALA4 = "https://www.brunobobone.com/wp-content/uploads/2018/07/economia-do-mar-Portugal-des%C3%ADgnio-nacional.jpg"
 
 class oi:
     def __init__(self):
         self.um = um = Sala(n=SALA1, l=SALA2, s=SALA3, o= SALA4)
+        self.um.oeste.vai
         
-        self.sala1=Cena(img=SALA)
-       
-        
+
         self.botao=Elemento(img=BOTAO,tit="ligar",
         style=dict(left=330, top=230, width=80, heigth="2px")) 
-        self.botao.entra(self.sala1)
-        self.computer=Cena(img = TELACOMPUTER)
-        self.botao.vai=self.computer.vai
+        self.botao.entra(um.norte)
+        self.botao.vai=self.um.leste.vai
+        
+
         
         self.voltar1=Elemento(img="https://image.flaticon.com/icons/png/512/74/74345.png", tit="desligar",
         style=dict(left=80, top=510, width=80, heigth="2000000000px")) 
-        self.voltar1.entra(self.computer)
-        self.voltar1.vai=self.sala1.vai
-        #self.falamenino= Texto(self.sala1, "")
-        #self.botao.vai=self.falamenino.vai
-       
-        self.sala1.vai()
+        self.voltar1.entra(um.leste)
+        self.voltar1.vai=self.um.norte.vai
+        
+        self.pasta = Elemento (img="https://i.imgur.com/bPsIZws.png", tit = "pasta", 
+        style=dict(left=330, top=230, width=80, heigth="2px")) 
+        self.pasta.entra(um.sul)
+
+        self.sistema = Elemento (img= "https://i.imgur.com/n4R7Cs6.png",
+        style=dict(left=330, top=300, width=150, heigth="2px"))
+        self.sistema.entra(um.leste)
+        self.sistema.vai
+
+
+
+        self.um.norte.vai()
 oi()
