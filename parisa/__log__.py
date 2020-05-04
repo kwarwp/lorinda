@@ -353,3 +353,10 @@ NameError: name 'todos' is not defined
     self.falamido= Texto(todos.leste, "Muito obrigado, Senhora Neide")
 NameError: name 'todos' is not defined
 '''},
+{'date': 'Mon May 04 2020 20:51:27.770 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 41
+  self.sistema = Elemento (img= "https://i.imgur.com/n4R7Cs6.png", x =330, y=400, y=150, w="2px"))
+                                                                                   ^
+SyntaxError: keyword argument repeated
+'''},
