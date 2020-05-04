@@ -14,14 +14,16 @@ SALA2 = "https://i.imgur.com/307pZY8.png"
 #tela das pastas
 SALA3 = "https://i.imgur.com/uGG1xMk.png"
 #mar
-SALA4 = "https://www.brunobobone.com/wp-content/uploads/2018/07/economia-do-mar-Portugal-des%C3%ADgnio-nacional.jpg"
+SALA4 = "https://i.imgur.com/fxMYKmc.png"
 
 class oi:
     def __init__(self):
         self.um = um = Sala(n=SALA1, l=SALA2, s=SALA3, o= SALA4)
         self.um.oeste.vai
         
+        Texto(self.um.norte, "Seja bem vindo, cientista! Hoje iremos aprender um pouquinho sobre biologia com o auxilio da nossa maravilhosa tecnologia. Vamos nessa?").vai()
 
+        
         self.botao=Elemento(img=BOTAO,tit="ligar",
         style=dict(left=330, top=230, width=80, heigth="2px")) 
         self.botao.entra(um.norte)
@@ -52,11 +54,17 @@ class oi:
         self.somatico.vai
 
         self.pasta = Elemento (img="https://i.imgur.com/bPsIZws.png", tit = "pasta", 
-        style=dict(left=330, top=230, width=80, heigth="2px")) 
+        style=dict(left=320, top=200, width=100, heigth="2px")) 
         self.pasta.entra(um.sul)
         self.pasta.vai=self.um.oeste.vai
 
+        Texto(self.um.oeste, "Como nada nessa vida é fácil, você precisará de uma senha para a proxima etapa. Há 4 códigos genéticos que estão embaralhados, você terá que desembaralhar todos e descobrir o 'nosso' aminoacido secreto. FIQUE ATENTO AS NOSSAS DICAS!! ").vai()
+        self.aminoacido= Elemento(img= "https://i.imgur.com/YF2cXp3.png", tit ="Aminoácido",
+        style=dict(left=780, top=200, width=300, heigth="2px")) 
+        self.aminoacido.entra(um.oeste)
+        self.falamido= Texto(um.oeste, "Muito obrigado, Senhora Neide")
+        self.aminoacido.vai=self.falamido.vai
 
-
+        
         self.um.norte.vai()
 oi()
