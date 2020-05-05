@@ -381,3 +381,10 @@ SyntaxError: keyword argument repeated
                                                                                    ^
 SyntaxError: keyword argument repeated
 '''},
+{'date': 'Mon May 04 2020 21:09:32.742 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 41
+  self.sistema = Elemento (img= "https://i.imgur.com/n4R7Cs6.png", x =330, y=400, y=150, w=28)
+                                                                                   ^
+SyntaxError: keyword argument repeated
+'''},
