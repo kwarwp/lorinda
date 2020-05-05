@@ -22,4 +22,30 @@ O ENCAIXE CORRETO DE ACORDO COM AS NORMAS DA FEREFITARIEDADE
 
 #CENA 2 VERBO ENTENDER HEREDITARIEDADE
 
+MUSEU_DA_VIDA = "https://i.imgur.com/s4ZBrRv.jpg"
+NPC = "https://i.imgur.com/NEG2o8W.jpg"
 
+
+Pergaminho
+
+Dicas
+
+DNA
+
+Genes
+
+Nucleotídeos
+
+Características
+
+Organismo
+
+Sequência correta
+
+Abrir cofre
+
+PenDrive
+
+Poção mágica
+
+Super poderes
