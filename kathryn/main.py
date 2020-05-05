@@ -6,8 +6,15 @@ STYLE["Width"] = 800
 STYLE["height"] = "600px"
 
 SALA FIOCRUZ = "http://supygirls.pythonanywhere.com"
+ROSALINDA = "
 NPC = " https://i.imgur.com/NEG2o8W.jpg"
 PERGAMINHO = "https://i.imgur.com/Xe3zdhP.jpg"
-PESSOA BRANCA CABELO LISO OLHOS VERDES = "https://i.imgur.com/6vgubFm.jpg"
-PESSOA NEGRA CABELO BLACK OLHOS CASTANHOS = "https://i.imgur.com/wtpBiVS.jpg"
-PESSOA RUIVA PELE BRANCA CABELO VERMELHO = "https://i.imgur.com/ZcfLShe.jpg"
+PESSOA_BRANCA_CABELO_LISO_OLHOS_VERDES = "https://i.imgur.com/6vgubFm.jpg"
+PESSOA_NEGRA_CABELO_BLACK_OLHOS_CASTANHOS = "https://i.imgur.com/wtpBiVS.jpg"
+PESSOA_RUIVA_PELE_BRANCA_CABELO_VERMELHO = "https://i.imgur.com/ZcfLShe.jpg"
+CRIANCA_BRANCA_CABELO_LISO_OLHOS_VERDES = "https://i.imgur.com/ISvWiD4.jpg"
+CRIANCA_NEGRA_CABELO_BLACK_OLHOS_CASTANHOS = "https://i.imgur.com/qoGRKc8.jpg"
+CRIANCA_RUIVA_PELE_BRANCA_CABELO_VERMELHO = "https://i.imgur.com/DtSbcLh.jpg"
+MONTE_A_COMBINACAO_CORRETA = NESSE PEDACO DEVERA TER UM QUEBRA CABECA NA PAREDE ONDE O JOGADOR DEVERA REALIZAR
+O ENCAIXE CORRETO DE ACORDO COM AS NORMAS DA FEREFITARIEDADE
+
