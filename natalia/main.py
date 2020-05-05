@@ -141,36 +141,36 @@ class gameg():
         self.rosalinda.entra(self.casa)
         self.casa.vai()
     def tour(self, *_): 
-        self.zezinho.entra(tour)#zezinha volta para ver o quadros pois ficou encafifado
-        self.rosalinda.entra(tour)
+        self.zezinho.entra(self.tour)#zezinha volta para ver o quadros pois ficou encafifado
+        self.rosalinda.entra(self.tour)
         self.rosalinda.tit = "com licença, preciso atender essa ligação...mas fique a vontade, por favor"
         self.zezinho.tit = "preciso ver aqueles quadros novamente"
         self.tour.vai()
         
     def quadros1(self, *_):
-        self.zezinho.entra(quadros1)#zezinho ajeita o quadro e quando irá arrumar outro quadro e ele está muito pesado, ao tirar da parde encontra um cofre
+        self.zezinho.entra(self.quadros1)#zezinho ajeita o quadro e quando irá arrumar outro quadro e ele está muito pesado, ao tirar da parde encontra um cofre
         #NAO ENTENDI A GAVETA COM LETRAS
         self.zezinho.entra.tit = "tem algo estranho com esse quadro"
         self.quadros1.vai()
         
     def cofre(self, *_):
-        self.heredograma.entra(cofre)#estar como um quadro
-        self.zezinho.entra(cofre)
+        self.heredograma.entra(self.cofre)#estar como um quadro
+        self.zezinho.entra(self.cofre)
         self.cofre.vai()
         # ao clicar no heredograma ,abrir o cofre
         #LEMBROU DE UMA AULA NA FIO CRUZ
         #ABRIU O COFRE E PEGOU UM PAPEL
     def pergaminho(self, *_):
-        self.zezinho.entra(pergaminho)
-        self.heredograma.entra(pergaminho)
+        self.zezinho.entra(self.pergaminho)
+        self.heredograma.entra(self.pergaminho)
         self.zezinho.entra.tit = "esse heredrograma irá para algum lugar"
         self.pergaminho.vai()
         
     def sala(self, *_):
-        self.quadrado.entra(sala)
-        self.quadrado1.entra(sala)
-        self.circulo.entra(sala)
-        self.zezinho.entra(sala)
+        self.quadrado.entra(self.sala)
+        self.quadrado1.entra(self.sala)
+        self.circulo.entra(self.sala)
+        self.zezinho.entra(self.sala)
         self.zezinho.entra.tit = "acho que eu preciso fazer algo com isso"
         self.sala.vai()
         #dois_t = Elemento (img = DOIS_T)
