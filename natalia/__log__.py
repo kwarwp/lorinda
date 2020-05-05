@@ -380,3 +380,10 @@ SyntaxError: invalid syntax
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Tue May 05 2020 00:56:23.690 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 153
+  self.zezinho.entra.tit "tem algo estranho com esse quadro"
+                          ^
+SyntaxError: invalid syntax
+'''},
