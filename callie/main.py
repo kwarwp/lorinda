@@ -1,3 +1,28 @@
 # lorinda.callie.main.py
 from _spy.vitollino.main import Cena, Elemento, Labirinto, Texto 
 from _spy.vitollino.main import inventario as inv 
+BIBLIOTECA=
+REMEDIO=
+AJUDANTE=
+LABORATORIO=
+MENSAGEM=
+LADRAO=
+CASA=
+FORMULA=
+AJUDNTE_DOENTE=
+CIENTISTA=
+ESCRITURAS=
+COMPUTADOR=
+COMPRIMIDOS=
+REMEDIO=
+GENOTIPLO1=
+PORTA=
+SALA=
+AJUDANTE_ALERGICO=
+RELOGIO=
+BILHETE=
+GUARDAS=
+LIVRO=
+LANTERNA=
+REMEDIOL=
+
