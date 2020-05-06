@@ -445,3 +445,10 @@ IndentationError: unexpected indent
     self.dois = dois = Sala (n=Sala1, s= SALA7, l= SALA8, o= SALA4)
 NameError: name 'Sala1' is not defined
 '''},
+{'date': 'Wed May 06 2020 14:35:20.900 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 103
+  self.um.norte.vai()
+  ^
+IndentationError: unexpected indent
+'''},
