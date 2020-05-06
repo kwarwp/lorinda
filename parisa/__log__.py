@@ -413,3 +413,10 @@ NameError: name 'SALA5' is not defined
                                                                                                            ^
 SyntaxError: keyword argument repeated
 '''},
+{'date': 'Wed May 06 2020 13:22:08.126 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 82
+  style=dict(left=530, top=500, width=80, heigth="80px"), cena=self.um.oeste, style={"opacity": 40}, vai=self.um.sul.vai)
+                                                                                   ^
+SyntaxError: keyword argument repeated
+'''},
