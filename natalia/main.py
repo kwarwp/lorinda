@@ -21,6 +21,9 @@ QUADRADO = "https://w1.ezcdn.com.br/rebalcomercial/fotos/grande/3250fg1/prato-ra
 QUADRADO1 = "https://t2.uc.ltmcdn.com/pt/images/2/6/3/exercicio_para_calcular_a_diagonal_de_um_quadrado_24362_4_600.jpg"
 CIRCULO = "https://png.pngtree.com/png-clipart/20190223/ourlarge/pngtree-circulo-ros%C3%AA-gold-png-image_693439.jpg"
 HERDO0="https://i.imgur.com/9jsxjLw.png"
+HERDO1="https://i.imgur.com/w60bNMG.png"
+HERDO2="https://i.imgur.com/RztgWA1.png"
+HERDO3="https://i.imgur.com/FZOhJhb.png"
 """ 
 class gameg():
 
@@ -90,10 +93,14 @@ class gameg():
         casa.vai()
 gameg()"""       
 class MiniGameHerdograma:
+"""Usa um editor de imagem (https://www.online-image-editor.com/) e recorta o Herdograma em linhas geracionais.
+   No game, o jogador terá que clicar nas linhas em ordem certa para montar o herdograma corretamente.
+"""
     def __init__(self):
         class LinhaGeracional:
-            def __init__(self, linha):
-                self.linha = Elemento(linha)
+        """Representa cada uma das linhas recortadas do herdograma original"""
+            def __init__(self, linha, posicao):
+                self.linha = Elemento(linha, x=posicao*200, y=10, w=200)
         class LinhaMontada:
             def __init__(self, linha):
                 self.linha = Elemento(linha)
