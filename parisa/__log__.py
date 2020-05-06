@@ -420,3 +420,10 @@ SyntaxError: keyword argument repeated
                                                                                    ^
 SyntaxError: keyword argument repeated
 '''},
+{'date': 'Wed May 06 2020 13:27:04.950 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 85
+  self.um.norte.vai()
+  ^
+IndentationError: unexpected indent
+'''},
