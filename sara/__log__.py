@@ -53,3 +53,10 @@ AttributeError: 'naosei' object has no attribute 'um'
     auu = Elemento(FOCO, x=190, y=320, w=150, h=80, cena=self.um.oeste, style={"opacity": 40}, vai=self.frida.sul.vai)
 AttributeError: 'naosei' object has no attribute 'um'
 '''},
+{'date': 'Wed May 06 2020 19:42:10.904 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 23
+  auu = Elemento(FOCO, x=830, y=200, w=30, h=200, tit= "porta", cena=self.frida.leste, style={"opacity": 4
+                                                                                                                    ^
+SyntaxError: invalid syntax
+'''},
