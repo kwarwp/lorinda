@@ -459,3 +459,10 @@ NameError: name 'PERGAMINHO' is not defined
     quadros.direita=tour
 UnboundLocalError: local variable 'tour' referenced before assignment
 '''},
+{'date': 'Wed May 06 2020 18:26:44.341 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 96
+  """Usa um editor de imagem (https://www.online-image-editor.com/) e recorta o Herdograma em linhas geracionais.
+  ^
+IndentationError: expected an indented block
+'''},
