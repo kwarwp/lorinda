@@ -131,19 +131,19 @@ class MiniGameHerdograma:
            Calcula se montou correto, comparando com a lista de posicões corretas.
            Se já montou quatro peças, e não acerto sinaliza com zero, para iniciar o jogo.
         """
-        self.linha_inicial += self.altura_da_linha
-        self.posicoes_montadas += [posicao]
-        print(self.posicoes_montadas, self.posicoes_montadas == self.posicoes_corretas)
+        self.linha_inicial += self.altura_da_linha  # incrementa a posição para montar na linha de baixo
+        self.posicoes_montadas += [posicao]  # adiciona o índice desta peça na lista de peças montadas
         if self.posicoes_montadas == self.posicoes_corretas:
-            self.acertou() 
+            self.acertou()  # invoca a ação acertou se montou nas posições corretas
+            return 300, self.linha_inicial
         else:
-            if len(self.posicoes_montadas) == 4:
-                [linha.zera() for linha in self.linhas]
-                self.posicoes_montadas = []
-                self.linha_inicial = 300
-                return 0, 0
-            
+            if len(self.posicoes_montadas) == 4:  # se montou qutro peças incorretas reinicia o game
+                [linha.zera() for linha in self.linhas]  # volta as peças para o topo
+                self.posicoes_montadas = []  # indica que nenhuma peça foi montada
+                self.linha_inicial = 300  # inicia a altura de ontagem da primeira peça
+                return 0, 0  #  retorna uma posição inválida para sinalizar a peça
         return 300, self.linha_inicial
+            
 
 
 class gameg():
@@ -178,7 +178,8 @@ class gameg():
         """cria a cena cofre e conecta a esquerda com a cena quadros
         conencta elemento o_quadro.vai com a cena cofre via self.quadro_vai, monta o minigame no cofre"""
         self.cofre = cofre = Cena(img = COFRE)# ESSE COFRE PRECISA TER UM HEREDPGRAMA PARA ABRIR
-        cofre.esquerda = quadros
+        cofre.esquerda = Cena()
+        cofre.esquerda.vai = self.quadros_vai
         MiniGameHerdograma(cofre, self.mostra_conteudo_cofre)
         # heredo = Elemento(HEREDOGRAMA, x=540, y= 370, w=200, tit="Esse heredograma é a pista!")
         # heredo.entra(cofre)
