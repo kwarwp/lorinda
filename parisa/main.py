@@ -30,13 +30,12 @@ class oi:
         
         self.uma= uma = Sala(o= SALA4, s= SALA5, l= SALA6, n= SALA1)
         
-        self.dois = dois = Sala (n=Sala1, s= SALA7, l= SALA8, o= SALA4)
-        
+        self.dois = dois = Sala (n=SALA1, s= SALA7, l= SALA8, o= SALA4)
+       
         Texto(self.um.norte, "Seja bem vindo, cientista! Hoje iremos aprender um pouquinho sobre biologia com o auxilio da nossa maravilhosa tecnologia. Vamos nessa?").vai()
-
         
-        #self.botao=Elemento(img=BOTAO,tit="ligar",
-        #style=dict(left=330, top=230, width=80, heigth="2px")) 
+        
+        #O JOGADOR TERÁ QUE APERTAR O BOTAO PARA LIGAR O COMPUTADOR
         self.botao=Elemento(img=BOTAO,tit="ligar",
         style=dict(left=350,top=270,width=30,height="30px")) 
         self.botao.entra(um.norte)
@@ -48,7 +47,8 @@ class oi:
         style=dict(left=200, top=550, width=60, height="50px")) 
         self.voltar1.entra(um.leste)
         self.voltar1.vai=self.um.norte.vai
-        
+         
+        #APÓS ELE LIGAR O COMPUTADOR TERÁ QUE COLOCAR A SENHA QUE É "SINTESE DE PROTEINAS"
         
         self.sistema = Elemento (img= "https://i.imgur.com/n4R7Cs6.png",
         style=dict(left=330, top=400, width=150, maxHeight = "90000000px"))
@@ -65,11 +65,16 @@ class oi:
         style=dict(left=530, top=400, width=150, heigth="2px"))
         self.somatico.entra(um.leste)
         self.somatico.vai
-
+ 
+         #CLICAR NA PASTA COLORIDA QUE IRÁ ABRIR UMA OUTRA PASTA
         self.pasta = Elemento (img="https://i.imgur.com/bPsIZws.png", tit = "pasta", 
         style=dict(left=320, top=200, width=100, heigth="2px")) 
         self.pasta.entra(um.sul)
         self.pasta.vai=self.um.oeste.vai
+        
+        #NESSA CENA ELE TERÁ QUE DESEMBARALHAR OS CODONS CLICANDO NELES E UM DELES É O CODON SECRETO
+        # O CODIGO EMBARALHADO SECRETO É GAU (AUG-METIONINA)
+        #ESSE CODIGO ABRIRÁ O COFRE
 
         Texto(self.um.oeste, "Como nada nessa vida é fácil, você precisará de uma senha para a proxima etapa. Há 4 códigos genéticos que estão embaralhados, você terá que desembaralhar todos e descobrir o 'nosso' aminoacido secreto. FIQUE ATENTO AS NOSSAS DICAS!! ").vai()
         self.aminoacido= Elemento(img= "https://i.imgur.com/YF2cXp3.png", tit ="Aminoácido",
@@ -78,15 +83,23 @@ class oi:
         self.falamido= Texto(um.oeste, "Uma grande parte dos nossos células, músculos e tecido é constituído por aminoácidos, o que significa que realizar muitas funções importantes do corpo, tais como as células dando a sua estrutura. Eles também desempenham um papel chave no transporte e armazenamento de nutrientes.")
         self.aminoacido.vai=self.falamido.vai
 
+        #DICA DO CODON 
         self.dica=Elemento(img= "https://i.imgur.com/J5A0Jdo.png", tit = "dica!!",
         style=dict(left=530, top=500, width=80, heigth="80px"))
         self.dica.entra(um.oeste)
         self.faladica= Texto(um.oeste, "Met(metionina)")
         self.dica.vai=self.faladica.vai
+        
 
         auu = Elemento(FOCO, x=190, y=320, w=150, h=80, cena=self.um.oeste, style={"opacity": 0}, vai=self.uma.sul.vai)
-        gua = Elemento(FOCO, x=400, y=320, w=150, h=80, cena=self.um.oeste, style={"opacity": 0}, vai=self.uma.leste.vai)
-        aau = Elemento(FOCO, x=590, y=320, w=150, h=80, cena=self.um.oeste, style={"opacity": 0}, vai=self.dois.sul.vai)
+        aau = Elemento(FOCO, x=400, y=320, w=150, h=80, cena=self.um.oeste, style={"opacity": 0}, vai=self.dois.sul.vai)
+        gua = Elemento(FOCO, x=590, y=320, w=150, h=80, cena=self.um.oeste, style={"opacity": 0}, vai=self.uma.leste.vai)
         gau = Elemento(FOCO, x=800, y=320, w=150, h=80, cena=self.um.oeste, style={"opacity": 0}, vai=self.dois.leste.vai)
+        
+        #Texto(self.uma.sul, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
+        #Texto(self.uma.leste, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
+        #Texto(self.dois.sul, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
+        #Texto(self.dois.leste, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
         self.um.norte.vai()
+        
 oi()
