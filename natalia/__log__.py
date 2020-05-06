@@ -500,3 +500,10 @@ TypeError: enumerate() takes 2 positional argument but more were given
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Wed May 06 2020 19:17:24.454 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 116
+  self.linha.x, self.linha.y = # monta a linha no herdograma
+                                                             ^
+SyntaxError: invalid syntax
+'''},
