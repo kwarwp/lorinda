@@ -3,7 +3,8 @@ from _spy.vitollino.main import Cena, Elemento, Labirinto, Texto, Codigo, Sala, 
 from _spy.vittolino.main import INVENTARIO as inv
 STYLE["width"] = 1150
 STYLE["height"] = "550px"
-
+#papel amassado
+PAPEL= "https://i.imgur.com/SmuKKmZ.jpg"
 FOCO = "https://i.imgur.com/6e096Va.png"
 # laboratorio
 SALA1 = "https://i.imgur.com/D0zlOOx.jpg"
@@ -25,4 +26,6 @@ class naosei:
         self.falaporta= Texto(frida.leste, "A porta está trancada")
         self.porta.vai=self.falaporta.vai
         
+        self.papel=Elemento(img= PAPEL, tit= "desenho", x=830, y=200, w=30, h=200)
+        self.papel.entra(frida.leste)
 naosei()
