@@ -20,6 +20,7 @@ SALA = "https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2011/08/bias1-4e
 QUADRADO = "https://w1.ezcdn.com.br/rebalcomercial/fotos/grande/3250fg1/prato-raso-porcelana-26-cm-branco-quadrado-americana-germer-gmr-068.jpg"
 QUADRADO1 = "https://t2.uc.ltmcdn.com/pt/images/2/6/3/exercicio_para_calcular_a_diagonal_de_um_quadrado_24362_4_600.jpg"
 CIRCULO = "https://png.pngtree.com/png-clipart/20190223/ourlarge/pngtree-circulo-ros%C3%AA-gold-png-image_693439.jpg"
+HERDO0="https://i.imgur.com/9jsxjLw.png"
 """ 
 class gameg():
 
@@ -88,10 +89,18 @@ class gameg():
         
         casa.vai()
 gameg()"""       
-        
+class MiniGameHerdograma:
+    def __init__(self):
+        class LinhaGeracional:
+            def __init__(self, linha):
+                self.linha = Elemento(linha)
+        class LinhaMontada:
+            def __init__(self, linha):
+                self.linha = Elemento(linha)
         
 class gameg():
     def __init__(self):
+        """Inicia cada cena do jogo e conecta o metodo vai com um metodo (def) da classe gameg"""
         self.casa = casa = Cena( img = CASA)
         self.zezinho = Elemento( img = ZEZINHO, tit= "bOA TARDE, SOU ZEZINHO E VIM PARA A ENTREVISTA" ,
         style=dict (left=200, top=350, width=200, height="200px",))
@@ -99,16 +108,23 @@ class gameg():
         style=dict (left=400, top=350, width=300, height="200px",))
         self.zezinho.entra(casa)
         self.rosalinda.entra(casa)
-        self.quadros = quadros = Cena( img = QUADROS)
-        # casa.direita=quadros
         casa.direita=Cena()
+        """cria a cena quadros e conecta o metodo vai com um metodo (def) self.quadros_vai"""
         casa.direita.vai = self.quadros_vai
-        tour= Cena( img = TOUR)
-        tour.esquerda=quadros
-        quadros.direita=tour
+        self.quadros = quadros = Cena( img = QUADROS)
         # quadros.esquerda=casa
         quadros.esquerda=Cena()
+        """Conecta o metodo esquerda vai com um metodo (def) self.casa_vai,
+        permite que zezinho e rosalinda vontem para a cena casa
+        cria uma cena vazia na direita para poder direcionar ao metodo self.tour_vai"""
         quadros.esquerda.vai = self.casa_vai
+        quadros.direita=Cena()
+        # casa.direita=quadros
+        """cria a cena tour e conecta a esquerda com a cena quadros
+        conencta o quadros direita (cena Vazia) com a cena tour via self.tour_vai"""
+        self.tour = tour = Cena( img = TOUR)
+        quadros.direita.vai = self.tour_vai
+        tour.esquerda=quadros
         quadros1= Cena( img = QUADROS1)
         tour.direita=quadros1
         cofre = Cena(img = COFRE)# ESSE COFRE PRECISA TER UM HEREDPGRAMA PARA ABRIR
@@ -140,7 +156,7 @@ class gameg():
         self.zezinho.entra(self.casa)
         self.rosalinda.entra(self.casa)
         self.casa.vai()
-    def tour(self, *_): 
+    def tour_vai(self, *_): 
         self.zezinho.entra(self.tour)#zezinha volta para ver o quadros pois ficou encafifado
         self.rosalinda.entra(self.tour)
         self.rosalinda.tit = "com licença, preciso atender essa ligação...mas fique a vontade, por favor"
