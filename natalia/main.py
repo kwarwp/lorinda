@@ -91,34 +91,47 @@ class gameg():
         
         
         casa.vai()
-gameg()"""       
+gameg()"""
+
+
 class MiniGameHerdograma:
-"""Usa um editor de imagem (https://www.online-image-editor.com/) e recorta o Herdograma em linhas geracionais.
-   No game, o jogador terá que clicar nas linhas em ordem certa para montar o herdograma corretamente.
-"""
-    def __init__(self, esta_cena):
+    """Usa um editor de imagem (https://www.online-image-editor.com/) e recorta o Herdograma em linhas geracionais.
+       No game, o jogador terá que clicar nas linhas em ordem certa para montar o herdograma corretamente.
+    """
+    def __init__(self, esta_cena, chama_quando_acerta):
+        posiciona_proxima = self.posiciona_proxima
         class LinhaGeracional:
-        """Representa cada uma das linhas recortadas do herdograma original"""
+            """Representa cada uma das linhas recortadas do herdograma original"""
             def __init__(self, linha, posicao):
                 self.posicao = posicao
                 self.linha = Elemento(linha, x=posicao*200, y=10, w=200, h=50, cena=esta_cena)
                 self.linha.vai = self.clica_e_posiciona_a_linha
             def clica_e_posiciona_a_linha(self, *_):
-                self.linha.x, self.linha.y = self.posiciona_proxima(self.posicao)# monta a linha no herdograma
+                self.linha.x, self.linha.y = posiciona_proxima(self.posicao)# monta a linha no herdograma
                 self.linha.vai = lambda *_:None #desativa o click da linha
-        class LinhaMontada:
-            def __init__(self, linha):
-                self.linha = Elemento(linha)
+
         # coloca cada uma das linhas embaralhadas 
-        [LinhaGeracional(linha=uma_linha, posicao=uma_posicao)
-        for uma_posicao, uma_linha in enumerate(HERDO1, HERDO3, HERDO2, HERDO0)]
+        self.linhss = [
+            LinhaGeracional(linha=uma_linha, posicao=uma_posicao)
+            for uma_posicao, uma_linha in enumerate([HERDO1, HERDO3, HERDO2, HERDO0])]
+        self.acertou = chama_quando_acerta
         self.linha_inicial = 300
         self.altura_da_linha = 50
         self.posicoes_montadas = [] #lista das linhas já montadas no herdograma
-        self.posicoes_corretas = [1, 3, 2, 0] #lista das linhas montadas corretamente
-    def posiciona_proxima(self, posicao)
+        self.posicoes_corretas = [3, 0, 2, 1] #lista das linhas montadas corretamente
+
+    def posiciona_proxima(self, posicao):
         self.linha_inicial += self.altura_da_linha
+        self.posicoes_montadas += [posicao]
+        print(self.posicoes_montadas, self.posicoes_montadas == self.posicoes_corretas)
+        if self.posicoes_montadas == self.posicoes_corretas:
+            self.acertou() 
+        else:
+            if len(self.posicoes_montadas) == 4:
+            
         return 300, self.linha_inicial
+
+
 class gameg():
     def __init__(self):
         """Inicia cada cena do jogo e conecta o metodo vai com um metodo (def) da classe gameg"""
@@ -148,12 +161,15 @@ class gameg():
         tour.esquerda=quadros
         quadros1= Cena( img = QUADROS1)
         tour.direita=quadros1
-        cofre = Cena(img = COFRE)# ESSE COFRE PRECISA TER UM HEREDPGRAMA PARA ABRIR
+        """cria a cena cofre e conecta a esquerda com a cena quadros
+        conencta elemento o_quadro.vai com a cena cofre via self.quadro_vai, monta o minigame no cofre"""
+        self.cofre = cofre = Cena(img = COFRE)# ESSE COFRE PRECISA TER UM HEREDPGRAMA PARA ABRIR
         cofre.esquerda = quadros
-        heredo = Elemento(HEREDOGRAMA, x=540, y= 370, w=200, tit="Esse heredograma é a pista!")
-        heredo.entra(cofre)
+        MiniGameHerdograma(cofre, self.mostra_conteudo_cofre)
+        # heredo = Elemento(HEREDOGRAMA, x=540, y= 370, w=200, tit="Esse heredograma é a pista!")
+        # heredo.entra(cofre)
         o_quadro = Elemento(QUADRADO, x=340, y= 270, tit="Esse quadro tem algo diferente", style={"opacity":0.05})
-        o_quadro.vai = cofre.vai
+        o_quadro.vai = self.cofre_vai
         o_quadro.entra(quadros)
         pergaminho = Cena (img = PERGAMINHO)
         quadros1.direita=pergaminho
@@ -163,6 +179,8 @@ class gameg():
         livro = Elemento (img = LIVRO)
         livro.entra(biblioteca)
         casa.vai()
+    def mostra_conteudo_cofre(self, *_):        
+        Texto(self.cofre, "ZEZINHO: Encontrei um mapa interessante dentro do cofre!").vai()
     def quadros_vai(self, *_):        
         self.zezinho.entra(self.quadros)#colocar mesnagem confusa de zezinho em relação aos quadros
         self.zezinho.tit = "Lindos quadros!"
@@ -190,8 +208,8 @@ class gameg():
         self.zezinho.entra.tit = "tem algo estranho com esse quadro"
         self.quadros1.vai()
         
-    def cofre(self, *_):
-        self.heredograma.entra(self.cofre)#estar como um quadro
+    def cofre_vai(self, *_):
+        #self.heredograma.entra(self.cofre)#estar como um quadro
         self.zezinho.entra(self.cofre)
         self.cofre.vai()
         # ao clicar no heredograma ,abrir o cofre
