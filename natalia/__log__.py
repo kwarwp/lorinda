@@ -466,3 +466,10 @@ UnboundLocalError: local variable 'tour' referenced before assignment
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Wed May 06 2020 18:27:16.756 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 119
+  def posiciona_proxima(self, posicao)
+                                       ^
+SyntaxError: invalid syntax
+'''},
