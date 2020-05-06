@@ -406,3 +406,10 @@ SyntaxError: keyword argument repeated
     self.uma= uma = Sala(o= SALA4, s= SALA5, l= SALA6, n= SALA1)
 NameError: name 'SALA5' is not defined
 '''},
+{'date': 'Wed May 06 2020 13:21:48.989 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 81
+  oestee = Elemento(FOCO, style=dict(left=530, top=500, width=80, heigth="80px"), cena=self.um.oeste, style={"opacity": 40}, vai=self.um.sul.vai)
+                                                                                                           ^
+SyntaxError: keyword argument repeated
+'''},
