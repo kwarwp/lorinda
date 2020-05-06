@@ -493,3 +493,10 @@ SyntaxError: invalid syntax
     [LinhaGeracional(linha=uma_linha, posicao=uma_posicao)
 TypeError: enumerate() takes 2 positional argument but more were given
 '''},
+{'date': 'Wed May 06 2020 19:07:25.115 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 135
+  [linha.zera() for linha in self.linhas]
+  ^
+IndentationError: expected an indented block
+'''},
