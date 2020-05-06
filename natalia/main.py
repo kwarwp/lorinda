@@ -96,15 +96,29 @@ class MiniGameHerdograma:
 """Usa um editor de imagem (https://www.online-image-editor.com/) e recorta o Herdograma em linhas geracionais.
    No game, o jogador terá que clicar nas linhas em ordem certa para montar o herdograma corretamente.
 """
-    def __init__(self):
+    def __init__(self, esta_cena):
         class LinhaGeracional:
         """Representa cada uma das linhas recortadas do herdograma original"""
             def __init__(self, linha, posicao):
-                self.linha = Elemento(linha, x=posicao*200, y=10, w=200)
+                self.posicao = posicao
+                self.linha = Elemento(linha, x=posicao*200, y=10, w=200, h=50, cena=esta_cena)
+                self.linha.vai = self.clica_e_posiciona_a_linha
+            def clica_e_posiciona_a_linha(self, *_):
+                self.linha.x, self.linha.y = self.posiciona_proxima(self.posicao)# monta a linha no herdograma
+                self.linha.vai = lambda *_:None #desativa o click da linha
         class LinhaMontada:
             def __init__(self, linha):
                 self.linha = Elemento(linha)
-        
+        # coloca cada uma das linhas embaralhadas 
+        [LinhaGeracional(linha=uma_linha, posicao=uma_posicao)
+        for uma_posicao, uma_linha in enumerate(HERDO1, HERDO3, HERDO2, HERDO0)]
+        self.linha_inicial = 300
+        self.altura_da_linha = 50
+        self.posicoes_montadas = [] #lista das linhas já montadas no herdograma
+        self.posicoes_corretas = [1, 3, 2, 0] #lista das linhas montadas corretamente
+    def posiciona_proxima(self, posicao)
+        self.linha_inicial += self.altura_da_linha
+        return 300, self.linha_inicial
 class gameg():
     def __init__(self):
         """Inicia cada cena do jogo e conecta o metodo vai com um metodo (def) da classe gameg"""
