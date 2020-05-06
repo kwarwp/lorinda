@@ -26,20 +26,20 @@ class oi:
         
         #self.botao=Elemento(img=BOTAO,tit="ligar",
         #style=dict(left=330, top=230, width=80, heigth="2px")) 
-        self.botao=Elemento(img=BOTAO,tit="ligar", x=330, y=430, w=80) 
+        self.botao=Elemento(img=BOTAO,tit="ligar", x=30, y=0, w=80) 
         self.botao.entra(um.norte)
         self.botao.vai=self.um.leste.vai
         
 
         
         self.voltar1=Elemento(img="https://image.flaticon.com/icons/png/512/74/74345.png", tit="desligar",
-        style=dict(left=80, top=510, width=80, heigth="2000000000px")) 
+        style=dict(left=80, top=510, width=80, heigth="20px")) 
         self.voltar1.entra(um.leste)
         self.voltar1.vai=self.um.norte.vai
         
         
         self.sistema = Elemento (img= "https://i.imgur.com/n4R7Cs6.png",
-        style=dict(left=330, top=400, width=150, heigth="2px"))
+        style=dict(left=330, top=400, width=150, maxHeight = "90px"))
         self.sistema.entra(um.leste)
         self.sistema.vai=self.um.sul.vai
         
