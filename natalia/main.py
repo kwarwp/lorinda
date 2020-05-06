@@ -103,24 +103,34 @@ class MiniGameHerdograma:
         class LinhaGeracional:
             """Representa cada uma das linhas recortadas do herdograma original"""
             def __init__(self, linha, posicao):
-                self.posicao = posicao
-                self.linha = Elemento(linha, x=posicao*200, y=10, w=200, h=50, cena=esta_cena)
+                self.posicao = posicao # posição original no topo da página
+                self.linha = Elemento(linha, x=posicao*200, y=20, w=200, h=50, cena=esta_cena)
+                self.linha.vai = self.clica_e_posiciona_a_linha #quando clica, monta o herdograma
+            def zera(self):
+                self.linha.x = self.posicao*200  # posiciona cada peça com 200 pixels de distância
+                self.linha.y = 20  # posiciona a peça no topo da página
                 self.linha.vai = self.clica_e_posiciona_a_linha
             def clica_e_posiciona_a_linha(self, *_):
-                self.linha.x, self.linha.y = posiciona_proxima(self.posicao)# monta a linha no herdograma
-                self.linha.vai = lambda *_:None #desativa o click da linha
+                x, y = posiciona_proxima(self.posicao)
+                if y:  # se o y retornou zero é porque o posiciona próxima detectou montagem errada
+                    self.linha.x, self.linha.y = x, y # monta a linha no herdograma
+                    self.linha.vai = lambda *_:None #desativa o click da linha
 
         # coloca cada uma das linhas embaralhadas 
-        self.linhss = [
+        self.linhas = [
             LinhaGeracional(linha=uma_linha, posicao=uma_posicao)
             for uma_posicao, uma_linha in enumerate([HERDO1, HERDO3, HERDO2, HERDO0])]
         self.acertou = chama_quando_acerta
         self.linha_inicial = 300
-        self.altura_da_linha = 50
-        self.posicoes_montadas = [] #lista das linhas já montadas no herdograma
-        self.posicoes_corretas = [3, 0, 2, 1] #lista das linhas montadas corretamente
+        self.altura_da_linha = 50  # cada peça do herdograma tem esta altura
+        self.posicoes_montadas = []  #l ista das linhas já montadas no herdograma
+        self.posicoes_corretas = [3, 0, 2, 1]  # lista das linhas montadas corretamente
 
     def posiciona_proxima(self, posicao):
+        """Chamdo pelo clique (vai) de cada peça. Atualiza a próxima posição da peça.
+           Calcula se montou correto, comparando com a lista de posicões corretas.
+           Se já montou quatro peças, e não acerto sinaliza com zero, para iniciar o jogo.
+        """
         self.linha_inicial += self.altura_da_linha
         self.posicoes_montadas += [posicao]
         print(self.posicoes_montadas, self.posicoes_montadas == self.posicoes_corretas)
@@ -128,6 +138,10 @@ class MiniGameHerdograma:
             self.acertou() 
         else:
             if len(self.posicoes_montadas) == 4:
+                [linha.zera() for linha in self.linhas]
+                self.posicoes_montadas = []
+                self.linha_inicial = 300
+                return 0, 0
             
         return 300, self.linha_inicial
 
