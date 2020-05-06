@@ -22,11 +22,11 @@ class naosei:
         Texto(frida.norte, "Olá, você está no centro de pesquisa. Encaminhe- se a direita ").vai()
         Texto(frida.leste, "Vá para a sala do Dr. Zuckman").vai()
         
-        foco=Elemento(img= FOCO)
+        self.foco=Elemento(img= FOCO)
         
-        #viu = Elemento(FOCO, x=830, y=200, w=30, h=200, tit= "porta", cena=self.frida.leste, style={"opacity": 0})# vai=self.frida.sul.vai)
-        #self.falaporta= Texto(frida.leste, "A porta está trancada")
-        #self.foco.vai=self.falaporta.vai
+        viu = Elemento(FOCO, x=830, y=200, w=30, h=200, tit= "porta", cena=self.frida.leste, style={"opacity": 0})# vai=self.frida.sul.vai)
+        self.falaporta= Texto(frida.leste, "A porta está trancada")
+        self.foco.vai=self.falaporta.vai
         
         self.papel=Elemento(img="https://i.imgur.com/SmuKKmZ.jpg", tit= "desenho", x=830, y=200, w=30, h=200)
         self.papel.entra(frida.leste)
