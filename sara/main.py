@@ -26,6 +26,6 @@ class naosei:
         self.falaporta= Texto(frida.leste, "A porta está trancada")
         self.porta.vai=self.falaporta.vai
         
-        self.papel=Elemento(img= PAPEL, tit= "desenho", x=830, y=200, w=30, h=200)
+        self.papel=Elemento(img="https://i.imgur.com/SmuKKmZ.jpg", tit= "desenho", x=830, y=200, w=30, h=200)
         self.papel.entra(frida.leste)
 naosei()
