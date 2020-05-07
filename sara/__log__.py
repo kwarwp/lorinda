@@ -499,3 +499,10 @@ AttributeError: 'naosei' object has no attribute 'foco'
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Thu May 07 2020 19:35:19.21 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 24
+  def __texto_norte__(self):
+  ^
+IndentationError: unexpected indent
+'''},
