@@ -477,3 +477,10 @@ AttributeError: 'oi' object has no attribute 'um'
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Wed May 06 2020 21:41:09.426 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 39
+  Texto(self.um.norte, "Seja bem vindo, cientista! Hoje iremos aprender um pouquinho sobre biologia com o auxilio da nossa maravilhosa tecnologia. Vamos nessa?").vai()
+  ^
+IndentationError: expected an indented block
+'''},
