@@ -688,3 +688,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Thu May 07 2020 19:48:20.893 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 27
+  '''coloquei um def para cada cena, mas ainda não foi. Tenho que fazer essa 'cena fantasma' com todas as cenas??'''
+  ^
+IndentationError: expected an indented block
+'''},
