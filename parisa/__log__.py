@@ -516,3 +516,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Thu May 07 2020 18:52:51.1 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 52
+  self.botao=Elemento(img=BOTAO,tit="ligar",
+  ^
+IndentationError: unexpected indent
+'''},
