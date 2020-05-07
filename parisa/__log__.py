@@ -639,3 +639,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Thu May 07 2020 19:11:41.254 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 109
+  oi()
+  ^
+IndentationError: expected an indented block
+'''},
