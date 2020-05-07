@@ -632,3 +632,10 @@ NameError: name 'um' is not defined
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Thu May 07 2020 19:11:19.430 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 53
+  self.botao=Elemento(img=BOTAO,tit="ligar",
+  ^
+IndentationError: unexpected indent
+'''},
