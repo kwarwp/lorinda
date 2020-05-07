@@ -13,3 +13,10 @@ IndentationError: expected an indented block
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Wed May 06 2020 21:50:09.422 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 17
+  cientista= Elemento (img=CIENTISTA)
+  ^
+IndentationError: expected an indented block
+'''},
