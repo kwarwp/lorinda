@@ -520,3 +520,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Thu May 07 2020 19:36:08.689 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 26
+  def __textoleste__(self):
+  ^
+IndentationError: unexpected indent
+'''},
