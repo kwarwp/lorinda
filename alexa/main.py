@@ -14,7 +14,7 @@ LABORATORIO=""
 
 class OVINHO():
     def __init__ (self):
-    cientista=Elemento (img=CIENTISTA)
+    cientista= Elemento (img=CIENTISTA)
     sala1= Cena (img=ESCADA)
     sala2=Cena (img=PRATELEIRA)
     sala3=Cena (img=CAMERA)
