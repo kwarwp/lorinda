@@ -26,13 +26,13 @@ SALA8 = "https://i.imgur.com/9ZxVZDJ.png"
 class oi:
     def __init__(self):
         self.um = um = Sala(n=SALA1, l=SALA2, s=SALA3, o= SALA4)
+        self.um.sul.direita = Cena()
+        self.um.sul.direita.vai = self.texto_norte_um
         #self.um.oeste.vai
         
         self.uma= uma = Sala(o= SALA4, s= SALA5, l= SALA6, n= SALA1)
         
         self.dois = dois = Sala (n=SALA1, s= SALA7, l= SALA8, o= SALA4)
-
-    def texto_norte_um(self):
     #def cena_um (self):
         Texto(self.um.norte, "Seja bem vindo, cientista! Hoje iremos aprender um pouquinho sobre biologia com o auxilio da nossa maravilhosa tecnologia. Vamos nessa?").vai()
 
@@ -72,12 +72,6 @@ class oi:
         style=dict(left=320, top=200, width=100, heigth="2px")) 
         self.pasta.entra(um.sul)
         self.pasta.vai=self.um.oeste.vai
-        
-        #NESSA CENA ELE TERÁ QUE DESEMBARALHAR OS CODONS CLICANDO NELES E UM DELES É O CODON SECRETO
-        # O CODIGO EMBARALHADO SECRETO É GAU (AUG-METIONINA)
-        #ESSE CODIGO ABRIRÁ O COFRE
-
-        Texto(self.um.oeste, "Como nada nessa vida é fácil, você precisará de uma senha para a proxima etapa. Há 4 códigos genéticos que estão embaralhados, você terá que desembaralhar todos e descobrir o 'nosso' aminoacido secreto. FIQUE ATENTO AS NOSSAS DICAS!! ").vai()
         self.aminoacido= Elemento(img= "https://i.imgur.com/YF2cXp3.png", tit ="Aminoácido",
         style=dict(left=1000, top=100, width=90, height="90px")) 
         self.aminoacido.entra(um.oeste)
@@ -101,6 +95,14 @@ class oi:
         #Texto(self.uma.leste, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
         #Texto(self.dois.sul, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
         #Texto(self.dois.leste, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
+        
+        #NESSA CENA ELE TERÁ QUE DESEMBARALHAR OS CODONS CLICANDO NELES E UM DELES É O CODON SECRETO
+        # O CODIGO EMBARALHADO SECRETO É GAU (AUG-METIONINA)
+        #ESSE CODIGO ABRIRÁ O COFRE
         self.um.norte.vai()
+
+    def texto_norte_um(self):
+
+        Texto(self.um.oeste, "Como nada nessa vida é fácil, você precisará de uma senha para a proxima etapa. Há 4 códigos genéticos que estão embaralhados, você terá que desembaralhar todos e descobrir o 'nosso' aminoacido secreto. FIQUE ATENTO AS NOSSAS DICAS!! ").vai()
         
 oi()
