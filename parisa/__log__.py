@@ -625,3 +625,10 @@ NameError: name 'um' is not defined
     oi(self, um, uma, dois)
 NameError: name 'um' is not defined
 '''},
+{'date': 'Thu May 07 2020 19:06:15.510 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 53
+  self.botao=Elemento(img=BOTAO,tit="ligar",
+  ^
+IndentationError: unexpected indent
+'''},
