@@ -509,3 +509,10 @@ AttributeError: 'oi' object has no attribute 'um'
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Thu May 07 2020 18:50:53.527 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 61
+  self.voltar1.entra(um.leste)
+  ^
+IndentationError: unexpected indent
+'''},
