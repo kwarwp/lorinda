@@ -31,11 +31,9 @@ class oi:
         self.uma= uma = Sala(o= SALA4, s= SALA5, l= SALA6, n= SALA1)
         
         self.dois = dois = Sala (n=SALA1, s= SALA7, l= SALA8, o= SALA4)
-       
-        
-       # Texto(self.uma.sul, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
-        
-        #def fala_texto_norte(self): 
+
+    def texto_norte_um(self):
+    #def cena_um (self):
         Texto(self.um.norte, "Seja bem vindo, cientista! Hoje iremos aprender um pouquinho sobre biologia com o auxilio da nossa maravilhosa tecnologia. Vamos nessa?").vai()
 
         #O JOGADOR TERÁ QUE APERTAR O BOTAO PARA LIGAR O COMPUTADOR
