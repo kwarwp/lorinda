@@ -545,3 +545,10 @@ IndentationError: unexpected indent
     self.frida.sul.direita.vai = self.__texto_norte__
 AttributeError: 'naosei' object has no attribute '__texto_norte__'
 '''},
+{'date': 'Thu May 07 2020 19:36:42.456 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 23
+  def __texto_norte__(self):
+  ^
+IndentationError: unexpected indent
+'''},
