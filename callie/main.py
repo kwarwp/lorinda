@@ -23,7 +23,7 @@ LIVRO=
 LATERNA=
 REMEDIO_LIVRO=
 CASA_DOENTE=
- def class boo():
+         class boo():
     doente= Elemento(img DOENTE)
     celular= Elemento(img CELULAR)
     ladrao= Elemento(img LADRAO)
@@ -49,7 +49,6 @@ CASA_DOENTE=
     #cena1
     doente.entra(casa1)
     celular.entra(casa1)
-    #doente pega o celeular
     celular.fala"Tenho um experimento"
     casa1.vai()
     #cena1 parte2
