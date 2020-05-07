@@ -1,6 +1,6 @@
 # lorinda.alexa.main.py
 #TASSIA- 3001 isabelle
-from _spy.vitollino.main import Cena, Elemento, Labirinto
+from _spy.vitollino.main import Cena, Elemento, Labirinto, Texto
 from _spy.vitollino.main import INVENTARIO as inv
 #fase1
 CIENTISTA="https://3.bp.blogspot.com/_YaD6P9li0m0/SOp_1mDcfPI/AAAAAAAAAHk/wGNocvYRjbY/s320/222px-Professor_Frink.png"
@@ -27,7 +27,7 @@ class VINTEDOIS():
     setas= Elemento (img=SETAS)
     sala4=Cena (img=CORREDOR)
     sala5=Cena (img=LABORATORIO)
-    haha=Labirinto (norte=sala1,leste=sala2,oeste=sala3,sul=sala4)
+    haha= Labirinto (norte=sala1,leste=sala2,oeste=sala3,sul=sala4)
     cientista.entra(haha.norte)
     setas.entra(haha.sul)
     haha.norte.vai
