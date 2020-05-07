@@ -492,3 +492,10 @@ AttributeError: 'naosei' object has no attribute 'foco'
     self.foco.vai=self.falaporta.vai
 AttributeError: 'naosei' object has no attribute 'foco'
 '''},
+{'date': 'Thu May 07 2020 19:32:57.19 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 21
+  def __textonorte__(self):
+  ^
+IndentationError: unexpected indent
+'''},
