@@ -502,3 +502,10 @@ IndentationError: expected an indented block
     Texto(self.um.norte, "Seja bem vindo, cientista! Hoje iremos aprender um pouquinho sobre biologia com o auxilio da nossa maravilhosa tecnologia. Vamos nessa?").vai()
 AttributeError: 'oi' object has no attribute 'um'
 '''},
+{'date': 'Wed May 06 2020 21:48:03.798 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 39
+  self.botao=Elemento(img=BOTAO,tit="ligar",
+  ^
+IndentationError: unexpected indent
+'''},
