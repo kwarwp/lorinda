@@ -506,3 +506,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Thu May 07 2020 19:35:37.736 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 24
+  def __texto_norte__(self):
+  ^
+IndentationError: unexpected indent
+'''},
