@@ -34,9 +34,10 @@ class oi:
         #self.um.oeste.direita.vai = self.texto_oeste_um
 
         self.uma= uma = Sala(o= SALA4, s= SALA5, l= SALA6, n= SALA1)
+        #self.uma.sul.direita= Cena()
         
         self.dois = dois = Sala (n=SALA1, s= SALA7, l= SALA8, o= SALA4)
-
+        #self.dois.sul.direita= Cena()
 
     
       
@@ -108,11 +109,19 @@ class oi:
         gau = Elemento(FOCO, x=800, y=320, w=150, h=80, cena=self.um.oeste, style={"opacity": 0}, vai=self.dois.leste.vai)
         
         
+    def texto_uma_sul(self, *_):
+        self.uma.sul.vai()
+        Texto(self.uma.sul, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
         
-        
-            #Texto(self.uma.sul, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
-        #Texto(self.uma.leste, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
-        #Texto(self.dois.sul, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
-        #Texto(self.dois.leste, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
+    def texto_uma_leste(self, *_):   
+        self.uma.leste.vai()
+        Texto(self.uma.leste, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
+
+    def texto_dois_sul(self, *_):    
+        self.dois.sul.vai()
+        Texto(self.dois.sul, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
+    def texto_dois_leste(self, *_):  
+        self.dpos.leste.vai()
+        Texto(self.dois.leste, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
         
 oi()
