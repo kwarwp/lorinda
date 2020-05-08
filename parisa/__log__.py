@@ -756,3 +756,10 @@ IndentationError: unexpected indent
     self.um.sul.direita.vai = self.texto_norte_um
 AttributeError: 'oi' object has no attribute 'texto_norte_um'
 '''},
+{'date': 'Fri May 08 2020 12:26:59.496 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 91
+  self.aminoacido= Elemento(img= "https://i.imgur.com/YF2cXp3.png", tit ="Aminoácido",
+                                                                                                                                                      ^
+SyntaxError: invalid syntax
+'''},
