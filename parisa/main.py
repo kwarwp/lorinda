@@ -34,7 +34,7 @@ class oi:
         #self.um.oeste.direita.vai = self.texto_oeste_um
 
         self.uma= uma = Sala(o= SALA4, s= SALA5, l= SALA6, n= SALA1)
-        #self.uma.sul.direita= Cena()
+        #self.uma.leste.direita= Cena()
         
         self.dois = dois = Sala (n=SALA1, s= SALA7, l= SALA8, o= SALA4)
         #self.dois.sul.direita= Cena()
@@ -110,9 +110,9 @@ class oi:
         
         
     def texto_uma_sul(self, *_):
-        self.uma.sul.vai()
-        Texto(self.uma.sul, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
         
+        Texto(self.uma.sul, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
+        self.uma.sul.vai()
     def texto_uma_leste(self, *_):   
         self.uma.leste.vai()
         Texto(self.uma.leste, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
@@ -121,7 +121,7 @@ class oi:
         self.dois.sul.vai()
         Texto(self.dois.sul, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
     def texto_dois_leste(self, *_):  
-        self.dpos.leste.vai()
+        self.dois.leste.vai()
         Texto(self.dois.leste, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
         
 oi()
