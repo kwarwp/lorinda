@@ -24,11 +24,11 @@ SALA7 = " https://i.imgur.com/Ey3Gccw.png"
 #codon GAU (aug) metionina
 SALA8 = "https://i.imgur.com/9ZxVZDJ.png"
 class oi:
- '''coloquei um def para cada cena, mas ainda não foi. Tenho que fazer essa 'cena fantasma' com todas as cenas??'''
+    '''coloquei um def para cada cena, mas ainda não foi. Tenho que fazer essa 'cena fantasma' com todas as cenas??'''
     def __init__(self):
         self.um = um = Sala(n=SALA1, l=SALA2, s=SALA3, o= SALA4)
         self.um.sul.direita = Cena()
-        self.um.sul.direita.vai = self.texto_norte_um
+        #self.um.sul.direita.vai = self.texto_norte_um
 
         #self.um.oeste.direita = Cena()
         #self.um.oeste.direita.vai = self.texto_oeste_um
@@ -42,7 +42,7 @@ class oi:
       
         self.um.norte.vai()
 
-    def texto_norte_um(self):
+        #def texto_norte_um(self):
         Texto(self.um.norte, "Seja bem vindo, cientista! Hoje iremos aprender um pouquinho sobre biologia com o auxilio da nossa maravilhosa tecnologia. Vamos nessa?").vai()
         #
           #O JOGADOR TERÁ QUE APERTAR O BOTAO PARA LIGAR O COMPUTADOR
@@ -51,7 +51,7 @@ class oi:
         self.botao.entra(um.norte)
         self.botao.vai=self.um.leste.vai
     
-    def texto_leste_um(self):
+        #def texto_leste_um(self):
         self.voltar1=Elemento(img="https://image.flaticon.com/icons/png/512/74/74345.png", tit="desligar",
         style=dict(left=200, top=550, width=60, height="50px")) 
         self.voltar1.entra(um.leste)
@@ -75,29 +75,30 @@ class oi:
         self.somatico.entra(um.leste)
         self.somatico.vai
         
-    def texto_sul_um(self):
+        # def texto_sul_um(self):
         #CLICAR NA PASTA COLORIDA QUE IRÁ ABRIR UMA OUTRA PASTA
         self.pasta = Elemento (img="https://i.imgur.com/bPsIZws.png", tit = "pasta", 
         style=dict(left=320, top=200, width=100, heigth="2px")) 
         self.pasta.entra(um.sul)
-        self.pasta.vai=self.um.oeste.vai
+        self.pasta.vai=self.texto_oeste_um  # um.oeste.vai
         
-    def texto_oeste_um(self):
-      #NESSA CENA ELE TERÁ QUE DESEMBARALHAR OS CODONS CLICANDO NELES E UM DELES É O CODON SECRETO
+    def texto_oeste_um(self, *_):
+        #NESSA CENA ELE TERÁ QUE DESEMBARALHAR OS CODONS CLICANDO NELES E UM DELES É O CODON SECRETO
         # O CODIGO EMBARALHADO SECRETO É GAU (AUG-METIONINA)
         #ESSE CODIGO ABRIRÁ O COFRE
-          #DICA DO CODON 
+        #DICA DO CODON 
+        self.um.oeste.vai()
+        self.aminoacido= Elemento(img= "https://i.imgur.com/YF2cXp3.png", tit ="Aminoácido",
+        style=dict(left=900, top=200, width=90, height="90px")) 
+        
+        self.aminoacido.entra(self.um.oeste)
         Texto(self.um.oeste, "Como nada nessa vida é fácil, você precisará de uma senha para a proxima etapa. Há 4 códigos genéticos que estão embaralhados, você terá que desembaralhar todos e descobrir o 'nosso' aminoacido secreto. FIQUE ATENTO AS NOSSAS DICAS!! ").vai()
         self.dica=Elemento(img= "https://i.imgur.com/J5A0Jdo.png", tit = "dica!!",
-        style=dict(left=530, top=500, width=80, heigth="80px"))
-        self.dica.entra(um.oeste)
-        self.faladica= Texto(um.oeste, "Met(metionina)")
+        style=dict(left=530, top=400, width=80, heigth="80px"))
+        self.dica.entra(self.um.oeste)
+        self.faladica= Texto(self.um.oeste, "Met(metionina)")
         self.dica.vai=self.faladica.vai
-        
-        self.aminoacido= Elemento(img= "https://i.imgur.com/YF2cXp3.png", tit ="Aminoácido",
-        style=dict(left=1000, top=100, width=90, height="90px")) 
-        self.aminoacido.entra(um.oeste)
-        self.falamido= Texto(um.oeste, "Uma grande parte dos nossos células, músculos e tecido é constituído por aminoácidos, o que significa que realizar muitas funções importantes do corpo, tais como as células dando a sua estrutura. Eles também desempenham um papel chave no transporte e armazenamento de nutrientes.")
+        self.falamido= Texto(self.um.oeste, "Uma grande parte dos nossos células, músculos e tecido é constituído por aminoácidos, o que significa que realizar muitas funções importantes do corpo, tais como as células dando a sua estrutura. Eles também desempenham um papel chave no transporte e armazenamento de nutrientes.")
         self.aminoacido.vai=self.falamido.vai
 
 
