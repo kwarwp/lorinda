@@ -731,3 +731,10 @@ AttributeError: 'oi' object has no attribute 'uma'
     self.todas.leste.vai=self.um.norte.vai
 AttributeError: 'oi' object has no attribute 'todas'
 '''},
+{'date': 'Fri May 08 2020 12:03:25.617 GMt-0300 (Brasilia Standard Time) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 28
+  def __init__(self):
+  ^
+IndentationError: unexpected indent
+'''},
