@@ -7,6 +7,7 @@ STYLE["height"] = "550px"
 BOTAO = "https://pngimage.net/wp-content/uploads/2018/05/bot%C3%A3o-power-png-7.png"
 #
 FOCO = "https://i.imgur.com/6e096Va.png"
+FOCOD = "https://i.imgur.com/6e096Va.png"
 #saladeinformatica 1 CENA
 SALA1 ="https://i.imgur.com/bnapnxL.png"
   #teladocomputador
@@ -34,7 +35,7 @@ class oi:
         #self.um.oeste.direita.vai = self.texto_oeste_um
 
         self.uma= uma = Sala(o= SALA4, s= SALA5, l= SALA6, n= SALA1)
-        #self.uma.leste.direita= Cena()
+        self.uma.oeste.direita= Cena()
         
         self.dois = dois = Sala (n=SALA1, s= SALA7, l= SALA8, o= SALA4)
         #self.dois.sul.direita= Cena()
@@ -108,11 +109,19 @@ class oi:
         gua = Elemento(FOCO, x=590, y=320, w=150, h=80, cena=self.um.oeste, style={"opacity": 0}, vai=self.uma.leste.vai)
         gau = Elemento(FOCO, x=800, y=320, w=150, h=80, cena=self.um.oeste, style={"opacity": 0}, vai=self.dois.leste.vai)
         
-        # aqui!!!
+        
+        
+
+# aqui!!!
     def texto_uma_sul(self, *_):
         
         Texto(self.uma.sul, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
         self.uma.sul.vai()
+        
+        aua = Elemento(FOCOD, x=190, y=320, w=150, h=80, cena=self.uma.sul, style={"opacity": 40})
+        
+        #self.falaauu= Texto(self.uma.sul, "Forma correta é: AUA. Que é a Tirosina, mas infelizmente não é esse nosso código secreto. Com isso, você não conseguiu abrir o cofre. Aperte na setinha e tente novamente.")
+        #self.aua.vai=self.falaau.vai
     def texto_uma_leste(self, *_):   
         self.uma.leste.vai()
         Texto(self.uma.leste, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
