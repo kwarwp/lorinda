@@ -763,3 +763,10 @@ AttributeError: 'oi' object has no attribute 'texto_norte_um'
                                                                                                                                                       ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Sat May 09 2020 22:26:32.448 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 116
+  def texto_uma_sul(self, *_)
+                              ^
+SyntaxError: invalid syntax
+'''},
