@@ -134,6 +134,10 @@ class oi:
         style=dict(left=100, top=400, width=150, heigth="30px"))
         self.seta1.entra(self.uma.sul)
         self.seta1.vai=self.um.oeste.vai
+        
+        self.setinha1= Elemento (img="https://i.imgur.com/jUJQ5Oc.png", tit = "seta",
+        style=dict(left=600, top=300, width=90, heigth="20px"))
+        self.setinha1.entra(self.uma.sul)
     
     def texto_uma_leste(self, *_):   
         self.uma.leste.vai()
@@ -152,7 +156,12 @@ class oi:
         self.seta2.vai=self.um.oeste.vai
     
         self.falaiso= Texto(self.uma.leste, "A Isoleucina é utilizada pelo organismo especialmente para construir os tecidos musculares. A isoleucina, leucina e valina são os aminoácidos de cadeia ramificada e são melhor absorvidos e utilizados pelo organismo na presença de vitaminas do complexo B, como o feijão ou lecitina de soja.")
-        self.isoleucina.vai=falaiso.vai
+        self.isoleucina.vai=self.falaiso.vai
+        
+        self.setinha2= Elemento (img="https://i.imgur.com/jUJQ5Oc.png", tit = "seta",
+        style=dict(left=600, top=300, width=90, heigth="20px"))
+        self.setinha2.entra(self.uma.leste)
+    
     
     def texto_dois_sul(self, *_):    
         self.dois.sul.vai()
@@ -169,7 +178,12 @@ class oi:
         self.seta3.vai=self.um.oeste.vai
         
         self.falaseri=Texto(self.dois.sul, "A serina é importante no metabolismo, dado que participa na biossíntese de purinas e pirimidinas. É o percursor de vários aminoácidos, incluindo glicina e cisteína, e triptofano em bactérias.")
-        self.serina.vai=self.falaseri
+        self.serina.vai=self.falaseri.vai
+        
+        self.setinha3= Elemento (img="https://i.imgur.com/jUJQ5Oc.png", tit = "seta",
+        style=dict(left=600, top=300, width=90, heigth="20px"))
+        self.setinha3.entra(self.dois.sul)
+    
         
     def texto_dois_leste(self, *_):  
         self.dois.leste.vai()
