@@ -35,7 +35,7 @@ class oi:
         #self.um.oeste.direita.vai = self.texto_oeste_um
 
         self.uma= uma = Sala(o= SALA4, s= SALA5, l= SALA6, n= SALA1)
-        self.uma.oeste.direita= Cena()
+        #self.uma.oeste.direita= Cena()
         
         self.dois = dois = Sala (n=SALA1, s= SALA7, l= SALA8, o= SALA4)
         #self.dois.sul.direita= Cena()
@@ -43,6 +43,7 @@ class oi:
     
       
         self.um.norte.vai()
+        
 
         #def texto_norte_um(self):
         Texto(self.um.norte, "Seja bem vindo, cientista! Hoje iremos aprender um pouquinho sobre biologia com o auxilio da nossa maravilhosa tecnologia. Vamos nessa?").vai()
@@ -104,7 +105,7 @@ class oi:
         self.aminoacido.vai=self.falamido.vai
 
 
-        auu = Elemento(FOCO, x=190, y=320, w=150, h=80, cena=self.um.oeste, style={"opacity": 0}, vai=self.uma.sul.vai)
+        auu = Elemento(FOCO, x=190, y=320, w=150, h=80, cena=self.um.oeste, style={"opacity": 0}, vai=self.texto_uma_sul)
         aau = Elemento(FOCO, x=400, y=320, w=150, h=80, cena=self.um.oeste, style={"opacity": 0}, vai=self.dois.sul.vai)
         gua = Elemento(FOCO, x=590, y=320, w=150, h=80, cena=self.um.oeste, style={"opacity": 0}, vai=self.uma.leste.vai)
         gau = Elemento(FOCO, x=800, y=320, w=150, h=80, cena=self.um.oeste, style={"opacity": 0}, vai=self.dois.leste.vai)
@@ -119,7 +120,8 @@ class oi:
         self.uma.sul.vai()
         
         aua = Elemento(FOCOD, x=190, y=320, w=150, h=80, cena=self.uma.sul, style={"opacity": 40})
-        
+        self.alo= Elemento( img= "https://i.imgur.com/ZPvH4V0.jpg")
+        self.alo.entra(uma.sul)
         #self.falaauu= Texto(self.uma.sul, "Forma correta é: AUA. Que é a Tirosina, mas infelizmente não é esse nosso código secreto. Com isso, você não conseguiu abrir o cofre. Aperte na setinha e tente novamente.")
         #self.aua.vai=self.falaau.vai
     def texto_uma_leste(self, *_):   
