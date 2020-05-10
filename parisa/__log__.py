@@ -777,3 +777,10 @@ SyntaxError: invalid syntax
                                                                     ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Sat May 09 2020 23:46:00.87 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 138
+  self.setinha2= Elemento (img="https://i.imgur.com/jUJQ5Oc.png", tit = "
+                                                                         ^
+SyntaxError: EOL while scanning string literal
+'''},
