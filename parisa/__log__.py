@@ -770,3 +770,10 @@ SyntaxError: invalid syntax
                               ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Sat May 09 2020 23:20:13.477 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 145
+  self.serina=Elemento(img= "https://i.imgur.com/IDBTwzj.png", tit "Serina",
+                                                                    ^
+SyntaxError: invalid syntax
+'''},
