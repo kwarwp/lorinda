@@ -11,10 +11,11 @@ FOCOD = "https://i.imgur.com/6e096Va.png"
 FOCOT = "https://i.imgur.com/6e096Va.png"
 FOCOQ = "https://i.imgur.com/6e096Va.png"
 FOCOC = "https://i.imgur.com/6e096Va.png"
+FOCOS = "https://i.imgur.com/6e096Va.png"
 #saladeinformatica 1 CENA
 SALA1 ="https://i.imgur.com/bnapnxL.png"
   #teladocomputador
-SALA2 = "https://i.imgur.com/307pZY8.png"
+SALA2 = "https://i.imgur.com/78zBQ2V.png"
 #tela das pastas
 SALA3 = "https://i.imgur.com/uGG1xMk.png"
 #codon embaralhado
@@ -50,19 +51,19 @@ class oi:
         #
           #O JOGADOR TERÁ QUE APERTAR O BOTAO PARA LIGAR O COMPUTADOR
         self.botao=Elemento(img=BOTAO,tit="ligar",
-        style=dict(left=350,top=270,width=30,height="30px")) 
+        style=dict(left=350,top=250,width=30,height="30px")) 
         self.botao.entra(um.norte)
         self.botao.vai=self.um.leste.vai
     
         #def texto_leste_um(self):
         self.voltar1=Elemento(img="https://image.flaticon.com/icons/png/512/74/74345.png", tit="desligar",
-        style=dict(left=200, top=550, width=60, height="50px")) 
+        style=dict(left=200, top=500, width=60, height="50px")) 
         self.voltar1.entra(um.leste)
         self.voltar1.vai=self.um.norte.vai
          
         #APÓS ELE LIGAR O COMPUTADOR TERÁ QUE COLOCAR A SENHA QUE É "SINTESE DE PROTEINAS"
-        
-        self.sistema = Elemento (img= "https://i.imgur.com/n4R7Cs6.png",
+        sin= Elemento(FOCO, x=430, y=250, w=150, h=80, cena=self.um.leste, style={"opacity": 40}, vai=self.um.sul)
+        '''self.sistema = Elemento (img= "https://i.imgur.com/n4R7Cs6.png",
         style=dict(left=330, top=400, width=150, maxHeight = "90000000px"))
         self.sistema.entra(um.leste)
         self.sistema.vai=self.um.sul.vai
@@ -76,12 +77,12 @@ class oi:
         self.somatico = Elemento (img = "https://i.imgur.com/V5RQYKz.png", tit ="senha",
         style=dict(left=530, top=400, width=150, heigth="2px"))
         self.somatico.entra(um.leste)
-        self.somatico.vai
+        self.somatico.vai'''
         
         # def texto_sul_um(self):
         #CLICAR NA PASTA COLORIDA QUE IRÁ ABRIR UMA OUTRA PASTA
         self.pasta = Elemento (img="https://i.imgur.com/bPsIZws.png", tit = "pasta", 
-        style=dict(left=320, top=200, width=100, heigth="2px")) 
+        style=dict(left=350, top=180, width=100, heigth="2px")) 
         self.pasta.entra(um.sul)
         self.pasta.vai=self.texto_oeste_um  # um.oeste.vai
         
@@ -126,7 +127,7 @@ class oi:
         style=dict(left=500, top=400, width=250, heigth="100px"))
         self.tirosina.entra(self.uma.sul)
         
-        self.falatiro= Texto(self.uma.sul, "A tirosina (abreviadamente Tyr ou Y)[4] ou 4-hidroxifenilalanina, É um dos 20 aminoácidos que fazem parte das proteínas. É um α-aminoácido com uma cadeia lateral formada por CH2 ligado a um grupo fenol, o que a torna uma cadeia lateral cíclica aromática com um grupo OH, que lhe confere um carácter polar neutro.")
+        self.falatiro= Texto(self.uma.sul, "A tirosina (abreviadamente Tyr ou Y)[4] ou 4-hidroxifenilalanina, É um dos 20 aminoácidos que fazem parte das proteínas. É um Î±-aminoácido com uma cadeia lateral formada por CH2 ligado a um grupo fenol, o que a torna uma cadeia lateral cíclica aromática com um grupo OH, que lhe confere um carácter polar neutro.")
         self.tirosina.vai= self.falatiro.vai
 
         
