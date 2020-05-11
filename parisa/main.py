@@ -12,12 +12,13 @@ FOCOT = "https://i.imgur.com/6e096Va.png"
 FOCOQ = "https://i.imgur.com/6e096Va.png"
 FOCOC = "https://i.imgur.com/6e096Va.png"
 FOCOS = "https://i.imgur.com/6e096Va.png"
+FOCOSE = "https://i.imgur.com/6e096Va.png"
 #saladeinformatica 1 CENA
 SALA1 ="https://i.imgur.com/bnapnxL.png"
   #teladocomputador
 SALA2 = "https://i.imgur.com/78zBQ2V.png"
 #tela das pastas
-SALA3 = "https://i.imgur.com/uGG1xMk.png"
+SALA3 = "https://i.imgur.com/N6JUV1K.png"
 #codon embaralhado
 SALA4 = "https://i.imgur.com/fxMYKmc.png"
 # codon AUU (uau) TIROSINA
@@ -64,7 +65,7 @@ class oi:
         #APÓS ELE LIGAR O COMPUTADOR TERÁ QUE COLOCAR A SENHA QUE É "SINTESE DE PROTEINAS"
         sin= Elemento(FOCO, x=460, y=250, w=150, h=80, cena=self.um.leste, style={"opacity": 0}, vai=self.um.sul.vai)
        
-        pasta= Elemento(FICOSE, x=660, y=250, w=130, h=80, cena=self.um.sul, style={"opacity": 0}, vai=self.um.oeste.vai)
+        pasta= Elemento(FOCOSE, x=660, y=250, w=130, h=80, cena=self.um.sul, style={"opacity": 40}, vai=self.um.oeste.vai)
         # def texto_sul_um(self):
         #CLICAR NA PASTA COLORIDA QUE IRÁ ABRIR UMA OUTRA PASTA
         self.pasta = Elemento (img="https://i.imgur.com/bPsIZws.png", tit = "pasta", 
@@ -113,7 +114,7 @@ class oi:
         style=dict(left=500, top=400, width=250, heigth="100px"))
         self.tirosina.entra(self.uma.sul)
         
-        self.falatiro= Texto(self.uma.sul, "A tirosina (abreviadamente Tyr ou Y)[4] ou 4-hidroxifenilalanina, É um dos 20 aminoácidos que fazem parte das proteínas. É um ÎÂ±-aminoácido com uma cadeia lateral formada por CH2 ligado a um grupo fenol, o que a torna uma cadeia lateral cíclica aromática com um grupo OH, que lhe confere um carácter polar neutro.")
+        self.falatiro= Texto(self.uma.sul, "A tirosina (abreviadamente Tyr ou Y)[4] ou 4-hidroxifenilalanina, É um dos 20 aminoácidos que fazem parte das proteínas. É um ÎÂÂ±-aminoácido com uma cadeia lateral formada por CH2 ligado a um grupo fenol, o que a torna uma cadeia lateral cíclica aromática com um grupo OH, que lhe confere um carácter polar neutro.")
         self.tirosina.vai= self.falatiro.vai
 
         
