@@ -62,23 +62,9 @@ class oi:
         self.voltar1.vai=self.um.norte.vai
          
         #APÓS ELE LIGAR O COMPUTADOR TERÁ QUE COLOCAR A SENHA QUE É "SINTESE DE PROTEINAS"
-        sin= Elemento(FOCO, x=430, y=250, w=150, h=80, cena=self.um.leste, style={"opacity": 40}, vai=self.um.sul)
-        '''self.sistema = Elemento (img= "https://i.imgur.com/n4R7Cs6.png",
-        style=dict(left=330, top=400, width=150, maxHeight = "90000000px"))
-        self.sistema.entra(um.leste)
-        self.sistema.vai=self.um.sul.vai
-        
-        self.cadeia = Elemento (img = "https://i.imgur.com/a2E0TI7.png", tit= "senha",
-        style=dict(left=730, top=400, width=150, heigth="2px"))
-        self.cadeia.entra(um.leste)
-        self.cadeia.vai
-        
-        
-        self.somatico = Elemento (img = "https://i.imgur.com/V5RQYKz.png", tit ="senha",
-        style=dict(left=530, top=400, width=150, heigth="2px"))
-        self.somatico.entra(um.leste)
-        self.somatico.vai'''
-        
+        sin= Elemento(FOCO, x=460, y=250, w=150, h=80, cena=self.um.leste, style={"opacity": 0}, vai=self.um.sul.vai)
+       
+        pasta= Elemento(FICOSE, x=660, y=250, w=130, h=80, cena=self.um.sul, style={"opacity": 0}, vai=self.um.oeste.vai)
         # def texto_sul_um(self):
         #CLICAR NA PASTA COLORIDA QUE IRÁ ABRIR UMA OUTRA PASTA
         self.pasta = Elemento (img="https://i.imgur.com/bPsIZws.png", tit = "pasta", 
@@ -127,7 +113,7 @@ class oi:
         style=dict(left=500, top=400, width=250, heigth="100px"))
         self.tirosina.entra(self.uma.sul)
         
-        self.falatiro= Texto(self.uma.sul, "A tirosina (abreviadamente Tyr ou Y)[4] ou 4-hidroxifenilalanina, É um dos 20 aminoácidos que fazem parte das proteínas. É um Î±-aminoácido com uma cadeia lateral formada por CH2 ligado a um grupo fenol, o que a torna uma cadeia lateral cíclica aromática com um grupo OH, que lhe confere um carácter polar neutro.")
+        self.falatiro= Texto(self.uma.sul, "A tirosina (abreviadamente Tyr ou Y)[4] ou 4-hidroxifenilalanina, É um dos 20 aminoácidos que fazem parte das proteínas. É um ÎÂ±-aminoácido com uma cadeia lateral formada por CH2 ligado a um grupo fenol, o que a torna uma cadeia lateral cíclica aromática com um grupo OH, que lhe confere um carácter polar neutro.")
         self.tirosina.vai= self.falatiro.vai
 
         
