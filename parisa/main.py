@@ -65,13 +65,10 @@ class oi:
         #APÓS ELE LIGAR O COMPUTADOR TERÁ QUE COLOCAR A SENHA QUE É "SINTESE DE PROTEINAS"
         sin= Elemento(FOCO, x=460, y=250, w=150, h=80, cena=self.um.leste, style={"opacity": 0}, vai=self.um.sul.vai)
        
-        pasta= Elemento(FOCOSE, x=660, y=250, w=130, h=80, cena=self.um.sul, style={"opacity": 40}, vai=self.um.oeste.vai)
+        pasta= Elemento(FOCOSE, x=660, y=250, w=130, h=80, cena=self.um.sul, style={"opacity": 40}, vai=self.texto_oeste_um)
         # def texto_sul_um(self):
         #CLICAR NA PASTA COLORIDA QUE IRÁ ABRIR UMA OUTRA PASTA
-        self.pasta = Elemento (img="https://i.imgur.com/bPsIZws.png", tit = "pasta", 
-        style=dict(left=350, top=180, width=100, heigth="2px")) 
-        self.pasta.entra(um.sul)
-        self.pasta.vai=self.texto_oeste_um  # um.oeste.vai
+       
         
     def texto_oeste_um(self, *_):
         #NESSA CENA ELE TERÁ QUE DESEMBARALHAR OS CODONS CLICANDO NELES E UM DELES É O CODON SECRETO
