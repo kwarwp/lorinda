@@ -881,3 +881,10 @@ NameError: name 'FICOSE' is not defined
     pasta= Elemento(FICOSE, x=660, y=250, w=130, h=80, cena=self.um.sul, style={"opacity": 0}, vai=self.um.oeste.vai)
 NameError: name 'FICOSE' is not defined
 '''},
+{'date': 'Sun May 10 2020 22:37:29.279 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 194
+  self.falametio=Texto(self.dois.leste, ("A metionina (Met) é um dos aminoácidos codificados pelo código genético, sendo portanto um dos componentes das proteínas dos seres vivos, com exceção das bactérias procariontes (as quais possuem N-Formil Metionina.")
+                                                                                                                                                                                                                                                                            ^
+SyntaxError: invalid syntax
+'''},
