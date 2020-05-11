@@ -82,10 +82,10 @@ class oi:
         #DICA DO CODON 
         self.um.oeste.vai()
         self.aminoacido= Elemento(img= "https://i.imgur.com/YF2cXp3.png", tit ="Aminoácido",
-        style=dict(left=900, top=200, width=90, height="90px")) 
+        style=dict(left=920, top=180, width=90, height="90px")) 
         
         self.aminoacido.entra(self.um.oeste)
-        Texto(self.um.oeste, "Como nada nessa vida é fácil, você precisará de uma senha para a proxima etapa. Há 4 códigos genéticos que estão embaralhados, você terá que desembaralhar todos e descobrir o 'nosso' aminoacido secreto. FIQUE ATENTO AS NOSSAS DICAS!! ").vai()
+        Texto(self.um.oeste, "Como nada nessa vida é fácil, você precisará de uma senha para abrir nosso cofre e passar para proxima etapa. Há 4 códigos genéticos que estão embaralhados, você terá que desembaralhar todos e descobrir o 'nosso' aminoacido secreto. FIQUE ATENTO AS NOSSAS DICAS!! ").vai()
         self.dica=Elemento(img= "https://i.imgur.com/J5A0Jdo.png", tit = "dica!!",
         style=dict(left=530, top=400, width=80, heigth="80px"))
         self.dica.entra(self.um.oeste)
@@ -108,7 +108,7 @@ class oi:
         
         Texto(self.uma.sul, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
         self.uma.sul.vai()
-        self.falauau= Texto(self.uma.sul, "Forma correta é: UAU. Que é a Tirosina, mas infelizmente não é esse nosso código secreto. Com isso, você não conseguiu abrir o cofre. Aperte na setinha e tente novamente.")
+        self.falauau= Texto(self.uma.sul, "Forma correta é: UAU. Que é a Tirosina, mas infelizmente não é esse nosso código secreto. Com isso, você não conseguiu abrir o cofre. Aperte para voltar e tente novamente.")
 
         uau = Elemento(FOCOD, x=450, y=260, w=150, h=60, cena=self.uma.sul, style={"opacity": 0}, vai=self.falauau.vai)
        
@@ -133,7 +133,7 @@ class oi:
         self.uma.leste.vai()
         
         Texto(self.uma.leste, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
-        self.falaaua= Texto(self.uma.leste, "Forma correta é: AUA. Que é a Isoleucina, mas infelizmente não é esse nosso código secreto. Com isso, você não conseguiu abrir o cofre. Aperte na setinha e tente novamente.")
+        self.falaaua= Texto(self.uma.leste, "Forma correta é: AUA. Que é a Isoleucina, mas infelizmente não é esse nosso código secreto. Com isso, você não conseguiu abrir o cofre. Aperte para voltar e tente novamente.")
         aua = Elemento(FOCOT, x=450, y=260, w=150, h=60, cena=self.uma.leste, style={"opacity": 0}, vai=self.falaaua.vai)
         
         self.isoleucina=Elemento(img = "https://i.imgur.com/tL2cc9H.png", tit = "Isoleucina",
@@ -156,7 +156,7 @@ class oi:
     def texto_dois_sul(self, *_):    
         self.dois.sul.vai()
         Texto(self.dois.sul, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
-        self.falaagu= Texto(self.dois.sul, "Forma correta é: AGU. Que é a Serina, mas infelizmente não é esse nosso código secreto. Com isso, você não conseguiu abrir o cofre. Aperte na setinha e tente novamente.")
+        self.falaagu= Texto(self.dois.sul, "Forma correta é: AGU. Que é a Serina, mas infelizmente não é esse nosso código secreto. Com isso, você não conseguiu abrir o cofre. Aperte para voltar e tente novamente.")
         agu = Elemento(FOCOT, x=450, y=260, w=150, h=60, cena=self.dois.sul, style={"opacity": 0}, vai=self.falaagu.vai)
         self.serina=Elemento(img= "https://i.imgur.com/IDBTwzj.png", tit= "Serina",
         style=dict(left=530, top=400, width=150, heigth="80px"))
@@ -178,7 +178,7 @@ class oi:
     def texto_dois_leste(self, *_):  
         self.dois.leste.vai()
         Texto(self.dois.leste, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
-        self.falaaug= Texto(self.dois.leste, "Forma correta é: AUA. Que é a Isoleucina, mas infelizmente não é esse nosso código secreto. Com isso, você não conseguiu abrir o cofre. Aperte na setinha e tente novamente.")
+        self.falaaug= Texto(self.dois.leste, "Forma correta é: AUA. Que é a Isoleucina, mas infelizmente não é esse nosso código secreto. Com isso, você não conseguiu abrir o cofre. Aperte para voltar e tente novamente.")
         aug = Elemento(FOCOT, x=450, y=260, w=150, h=60, cena=self.dois.leste, style={"opacity": 0}, vai=self.falaaug.vai)
         
 oi()
