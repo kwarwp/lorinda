@@ -784,3 +784,10 @@ SyntaxError: invalid syntax
                                                                          ^
 SyntaxError: EOL while scanning string literal
 '''},
+{'date': 'Sun May 10 2020 21:14:31.411 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 70
+  ''' self.pasta = Elemento (img="https://i.imgur.com/bPsIZws.png", tit = "pasta", 
+  ^
+IndentationError: unexpected indent
+'''},
