@@ -906,3 +906,10 @@ SyntaxError: invalid syntax
     self.tres = tres (o=SALA4, s= SALA9, l=SALA10, n=SALA1)
 NameError: name 'tres' is not defined
 '''},
+{'date': 'Mon May 11 2020 17:47:28.845 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 212
+  oi()
+  ^
+IndentationError: expected an indented block
+'''},
