@@ -29,7 +29,8 @@ SALA7 = "https://i.imgur.com/AdIuakb.png"
 SALA6 = " https://i.imgur.com/Ey3Gccw.png"
 #codon GAU (aug) metionina
 SALA8 = "https://i.imgur.com/9ZxVZDJ.png"
-SALA9 = "https://images.madeiramadeira.com.br/product/images/95161460-adesivo-paisagem-natureza-lago-papel-parede-pedras-gg529prdnzl4t46b41opc-179-1-800x729.jpg"
+#cofre 
+SALA9 = "https://i.imgur.com/XMKlMUb.png"
 SALA10 = "https://www.infoescola.com/wp-content/uploads/2019/10/paisagem-ouro-preto-1008049370.jpg"
 
 class oi:
@@ -206,7 +207,8 @@ class oi:
         self.foi= Elemento(img="https://i.imgur.com/83PUevp.png", tit = "próx. etapa",
         style=dict(left=1090, top=200, width=50, heigth="20px"))
         self.foi.entra(self.dois.leste)
-        self.foi.vai=self.tres.sul
+        self.foi.vai=self.texto_tres_sul
         
-    
+    def texto_tres_sul(self, *_): 
+        self.tres.sul.vai()
 oi()
