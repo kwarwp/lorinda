@@ -514,3 +514,10 @@ SyntaxError: invalid syntax
           ^
 SyntaxError: EOL while scanning string literal
 '''},
+{'date': 'Mon May 11 2020 20:45:18.525 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 211
+  """Chamado pelo clique (vai) de cada peça. Atualiza a próxima posição da peça.
+  ^
+IndentationError: expected an indented block
+'''},
