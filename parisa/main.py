@@ -205,13 +205,18 @@ class oi:
         style=dict(left=600, top=300, width=50, heigth="20px"))
         self.setinha5.entra(self.dois.leste)
         
-        self.foi= Elemento(img="https://i.imgur.com/83PUevp.png", tit = "próx. etapa",
-        style=dict(left=1090, top=200, width=50, heigth="20px"))
+        self.foi= Elemento(img="https://i.imgur.com/mI8mB36.png", tit = "próx. etapa",
+        style=dict(left=1090, top=200, width=40, heigth="20px"))
         self.foi.entra(self.dois.leste)
         self.foi.vai=self.texto_tres_sul
         
     def texto_tres_sul(self, *_): 
         self.tres.sul.vai()
         Texto(self.tres.sul, "Você conseguiu abrir nosso cofre!! Agora vamos lá descobrir o que tem dentro dele.").vai()
-        cof=Elemento (FOCOO, x=380, y=200, w=70, h=260, cena=self.tres.sul, style={"opacity": 0}) #vai=self.falaaug.vai)
+        cof=Elemento (FOCOO, x=380, y=200, w=70, h=260, cena=self.tres.sul, style={"opacity": 0}, vai=self.texto_tres_leste)
+
+    def texto_tres_leste(self, *_):
+        self.tres.leste.vai()
+
+
 oi()
