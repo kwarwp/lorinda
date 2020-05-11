@@ -507,3 +507,10 @@ IndentationError: expected an indented block
                                                              ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Mon May 11 2020 20:45:11.140 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 31
+  AAH5 = "
+          ^
+SyntaxError: EOL while scanning string literal
+'''},
