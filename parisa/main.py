@@ -13,6 +13,7 @@ FOCOQ = "https://i.imgur.com/6e096Va.png"
 FOCOC = "https://i.imgur.com/6e096Va.png"
 FOCOS = "https://i.imgur.com/6e096Va.png"
 FOCOSE = "https://i.imgur.com/6e096Va.png"
+FOCOO = "https://i.imgur.com/6e096Va.png"
 #saladeinformatica 1 CENA
 SALA1 ="https://i.imgur.com/bnapnxL.png"
   #teladocomputador
@@ -211,4 +212,6 @@ class oi:
         
     def texto_tres_sul(self, *_): 
         self.tres.sul.vai()
+        Texto(self.tres.sul, "Você conseguiu abrir nosso cofre!! Agora vamos lá descobrir o que tem dentro dele.").vai()
+        cof=Elemento (FOCOO, x=380, y=200, w=70, h=260, cena=self.tres.sul, style={"opacity": 0}) #vai=self.falaaug.vai)
 oi()
