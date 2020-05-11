@@ -201,6 +201,6 @@ class oi:
         self.setinha5.entra(self.dois.leste)
         
         self.foi= Elemento(img="https://i.imgur.com/83PUevp.png", tit = "próx. etapa",
-        style=dict(left=1200, top=200, width=50, heigth="20px"))
+        style=dict(left=1090, top=200, width=50, heigth="20px"))
         self.foi.entra(self.dois.leste)
 oi()
