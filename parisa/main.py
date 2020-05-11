@@ -177,8 +177,9 @@ class oi:
         
     def texto_dois_leste(self, *_):  
         self.dois.leste.vai()
-        Texto(self.dois.leste, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
-        self.falaaug= Texto(self.dois.leste, "A FORMA CORRETA É: AUG. Chamado Metionina, muito bom!! Você descobriu a senha do nosso cofre. Parabéns! Clique na Metionina para saber mais sobre ela, logo após clique para próxima etapa"),vai()
+        Texto(self.dois.leste, "Será que esse é o nosso códigoo genético secreto?. Clique nele e vamos desembaralhar").vai()
+        
+        self.falaaug= Texto(self.dois.leste, "A FORMA CORRETA É: AUG. Chamado Metionina, muito bom!! Você descobriu a senha do nosso cofre. Parabéns! Clique na Metionina para saber mais sobre ela, logo após clique para próxima etapa")
         aug = Elemento(FOCOT, x=450, y=260, w=150, h=60, cena=self.dois.leste, style={"opacity": 0}, vai=self.falaaug.vai)
         
         self.metionina=Elemento(img= "https://i.imgur.com/H3QrDcM.png", tit= "Metionina",
@@ -190,11 +191,16 @@ class oi:
         self.seta4.entra(self.dois.leste)
         self.seta4.vai=self.um.oeste.vai
         
-        self.falaseri=Texto(self.dois.sul, "A serina é importante no metabolismo, dado que participa na biossíntese de purinas e pirimidinas. É o percursor de vários aminoácidos, incluindo glicina e cisteína, e triptofano em bactérias.")
-        self.serina.vai=self.falaseri.vai
+        self.falametio=Texto(self.dois.leste, "A metionina (Met) é um dos aminoácidos codificados pelo código genético, sendo portanto um dos componentes das proteínas dos seres vivos, com exceção das bactérias procariontes (as quais possuem N-Formil Metionina.")
+        self.metionina.vai=self.falametio.vai
         
-        self.setinha4= Elemento (img="https://i.imgur.com/jUJQ5Oc.png", tit = "seta",
+        
+        
+        self.setinha5= Elemento (img="https://i.imgur.com/jUJQ5Oc.png", tit = "seta",
         style=dict(left=600, top=300, width=90, heigth="20px"))
-        self.setinha4.entra(self.dois.leste)
+        self.setinha5.entra(self.dois.leste)
         
+        self.foi= Elemento(img="https://i.imgur.com/83PUevp.png", tit = "próx. etapa",
+        style=dict(left=1200, top=200, width=50, heigth="20px"))
+        self.foi.entra(self.dois.leste)
 oi()
