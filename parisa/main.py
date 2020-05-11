@@ -65,7 +65,7 @@ class oi:
         #APÓS ELE LIGAR O COMPUTADOR TERÁ QUE COLOCAR A SENHA QUE É "SINTESE DE PROTEINAS"
         sin= Elemento(FOCO, x=460, y=250, w=150, h=80, cena=self.um.leste, style={"opacity": 0}, vai=self.um.sul.vai)
        
-        pasta= Elemento(FOCOSE, x=690, y=230, w=130, h=80, cena=self.um.sul, style={"opacity": 40}, vai=self.texto_oeste_um)
+        pasta= Elemento(FOCOSE, x=720, y=230, w=130, h=80, cena=self.um.sul, style={"opacity": 40}, vai=self.texto_oeste_um)
         self.voltar2=Elemento(img="https://image.flaticon.com/icons/png/512/74/74345.png", tit="voltar",
         style=dict(left=200, top=500, width=60, height="50px")) 
         self.voltar2.entra(um.sul)
