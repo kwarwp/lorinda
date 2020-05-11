@@ -29,19 +29,22 @@ SALA7 = "https://i.imgur.com/AdIuakb.png"
 SALA6 = " https://i.imgur.com/Ey3Gccw.png"
 #codon GAU (aug) metionina
 SALA8 = "https://i.imgur.com/9ZxVZDJ.png"
+SALA9 = "https://images.madeiramadeira.com.br/product/images/95161460-adesivo-paisagem-natureza-lago-papel-parede-pedras-gg529prdnzl4t46b41opc-179-1-800x729.jpg"
+SALA10 = "https://www.infoescola.com/wp-content/uploads/2019/10/paisagem-ouro-preto-1008049370.jpg"
+
 class oi:
     '''coloquei um def para cada cena, mas ainda não foi. Tenho que fazer essa 'cena fantasma' com todas as cenas??'''
     def __init__(self):
         self.um = um = Sala(n=SALA1, l=SALA2, s=SALA3, o= SALA4)
         self.um.sul.direita = Cena()
-   
+
 
         self.uma= uma = Sala(o= SALA4, s= SALA5, l= SALA6, n= SALA1)
-      
+
         
         self.dois = dois = Sala (n=SALA1, s= SALA7, l= SALA8, o= SALA4)
     
-
+        self.tres = tres = Sala(o=SALA4, s= SALA9, l=SALA10, n=SALA1)
     
       
         self.um.norte.vai()
@@ -106,9 +109,9 @@ class oi:
 # aqui!!!
     def texto_uma_sul(self, *_):
         
-        Texto(self.uma.sul, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
+        Texto(self.uma.sul, "Será que esse é o nosso código genético secreto?. Clique no código e vamos desembaralhar").vai()
         self.uma.sul.vai()
-        self.falauau= Texto(self.uma.sul, "Forma correta é: UAU. Que é a Tirosina, mas infelizmente não é esse nosso código secreto. Com isso, você não conseguiu abrir o cofre. Aperte para voltar e tente novamente.")
+        self.falauau= Texto(self.uma.sul, "Forma correta é: UAU. Que é a Tirosina, mas infelizmente não é esse nosso código secreto. Com isso, você não conseguiu abrir o cofre. Aperte na imagem que representa a Tirosina e logo após clique para voltar e tente novamente.")
 
         uau = Elemento(FOCOD, x=450, y=260, w=150, h=60, cena=self.uma.sul, style={"opacity": 0}, vai=self.falauau.vai)
        
@@ -116,7 +119,7 @@ class oi:
         style=dict(left=500, top=400, width=250, heigth="100px"))
         self.tirosina.entra(self.uma.sul)
         
-        self.falatiro= Texto(self.uma.sul, "A tirosina (abreviadamente Tyr ou Y)[4] ou 4-hidroxifenilalanina, É um dos 20 aminoácidos que fazem parte das proteínas. É um ÎÂÂ±-aminoácido com uma cadeia lateral formada por CH2 ligado a um grupo fenol, o que a torna uma cadeia lateral cíclica aromática com um grupo OH, que lhe confere um carácter polar neutro.")
+        self.falatiro= Texto(self.uma.sul, "A tirosina (abreviadamente Tyr ou Y)[4] ou 4-hidroxifenilalanina, É um dos 20 aminoácidos que fazem parte das proteínas. É um ÎÂÂÂ±-aminoácido com uma cadeia lateral formada por CH2 ligado a um grupo fenol, o que a torna uma cadeia lateral cíclica aromática com um grupo OH, que lhe confere um carácter polar neutro.")
         self.tirosina.vai= self.falatiro.vai
 
         
@@ -126,14 +129,14 @@ class oi:
         self.seta1.vai=self.um.oeste.vai
         
         self.setinha1= Elemento (img="https://i.imgur.com/jUJQ5Oc.png", tit = "seta",
-        style=dict(left=600, top=300, width=90, heigth="20px"))
+        style=dict(left=600, top=300, width=50, heigth="20px"))
         self.setinha1.entra(self.uma.sul)
     
     def texto_uma_leste(self, *_):   
         self.uma.leste.vai()
         
-        Texto(self.uma.leste, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
-        self.falaaua= Texto(self.uma.leste, "Forma correta é: AUA. Que é a Isoleucina, mas infelizmente não é esse nosso código secreto. Com isso, você não conseguiu abrir o cofre. Aperte para voltar e tente novamente.")
+        Texto(self.uma.leste, "Será que esse é o nosso código genético secreto?. Clique no código e vamos desembaralhar").vai()
+        self.falaaua= Texto(self.uma.leste, "Forma correta é: AUA. Que é a Isoleucina, mas infelizmente não é esse nosso código secreto. Com isso, você não conseguiu abrir o cofre. Aperte na imagem que representa a Isoleucina e logo após clique para voltar e tente novamente.")
         aua = Elemento(FOCOT, x=450, y=260, w=150, h=60, cena=self.uma.leste, style={"opacity": 0}, vai=self.falaaua.vai)
         
         self.isoleucina=Elemento(img = "https://i.imgur.com/tL2cc9H.png", tit = "Isoleucina",
@@ -149,14 +152,14 @@ class oi:
         self.isoleucina.vai=self.falaiso.vai
         
         self.setinha2= Elemento (img="https://i.imgur.com/jUJQ5Oc.png", tit = "seta",
-        style=dict(left=600, top=300, width=90, heigth="20px"))
+        style=dict(left=600, top=300, width=50, heigth="20px"))
         self.setinha2.entra(self.uma.leste)
     
     
     def texto_dois_sul(self, *_):    
         self.dois.sul.vai()
-        Texto(self.dois.sul, "Será que esse é o nosso código genético secreto?. Clique nele e vamos desembaralhar").vai()
-        self.falaagu= Texto(self.dois.sul, "Forma correta é: AGU. Que é a Serina, mas infelizmente não é esse nosso código secreto. Com isso, você não conseguiu abrir o cofre. Aperte para voltar e tente novamente.")
+        Texto(self.dois.sul, "Será que esse é o nosso código genético secreto?. Clique no código e vamos desembaralhar").vai()
+        self.falaagu= Texto(self.dois.sul, "Forma correta é: AGU. Que é a Serina, mas infelizmente não é esse nosso código secreto. Com isso, você não conseguiu abrir o cofre. Aperte na imagem que representa a Serina e logo após clique para voltar e tente novamente.")
         agu = Elemento(FOCOT, x=450, y=260, w=150, h=60, cena=self.dois.sul, style={"opacity": 0}, vai=self.falaagu.vai)
         self.serina=Elemento(img= "https://i.imgur.com/IDBTwzj.png", tit= "Serina",
         style=dict(left=530, top=400, width=150, heigth="80px"))
@@ -171,13 +174,13 @@ class oi:
         self.serina.vai=self.falaseri.vai
         
         self.setinha3= Elemento (img="https://i.imgur.com/jUJQ5Oc.png", tit = "seta",
-        style=dict(left=600, top=300, width=90, heigth="20px"))
+        style=dict(left=600, top=300, width=50, heigth="20px"))
         self.setinha3.entra(self.dois.sul)
     
         
     def texto_dois_leste(self, *_):  
         self.dois.leste.vai()
-        Texto(self.dois.leste, "Será que esse é o nosso códigoo genético secreto?. Clique nele e vamos desembaralhar").vai()
+        Texto(self.dois.leste, "Será que esse é o nosso códigoo genético secreto?. Clique no código e vamos desembaralhar").vai()
         
         self.falaaug= Texto(self.dois.leste, "A FORMA CORRETA É: AUG. Chamado Metionina, muito bom!! Você descobriu a senha do nosso cofre. Parabéns! Clique na Metionina para saber mais sobre ela, logo após clique para próxima etapa")
         aug = Elemento(FOCOT, x=450, y=260, w=150, h=60, cena=self.dois.leste, style={"opacity": 0}, vai=self.falaaug.vai)
@@ -197,10 +200,13 @@ class oi:
         
         
         self.setinha5= Elemento (img="https://i.imgur.com/jUJQ5Oc.png", tit = "seta",
-        style=dict(left=600, top=300, width=90, heigth="20px"))
+        style=dict(left=600, top=300, width=50, heigth="20px"))
         self.setinha5.entra(self.dois.leste)
         
         self.foi= Elemento(img="https://i.imgur.com/83PUevp.png", tit = "próx. etapa",
         style=dict(left=1090, top=200, width=50, heigth="20px"))
         self.foi.entra(self.dois.leste)
+        self.foi.vai=self.tres.sul
+        
+    
 oi()
