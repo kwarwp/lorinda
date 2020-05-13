@@ -535,3 +535,10 @@ IndentationError: expected an indented block
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Wed May 13 2020 17:49:19.433 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 213
+  def posiciona_proxima(self, posicao):
+  ^
+IndentationError: unexpected indent
+'''},
