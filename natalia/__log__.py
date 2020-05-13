@@ -563,3 +563,21 @@ IndentationError: expected an indented block
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Wed May 13 2020 17:51:55.644 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 160
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 238
+    class aah :
+  module <module> line 240
+    def __init__(self, esta_cena, chama_quando_acerta, partes=(iih, iih1, iih2, iih3)):# esta sem imagem pois o editor de fotos não esta funcionando
+NameError: name 'iih' is not defined
+'''},
