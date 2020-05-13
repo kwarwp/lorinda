@@ -87,10 +87,10 @@ class oi:
         #DICA DO CODON 
         self.um.oeste.vai()
         self.aminoacido= Elemento(img= "https://i.imgur.com/YF2cXp3.png", tit ="Aminoácido",
-        style=dict(left=920, top=180, width=90, height="90px")) 
+        style=dict(left=950, top=180, width=90, height="90px")) 
         
         self.aminoacido.entra(self.um.oeste)
-        Texto(self.um.oeste, "Como nada nessa vida é fácil, você precisará de uma senha para abrir nosso cofre e passar para proxima etapa. Há 4 códigos genéticos que estão embaralhados, você terá que desembaralhar todos e descobrir o 'nosso' aminoacido secreto. FIQUE ATENTO AS NOSSAS DICAS!! ").vai()
+        Texto(self.um.oeste, "Como nada nessa vida é fácil, você precisará de uma senha para abrir nosso cofre e passar para proxima etapa. Há 4 códigos genéticos que estão embaralhados, você terá que desembaralhar todos e descobrir o 'nosso' aminoacido secreto(clique na nossa imagem que representa um aminoacido). FIQUE ATENTO AS NOSSAS DICAS!! ").vai()
         self.dica=Elemento(img= "https://i.imgur.com/J5A0Jdo.png", tit = "dica!!",
         style=dict(left=530, top=400, width=80, heigth="80px"))
         self.dica.entra(self.um.oeste)
@@ -121,7 +121,7 @@ class oi:
         style=dict(left=500, top=400, width=250, heigth="100px"))
         self.tirosina.entra(self.uma.sul)
         
-        self.falatiro= Texto(self.uma.sul, "A tirosina (abreviadamente Tyr ou Y)[4] ou 4-hidroxifenilalanina, É um dos 20 aminoácidos que fazem parte das proteínas. É um ÎÂÂÂ±-aminoácido com uma cadeia lateral formada por CH2 ligado a um grupo fenol, o que a torna uma cadeia lateral cíclica aromática com um grupo OH, que lhe confere um carácter polar neutro.")
+        self.falatiro= Texto(self.uma.sul, "A tirosina (abreviadamente Tyr ou Y)[4] ou 4-hidroxifenilalanina, É um dos 20 aminoácidos que fazem parte das proteínas. É um ÎÂÂÂÂ±-aminoácido com uma cadeia lateral formada por CH2 ligado a um grupo fenol, o que a torna uma cadeia lateral cíclica aromática com um grupo OH, que lhe confere um carácter polar neutro.")
         self.tirosina.vai= self.falatiro.vai
 
         
