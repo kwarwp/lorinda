@@ -182,7 +182,7 @@ class gameg():
         
         
 class hum :
-     def __init__(self, esta_cena, chama_quando_acerta, partes=(AAH1, AAH2, AAH3, AAH4)):
+    def __init__(self, esta_cena, chama_quando_acerta, partes=(AAH1, AAH2, AAH3, AAH4)):
         posiciona_proxima = self.posiciona_proxima
         class LinhaGeracional:
             """Representa cada uma das linhas recortadas do herdograma original"""
@@ -210,7 +210,7 @@ class hum :
         self.posicoes_montadas = []  #l ista das linhas já montadas no herdograma
         self.posicoes_corretas = [1, 3, 2, 0] 
         
-        def posiciona_proxima(self, posicao):
+    def posiciona_proxima(self, posicao):
         
         largura_da_peca, inicio_horizontal, inicio_vertical, numero_de_pecas = 175, 300, 200, 4
         numero_de_pecas_por_linha = 2
@@ -234,10 +234,10 @@ class hum :
         
         
         #COMADOS DE :ORGANIZE E MONTE
-        
+iih, iih1, iih2, iih3 = AAH1, AAH2, AAH3, AAH4   # remendo provisório só para rodar       
 class aah :
-#imagem salva no meu computador como heredogramas
-     def __init__(self, esta_cena, chama_quando_acerta, partes=(iih, iih1, iih2, iih3)):# esta sem imagem pois o editor de fotos não esta funcionando
+    #imagem salva no meu computador como heredogramas
+    def __init__(self, esta_cena, chama_quando_acerta, partes=(iih, iih1, iih2, iih3)):# esta sem imagem pois o editor de fotos não esta funcionando
         posiciona_proxima = self.posiciona_proxima
         class LinhaGeracional:
             """Representa cada uma das linhas recortadas do herdograma original"""
@@ -265,7 +265,7 @@ class aah :
         self.posicoes_montadas = []  #l ista das linhas já montadas no herdograma
         self.posicoes_corretas = [3, 1, 2, 0] 
         
-        def posiciona_proxima(self, posicao):
+    def posiciona_proxima(self, posicao):
         largura_da_peca, inicio_horizontal, inicio_vertical, numero_de_pecas = 175, 300, 200, 4
         numero_de_pecas_por_linha = 2
         self.parte_inicial += 1  # incrementa a posição para montar a próxima posiçao da peça
@@ -289,9 +289,10 @@ class aah :
             self.salax.vai()
         
         #fazer uma fase de transição ao achar o mapa e procurar alguns quartos
-        
+ff1, ff, ff2, ff3 = AAH1, AAH2, AAH3, AAH4   # remendo provisório só para rodar
+
 class funciona :
-     def __init__(self, esta_cena, chama_quando_acerta, partes=(ff1, ff, ff2, ff3)):#esta sem imagem pq o editor não funciona
+    def __init__(self, esta_cena, chama_quando_acerta, partes=(ff1, ff, ff2, ff3)):#esta sem imagem pq o editor não funciona
         posiciona_proxima = self.posiciona_proxima
         class LinhaGeracional:
             """Representa cada uma das linhas recortadas do herdograma original"""
@@ -319,7 +320,7 @@ class funciona :
         self.posicoes_montadas = []  #l ista das linhas já montadas no herdograma
         self.posicoes_corretas = [1, 3, 2, 0] 
         
-        def posiciona_proxima(self, posicao):
+    def posiciona_proxima(self, posicao):
         largura_da_peca, inicio_horizontal, inicio_vertical, numero_de_pecas = 175, 300, 200, 4
         numero_de_pecas_por_linha = 2
         self.parte_inicial += 1  # incrementa a posição para montar a próxima posiçao da peça
@@ -350,9 +351,11 @@ class funciona :
             # uma caixinha de pergunta para aconselhar
             
             self.ajuda.vai()
-            
+
+II1,II2,II3,II4, II5,II6,II7,II7,II8,II9 = AAH1, AAH2, AAH3, AAH4, AAH1, AAH2, AAH3, AAH4,  AAH3, AAH4   # remendo provisório só para rodar
+
 class acabou :
-     def __init__(self, esta_cena, chama_quando_acerta, partes=(II1,II2,II3,II4, II5,II6,II7,II7,II8,II9)):
+    def __init__(self, esta_cena, chama_quando_acerta, partes=(II1,II2,II3,II4, II5,II6,II7,II7,II8,II9)):
         posiciona_proxima = self.posiciona_proxima
         class LinhaGeracional:
             """Representa cada uma das linhas recortadas do herdograma original"""
@@ -380,7 +383,7 @@ class acabou :
         self.posicoes_montadas = []  #l ista das linhas já montadas no herdograma
         self.posicoes_corretas = [1, 3, 2, 0, 5 , 4, 9, 8, 7]
         
-        def posiciona_proxima(self, posicao):
+    def posiciona_proxima(self, posicao):
         
         largura_da_peca, inicio_horizontal, inicio_vertical, numero_de_pecas = 175, 300, 200, 4
         numero_de_pecas_por_linha = 2
