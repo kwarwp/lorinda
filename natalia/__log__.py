@@ -603,3 +603,29 @@ NameError: name 'iih' is not defined
     def __init__(self, esta_cena, chama_quando_acerta, partes=(ff1, ff, ff2, ff3)):#esta sem imagem pq o editor não funciona
 NameError: name 'ff1' is not defined
 '''},
+{'date': 'Wed May 13 2020 17:54:49.75 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 160
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.main line 160
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.main line 160
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 355
+    class acabou :
+  module <module> line 356
+    def __init__(self, esta_cena, chama_quando_acerta, partes=(II1,II2,II3,II4, II5,II6,II7,II7,II8,II9)):
+NameError: name 'II1' is not defined
+'''},
