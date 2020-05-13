@@ -179,6 +179,8 @@ class gameg():
         self.zezinho.entra(self.sala)
         self.zezinho.entra.tit = "acho que eu preciso fazer algo com isso"
         self.sala.vai()
+        
+        
 class hum :
      def __init__(self, esta_cena, chama_quando_acerta, partes=(AAH1, AAH2, AAH3, AAH4)):
         posiciona_proxima = self.posiciona_proxima
@@ -264,10 +266,6 @@ class aah :
         self.posicoes_corretas = [3, 1, 2, 0] 
         
         def posiciona_proxima(self, posicao):
-        """Chamado pelo clique (vai) de cada peça. Atualiza a próxima posição da peça.
-           Calcula se montou correto, comparando com a lista de posicões corretas.
-           Se já montou quatro peças, e não acerto sinaliza com zero, para iniciar o jogo.
-        """
         largura_da_peca, inicio_horizontal, inicio_vertical, numero_de_pecas = 175, 300, 200, 4
         numero_de_pecas_por_linha = 2
         self.parte_inicial += 1  # incrementa a posição para montar a próxima posiçao da peça
@@ -352,6 +350,56 @@ class funciona :
             # uma caixinha de pergunta para aconselhar
             
             self.ajuda.vai()
+            
+class acabou :
+     def __init__(self, esta_cena, chama_quando_acerta, partes=(II1,II2,II3,II4, II5,II6,II7,II7,II8,II9)):
+        posiciona_proxima = self.posiciona_proxima
+        class LinhaGeracional:
+            """Representa cada uma das linhas recortadas do herdograma original"""
+            def __init__(self, linha, posicao):
+                self.posicao = posicao # posição original no topo da página
+                self.linha = Elemento(linha, x=posicao*200, y=20, w=175, h=125, cena=esta_cena)
+                self.linha.vai = self.clica_e_posiciona_a_linha #quando clica, monta o herdograma
+            def zera(self):
+                self.linha.x = self.posicao*200  # posiciona cada peça com 200 pixels de distância
+                self.linha.y = 20  # posiciona a peça no topo da página
+                self.linha.vai = self.clica_e_posiciona_a_linha
+            def clica_e_posiciona_a_linha(self, *_):
+                x, y = posiciona_proxima(self.posicao)
+                if y:  # se o y retornou zero é porque o posiciona próxima detectou montagem errada
+                    self.linha.x, self.linha.y = x, y # monta a linha no herdograma
+                    self.linha.vai = lambda *_:None #desativa o click da linha
+
+        # coloca cada uma das linhas embaralhadas 
+        self.linhas = [
+            LinhaGeracional(linha=uma_linha, posicao=uma_posicao)
+            for uma_posicao, uma_linha in enumerate(partes)]
+        self.acertou = chama_quando_acerta
+        self.parte_inicial = -1
+        self.altura_da_linha = 125  # cada peça do herdograma tem esta altura
+        self.posicoes_montadas = []  #l ista das linhas já montadas no herdograma
+        self.posicoes_corretas = [1, 3, 2, 0, 5 , 4, 9, 8, 7]
+        
+        def posiciona_proxima(self, posicao):
+        
+        largura_da_peca, inicio_horizontal, inicio_vertical, numero_de_pecas = 175, 300, 200, 4
+        numero_de_pecas_por_linha = 2
+        self.parte_inicial += 1  # incrementa a posição para montar a próxima posiçao da peça
+        self.posicoes_montadas += [posicao]  # adiciona o índice desta peça na lista de peças montadas
+        if self.posicoes_montadas == self.posicoes_corretas:
+            self.acertou()  # invoca a ação acertou se montou nas posições corretas
+            return (inicio_horizontal+largura_da_peca*(self.parte_inicial%numero_de_pecas_por_linha),
+                    inicio_vertical+self.altura_da_linha*(self.parte_inicial//numero_de_pecas_por_linha))
+        else:
+            if len(self.posicoes_montadas) == numero_de_pecas:  # se montou qutro peças incorretas reinicia o game
+                [linha.zera() for linha in self.linhas]  # volta as peças para o topo
+                self.posicoes_montadas = []  # indica que nenhuma peça foi montada
+                self.parte_inicial = -1  # inicia a altura de ontagem da primeira peça
+                return 0, 0  #  retorna uma posição inválida para sinalizar a peça
+            return (inicio_horizontal+largura_da_peca*(self.parte_inicial%numero_de_pecas_por_linha),
+                    inicio_vertical+self.altura_da_linha*(self.parte_inicial//numero_de_pecas_por_linha))
+    def acertou(self):
+        Texto(self.sala, "INCRIVÉL SEUS CONHECIMENTOS EM HEREDITARIEDADE, ACREDITO QUE SERÁ O MELHOR CIENTISTA").vai()           
         def ultimaparte(self,*_):
             #volta para sala(onde tem o monitor
             #para ter acesso ao computador precisa criar um heredograma
