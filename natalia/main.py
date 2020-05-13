@@ -28,6 +28,7 @@ AAH2= "https://i.imgur.com/y7R4ZdF.png"
 AAH1 = "https://i.imgur.com/TiTfioK.png"
 AAH3 = "https://i.imgur.com/coU94XJ.png"
 AAH4 = "https://i.imgur.com/oXZfA3p.png"
+QUE = "https://www.grupoescolar.com/a/b/heredograma-C8.jpg"
 
 class MiniGameHerdograma:
     """Usa um editor de imagem ( /) e recorta o Herdograma em linhas geracionais.
@@ -208,10 +209,7 @@ class hum :
         self.posicoes_corretas = [1, 3, 2, 0] 
         
         def posiciona_proxima(self, posicao):
-        """Chamado pelo clique (vai) de cada peça. Atualiza a próxima posição da peça.
-           Calcula se montou correto, comparando com a lista de posicões corretas.
-           Se já montou quatro peças, e não acerto sinaliza com zero, para iniciar o jogo.
-        """
+        
         largura_da_peca, inicio_horizontal, inicio_vertical, numero_de_pecas = 175, 300, 200, 4
         numero_de_pecas_por_linha = 2
         self.parte_inicial += 1  # incrementa a posição para montar a próxima posiçao da peça
@@ -350,8 +348,9 @@ class funciona :
             self.quartos2.vai()
 
         def ajuda(self,*_):
-            # pegar a imagem do active e coocar uma caixinha de pergunta para aconselhar
-            #motivo ajudar o casal
+            self.que = Cena (img = QUE)
+            # uma caixinha de pergunta para aconselhar
+            
             self.ajuda.vai()
         def ultimaparte(self,*_):
             #volta para sala(onde tem o monitor
