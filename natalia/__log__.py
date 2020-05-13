@@ -521,3 +521,10 @@ SyntaxError: EOL while scanning string literal
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Wed May 13 2020 06:08:11.900 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 215
+  largura_da_peca, inicio_horizontal, inicio_vertical, numero_de_pecas = 175, 300, 200, 4
+  ^
+IndentationError: expected an indented block
+'''},
