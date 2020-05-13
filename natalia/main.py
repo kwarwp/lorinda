@@ -24,78 +24,13 @@ HERDO0="https://i.imgur.com/9jsxjLw.png"
 HERDO1="https://i.imgur.com/w60bNMG.png"
 HERDO2="https://i.imgur.com/RztgWA1.png"
 HERDO3="https://i.imgur.com/FZOhJhb.png"
-""" 
-class gameg():
-
-        casa = Cena( img = CASA)
-        zezinho = Elemento( img = ZEZINHO, tit= "bOA TARDE, SOU ZEZINHO E VIM PARA A ENTREVISTA" ,
-        style=dict (left=200, top=350, width=200, height="200px",))
-        rosalinda = Elemento( img = ROSALINDA, tit= "OLÁ, SOU ROSALINDA,vAMOS COMEÇAR A ENTREVISTA?" ,
-        style=dict (left=400, top=350, width=300, height="200px",))
-        zezinho.entra(casa)
-        rosalinda.entra(casa)
-        
-        quadros = Cena( img = QUADROS)
-        casa.direita=quadros
-        quadros.esquerda=casa
-        zezinho.entra(quadros)#colocar mesnagem confusa de zezinho em relação aos quadros
-        rosalinda.entra(quadros)
-        
-        tour= Cena( img = TOUR)
-        quadros.direita=tour
-        tour.esquerda=quadros
-        zezinho.entra(tour)#zezinha volta para ver o quadros pois ficou encafifado
-        rosalinda.entra(tour)#recebe um telfonema e diz que zezinho pode ficar a vontade, mas ela tera que se ausentar
-        
-        quadros1= Cena( img = QUADROS1)
-        tour.direita=quadros1
-        zezinho.entra(quadros1)#zezinho ajeita o quadro e quando irá arrumar outro quadro e ele está muito pesado, ao tirar da parde encontra um cofre
-        cofre = Cena(img = COFRE)# ESSE COFRE PRECISA TER UM HEREDPGRAMA PARA ABRIR
-        #NAO ENTENDI A GAVETA COM LETRAS
-        heredograma= Elemento( img = HEREDOGRAMA)# ESTAR COMO UM QUADRO
-        #LEMBROU DE UMA AULA NA FIO CRUZ
-        #OLHOU NOVAMENTO NO COFRE E TINHA UMAS LETRAS EMBARALHAS
-        #ABRIU O COFRE E PEGOU UM PAPEL
-        
-        quadros1.direita=pergaminho
-        pergaminho = Cena (img = PERGAMINHO)
-        pergaminho.esquerda=quadros
-        zezinho.entra(pergaminho)
-        #informações sobre o heredograma
-        
-        biblioteca = Cena (img = BIBLIOTECA)
-        pergaminho.direta= biblioteca
-        livro = Elemento (img = LIVRO)
-        livro.entra(biblioteca)
-        #o livro irá abrir para uma pagina secreta
-        
-        sala = Cena (img = SALA)
-        quadrado = Elemento (img = QUADRADO)
-        quadrado1 = Elemento (img = QUADRADO1)
-        circulo = Elemento (img = CIRCULO)
-        dois_t = Elemento (img = DOIS_T)
-        #FAZER COM QUE O JOGADOR POSSA MONTAR ESSE HEREDROGRAMA
-        #COMADOS DE :ORGANIZE E MONTE
-        # Rapidamente após de montar tudo, apareceu alguns nomes ao lado de cada desenho :
-        #quadrado em branco - indivíduo do sexo masculino; esfera em branco - indivíduo do sexo feminino;
-        # traço - casamento; quadrado com risco no meio - indivíduo falecido 
-        # DEPOIS DE MONTAR APARECEU A PALAVRA MAPA
-        
-        # EM UMA ESCRIVANINHA APARECE UM MAPA 
-        
-        
-        #APARECE UM OUTRO HEREDOGRAMA PARA ANALISAR
-        #MONTAR UM HEREDROGRAMA COM AS INDICAÇOES ABAIXO
-        
-        
-        
-        
-        casa.vai()
-gameg()"""
-
+AAH2= "https://i.imgur.com/y7R4ZdF.png"
+AAH1 = "https://i.imgur.com/TiTfioK.png"
+AAH3 = "https://i.imgur.com/coU94XJ.png"
+AAH4 = "https://i.imgur.com/oXZfA3p.png"
 
 class MiniGameHerdograma:
-    """Usa um editor de imagem (https://www.online-image-editor.com/) e recorta o Herdograma em linhas geracionais.
+    """Usa um editor de imagem ( /) e recorta o Herdograma em linhas geracionais.
        No game, o jogador terá que clicar nas linhas em ordem certa para montar o herdograma corretamente.
     """
     def __init__(self, esta_cena, chama_quando_acerta):
@@ -236,41 +171,186 @@ class gameg():
         self.zezinho.entra.tit = "esse heredrograma irá para algum lugar"
         self.pergaminho.vai()
         
-    def sala(self, *_):
+    def sala(self, *_): #colocar como def hum?
         self.quadrado.entra(self.sala)
         self.quadrado1.entra(self.sala)
         self.circulo.entra(self.sala)
         self.zezinho.entra(self.sala)
         self.zezinho.entra.tit = "acho que eu preciso fazer algo com isso"
         self.sala.vai()
-        """ http://supygirls.pythonanywhere.com/supygirls/gamer/henrietta/rachel""" #CÓDIGO DO QUEBRA CABEÇA
-        #TENHO QUE FAZER UM DEF PARA CADA ELEMENTO?????
+class hum :
+     def __init__(self, esta_cena, chama_quando_acerta, partes=(AAH1, AAH2, AAH3, AAH4)):
+        posiciona_proxima = self.posiciona_proxima
+        class LinhaGeracional:
+            """Representa cada uma das linhas recortadas do herdograma original"""
+            def __init__(self, linha, posicao):
+                self.posicao = posicao # posição original no topo da página
+                self.linha = Elemento(linha, x=posicao*200, y=20, w=175, h=125, cena=esta_cena)
+                self.linha.vai = self.clica_e_posiciona_a_linha #quando clica, monta o herdograma
+            def zera(self):
+                self.linha.x = self.posicao*200  # posiciona cada peça com 200 pixels de distância
+                self.linha.y = 20  # posiciona a peça no topo da página
+                self.linha.vai = self.clica_e_posiciona_a_linha
+            def clica_e_posiciona_a_linha(self, *_):
+                x, y = posiciona_proxima(self.posicao)
+                if y:  # se o y retornou zero é porque o posiciona próxima detectou montagem errada
+                    self.linha.x, self.linha.y = x, y # monta a linha no herdograma
+                    self.linha.vai = lambda *_:None #desativa o click da linha
+
+        # coloca cada uma das linhas embaralhadas 
+        self.linhas = [
+            LinhaGeracional(linha=uma_linha, posicao=uma_posicao)
+            for uma_posicao, uma_linha in enumerate(partes)]
+        self.acertou = chama_quando_acerta
+        self.parte_inicial = -1
+        self.altura_da_linha = 125  # cada peça do herdograma tem esta altura
+        self.posicoes_montadas = []  #l ista das linhas já montadas no herdograma
+        self.posicoes_corretas = [1, 3, 2, 0] 
+        
+        def posiciona_proxima(self, posicao):
+        """Chamado pelo clique (vai) de cada peça. Atualiza a próxima posição da peça.
+           Calcula se montou correto, comparando com a lista de posicões corretas.
+           Se já montou quatro peças, e não acerto sinaliza com zero, para iniciar o jogo.
+        """
+        largura_da_peca, inicio_horizontal, inicio_vertical, numero_de_pecas = 175, 300, 200, 4
+        numero_de_pecas_por_linha = 2
+        self.parte_inicial += 1  # incrementa a posição para montar a próxima posiçao da peça
+        self.posicoes_montadas += [posicao]  # adiciona o índice desta peça na lista de peças montadas
+        if self.posicoes_montadas == self.posicoes_corretas:
+            self.acertou()  # invoca a ação acertou se montou nas posições corretas
+            return (inicio_horizontal+largura_da_peca*(self.parte_inicial%numero_de_pecas_por_linha),
+                    inicio_vertical+self.altura_da_linha*(self.parte_inicial//numero_de_pecas_por_linha))
+        else:
+            if len(self.posicoes_montadas) == numero_de_pecas:  # se montou qutro peças incorretas reinicia o game
+                [linha.zera() for linha in self.linhas]  # volta as peças para o topo
+                self.posicoes_montadas = []  # indica que nenhuma peça foi montada
+                self.parte_inicial = -1  # inicia a altura de ontagem da primeira peça
+                return 0, 0  #  retorna uma posição inválida para sinalizar a peça
+            return (inicio_horizontal+largura_da_peca*(self.parte_inicial%numero_de_pecas_por_linha),
+                    inicio_vertical+self.altura_da_linha*(self.parte_inicial//numero_de_pecas_por_linha))
+    def acertou(self):
+        Texto(self.sala, "UAU, você conseguiu passar a fase lembrar! Achei uma saída pela direita!").vai()
+        self.sala = self.salax
         
         
-        #colocar o código do quebra cabeça para montar heredogramas com firguras geometricas separadas
-        #FAZER COM QUE O JOGADOR POSSA MONTAR ESSE HEREDROGRAMA
         #COMADOS DE :ORGANIZE E MONTE
-        # Rapidamente após de montar tudo, apareceu alguns nomes ao lado de cada desenho :
-        #quadrado em branco - indivíduo do sexo masculino; esfera em branco - indivíduo do sexo feminino;
-        # traço - casamento; quadrado com risco no meio - indivíduo falecido 
-        """APARECER UMA uma chave"""
+        
+class aah :
+#imagem salva no meu computador como heredogramas
+     def __init__(self, esta_cena, chama_quando_acerta, partes=(iih, iih1, iih2, iih3)):# esta sem imagem pois o editor de fotos não esta funcionando
+        posiciona_proxima = self.posiciona_proxima
+        class LinhaGeracional:
+            """Representa cada uma das linhas recortadas do herdograma original"""
+            def __init__(self, linha, posicao):
+                self.posicao = posicao # posição original no topo da página
+                self.linha = Elemento(linha, x=posicao*200, y=20, w=175, h=125, cena=esta_cena)
+                self.linha.vai = self.clica_e_posiciona_a_linha #quando clica, monta o herdograma
+            def zera(self):
+                self.linha.x = self.posicao*200  # posiciona cada peça com 200 pixels de distância
+                self.linha.y = 20  # posiciona a peça no topo da página
+                self.linha.vai = self.clica_e_posiciona_a_linha
+            def clica_e_posiciona_a_linha(self, *_):
+                x, y = posiciona_proxima(self.posicao)
+                if y:  # se o y retornou zero é porque o posiciona próxima detectou montagem errada
+                    self.linha.x, self.linha.y = x, y # monta a linha no herdograma
+                    self.linha.vai = lambda *_:None #desativa o click da linha
+
+        # coloca cada uma das linhas embaralhadas 
+        self.linhas = [
+            LinhaGeracional(linha=uma_linha, posicao=uma_posicao)
+            for uma_posicao, uma_linha in enumerate(partes)]
+        self.acertou = chama_quando_acerta
+        self.parte_inicial = -1
+        self.altura_da_linha = 125  # cada peça do herdograma tem esta altura
+        self.posicoes_montadas = []  #l ista das linhas já montadas no herdograma
+        self.posicoes_corretas = [3, 1, 2, 0] 
+        
+        def posiciona_proxima(self, posicao):
+        """Chamado pelo clique (vai) de cada peça. Atualiza a próxima posição da peça.
+           Calcula se montou correto, comparando com a lista de posicões corretas.
+           Se já montou quatro peças, e não acerto sinaliza com zero, para iniciar o jogo.
+        """
+        largura_da_peca, inicio_horizontal, inicio_vertical, numero_de_pecas = 175, 300, 200, 4
+        numero_de_pecas_por_linha = 2
+        self.parte_inicial += 1  # incrementa a posição para montar a próxima posiçao da peça
+        self.posicoes_montadas += [posicao]  # adiciona o índice desta peça na lista de peças montadas
+        if self.posicoes_montadas == self.posicoes_corretas:
+            self.acertou()  # invoca a ação acertou se montou nas posições corretas
+            return (inicio_horizontal+largura_da_peca*(self.parte_inicial%numero_de_pecas_por_linha),
+                    inicio_vertical+self.altura_da_linha*(self.parte_inicial//numero_de_pecas_por_linha))
+        else:
+            if len(self.posicoes_montadas) == numero_de_pecas:  # se montou qutro peças incorretas reinicia o game
+                [linha.zera() for linha in self.linhas]  # volta as peças para o topo
+                self.posicoes_montadas = []  # indica que nenhuma peça foi montada
+                self.parte_inicial = -1  # inicia a altura de ontagem da primeira peça
+                return 0, 0  #  retorna uma posição inválida para sinalizar a peça
+            return (inicio_horizontal+largura_da_peca*(self.parte_inicial%numero_de_pecas_por_linha),
+                    inicio_vertical+self.altura_da_linha*(self.parte_inicial//numero_de_pecas_por_linha))
+    def acertou(self):
+        Texto(self.sala, "MAPA").vai()
+        self.salax = self.quartos2
         def salax (self,*_):
-        # montar um quebra cabeça 
-        # Cientista contou 4 quadrados brancos, 2 esferas brancas e 1 preta,
-        #e 7 traços. Depois de ter encaixado as peças, formou esta imagem como resposta:
-        # quando terminou apareceu a palavra mapa
-           self.salax.vai()
+            self.salax.vai()
         
         #fazer uma fase de transição ao achar o mapa e procurar alguns quartos
+        
+class funciona :
+     def __init__(self, esta_cena, chama_quando_acerta, partes=(ff1, ff, ff2, ff3)):#esta sem imagem pq o editor não funciona
+        posiciona_proxima = self.posiciona_proxima
+        class LinhaGeracional:
+            """Representa cada uma das linhas recortadas do herdograma original"""
+            def __init__(self, linha, posicao):
+                self.posicao = posicao # posição original no topo da página
+                self.linha = Elemento(linha, x=posicao*200, y=20, w=175, h=125, cena=esta_cena)
+                self.linha.vai = self.clica_e_posiciona_a_linha #quando clica, monta o herdograma
+            def zera(self):
+                self.linha.x = self.posicao*200  # posiciona cada peça com 200 pixels de distância
+                self.linha.y = 20  # posiciona a peça no topo da página
+                self.linha.vai = self.clica_e_posiciona_a_linha
+            def clica_e_posiciona_a_linha(self, *_):
+                x, y = posiciona_proxima(self.posicao)
+                if y:  # se o y retornou zero é porque o posiciona próxima detectou montagem errada
+                    self.linha.x, self.linha.y = x, y # monta a linha no herdograma
+                    self.linha.vai = lambda *_:None #desativa o click da linha
+
+        # coloca cada uma das linhas embaralhadas 
+        self.linhas = [
+            LinhaGeracional(linha=uma_linha, posicao=uma_posicao)
+            for uma_posicao, uma_linha in enumerate(partes)]
+        self.acertou = chama_quando_acerta
+        self.parte_inicial = -1
+        self.altura_da_linha = 125  # cada peça do herdograma tem esta altura
+        self.posicoes_montadas = []  #l ista das linhas já montadas no herdograma
+        self.posicoes_corretas = [1, 3, 2, 0] 
+        
+        def posiciona_proxima(self, posicao):
+        largura_da_peca, inicio_horizontal, inicio_vertical, numero_de_pecas = 175, 300, 200, 4
+        numero_de_pecas_por_linha = 2
+        self.parte_inicial += 1  # incrementa a posição para montar a próxima posiçao da peça
+        self.posicoes_montadas += [posicao]  # adiciona o índice desta peça na lista de peças montadas
+        if self.posicoes_montadas == self.posicoes_corretas:
+            self.acertou()  # invoca a ação acertou se montou nas posições corretas
+            return (inicio_horizontal+largura_da_peca*(self.parte_inicial%numero_de_pecas_por_linha),
+                    inicio_vertical+self.altura_da_linha*(self.parte_inicial//numero_de_pecas_por_linha))
+        else:
+            if len(self.posicoes_montadas) == numero_de_pecas:  # se montou qutro peças incorretas reinicia o game
+                [linha.zera() for linha in self.linhas]  # volta as peças para o topo
+                self.posicoes_montadas = []  # indica que nenhuma peça foi montada
+                self.parte_inicial = -1  # inicia a altura de ontagem da primeira peça
+                return 0, 0  #  retorna uma posição inválida para sinalizar a peça
+            return (inicio_horizontal+largura_da_peca*(self.parte_inicial%numero_de_pecas_por_linha),
+                    inicio_vertical+self.altura_da_linha*(self.parte_inicial//numero_de_pecas_por_linha))
+    def acertou(self):
+        Texto(self.sala, "parabéns , vcestá sabendo biologia, vamos ver na proxima fase se entendeu mesmo").vai()
+        self.quartos2 = self.ajuda
         def quartos2(self,*_):
-            #quebra cabeça
             # Figuras geométricas/Traços (simples, duplos, triplos)
             #Casamento cosanguineo/Quatro indivíduas/Dois com anomalias/Dois normais do sexo masculino
             #dar um motivo para fazer esse quebra cabeça
             self.quartos2.vai()
+
         def ajuda(self,*_):
-            # data:image/png;base64,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
-            # ter essa imagem e aconselhar o casal.
+            # pegar a imagem do active e coocar uma caixinha de pergunta para aconselhar
             #motivo ajudar o casal
             self.ajuda.vai()
         def ultimaparte(self,*_):
