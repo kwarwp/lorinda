@@ -123,7 +123,7 @@ class gameg():
         o_quadro.vai = self.cofre_vai
         o_quadro.entra(quadros)
         pergaminho = Cena (img = PERGAMINHO)
-        hum(pergaminho, self.mostra_conteudo_cofre)
+        hum(pergaminho, self.mostra_conteudo_pergaminho)
         quadros1.direita=pergaminho
         pergaminho.esquerda=quadros
         biblioteca = Cena (img = BIBLIOTECA)
@@ -232,8 +232,8 @@ class hum :
     def acertou(self):
         Texto(self.sala, "UAU, você conseguiu passar a fase lembrar! Achei uma saída pela direita!").vai()
         self.sala = self.salax
-        
-        
+    def mostra_conteudo_pergaminho(self, *_):   
+        Texto(self.pergaminho, "parabéns, agora vamos ver para onde vamos!").vai()
         #COMADOS DE :ORGANIZE E MONTE
 iih, iih1, iih2, iih3 = AAH1, AAH2, AAH3, AAH4   # remendo provisório só para rodar       
 class aah :
