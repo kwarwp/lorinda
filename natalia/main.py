@@ -122,7 +122,7 @@ class gameg():
         o_quadro = Elemento(QUADRADO, x=340, y= 270, tit="Esse quadro tem algo diferente", style={"opacity":0.05})
         o_quadro.vai = self.cofre_vai
         o_quadro.entra(quadros)
-        pergaminho = Cena (img = PERGAMINHO)
+        self.pergaminho = pergaminho = Cena (img = PERGAMINHO)
         hum(pergaminho, self.mostra_conteudo_pergaminho)
         quadros1.direita=pergaminho
         pergaminho.esquerda=quadros
@@ -134,7 +134,7 @@ class gameg():
     def mostra_conteudo_cofre(self, *_):        
         Texto(self.cofre, "ZEZINHO: Encontrei um mapa interessante dentro do cofre!").vai()
     def mostra_conteudo_pergaminho(self, *_):   
-        Texto(self.cofre, "parabéns, agora vamos ver para onde vamos!").vai()
+        Texto(self.pergaminho, "parabéns, agora vamos ver para onde vamos!").vai()
         #COMADOS DE :ORGANIZE E MONTE
     def quadros_vai(self, *_):        
         self.zezinho.entra(self.quadros)#colocar mesnagem confusa de zezinho em relação aos quadros
