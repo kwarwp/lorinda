@@ -212,7 +212,7 @@ class hum :
         self.parte_inicial = -1
         self.altura_da_linha = 125  # cada peça do herdograma tem esta altura
         self.posicoes_montadas = []  #l ista das linhas já montadas no herdograma
-        self.posicoes_corretas = [1, 3, 2, 0] 
+        self.posicoes_corretas = [0, 2, 1, 3] 
         
     def posiciona_proxima(self, posicao):
         
