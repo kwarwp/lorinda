@@ -129,11 +129,14 @@ class gameg():
         self.sala=sala=Cena (img=SALA)
         aah(sala,self.mostra_conteudo_sala)
         sala.direita=quartos2
+        self.biblioteca=biblioteca= Cena(BIBLIOTECA)
+        funciona(biblioteca,self.mostra_conteudo_biblioteca)
         quartos2=Cena(img= QUARTOS2)
         biblioteca = Cena (img = BIBLIOTECA)
         pergaminho.direita= biblioteca
         livro = Elemento (img = LIVRO)
         livro.entra(biblioteca)
+        que = Cena(img = QUE)
         casa.vai()
     def mostra_conteudo_cofre(self, *_):        
         Texto(self.cofre, "ZEZINHO: Encontrei um mapa interessante dentro do cofre!").vai()
@@ -142,6 +145,8 @@ class gameg():
         #COMADOS DE :ORGANIZE E MONTE
     def mostra_conteudo_cofre(self,*_):
         Texto(self.sala,"MAPA").vai()
+    def mostra_conteudo_biblioteca(self,*_):
+        Texto(self.biblioteca,"parabéns , vcestá sabendo biologia, vamos ver na proxima fase se entendeu mesmo").vai()
         
     def quadros_vai(self, *_):        
         self.zezinho.entra(self.quadros)#colocar mesnagem confusa de zezinho em relação aos quadros
