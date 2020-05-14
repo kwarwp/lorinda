@@ -123,6 +123,7 @@ class gameg():
         o_quadro.vai = self.cofre_vai
         o_quadro.entra(quadros)
         pergaminho = Cena (img = PERGAMINHO)
+        hum(pergaminho, self.mostra_contuedo_cofre)
         quadros1.direita=pergaminho
         pergaminho.esquerda=quadros
         biblioteca = Cena (img = BIBLIOTECA)
