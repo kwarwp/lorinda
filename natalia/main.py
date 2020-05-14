@@ -126,6 +126,10 @@ class gameg():
         hum(pergaminho, self.mostra_conteudo_pergaminho)
         quadros1.direita=pergaminho
         pergaminho.esquerda=quadros
+        self.sala=sala=Cena (img=SALA)
+        aah(sala,self.mostra_conteudo_sala)
+        sala.direita=quartos2
+        quartos2=Cena(img= QUARTOS2)
         biblioteca = Cena (img = BIBLIOTECA)
         pergaminho.direita= biblioteca
         livro = Elemento (img = LIVRO)
@@ -136,6 +140,9 @@ class gameg():
     def mostra_conteudo_pergaminho(self, *_):   
         Texto(self.pergaminho, "parabéns, agora vamos ver para onde vamos!").vai()
         #COMADOS DE :ORGANIZE E MONTE
+    def mostra_conteudo_cofre(self,*_):
+        Texto(self.sala,"MAPA").vai()
+        
     def quadros_vai(self, *_):        
         self.zezinho.entra(self.quadros)#colocar mesnagem confusa de zezinho em relação aos quadros
         self.zezinho.tit = "Lindos quadros!"
