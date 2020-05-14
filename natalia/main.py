@@ -133,6 +133,9 @@ class gameg():
         casa.vai()
     def mostra_conteudo_cofre(self, *_):        
         Texto(self.cofre, "ZEZINHO: Encontrei um mapa interessante dentro do cofre!").vai()
+    def mostra_conteudo_pergaminho(self, *_):   
+        Texto(self.cofre, "parabéns, agora vamos ver para onde vamos!").vai()
+        #COMADOS DE :ORGANIZE E MONTE
     def quadros_vai(self, *_):        
         self.zezinho.entra(self.quadros)#colocar mesnagem confusa de zezinho em relação aos quadros
         self.zezinho.tit = "Lindos quadros!"
@@ -232,9 +235,8 @@ class hum :
     def acertou(self):
         Texto(self.sala, "UAU, você conseguiu passar a fase lembrar! Achei uma saída pela direita!").vai()
         self.sala = self.salax
-    def mostra_conteudo_pergaminho(self, *_):   
-        Texto(self.pergaminho, "parabéns, agora vamos ver para onde vamos!").vai()
-        #COMADOS DE :ORGANIZE E MONTE
+
+
 iih, iih1, iih2, iih3 = AAH1, AAH2, AAH3, AAH4   # remendo provisório só para rodar       
 class aah :
     #imagem salva no meu computador como heredogramas
