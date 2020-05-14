@@ -143,7 +143,7 @@ class gameg():
     def mostra_conteudo_pergaminho(self, *_):   
         Texto(self.pergaminho, "parabéns, agora vamos ver para onde vamos!").vai()
         #COMADOS DE :ORGANIZE E MONTE
-    def mostra_conteudo_cofre(self,*_):
+    def mostra_conteudo_sala(self,*_):
         Texto(self.sala,"MAPA").vai()
     def mostra_conteudo_biblioteca(self,*_):
         Texto(self.biblioteca,"parabéns , vcestá sabendo biologia, vamos ver na proxima fase se entendeu mesmo").vai()
