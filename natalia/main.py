@@ -29,7 +29,7 @@ AAH1 = "https://i.imgur.com/TiTfioK.png"
 AAH3 = "https://i.imgur.com/coU94XJ.png"
 AAH4 = "https://i.imgur.com/oXZfA3p.png"
 QUE = "https://www.grupoescolar.com/a/b/heredograma-C8.jpg"
-
+QUARTOS2 = "https://ogimg.infoglobo.com.br/in/16924667-185-88e/FT1086A/652/xspas1.jpg,qposicaoFoto1.pagespeed.ic.xWKP_fhCw5.jpg"
 class MiniGameHerdograma:
     """Usa um editor de imagem ( /) e recorta o Herdograma em linhas geracionais.
        No game, o jogador terá que clicar nas linhas em ordem certa para montar o herdograma corretamente.
@@ -129,6 +129,7 @@ class gameg():
         self.sala=sala=Cena (img=SALA)
         aah(sala,self.mostra_conteudo_sala)
         sala.direita=quartos2
+        self.quartos2=quartos2= Cena (img= QUARTOS2)
         self.biblioteca=biblioteca= Cena(BIBLIOTECA)
         funciona(biblioteca,self.mostra_conteudo_biblioteca)
         quartos2=Cena(img= QUARTOS2)
