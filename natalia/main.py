@@ -128,8 +128,9 @@ class gameg():
         pergaminho.esquerda=quadros
         self.sala=sala=Cena (img=SALA)
         aah(sala,self.mostra_conteudo_sala)
-        sala.direita=quartos2
         self.quartos2=quartos2= Cena (img= QUARTOS2)
+        sala.direita=quartos2
+        
         self.biblioteca=biblioteca= Cena(BIBLIOTECA)
         funciona(biblioteca,self.mostra_conteudo_biblioteca)
         quartos2=Cena(img= QUARTOS2)
