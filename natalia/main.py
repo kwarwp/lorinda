@@ -148,7 +148,8 @@ class gameg():
         Texto(self.sala,"MAPA").vai()
     def mostra_conteudo_biblioteca(self,*_):
         Texto(self.biblioteca,"parabéns , vcestá sabendo biologia, vamos ver na proxima fase se entendeu mesmo").vai()
-        
+    def mostra_conteudo_quartos2(self,*_):
+        Texto(self.quartos2, "parabéns , vcestá sabendo biologia, vamos ver na proxima fase se entendeu mesmo").vai()
     def quadros_vai(self, *_):        
         self.zezinho.entra(self.quadros)#colocar mesnagem confusa de zezinho em relação aos quadros
         self.zezinho.tit = "Lindos quadros!"
