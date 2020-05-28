@@ -126,7 +126,7 @@ class gameg():
         hum(pergaminho, self.mostra_conteudo_pergaminho)
         quadros1.direita=pergaminho
         pergaminho.esquerda=quadros
-        self.sala=sala=Cena (img=SALA)
+        self.sala=sala=Cena (img=SALA) # <==== esta sala não aparece, vou ligar na biblioteca
         aah(sala,self.mostra_conteudo_sala)
         self.quartos2=quartos2= Cena (img= QUARTOS2)
         sala.direita=quartos2
@@ -134,8 +134,9 @@ class gameg():
         self.biblioteca=biblioteca= Cena(BIBLIOTECA)
         funciona(biblioteca,self.mostra_conteudo_biblioteca)
         quartos2=Cena(img= QUARTOS2)
-        biblioteca = Cena (img = BIBLIOTECA)
+        # biblioteca = Cena (img = BIBLIOTECA) <====== isso estava errado, criava uma biblioteca nova sem game!
         pergaminho.direita= biblioteca
+        biblioteca.direita = sala # <===== botei aqui uma passagem para a "sala"
         livro = Elemento (img = LIVRO)
         livro.entra(biblioteca)
         que = Cena(img = QUE)
