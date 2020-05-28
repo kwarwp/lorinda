@@ -128,12 +128,14 @@ class gameg():
         pergaminho.esquerda=quadros
         self.sala=sala=Cena (img=SALA) # <==== esta sala não aparece, vou ligar na biblioteca
         aah(sala,self.mostra_conteudo_sala)
-        self.quartos2=quartos2= Cena (img= QUARTOS2)
+        self.quartos2=quartos2= Cena (img= QUARTOS2) # na linha 137 criei outro, sera que dera problemas?
         sala.direita=quartos2
         
         self.biblioteca=biblioteca= Cena(BIBLIOTECA)
         funciona(biblioteca,self.mostra_conteudo_biblioteca)
-        quartos2=Cena(img= QUARTOS2)
+        #quartos2=Cena(img= QUARTOS2)
+        self.quartos2=quartos2=Cena(QUARTOS2)
+        acabou(quartos2,self.mostra_conteudo_quartos2) # não aparece o quebra cabeça no quartos2
         # biblioteca = Cena (img = BIBLIOTECA) <====== isso estava errado, criava uma biblioteca nova sem game!
         pergaminho.direita= biblioteca
         biblioteca.direita = sala # <===== botei aqui uma passagem para a "sala"
