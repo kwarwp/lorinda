@@ -415,7 +415,7 @@ class acabou :
         self.parte_inicial = -1
         self.altura_da_linha = 125  # cada peça do herdograma tem esta altura
         self.posicoes_montadas = []  #l ista das linhas já montadas no herdograma
-        self.posicoes_corretas = [0, 1, 2, 3, 4 , 5, 6, 7, 8]
+        self.posicoes_corretas = [0, 1, 2, 3, 4 , 5, 6, 7]
         
     def posiciona_proxima(self, posicao):
         
