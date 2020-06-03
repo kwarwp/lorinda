@@ -271,12 +271,9 @@ class hum :
     def acertou(self):
         Texto(self.sala, "UAU, você conseguiu passar a fase lembrar! Achei uma saída pela direita!").vai()
         self.sala = self.salax
-
-
-iih, iih1, iih2, iih3 = AAH1, AAH2, AAH3, AAH4   # remendo provisório só para rodar       
+   
 class aah :
-    #imagem salva no meu computador como heredogramas
-    def __init__(self, esta_cena, chama_quando_acerta, partes=(iih, iih1, iih2, iih3)):# esta sem imagem pois o editor de fotos não esta funcionando
+    def __init__(self, esta_cena, chama_quando_acerta, partes=(ii2, iih3, iih, iih1)):# COM IMAGEM
         posiciona_proxima = self.posiciona_proxima
         class LinhaGeracional:
             """Representa cada uma das linhas recortadas do herdograma original"""
@@ -302,7 +299,7 @@ class aah :
         self.parte_inicial = -1
         self.altura_da_linha = 125  # cada peça do herdograma tem esta altura
         self.posicoes_montadas = []  #l ista das linhas já montadas no herdograma
-        self.posicoes_corretas = [3, 1, 2, 0] 
+        self.posicoes_corretas = [1, 2, 3, 4] 
         
     def posiciona_proxima(self, posicao):
         largura_da_peca, inicio_horizontal, inicio_vertical, numero_de_pecas = 175, 300, 200, 4
@@ -328,10 +325,9 @@ class aah :
             self.salax.vai()
         
         #fazer uma fase de transição ao achar o mapa e procurar alguns quartos
-ff1, ff, ff2, ff3 = AAH1, AAH2, AAH3, AAH4   # remendo provisório só para rodar
 
 class funciona :
-    def __init__(self, esta_cena, chama_quando_acerta, partes=(ff1, ff, ff2, ff3)):#esta sem imagem pq o editor não funciona
+    def __init__(self, esta_cena, chama_quando_acerta, partes=(ff5, ff3, ff2, ff, ff1, ff4)):#COM IMAGEM 
         posiciona_proxima = self.posiciona_proxima
         class LinhaGeracional:
             """Representa cada uma das linhas recortadas do herdograma original"""
@@ -357,7 +353,7 @@ class funciona :
         self.parte_inicial = -1
         self.altura_da_linha = 125  # cada peça do herdograma tem esta altura
         self.posicoes_montadas = []  #l ista das linhas já montadas no herdograma
-        self.posicoes_corretas = [1, 3, 2, 0] 
+        self.posicoes_corretas = [ 0,1, 2, 3, 4] 
         
     def posiciona_proxima(self, posicao):
         largura_da_peca, inicio_horizontal, inicio_vertical, numero_de_pecas = 175, 300, 200, 4
