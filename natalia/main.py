@@ -389,7 +389,7 @@ class funciona :
 
 
 class acabou :
-    def __init__(self, esta_cena, chama_quando_acerta, partes=(II7,II2,II8,II5, II3,II1,II,II7,II4)):
+    def __init__(self, esta_cena, chama_quando_acerta, partes=(II7,II2,II5, II3,II1,II,II7,II4)):
         posiciona_proxima = self.posiciona_proxima
         class LinhaGeracional:
             """Representa cada uma das linhas recortadas do herdograma original"""
