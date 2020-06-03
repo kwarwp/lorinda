@@ -387,10 +387,9 @@ class funciona :
             
             self.ajuda.vai()
 
-II1,II2,II3,II4, II5,II6,II7,II7,II8,II9 = AAH1, AAH2, AAH3, AAH4, AAH1, AAH2, AAH3, AAH4,  AAH3, AAH4   # remendo provisório só para rodar
 
 class acabou :
-    def __init__(self, esta_cena, chama_quando_acerta, partes=(II1,II2,II3,II4, II5,II6,II7,II7,II8,II9)):
+    def __init__(self, esta_cena, chama_quando_acerta, partes=(II7,II2,II8,II5, II3,II1,II,II7,II4)):
         posiciona_proxima = self.posiciona_proxima
         class LinhaGeracional:
             """Representa cada uma das linhas recortadas do herdograma original"""
@@ -416,7 +415,7 @@ class acabou :
         self.parte_inicial = -1
         self.altura_da_linha = 125  # cada peça do herdograma tem esta altura
         self.posicoes_montadas = []  #l ista das linhas já montadas no herdograma
-        self.posicoes_corretas = [1, 3, 2, 0, 5 , 4, 9, 8, 7]
+        self.posicoes_corretas = [0, 1, 2, 3, 4 , 5, 6, 7, 8]
         
     def posiciona_proxima(self, posicao):
         
