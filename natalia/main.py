@@ -38,14 +38,14 @@ FF2 = " https://i.imgur.com/EX8DYUF.gif"
 FF3 = "https://i.imgur.com/QEciKiL.gif"
 FF4 = "https://i.imgur.com/06nziUF.jpg"
 FF5 = "https://i.imgur.com/MJGNtR4.gif"
-II= " https://i.imgur.com/2WOVoYw.png"
-II1 =" https://i.imgur.com/qxe7WjM.png"
-II2 =" https://i.imgur.com/zEAdAn2.png"
-II3 = " https://i.imgur.com/6YFEC5G.png"
-II4 = " https://i.imgur.com/5Du6jhl.png"
-II5 = " https://i.imgur.com/vcVoWC2.png"
+II= "https://i.imgur.com/2WOVoYw.png"
+II1 ="https://i.imgur.com/qxe7WjM.png"
+II2 ="https://i.imgur.com/zEAdAn2.png"
+II3 = "https://i.imgur.com/6YFEC5G.png"
+II4 = "https://i.imgur.com/5Du6jhl.png"
+II5 = "https://i.imgur.com/vcVoWC2.png"
 II6 = "https://i.imgur.com/tQaeUoi.png"
-II7 = " https://i.imgur.com/H13SU5z.png"
+II7 = "https://i.imgur.com/H13SU5z.png"
 QUE = "https://www.grupoescolar.com/a/b/heredograma-C8.jpg"
 QUARTOS2 = "https://ogimg.infoglobo.com.br/in/16924667-185-88e/FT1086A/652/xspas1.jpg,qposicaoFoto1.pagespeed.ic.xWKP_fhCw5.jpg"
 class MiniGameHerdograma:
@@ -147,13 +147,14 @@ class gameg():
         self.sala=sala=Cena (img=SALA) # <==== esta sala não aparece, vou ligar na biblioteca
         aah(sala,self.mostra_conteudo_sala)
         self.quartos2=quartos2= Cena (img= QUARTOS2) # na linha 137 criei outro, sera que dera problemas?
+        acabou(quartos2,self.mostra_conteudo_quartos2) # não aparece o quebra cabeça no quartos2
         sala.direita=quartos2
         
         self.biblioteca=biblioteca= Cena(BIBLIOTECA)
         funciona(biblioteca,self.mostra_conteudo_biblioteca)
         #quartos2=Cena(img= QUARTOS2)
         self.quartos2=quartos2=Cena(QUARTOS2)
-        acabou(quartos2,self.mostra_conteudo_quartos2) # não aparece o quebra cabeça no quartos2
+        # funciona(quartos2,self.mostra_conteudo_quartos2) # não aparece o quebra cabeça no quartos2
         # biblioteca = Cena (img = BIBLIOTECA) <====== isso estava errado, criava uma biblioteca nova sem game!
         pergaminho.direita= biblioteca
         biblioteca.direita = sala # <===== botei aqui uma passagem para a "sala"
@@ -271,9 +272,10 @@ class hum :
     def acertou(self):
         Texto(self.sala, "UAU, você conseguiu passar a fase lembrar! Achei uma saída pela direita!").vai()
         self.sala = self.salax
-   
+
+
 class aah :
-    def __init__(self, esta_cena, chama_quando_acerta, partes=(ii2, iih3, iih, iih1)):# COM IMAGEM
+    def __init__(self, esta_cena, chama_quando_acerta, partes=(II2, IIH3, IIH, IIH1)):# COM IMAGEM
         posiciona_proxima = self.posiciona_proxima
         class LinhaGeracional:
             """Representa cada uma das linhas recortadas do herdograma original"""
@@ -327,7 +329,7 @@ class aah :
         #fazer uma fase de transição ao achar o mapa e procurar alguns quartos
 
 class funciona :
-    def __init__(self, esta_cena, chama_quando_acerta, partes=(ff5, ff3, ff2, ff, ff1, ff4)):#COM IMAGEM 
+    def __init__(self, esta_cena, chama_quando_acerta, partes=(FF5, FF3, FF2, FF, FF1, FF4)):#COM IMAGEM 
         posiciona_proxima = self.posiciona_proxima
         class LinhaGeracional:
             """Representa cada uma das linhas recortadas do herdograma original"""
@@ -389,16 +391,16 @@ class funciona :
 
 
 class acabou :
-    def __init__(self, esta_cena, chama_quando_acerta, partes=(II7,II2,II5, II3,II1,II,II7,II4)):
+    def __init__(self, esta_cena, chama_quando_acerta, partes=(II7,II2,II5, II3, II1,II,II7,II4)):
         posiciona_proxima = self.posiciona_proxima
         class LinhaGeracional:
             """Representa cada uma das linhas recortadas do herdograma original"""
             def __init__(self, linha, posicao):
                 self.posicao = posicao # posição original no topo da página
-                self.linha = Elemento(linha, x=posicao*200, y=20, w=175, h=125, cena=esta_cena)
+                self.linha = Elemento(linha, x=posicao*100, y=20, w=82, h=62, cena=esta_cena)
                 self.linha.vai = self.clica_e_posiciona_a_linha #quando clica, monta o herdograma
             def zera(self):
-                self.linha.x = self.posicao*200  # posiciona cada peça com 200 pixels de distância
+                self.linha.x = self.posicao*100  # posiciona cada peça com 200 pixels de distância
                 self.linha.y = 20  # posiciona a peça no topo da página
                 self.linha.vai = self.clica_e_posiciona_a_linha
             def clica_e_posiciona_a_linha(self, *_):
@@ -413,14 +415,14 @@ class acabou :
             for uma_posicao, uma_linha in enumerate(partes)]
         self.acertou = chama_quando_acerta
         self.parte_inicial = -1
-        self.altura_da_linha = 125  # cada peça do herdograma tem esta altura
+        self.altura_da_linha = 62  # cada peça do herdograma tem esta altura
         self.posicoes_montadas = []  #l ista das linhas já montadas no herdograma
         self.posicoes_corretas = [0, 1, 2, 3, 4 , 5, 6, 7]
         
     def posiciona_proxima(self, posicao):
         
-        largura_da_peca, inicio_horizontal, inicio_vertical, numero_de_pecas = 175, 300, 200, 4
-        numero_de_pecas_por_linha = 2
+        largura_da_peca, inicio_horizontal, inicio_vertical, numero_de_pecas = 82, 300, 100, 8
+        numero_de_pecas_por_linha = 4
         self.parte_inicial += 1  # incrementa a posição para montar a próxima posiçao da peça
         self.posicoes_montadas += [posicao]  # adiciona o índice desta peça na lista de peças montadas
         if self.posicoes_montadas == self.posicoes_corretas:
