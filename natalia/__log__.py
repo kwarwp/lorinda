@@ -875,3 +875,25 @@ NameError: name 'ii2' is not defined
     def __init__(self, esta_cena, chama_quando_acerta, partes=(ii2, iih3, iih, iih1)):# COM IMAGEM
 NameError: name 'ii2' is not defined
 '''},
+{'date': 'Wed Jun 03 2020 21:09:22.0 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 160
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.main line 160
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 306
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 278
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 295
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 329
+    class funciona :
+  module <module> line 330
+    def __init__(self, esta_cena, chama_quando_acerta, partes=(ff5, ff3, ff2, ff, ff1, ff4)):#COM IMAGEM 
+NameError: name 'ff5' is not defined
+'''},
