@@ -57,7 +57,14 @@ CASA_DOENTE=
     #ladrao pega a formula
     ajudanted.entra(casa)
     doente.entra(casa)
-    doente.fala
+    ajudante.fala" As coordenadas para seu rémedio estão no genótipo de uma doença, você deve procurar onde toda informação é guardada."
+    #coordenada:XhY
+    doente.entra(biblioteca)
+    doente.sai(biblioteca)
+    doente.entra(parte de tras da biblioteca)
+    
+    
+    
     
     
 
