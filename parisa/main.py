@@ -33,7 +33,7 @@ SALA6 = " https://i.imgur.com/Ey3Gccw.png"
 SALA8 = "https://i.imgur.com/9ZxVZDJ.png"
 #cofre 
 SALA9 = "https://i.imgur.com/XMKlMUb.png"
-SALA10 = "https://imgur.com/fuGV2fr.gif"
+SALA10 = "https://i.imgur.com/O43oDtt.png"
 
 class oi:
     '''coloquei um def para cada cena, mas ainda não foi. Tenho que fazer essa 'cena fantasma' com todas as cenas??'''
@@ -122,7 +122,7 @@ class oi:
         style=dict(left=500, top=400, width=250, heigth="100px"))
         self.tirosina.entra(self.uma.sul)
         
-        self.falatiro= Texto(self.uma.sul, "A tirosina (abreviadamente Tyr ou Y)[4] ou 4-hidroxifenilalanina, É um dos 20 aminoácidos que fazem parte das proteínas. É um ÎÂÂÂÂÂ±-aminoácido com uma cadeia lateral formada por CH2 ligado a um grupo fenol, o que a torna uma cadeia lateral cíclica aromática com um grupo OH, que lhe confere um carácter polar neutro.")
+        self.falatiro= Texto(self.uma.sul, "A tirosina (abreviadamente Tyr ou Y)[4] ou 4-hidroxifenilalanina, É um dos 20 aminoácidos que fazem parte das proteínas. É um ÎÂÂÂÂÂÂ±-aminoácido com uma cadeia lateral formada por CH2 ligado a um grupo fenol, o que a torna uma cadeia lateral cíclica aromática com um grupo OH, que lhe confere um carácter polar neutro.")
         self.tirosina.vai= self.falatiro.vai
 
         
