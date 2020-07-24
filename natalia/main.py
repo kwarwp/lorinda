@@ -142,8 +142,11 @@ class gameg():
         o_quadro.entra(quadros)
         self.pergaminho = pergaminho = Cena (img = PERGAMINHO)
         hum(pergaminho, self.mostra_conteudo_pergaminho)
+        #quadros1.direita=Cena()
         quadros1.direita=pergaminho
-        pergaminho.esquerda=quadros
+        #quadros1.direita.vai=pergaminho
+        #pergaminho.esquerda=Cena()
+        pergaminho.esquerda.vai=quadros1
         self.sala=sala=Cena (img=SALA) # <==== esta sala não aparece, vou ligar na biblioteca
         aah(sala,self.mostra_conteudo_sala)
         self.quartos2=quartos2= Cena (img= QUARTOS2) # na linha 137 criei outro, sera que dera problemas?
