@@ -34,10 +34,10 @@ SALA8 = "https://i.imgur.com/9ZxVZDJ.png"
 #cofre 
 SALA9 = "https://i.imgur.com/XMKlMUb.png"
 SALA10 = "https://i.imgur.com/O43oDtt.png"
-SALA11= "https://upload.wikimedia.org/wikipedia/commons/a/a8/Antarctica_blue_white_blue.jpg"
-SALA12="https://i.pinimg.com/736x/39/d2/47/39d2475706ed612165904be513072227.jpg "
+SALA11= "https://media.giphy.com/media/mq5y2jHRCAqMo/giphy.gif"
+SALA12="https://media.giphy.com/media/mq5y2jHRCAqMo/giphy.gif "
 SALA13 = "https://images.madeiramadeira.com.br/product/images/93158678-adesivo-paisagem-natureza-lago-papel-parede-montanhas-gg423prdjlgbeahvwvdsv-179-1-800x729.jpg"
-SALA14= "https://www.estudokids.com.br/wp-content/uploads/2020/02/o-que-e-paisagem-1200x675.jpg"
+SALA14= "https://media.giphy.com/media/mq5y2jHRCAqMo/giphy.gif"
 
 class oi:
     '''coloquei um def para cada cena, mas ainda não foi. Tenho que fazer essa 'cena fantasma' com todas as cenas??'''
@@ -227,21 +227,32 @@ class oi:
         Texto (self.tres.leste, "Olá, parábens! Você conseguiu desvendar o código de iniciação que é a: Metíonina. Nessa fase cada porta possui uma sequência de codons, mas apenas uma irá se abrir. Para poder abrir a porta, você precisará levar o código de iniciação para a sequência certa").vai()
         foco_sul= Elemento (img = " https://i.imgur.com/6e096Va.png", x=100, y=100, w=150, h=200, style={"opacity": 0}, cena = self.tres.leste, vai= self.texto_quatro_leste)
         foco_oeste= Elemento (img= "https://i.imgur.com/6e096Va.png", x=350, y=100, w=150, h=200, style={"opacity": 0}, cena = self.tres.leste, vai = self.texto_quatro_sul)
-        foco_norte= Elemento (img= "https://i.imgur.com/6e096Va.png", x=650, y=100, w=150, h=200, style={"opacity": 0}, cena = self.tres.leste, vai = self.texto_cinco_leste)
-        foco_leste= Elemento (img= "https://i.imgur.com/6e096Va.png", x=940, y=100, w=150, h=200, style={"opacity": 0}, cena = self.tres.leste, vai = self.texto_cinco_sul)
+        foco_norte= Elemento (img= "https://i.imgur.com/6e096Va.png", x=650, y=100, w=150, h=200, style={"opacity": 0}, cena = self.tres.leste, vai = self.texto_cinco_leste, tit = "DNA: ACT GCC ATC AGG")
+        #foco_leste= Elemento (img= "https://i.imgur.com/6e096Va.png", x=940, y=100, w=150, h=200, style={"opacity": 0}, cena = self.tres.leste, vai = self.texto_cinco_sul)
         
-        #play=Elemento(FOCON, x=380, y=320, w=500, h=60, cena=self.tres.leste, style={"opacity": 0}, vai=self.texto_tres_sul)
+#play=Elemento(FOCON, x=380, y=320, w=500, h=60, cena=self.tres.leste, style={"opacity": 0}, vai=self.texto_tres_sul)
+
+        '''quando a porta se abrir:'''
+      #porta sul
     def texto_quatro_leste (self, *_):
         self.quatro.leste.vai()
-        
+        Texto(self.quatro.leste, "Não foi dessa vez, sequência errada!!!! Aperte no 'X' para voltar").vai()
+        erroQL = Elemento (img ="https://i.imgur.com/eoMGnKA.png", cena= self.quatro.leste, vai= self.texto_tres_leste)
+        #porta oeste
     def texto_quatro_sul(self, *_):
+        Texto(self.quatro.sul, "Não foi dessa vez, sequência errada!!!! Aperte no 'X' para voltar").vai()
+        erroQS = Elemento (img ="https://i.imgur.com/eoMGnKA.png", cena= self.quatro.sul, vai= self.texto_tres_leste)
         self.quatro.sul.vai()
-        
+        #porta norte
     def texto_cinco_leste( self, *_):
+        Texto(self.cinco.leste, "Não foi dessa vez, sequência errada!!!! Aperte no 'X' para voltar").vai()
+        erroCL = Elemento (img ="https://i.imgur.com/eoMGnKA.png", cena= self.cinco.leste, vai= self.texto_tres_leste)
         self.quatro.leste.vai()
-        
+        #porta leste
     def texto_cinco_sul(self, *_):
-        self.quatro.sul.vai()
+        self.cinco.sul.vai()
+        Texto(self.cinco.sul, "Não foi dessa vez, sequência errada!!!! Aperte no 'X' para voltar").vai()
+        erroCS = Elemento (img ="https://i.imgur.com/eoMGnKA.png", cena= self.cinco.sul, vai= self.texto_tres_leste)
     
 
 oi()
