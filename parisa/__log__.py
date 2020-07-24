@@ -938,3 +938,10 @@ AttributeError: 'GUI' object has no attribute 'tres'
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Fri Jul 24 2020 12:59:16.848 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 230
+  foco_norte= Elemento (img= "https://i.imgur.com/6e096Va.png", x=650, y=100, w=150, h=200, style={"opacity": 0}, cena = self.tres.leste, vai = self.texto_cinco_leste, tit = "DNA: ACT GCC ATC AGG", tit = "oi")
+                                                                                                                                                                                                          ^
+SyntaxError: keyword argument repeated
+'''},
