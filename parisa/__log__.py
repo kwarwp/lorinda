@@ -959,3 +959,10 @@ SyntaxError: invalid syntax
                                                                      ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Jul 24 2020 20:21:58.147 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 236
+  foco_sul= Elemento (img = " https://i.imgur.com/6e096Va.png", x=100, y=100, w=150, h=200,drop=dropper, style={"opacity": 0}, cena = self.tres.leste, vai= self.texto_quatro_leste,  tit = "DNA: CCG ATC GAT ACG RNAm GGC TAG CTA UGC -> RNAm: UGA CGG UAC UGC -> Aminoácido PROT SER PRO TIR CIS",  drop=dropper)
+                                                                                                                                                                                                                                                                                                          ^
+SyntaxError: keyword argument repeated
+'''},
