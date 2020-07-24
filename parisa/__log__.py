@@ -952,3 +952,10 @@ SyntaxError: keyword argument repeated
                                                                      ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Jul 24 2020 13:44:23.95 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 238
+  foco_norte= Elemento (img= "https://i.imgur.com/6e096Va.png",https://i.imgur.com/foWxout.png, style={"opacity": 0}, cena = self.tres.leste, vai = self.texto_cinco_leste, tit = "DNA: ACT GCC ATC AGG")
+                                                                     ^
+SyntaxError: invalid syntax
+'''},
