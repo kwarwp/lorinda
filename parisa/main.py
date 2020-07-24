@@ -128,7 +128,7 @@ class oi:
         style=dict(left=500, top=400, width=250, heigth="100px"))
         self.tirosina.entra(self.uma.sul)
         
-        self.falatiro= Texto(self.uma.sul, "A tirosina (abreviadamente Tyr ou Y)[4] ou 4-hidroxifenilalanina, É um dos 20 aminoácidos que fazem parte das proteínas. É um ÎÂÂÂÂÂÂÂÂÂ±-aminoácido com uma cadeia lateral formada por CH2 ligado a um grupo fenol, o que a torna uma cadeia lateral cíclica aromática com um grupo OH, que lhe confere um carácter polar neutro.")
+        self.falatiro= Texto(self.uma.sul, "A tirosina (abreviadamente Tyr ou Y)[4] ou 4-hidroxifenilalanina, É um dos 20 aminoácidos que fazem parte das proteínas. É um ÎÂÂÂÂÂÂÂÂÂÂ±-aminoácido com uma cadeia lateral formada por CH2 ligado a um grupo fenol, o que a torna uma cadeia lateral cíclica aromática com um grupo OH, que lhe confere um carácter polar neutro.")
         self.tirosina.vai= self.falatiro.vai
 
         
@@ -245,7 +245,7 @@ class oi:
 
 
         '''quando a porta se abrir:'''
-      #porta sul
+        #porta sul
     def texto_quatro_leste (self, *_):
         self.quatro.leste.vai()
         Texto(self.quatro.leste, "Não foi dessa vez, sequência errada!!!! Aperte no 'X' para voltar").vai()
