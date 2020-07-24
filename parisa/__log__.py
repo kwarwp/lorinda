@@ -931,3 +931,10 @@ IndentationError: expected an indented block
     self.tres.leste.vai()
 AttributeError: 'GUI' object has no attribute 'tres'
 '''},
+{'date': 'Fri Jul 24 2020 11:29:36.781 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 230
+  self.quatro.leste.vai()
+  ^
+IndentationError: expected an indented block
+'''},
