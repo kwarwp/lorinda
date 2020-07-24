@@ -113,7 +113,7 @@ class oi:
         gau = Elemento(FOCO, x=800, y=320, w=150, h=80, cena=self.um.oeste, style={"opacity": 0}, vai=self.texto_dois_leste)
         
         
-        
+        '''TODOS OS CENARIOS DE TODOS OS CÓDONS'''
 
 # aqui!!!
     def texto_uma_sul(self, *_):
@@ -186,7 +186,7 @@ class oi:
         style=dict(left=600, top=300, width=50, heigth="20px"))
         self.setinha3.entra(self.dois.sul)
     
-        
+        '''CÓDON CERTO'''
     def texto_dois_leste(self, *_):  
         self.dois.leste.vai()
         Texto(self.dois.leste, "Será que esse é o nosso códigoo genético secreto?. Clique no código e vamos desembaralhar").vai()
@@ -217,20 +217,30 @@ class oi:
         self.foi.entra(self.dois.leste)
         self.foi.vai=self.texto_tres_sul
         
+        #QUANDO O JOGADOR ACERTA O CÓDON CERTO, ELE IRÁ ABRIR UM COFRE
+        ''' CENA DO COFRE'''
+        
     def texto_tres_sul(self, *_): 
         self.tres.sul.vai()
         Texto(self.tres.sul, "Você conseguiu abrir nosso cofre!! Agora vamos lá descobrir o que tem dentro dele.").vai()
         cof=Elemento (FOCOO, x=380, y=200, w=70, h=260, cena=self.tres.sul, style={"opacity": 0}, vai=self.texto_tres_leste)
+        
+        '''CENA DAS PORTAS'''
+        #ELE TERÁ QUE LEVAR O CÓDIGO DE INICIAÇÃO PARA A PORTA CERTA -> ENTÃO A PORTA IRÁ ABRIR
+        #EXISTEM 4 PORTAS, A NOORTE É A CERTA
+        #CADA PORTA TEM UMA SEQUÊNCIA DE CÓDONS
 
     def texto_tres_leste(self, *_):
         self.tres.leste.vai()
         Texto (self.tres.leste, "Olá, parábens! Você conseguiu desvendar o código de iniciação que é a: Metíonina. Nessa fase cada porta possui uma sequência de codons, mas apenas uma irá se abrir. Para poder abrir a porta, você precisará levar o código de iniciação para a sequência certa").vai()
         foco_sul= Elemento (img = " https://i.imgur.com/6e096Va.png", x=100, y=100, w=150, h=200, style={"opacity": 0}, cena = self.tres.leste, vai= self.texto_quatro_leste)
         foco_oeste= Elemento (img= "https://i.imgur.com/6e096Va.png", x=350, y=100, w=150, h=200, style={"opacity": 0}, cena = self.tres.leste, vai = self.texto_quatro_sul)
-        foco_norte= Elemento (img= "https://i.imgur.com/6e096Va.png", x=650, y=100, w=150, h=200, style={"opacity": 0}, cena = self.tres.leste, vai = self.texto_cinco_leste, tit = "DNA: ACT GCC ATC AGG")
+        foco_norte= Elemento (img= "https://i.imgur.com/6e096Va.png", style={"opacity": 0}, cena = self.tres.leste, vai = self.texto_cinco_leste, tit = "DNA: ACT GCC ATC AGG")
+        codon_iniciacao = Elemento (img = "https://i.imgur.com/foWxout.png", x=250, y=350, w=650, h=200, cena = self.tres.leste)
+        
         #foco_leste= Elemento (img= "https://i.imgur.com/6e096Va.png", x=940, y=100, w=150, h=200, style={"opacity": 0}, cena = self.tres.leste, vai = self.texto_cinco_sul)
         
-#play=Elemento(FOCON, x=380, y=320, w=500, h=60, cena=self.tres.leste, style={"opacity": 0}, vai=self.texto_tres_sul)
+
 
         '''quando a porta se abrir:'''
       #porta sul
