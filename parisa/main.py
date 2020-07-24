@@ -128,7 +128,7 @@ class oi:
         style=dict(left=500, top=400, width=250, heigth="100px"))
         self.tirosina.entra(self.uma.sul)
         
-        self.falatiro= Texto(self.uma.sul, "A tirosina (abreviadamente Tyr ou Y)[4] ou 4-hidroxifenilalanina, É um dos 20 aminoácidos que fazem parte das proteínas. É um ÎÂÂÂÂÂÂÂ±-aminoácido com uma cadeia lateral formada por CH2 ligado a um grupo fenol, o que a torna uma cadeia lateral cíclica aromática com um grupo OH, que lhe confere um carácter polar neutro.")
+        self.falatiro= Texto(self.uma.sul, "A tirosina (abreviadamente Tyr ou Y)[4] ou 4-hidroxifenilalanina, É um dos 20 aminoácidos que fazem parte das proteínas. É um ÎÂÂÂÂÂÂÂÂ±-aminoácido com uma cadeia lateral formada por CH2 ligado a um grupo fenol, o que a torna uma cadeia lateral cíclica aromática com um grupo OH, que lhe confere um carácter polar neutro.")
         self.tirosina.vai= self.falatiro.vai
 
         
@@ -233,9 +233,9 @@ class oi:
     def texto_tres_leste(self, *_):
         self.tres.leste.vai()
         Texto (self.tres.leste, "Olá, parábens! Você conseguiu desvendar o código de iniciação que é a: Metíonina. Nessa fase cada porta possui uma sequência de codons, mas apenas uma irá se abrir. Para poder abrir a porta, você precisará levar o código de iniciação para a sequência certa").vai()
-        foco_sul= Elemento (img = " https://i.imgur.com/6e096Va.png", x=100, y=100, w=150, h=200, style={"opacity": 0}, cena = self.tres.leste, vai= self.texto_quatro_leste,  tit = "DNA: CCG ATC GAT ACG RNAm GGC TAG CTA UGC -> RNAm: UGA CGG UAC UGC -> Aminoácido PROT SER PRO TIR CIS")
-        foco_oeste= Elemento (img= "https://i.imgur.com/6e096Va.png", x=350, y=100, w=150, h=200, style={"opacity": 0}, cena = self.tres.leste, vai = self.texto_quatro_sul, tit = " DNA: TTT TTC TCT TTT -> RNAm: UAA UAG UGA UAA -> Aminoácido: SER VAL ALA MET")
-        foco_norte= Elemento (img= "https://i.imgur.com/6e096Va.png", x=650, y=100, w=150, h=200, style={"opacity": 0}, cena = self.tres.leste, vai = self.texto_cinco_leste, tit = "DNA: ACT GCC ATC AGG -> RNAm: UGA CGG UAC UGC -> Aminoácido: PROT SER PRO TIR CIS")
+        foco_sul= Elemento (img = " https://i.imgur.com/6e096Va.png", x=100, y=100, w=150, h=200,drop=dropper, style={"opacity": 0}, cena = self.tres.leste, vai= self.texto_quatro_leste,  tit = "DNA: CCG ATC GAT ACG RNAm GGC TAG CTA UGC -> RNAm: UGA CGG UAC UGC -> Aminoácido PROT SER PRO TIR CIS")
+        foco_oeste= Elemento (img= "https://i.imgur.com/6e096Va.png", x=350, y=100, w=150, h=200,drop=dropper, style={"opacity": 0}, cena = self.tres.leste, vai = self.texto_quatro_sul, tit = " DNA: TTT TTC TCT TTT -> RNAm: UAA UAG UGA UAA -> Aminoácido: SER VAL ALA MET")
+        foco_norte= Elemento (img= "https://i.imgur.com/6e096Va.png", x=650, y=100, w=150, h=200,drop=dropper, style={"opacity": 0}, cena = self.tres.leste, vai = self.texto_cinco_leste, tit = "DNA: ACT GCC ATC AGG -> RNAm: UGA CGG UAC UGC -> Aminoácido: PROT SER PRO TIR CIS")
         
         
         codon_iniciacao = Elemento (img = "https://i.imgur.com/foWxout.png", x=250, y=350, w=650, h=200, cena = self.tres.leste)
