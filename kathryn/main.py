@@ -27,19 +27,17 @@ QUADRO_6_CRIANCA_RUIVA_PELE_BRANCA_CABELO_VERMELHO = "https://i.imgur.com/DtSbcL
 MUSEU_DA_VIDA = "https://i.imgur.com/s4ZBrRv.jpg"
 DNA = "https://www.facebook.com/Projeto-SupyGirls-2062797764002029"
 Genes = "https://i.imgur.com/SBcbyUc.gif"
-Nucleotideos = "https://i.imgur.com/eUn2STG.png"
-Organismo
-Sequência correta
-Cofre
-Abrir cofre
-
-PenDrive
-
-Poção mágica
-
-Super poderes
-
-
+Caixa de enigma = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR6joEvEOfFUM8XeYOGB5xZNKAvpvVkyxejzA&usqp=CAU"
+nucleotideo DNA = "https://static.docsity.com/documents_pages/notas/2010/08/25/e5bcbeb3ff59af5f4b1528a2a1aed613.png"
+Cofre = "https://static.vecteezy.com/system/resources/previews/000/269/461/non_2x/closed-cartoon-treasure-chest-vector.jpg"
+Abrir cofre = "https://image.freepik.com/vetores-gratis/cofre-do-tesouro-dos-desenhos-animados-aberto_26659-11.jpg"
+PenDrive = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.123rf.com%2Fphoto_54600423_%25C3%25ADcone-da-unidade-flash-usb-no-estilo-dos-desenhos-animados-isolado-no-fundo-branco.html&psig=AOvVaw0HXXKKU33SN2mlVo8NvDUD&ust=1595692819971000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKDJspWh5uoCFQAAAAAdAAAAABAD"
+garrafinhapocaomagica = "https://i.pinimg.com/originals/69/4d/0e/694d0e28c8f9afe60797b2c7deaa4844.jpg
+casafiocruz = "https://agencia.fiocruz.br/sites/agencia.fiocruz.br/files/u34/coc_peterilicciev.jpg"
+chave embaixo do tapete = "https://i1.wp.com/blog.maxximapatrimonial.com.br/wp-content/uploads/2018/10/where-not-to-leave-your-keys-1024x683.jpg?resize=1024%2C683&ssl=1"
+homem negro cabelos crespos olhos castanhos nariz medio e boca larga = "https://i.pinimg.com/236x/21/c3/47/21c347c81dea45b488fb25c54a513333--top-mens-hairstyles-dread-hairstyles.jpg"
+mulher negra cabelos cacheados olhos pretos nariz medio boca larga = "https://4.bp.blogspot.com/_R8LkKSvcN4c/TUBKXXOUZDI/AAAAAAAAaVc/tUoN1-9LjXc/s1600/1%2Ba%2Ba%2Ba%2Bc%2Bcrespo%2Bnegras.jpg"
+Menina  Branca Cabelo liso Nariz grande olhos verdes boca pequena = "https://i.pinimg.com/originals/b9/b7/4e/b9b74edff8157f22e49e38802df54676.jpg"
 
 # O CÓDIGO DO MINE GAME ENTRA AQUI?
 class primeira_fase():
