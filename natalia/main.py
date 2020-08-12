@@ -141,7 +141,7 @@ class gameg():
         o_quadro.vai = self.cofre_vai
         o_quadro.entra(quadros)
         self.pergaminho = pergaminho = Cena (img = PERGAMINHO)
-        hum(pergaminho, self.mostra_conteudo_pergaminho)
+        HerdogramaPergaminho(pergaminho, self.mostra_conteudo_pergaminho)
         quadros1.direita=Cena()
         #quadros1.direita=pergaminho
         quadros1.direita.vai=self.vai_para_sala
@@ -156,7 +156,7 @@ class gameg():
         sala.direita=quartos2
         
         self.biblioteca=biblioteca= Cena(BIBLIOTECA)
-        funciona(biblioteca,self.mostra_conteudo_biblioteca)
+        HerdogramaBiblioteca(biblioteca,self.mostra_conteudo_biblioteca)
         #quartos2=Cena(img= QUARTOS2)
         self.quartos2=quartos2=Cena(QUARTOS2)
         # funciona(quartos2,self.mostra_conteudo_quartos2) # não aparece o quebra cabeça no quartos2
@@ -169,6 +169,9 @@ class gameg():
         casa.vai()
     def mostra_biblioteca(self, *_):        
         self.biblioteca.vai()
+        self.biblioteca.direita = self.pergaminho
+        self.biblioteca.meio = self.pergaminho
+        self.biblioteca.esquerda = self.pergaminho
         Texto(self.biblioteca, "ZEZINHO: motaremos este herdograma!").vai()
     def mostra_quadros1(self, *_):        
         self.quadros.vai()
@@ -248,7 +251,7 @@ class gameg():
         self.sala.vai()
         
         
-class hum :
+class HerdogramaPergaminho :
     def __init__(self, esta_cena, chama_quando_acerta, partes=(AAH1, AAH2, AAH3, AAH4)):
         posiciona_proxima = self.posiciona_proxima
         class LinhaGeracional:
@@ -355,7 +358,7 @@ class aah :
         
         #fazer uma fase de transição ao achar o mapa e procurar alguns quartos
 
-class funciona :
+class HerdogramaBiblioteca :
     def __init__(self, esta_cena, chama_quando_acerta, partes=(FF5, FF3, FF2, FF, FF1, FF4)):#COM IMAGEM 
         posiciona_proxima = self.posiciona_proxima
         class LinhaGeracional:
