@@ -127,7 +127,7 @@ class gameg():
         self.tour = tour = Cena( img = TOUR)
         quadros.direita.vai = self.tour_vai
         tour.esquerda=quadros
-        quadros1= Cena( img = QUADROS1)
+        self.quadros1 = quadros1= Cena( img = QUADROS1)
         tour.direita=quadros1
         """cria a cena cofre e conecta a esquerda com a cena quadros
         conencta elemento o_quadro.vai com a cena cofre via self.quadro_vai, monta o minigame no cofre"""
@@ -143,8 +143,8 @@ class gameg():
         self.pergaminho = pergaminho = Cena (img = PERGAMINHO)
         hum(pergaminho, self.mostra_conteudo_pergaminho)
         #quadros1.direita=Cena()
-        quadros1.direita=pergaminho
-        #quadros1.direita.vai=pergaminho
+        #quadros1.direita=pergaminho
+        quadros1.direita.vai=self.mostra_pergaminho
         #pergaminho.esquerda=Cena()
         pergaminho.esquerda.vai=quadros1
         self.sala=sala=Cena (img=SALA) # <==== esta sala não aparece, vou ligar na biblioteca
@@ -165,6 +165,9 @@ class gameg():
         livro.entra(biblioteca)
         que = Cena(img = QUE)
         casa.vai()
+    def mostra_pergaminho(self, *_):        
+        self.quadros1.vai()
+        Texto(self.quadros1, "ZEZINHO: Encontrei um pergaminho!").vai()
     def mostra_conteudo_cofre(self, *_):        
         Texto(self.cofre, "ZEZINHO: Encontrei um mapa interessante dentro do cofre!").vai()
     def mostra_conteudo_pergaminho(self, *_):   
