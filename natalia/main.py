@@ -142,11 +142,11 @@ class gameg():
         o_quadro.entra(quadros)
         self.pergaminho = pergaminho = Cena (img = PERGAMINHO)
         hum(pergaminho, self.mostra_conteudo_pergaminho)
-        #quadros1.direita=Cena()
+        quadros1.direita=Cena()
         #quadros1.direita=pergaminho
-        quadros1.direita.vai=self.mostra_pergaminho
-        #pergaminho.esquerda=Cena()
-        pergaminho.esquerda.vai=quadros1
+        quadros1.direita.vai=self.vai_para_sala
+        pergaminho.esquerda=Cena()
+        pergaminho.esquerda.vai=self.mostra_quadros1
         self.sala=sala=Cena (img=SALA) # <==== esta sala não aparece, vou ligar na biblioteca
         aah(sala,self.mostra_conteudo_sala)
         self.quartos2=quartos2= Cena (img= QUARTOS2) # na linha 137 criei outro, sera que dera problemas?
@@ -165,11 +165,15 @@ class gameg():
         livro.entra(biblioteca)
         que = Cena(img = QUE)
         casa.vai()
-    def mostra_pergaminho(self, *_):        
+    def mostra_quadros1(self, *_):        
         self.quadros1.vai()
-        Texto(self.quadros1, "ZEZINHO: Encontrei um pergaminho!").vai()
+        Texto(self.quadros1, "ZEZINHO: voltamos!").vai()
+    def vai_para_sala(self, *_):        
+        self.sala.vai()
+        Texto(self.sala, "ZEZINHO: uma sala!").vai()
     def mostra_conteudo_cofre(self, *_):        
-        Texto(self.cofre, "ZEZINHO: Encontrei um mapa interessante dentro do cofre!").vai()
+        self.pergaminho.vai()
+        Texto(self.pergaminho, "ZEZINHO: Encontrei um mapa interessante dentro do cofre!").vai()
     def mostra_conteudo_pergaminho(self, *_):   
         Texto(self.pergaminho, "parabéns, agora vamos ver para onde vamos!").vai()
         #COMADOS DE :ORGANIZE E MONTE
