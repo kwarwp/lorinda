@@ -147,6 +147,8 @@ class gameg():
         quadros1.direita.vai=self.vai_para_sala
         pergaminho.esquerda=Cena()
         pergaminho.esquerda.vai=self.mostra_quadros1
+        pergaminho.direita=Cena()
+        pergaminho.direita.vai=self.mostra_biblioteca
         self.sala=sala=Cena (img=SALA) # <==== esta sala não aparece, vou ligar na biblioteca
         aah(sala,self.mostra_conteudo_sala)
         self.quartos2=quartos2= Cena (img= QUARTOS2) # na linha 137 criei outro, sera que dera problemas?
@@ -165,17 +167,31 @@ class gameg():
         livro.entra(biblioteca)
         que = Cena(img = QUE)
         casa.vai()
+    def mostra_biblioteca(self, *_):        
+        self.biblioteca.vai()
+        Texto(self.biblioteca, "ZEZINHO: motaremos este herdograma!").vai()
     def mostra_quadros1(self, *_):        
-        self.quadros1.vai()
-        Texto(self.quadros1, "ZEZINHO: voltamos!").vai()
+        self.quadros.vai()
+        Texto(self.quadros, "ZEZINHO: voltamos!").vai()
     def vai_para_sala(self, *_):        
         self.sala.vai()
         Texto(self.sala, "ZEZINHO: uma sala!").vai()
     def mostra_conteudo_cofre(self, *_):        
         self.pergaminho.vai()
+        self.cofre.meio = self.pergaminho
+        self.cofre.direita = self.pergaminho
+        self.cofre.esquerda = self.pergaminho
+        self.pergaminho.direita = self.cofre
+        self.pergaminho.meio = self.cofre
+        self.pergaminho.esquerda = self.cofre
         Texto(self.pergaminho, "ZEZINHO: Encontrei um mapa interessante dentro do cofre!").vai()
     def mostra_conteudo_pergaminho(self, *_):   
-        Texto(self.pergaminho, "parabéns, agora vamos ver para onde vamos!").vai()
+        Texto(self.pergaminho, "UAU, você conseguiu passar a fase lembrar! Achei uma saída pela direita!").vai()
+        #Texto(self.pergaminho, "parabéns, agora vamos ver para onde vamos!").vai()
+        self.pergaminho.direita = Cena()
+        self.pergaminho.direita.vai = self.mostra_biblioteca
+        print("mostra_conteudo_pergaminho")
+        
         #COMADOS DE :ORGANIZE E MONTE
     def mostra_conteudo_sala(self,*_):
         Texto(self.sala,"MAPA").vai()
@@ -280,8 +296,9 @@ class hum :
             return (inicio_horizontal+largura_da_peca*(self.parte_inicial%numero_de_pecas_por_linha),
                     inicio_vertical+self.altura_da_linha*(self.parte_inicial//numero_de_pecas_por_linha))
     def acertou(self):
-        Texto(self.sala, "UAU, você conseguiu passar a fase lembrar! Achei uma saída pela direita!").vai()
-        self.sala = self.salax
+        Texto(self.pergaminho, "UAU, você conseguiu passar a fase lembrar! Achei uma saída pela direita!").vai()
+        #self.sala = self.salax
+        self.acertar()
 
 
 class aah :
