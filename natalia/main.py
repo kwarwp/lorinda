@@ -5,6 +5,7 @@ from _spy.vitollino.main import Inventario as inv
 STYLE["width"] = 800
 STYLE["height"] = "600px"
 
+HERDO_BIBLIO = "https://i.imgur.com/42E931b.png"
 ZEZINHO = "https://i.imgur.com/94lhgKo.png"
 ROSALINDA = "https://i.imgur.com/qvuwHvs.png"
 CASA = "https://www.tudoconstrucao.com/wp-content/uploads/2014/12/casa-de-praia-colorida-simples.jpg"
@@ -164,9 +165,10 @@ class gameg():
         pergaminho.direita= biblioteca
         biblioteca.direita = sala # <===== botei aqui uma passagem para a "sala"
         livro = Elemento (img = LIVRO)
-        livro.entra(biblioteca)
+        #livro.entra(biblioteca)
         que = Cena(img = QUE)
-        casa.vai()
+        #casa.vai()
+        self.biblioteca.vai()
     def mostra_biblioteca(self, *_):        
         self.biblioteca.vai()
         self.biblioteca.direita = self.pergaminho
@@ -359,17 +361,22 @@ class aah :
         #fazer uma fase de transição ao achar o mapa e procurar alguns quartos
 
 class HerdogramaBiblioteca :
-    def __init__(self, esta_cena, chama_quando_acerta, partes=(FF5, FF3, FF2, FF, FF1, FF4)):#COM IMAGEM 
+    def __init__(self, esta_cena, chama_quando_acerta, partes=(1,2,3,5,8,0,4,6,7,9,10,11),
+         image = HERDO_BIBLIO):#COM IMAGEM 
         posiciona_proxima = self.posiciona_proxima
+        self.image = image
         class LinhaGeracional:
             """Representa cada uma das linhas recortadas do herdograma original"""
-            def __init__(self, linha, posicao):
+            def __init__(self, linha, posicao, image=image):
                 self.posicao = posicao # posição original no topo da página
-                self.linha = Elemento(linha, x=posicao*200, y=20, w=175, h=125, cena=esta_cena)
+                self.linha = Elemento(image, x=(posicao//2)*100, y=(posicao%2)*80+20, w=90, h=70,
+                cena=esta_cena)
+                self.linha.siz = (90*3, 70*4)
+                self.linha.pos = (-90*(linha//4), -70*(linha%4))
                 self.linha.vai = self.clica_e_posiciona_a_linha #quando clica, monta o herdograma
             def zera(self):
-                self.linha.x = self.posicao*200  # posiciona cada peça com 200 pixels de distância
-                self.linha.y = 20  # posiciona a peça no topo da página
+                self.linha.x = (self.posicao//2)*100  # posiciona cada peça com 200 pixels de distância
+                self.linha.y = (self.posicao%2)*80+20  # posiciona a peça no topo da página
                 self.linha.vai = self.clica_e_posiciona_a_linha
             def clica_e_posiciona_a_linha(self, *_):
                 x, y = posiciona_proxima(self.posicao)
@@ -383,13 +390,13 @@ class HerdogramaBiblioteca :
             for uma_posicao, uma_linha in enumerate(partes)]
         self.acertou = chama_quando_acerta
         self.parte_inicial = -1
-        self.altura_da_linha = 125  # cada peça do herdograma tem esta altura
+        self.altura_da_linha = 70  # cada peça do herdograma tem esta altura
         self.posicoes_montadas = []  #l ista das linhas já montadas no herdograma
-        self.posicoes_corretas = [ 0,1, 2, 3, 4] 
+        self.posicoes_corretas = [ 1,2,3,5,8,0,4,6,7,9,10,11] 
         
     def posiciona_proxima(self, posicao):
-        largura_da_peca, inicio_horizontal, inicio_vertical, numero_de_pecas = 175, 300, 200, 4
-        numero_de_pecas_por_linha = 2
+        largura_da_peca, inicio_horizontal, inicio_vertical, numero_de_pecas = 90, 300, 200, 12
+        numero_de_pecas_por_linha = 3
         self.parte_inicial += 1  # incrementa a posição para montar a próxima posiçao da peça
         self.posicoes_montadas += [posicao]  # adiciona o índice desta peça na lista de peças montadas
         if self.posicoes_montadas == self.posicoes_corretas:
