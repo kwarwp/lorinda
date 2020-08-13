@@ -969,3 +969,10 @@ NameError: name 'quadro' is not defined
     quadro1.direita=Cena()
 NameError: name 'quadro1' is not defined
 '''},
+{'date': 'Wed Aug 12 2020 21:36:00.398 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 364
+  def __init__(self, esta_cena, chama_quando_acerta, partes=(1,2,3,5,8,0,4,6,7,9,10,11)
+                                                                                                  ^
+SyntaxError: invalid syntax
+'''},
