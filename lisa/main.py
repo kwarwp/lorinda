@@ -8,9 +8,9 @@ EQUIPAMENTO="https://comps.canstockphoto.com.br/equipamento-m%C3%A9dico-desenho-
 LABORATORIO="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/InvestigadoresUR.JPG/350px-InvestigadoresUR.JPG"
 
 class celulas:
-    alunos= Elemento(GRUPO_ESTUDANTES)
-    rosalind= Elemento(DRA_ROSALIND)
-    maquina= Elemento(EQUIPAMENTO)
+    alunos= Elemento(GRUPO_ESTUDANTES,  x=460, y=250, w=150, h=80)
+    rosalind= Elemento(DRA_ROSALIND,  x=460, y=250, w=150, h=80)
+    maquina= Elemento(EQUIPAMENTO,  x=460, y=250, w=150, h=80)
     laboratorio= Cena(LABORATORIO)
     rosalind.entra(laboratorio)
     alunos.entra(laboratorio)
