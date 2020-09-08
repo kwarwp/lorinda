@@ -7,7 +7,7 @@ GRUPO_ESTUDANTES="https://static.lenovo.com/br/landings/estudantes/assets/img/le
 DRA_ROSALIND="https://blog.ipog.edu.br/wp-content/uploads/2017/10/m%C3%A9dico.jpg"
 EQUIPAMENTO="https://comps.canstockphoto.com.br/equipamento-m%C3%A9dico-desenho-vetor-eps_csp55846331.jpg"
 LABORATORIO="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/InvestigadoresUR.JPG/350px-InvestigadoresUR.JPG"
-
+#colocar imagens das células
 class celulas():
     alunos= Elemento(GRUPO_ESTUDANTES,  x=460, y=250, w=150, h=80)
     rosalind= Elemento(DRA_ROSALIND,  x=400, y=250, w=150, h=80, Texto " Aqui é um castelo da ciênca onde vcs poderam aprender, descobrir e inventar")
@@ -21,3 +21,22 @@ class celulas():
 celulas()
 
 class Fase1():
+laboratorio= Cena(img =  LABORATORIO)
+procarionte= Elemento(img= PROCARIONTE, Texto= " oi eu sou uma célula procarionte,e me chama assim pq eu tenho apenas uma célula no meu corpo")
+eucarionte= Elemento(img= EUCARIONTE, Texto= "eu sou uma célula procarionte e sou igual a vcs humanos pq meu corpo é cheio de células")
+trypanosoma_cruzi= Elemento(img=TRYPANOSOMA_CRUZI )
+neuronio=Elemento(img= NEURONIO, Texto ="eus ou bem complicado, pois eu fico na cabeça e passo informação pelo corpo, imagina como eu devo ser feito))
+bacteria = Elemento(img= BACTERIA, Texto ="olá eu sou uma pessoa simples, igual arroz pois combino com tudo e posso estar em qualquer lugar, sempre tem espaço para mim")
+espermatozoide= Elemento(img=  ESPERMATOZOIDE, Texto = "eu sou quem dá a origem dos humanos, então imagina como devo ser dificil e complexo me estudar")) 
+hemacia= Elemento(img= HEMACIA, Texto= "eu sou o transporte da galera, carrego muita coisa, imagina como sou")
+elodea= Elemento(img= ELODEA)
+celula_calciforme= Elemento(img= CELULA_CALCIFORME
+npc= Elemento(img= NPC,Texto = "você precisa descobrir quem é procarionte para a próxima fase")
+"""resposta certa é a bactéria"""
+laboratorio.vai()
+Fase1()
+
+class Fase2():
+
+
+
