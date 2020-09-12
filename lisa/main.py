@@ -7,18 +7,35 @@ GRUPO_ESTUDANTES="https://static.lenovo.com/br/landings/estudantes/assets/img/le
 DRA_ROSALIND="https://blog.ipog.edu.br/wp-content/uploads/2017/10/m%C3%A9dico.jpg"
 EQUIPAMENTO="https://comps.canstockphoto.com.br/equipamento-m%C3%A9dico-desenho-vetor-eps_csp55846331.jpg"
 LABORATORIO="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/InvestigadoresUR.JPG/350px-InvestigadoresUR.JPG"
-#colocar imagens das células
-class celulas():
-    alunos= Elemento(GRUPO_ESTUDANTES,  x=460, y=250, w=150, h=80)
-    rosalind= Elemento(DRA_ROSALIND,  x=400, y=250, w=150, h=80, Texto " Aqui é um castelo da ciênca onde vcs poderam aprender, descobrir e inventar")
-    maquina= Elemento(EQUIPAMENTO,  x=360, y=250, w=150, h=80)
-    laboratorio= Cena(LABORATORIO, Texto " Bem vindo ao laborátorio de ciências, aqui aprendemos e estudamos células")
-    rosalind.entra(laboratorio,)
-    alunos.entra(laboratorio)
-    laboratorio.vai()
-    rosalind.fala="Olá, me chamo Rosalind. Hoje acompanharei vocês por este passeio pelas células!"# ver se não vai chocar com o que eu colequei nesse personagem acima 
-    fala.vai()
-celulas()
+#colocar imagens da class apresentação 
+class apresentacao():
+    casa = Cena(img = CASA)#maria vai para fio cruz
+    maria= Elemento(img= MARIA, Texto= " olá me chamo Maria e amo estudar biologia e lutar pelos direitos das mulheres", x=460, y=250, w=150, h=80)
+    rua= Cena(img= Rua)
+    estranha= Elemento(img= ESTRANHA)
+    pacote=Elemento(img=PACOTE)
+    casa.direta=rua
+    rua.esquerda=casa
+    maria.entra(rua)
+    maria.entra(rua, Texto= "estou indo para FIOCRUZ, acho que vou conseguir um estágio lá, uip")
+    rua2=Cena(img= RUA2)
+    rua.direita= rua2
+    rua2.esquerda=rua
+    maria.entra(rua2, Texto= "parece uma pessoa estranha, não quero aceitar nada dela")
+    estranha.entra(rua2, Texto= "Guarde e proteja esse pacote com sua própria vida")#entrega o pacote e some
+    pacote=Elemento(img= PACOTE)
+    pacote.entra(rua2)
+    rua2.direta=fiocruz
+    fiocruz.esquerda=rua2
+    fiocruz= Cena(img=FIOCRUZ)
+    chefe=Elemento(img=CHEFE)
+    chefe.entra(fiocruz, Texto = "Boa tarde Maria, temos um tempo antes da entrevista, fique a vontade...se quiser pode explorar os laboatórios para estudar")
+    maria.entra(fiocruz, Texto"acho que eu deveria jogar o pacote fora,mas se eu olhar antes e depois jogar?")
+    #maria abre o pacote e encontra uma lâmina
+    lamina=Elemento(img= LAMINA, Texto= "nossa um pedaço de vidro, tenho um tempo antes da entrevista do estagio a moça disse que eu poderia ficar nos laboratórios estudando")
+    
+    
+apresentacao()
 
 class Fase1():
 laboratorio= Cena(img =  LABORATORIO)
