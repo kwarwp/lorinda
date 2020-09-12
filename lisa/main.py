@@ -33,6 +33,10 @@ class apresentacao():
     maria.entra(fiocruz, Texto"acho que eu deveria jogar o pacote fora,mas se eu olhar antes e depois jogar?")
     #maria abre o pacote e encontra uma lâmina
     lamina=Elemento(img= LAMINA, Texto= "nossa um pedaço de vidro, tenho um tempo antes da entrevista do estagio a moça disse que eu poderia ficar nos laboratórios estudando")
+    #maria vai para um laboratório, mas antes passa por um corredor
+    corredor= Cena(img= CORREDOR)
+    fiocruz.direita= corredor
+    corredor.esquerda=fiocruz
     
     
 apresentacao()
