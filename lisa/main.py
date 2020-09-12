@@ -37,6 +37,8 @@ class apresentacao():
     corredor= Cena(img= CORREDOR)
     fiocruz.direita= corredor
     corredor.esquerda=fiocruz
+    laboratorio= Cena(img= LABORATORIO, Texto = "aqui tem uns equipamentos para ver esse vidro, escolha qual vc acha melhor")
+    
     
     
 apresentacao()
