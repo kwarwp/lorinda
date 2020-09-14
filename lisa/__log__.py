@@ -247,3 +247,5 @@ NameError: name 'fala' is not defined
 'error': ''''''},
 {'date': 'Mon Sep 14 2020 15:25:28.751 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
 'error': ''''''},
+{'date': 'Mon Sep 14 2020 15:25:51.251 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': ''''''},
