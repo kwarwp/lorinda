@@ -7,11 +7,22 @@ GRUPO_ESTUDANTES="https://static.lenovo.com/br/landings/estudantes/assets/img/le
 DRA_ROSALIND="https://blog.ipog.edu.br/wp-content/uploads/2017/10/m%C3%A9dico.jpg"
 EQUIPAMENTO="https://comps.canstockphoto.com.br/equipamento-m%C3%A9dico-desenho-vetor-eps_csp55846331.jpg"
 LABORATORIO="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/InvestigadoresUR.JPG/350px-InvestigadoresUR.JPG"
+RUA= "https://www.marica.rj.gov.br/wp-content/uploads/2019/01/2019_01_22_Pavimentacao_Rua_Farol_Ponta_Negra-CLARILDO-5.jpg"
+ESTRANHA= "https://images-na.ssl-images-amazon.com/images/I/51orI6c%2BfJL._AC_SX425_.jpg"
+CASA= "https://img.freepik.com/vetores-gratis/uma-casa-de-dois-andares_1308-16176.jpg?size=626&ext=jpg"
+PACOTE = "https://images.vexels.com/media/users/3/146255/isolated/lists/9eacf7cedc0893ff8192c1db0e5c6326-caixa-fechada-com-sinais-de-pacote.png"
+RUA2 = "https://s2.glbimg.com/40lwYrB5jZXWB8XJpY4dIFFE94M=/0x0:5546x3927/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/J/W/98WwrvRgqpmm8AUAzC2g/jb-hoje-marquinhos-.jpg"
+MARIA = "https://s2.glbimg.com/ixg1qdFwUhzjnAlwXBnv0PP3h-s=/620x520/top/e.glbimg.com/og/ed/f/original/2020/07/30/grazi_1.jpeg"
+FIOCRUZ = "https://s2.glbimg.com/NIPby_eu2LH5UTy-uSA5Cp_jJJU=/0x0:1280x720/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/i/X/S95he4TOWvMfdXBFABFw/fiocruz.jpg"
+CHEFE = "https://s2.glbimg.com/zoU5JtDc323S8zHeujtX5YIXKP8=/620x430/e.glbimg.com/og/ed/f/original/2020/03/14/gettyimages-1130312146.jpg"
+CORREDOR = "https://dicionario.priberam.org/images/dplp/corredor.jpg"
+LAMINA = "https://www.splab.com.br/imagens/informacoes/lamina-vidro-escavada-02.jpg"
+LABORATORIO ="https://www.unimedjaboticabal.coop.br/wp-content/uploads/2019/07/unimed-jaboticabal-laboratorio-750x500.jpg"
 #colocar imagens da class apresentação 
 class apresentacao():
     casa = Cena(img = CASA)#maria vai para fio cruz
     maria= Elemento(img= MARIA, Texto= " olá me chamo Maria e amo estudar biologia e lutar pelos direitos das mulheres", x=460, y=250, w=150, h=80)
-    rua= Cena(img= Rua)
+    rua= Cena(img= RUA)
     estranha= Elemento(img= ESTRANHA)
     pacote=Elemento(img=PACOTE)
     casa.direta=rua
