@@ -241,3 +241,5 @@ NameError: name 'fala' is not defined
     fala.vai()
 NameError: name 'fala' is not defined
 '''},
+{'date': 'Mon Sep 14 2020 15:24:53.460 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': ''''''},
