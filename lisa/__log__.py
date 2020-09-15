@@ -265,3 +265,10 @@ SyntaxError: invalid syntax
                              ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Sep 15 2020 03:10:36.134 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 44
+  maria.entra(fiocruz, Texto"acho que eu deveria jogar o pacote fora,mas se eu olhar antes e depois jogar?")
+                             ^
+SyntaxError: invalid syntax
+'''},
