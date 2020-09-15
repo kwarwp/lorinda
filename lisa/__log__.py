@@ -360,3 +360,7 @@ IndentationError: expected an indented block
 'error': '''
 Exception: <TypeError: innermost.C.tree[0].args.indexOf is not a function>
 '''},
+{'date': 'Tue Sep 15 2020 16:02:03.98 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: innermost.C.tree[0].args.indexOf is not a function>
+'''},
