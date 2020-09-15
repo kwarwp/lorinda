@@ -58,8 +58,10 @@ class apresentacao():
     ela grita e pergunta onde estou""" 
     
 apresentacao()
+print (apresentacao)
 
-"""class Fase1():
+"""
+ class Fase1():
 laboratorio= Cena(img =  LABORATORIO)
 procarionte= Elemento(img= PROCARIONTE, Texto= " oi eu sou uma célula procarionte,e me chama assim pq eu tenho apenas uma célula no meu corpo")
 eucarionte= Elemento(img= EUCARIONTE, Texto= "eu sou uma célula procarionte e sou igual a vcs humanos pq meu corpo é cheio de células")
@@ -76,7 +78,7 @@ npc= Elemento(img= NPC,Texto = "você precisa descobrir quem é procarionte para
 laboratorio.vai()
 Fase1()
 
-class Fase2():"""
-
+class Fase2():
+"""
 
 
