@@ -28,11 +28,12 @@ class apresentacao():
     casa.direta=rua
     rua.esquerda=casa
     maria.entra(rua)
-    maria.entra(rua, Texto= "estou indo para FIOCRUZ, acho que vou conseguir um estágio lá, uip")
+    #coloquei .vai() em alguns
+    maria.entra(rua, Texto= "estou indo para FIOCRUZ, acho que vou conseguir um estágio lá, uip").vai()
     rua2=Cena(img= RUA2)
     rua.direita= rua2
     rua2.esquerda=rua
-    maria.entra(rua2, Texto= "parece uma pessoa estranha, não quero aceitar nada dela")
+    maria.entra(rua2, Texto= "parece uma pessoa estranha, não quero aceitar nada dela").vai()
     estranha.entra(rua2, Texto= "Guarde e proteja esse pacote com sua própria vida")#entrega o pacote e some
     pacote=Elemento(img= PACOTE)
     pacote.entra(rua2)
@@ -40,7 +41,10 @@ class apresentacao():
     fiocruz.esquerda=rua2
     fiocruz= Cena(img=FIOCRUZ)
     chefe=Elemento(img=CHEFE)
-    chefe.entra(fiocruz, Texto = "Boa tarde Maria, temos um tempo antes da entrevista, fique a vontade...se quiser pode explorar os laboatórios para estudar")
+    chefe.entra(fiocruz)
+    #será que assim vai? colocar separado? mas se colocar assim os dois textos vão aparecer
+    #juntos, não?
+    Texto(fiocruz, "Boa tarde Maria, temos um tempo antes da entrevista, fique a vontade...se quiser pode explorar os laboatórios para estudar").vai()
     maria.entra(fiocruz, Texto="acho que eu deveria jogar o pacote fora,mas se eu olhar antes e depois jogar?")
     
     #maria abre o pacote e encontra uma lâmina
@@ -51,7 +55,7 @@ class apresentacao():
     corredor.esquerda=fiocruz
     laboratorio= Cena(img= LABORATORIO, Texto = "aqui tem uns equipamentos para ver esse vidro, escolha qual vc acha melhor")
     microscopio = Elemento(img = microscopio, Texto = " olá, eu sou utilizado para ver coisas que o olho humano não ve ")
-   
+
     """ colocar outros equipamentos de laboratório"""
     cartaz= Elemento(img= CARTAZ, Texto = "para se usar o microscópio faça isso...")
     """arrastar e colocar a lâmina no microscópio e então aparece um um ciclone que a leva para dentro da célula, 
