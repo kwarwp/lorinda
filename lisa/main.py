@@ -50,7 +50,10 @@ class apresentacao():
     corredor.esquerda=fiocruz
     laboratorio= Cena(img= LABORATORIO, Texto = "aqui tem uns equipamentos para ver esse vidro, escolha qual vc acha melhor")
     microscopio = Elemento(img = microscopio, Texto = " olá, eu sou utilizado para ver coisas que o olho humano não ve ")
-    
+    """ colocar outros equipamentos de laboratório"""
+    cartaz= Elemento(img= CARTAZ, Texto = "para se usar o microscópio faça isso...")
+    """arrastar e colocar a lâmina no microscópio e então aparece um um ciclone que a leva para dentro da célula, 
+    ela grita e pergunta onde estou""" 
     
 apresentacao()
 
