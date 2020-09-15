@@ -251,3 +251,10 @@ NameError: name 'fala' is not defined
 'error': ''''''},
 {'date': 'Mon Sep 14 2020 15:27:23.97 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
 'error': ''''''},
+{'date': 'Mon Sep 14 2020 21:19:37.659 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 44
+  maria.entra(fiocruz, Texto"acho que eu deveria jogar o pacote fora,mas se eu olhar antes e depois jogar?")
+                             ^
+SyntaxError: invalid syntax
+'''},
