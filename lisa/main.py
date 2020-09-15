@@ -49,7 +49,7 @@ class apresentacao():
     fiocruz.direita= corredor
     corredor.esquerda=fiocruz
     laboratorio= Cena(img= LABORATORIO, Texto = "aqui tem uns equipamentos para ver esse vidro, escolha qual vc acha melhor")
-    
+    microscopio = Elemento(img = microscopio, Texto = " olá, eu sou utilizado para ver coisas que o olho humano não ve ")
     
     
 apresentacao()
