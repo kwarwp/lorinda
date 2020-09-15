@@ -293,3 +293,10 @@ SyntaxError: invalid syntax
                        ^
 SyntaxError: can't assign to function call 
 '''},
+{'date': 'Tue Sep 15 2020 03:12:31.393 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 63
+  laboratorio= Cena(img =  LABORATORIO)
+  ^
+IndentationError: expected an indented block
+'''},
