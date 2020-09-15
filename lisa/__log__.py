@@ -349,3 +349,10 @@ SyntaxError: invalid syntax
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Sep 15 2020 03:18:21.711 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 80
+  """
+  ^
+IndentationError: expected an indented block
+'''},
