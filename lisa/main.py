@@ -41,7 +41,8 @@ class apresentacao():
     fiocruz= Cena(img=FIOCRUZ)
     chefe=Elemento(img=CHEFE)
     chefe.entra(fiocruz, Texto = "Boa tarde Maria, temos um tempo antes da entrevista, fique a vontade...se quiser pode explorar os laboatórios para estudar")
-    maria.entra(fiocruz, Texto"acho que eu deveria jogar o pacote fora,mas se eu olhar antes e depois jogar?")
+    maria.entra(fiocruz, Texto="acho que eu deveria jogar o pacote fora,mas se eu olhar antes e depois jogar?")
+    
     #maria abre o pacote e encontra uma lâmina
     lamina=Elemento(img= LAMINA, Texto= "nossa um pedaço de vidro, tenho um tempo antes da entrevista do estagio a moça disse que eu poderia ficar nos laboratórios estudando")
     #maria vai para um laboratório, mas antes passa por um corredor
@@ -50,6 +51,7 @@ class apresentacao():
     corredor.esquerda=fiocruz
     laboratorio= Cena(img= LABORATORIO, Texto = "aqui tem uns equipamentos para ver esse vidro, escolha qual vc acha melhor")
     microscopio = Elemento(img = microscopio, Texto = " olá, eu sou utilizado para ver coisas que o olho humano não ve ")
+   
     """ colocar outros equipamentos de laboratório"""
     cartaz= Elemento(img= CARTAZ, Texto = "para se usar o microscópio faça isso...")
     """arrastar e colocar a lâmina no microscópio e então aparece um um ciclone que a leva para dentro da célula, 
@@ -57,7 +59,7 @@ class apresentacao():
     
 apresentacao()
 
-class Fase1():
+"""class Fase1():
 laboratorio= Cena(img =  LABORATORIO)
 procarionte= Elemento(img= PROCARIONTE, Texto= " oi eu sou uma célula procarionte,e me chama assim pq eu tenho apenas uma célula no meu corpo")
 eucarionte= Elemento(img= EUCARIONTE, Texto= "eu sou uma célula procarionte e sou igual a vcs humanos pq meu corpo é cheio de células")
@@ -74,7 +76,7 @@ npc= Elemento(img= NPC,Texto = "você precisa descobrir quem é procarionte para
 laboratorio.vai()
 Fase1()
 
-class Fase2():
+class Fase2():"""
 
 
 
