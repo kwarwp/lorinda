@@ -300,3 +300,10 @@ SyntaxError: can't assign to function call
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Tue Sep 15 2020 03:12:53.974 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 61
+  """
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+SyntaxError: invalid syntax
+'''},
