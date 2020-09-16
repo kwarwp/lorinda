@@ -102,10 +102,10 @@ class Fase1():
         trypanosoma_cruzi= Elemento(img=TRYPANOSOMA_CRUZI)
         neuronio=Elemento(img= NEURONIO)
         bacteria = Elemento(img= BACTERIA)
-        espermatozoide= Elemento(img=  ESPERMATOZOIDE, Texto = "eu sou quem dá a origem dos humanos, então imagina como devo ser dificil e complexo me estudar") 
-        hemacia= Elemento(img= HEMACIA, Texto= "eu sou o transporte da galera, carrego muita coisa, imagina como sou")
-        elodea= Elemento(img= ELODEA, Texto ="eu vivo na agua e sou muito importante para a manutenção do ambiente marinho, posso ser encoderijo , comida ou o2")
-        celula_calciforme= Elemento(img= CELULA_CALCIFORME,Texto = "eu fico no instestino delgado eu tenho diversas funções, uma dela pe revestir com muco para proteger onde estou")
+        espermatozoide= Elemento(img=  ESPERMATOZOIDE) 
+        hemacia= Elemento(img= HEMACIA)
+        elodea= Elemento(img= ELODEA)
+        calciforme= Elemento(img=CALCIFORME)
         npc= Elemento(img= NPC,Texto = "você precisa descobrir quem é procarionte para a próxima fase")
 """resposta certa é a bactéria"""
     def entrou_procarionte(*_):
@@ -120,7 +120,18 @@ class Fase1():
     def entrou_bacteria(*_):
         bacteria.entra(laboratorio)
         bacteria.vai=Texto(laboratorio,"olá eu sou uma pessoa simples, igual arroz pois combino com tudo e posso estar em qualquer lugar, sempre tem espaço para mim")
-
+    def entrou_espematozoide(*_):
+        espermatozoide.entra(laboratorio)
+        espermatozoide.vai=Texto(laboratorio,"eu sou quem dá a origem dos humanos, então imagina como devo ser dificil e complexo me estudar") 
+    def entrou_hemacia(*_):
+        hemacia.entra(laboratorio)
+        hemacia.vai=Texto(laboratorio, "eu sou o transporte da galera, carrego muita coisa, imagina como sou")
+    def entra_elodea(*_):
+        elodea.entra(laboratorio)
+        elodea.vai= Texto(laboratorio,"eu vivo na agua e sou muito importante para a manutenção do ambiente marinho, posso ser encoderijo , comida ou o2")
+    def entrou_calciforme(*_):
+        calciforme.entra(laboratorio)
+        calciforme.vai=Texto(laboratorio,"eu fico no instestino delgado eu tenho diversas funções, uma dela pe revestir com muco para proteger onde estou")
 laboratorio.vai()
 Fase1()
 
