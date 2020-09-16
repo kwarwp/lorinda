@@ -42,6 +42,9 @@ class apresentacao():
         rua2.direta=fiocruz
         fiocruz.esquerda=rua2
         chefe=Elemento(img=CHEFE)
+        laboratorio= Cena(img= LABORATORIO)
+        microscopio = Elemento(img = MICROSCOPIO)
+        cartaz= Elemento(img= CARTAZ)
         #chefe.entra(fiocruz)
         #será que assim vai? colocar separado? mas se colocar assim os dois textos vão aparecer
         #juntos, não
@@ -51,9 +54,7 @@ class apresentacao():
         corredor= Cena(img= CORREDOR)
         fiocruz.direita= corredor
         corredor.esquerda=fiocruz
-        laboratorio= Cena(img= LABORATORIO)
-        microscopio = Elemento(img = microscopio)
-        cartaz= Elemento(img= CARTAZ)
+        
    
     def entrou_maria(*_):
         maria.entrou(casa)
