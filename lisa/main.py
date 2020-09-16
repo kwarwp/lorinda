@@ -106,8 +106,7 @@ class Fase1():
         hemacia= Elemento(img= HEMACIA)
         elodea= Elemento(img= ELODEA)
         calciforme= Elemento(img=CALCIFORME)
-        npc= Elemento(img= NPC,Texto = "você precisa descobrir quem é procarionte para a próxima fase")
-"""resposta certa é a bactéria"""
+        npc= Elemento(img= NPC,Texto = "você precisa descobrir quem é procarionte para a próxima fase")#resposta certa é a bactéria
     def entrou_procarionte(*_):
         procarionte.entra(laboratorio)
         procarionte.vai=Texto(laboratorio," oi eu sou uma célula procarionte,e me chama assim pq eu tenho apenas uma célula no meu corpo")
@@ -135,7 +134,7 @@ class Fase1():
 laboratorio.vai()
 Fase1()
 
-#class Fase2():
+print(Fase1)
 
 
 
