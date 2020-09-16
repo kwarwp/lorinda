@@ -44,7 +44,7 @@ class apresentacao():
         chefe=Elemento(img=CHEFE)
         laboratorio= Cena(img= LABORATORIO)
         #microscopio = Elemento(img = MICROSCOPIO)
-       # cartaz= Elemento(img= CARTAZ)
+        # cartaz= Elemento(img= CARTAZ)
         #chefe.entra(fiocruz)
         #será que assim vai? colocar separado? mas se colocar assim os dois textos vão aparecer
         #juntos, não
