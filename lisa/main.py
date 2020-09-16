@@ -28,13 +28,13 @@ class apresentacao():
         pacote=Elemento(img=PACOTE)
         casa.direta=rua
         rua.esquerda=casa
-        maria.entra(rua)
+        #maria.entra(rua)
         #coloquei .vai() em alguns
-        maria.entra(rua, texto= 
+        #maria.entra(rua) 
         rua2=Cena(img= RUA2)
         rua.direita= rua2
         rua2.esquerda=rua
-        maria.entra(rua2, texto= "parece uma pessoa estranha, não quero aceitar nada dela")
+        #maria.entra(rua2)
         estranha.entra(rua2)#entrega o pacote e some
         pacote=Elemento(img= PACOTE)
         pacote.entra(rua2)
@@ -42,14 +42,11 @@ class apresentacao():
         fiocruz.esquerda=rua2
         fiocruz= Cena(img=FIOCRUZ)
         chefe=Elemento(img=CHEFE)
-        chefe.entra(fiocruz)
+        #chefe.entra(fiocruz)
         #será que assim vai? colocar separado? mas se colocar assim os dois textos vão aparecer
-        #juntos, não?
-        Texto(fiocruz, "Boa tarde Maria, temos um tempo antes da entrevista, fique a vontade...se quiser pode explorar os laboatórios para estudar").vai()
-        maria.entra(fiocruz, texto="acho que eu deveria jogar o pacote fora,mas se eu olhar antes e depois jogar?")
-    
+        #juntos, não
         #maria abre o pacote e encontra uma lâmina
-        lamina=Elemento(img= LAMINA, texto= "nossa um pedaço de vidro, tenho um tempo antes da entrevista do estagio a moça disse que eu poderia ficar nos laboratórios estudando")
+        lamina=Elemento(img= LAMINA)
         #maria vai para um laboratório, mas antes passa por um corredor
         corredor= Cena(img= CORREDOR)
         fiocruz.direita= corredor
@@ -63,15 +60,29 @@ class apresentacao():
         maria.vai= Texto(casa," olá me chamo Maria e amo estudar biologia e lutar pelos direitos das mulheres")
     def entrou_rua(*_):
         maria.entrou(rua)
-        maria,vai= Texto(rua, "estou indo para FIOCRUZ, acho que vou conseguir um estágio lá, uip")
+        maria.vai= Texto(rua, "estou indo para FIOCRUZ, acho que vou conseguir um estágio lá, uip")
+    def entrou_rua2(*_):
+        maria.entra(rua2)
+        maria.vai= Texto(rua2, "parece uma pessoa estranha, não quero aceitar nada dela")
+    def entra_fiocruz(*_):
+        chefe.entra(fiocruz)
+        chefe.vai= Texto(fiocruz, "Boa tarde Maria, temos um tempo antes da entrevista, fique a vontade...se quiser pode explorar os laboatórios para estudar")
+        maria.entra(fiocruz)
+        maria.vai=Texto(fiocruz,"nossa um pedaço de vidro, tenho um tempo antes da entrevista do estagio a moça disse que eu poderia ficar nos laboratórios estudando")
+    
     def entrou_laboratorio(*_):
         maria.entra(laboratorio)
         maria.vai= Texto(laboratorio, "aqui tem uns equipamentos para ver esse vidro, escolha qual vc acha melhor")
+    def entrou_lamina(*_):
+        lamina.entra(laboratorio)
+        lamina.vai= Texto(laboratorio,  "nossa um pedaço de vidro, tenho um tempo antes da entrevista do estagio a moça disse que eu poderia ficar nos laboratórios estudando")
     def entrou_microscopio(*_):
-        microscopio.vai= Texto(microscopio, " olá, eu sou utilizado para ver coisas que o olho humano não ve ")
+        microscopio.entra(laboratorio)
+        microscopio.vai= Texto(laboratorio, " olá, eu sou utilizado para ver coisas que o olho humano não ve ")
     """ colocar outros equipamentos de laboratório"""
     def entrou_cartaz(*_):
-        cartaz.vai=Texto(cartaz, "para se usar o microscópio faça isso...")
+        cartaz,entra(laboratorio)
+        cartaz.vai=Texto(laboratorio, "para se usar o microscópio faça isso...")
     
     """arrastar e colocar a lâmina no microscópio e então aparece um um ciclone que a leva para dentro da célula, 
     ela grita e pergunta onde estou""" 
