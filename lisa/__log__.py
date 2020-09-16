@@ -624,3 +624,10 @@ NameError: name 'CARTAZ' is not defined
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Sep 16 2020 20:19:26.340 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 111
+  def entrou_procarionte(*_):
+  ^
+IndentationError: unexpected indent
+'''},
