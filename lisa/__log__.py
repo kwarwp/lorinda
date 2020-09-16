@@ -427,3 +427,10 @@ IndentationError: expected an indented block
     maria= Elemento(img= MARIA, texto= " olá me chamo Maria e amo estudar biologia e lutar pelos direitos das mulheres",cena=a_cena, x=460, y=250, w=150, h=80)
 NameError: name 'a_cena' is not defined
 '''},
+{'date': 'Wed Sep 16 2020 00:21:20.135 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 62
+  maria.vai= Texto(casa,= " olá me chamo Maria e amo estudar biologia e lutar pelos direitos das mulheres")
+                                                                                                           ^
+SyntaxError: invalid syntax
+'''},
