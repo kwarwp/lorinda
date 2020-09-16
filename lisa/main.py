@@ -37,10 +37,10 @@ class apresentacao():
         #maria.entra(rua2)
         estranha.entra(rua2)#entrega o pacote e some
         pacote=Elemento(img= PACOTE)
+        fiocruz= Cena(img=FIOCRUZ)
         pacote.entra(rua2)
         rua2.direta=fiocruz
         fiocruz.esquerda=rua2
-        fiocruz= Cena(img=FIOCRUZ)
         chefe=Elemento(img=CHEFE)
         #chefe.entra(fiocruz)
         #será que assim vai? colocar separado? mas se colocar assim os dois textos vão aparecer
