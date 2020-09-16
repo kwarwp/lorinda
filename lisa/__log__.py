@@ -398,3 +398,10 @@ Exception: <TypeError: innermost.C.tree[0].args.indexOf is not a function>
     cartaz= Elemento(img= CARTAZ, Texto = "para se usar o microscópio faça isso...")
 NameError: name 'CARTAZ' is not defined
 '''},
+{'date': 'Wed Sep 16 2020 00:17:52.919 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 67
+  cartaz.vai=Texto(cartaz, "para se usar o microscópio faça isso...")
+  ^
+IndentationError: expected an indented block
+'''},
