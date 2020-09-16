@@ -478,3 +478,10 @@ NameError: name 'a_cena' is not defined
     maria.entra(rua, texto= "estou indo para FIOCRUZ, acho que vou conseguir um estágio lá, uip")
 TypeError: entra() got an unexpected keyword argument 'texto'
 '''},
+{'date': 'Wed Sep 16 2020 00:24:32.414 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 34
+  rua2=Cena(img= RUA2)
+      ^
+SyntaxError: can't assign to function call 
+'''},
