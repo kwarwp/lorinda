@@ -85,7 +85,7 @@ class apresentacao():
         microscopio.vai= Texto(laboratorio, " olá, eu sou utilizado para ver coisas que o olho humano não ve ")
     """ colocar outros equipamentos de laboratório"""
     def entrou_cartaz(*_):
-        cartaz,entra(laboratorio)
+        cartaz.entra(laboratorio)
         cartaz.vai=Texto(laboratorio, "para se usar o microscópio faça isso...")
     
     """arrastar e colocar a lâmina no microscópio e então aparece um um ciclone que a leva para dentro da célula, 
@@ -95,21 +95,34 @@ class apresentacao():
 apresentacao()
 print (apresentacao)
 
-#class Fase1():
-#laboratorio= Cena(img =  LABORATORIO)
-#procarionte= Elemento(img= PROCARIONTE, Texto= " oi eu sou uma célula procarionte,e me chama assim pq eu tenho apenas uma célula no meu corpo")
-##trypanosoma_cruzi= Elemento(img=TRYPANOSOMA_CRUZI, Texto = "a galera não gosta muito de mim pq dizem que eu sou parasita e que causa uma doença no coração, mas é que o coração grande é tão quentinho"
-
-#neuronio=Elemento(img= NEURONIO, Texto ="eus ou bem complicado, pois eu fico na cabeça e passo informação pelo corpo, imagina como eu devo ser feito")
-#bacteria = Elemento(img= BACTERIA, Texto ="olá eu sou uma pessoa simples, igual arroz pois combino com tudo e posso estar em qualquer lugar, sempre tem espaço para mim")
-#espermatozoide= Elemento(img=  ESPERMATOZOIDE, Texto = "eu sou quem dá a origem dos humanos, então imagina como devo ser dificil e complexo me estudar") 
-#hemacia= Elemento(img= HEMACIA, Texto= "eu sou o transporte da galera, carrego muita coisa, imagina como sou")
-#elodea= Elemento(img= ELODEA, Texto ="eu vivo na agua e sou muito importante para a manutenção do ambiente marinho, posso ser encoderijo , comida ou o2")
-#celula_calciforme= Elemento(img= CELULA_CALCIFORME,Texto = "eu fico no instestino delgado eu tenho diversas funções, uma dela pe revestir com muco para proteger onde estou")
-#npc= Elemento(img= NPC,Texto = "você precisa descobrir quem é procarionte para a próxima fase")
+class Fase1(): 
+    def __init__(self):
+        laboratorio= Cena(img =  LABORATORIO)
+        procarionte= Elemento(img= PROCARIONTE)
+        trypanosoma_cruzi= Elemento(img=TRYPANOSOMA_CRUZI)
+        neuronio=Elemento(img= NEURONIO)
+        bacteria = Elemento(img= BACTERIA)
+        espermatozoide= Elemento(img=  ESPERMATOZOIDE, Texto = "eu sou quem dá a origem dos humanos, então imagina como devo ser dificil e complexo me estudar") 
+        hemacia= Elemento(img= HEMACIA, Texto= "eu sou o transporte da galera, carrego muita coisa, imagina como sou")
+        elodea= Elemento(img= ELODEA, Texto ="eu vivo na agua e sou muito importante para a manutenção do ambiente marinho, posso ser encoderijo , comida ou o2")
+        celula_calciforme= Elemento(img= CELULA_CALCIFORME,Texto = "eu fico no instestino delgado eu tenho diversas funções, uma dela pe revestir com muco para proteger onde estou")
+        npc= Elemento(img= NPC,Texto = "você precisa descobrir quem é procarionte para a próxima fase")
 """resposta certa é a bactéria"""
-#laboratorio.vai()
-#Fase1()
+    def entrou_procarionte(*_):
+        procarionte.entra(laboratorio)
+        procarionte.vai=Texto(laboratorio," oi eu sou uma célula procarionte,e me chama assim pq eu tenho apenas uma célula no meu corpo")
+    def entrou_trypanosoma(*_):
+        trypanosoma.entra(laboratorio)
+        trypanosoma.vai=Texto(laboratorio,"a galera não gosta muito de mim pq dizem que eu sou parasita e que causa uma doença no coração, mas é que o coração grande é tão quentinho")
+    def entrou_neuronio(*_):
+        neuronio.entra(laboratorio)
+        neuronio.vai=Texto(laboratorio,"eus ou bem complicado, pois eu fico na cabeça e passo informação pelo corpo, imagina como eu devo ser feito")
+    def entrou_bacteria(*_):
+        bacteria.entra(laboratorio)
+        bacteria.vai=Texto(laboratorio,"olá eu sou uma pessoa simples, igual arroz pois combino com tudo e posso estar em qualquer lugar, sempre tem espaço para mim")
+
+laboratorio.vai()
+Fase1()
 
 #class Fase2():
 
