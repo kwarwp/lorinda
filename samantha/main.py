@@ -45,3 +45,9 @@ CENA_FINAL=""
     f_p= Cena(img=FOTO_DO_PADROEIRO)
     frase= Cena(img=FRASE)
     cf= Cena(img=CENA_FINAL)
+    
+    def entrou_padre(*_):
+        entrou.padre(capela)
+        padre.vai=Texto(capela, "olá pessoal, tudo certinho?")
+        padre.vai=Texto(capela, "Eu sou o Padre Flávio e vou te ajudar nessa aventura sobre a história do nosso amado padroeiro")
+        
