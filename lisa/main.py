@@ -132,6 +132,18 @@ class Fase1():
     def entrou_calciforme(*_):
         calciforme.entra(laboratorio)
         calciforme.vai=Texto(laboratorio,"eu fico no instestino delgado eu tenho diversas funções, uma dela pe revestir com muco para proteger onde estou")
+    def entrou_celula(*_):
+        maria.entrou(celula)
+        maria.vai=Texto(celula, "ONDE ESTOU?")
+        npc.entrou(celula)
+        npc.vai=Texto(celula, " na cidade das células! CITONÓPOLIS")
+        maria.entrou(celula)
+        maria.vai=Texto(celula,"como posso sair desse lugar?")
+        npc.entra(celula)
+        npc.vai=Texto(celula= "  vc foi trazida para outra dimensão, a dimensão microscópica das células" 
+ "Para sair, vc terá  que vencer alguns enigmas e desafios, relacionados ao mundo das células ou ficará presa aqui para sempre.") 
+
+
 laboratorio.vai()
 Fase1()
 
