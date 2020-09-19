@@ -57,6 +57,7 @@ class apresentacao():
         corredor= Cena(img= CORREDOR)
         fiocruz.direita= corredor
         corredor.esquerda=fiocruz
+        celula= Cena(img= CELULA)#QUANDO CLICA NO MICRÓSCÓPIO IRÁ PARA ESSA CENA
         
 
     def entrou_maria(*_):
