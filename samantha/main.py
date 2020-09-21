@@ -7,7 +7,7 @@ STYLE=
 FLAVINHO =""
 FOTO_PRINCIPAL =""
 DALMACIA =""
-JERONIMO_JOVEM =""
+JERONIMO_JOVEM ="blob:https://web.whatsapp.com/edad8633-e384-4538-b7f3-ddd4837df1c0"
 JERONIMO_VELHO =""
 CURIOSIDADE ="" 
 LEAO =""
@@ -116,7 +116,7 @@ FOTO_PAROQUIA=""
     
     def entrou_12
         entrou.pd(frase)
-        entrou.padre(frase, "A frase mais conhecida de nosso padroeiro é: Cristo é o poder de Deus e a sabedoria de Deus, e quem ignora as Escrituras, ignora o poder e a sabedoria de Deus; portanto, ignorar as Escrituras Sagradas é ignorar a Cristo")
+        entrou.padre(frase, "A frase mais conhecida de nosso padroeiro é:  Ignorar as Escrituras Sagradas é ignorar a Cristo")
     
     def entrou_final
         entrou.pd(cf)
