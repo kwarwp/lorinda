@@ -108,7 +108,7 @@ FOTO_PAROQUIA=""
     def entrou_10
         entrou.pd(f_p)
         entrou.padre(f_p, "Jerônimo morreu no dia 30 de setembro de 420 em Belém, por isso o dia da Biblía e de São Jerônimo são comemorados no dia 30 de setembro.")
-       
+    
     
     def entrou_11
         entrou.pd(leao)
