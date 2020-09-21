@@ -89,8 +89,37 @@ FOTO_PAROQUIA=""
     def entrou_6
         entrou.pd(caverna)
         entrou.padre(caverna)
-        padre.vai=Texto(caverna,"-Por ter aprendido as linguas originais para melhor compreender as escrituras, Nosso padroeiro pôde a pedido do Papa Damaso traduzir as escrituras para o Latim.")
+        padre.vai=Texto(caverna,"Por ter aprendido as linguas originais para melhor compreender as escrituras, Nosso padroeiro pôde a pedido do Papa Damaso traduzir as escrituras para o Latim.")
     
     
     def entro_7
+        entrou.pd(biblia)
+        entrou.padre(biblia, "As escrituras foram traduzidas do grego, hebraico e aramaico.")
+        
+    def entrou_8
+        entrou.pd(vulgata)
+        entrou.padre(vulgata, "A tradução da sagrada escritura recebeu o nome Vulgata.")
+        
+    
+    def entrou_9
+        entrou.pd(belem)
+        entrou.padre(belem, "Após traduzir a sagrada escritura , Jerônimo mudou-se para Belém a cidade onde nasceu nosso Salvador.")
+    
+    def entrou_10
+        entrou.pd(f_p)
+        entrou.padre(f_p, "Jerônimo morreu no dia 30 de setembro de 420 em Belém, por isso o dia da Biblía e de São Jerônimo são comemorados no dia 30 de setembro.")
+       
+    
+    def entrou_11
+        entrou.pd(leao)
+        entrou.padre(leao "É um leão!!")
+    
+    def entrou_12
+        entrou.pd(frase)
+        entrou.padre(frase, "A frase mais conhecida de nosso padroeiro é: Cristo é o poder de Deus e a sabedoria de Deus, e quem ignora as Escrituras, ignora o poder e a sabedoria de Deus; portanto, ignorar as Escrituras Sagradas é ignorar a Cristo")
+    
+    def entrou_final
+        entrou.pd(cf)
+        entrou.padre(cf, "Espero que tenham gostado de aprender um pouco mais da história do nosso amdado padroeiro São Jerônimo!")
+        entrou.padre(cf, " Até a próxima !!!")
         
