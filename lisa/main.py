@@ -63,32 +63,31 @@ class apresentacao():
     def entrou_maria(self,*_):
         self.maria.entrou(self.casa)
         self.maria.vai= Texto(self.casa," olá me chamo Maria e amo estudar biologia e lutar pelos direitos das mulheres").vai
-    def entrou_rua(*_):
-        maria.entrou(rua)
-        maria.vai= Texto(rua, "estou indo para FIOCRUZ, acho que vou conseguir um estágio lá, uip").vai
-    def entrou_rua2(*_):
-        maria.entra(rua2)
-        maria.vai= Texto(rua2, "parece uma pessoa estranha, não quero aceitar nada dela").vai
-    def entra_fiocruz(*_):
-        chefe.entra(fiocruz)
-        chefe.vai= Texto(fiocruz, "Boa tarde Maria, temos um tempo antes da entrevista, fique a vontade...se quiser pode explorar os laboatórios para estudar").vai
-        maria.entra(fiocruz)
-        maria.vai=Texto(fiocruz,"nossa um pedaço de vidro, tenho um tempo antes da entrevista do estagio a moça disse que eu poderia ficar nos laboratórios estudando").vai
+    def entrou_rua(self,*_):
+        self.maria.entrou(self.rua)
+        self.maria.vai= Texto(self.rua, "estou indo para FIOCRUZ, acho que vou conseguir um estágio lá, uip").vai
+    def entrou_rua2(self,*_):
+        self.maria.entra(self.rua2)
+        self.maria.vai= Texto(self.rua2, "parece uma pessoa estranha, não quero aceitar nada dela").vai
+    def entra_fiocruz(self,*_):
+        self.chefe.entra(self.fiocruz)
+        self.chefe.vai= Texto(self.fiocruz, "Boa tarde Maria, temos um tempo antes da entrevista, fique a vontade...se quiser pode explorar os laboatórios para estudar").vai
+        self.maria.entra(self.fiocruz)
+        self.maria.vai=Texto(self.fiocruz,"nossa um pedaço de vidro, tenho um tempo antes da entrevista do estagio a moça disse que eu poderia ficar nos laboratórios estudando").vai
     
-    def entrou_laboratorio(*_):
-        maria.entra(laboratorio)
-        maria.vai= Texto(laboratorio, "aqui tem uns equipamentos para ver esse vidro, escolha qual vc acha melhor").vai
-    def entrou_lamina(*_):
-        lamina.entra(laboratorio)
-        lamina.vai= Texto(laboratorio,  "nossa um pedaço de vidro, tenho um tempo antes da entrevista do estagio a moça disse que eu poderia ficar nos laboratórios estudando").vai
-    def entrou_microscopio(*_):
-        microscopio.entra(laboratorio)
-        microscopio.vai= Texto(laboratorio, " olá, eu sou utilizado para ver coisas que o olho humano não ve ", foi=Fase1().vai).vai
+    def entrou_laboratorio(self,*_):
+        self.maria.entra(self.laboratorio)
+        self.maria.vai= Texto(self.laboratorio, "aqui tem uns equipamentos para ver esse vidro, escolha qual vc acha melhor").vai
+    def entrou_lamina(self,*_):
+        self.lamina.entra(self.laboratorio)
+        self.lamina.vai= Texto(self.laboratorio,  "nossa um pedaço de vidro, tenho um tempo antes da entrevista do estagio a moça disse que eu poderia ficar nos laboratórios estudando").vai
+    def entrou_microscopio(self,*_):
+        self.microscopio.entra(self.aboratorio)
+        self.microscopio.vai= Texto(self.laboratorio, " olá, eu sou utilizado para ver coisas que o olho humano não ve ", foi=Fase1().vai).vai
     """ colocar outros equipamentos de laboratório"""
-    def entrou_cartaz(*_):
-        cartaz.entra(laboratorio)
-        cartaz.vai=Texto(laboratorio, "para se usar o microscópio faça isso...").vai
-     
+    def entrou_cartaz(self,*_):
+        self.cartaz.entra(self.laboratorio)
+        self.cartaz.vai=Texto(self.laboratorio, "para se usar o microscópio faça isso...").vai
     
 
 apresentacao()
@@ -96,59 +95,59 @@ print (apresentacao)
 
 class Fase1(): 
     def __init__(self):
-        laboratorio= Cena(img =  LABORATORIO)
-        procarionte= Elemento(img= PROCARIONTE)
-        trypanosoma_cruzi= Elemento(img=TRYPANOSOMA_CRUZI)
-        neuronio=Elemento(img= NEURONIO)
-        bacteria = Elemento(img= BACTERIA)
-        espermatozoide= Elemento(img=  ESPERMATOZOIDE) 
-        hemacia= Elemento(img= HEMACIA)
-        elodea= Elemento(img= ELODEA)
-        calciforme= Elemento(img=CALCIFORME)
-        npc= Elemento(img= NPC,Texto = "você precisa descobrir quem é procarionte para a próxima fase").vai#resposta certa é a bactéria
+        self.laboratorio= Cena(img =  LABORATORIO)
+        self.procarionte= Elemento(img= PROCARIONTE)
+        self.trypanosoma_cruzi= Elemento(img=TRYPANOSOMA_CRUZI)
+        self.neuronio=Elemento(img= NEURONIO)
+        self.bacteria = Elemento(img= BACTERIA)
+        self.espermatozoide= Elemento(img=  ESPERMATOZOIDE) 
+        self.hemacia= Elemento(img= HEMACIA)
+        self.elodea= Elemento(img= ELODEA)
+        self.calciforme= Elemento(img=CALCIFORME)
+        self.npc= Elemento(img= NPC,Texto = "você precisa descobrir quem é procarionte para a próxima fase").vai#resposta certa é a bactéria
     def vai(self,*_): 
         self.laboratorio.vai()
-    def entrou_procarionte(*_):
-        procarionte.entra(laboratorio)
-        procarionte.vai=Texto(laboratorio," oi eu sou uma célula procarionte,e me chama assim pq eu tenho apenas uma célula no meu corpo").vai
-    def entrou_trypanosoma(*_):
-        trypanosoma.entra(laboratorio)
-        trypanosoma.vai=Texto(laboratorio,"a galera não gosta muito de mim pq dizem que eu sou parasita e que causa uma doença no coração, mas é que o coração grande é tão quentinho").vai
-    def entrou_neuronio(*_):
-        neuronio.entra(laboratorio)
-        neuronio.vai=Texto(laboratorio,"eus ou bem complicado, pois eu fico na cabeça e passo informação pelo corpo, imagina como eu devo ser feito").vai
-    def entrou_bacteria(*_):
-        bacteria.entra(laboratorio)
-        bacteria.vai=Texto(laboratorio,"olá eu sou uma pessoa simples, igual arroz pois combino com tudo e posso estar em qualquer lugar, sempre tem espaço para mim").vai
-    def entrou_espematozoide(*_):
-        espermatozoide.entra(laboratorio)
-        espermatozoide.vai=Texto(laboratorio,"eu sou quem dá a origem dos humanos, então imagina como devo ser dificil e complexo me estudar") .vai
-    def entrou_hemacia(*_):
-        hemacia.entra(laboratorio)
-        hemacia.vai=Texto(laboratorio, "eu sou o transporte da galera, carrego muita coisa, imagina como sou").vai
+    def entrou_procarionte(self,*_):
+        self.procarionte.entra(self.laboratorio)
+        self.procarionte.vai=Texto(self.laboratorio," oi eu sou uma célula procarionte,e me chama assim pq eu tenho apenas uma célula no meu corpo").vai
+    def entrou_trypanosoma(self,*_):
+        self.trypanosoma.entra(self.laboratorio)
+        self.trypanosoma.vai=Texto(self.laboratorio,"a galera não gosta muito de mim pq dizem que eu sou parasita e que causa uma doença no coração, mas é que o coração grande é tão quentinho").vai
+    def entrou_neuronio(self,*_):
+        self.neuronio.entra(self.laboratorio)
+        self.neuronio.vai=Texto(self.laboratorio,"eus ou bem complicado, pois eu fico na cabeça e passo informação pelo corpo, imagina como eu devo ser feito").vai
+    def entrou_bacteria(self,*_):
+        self.bacteria.entra(self.laboratorio)
+        self.bacteria.vai=Texto(self.laboratorio,"olá eu sou uma pessoa simples, igual arroz pois combino com tudo e posso estar em qualquer lugar, sempre tem espaço para mim").vai
+    def entrou_espematozoide(self,*_):
+        self.espermatozoide.entra(self.laboratorio)
+        self.espermatozoide.vai=Texto(self.laboratorio,"eu sou quem dá a origem dos humanos, então imagina como devo ser dificil e complexo me estudar") .vai
+    def entrou_hemacia(self,*_):
+        self.hemacia.entra(self.laboratorio)
+        self.hemacia.vai=Texto(self.laboratorio, "eu sou o transporte da galera, carrego muita coisa, imagina como sou").vai
     
-    def entra_elodea(*_):
-        elodea.entra(laboratorio)
-        elodea.vai= Texto(laboratorio,"eu vivo na agua e sou muito importante para a manutenção do ambiente marinho, posso ser encoderijo , comida ou o2").vai
-    def entrou_calciforme(*_):
-        calciforme.entra(laboratorio)
-        calciforme.vai=Texto(laboratorio,"eu fico no instestino delgado eu tenho diversas funções, uma dela pe revestir com muco para proteger onde estou").vai
-    def entrou_celula(*_):
-        maria.entrou(celula)
-        maria.vai=Texto(celula, "ONDE ESTOU?", foi= faladepois1 ).vai
-        npc.entrou(celula)
-        npc.vai=Texto(celula, " na cidade das células! CITONÓPOLIS", foi=faladepois2).vai
-    def faladepois1(*_):
-        maria.vai=Texto(celula,"como posso sair desse lugar?").vai
-    def faladepois2(*_):
-        npc.vai=Texto(celula= "  vc foi trazida para outra dimensão, a dimensão microscópica das células" 
+    def entra_elodea(self,*_):
+        self.elodea.entra(self.laboratorio)
+        self.elodea.vai= Texto(self.laboratorio,"eu vivo na agua e sou muito importante para a manutenção do ambiente marinho, posso ser encoderijo , comida ou o2").vai
+    def entrou_calciforme(self,*_):
+        self.calciforme.entra(self.laboratorio)
+        self.calciforme.vai=Texto(self.laboratorio,"eu fico no instestino delgado eu tenho diversas funções, uma dela pe revestir com muco para proteger onde estou").vai
+    def entrou_celula(self,*_):
+        self.maria.entrou(self.celula)
+        self.maria.vai=Texto(self.celula, "ONDE ESTOU?", foi= faladepois1 ).vai
+        self.npc.entrou(self.celula)
+        self.npc.vai=Texto(celula, " na cidade das células! CITONÓPOLIS", foi=faladepois2).vai
+    def faladepois1(self,*_):
+        self.maria.vai=Texto(self.celula,"como posso sair desse lugar?").vai
+    def faladepois2(self,*_):
+        self.npc.vai=Texto(self.celula= "  vc foi trazida para outra dimensão, a dimensão microscópica das células" 
  "Para sair, vc terá  que vencer alguns enigmas e desafios, relacionados ao mundo das células ou ficará presa aqui para sempre.").vai 
 
 
-laboratorio.vai()
-Fase1()
+#laboratorio.vai()
+#Fase1()
 
-print(Fase1)
+Fase1().vai()
 
 
 
