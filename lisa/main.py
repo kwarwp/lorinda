@@ -118,7 +118,8 @@ class apresentacao():
         foi=self.entrou_microscopio).vai
     def entrou_microscopio(self,*_):
         self.microscopio.entra(self.laboratorio)
-        self.microscopio.vai= Texto(self.laboratorio, " olá, eu sou utilizado para ver coisas que o olho humano não ve ", foi=Fase1().vai).vai
+        self.microscopio.vai= Texto(self.laboratorio, " olá, eu sou utilizado para ver coisas que o olho humano não ve ",
+        foi=Fase1(self.maria).vai).vai
     def vai(self):
 
     
@@ -128,8 +129,9 @@ apresentacao()
 #PROCARIONTE = TRYPANOSOMA_CRUZI = NEURONIO = BACTERIA = "https://i.imgur.com/illvVvw.jpg"
 #ESPERMATOZOIDE = HEMACIA = ELODEA = CALCIFORME = NPC = "https://i.imgur.com/illvVvw.jpg"
 class Fase1(): 
-    def __init__(self):
+    def __init__(self, maria):
         self.laboratorio= Cena(img =  LABORATORIO)
+        self.maria=maria
         self.procarionte= Elemento(img= PROCARIONTE, x=100, y=100)
         self.trypanosoma_cruzi= Elemento(img=TRYPANOSOMA_CRUZI, x=200, y=0)
         self.neuronio=Elemento(img= NEURONIO, x=300, y=100)
