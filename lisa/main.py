@@ -67,7 +67,7 @@ class apresentacao():
         self.fiocruz.direita= self.corredor
         self.corredor.esquerda=self.fiocruz
         self.celula= Cena(img= CELULA)#QUANDO CLICA NO MICRÓSCÓPIO IRÁ PARA ESSA CENA
-        self.casa.texto.foi=self.entrou_maria
+        self.casa.foi=self.entrou_maria
     def entrou_maria(self,*_):
         self.maria.entrou(self.casa)
         self.maria.vai= Texto(self.casa,
