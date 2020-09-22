@@ -170,7 +170,7 @@ class Fase1():
         self.hemacia.vai=Texto(self.laboratorio, 
         "eu sou o transporte da galera, carrego muita coisa, imagina como sou",
         foi=self.entrou_elodea).vai
-    def entra_elodea(self, *_):
+    def entrou_elodea(self, *_):
         self.elodea.entra(self.laboratorio)
         self.elodea.vai= Texto(self.laboratorio,
         "eu vivo na agua e sou muito importante para a manutenção do ambiente marinho, posso ser encoderijo , comida ou o2",
@@ -182,9 +182,9 @@ class Fase1():
         foi=self.entrou_celula).vai
     def entrou_celula(self, *_):
         self.maria.entrou(self.celula)
-        self.maria.vai=Texto(self.celula, "ONDE ESTOU?", foi=faladepois1).vai
+        self.maria.vai=Texto(self.celula, "ONDE ESTOU?", foi=self.faladepois1).vai
         self.npc.entrou(self.celula)
-        self.npc.vai=Texto(self.celula, " na cidade das células! CITONÓPOLIS", foi=faladepois2).vai
+        self.npc.vai=Texto(self.celula, " na cidade das células! CITONÓPOLIS", foi=self.faladepois2).vai
     def faladepois1(self,*_):
         self.maria.vai=Texto(self.celula,"como posso sair desse lugar?").vai
     def faladepois2(self,*_):
