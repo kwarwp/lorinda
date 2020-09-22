@@ -67,29 +67,41 @@ class apresentacao():
         self.fiocruz.direita= self.corredor
         self.corredor.esquerda=self.fiocruz
         self.celula= Cena(img= CELULA)#QUANDO CLICA NO MICRÓSCÓPIO IRÁ PARA ESSA CENA
+        self.microscopio.texto.foi=self.entrou_maria
         
 
     def entrou_maria(self,*_):
         self.maria.entrou(self.casa)
-        self.maria.vai= Texto(self.casa," olá me chamo Maria e amo estudar biologia e lutar pelos direitos das mulheres").vai
+        self.maria.vai= Texto(self.casa,
+        " olá me chamo Maria e amo estudar biologia e lutar pelos direitos das mulheres",
+        foi=self.entrou_rua).vai
     def entrou_rua(self,*_):
         self.maria.entrou(self.rua)
-        self.maria.vai= Texto(self.rua, "estou indo para FIOCRUZ, acho que vou conseguir um estágio lá, uip").vai
+        self.maria.vai= Texto(self.rua, 
+        "estou indo para FIOCRUZ, acho que vou conseguir um estágio lá, uip",
+        foi=self.entrou_rua2).vai
     def entrou_rua2(self,*_):
         self.maria.entra(self.rua2)
-        self.maria.vai= Texto(self.rua2, "parece uma pessoa estranha, não quero aceitar nada dela").vai
+        self.maria.vai= Texto(self.rua2, 
+        "parece uma pessoa estranha, não quero aceitar nada dela",
+        foi=self.entrou_fiocruz).vai
     def entra_fiocruz(self,*_):
         self.chefe.entra(self.fiocruz)
         self.chefe.vai= Texto(self.fiocruz, "Boa tarde Maria, temos um tempo antes da entrevista, fique a vontade...se quiser pode explorar os laboatórios para estudar").vai
         self.maria.entra(self.fiocruz)
-        self.maria.vai=Texto(self.fiocruz,"nossa um pedaço de vidro, tenho um tempo antes da entrevista do estagio a moça disse que eu poderia ficar nos laboratórios estudando").vai
-    
+        self.maria.vai=Texto(self.fiocruz,
+        "nossa um pedaço de vidro, tenho um tempo antes da entrevista do estagio a moça disse que eu poderia ficar nos laboratórios estudando",
+        foi=self.entrou_laboratorio).vai
     def entrou_laboratorio(self,*_):
         self.maria.entra(self.laboratorio)
-        self.maria.vai= Texto(self.laboratorio, "aqui tem uns equipamentos para ver esse vidro, escolha qual vc acha melhor").vai
+        self.maria.vai= Texto(self.laboratorio, 
+        "aqui tem uns equipamentos para ver esse vidro, escolha qual vc acha melhor",
+        foi=self.entrou_lamina).vai
     def entrou_lamina(self,*_):
         self.lamina.entra(self.laboratorio)
-        self.lamina.vai= Texto(self.laboratorio,  "nossa um pedaço de vidro, tenho um tempo antes da entrevista do estagio a moça disse que eu poderia ficar nos laboratórios estudando").vai
+        self.lamina.vai= Texto(self.laboratorio, 
+        "nossa um pedaço de vidro, tenho um tempo antes da entrevista do estagio a moça disse que eu poderia ficar nos laboratórios estudando",
+        foi=self.entrou_microscopio).vai
     def entrou_microscopio(self,*_):
         self.microscopio.entra(self.aboratorio)
         self.microscopio.vai= Texto(self.laboratorio, " olá, eu sou utilizado para ver coisas que o olho humano não ve ", foi=Fase1().vai).vai
