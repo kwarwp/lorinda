@@ -54,72 +54,72 @@ FOTO_PAROQUIA=""
     
     def entrou_padre(self,*_):
         self.padre.entra(self.f_t)
-        padre.vai=Texto(self.f_t, "olá pessoal, certinho?")
-        padre.vai=Texto(self.f_t, "Eu sou o Padre Flávio e vou te ajudar nessa aventura sobre a história do nosso amado padroeiro")
+        padre.vai=Texto(self.f_t, "olá pessoal, certinho?").vai
+        padre.vai=Texto(self.f_t, "Eu sou o Padre Flávio e vou te ajudar nessa aventura sobre a história do nosso amado padroeiro").vai
         
     def entrou_1(self,*_):
         self.padre.entra(self.dalmacia)
-        self.padre.vai=Texto(self.dalmacia, "São Jerônimo nasceu na Dalmácia no ano de 340.")
+        self.padre.vai=Texto(self.dalmacia, "São Jerônimo nasceu na Dalmácia no ano de 340.").vai
         
         
     def entrou_2(self,*_):
         self.padre.entra(self.roma)
-        self.padre.vai=Texto(self.roma, "Após a morte de seus pais, Jerônimo foi para Roma estudar e durante sua permanencia teve um sonho muito importante para sua conversão.")
+        self.padre.vai=Texto(self.roma, "Após a morte de seus pais, Jerônimo foi para Roma estudar e durante sua permanencia teve um sonho muito importante para sua conversão.").vai
         
         
     def entrou_3(self,*_)
         self.padre.entra(self.sonho)
-        self.padre.vai=Texto(sonho, "No sonho, Jerônimo apresentava-se como cristão e era repreedindo pelo próprio Cristo por estar faltando com a verdade.")
+        self.padre.vai=Texto(sonho, "No sonho, Jerônimo apresentava-se como cristão e era repreedindo pelo próprio Cristo por estar faltando com a verdade.").vai
 
     def entrou_4(self,*_)
         self.padre.entra(self.p1)
-        self.padre.vai=.vai=Texto(self.pl, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.")
-        entrou.padre(fp)
+        self.padre.vai=.vai=Texto(self.pl, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.").vai
         self.padre.vai=Texto(self.fp, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.")
        
     def entrou_5
         entrou.padre(ordenacao)
-        padre.vai=Texto(ordenacao, "Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.")
+        padre.vai=Texto(ordenacao, "Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
         
     
     def entrou_curi
         entrou.padre(curiosidade)
-        padre.vai=Texto(curiosidade, "Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.")
+        padre.vai=Texto(curiosidade, "Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
          
     def entrou_6
         entrou.pd(caverna)
         entrou.padre(caverna)
-        padre.vai=Texto(caverna,"Por ter aprendido as linguas originais para melhor compreender as escrituras, Nosso padroeiro pôde a pedido do Papa Damaso traduzir as escrituras para o Latim.")
+        padre.vai=Texto(caverna,"Por ter aprendido as linguas originais para melhor compreender as escrituras, Nosso padroeiro pôde a pedido do Papa Damaso traduzir as escrituras para o Latim.").vai
     
     
     def entro_7
         entrou.pd(biblia)
-        entrou.padre(biblia, "As escrituras foram traduzidas do grego, hebraico e aramaico.")
+        entrou.padre(biblia, "As escrituras foram traduzidas do grego, hebraico e aramaico.").vai
         
     def entrou_8
         entrou.pd(vulgata)
-        entrou.padre(vulgata, "A tradução da sagrada escritura recebeu o nome Vulgata.")
+        entrou.padre(vulgata, "A tradução da sagrada escritura recebeu o nome Vulgata.").vai
         
     
     def entrou_9
         entrou.pd(belem)
-        entrou.padre(belem, "Após traduzir a sagrada escritura , Jerônimo mudou-se para Belém a cidade onde nasceu nosso Salvador.")
+        entrou.padre(belem, "Após traduzir a sagrada escritura , Jerônimo mudou-se para Belém a cidade onde nasceu nosso Salvador.").vai
     
     def entrou_10
         entrou.pd(f_p)
-        entrou.padre(f_p, "Jerônimo morreu no dia 30 de setembro de 420 em Belém, por isso o dia da Biblía e de São Jerônimo são comemorados no dia 30 de setembro.")
+        entrou.padre(f_p, "Jerônimo morreu no dia 30 de setembro de 420 em Belém, por isso o dia da Biblía e de São Jerônimo são comemorados no dia 30 de setembro.").vai
     
     
     def entrou_11
         entrou.pd(leao)
-        entrou.padre(leao "É um leão!!")
+        entrou.padre(leao "É um leão!!").vai
     
     def entrou_12
         entrou.pd(frase)
-        entrou.padre(frase, "A frase mais conhecida de nosso padroeiro é:  Ignorar as Escrituras Sagradas é ignorar a Cristo")
+        entrou.padre(frase, "A frase mais conhecida de nosso padroeiro é:  Ignorar as Escrituras Sagradas é ignorar a Cristo").vai
     
-    def entrou_final
-        entrou.pd(cf)
-        entrou.padre(cf, "Espero que tenham gostado de aprender um pouco mais da história do nosso amdado padroeiro São Jerônimo!")
-        entrou.padre(cf, " Até a próxima !!!")
-        
+    def entrou_final(self,*_)
+        self.pd.entra(self.cf)
+        self.padre.vai=Texto(self.cf, "Espero que tenham gostado de aprender um pouco mais da história do nosso amdado padroeiro São Jerônimo!").vai
+        self.padre.vai=Texto(self.cf, " Até a próxima !!!").vai
+f_T.vai()
+kkkk()
