@@ -95,13 +95,13 @@ class apresentacao():
     
 
 #apresentacao()
-print (apresentacao)
+#print (apresentacao)
 PROCARIONTE = TRYPANOSOMA_CRUZI = NEURONIO = BACTERIA = "https://i.imgur.com/illvVvw.jpg"
 ESPERMATOZOIDE = HEMACIA = ELODEA = CALCIFORME = NPC = "https://i.imgur.com/illvVvw.jpg"
 class Fase1(): 
     def __init__(self):
         self.laboratorio= Cena(img =  LABORATORIO)
-        self.procarionte= Elemento(img= PROCARIONTE)
+        self.procarionte= Elemento(img= PROCARIONTE, x=100, y=100)
         self.trypanosoma_cruzi= Elemento(img=TRYPANOSOMA_CRUZI)
         self.neuronio=Elemento(img= NEURONIO)
         self.bacteria = Elemento(img= BACTERIA)
@@ -110,7 +110,7 @@ class Fase1():
         self.elodea= Elemento(img= ELODEA)
         self.calciforme= Elemento(img=CALCIFORME)
         self.npc= Elemento(img= NPC,texto = "você precisa descobrir quem é procarionte para a próxima fase", cena=self.laboratorio)#resposta certa é a bactéria
-        self.npc.texto.foi
+        self.npc.texto.foi = self.entrou_procarionte
     def entrou_procarionte(self, *_):
         self.procarionte.entra(self.laboratorio)
         self.procarionte.vai=Texto(self.laboratorio," oi eu sou uma célula procarionte,e me chama assim pq eu tenho apenas uma célula no meu corpo").vai
