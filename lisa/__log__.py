@@ -981,3 +981,21 @@ Traceback (most recent call last):
     self.npc= Elemento(img= NPC,Texto = "você precisa descobrir quem é procarionte para a próxima fase")#resposta certa é a bactéria
 NameError: name 'NPC' is not defined
 '''},
+{'date': 'Tue Sep 22 2020 11:08:26.494 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 153
+    Fase1().vai()
+  module <module> line 113
+    self.npc_texto= Texto(self.laboratorio,"você precisa descobrir quem é procarionte para a próxima fase", foi= self.entra_procarionte)#resposta certa é a bactéria
+AttributeError: 'Fase1' object has no attribute 'entra_procarionte'
+'''},
