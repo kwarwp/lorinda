@@ -57,7 +57,7 @@ class apresentacao():
         self.chefe=Elemento(img=CHEFE, x=560, y=450)
         self.laboratorio= Cena(img= LABORATORIO)
         self.cartaz=Elemento(CARTAZ, x=400)
-        #microscopio = Elemento(img = MICROSCOPIO)
+        self.microscopio = Elemento(img = MICROSCOPIO, x=760, y=350)
         # cartaz= Elemento(img= CARTAZ)
         #chefe.entra(fiocruz)
         #será que assim vai? colocar separado? mas se colocar assim os dois textos vão aparecer
@@ -87,7 +87,7 @@ class apresentacao():
         self.maria.entra(self.rua2)
         pega= Texto(self.rua2, 
         "por via das dúvidas você pega o pacote assim mesmo",
-        foi=self.entra_fiocruz).vai
+        foi=self.entra_fiocruz)
         self.maria.vai= Texto(self.rua2, 
         "parece uma pessoa estranha, não quero aceitar nada dela",
         foi=pega.vai).vai
@@ -117,7 +117,7 @@ class apresentacao():
         "para se usar o microscópio faça isso...",
         foi=self.entrou_microscopio).vai
     def entrou_microscopio(self,*_):
-        self.microscopio.entra(self.aboratorio)
+        self.microscopio.entra(self.laboratorio)
         self.microscopio.vai= Texto(self.laboratorio, " olá, eu sou utilizado para ver coisas que o olho humano não ve ", foi=Fase1().vai).vai
     def vai(self):
 
