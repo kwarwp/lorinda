@@ -109,9 +109,7 @@ class apresentacao():
     def entrou_microscopio(self,*_):
         self.microscopio.entra(self.aboratorio)
         self.microscopio.vai= Texto(self.laboratorio, " olá, eu sou utilizado para ver coisas que o olho humano não ve ", foi=Fase1().vai).vai
-    """ colocar outros equipamentos de laboratório"""    
-        """arrastar e colocar a lâmina no microscópio e então aparece um um ciclone que a leva para dentro da célula, 
-        ela grita e pergunta onde estou""" 
+    
     
 
 apresentacao().vai()
