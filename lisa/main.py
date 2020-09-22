@@ -109,7 +109,7 @@ class Fase1():
         self.hemacia= Elemento(img= HEMACIA)
         self.elodea= Elemento(img= ELODEA)
         self.calciforme= Elemento(img=CALCIFORME)
-        self.npc= Elemento(img= NPC,texto = "você precisa descobrir quem é procarionte para a próxima fase")#resposta certa é a bactéria
+        self.npc= Elemento(img= NPC,texto = "você precisa descobrir quem é procarionte para a próxima fase", cena=self.laboratorio)#resposta certa é a bactéria
     def entrou_procarionte(self, *_):
         self.procarionte.entra(self.laboratorio)
         self.procarionte.vai=Texto(self.laboratorio," oi eu sou uma célula procarionte,e me chama assim pq eu tenho apenas uma célula no meu corpo").vai
@@ -149,7 +149,7 @@ class Fase1():
         self.laboratorio.vai()
 Fase1().vai()
 
-print(Fase1)
+#print(Fase1)
 
 
 
