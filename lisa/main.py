@@ -183,9 +183,9 @@ class Fase1():
         "eu fico no instestino delgado eu tenho diversas funções, uma dela pe revestir com muco para proteger onde estou",
         foi=self.entrou_celula).vai
     def entrou_celula(self, *_):
-        self.maria.entrou(self.celula)
+        self.maria.entra(self.celula)
         self.maria.vai=Texto(self.celula, "ONDE ESTOU?", foi=self.faladepois1).vai
-        self.npc.entrou(self.celula)
+        self.npc.entra(self.celula)
         self.npc.vai=Texto(self.celula, " na cidade das células! CITONÓPOLIS", foi=self.faladepois2).vai
     def faladepois1(self,*_):
         self.maria.vai=Texto(self.celula,"como posso sair desse lugar?").vai
