@@ -1040,3 +1040,10 @@ AttributeError: 'apresentacao' object has no attribute 'vai'
     self.microscopio.texto.foi=self.entrou_maria
 AttributeError: 'apresentacao' object has no attribute 'microscopio'
 '''},
+{'date': 'Tue Sep 22 2020 18:18:56.30 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 113
+  """arrastar e colocar a lâmina no microscópio e então aparece um um ciclone que a leva para dentro da célula, 
+  ^
+IndentationError: unexpected indent
+'''},
