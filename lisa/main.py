@@ -54,7 +54,7 @@ class apresentacao():
         self.pacote.entra(self.rua2)
         self.rua2.direita=self.fiocruz
         self.fiocruz.esquerda=self.rua2
-        self.chefe=Elemento(img=CHEFE)
+        self.chefe=Elemento(img=CHEFE, x=560, y=450)
         self.laboratorio= Cena(img= LABORATORIO)
         #microscopio = Elemento(img = MICROSCOPIO)
         # cartaz= Elemento(img= CARTAZ)
@@ -96,6 +96,7 @@ class apresentacao():
         "nossa um pedaço de vidro, tenho um tempo antes da entrevista do estagio a moça disse que eu poderia ficar nos laboratórios estudando",
         foi=self.entrou_laboratorio).vai
     def entrou_laboratorio(self,*_):
+        self.laboratorio.vai()
         self.maria.entra(self.laboratorio)
         self.maria.vai= Texto(self.laboratorio, 
         "aqui tem uns equipamentos para ver esse vidro, escolha qual vc acha melhor",
