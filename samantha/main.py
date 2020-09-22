@@ -84,16 +84,14 @@ FOTO_PAROQUIA=""
         self.padre.entra(self.curiosidade)
         self.padre.vai=Texto(self.curiosidade,"Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
          
-    def entrou_6
-        entrou.pd(caverna)
-        entrou.padre(caverna)
-        padre.vai=Texto(caverna,"Por ter aprendido as linguas originais para melhor compreender as escrituras, Nosso padroeiro pôde a pedido do Papa Damaso traduzir as escrituras para o Latim.").vai
+    def entrou_6(self,*_)
+        self.padre.entra(self.caverna)
+        self.padre.vai=Texto(self.caverna,"Por ter aprendido as linguas originais para melhor compreender as escrituras, Nosso padroeiro pôde a pedido do Papa Damaso traduzir as escrituras para o Latim.").vai 
     
-    
-    def entro_7
-        entrou.pd(biblia)
-        entrou.padre(biblia, "As escrituras foram traduzidas do grego, hebraico e aramaico.").vai
-        
+    def entro_7(self,*_)
+        self.padre.entra(self.biblia)
+        self.padre.vai=Texto(self.biblia, "A tradução da sagrada escritura recebeu o nome Vulgata.").vai
+         
     def entrou_8
         entrou.pd(vulgata)
         entrou.padre(vulgata, "A tradução da sagrada escritura recebeu o nome Vulgata.").vai
