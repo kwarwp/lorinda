@@ -195,7 +195,7 @@ class Fase1():
     def vai(self):
 
         self.laboratorio.vai()
-Fase1().vai()
+#Fase1().vai()
 apresentacao().vai()
 #print(Fase1)
 
