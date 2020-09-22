@@ -74,16 +74,15 @@ FOTO_PAROQUIA=""
     def entrou_4(self,*_)
         self.padre.entra(self.p1)
         self.padre.vai=.vai=Texto(self.pl, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.").vai
-        self.padre.vai=Texto(self.fp, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.")
+        self.padre.vai=Texto(self.fp, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.").vai
        
-    def entrou_5
-        entrou.padre(ordenacao)
-        padre.vai=Texto(ordenacao, "Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
-        
-    
-    def entrou_curi
-        entrou.padre(curiosidade)
-        padre.vai=Texto(curiosidade, "Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
+    def entrou_5(self,*_)
+        self.padre.entra(self.ordenacao)
+        self.padre.vai=Texto(self.ordenacao= "Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
+  
+    def entrou_curi(self,*_)
+        self.padre.entra(self.curiosidade)
+        self.padre.vai=Texto(self.curiosidade,"Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
          
     def entrou_6
         entrou.pd(caverna)
