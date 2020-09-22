@@ -34,17 +34,18 @@ NPC = "https://www.kindpng.com/picc/m/496-4964664_angry-npc-hd-png-download.png"
 class apresentacao():
     def __init__(self):
         self.casa = Cena(img = CASA)#maria vai para fio cruz
-        self.maria= Elemento(img= MARIA, x=460, y=250, w=150, h=80)
+        self.maria= Elemento(img= MARIA, x=460, y=450, w=150, h=80)
         self.rua= Cena(img= RUA)
-        self.estranha= Elemento(img= ESTRANHA, x=560, y=250, texto= "Guarde e proteja esse pacote com sua própria vida")
-        self.pacote=Elemento(img=PACOTE)
+        self.estranha= Elemento(img= ESTRANHA, x=560, y=450, texto= "Guarde e proteja esse pacote com sua própria vida")
+        self.pacote=Elemento(img=PACOTE, tit="pacote", x=660, y=450)
         self.casa.direita=Cena(vai=self.entrou_rua)#self.rua
         self.rua.esquerda=self.casa
         #maria.entra(rua)
         #coloquei .vai() em alguns
         #maria.entra(rua) 
         self.rua2=Cena(img= RUA2)
-        self.rua.direita= self.rua2
+        #self.rua.direita= self.rua2
+        self.rua.direita=Cena(vai=self.entrou_rua2)
         self.rua2.esquerda=self.rua
         #maria.entra(rua2)
         self.estranha.entra(self.rua2)#entrega o pacote e some
@@ -81,11 +82,13 @@ class apresentacao():
         "estou indo para FIOCRUZ, acho que vou conseguir um estágio lá, uip",
         foi=self.entrou_rua2).vai
     def entrou_rua2(self,*_):
+        self.rua2.vai()
         self.maria.entra(self.rua2)
         self.maria.vai= Texto(self.rua2, 
         "parece uma pessoa estranha, não quero aceitar nada dela",
-        foi=self.entrou_fiocruz).vai
+        foi=self.entra_fiocruz).vai
     def entra_fiocruz(self,*_):
+        self.fiocruz.vai()
         self.chefe.entra(self.fiocruz)
         self.chefe.vai= Texto(self.fiocruz, "Boa tarde Maria, temos um tempo antes da entrevista, fique a vontade...se quiser pode explorar os laboatórios para estudar").vai
         self.maria.entra(self.fiocruz)
