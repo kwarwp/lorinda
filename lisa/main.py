@@ -140,8 +140,7 @@ class Fase1():
     def faladepois1(self,*_):
         self.maria.vai=Texto(self.celula,"como posso sair desse lugar?").vai
     def faladepois2(self,*_):
-        self.npc.vai=Texto(self.celula= "  vc foi trazida para outra dimensão, a dimensão microscópica das células" 
- "Para sair, vc terá  que vencer alguns enigmas e desafios, relacionados ao mundo das células ou ficará presa aqui para sempre.").vai 
+        self.npc.vai=Texto(self.celula= "  vc foi trazida para outra dimensão, a dimensão microscópica das células.Para sair, vc terá  que vencer alguns enigmas e desafios, relacionados ao mundo das células ou ficará presa aqui para sempre.").vai 
 
 
 #laboratorio.vai()
