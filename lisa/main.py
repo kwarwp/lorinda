@@ -23,9 +23,9 @@ CARTAZ = "https://png.pngtree.com/element_our/png_detail/20181226/mockup-design-
 CELULA = ""
 NEURONIO = "https://images.vexels.com/media/users/3/145055/isolated/preview/642c2b217b818eed64d0ae334fd2835f-ilustra----o-de-neur--nio-by-vexels.png"
 HEMACIA = "https://www.odontoup.com.br/wp-content/uploads/2013/06/hemacia.png"
-PROCARIONTE = ""
+PROCARIONTE = "https://i.pinimg.com/originals/fb/b9/c8/fbb9c8a5078a5417ecd182f2cb512909.jpg"
 BACTERIA= "https://png.pngtree.com/png-clipart/20190903/original/pngtree-flat-cell-bacteria-png-free-material-png-image_4425347.jpg"
-TRYPANOSSOMA_CRUZI = ""
+TRYPANOSSOMA_CRUZI = "https://static.tribunapr.com.br/wp-content/uploads/sites/1/2009/08/02-08-09_cet02020809.png"
 ESPERMATOZOIDE = "https://images.vexels.com/media/users/3/145119/isolated/preview/9a3d6a0e1c79dd4f507f7787617acdf5-ilustra----o-de-espermatoz--ide-by-vexels.png"
 ELODEA = "https://img1.gratispng.com/20180404/jkq/kisspng-algae-seaweed-aquatic-plants-aloe-5ac4853e2c61d2.8993360815228286061818.jpg"
 CALCIFORME = "https://maestrovirtuale.com/wp-content/uploads/2019/10/Celula-calciforme.png"
@@ -115,8 +115,8 @@ class apresentacao():
        self.casa.vai()
 apresentacao()
 #print (apresentacao)
-PROCARIONTE = TRYPANOSOMA_CRUZI = NEURONIO = BACTERIA = "https://i.imgur.com/illvVvw.jpg"
-ESPERMATOZOIDE = HEMACIA = ELODEA = CALCIFORME = NPC = "https://i.imgur.com/illvVvw.jpg"
+#PROCARIONTE = TRYPANOSOMA_CRUZI = NEURONIO = BACTERIA = "https://i.imgur.com/illvVvw.jpg"
+#ESPERMATOZOIDE = HEMACIA = ELODEA = CALCIFORME = NPC = "https://i.imgur.com/illvVvw.jpg"
 class Fase1(): 
     def __init__(self):
         self.laboratorio= Cena(img =  LABORATORIO)
