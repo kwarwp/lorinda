@@ -880,3 +880,10 @@ NameError: name 'CELULA' is not defined
                                 ^
 SyntaxError: keyword can't be an expression
 '''},
+{'date': 'Mon Sep 21 2020 22:02:34.72 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 143
+  self.npc.vai=Texto(self.celula= "  vc foi trazida para outra dimensão, a dimensão microscópica das células.Para sair, vc terá  que vencer alguns enigmas e desafios, relacionados ao mundo das células ou ficará presa aqui para sempre.").vai 
+                                ^
+SyntaxError: keyword can't be an expression
+'''},
