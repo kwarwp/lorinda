@@ -19,9 +19,17 @@ CORREDOR = "https://i.imgur.com/7GyqLni.jpg"
 LAMINA = "https://www.splab.com.br/imagens/informacoes/lamina-vidro-escavada-02.jpg"
 LABORATORIO ="https://i.imgur.com/b6P8IWp.jpg"
 MICROSCOPIO = "https://i.imgur.com/IA1JT2z.png"
-#COMO SERIA ESSE CARTAZ??
-CARTAZ = ""
+CARTAZ = "https://png.pngtree.com/element_our/png_detail/20181226/mockup-design-vector-poster-company-sample-concep-illustration-wave-png_282401.jpg"
 CELULA = ""
+NEURONIO = "https://images.vexels.com/media/users/3/145055/isolated/preview/642c2b217b818eed64d0ae334fd2835f-ilustra----o-de-neur--nio-by-vexels.png"
+HEMACIA = "https://www.odontoup.com.br/wp-content/uploads/2013/06/hemacia.png"
+PROCARIONTE = ""
+BACTERIA= "https://png.pngtree.com/png-clipart/20190903/original/pngtree-flat-cell-bacteria-png-free-material-png-image_4425347.jpg"
+TRYPANOSSOMA_CRUZI = ""
+ESPERMATOZOIDE = "https://images.vexels.com/media/users/3/145119/isolated/preview/9a3d6a0e1c79dd4f507f7787617acdf5-ilustra----o-de-espermatoz--ide-by-vexels.png"
+ELODEA = "https://img1.gratispng.com/20180404/jkq/kisspng-algae-seaweed-aquatic-plants-aloe-5ac4853e2c61d2.8993360815228286061818.jpg"
+CALCIFORME = "https://maestrovirtuale.com/wp-content/uploads/2019/10/Celula-calciforme.png"
+NPC = "https://www.kindpng.com/picc/m/496-4964664_angry-npc-hd-png-download.png"
 #colocar imagens da class apresentação 
 class apresentacao():
     def __init__(self):
