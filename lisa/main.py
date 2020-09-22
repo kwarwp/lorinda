@@ -160,7 +160,7 @@ class Fase1():
         self.bacteria.vai=Texto(self.laboratorio,
         "olá eu sou uma pessoa simples, igual arroz pois combino com tudo e posso estar em qualquer lugar, sempre tem espaço para mim",
         foi=self.entrou_espermatozoide).vai
-    def entrou_espematozoide(self, *_):
+    def entrou_espermatozoide(self, *_):
         self.espermatozoide.entra(self.laboratorio)
         self.espermatozoide.vai=Texto(self.laboratorio,
         "eu sou quem dá a origem dos humanos, então imagina como devo ser dificil e complexo me estudar",
