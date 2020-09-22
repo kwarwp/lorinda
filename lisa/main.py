@@ -95,30 +95,25 @@ class apresentacao():
     
 
 #apresentacao()
-#print (apresentacao)
+print (apresentacao)
 PROCARIONTE = TRYPANOSOMA_CRUZI = NEURONIO = BACTERIA = "https://i.imgur.com/illvVvw.jpg"
 ESPERMATOZOIDE = HEMACIA = ELODEA = CALCIFORME = NPC = "https://i.imgur.com/illvVvw.jpg"
 class Fase1(): 
     def __init__(self):
         self.laboratorio= Cena(img =  LABORATORIO)
-        self.procarionte= Elemento(img= PROCARIONTE, tit="PROCARIONTE", x=80, y=40)
-        self.trypanosoma_cruzi= Elemento(img=TRYPANOSOMA_CRUZI, tit="TRYPANOSOMA_CRUZI", x=160, y=80)
-        self.neuronio=Elemento(img= NEURONIO, tit="NEURONIO", x=180, y=140)
-        self.bacteria = Elemento(img= BACTERIA, tit="BACTERIA", x=80, y=140)
-        self.espermatozoide= Elemento(img=  ESPERMATOZOIDE, tit="ESPERMATOZOIDE", x=280, y=40) 
-        self.hemacia= Elemento(img= HEMACIA, tit="HEMACIA", x=380, y=140)
-        self.elodea= Elemento(img= ELODEA, tit="ELODEA", x=480, y=240)
-        self.calciforme= Elemento(img=CALCIFORME, tit="CALCIFORME", x=580, y=40)
-        self.npc_texto= Texto(self.laboratorio,"Você precisa descobrir quem é procarionte para a próxima fase",
-            foi= self.entrou_procarionte)#resposta certa é a bactéria
-        self.npc= Elemento(img= NPC, texto="você precisa descobrir quem é procarionte para a próxima fase",
-            cena=self.laboratorio, vai=self.npc_texto.vai)#resposta certa é a bactéria
-        self.npc.texto.foi=self.entrou_procarionte
+        self.procarionte= Elemento(img= PROCARIONTE)
+        self.trypanosoma_cruzi= Elemento(img=TRYPANOSOMA_CRUZI)
+        self.neuronio=Elemento(img= NEURONIO)
+        self.bacteria = Elemento(img= BACTERIA)
+        self.espermatozoide= Elemento(img=  ESPERMATOZOIDE) 
+        self.hemacia= Elemento(img= HEMACIA)
+        self.elodea= Elemento(img= ELODEA)
+        self.calciforme= Elemento(img=CALCIFORME)
+        self.npc= Elemento(img= NPC,texto = "você precisa descobrir quem é procarionte para a próxima fase", cena=self.laboratorio)#resposta certa é a bactéria
+        self.npc.texto.foi
     def entrou_procarionte(self, *_):
         self.procarionte.entra(self.laboratorio)
-        self.procarionte.vai=Texto(
-            " oi eu sou uma célula procarionte,e me chama assim pq eu tenho apenas uma célula no meu corpo",
-            foi=self.entrou_trypanosoma).vai
+        self.procarionte.vai=Texto(self.laboratorio," oi eu sou uma célula procarionte,e me chama assim pq eu tenho apenas uma célula no meu corpo").vai
     def entrou_trypanosoma(self, *_):
         self.trypanosoma.entra(self.laboratorio)
         self.trypanosoma.vai=Texto(self.laboratorio,"a galera não gosta muito de mim pq dizem que eu sou parasita e que causa uma doença no coração, mas é que o coração grande é tão quentinho").vai
