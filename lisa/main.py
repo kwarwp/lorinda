@@ -131,22 +131,34 @@ class Fase1():
         foi=self.entrou_neuronio).vai
     def entrou_neuronio(self, *_):
         self.neuronio.entra(self.laboratorio)
-        self.neuronio.vai=Texto(self.laboratorio,"eus ou bem complicado, pois eu fico na cabeça e passo informação pelo corpo, imagina como eu devo ser feito").vai
+        self.neuronio.vai=Texto(self.laboratorio,
+        "eus ou bem complicado, pois eu fico na cabeça e passo informação pelo corpo, imagina como eu devo ser feito",
+        foi=self.entrou_bacteria).vai
     def entrou_bacteria(self, *_):
         self.bacteria.entra(self.laboratorio)
-        self.bacteria.vai=Texto(self.laboratorio,"olá eu sou uma pessoa simples, igual arroz pois combino com tudo e posso estar em qualquer lugar, sempre tem espaço para mim").vai
+        self.bacteria.vai=Texto(self.laboratorio,
+        "olá eu sou uma pessoa simples, igual arroz pois combino com tudo e posso estar em qualquer lugar, sempre tem espaço para mim",
+        foi=self.entrou_espermatozoide).vai
     def entrou_espematozoide(self, *_):
         self.espermatozoide.entra(self.laboratorio)
-        self.espermatozoide.vai=Texto(self.laboratorio,"eu sou quem dá a origem dos humanos, então imagina como devo ser dificil e complexo me estudar").vai 
+        self.espermatozoide.vai=Texto(self.laboratorio,
+        "eu sou quem dá a origem dos humanos, então imagina como devo ser dificil e complexo me estudar",
+        foi=self.entrou_hemacia).vai
     def entrou_hemacia(self, *_):
         self.hemacia.entra(self.laboratorio)
-        self.hemacia.vai=Texto(self.laboratorio, "eu sou o transporte da galera, carrego muita coisa, imagina como sou").vai
+        self.hemacia.vai=Texto(self.laboratorio, 
+        "eu sou o transporte da galera, carrego muita coisa, imagina como sou",
+        foi=self.entrou_elodea).vai
     def entra_elodea(self, *_):
         self.elodea.entra(self.laboratorio)
-        self.elodea.vai= Texto(self.laboratorio,"eu vivo na agua e sou muito importante para a manutenção do ambiente marinho, posso ser encoderijo , comida ou o2").vai
+        self.elodea.vai= Texto(self.laboratorio,
+        "eu vivo na agua e sou muito importante para a manutenção do ambiente marinho, posso ser encoderijo , comida ou o2",
+        foi=self.entrou_calciforme).vai
     def entrou_calciforme(self, *_):
         self.calciforme.entra(self.laboratorio)
-        self.calciforme.vai=Texto(self.laboratorio,"eu fico no instestino delgado eu tenho diversas funções, uma dela pe revestir com muco para proteger onde estou").vai
+        self.calciforme.vai=Texto(self.laboratorio,
+        "eu fico no instestino delgado eu tenho diversas funções, uma dela pe revestir com muco para proteger onde estou",
+        foi=self.entrou_celula).vai
     def entrou_celula(self, *_):
         self.maria.entrou(self.celula)
         self.maria.vai=Texto(self.celula, "ONDE ESTOU?", foi=faladepois1).vai
