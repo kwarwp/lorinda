@@ -20,7 +20,7 @@ LAMINA = "https://www.splab.com.br/imagens/informacoes/lamina-vidro-escavada-02.
 LABORATORIO ="https://i.imgur.com/b6P8IWp.jpg"
 MICROSCOPIO = "https://i.imgur.com/IA1JT2z.png"
 CARTAZ = "https://png.pngtree.com/element_our/png_detail/20181226/mockup-design-vector-poster-company-sample-concep-illustration-wave-png_282401.jpg"
-CELULA = ""
+CELULA = "https://i.imgur.com/sGoKfvs.jpg" #MUDE, COLOQUEI QQ COISA!
 NEURONIO = "https://images.vexels.com/media/users/3/145055/isolated/preview/642c2b217b818eed64d0ae334fd2835f-ilustra----o-de-neur--nio-by-vexels.png"
 HEMACIA = "https://www.odontoup.com.br/wp-content/uploads/2013/06/hemacia.png"
 PROCARIONTE = "https://i.pinimg.com/originals/fb/b9/c8/fbb9c8a5078a5417ecd182f2cb512909.jpg"
@@ -129,9 +129,10 @@ apresentacao()
 #PROCARIONTE = TRYPANOSOMA_CRUZI = NEURONIO = BACTERIA = "https://i.imgur.com/illvVvw.jpg"
 #ESPERMATOZOIDE = HEMACIA = ELODEA = CALCIFORME = NPC = "https://i.imgur.com/illvVvw.jpg"
 class Fase1(): 
-    def __init__(self, maria):
+    def __init__(self, maria=None):
         self.laboratorio= Cena(img =  LABORATORIO)
-        self.maria=maria
+        self.celula = Cena(CELULA)
+        self.maria=maria or Elemento(img= MARIA, x=460, y=450, w=150, h=80)
         self.procarionte= Elemento(img= PROCARIONTE, x=100, y=100)
         self.trypanosoma_cruzi= Elemento(img=TRYPANOSOMA_CRUZI, x=200, y=0)
         self.neuronio=Elemento(img= NEURONIO, x=300, y=100)
@@ -183,6 +184,7 @@ class Fase1():
         "eu fico no instestino delgado eu tenho diversas funções, uma dela pe revestir com muco para proteger onde estou",
         foi=self.entrou_celula).vai
     def entrou_celula(self, *_):
+        self.celula.vai()
         self.maria.entra(self.celula)
         self.maria.vai=Texto(self.celula, "ONDE ESTOU?", foi=self.faladepois1).vai
         self.npc.entra(self.celula)
@@ -195,8 +197,9 @@ class Fase1():
     def vai(self):
 
         self.laboratorio.vai()
-#Fase1().vai()
-apresentacao().vai()
+        #self.celula.vai()
+Fase1().vai()
+#apresentacao().vai()
 #print(Fase1)
 
 
