@@ -67,9 +67,7 @@ class apresentacao():
         self.fiocruz.direita= self.corredor
         self.corredor.esquerda=self.fiocruz
         self.celula= Cena(img= CELULA)#QUANDO CLICA NO MICRÓSCÓPIO IRÁ PARA ESSA CENA
-        self.microscopio.texto.foi=self.entrou_maria
-        
-
+        self.casa.texto.foi=self.entrou_maria
     def entrou_maria(self,*_):
         self.maria.entrou(self.casa)
         self.maria.vai= Texto(self.casa,
@@ -101,15 +99,17 @@ class apresentacao():
         self.lamina.entra(self.laboratorio)
         self.lamina.vai= Texto(self.laboratorio, 
         "nossa um pedaço de vidro, tenho um tempo antes da entrevista do estagio a moça disse que eu poderia ficar nos laboratórios estudando",
+        foi=self.entrou_cartaz).vai
+   
+    def entrou_cartaz(self,*_):
+        self.cartaz.entra(self.laboratorio)
+        self.cartaz.vai=Texto(self.laboratorio, 
+        "para se usar o microscópio faça isso...",
         foi=self.entrou_microscopio).vai
     def entrou_microscopio(self,*_):
         self.microscopio.entra(self.aboratorio)
         self.microscopio.vai= Texto(self.laboratorio, " olá, eu sou utilizado para ver coisas que o olho humano não ve ", foi=Fase1().vai).vai
-    """ colocar outros equipamentos de laboratório"""
-    def entrou_cartaz(self,*_):
-        self.cartaz.entra(self.laboratorio)
-        self.cartaz.vai=Texto(self.laboratorio, "para se usar o microscópio faça isso...").vai
-        
+    """ colocar outros equipamentos de laboratório"""    
         """arrastar e colocar a lâmina no microscópio e então aparece um um ciclone que a leva para dentro da célula, 
         ela grita e pergunta onde estou""" 
     
