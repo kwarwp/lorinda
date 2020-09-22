@@ -36,9 +36,9 @@ class apresentacao():
         self.casa = Cena(img = CASA)#maria vai para fio cruz
         self.maria= Elemento(img= MARIA, x=460, y=250, w=150, h=80)
         self.rua= Cena(img= RUA)
-        self.estranha= Elemento(img= ESTRANHA, texto= "Guarde e proteja esse pacote com sua própria vida")
+        self.estranha= Elemento(img= ESTRANHA, x=560, y=250, texto= "Guarde e proteja esse pacote com sua própria vida")
         self.pacote=Elemento(img=PACOTE)
-        self.casa.direta=self.rua
+        self.casa.direita=Cena(vai=self.entrou_rua)#self.rua
         self.rua.esquerda=self.casa
         #maria.entra(rua)
         #coloquei .vai() em alguns
@@ -51,7 +51,7 @@ class apresentacao():
         self.pacote=Elemento(img= PACOTE)
         self.fiocruz= Cena(img=FIOCRUZ)
         self.pacote.entra(self.rua2)
-        self.rua2.direta=self.fiocruz
+        self.rua2.direita=self.fiocruz
         self.fiocruz.esquerda=self.rua2
         self.chefe=Elemento(img=CHEFE)
         self.laboratorio= Cena(img= LABORATORIO)
@@ -67,14 +67,16 @@ class apresentacao():
         self.fiocruz.direita= self.corredor
         self.corredor.esquerda=self.fiocruz
         self.celula= Cena(img= CELULA)#QUANDO CLICA NO MICRÓSCÓPIO IRÁ PARA ESSA CENA
-        self.casa.foi=self.entrou_maria
+        #self.casa.foi=self.entrou_maria
+        Texto(self.casa, "Maria hoje tem um compromisso", foi=self.entrou_maria).vai()
     def entrou_maria(self,*_):
-        self.maria.entrou(self.casa)
+        self.maria.entra(self.casa)
         self.maria.vai= Texto(self.casa,
         " olá me chamo Maria e amo estudar biologia e lutar pelos direitos das mulheres",
         foi=self.entrou_rua).vai
     def entrou_rua(self,*_):
-        self.maria.entrou(self.rua)
+        self.rua.vai()
+        self.maria.entra(self.rua)
         self.maria.vai= Texto(self.rua, 
         "estou indo para FIOCRUZ, acho que vou conseguir um estágio lá, uip",
         foi=self.entrou_rua2).vai
@@ -184,7 +186,7 @@ class Fase1():
 
         self.laboratorio.vai()
 Fase1().vai()
-
+apresentacao().vai()
 #print(Fase1)
 
 
