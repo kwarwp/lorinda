@@ -102,8 +102,8 @@ class Fase1():
     def __init__(self):
         self.laboratorio= Cena(img =  LABORATORIO)
         self.procarionte= Elemento(img= PROCARIONTE, x=100, y=100)
-        self.trypanosoma_cruzi= Elemento(img=TRYPANOSOMA_CRUZI)
-        self.neuronio=Elemento(img= NEURONIO)
+        self.trypanosoma_cruzi= Elemento(img=TRYPANOSOMA_CRUZI, x=200, y=0)
+        self.neuronio=Elemento(img= NEURONIO, x=300, y=100)
         self.bacteria = Elemento(img= BACTERIA)
         self.espermatozoide= Elemento(img=  ESPERMATOZOIDE) 
         self.hemacia= Elemento(img= HEMACIA)
@@ -113,10 +113,14 @@ class Fase1():
         self.npc.texto.foi = self.entrou_procarionte
     def entrou_procarionte(self, *_):
         self.procarionte.entra(self.laboratorio)
-        self.procarionte.vai=Texto(self.laboratorio," oi eu sou uma célula procarionte,e me chama assim pq eu tenho apenas uma célula no meu corpo").vai
+        self.procarionte.vai=Texto(self.laboratorio,
+        " oi eu sou uma célula procarionte,e me chama assim pq eu tenho apenas uma célula no meu corpo",
+        foi=self.entrou_trypanosoma).vai
     def entrou_trypanosoma(self, *_):
-        self.trypanosoma.entra(self.laboratorio)
-        self.trypanosoma.vai=Texto(self.laboratorio,"a galera não gosta muito de mim pq dizem que eu sou parasita e que causa uma doença no coração, mas é que o coração grande é tão quentinho").vai
+        self.trypanosoma_cruzi.entra(self.laboratorio)
+        self.trypanosoma_cruzi.vai=Texto(self.laboratorio,
+        "a galera não gosta muito de mim pq dizem que eu sou parasita e que causa uma doença no coração, mas é que o coração grande é tão quentinho",
+        foi=self.entrou_neuronio).vai
     def entrou_neuronio(self, *_):
         self.neuronio.entra(self.laboratorio)
         self.neuronio.vai=Texto(self.laboratorio,"eus ou bem complicado, pois eu fico na cabeça e passo informação pelo corpo, imagina como eu devo ser feito").vai
