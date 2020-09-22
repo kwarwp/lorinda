@@ -60,9 +60,9 @@ class apresentacao():
         self.celula= Cena(img= CELULA)#QUANDO CLICA NO MICRÓSCÓPIO IRÁ PARA ESSA CENA
         
 
-    def entrou_maria(*_):
-        maria.entrou(casa)
-        maria.vai= Texto(casa," olá me chamo Maria e amo estudar biologia e lutar pelos direitos das mulheres").vai
+    def entrou_maria(self,*_):
+        self.maria.entrou(self.casa)
+        self.maria.vai= Texto(self.casa," olá me chamo Maria e amo estudar biologia e lutar pelos direitos das mulheres").vai
     def entrou_rua(*_):
         maria.entrou(rua)
         maria.vai= Texto(rua, "estou indo para FIOCRUZ, acho que vou conseguir um estágio lá, uip").vai
@@ -83,14 +83,12 @@ class apresentacao():
         lamina.vai= Texto(laboratorio,  "nossa um pedaço de vidro, tenho um tempo antes da entrevista do estagio a moça disse que eu poderia ficar nos laboratórios estudando").vai
     def entrou_microscopio(*_):
         microscopio.entra(laboratorio)
-        microscopio.vai= Texto(laboratorio, " olá, eu sou utilizado para ver coisas que o olho humano não ve ").vai
+        microscopio.vai= Texto(laboratorio, " olá, eu sou utilizado para ver coisas que o olho humano não ve ", foi=Fase1().vai).vai
     """ colocar outros equipamentos de laboratório"""
     def entrou_cartaz(*_):
         cartaz.entra(laboratorio)
         cartaz.vai=Texto(laboratorio, "para se usar o microscópio faça isso...").vai
-    
-    """arrastar e colocar a lâmina no microscópio e então aparece um um ciclone que a leva para dentro da célula, 
-    ela grita e pergunta onde estou""" 
+     
     
 
 apresentacao()
@@ -108,6 +106,8 @@ class Fase1():
         elodea= Elemento(img= ELODEA)
         calciforme= Elemento(img=CALCIFORME)
         npc= Elemento(img= NPC,Texto = "você precisa descobrir quem é procarionte para a próxima fase").vai#resposta certa é a bactéria
+    def vai(self,*_): 
+        self.laboratorio.vai()
     def entrou_procarionte(*_):
         procarionte.entra(laboratorio)
         procarionte.vai=Texto(laboratorio," oi eu sou uma célula procarionte,e me chama assim pq eu tenho apenas uma célula no meu corpo").vai
