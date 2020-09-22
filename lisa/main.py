@@ -94,7 +94,7 @@ class apresentacao():
         ela grita e pergunta onde estou""" 
     
 
-#apresentacao()
+apresentacao().vai()
 #print (apresentacao)
 PROCARIONTE = TRYPANOSOMA_CRUZI = NEURONIO = BACTERIA = "https://i.imgur.com/illvVvw.jpg"
 ESPERMATOZOIDE = HEMACIA = ELODEA = CALCIFORME = NPC = "https://i.imgur.com/illvVvw.jpg"
@@ -141,12 +141,12 @@ class Fase1():
         self.calciforme.vai=Texto(self.laboratorio,"eu fico no instestino delgado eu tenho diversas funções, uma dela pe revestir com muco para proteger onde estou").vai
     def entrou_celula(self, *_):
         self.maria.entrou(self.celula)
-        self.maria.vai=Texto(self.celula, "ONDE ESTOU?").vai
+        self.maria.vai=Texto(self.celula, "ONDE ESTOU?", foi=faladepois1).vai
         self.npc.entrou(self.celula)
-        self.npc.vai=Texto(self.celula, " na cidade das células! CITONÓPOLIS").vai
-        self.maria.entrou(self.celula)
+        self.npc.vai=Texto(self.celula, " na cidade das células! CITONÓPOLIS", foi=faladepois2).vai
+    def faladepois1(self,*_):
         self.maria.vai=Texto(self.celula,"como posso sair desse lugar?").vai
-        self.npc.entra(self.celula)
+    def faladepois2(self,*_):
         self.npc.vai=Texto(self.celula,"  vc foi trazida para outra dimensão, a dimensão microscópica das células" 
  "Para sair, vc terá  que vencer alguns enigmas e desafios, relacionados ao mundo das células ou ficará presa aqui para sempre.").vai 
     def vai(self):
