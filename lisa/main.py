@@ -197,6 +197,7 @@ class Fase1():
     def vai(self):
 
         self.laboratorio.vai()
+        self.maria.entra(self.laboratorio)
         #self.celula.vai()
 #Fase1().vai()
 apresentacao().vai()
