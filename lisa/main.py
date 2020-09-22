@@ -36,8 +36,8 @@ class apresentacao():
         self.casa = Cena(img = CASA)#maria vai para fio cruz
         self.maria= Elemento(img= MARIA, x=460, y=450, w=150, h=80)
         self.rua= Cena(img= RUA)
-        self.estranha= Elemento(img= ESTRANHA, x=560, y=450, texto= "Guarde e proteja esse pacote com sua própria vida")
-        self.pacote=Elemento(img=PACOTE, tit="pacote", x=660, y=450)
+        self.estranha= Elemento(img= ESTRANHA, x=600, y=450, texto= "Guarde e proteja esse pacote com sua própria vida")
+        self.pacote=Elemento(img=PACOTE, x=760, y=450, tit="pacote")
         self.casa.direita=Cena(vai=self.entrou_rua)#self.rua
         self.rua.esquerda=self.casa
         #maria.entra(rua)
