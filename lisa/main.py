@@ -109,10 +109,11 @@ class apresentacao():
     def entrou_microscopio(self,*_):
         self.microscopio.entra(self.aboratorio)
         self.microscopio.vai= Texto(self.laboratorio, " olá, eu sou utilizado para ver coisas que o olho humano não ve ", foi=Fase1().vai).vai
-    
-    
+    def vai(self):
 
-apresentacao().vai()
+    
+       self.casa.vai()
+apresentacao()
 #print (apresentacao)
 PROCARIONTE = TRYPANOSOMA_CRUZI = NEURONIO = BACTERIA = "https://i.imgur.com/illvVvw.jpg"
 ESPERMATOZOIDE = HEMACIA = ELODEA = CALCIFORME = NPC = "https://i.imgur.com/illvVvw.jpg"
