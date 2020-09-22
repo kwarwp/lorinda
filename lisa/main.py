@@ -198,8 +198,8 @@ class Fase1():
 
         self.laboratorio.vai()
         #self.celula.vai()
-Fase1().vai()
-#apresentacao().vai()
+#Fase1().vai()
+apresentacao().vai()
 #print(Fase1)
 
 
