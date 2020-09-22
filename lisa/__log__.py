@@ -1117,3 +1117,10 @@ NameError: name 'TRYPANOSOMA_CRUZI' is not defined
     self.trypanosoma_cruzi= Elemento(img=TRYPANOSOMA_CRUZI, x=200, y=0)
 NameError: name 'TRYPANOSOMA_CRUZI' is not defined
 '''},
+{'date': 'Tue Sep 22 2020 18:57:41.739 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 39
+  self.estranha= Elemento(img= ESTRANHA, x=560,, y=250 texto= "Guarde e proteja esse pacote com sua própria vida")
+                                                ^
+SyntaxError: invalid syntax
+'''},
