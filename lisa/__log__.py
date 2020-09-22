@@ -999,3 +999,10 @@ NameError: name 'NPC' is not defined
     self.npc_texto= Texto(self.laboratorio,"você precisa descobrir quem é procarionte para a próxima fase", foi= self.entra_procarionte)#resposta certa é a bactéria
 AttributeError: 'Fase1' object has no attribute 'entra_procarionte'
 '''},
+{'date': 'Tue Sep 22 2020 15:06:06.840 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''<class 'apresentacao'>
+
+RuntimeError: too much recursion
+  module '$exec_320' line 104
+        self.procarionte= Elemento(img= PROCARIONTE)
+'''},
