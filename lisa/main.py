@@ -134,9 +134,9 @@ class Fase1():
         self.calciforme.vai=Texto(self.laboratorio,"eu fico no instestino delgado eu tenho diversas funções, uma dela pe revestir com muco para proteger onde estou").vai
     def entrou_celula(self,*_):
         self.maria.entrou(self.celula)
-        self.maria.vai=Texto(self.celula, "ONDE ESTOU?", foi= faladepois1 ).vai
+        self.maria.vai=Texto(self.celula, "ONDE ESTOU?", foi= self.faladepois1 ).vai
         self.npc.entrou(self.celula)
-        self.npc.vai=Texto(celula, " na cidade das células! CITONÓPOLIS", foi=faladepois2).vai
+        self.npc.vai=Texto(celula, " na cidade das células! CITONÓPOLIS", foi=self.faladepois2).vai
     def faladepois1(self,*_):
         self.maria.vai=Texto(self.celula,"como posso sair desse lugar?").vai
     def faladepois2(self,*_):
