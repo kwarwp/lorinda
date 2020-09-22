@@ -873,3 +873,10 @@ NameError: name 'CELULA' is not defined
     celula= Cena(img= CELULA)#QUANDO CLICA NO MICRÓSCÓPIO IRÁ PARA ESSA CENA
 NameError: name 'CELULA' is not defined
 '''},
+{'date': 'Mon Sep 21 2020 22:01:33.280 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 143
+  self.npc.vai=Texto(self.celula= "  vc foi trazida para outra dimensão, a dimensão microscópica das células" 
+                                ^
+SyntaxError: keyword can't be an expression
+'''},
