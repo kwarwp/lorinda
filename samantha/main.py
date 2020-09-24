@@ -72,14 +72,14 @@ FOTO_PAROQUIA=""
         self.padre.vai=Texto(sonho, "No sonho, Jerônimo apresentava-se como cristão e era repreedindo pelo próprio Cristo por estar faltando com a verdade.").vai
 
     def entrou_4(self,*_)
-        self.padre.entra(self.p1)
+        self.padre.entra(self.pl)
         self.padre.vai=.vai=Texto(self.pl, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.").vai
         self.padre.vai=Texto(self.fp, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.").vai
-       
+        
     def entrou_5(self,*_)
         self.padre.entra(self.ordenacao)
         self.padre.vai=Texto(self.ordenacao= "Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
-  
+    
     def entrou_curi(self,*_)
         self.padre.entra(self.curiosidade)
         self.padre.vai=Texto(self.curiosidade,"Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
@@ -92,30 +92,30 @@ FOTO_PAROQUIA=""
         self.padre.entra(self.biblia)
         self.padre.vai=Texto(self.biblia, "A tradução da sagrada escritura recebeu o nome Vulgata.").vai
          
-    def entrou_8
-        entrou.pd(vulgata)
-        entrou.padre(vulgata, "A tradução da sagrada escritura recebeu o nome Vulgata.").vai
+    def entrou_8(self,*_)
+        self.padre.entra(self.vulgata)
+        self.padre.vai=Texto(self.vulgata, "A tradução da sagrada escritura recebeu o nome Vulgata.").vai
         
     
-    def entrou_9
-        entrou.pd(belem)
-        entrou.padre(belem, "Após traduzir a sagrada escritura , Jerônimo mudou-se para Belém a cidade onde nasceu nosso Salvador.").vai
+    def entrou_9(self,*_)
+         self.padre.entra(self.belem)
+        self.padre.vai=Texto(self.belem, "Após traduzir a sagrada escritura , Jerônimo mudou-se para Belém a cidade onde nasceu nosso Salvador.").vai
     
-    def entrou_10
-        entrou.pd(f_p)
-        entrou.padre(f_p, "Jerônimo morreu no dia 30 de setembro de 420 em Belém, por isso o dia da Biblía e de São Jerônimo são comemorados no dia 30 de setembro.").vai
+    def entrou_10(self,*_)
+        self.padre.entra(self.f_p)
+        self.padre.vai=Texto(self.f_p, "Jerônimo morreu no dia 30 de setembro de 420 em Belém, por isso o dia da Biblía e de São Jerônimo são comemorados no dia 30 de setembro.").vai
     
     
-    def entrou_11
-        entrou.pd(leao)
-        entrou.padre(leao "É um leão!!").vai
+    def entrou_11(self,*_)
+        self.padre.entra(self.leao)
+        self.padre.vai=Texto(self.leao "É um leão!!").vai
     
-    def entrou_12
-        entrou.pd(frase)
-        entrou.padre(frase, "A frase mais conhecida de nosso padroeiro é:  Ignorar as Escrituras Sagradas é ignorar a Cristo").vai
+    def entrou_12(self,*_)
+        self.padre.entra(self.frase)
+        self.padre.vai=Texto(self.frase, "A frase mais conhecida de nosso padroeiro é:  Ignorar as Escrituras Sagradas é ignorar a Cristo").vai
     
     def entrou_final(self,*_)
-        self.pd.entra(self.cf)
+        self.padre.entra(self.cf)
         self.padre.vai=Texto(self.cf, "Espero que tenham gostado de aprender um pouco mais da história do nosso amdado padroeiro São Jerônimo!").vai
         self.padre.vai=Texto(self.cf, " Até a próxima !!!").vai
 f_T.vai()
