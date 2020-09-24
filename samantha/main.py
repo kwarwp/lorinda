@@ -6,26 +6,25 @@ STYLE=
 
 FLAVINHO ="https://imgur.com/fv9BZ54"
 FOTO_PRINCIPAL =""
-DALMACIA =""
+DALMACIA ="https://imgur.com/dyLIQib"
 JERONIMO_JOVEM ="blob:https://web.whatsapp.com/edad8633-e384-4538-b7f3-ddd4837df1c0"
 JERONIMO_VELHO =""
 CURIOSIDADE ="" 
 LEAO ="blob:https://web.whatsapp.com/78b2c07d-57e3-4b38-92d1-2dfff506a540"
 PAPA_LIBERIO=""
 BATIZADO_JERONIMO  =""
-ROMA =""
-ORDDENACAO_SACERDOTAL =""
+ROMA ="https://imgur.com/Zh5yUpP"
+ORDDENACAO_SACERDOTAL ="https://imgur.com/qZ3zINX"
 SONHO ="blob:https://web.whatsapp.com/2960c698-2f09-4eff-abd9-6ee5d4b7ee47"
-CURIOSIDADE =""
 JERONIMO_CAVERNA =""
 BIBLIA ="https://imgur.com/QPELbOd"
 VULGATA =""
-BELEM =""
+BELEM ="https://imgur.com/sf5X4cr"
 FOTO_DO_PADROEIRO ="https://imgur.com/Y0CZrXO"
 FRASE =""
 CENA_FINAL="https://imgur.com/kRQyK02"
 PAPAD="https://imgur.com/a/bO5ZNKx"
-CAVERNA=""
+CAVERNA="https://imgur.com/fBFCru5"
 FOTO_PAROQUIA=""
  class kkkk():
     def __init__(self):
@@ -52,19 +51,19 @@ FOTO_PAROQUIA=""
     self.cf= Cena(img=CENA_FINAL)
     self.pd= Elemento(img=PAPAD)
     
-    def entrou_padre(self,*_):
-        self.padre.entra(self.f_t)
-        padre.vai=Texto(self.f_t, "olá pessoal, certinho?").vai
-        padre.vai=Texto(self.f_t, "Eu sou o Padre Flávio e vou te ajudar nessa aventura sobre a história do nosso amado padroeiro").vai
+         def entrou_padre(self,*_):
+            self.padre.entra(self.f_t)
+            self.padre.vai=Texto(self.f_t, "olá pessoal, certinho?").vai
+            self.padre.vai=Texto(self.f_t, "Eu sou o Padre Flávio e vou te ajudar nessa aventura sobre a história do nosso amado padroeiro").vai
         
-    def entrou_1(self,*_):
-        self.padre.entra(self.dalmacia)
-        self.padre.vai=Texto(self.dalmacia, "São Jerônimo nasceu na Dalmácia no ano de 340.").vai
+        def entrou_1(self,*_):
+            self.padre.entra(self.dalmacia)
+            self.padre.vai=Texto(self.dalmacia, "São Jerônimo nasceu na Dalmácia no ano de 340.").vai
         
         
-    def entrou_2(self,*_):
-        self.padre.entra(self.roma)
-        self.padre.vai=Texto(self.roma, "Após a morte de seus pais, Jerônimo foi para Roma estudar e durante sua permanencia teve um sonho muito importante para sua conversão.").vai
+        def entrou_2(self,*_):
+            self.padre.entra(self.roma)
+            self.padre.vai=Texto(self.roma, "Após a morte de seus pais, Jerônimo foi para Roma estudar e durante sua permanencia teve um sonho muito importante para sua conversão.").vai
         
         
     def entrou_3(self,*_)
@@ -98,7 +97,7 @@ FOTO_PAROQUIA=""
         
     
     def entrou_9(self,*_)
-         self.padre.entra(self.belem)
+        self.padre.entra(self.belem)
         self.padre.vai=Texto(self.belem, "Após traduzir a sagrada escritura , Jerônimo mudou-se para Belém a cidade onde nasceu nosso Salvador.").vai
     
     def entrou_10(self,*_)
