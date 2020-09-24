@@ -4,7 +4,7 @@ from _spy.vitollino.main import inventario as inv
 STYLE=
 STYLE=
 
-FLAVINHO =""
+FLAVINHO ="https://imgur.com/fv9BZ54"
 FOTO_PRINCIPAL =""
 DALMACIA =""
 JERONIMO_JOVEM ="blob:https://web.whatsapp.com/edad8633-e384-4538-b7f3-ddd4837df1c0"
@@ -23,7 +23,7 @@ VULGATA =""
 BELEM =""
 FOTO_DO_PADROEIRO ="https://imgur.com/Y0CZrXO"
 FRASE =""
-CENA_FINAL=""
+CENA_FINAL="https://imgur.com/kRQyK02"
 PAPAD="https://imgur.com/a/bO5ZNKx"
 CAVERNA=""
 FOTO_PAROQUIA=""
