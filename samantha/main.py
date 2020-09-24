@@ -11,7 +11,7 @@ JERONIMO_JOVEM ="blob:https://web.whatsapp.com/edad8633-e384-4538-b7f3-ddd4837df
 JERONIMO_VELHO =""
 CURIOSIDADE ="" 
 LEAO ="blob:https://web.whatsapp.com/78b2c07d-57e3-4b38-92d1-2dfff506a540"
-PAPA_LIBERIO=""
+PAPA_LIBERIO="https://imgur.com/vlIrMHW"
 BATIZADO_JERONIMO  =""
 ROMA ="https://imgur.com/Zh5yUpP"
 ORDDENACAO_SACERDOTAL ="https://imgur.com/qZ3zINX"
@@ -66,56 +66,56 @@ FOTO_PAROQUIA=""
             self.padre.vai=Texto(self.roma, "Após a morte de seus pais, Jerônimo foi para Roma estudar e durante sua permanencia teve um sonho muito importante para sua conversão.").vai
         
         
-    def entrou_3(self,*_)
-        self.padre.entra(self.sonho)
-        self.padre.vai=Texto(sonho, "No sonho, Jerônimo apresentava-se como cristão e era repreedindo pelo próprio Cristo por estar faltando com a verdade.").vai
+        def entrou_3(self,*_)
+            self.padre.entra(self.sonho)
+            self.padre.vai=Texto(sonho, "No sonho, Jerônimo apresentava-se como cristão e era repreedindo pelo próprio Cristo por estar faltando com a verdade.").vai
 
-    def entrou_4(self,*_)
-        self.padre.entra(self.pl)
-        self.padre.vai=.vai=Texto(self.pl, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.").vai
-        self.padre.vai=Texto(self.fp, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.").vai
+        def entrou_4(self,*_)
+            self.padre.entra(self.pl)
+            self.padre.vai=.vai=Texto(self.pl, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.").vai
+            self.padre.vai=Texto(self.fp, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.").vai
         
-    def entrou_5(self,*_)
-        self.padre.entra(self.ordenacao)
-        self.padre.vai=Texto(self.ordenacao= "Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
+        def entrou_5(self,*_)
+            self.padre.entra(self.ordenacao)
+            self.padre.vai=Texto(self.ordenacao= "Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
     
-    def entrou_curi(self,*_)
-        self.padre.entra(self.curiosidade)
-        self.padre.vai=Texto(self.curiosidade,"Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
-         
-    def entrou_6(self,*_)
-        self.padre.entra(self.caverna)
-        self.padre.vai=Texto(self.caverna,"Por ter aprendido as linguas originais para melhor compreender as escrituras, Nosso padroeiro pôde a pedido do Papa Damaso traduzir as escrituras para o Latim.").vai 
+        def entrou_curi(self,*_)
+            self.padre.entra(self.curiosidade)
+            self.padre.vai=Texto(self.curiosidade,"Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
+
+        def entrou_6(self,*_)
+            self.padre.entra(self.caverna)
+            self.padre.vai=Texto(self.caverna,"Por ter aprendido as linguas originais para melhor compreender as escrituras, Nosso padroeiro pôde a pedido do Papa Damaso traduzir as escrituras para o Latim.").vai 
     
-    def entro_7(self,*_)
-        self.padre.entra(self.biblia)
-        self.padre.vai=Texto(self.biblia, "A tradução da sagrada escritura recebeu o nome Vulgata.").vai
-         
-    def entrou_8(self,*_)
-        self.padre.entra(self.vulgata)
-        self.padre.vai=Texto(self.vulgata, "A tradução da sagrada escritura recebeu o nome Vulgata.").vai
+        def entro_7(self,*_)
+            self.padre.entra(self.biblia)
+            self.padre.vai=Texto(self.biblia, "A tradução da sagrada escritura recebeu o nome Vulgata.").vai
+
+        def entrou_8(self,*_)
+            self.padre.entra(self.vulgata)
+            self.padre.vai=Texto(self.vulgata, "A tradução da sagrada escritura recebeu o nome Vulgata.").vai
         
     
-    def entrou_9(self,*_)
-        self.padre.entra(self.belem)
-        self.padre.vai=Texto(self.belem, "Após traduzir a sagrada escritura , Jerônimo mudou-se para Belém a cidade onde nasceu nosso Salvador.").vai
+        def entrou_9(self,*_)
+            self.padre.entra(self.belem)
+            self.padre.vai=Texto(self.belem, "Após traduzir a sagrada escritura , Jerônimo mudou-se para Belém a cidade onde nasceu nosso Salvador.").vai
     
-    def entrou_10(self,*_)
-        self.padre.entra(self.f_p)
-        self.padre.vai=Texto(self.f_p, "Jerônimo morreu no dia 30 de setembro de 420 em Belém, por isso o dia da Biblía e de São Jerônimo são comemorados no dia 30 de setembro.").vai
+        def entrou_10(self,*_)
+            self.padre.entra(self.f_p)
+            self.padre.vai=Texto(self.f_p, "Jerônimo morreu no dia 30 de setembro de 420 em Belém, por isso o dia da Biblía e de São Jerônimo são comemorados no dia 30 de setembro.").vai
     
     
-    def entrou_11(self,*_)
-        self.padre.entra(self.leao)
-        self.padre.vai=Texto(self.leao "É um leão!!").vai
+        def entrou_11(self,*_)
+            self.padre.entra(self.leao)
+            self.padre.vai=Texto(self.leao "É um leão!!").vai
     
-    def entrou_12(self,*_)
-        self.padre.entra(self.frase)
-        self.padre.vai=Texto(self.frase, "A frase mais conhecida de nosso padroeiro é:  Ignorar as Escrituras Sagradas é ignorar a Cristo").vai
+       def entrou_12(self,*_)
+            self.padre.entra(self.frase)
+            self.padre.vai=Texto(self.frase, "A frase mais conhecida de nosso padroeiro é:  Ignorar as Escrituras Sagradas é ignorar a Cristo").vai
     
-    def entrou_final(self,*_)
-        self.padre.entra(self.cf)
-        self.padre.vai=Texto(self.cf, "Espero que tenham gostado de aprender um pouco mais da história do nosso amdado padroeiro São Jerônimo!").vai
-        self.padre.vai=Texto(self.cf, " Até a próxima !!!").vai
+        def entrou_final(self,*_)
+            self.padre.entra(self.cf)
+            self.padre.vai=Texto(self.cf, "Espero que tenham gostado de aprender um pouco mais da história do nosso amdado padroeiro São Jerônimo!").vai
+            self.padre.vai=Texto(self.cf, " Até a próxima !!!").vai
 f_T.vai()
 kkkk()
