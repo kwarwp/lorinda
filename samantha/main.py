@@ -5,7 +5,7 @@ STYLE=
 STYLE=
 
 FLAVINHO ="https://imgur.com/fv9BZ54"
-FOTO_PRINCIPAL =""
+FOTO_PRINCIPAL ="https://imgur.com/NTZqSBD"
 DALMACIA ="https://imgur.com/dyLIQib"
 JERONIMO_JOVEM ="blob:https://web.whatsapp.com/edad8633-e384-4538-b7f3-ddd4837df1c0"
 JERONIMO_VELHO =""
