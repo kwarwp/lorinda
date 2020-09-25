@@ -25,7 +25,7 @@ FRASE =""
 CENA_FINAL="https://imgur.com/kRQyK02"
 PAPAD="https://imgur.com/a/bO5ZNKx"
 CAVERNA="https://imgur.com/fBFCru5"
-FOTO_PAROQUIA=""
+FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
  class kkkk():
     def __init__(self):
     self.ft= Cena(img=FOTO_PAROQUIA)
