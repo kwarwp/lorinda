@@ -117,7 +117,7 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
               C=Texto(self.ft.p,
               )
               respondeu[optou].vai()
-              foi=resposta, A="", B="", C="").vai
+              foi=resposta, A="356", B="479", C="450").vai
             self.padre.entra(self.ordenacao)
             self.padre.vai=Texto(self.ordenacao= "Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
     
