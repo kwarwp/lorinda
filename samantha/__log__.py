@@ -195,3 +195,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Sat Sep 26 2020 12:03:34.323 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 57
+  self.padre.vai=Texto(self.f_t, "Eu sou o Padre Flávio e vou te ajudar nessa aventura sobre a história do nosso amado padroeiro"foi=fala.vai).vai
+                                                                                                                                  ^
+SyntaxError: invalid syntax
+'''},
