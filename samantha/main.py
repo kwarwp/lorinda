@@ -177,7 +177,7 @@ class bala():
                respondeu[optou].vai()
                self.ft.p.vai()
         self.padre.entra(self.ft.p)
-        self.padre.vai=Texto(self.ft.p, "",
+        self.padre.vai=Texto(self.ft.p, "Qual nome recebeu a tradução da biblía?",
               foi=resposta, A="Livro", B="Enciclopédia", C="Vulgata").vai
             self.padre.entra(self.vulgata)
             self.padre.vai=Texto(self.vulgata, "A tradução da sagrada escritura recebeu o nome Vulgata.").vai
@@ -193,7 +193,7 @@ class bala():
                respondeu[optou].vai()
                self.ft.p.vai()
         self.padre.entra(self.ft.p)
-        self.padre.vai=Texto(self.ft.p, "",
+        self.padre.vai=Texto(self.ft.p, "Para onde Jerônimo mudou-se após traduzir a Biblía?",
               foi=resposta, A="Belém", B="Egito", C="Índia").vai
             self.padre.entra(self.belem)
             self.padre.vai=Texto(self.belem, "Após traduzir a sagrada escritura , Jerônimo mudou-se para Belém a cidade onde nasceu nosso Salvador.").vai
@@ -208,7 +208,7 @@ class bala():
                respondeu[optou].vai()
                self.ft.p.vai()
         self.padre.entra(self.ft.p)
-        self.padre.vai=Texto(self.ft.p, "",
+        self.padre.vai=Texto(self.ft.p, "Em qual dia comemoramos o dia de São Jerônimo?",
               foi=resposta, A="01 de setembro", B="30 de outubro", C="30 de setembro").vai
             self.padre.entra(self.f_p)
             self.padre.vai=Texto(self.f_p, "Jerônimo morreu no dia 30 de setembro de 420 em Belém, por isso o dia da Biblía e de São Jerônimo são comemorados no dia 30 de setembro.").vai
@@ -224,7 +224,7 @@ class bala():
                respondeu[optou].vai()
                self.ft.p.vai()
         self.padre.entra(self.ft.p)
-        self.padre.vai=Texto(self.ft.p, "",
+        self.padre.vai=Texto(self.ft.p, "Qual o animal podemos encontar ao lado de São Jerônimo?",
               foi=resposta, A="sapo", B="leão", C="cordeiro").vai
             self.padre.entra(self.leao)
             self.padre.vai=Texto(self.leao "É um leão!!").vai
@@ -239,7 +239,7 @@ class bala():
                respondeu[optou].vai()
                self.ft.p.vai()
         self.padre.entra(self.ft.p)
-        self.padre.vai=Texto(self.ft.p, "",
+        self.padre.vai=Texto(self.ft.p, "Qual destas é uma frase de São Jerônimo",
               foi=resposta, A="Depositemos sempre a nossa confiança no Espírito Santo, para descobrirmos em cada situação nova uma ocasião para alargar o amor redentor de Cristo.", B="O bom Deus, que conhece as recompensas que Ele reserva a seus amigos, gosta, muitas vezes, de fazê-los ganhar seus tesouros por meio de sacrifícios", C="Ignorar as Escrituras Sagradas é ignorar a Cristo.").vai
             self.padre.entra(self.frase)
             self.padre.vai=Texto(self.frase, "A frase mais conhecida de nosso padroeiro é:  Ignorar as Escrituras Sagradas é ignorar a Cristo").vai
