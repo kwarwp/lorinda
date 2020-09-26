@@ -59,7 +59,7 @@ class Bala:
 
     def entrou_padre(self, *_):
         self.padre.entra(self.f_t)
-        fala = Texto(self.f_t, "olá pessoal, certinho?", foi=self.entrou_1)
+        fala = Texto(self.f_t, "Olá pessoal, certinho?", foi=self.entrou_1)
         self.padre.vai = Texto(self.f_t,
                                "Eu sou o Padre Flávio e vou te ajudar nessa aventura sobre a história do nosso amado padroeiro",
                                foi=fala.vai).vai
@@ -122,9 +122,9 @@ class Bala:
     def entrou_4(self, *_):
         def resposta(optou):
             respondeu = dict(
-                A=Texto(self.ft_p, ),
-                B=Texto(self.ft_p, ),
-                C=Texto(self.ft_p, )
+                A=Texto(self.ft_p,"" ),
+                B=Texto(self.ft_p,""),
+                C=Texto(self.ft_p,"" )
             )
             respondeu[optou].vai()
             self.ft_p.vai()
@@ -258,9 +258,9 @@ class Bala:
     def entrou_12(self, *_):
         def resposta(optou):
             respondeu = dict(
-                A=Texto(self.ft_p, ""),
-                B=Texto(self.ft_p, ""),
-                C=Texto(self.ft_p, ""),
+                A=Texto(self.ft_p, "O autor desta frase é João Paulo II"),
+                B=Texto(self.ft_p, "Esta frase é pensamento de Santa Teresinha"),
+                C=Texto(self.ft_p, "Correto!!"),
             )
             respondeu[optou].vai()
 
