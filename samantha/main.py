@@ -53,8 +53,8 @@ class bala():
     
     def entrou_padre(self,*_):
         self.padre.entra(self.f_t)
-        self.padre.vai=Texto(self.f_t, "olá pessoal, certinho?").vai
-        self.padre.vai=Texto(self.f_t, "Eu sou o Padre Flávio e vou te ajudar nessa aventura sobre a história do nosso amado padroeiro").vai
+        fala=Texto(self.f_t, "olá pessoal, certinho?").vai
+        self.padre.vai=Texto(self.f_t, "Eu sou o Padre Flávio e vou te ajudar nessa aventura sobre a história do nosso amado padroeiro"foi=fala.vai).vai
         
     def entrou_1(self,*_):
         def resposta(optou):
