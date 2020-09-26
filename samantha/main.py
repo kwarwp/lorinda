@@ -141,7 +141,7 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
               C=Texto(self.ft.p,
               )
               respondeu[optou].vai()
-              foi=resposta, A="", B="", C="").vai
+              foi=resposta, A="Papa Damaso", B="Papa João Paulo II", C="Papa ").vai
              self.padre.entra(self.caverna)
             self.padre.vai=Texto(self.caverna,"Por ter aprendido as linguas originais para melhor compreender as escrituras, Nosso padroeiro pôde a pedido do Papa Damaso traduzir as escrituras para o Latim.").vai 
          
