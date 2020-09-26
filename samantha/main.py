@@ -58,7 +58,7 @@ class bala():
         
     def entrou_1(self,*_):
         def resposta(optou):
-            respondeu = dict(
+            respondeu= dict(
             A=Texto(self.ft.p,#é uma descrição da alternativa certo?
             B=Texto(self.ft.p,
             C=Texto(self.ft.p,
