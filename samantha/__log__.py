@@ -202,3 +202,10 @@ IndentationError: unexpected indent
                                                                                                                                   ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Sat Sep 26 2020 12:05:12.585 GMt-0300 (Hora padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 59
+  def entrou_1(self,*_):
+  ^
+IndentationError: unexpected indent
+'''},
