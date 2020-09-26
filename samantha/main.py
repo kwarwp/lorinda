@@ -6,28 +6,28 @@ from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
 STYLE["width"] = 900
 STYLE["height"] = '650px'
 
-FLAVINHO = "https://imgur.com/fv9BZ54"
-FOTO_PRINCIPAL = "https://imgur.com/NTZqSBD"
-DALMACIA = "https://imgur.com/dyLIQib"
+FLAVINHO = "https://imgur.com/fv9BZ54.jpg"
+FOTO_PRINCIPAL = "https://imgur.com/NTZqSBD.jpg"
+DALMACIA = "https://imgur.com/dyLIQib.jpg"
 JERONIMO_JOVEM = "blob:https://web.whatsapp.com/edad8633-e384-4538-b7f3-ddd4837df1c0"
-FUNDO_PERGUNTAS = "https://imgur.com/w7OnO7L"
+FUNDO_PERGUNTAS = "https://imgur.com/w7OnO7L.jpg"
 CURIOSIDADE = ""
 LEAO = "blob:https://web.whatsapp.com/78b2c07d-57e3-4b38-92d1-2dfff506a540"
-PAPA_LIBERIO = "https://imgur.com/vlIrMHW"
+PAPA_LIBERIO = "https://imgur.com/vlIrMHW.jpg"
 BATIZADO_JERONIMO = ""
-ROMA = "https://imgur.com/Zh5yUpP"
-ORDDENACAO_SACERDOTAL = "https://imgur.com/qZ3zINX"
+ROMA = "https://imgur.com/Zh5yUpP.jpg"
+ORDDENACAO_SACERDOTAL = "https://imgur.com/qZ3zINX.jpg"
 SONHO = "blob:https://web.whatsapp.com/2960c698-2f09-4eff-abd9-6ee5d4b7ee47"
 JERONIMO_CAVERNA = ""
-BIBLIA = "https://imgur.com/QPELbOd"
+BIBLIA = "https://imgur.com/QPELbOd.jpg"
 VULGATA = ""
-BELEM = "https://imgur.com/sf5X4cr"
-FOTO_DO_PADROEIRO = "https://imgur.com/Y0CZrXO"
-FRASE = "https://imgur.com/LR9Tnyf"
-CENA_FINAL = "https://imgur.com/kRQyK02"
-PAPAD = "https://imgur.com/a/bO5ZNKx"
-CAVERNA = "https://imgur.com/fBFCru5"
-FOTO_PAROQUIA = "https://imgur.com/zFwNqPr"
+BELEM = "https://imgur.com/sf5X4cr.jpg"
+FOTO_DO_PADROEIRO = "https://imgur.com/Y0CZrXO.jpg"
+FRASE = "https://imgur.com/LR9Tnyf.jpg"
+CENA_FINAL = "https://imgur.com/kRQyK02.jpg"
+PAPAD = "https://imgur.com/a/bO5ZNKx.jpg"
+CAVERNA = "https://imgur.com/fBFCru5.jpg"
+FOTO_PAROQUIA = "https://imgur.com/zFwNqPr.jpg"
 
 
 class Bala:
@@ -55,10 +55,11 @@ class Bala:
         self.cf = Cena(img=CENA_FINAL)
         self.pd = Elemento(img=PAPAD)
         self.f_t.vai()
+        self.entrou_padre()
 
     def entrou_padre(self, *_):
         self.padre.entra(self.f_t)
-        fala = Texto(self.f_t, "olá pessoal, certinho?")
+        fala = Texto(self.f_t, "olá pessoal, certinho?", foi=self.entrou_1)
         self.padre.vai = Texto(self.f_t,
                                "Eu sou o Padre Flávio e vou te ajudar nessa aventura sobre a história do nosso amado padroeiro",
                                foi=fala.vai).vai
@@ -67,7 +68,7 @@ class Bala:
         def resposta(optou):
             respondeu = dict(
                 A=Texto(self.ft_p, "Ele irá a Roma."),
-                B=Texto(self.ft_p, "Correto!", foi=self.entrou_2),
+                B=Texto(self.ft_p, "Correto!", foi=self.entrou_dalmacia),
                 C=Texto(self.ft_p, "Muitos san6tos são da Polônia, mas São Jerônimo não foi um deles."),
             )
             respondeu[optou].vai()
@@ -76,9 +77,10 @@ class Bala:
         self.padre.entra(self.ft_p)
         self.padre.vai = Texto(self.ft_p, "Sabe onde Jerônimo nasceu?",
                                foi=resposta, A="Roma", B="Dalmácia", C="Polônia").vai
-        self.ft_p.vai()
+
+    def entrou_dalmacia(self, *_):
         self.padre.entra(self.dalmacia)
-        self.padre.vai = Texto(self.dalmacia, "São Jerônimo nasceu na Dalmácia no ano de 340.").vai
+        self.padre.vai = Texto(self.dalmacia, "São Jerônimo nasceu na Dalmácia no ano de 340.", foi=self.entrou_2).vai
         self.dalmacia.vai()
 
     def entrou_2(self, *_):
