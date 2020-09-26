@@ -86,10 +86,10 @@ class bala():
         self.padre.entra(self.ft_p)
         self.padre.vai=Texto(self.ft_p, "Após qual acontecimento ele foi para Roma estudar?",
            foi=resposta, A="A morte de seus pais", B="Uma grave doença", C="Um sonho").vai
-         self.ft_p.vai() 
+        self.ft_p.vai() 
         self.padre.entra(self.roma)
         self.padre.vai=Texto(self.roma, "Após a morte de seus pais, Jerônimo foi para Roma estudar e durante sua permanencia teve um sonho muito importante para sua conversão.").vai
-         self.roma.vai()
+        self.roma.vai()
         
     def entrou_3(self,*_)
          def resposta(optou):
