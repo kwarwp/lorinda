@@ -28,78 +28,76 @@ CAVERNA="https://imgur.com/fBFCru5"
 FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
 class bala():
     def __init__(self):
-        self.ft= Cena(img=FOTO_PAROQUIA)
-        self.leao= Cena(img=LEAO)
-        self.padre= Elemento(img=FALVINHO)
-        self.f_t= Cena(img=FOTO_PRINCIPAL)
-        self.dalmacia= Cena(img=DALMACIA)
-        self.j_j= Elemento(img=JERONIMO_JOVEM)
-        self.ft.p= Cena(img=FUNDO_PERGUNTAS)
-        self.batizado= Cena(img=BATIZADO_JERONIMO)
-        self.roma= Cena(img=ROMA)
-        self.ordenacao= Cena(img=ORDDENACAO_SACERDOTAL)
-        self.sonho= Cena(img=SONHO)
-        self.cr= Cena(img=CURIOSIDADE)
-        self.caverna= Cena(img=CAVERNA)
-        self.pl= Elemento(img=PAPA_LIBERIO)
-        self.j_c= Cena(img=JERONIMO_CAVERNA)
-        self.biblia= Cena(img=BIBLIA)
-        self.vulgata= Cena(img=VULGATA)
-        self.belem= Cena(img=BELEM)
-        self.f_p= Cena(img=FOTO_DO_PADROEIRO)
-        self.frase= Cena(img=FRASE)
-        self.cf= Cena(img=CENA_FINAL)
-        self.pd= Elemento(img=PAPAD)
+    self.ft= Cena(img=FOTO_PAROQUIA)
+    self.leao= Cena(img=LEAO)
+    self.padre= Elemento(img=FALVINHO)
+    self.f_t= Cena(img=FOTO_PRINCIPAL)
+    self.dalmacia= Cena(img=DALMACIA)
+    self.j_j= Elemento(img=JERONIMO_JOVEM)
+    self.ft.p= Cena(img=FUNDO_PERGUNTAS)
+    self.batizado= Cena(img=BATIZADO_JERONIMO)
+    self.roma= Cena(img=ROMA)
+    self.ordenacao= Cena(img=ORDDENACAO_SACERDOTAL)
+    self.sonho= Cena(img=SONHO)
+    self.cr= Cena(img=CURIOSIDADE)
+    self.caverna= Cena(img=CAVERNA)
+    self.pl= Elemento(img=PAPA_LIBERIO)
+    self.j_c= Cena(img=JERONIMO_CAVERNA)
+    self.biblia= Cena(img=BIBLIA)
+    self.vulgata= Cena(img=VULGATA)
+    self.belem= Cena(img=BELEM)
+    self.f_p= Cena(img=FOTO_DO_PADROEIRO)
+    self.frase= Cena(img=FRASE)
+    self.cf= Cena(img=CENA_FINAL)
+    self.pd= Elemento(img=PAPAD)
     
-    def entrou_padre(self,*_):
+         def entrou_padre(self,*_):
             self.padre.entra(self.f_t)
             self.padre.vai=Texto(self.f_t, "olá pessoal, certinho?").vai
             self.padre.vai=Texto(self.f_t, "Eu sou o Padre Flávio e vou te ajudar nessa aventura sobre a história do nosso amado padroeiro").vai
         
-    def entrou_1(self,*_):
-        def resposta(optou):
-            respondeu = dict (
-            A=Texto(self.ft.p,#é uma descrição da alternativa certo?
-            B=Texto(self.ft.p,
-            C=Texto(self.ft.p,
-            )
-            respondeu[optou].vai()
-         self.padre.entra(self.ft.p)
-         self.padre.vai=Texto(self.ft.p, "Sabe onde Jerônimo nasceu?",
-             foi=resposta, A="Roma", B="Dalmácia", C="Polônia").vai
-         self.ft.p.vai()
-         self.padre.entra(self.dalmacia)
-         self.padre.vai=Texto(self.dalmacia, "São Jerônimo nasceu na Dalmácia no ano de 340.").vai
-         self.dalmacia.vai()
+        def entrou_1(self,*_):
+            def resposta(optou):
+                respondeu = dict(
+                A=Texto(self.ft.p,#é uma descrição da alternativa certo?
+                B=Texto(self.ft.p,
+                C=Texto(self.ft.p,
+                )
+                respondeu[optou].vai()
+                 foi=resposta, A="Roma", B="Dalmácia", C="Polônia").vai
+            self.ft.p.vai()
+            self.padre.entra(self.dalmacia)
+            self.padre.vai=Texto(self.dalmacia, "São Jerônimo nasceu na Dalmácia no ano de 340.").vai
+             self.dalmacia.vai()
         
-    def entrou_2(self,*_):
-       def resposta(optou):
-           respondeu = dict(
-           A=Texto(self.ft.p,
-           B=Texto(self.ft.p,
-           C=Texto(self.ft.p,
-           )
-          respondeu[optou].vai()
-          foi=resposta, A="A morte de seus pais", B="Uma grave doença", C="Um sonho").vai
-       self.ft.p.vai 
-       self.padre.entra(self.roma)
-       self.padre.vai=Texto(self.roma, "Após a morte de seus pais, Jerônimo foi para Roma estudar e durante sua permanencia teve um sonho muito importante para sua conversão.").vai
-       self.roma.vai()
+        def entrou_2(self,*_):
+         def resposta(optou):
+             respondeu = dict(
+              A=Texto(self.ft.p,
+              B=Texto(self.ft.p,
+              C=Texto(self.ft.p,
+              )
+              respondeu[optou].vai()
+              foi=resposta, A="A morte de seus pais", B="Uma grave doença", C="Um sonho").vai
+            self.ft.p.vai 
+            self.padre.entra(self.roma)
+            self.padre.vai=Texto(self.roma, "Após a morte de seus pais, Jerônimo foi para Roma estudar e durante sua permanencia teve um sonho muito importante para sua conversão.").vai
+              self.roma.vai()
         
-    def entrou_3(self,*_)
-       def resposta(optou):
-           respondeu = dict(
-           A=Texto(self.ft.p,
-           B=Texto(self.ft.p,
-           C=Texto(self.ft.p,
-           )
-           respondeu[optou].vai()
-           foi=resposta, A="Nossa Senhora", B="São Miguel", C="Jesus Cristo").vai
-        self.padre.entra(self.sonho)
-        self.padre.vai=Texto(sonho, "No sonho, Jerônimo apresentava-se como cristão e era repreedindo pelo próprio Cristo por estar faltando com a verdade.").vai
+        def entrou_3(self,*_)
+             def resposta(optou):
+             respondeu = dict(
+              A=Texto(self.ft.p,
+              B=Texto(self.ft.p,
+              C=Texto(self.ft.p,
+              )
+               respondeu[optou].vai()
+              foi=resposta, A="Nossa Senhora", B="São Miguel", C="Jesus Cristo").vai
+            self.padre.entra(self.sonho)
+            self.padre.vai=Texto(sonho, "No sonho, Jerônimo apresentava-se como cristão e era repreedindo pelo próprio Cristo por estar faltando com a verdade.").vai
 
-     def entrou_4(self,*_)
-        def resposta(optou):
+        def entrou_4(self,*_)
+          def resposta(optou):
              respondeu = dict(
               A=Texto(self.ft.p,
               B=Texto(self.ft.p,
@@ -135,7 +133,7 @@ class bala():
             self.padre.entra(self.curiosidade)
             self.padre.vai=Texto(self.curiosidade,"Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
 
-     def entrou_6(self,*_)
+        def entrou_6(self,*_)
           def resposta(optou):
              respondeu = dict(
               A=Texto(self.ft.p,
