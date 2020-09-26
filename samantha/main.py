@@ -203,7 +203,7 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
               C=Texto(self.ft.p,
               )
                respondeu[optou].vai()
-              foi=resposta, A="", B="", C="").vai
+              foi=resposta, A="sapo", B="leão", C="cordeiro").vai
             self.padre.entra(self.leao)
             self.padre.vai=Texto(self.leao "É um leão!!").vai
     
@@ -215,7 +215,7 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
               C=Texto(self.ft.p,
               )
                respondeu[optou].vai()
-              foi=resposta, A="", B="", C="").vai
+              foi=resposta, A="Depositemos sempre a nossa confiança no Espírito Santo, para descobrirmos em cada situação nova uma ocasião para alargar o amor redentor de Cristo.", B="O bom Deus, que conhece as recompensas que Ele reserva a seus amigos, gosta, muitas vezes, de fazê-los ganhar seus tesouros por meio de sacrifícios", C="Ignorar as Escrituras Sagradas é ignorar a Cristo.").vai
             self.padre.entra(self.frase)
             self.padre.vai=Texto(self.frase, "A frase mais conhecida de nosso padroeiro é:  Ignorar as Escrituras Sagradas é ignorar a Cristo").vai
     
