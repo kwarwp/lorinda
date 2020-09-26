@@ -79,6 +79,7 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
               C=Texto(self.ft.p,
               )
               respondeu[optou].vai()
+              foi=resposta, A="A morte de seus pais", B="Uma grave doença", C="Um sonho").vai
             self.padre.entra(self.roma)
             self.padre.vai=Texto(self.roma, "Após a morte de seus pais, Jerônimo foi para Roma estudar e durante sua permanencia teve um sonho muito importante para sua conversão.").vai
               self.roma.vai()
