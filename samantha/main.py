@@ -65,6 +65,8 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
                 C=Texto(self.ft.p,
                 )
                 respondeu[optou].vai()
+            self.padre.entra(self.ft.p)
+            self.padre.vai=Texto(self.ft.p, "Sabe onde Jerônimo nasceu?",
                  foi=resposta, A="Roma", B="Dalmácia", C="Polônia").vai
             self.ft.p.vai()
             self.padre.entra(self.dalmacia)
