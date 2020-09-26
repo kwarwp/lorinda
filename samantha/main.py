@@ -70,9 +70,9 @@ class bala():
         self.padre.vai=Texto(self.ft.p, "Sabe onde Jerônimo nasceu?",
              foi=resposta, A="Roma", B="Dalmácia", C="Polônia").vai
         self.ft.p.vai()
-        self.padre.entra(self.dalmacia)
-        self.padre.vai=Texto(self.dalmacia, "São Jerônimo nasceu na Dalmácia no ano de 340.").vai
-        self.dalmacia.vai()
+        #self.padre.entra(self.dalmacia)
+        #self.padre.vai=Texto(self.dalmacia, "São Jerônimo nasceu na Dalmácia no ano de 340.").vai
+        #self.dalmacia.vai()
         
     def entrou_2(self,*_):
         def resposta(optou):
@@ -101,7 +101,7 @@ class bala():
             respondeu[optou].vai()
             self.ft.p.vai()
         self.padre.entra(self.ft.p)
-        self.padre.vai=Texto(self.ft.p, "Você consegue adivinhar com quem foi esse sonho?",
+        self.padre.vai=Texto(self.ft.p, "",
             foi=resposta, A="Nossa Senhora", B="São Miguel", C="Jesus Cristo").vai
         self.padre.entra(self.sonho)
         self.padre.vai=Texto(sonho, "No sonho, Jerônimo apresentava-se como cristão e era repreedindo pelo próprio Cristo por estar faltando com a verdade.").vai
@@ -116,7 +116,7 @@ class bala():
             respondeu[optou].vai()
             self.ft.p.vai()
         self.padre.entra(self.ft.p)
-        self.padre.vai=Texto(self.ft.p, "Qual destes Papas batizou nosso padroeiro?",
+        self.padre.vai=Texto(self.ft.p, "",
             foi=resposta, A="Papa Francisco", B="Papa Libério", C="Papa Bento XVI").vai
             self.padre.entra(self.pl)
             self.padre.vai=.vai=Texto(self.pl, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.").vai
