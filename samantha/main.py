@@ -69,30 +69,30 @@ class bala():
         self.padre.entra(self.ft.p)
         self.padre.vai=Texto(self.ft.p, "Sabe onde Jerônimo nasceu?",
              foi=resposta, A="Roma", B="Dalmácia", C="Polônia").vai
-          self.ft.p.vai()
-          self.padre.entra(self.dalmacia)
-          self.padre.vai=Texto(self.dalmacia, "São Jerônimo nasceu na Dalmácia no ano de 340.").vai
-          self.dalmacia.vai()
+        self.ft.p.vai()
+        self.padre.entra(self.dalmacia)
+        self.padre.vai=Texto(self.dalmacia, "São Jerônimo nasceu na Dalmácia no ano de 340.").vai
+        self.dalmacia.vai()
         
-     def entrou_2(self,*_):
-       def resposta(optou):
-           respondeu = dict(
-           A=Texto(self.ft.p,)
-           B=Texto(self.ft.p,)
-           C=Texto(self.ft.p,)
-           )
-           respondeu[optou].vai()
+    def entrou_2(self,*_):
+        def resposta(optou):
+            respondeu = dict(
+            A=Texto(self.ft.p,)
+            B=Texto(self.ft.p,)
+            C=Texto(self.ft.p,)
+            )
+            respondeu[optou].vai()
         self.ft.p.vai()
         self.padre.entra(self.ft.p)
         self.padre.vai=Texto(self.ft.p, "Após qual acontecimento ele foi para Roma estudar?",
            foi=resposta, A="A morte de seus pais", B="Uma grave doença", C="Um sonho").vai
          self.ft.p.vai 
-         self.padre.entra(self.roma)
-         self.padre.vai=Texto(self.roma, "Após a morte de seus pais, Jerônimo foi para Roma estudar e durante sua permanencia teve um sonho muito importante para sua conversão.").vai
-          self.roma.vai()
+        self.padre.entra(self.roma)
+        self.padre.vai=Texto(self.roma, "Após a morte de seus pais, Jerônimo foi para Roma estudar e durante sua permanencia teve um sonho muito importante para sua conversão.").vai
+         self.roma.vai()
         
-     def entrou_3(self,*_)
-        def resposta(optou):
+    def entrou_3(self,*_)
+         def resposta(optou):
             respondeu = dict(
             A=Texto(self.ft.p,)
             B=Texto(self.ft.p,)
@@ -123,19 +123,19 @@ class bala():
             self.padre.vai=Texto(self.fp, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.").vai
         
     def entrou_5(self,*_)
-       def resposta(optou):
-          respondeu = dict(
-           A=Texto(self.ft.p,
-           B=Texto(self.ft.p,
-           C=Texto(self.ft.p,
-              )
-              respondeu[optou].vai()
-              self.ft.p.vai()
+        def resposta(optou):
+            respondeu = dict(
+            A=Texto(self.ft.p,
+            B=Texto(self.ft.p,
+            C=Texto(self.ft.p,
+            )
+            respondeu[optou].vai()
+        self.ft.p.vai()
         self.padre.entra(self.ft.p)
         self.padre.vai=Texto(self.ft.p, "",
               foi=resposta, A="356", B="479", C="450").vai
-            self.padre.entra(self.ordenacao)
-            self.padre.vai=Texto(self.ordenacao= "Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
+        self.padre.entra(self.ordenacao)
+        self.padre.vai=Texto(self.ordenacao= "Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
     
         def entrou_curi(self,*_)
           def resposta(optou):
