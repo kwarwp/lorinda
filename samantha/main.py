@@ -68,7 +68,7 @@ class bala():
         self.ft.p.vai()
         self.padre.entra(self.ft.p)
         self.padre.vai=Texto(self.ft.p, "Sabe onde Jerônimo nasceu?",
-            foi=resposta, A="Roma", B="Dalmácia", C="Polônia").vai
+             foi=resposta, A="Roma", B="Dalmácia", C="Polônia").vai
           self.ft.p.vai()
           self.padre.entra(self.dalmacia)
           self.padre.vai=Texto(self.dalmacia, "São Jerônimo nasceu na Dalmácia no ano de 340.").vai
@@ -99,6 +99,9 @@ class bala():
             C=Texto(self.ft.p,)
             )
             respondeu[optou].vai()
+            self.ft.p.vai()
+        self.padre.entra(self.ft.p)
+        self.padre.vai=Texto(self.ft.p, "",
             foi=resposta, A="Nossa Senhora", B="São Miguel", C="Jesus Cristo").vai
         self.padre.entra(self.sonho)
         self.padre.vai=Texto(sonho, "No sonho, Jerônimo apresentava-se como cristão e era repreedindo pelo próprio Cristo por estar faltando com a verdade.").vai
@@ -111,6 +114,9 @@ class bala():
             C=Texto(self.ft.p,)
             )
             respondeu[optou].vai()
+            self.ft.p.vai()
+        self.padre.entra(self.ft.p)
+        self.padre.vai=Texto(self.ft.p, "",
             foi=resposta, A="Papa Francisco", B="Papa Libério", C="Papa Bento XVI").vai
             self.padre.entra(self.pl)
             self.padre.vai=.vai=Texto(self.pl, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.").vai
@@ -124,6 +130,9 @@ class bala():
            C=Texto(self.ft.p,
               )
               respondeu[optou].vai()
+              self.ft.p.vai()
+        self.padre.entra(self.ft.p)
+        self.padre.vai=Texto(self.ft.p, "",
               foi=resposta, A="356", B="479", C="450").vai
             self.padre.entra(self.ordenacao)
             self.padre.vai=Texto(self.ordenacao= "Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
@@ -136,6 +145,9 @@ class bala():
               C=Texto(self.ft.p,
               )
               respondeu[optou].vai()
+              self.ft.p.vai()
+        self.padre.entra(self.ft.p)
+        self.padre.vai=Texto(self.ft.p, "",
               foi=resposta, A="", B="", C="").vai
             self.padre.entra(self.curiosidade)
             self.padre.vai=Texto(self.curiosidade,"Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
@@ -148,6 +160,9 @@ class bala():
               C=Texto(self.ft.p,
               )
               respondeu[optou].vai()
+              self.ft.p.vai()
+        self.padre.entra(self.ft.p)
+        self.padre.vai=Texto(self.ft.p, "",
               foi=resposta, A="Papa Damaso", B="Papa João Paulo II", C="Papa Leão XII").vai
              self.padre.entra(self.caverna)
             self.padre.vai=Texto(self.caverna,"Por ter aprendido as linguas originais para melhor compreender as escrituras, Nosso padroeiro pôde a pedido do Papa Damaso traduzir as escrituras para o Latim.").vai 
@@ -160,6 +175,9 @@ class bala():
               C=Texto(self.ft.p,
               )
                respondeu[optou].vai()
+               self.ft.p.vai()
+        self.padre.entra(self.ft.p)
+        self.padre.vai=Texto(self.ft.p, "",
               foi=resposta, A="Chinês, Inglês e Português.", B="Grego, Hebraico e Aramaico.", C="Russo, Espanhol e latim.").vai
             self.padre.entra(self.biblia)
             self.padre.vai=Texto(self.biblia, "As escrituras foram traduzidas do grego, hebraico e aramaico.").vai
@@ -172,6 +190,9 @@ class bala():
               C=Texto(self.ft.p,
               )
                respondeu[optou].vai()
+               self.ft.p.vai()
+        self.padre.entra(self.ft.p)
+        self.padre.vai=Texto(self.ft.p, "",
               foi=resposta, A="Livro", B="Enciclopédia", C="Vulgata").vai
             self.padre.entra(self.vulgata)
             self.padre.vai=Texto(self.vulgata, "A tradução da sagrada escritura recebeu o nome Vulgata.").vai
@@ -185,6 +206,9 @@ class bala():
               C=Texto(self.ft.p,
               )
                respondeu[optou].vai()
+               self.ft.p.vai()
+        self.padre.entra(self.ft.p)
+        self.padre.vai=Texto(self.ft.p, "",
               foi=resposta, A="Belém", B="Egito", C="Índia").vai
             self.padre.entra(self.belem)
             self.padre.vai=Texto(self.belem, "Após traduzir a sagrada escritura , Jerônimo mudou-se para Belém a cidade onde nasceu nosso Salvador.").vai
@@ -197,6 +221,9 @@ class bala():
               C=Texto(self.ft.p,
               )
                respondeu[optou].vai()
+               self.ft.p.vai()
+        self.padre.entra(self.ft.p)
+        self.padre.vai=Texto(self.ft.p, "",
               foi=resposta, A="01 de setembro", B="30 de outubro", C="30 de setembro").vai
             self.padre.entra(self.f_p)
             self.padre.vai=Texto(self.f_p, "Jerônimo morreu no dia 30 de setembro de 420 em Belém, por isso o dia da Biblía e de São Jerônimo são comemorados no dia 30 de setembro.").vai
@@ -210,6 +237,9 @@ class bala():
               C=Texto(self.ft.p,
               )
                respondeu[optou].vai()
+               self.ft.p.vai()
+        self.padre.entra(self.ft.p)
+        self.padre.vai=Texto(self.ft.p, "",
               foi=resposta, A="sapo", B="leão", C="cordeiro").vai
             self.padre.entra(self.leao)
             self.padre.vai=Texto(self.leao "É um leão!!").vai
@@ -222,6 +252,9 @@ class bala():
               C=Texto(self.ft.p,
               )
                respondeu[optou].vai()
+               self.ft.p.vai()
+        self.padre.entra(self.ft.p)
+        self.padre.vai=Texto(self.ft.p, "",
               foi=resposta, A="Depositemos sempre a nossa confiança no Espírito Santo, para descobrirmos em cada situação nova uma ocasião para alargar o amor redentor de Cristo.", B="O bom Deus, que conhece as recompensas que Ele reserva a seus amigos, gosta, muitas vezes, de fazê-los ganhar seus tesouros por meio de sacrifícios", C="Ignorar as Escrituras Sagradas é ignorar a Cristo.").vai
             self.padre.entra(self.frase)
             self.padre.vai=Texto(self.frase, "A frase mais conhecida de nosso padroeiro é:  Ignorar as Escrituras Sagradas é ignorar a Cristo").vai
