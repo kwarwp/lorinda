@@ -27,7 +27,7 @@ PAPAD="https://imgur.com/a/bO5ZNKx"
 CAVERNA="https://imgur.com/fBFCru5"
 FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
 
- class bala():
+ class bala ():
     def __init__(self):
     self.ft= Cena(img=FOTO_PAROQUIA)
     self.leao= Cena(img=LEAO)
