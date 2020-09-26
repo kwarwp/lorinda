@@ -153,7 +153,7 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
               C=Texto(self.ft.p,
               )
                respondeu[optou].vai()
-              foi=resposta, A="", B="", C="").vai
+              foi=resposta, A="Chinês, Inglês e Português.", B="Grego, Hebraico e Aramaico.", C="Russo, Espanhol e latim.").vai
             self.padre.entra(self.biblia)
             self.padre.vai=Texto(self.biblia, "As escrituras foram traduzidas do grego, hebraico e aramaico.").vai
 
