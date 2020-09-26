@@ -1,8 +1,8 @@
 # lorinda.samantha.main.py
-from _spy.vitollino.main import Cena, Elemento, Texto, Sala
+from _spy.vitollino.main import Cena, Elemento, Texto, Sala, STYLE
 from _spy.vitollino.main import inventario as inv
-STYLE=
-STYLE=
+STYLE["width"]=900
+STYLE["height"]='650px'
 
 FLAVINHO ="https://imgur.com/fv9BZ54"
 FOTO_PRINCIPAL ="https://imgur.com/NTZqSBD"
@@ -57,6 +57,11 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
             self.padre.vai=Texto(self.f_t, "Eu sou o Padre Flávio e vou te ajudar nessa aventura sobre a história do nosso amado padroeiro").vai
         
         def entrou_1(self,*_):
+            def resposta(optou):
+                respondeu = dict(
+                A=Texto(self.dalmacia,
+                B=Texto(self.dalmacia,
+                C=Texto(self.dalmacia,
             self.padre.entra(self.dalmacia)
             self.padre.vai=Texto(self.dalmacia, "São Jerônimo nasceu na Dalmácia no ano de 340.").vai
         
