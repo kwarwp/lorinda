@@ -6,3 +6,10 @@
          ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Sep 25 2020 22:22:03.323 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 29
+  class kkkk():
+  ^
+IndentationError: unexpected indent
+'''},
