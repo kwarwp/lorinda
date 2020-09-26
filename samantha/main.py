@@ -61,8 +61,8 @@ class bala():
         def resposta(optou):
             respondeu = dict(
             A=Texto(self.ft_p, "Ele irá a Roma."), 
-            B=Texto(self.ft_p,"Correto!"foi=self.entrou_2),
-            C=Texto(self.ft_p,"Muitos santos são da Polônia, mas São Jerônimo não foi um deles."),
+            B=Texto(self.ft_p,"Correto!",foi=self.entrou_2),
+            C=Texto(self.ft_p,"Muitos san6tos são da Polônia, mas São Jerônimo não foi um deles."),
             )
             respondeu[optou].vai()
         self.ft_p.vai()
