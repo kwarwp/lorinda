@@ -69,7 +69,7 @@ class Bala:
             respondeu = dict(
                 A=Texto(self.ft_p, "Ele irá a Roma."),
                 B=Texto(self.ft_p, "Correto!", foi=self.entrou_dalmacia),
-                C=Texto(self.ft_p, "Muitos san6tos são da Polônia, mas São Jerônimo não foi um deles."),
+                C=Texto(self.ft_p, "Muitos santos são da Polônia, mas São Jerônimo não foi um deles."),
             )
             respondeu[optou].vai()
 
