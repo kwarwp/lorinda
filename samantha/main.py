@@ -155,7 +155,7 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
                respondeu[optou].vai()
               foi=resposta, A="", B="", C="").vai
             self.padre.entra(self.biblia)
-            self.padre.vai=Texto(self.biblia, "A tradução da sagrada escritura recebeu o nome Vulgata.").vai
+            self.padre.vai=Texto(self.biblia, "As escrituras foram traduzidas do grego, hebraico e aramaico.").vai
 
         def entrou_8(self,*_)
           def resposta(optou):
