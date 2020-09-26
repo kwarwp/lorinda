@@ -91,6 +91,8 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
               B=Texto(self.ft.p,
               C=Texto(self.ft.p,
               )
+               respondeu[optou].vai()
+              foi=resposta, A="", B="", C="").vai
             self.padre.entra(self.sonho)
             self.padre.vai=Texto(sonho, "No sonho, Jerônimo apresentava-se como cristão e era repreedindo pelo próprio Cristo por estar faltando com a verdade.").vai
 
@@ -101,6 +103,8 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
               B=Texto(self.ft.p,
               C=Texto(self.ft.p,
               )
+              respondeu[optou].vai()
+              foi=resposta, A="", B="", C="").vai
             self.padre.entra(self.pl)
             self.padre.vai=.vai=Texto(self.pl, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.").vai
             self.padre.vai=Texto(self.fp, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.").vai
@@ -112,6 +116,8 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
               B=Texto(self.ft.p,
               C=Texto(self.ft.p,
               )
+              respondeu[optou].vai()
+              foi=resposta, A="", B="", C="").vai
             self.padre.entra(self.ordenacao)
             self.padre.vai=Texto(self.ordenacao= "Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
     
@@ -122,6 +128,8 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
               B=Texto(self.ft.p,
               C=Texto(self.ft.p,
               )
+              respondeu[optou].vai()
+              foi=resposta, A="", B="", C="").vai
             self.padre.entra(self.curiosidade)
             self.padre.vai=Texto(self.curiosidade,"Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
 
@@ -132,9 +140,11 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
               B=Texto(self.ft.p,
               C=Texto(self.ft.p,
               )
-            self.padre.entra(self.caverna)
+              respondeu[optou].vai()
+              foi=resposta, A="", B="", C="").vai
+             self.padre.entra(self.caverna)
             self.padre.vai=Texto(self.caverna,"Por ter aprendido as linguas originais para melhor compreender as escrituras, Nosso padroeiro pôde a pedido do Papa Damaso traduzir as escrituras para o Latim.").vai 
-    
+         
         def entro_7(self,*_)
           def resposta(optou):
              respondeu = dict(
@@ -142,6 +152,8 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
               B=Texto(self.ft.p,
               C=Texto(self.ft.p,
               )
+               respondeu[optou].vai()
+              foi=resposta, A="", B="", C="").vai
             self.padre.entra(self.biblia)
             self.padre.vai=Texto(self.biblia, "A tradução da sagrada escritura recebeu o nome Vulgata.").vai
 
@@ -152,6 +164,8 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
               B=Texto(self.ft.p,
               C=Texto(self.ft.p,
               )
+               respondeu[optou].vai()
+              foi=resposta, A="", B="", C="").vai
             self.padre.entra(self.vulgata)
             self.padre.vai=Texto(self.vulgata, "A tradução da sagrada escritura recebeu o nome Vulgata.").vai
         
@@ -163,6 +177,8 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
               B=Texto(self.ft.p,
               C=Texto(self.ft.p,
               )
+               respondeu[optou].vai()
+              foi=resposta, A="", B="", C="").vai
             self.padre.entra(self.belem)
             self.padre.vai=Texto(self.belem, "Após traduzir a sagrada escritura , Jerônimo mudou-se para Belém a cidade onde nasceu nosso Salvador.").vai
     
@@ -173,6 +189,8 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
               B=Texto(self.ft.p,
               C=Texto(self.ft.p,
               )
+               respondeu[optou].vai()
+              foi=resposta, A="", B="", C="").vai
             self.padre.entra(self.f_p)
             self.padre.vai=Texto(self.f_p, "Jerônimo morreu no dia 30 de setembro de 420 em Belém, por isso o dia da Biblía e de São Jerônimo são comemorados no dia 30 de setembro.").vai
     
@@ -184,6 +202,8 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
               B=Texto(self.ft.p,
               C=Texto(self.ft.p,
               )
+               respondeu[optou].vai()
+              foi=resposta, A="", B="", C="").vai
             self.padre.entra(self.leao)
             self.padre.vai=Texto(self.leao "É um leão!!").vai
     
@@ -194,6 +214,8 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
               B=Texto(self.ft.p,
               C=Texto(self.ft.p,
               )
+               respondeu[optou].vai()
+              foi=resposta, A="", B="", C="").vai
             self.padre.entra(self.frase)
             self.padre.vai=Texto(self.frase, "A frase mais conhecida de nosso padroeiro é:  Ignorar as Escrituras Sagradas é ignorar a Cristo").vai
     
