@@ -165,7 +165,7 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
               C=Texto(self.ft.p,
               )
                respondeu[optou].vai()
-              foi=resposta, A="", B="", C="").vai
+              foi=resposta, A="Livro", B="Enciclopédia", C="Vulgata").vai
             self.padre.entra(self.vulgata)
             self.padre.vai=Texto(self.vulgata, "A tradução da sagrada escritura recebeu o nome Vulgata.").vai
         
