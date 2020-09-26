@@ -8,7 +8,7 @@ FLAVINHO ="https://imgur.com/fv9BZ54"
 FOTO_PRINCIPAL ="https://imgur.com/NTZqSBD"
 DALMACIA ="https://imgur.com/dyLIQib"
 JERONIMO_JOVEM ="blob:https://web.whatsapp.com/edad8633-e384-4538-b7f3-ddd4837df1c0"
-JERONIMO_VELHO =""
+FUNDO_PERGUNTAS ="https://imgur.com/w7OnO7L"
 CURIOSIDADE ="" 
 LEAO ="blob:https://web.whatsapp.com/78b2c07d-57e3-4b38-92d1-2dfff506a540"
 PAPA_LIBERIO="https://imgur.com/vlIrMHW"
@@ -34,7 +34,7 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
     self.f_t= Cena(img=FOTO_PRINCIPAL)
     self.dalmacia= Cena(img=DALMACIA)
     self.j_j= Elemento(img=JERONIMO_JOVEM)
-    self.j_v= Elemento(img=JERONIMO_VELHO)
+    self.ft.p= Cena(img=FUNDO_PERGUNTAS)
     self.batizado= Cena(img=BATIZADO_JERONIMO)
     self.roma= Cena(img=ROMA)
     self.ordenacao= Cena(img=ORDDENACAO_SACERDOTAL)
@@ -59,16 +59,16 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
         def entrou_1(self,*_):
             def resposta(optou):
                 respondeu = dict(
-                A=Texto(self.dalmacia,
-                B=Texto(self.dalmacia,
-                C=Texto(self.dalmacia,
+                A=Texto(self.ft.p,
+                B=Texto(self.ft.p,
+                C=Texto(self.ft.p,
                 )
                  respondeu[optou].vai()
                   foi=resposta, A="Egito", B="Dalmácia", C="Brasil").vai
-            self.dalmacia.vai()
+            self.ft.p.vai()
             self.padre.entra(self.dalmacia)
             self.padre.vai=Texto(self.dalmacia, "São Jerônimo nasceu na Dalmácia no ano de 340.").vai
-             
+             self.dalmacia.vai()
         
         def entrou_2(self,*_):
             self.padre.entra(self.roma)
