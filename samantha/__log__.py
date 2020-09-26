@@ -139,3 +139,10 @@ SyntaxError: invalid syntax
                                                                                                                                                                                  ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Sat Sep 26 2020 11:37:18.548 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 61
+  respondeub = dict (
+                                                                                                                                                                                    ^
+SyntaxError: invalid syntax
+'''},
