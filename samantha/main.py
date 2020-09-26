@@ -190,7 +190,7 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
               C=Texto(self.ft.p,
               )
                respondeu[optou].vai()
-              foi=resposta, A="", B="", C="").vai
+              foi=resposta, A="01 de setembro", B="30 de outubro", C="30 de setembro").vai
             self.padre.entra(self.f_p)
             self.padre.vai=Texto(self.f_p, "Jerônimo morreu no dia 30 de setembro de 420 em Belém, por isso o dia da Biblía e de São Jerônimo são comemorados no dia 30 de setembro.").vai
     
