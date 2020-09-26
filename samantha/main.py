@@ -77,16 +77,16 @@ class bala():
     def entrou_2(self,*_):
         def resposta(optou):
             respondeu = dict(
-            A=Texto(self.ft.p,)
-            B=Texto(self.ft.p,)
-            C=Texto(self.ft.p,)
+            A=Texto(self.ft.p,"Parabéns! Você acertou")
+            B=Texto(self.ft.p,"Essa grave doença veio depois.")
+            C=Texto(self.ft.p,"O sonho aconteceu em Roma")
             )
             respondeu[optou].vai()
-        self.ft.p.vai()
-        self.padre.entra(self.ft.p)
-        self.padre.vai=Texto(self.ft.p, "Após qual acontecimento ele foi para Roma estudar?",
+        self.ft_p.vai()
+        self.padre.entra(self.ft_p)
+        self.padre.vai=Texto(self.ft_p, "Após qual acontecimento ele foi para Roma estudar?",
            foi=resposta, A="A morte de seus pais", B="Uma grave doença", C="Um sonho").vai
-         self.ft.p.vai 
+         self.ft_p.vai() 
         self.padre.entra(self.roma)
         self.padre.vai=Texto(self.roma, "Após a morte de seus pais, Jerônimo foi para Roma estudar e durante sua permanencia teve um sonho muito importante para sua conversão.").vai
          self.roma.vai()
@@ -94,14 +94,14 @@ class bala():
     def entrou_3(self,*_)
          def resposta(optou):
             respondeu = dict(
-            A=Texto(self.ft.p,)
-            B=Texto(self.ft.p,)
-            C=Texto(self.ft.p,)
+            A=Texto(self.ft_p,)
+            B=Texto(self.ft_p,)
+            C=Texto(self.ft_p,)
             )
             respondeu[optou].vai()
-            self.ft.p.vai()
-        self.padre.entra(self.ft.p)
-        self.padre.vai=Texto(self.ft.p, "Você consegue adivinhar com quem foi esse sonho?",
+            self.ft_p.vai()
+        self.padre.entra(self.ft_p)
+        self.padre.vai=Texto(self.ft_p, "Você consegue adivinhar com quem foi esse sonho?",
             foi=resposta, A="Nossa Senhora", B="São Miguel", C="Jesus Cristo").vai
         self.padre.entra(self.sonho)
         self.padre.vai=Texto(sonho, "No sonho, Jerônimo apresentava-se como cristão e era repreedindo pelo próprio Cristo por estar faltando com a verdade.").vai
@@ -109,14 +109,14 @@ class bala():
     def entrou_4(self,*_)
        def resposta(optou):
             respondeu = dict(
-            A=Texto(self.ft.p,)
-            B=Texto(self.ft.p,)
-            C=Texto(self.ft.p,)
+            A=Texto(self.ft_p,)
+            B=Texto(self.ft_p,)
+            C=Texto(self.ft_p,)
             )
             respondeu[optou].vai()
-            self.ft.p.vai()
-        self.padre.entra(self.ft.p)
-        self.padre.vai=Texto(self.ft.p, "Qual destes Papas batizou nosso padroeiro?",
+            self.ft_p.vai()
+        self.padre.entra(self.ft_p)
+        self.padre.vai=Texto(self.ft_p, "Qual destes Papas batizou nosso padroeiro?",
             foi=resposta, A="Papa Francisco", B="Papa Libério", C="Papa Bento XVI").vai
             self.padre.entra(self.pl)
             self.padre.vai=.vai=Texto(self.pl, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.").vai
@@ -125,14 +125,14 @@ class bala():
     def entrou_5(self,*_)
         def resposta(optou):
             respondeu = dict(
-            A=Texto(self.ft.p,
-            B=Texto(self.ft.p,
-            C=Texto(self.ft.p,
+            A=Texto(self.ft_p,
+            B=Texto(self.ft_p,
+            C=Texto(self.ft_p,
             )
             respondeu[optou].vai()
-        self.ft.p.vai()
-        self.padre.entra(self.ft.p)
-        self.padre.vai=Texto(self.ft.p, "Você sabe em qual ano São Jerônimo foi ordenado sacerdote?",
+        self.ft_p.vai()
+        self.padre.entra(self.ft_p)
+        self.padre.vai=Texto(self.ft_p, "Você sabe em qual ano São Jerônimo foi ordenado sacerdote?",
               foi=resposta, A="356", B="479", C="450").vai
         self.padre.entra(self.ordenacao)
         self.padre.vai=Texto(self.ordenacao= "Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
@@ -140,29 +140,29 @@ class bala():
         def entrou_6(self,*_)
           def resposta(optou):
              respondeu = dict(
-              A=Texto(self.ft.p,
-              B=Texto(self.ft.p,
-              C=Texto(self.ft.p,
+              A=Texto(self.ft_p,
+              B=Texto(self.ft_p,
+              C=Texto(self.ft_p,
               )
               respondeu[optou].vai()
-              self.ft.p.vai()
-        self.padre.entra(self.ft.p)
-        self.padre.vai=Texto(self.ft.p, "A pedido de qual papa Jerônimo traduziu as escrituras?",
+              self.ft_p.vai()
+        self.padre.entra(self.ft_p)
+        self.padre.vai=Texto(self.ft_p, "A pedido de qual papa Jerônimo traduziu as escrituras?",
               foi=resposta, A="Papa Damaso", B="Papa João Paulo II", C="Papa Leão XII").vai
-             self.padre.entra(self.caverna)
-            self.padre.vai=Texto(self.caverna,"Por ter aprendido as linguas originais para melhor compreender as escrituras, Nosso padroeiro pôde a pedido do Papa Damaso traduzir as escrituras para o Latim.").vai 
+             self.padre.entra(self.pd)
+            self.padre.vai=Texto(self.pd,"Por ter aprendido as linguas originais para melhor compreender as escrituras, Nosso padroeiro pôde a pedido do Papa Damaso traduzir as escrituras para o Latim.").vai 
          
         def entro_7(self,*_)
           def resposta(optou):
              respondeu = dict(
-              A=Texto(self.ft.p,
-              B=Texto(self.ft.p,
-              C=Texto(self.ft.p,
+              A=Texto(self.ft_p,
+              B=Texto(self.ft_p,
+              C=Texto(self.ft_p,
               )
                respondeu[optou].vai()
-               self.ft.p.vai()
-        self.padre.entra(self.ft.p)
-        self.padre.vai=Texto(self.ft.p,"De quais línguas foi traduzida a Sagrada Escritura? ",
+               self.ft_p.vai()
+        self.padre.entra(self.ft_p)
+        self.padre.vai=Texto(self.ft_p,"De quais línguas foi traduzida a Sagrada Escritura? ",
               foi=resposta, A="Chinês, Inglês e Português.", B="Grego, Hebraico e Aramaico.", C="Russo, Espanhol e latim.").vai
             self.padre.entra(self.biblia)
             self.padre.vai=Texto(self.biblia, "As escrituras foram traduzidas do grego, hebraico e aramaico.").vai
@@ -170,12 +170,12 @@ class bala():
         def entrou_8(self,*_)
           def resposta(optou):
              respondeu = dict(
-              A=Texto(self.ft.p,
-              B=Texto(self.ft.p,
-              C=Texto(self.ft.p,
+              A=Texto(self.ft_p,
+              B=Texto(self.ft_p,
+              C=Texto(self.ft_p,
               )
                respondeu[optou].vai()
-               self.ft.p.vai()
+               self.ft_p.vai()
         self.padre.entra(self.ft.p)
         self.padre.vai=Texto(self.ft.p, "Qual nome recebeu a tradução da biblía?",
               foi=resposta, A="Livro", B="Enciclopédia", C="Vulgata").vai
@@ -186,14 +186,14 @@ class bala():
         def entrou_9(self,*_)
           def resposta(optou):
              respondeu = dict(
-              A=Texto(self.ft.p,
-              B=Texto(self.ft.p,
-              C=Texto(self.ft.p,
+              A=Texto(self.ft_p,
+              B=Texto(self.ft_p,
+              C=Texto(self.ft_p,
               )
                respondeu[optou].vai()
-               self.ft.p.vai()
-        self.padre.entra(self.ft.p)
-        self.padre.vai=Texto(self.ft.p, "Para onde Jerônimo mudou-se após traduzir a Biblía?",
+               self.ft_p.vai()
+        self.padre.entra(self.ft_p)
+        self.padre.vai=Texto(self.ft_p, "Para onde Jerônimo mudou-se após traduzir a Biblía?",
               foi=resposta, A="Belém", B="Egito", C="Índia").vai
             self.padre.entra(self.belem)
             self.padre.vai=Texto(self.belem, "Após traduzir a sagrada escritura , Jerônimo mudou-se para Belém a cidade onde nasceu nosso Salvador.").vai
@@ -201,14 +201,14 @@ class bala():
         def entrou_10(self,*_)
           def resposta(optou):
              respondeu = dict(
-              A=Texto(self.ft.p,
-              B=Texto(self.ft.p,
-              C=Texto(self.ft.p,
+              A=Texto(self.ft_p,
+              B=Texto(self.ft_p,
+              C=Texto(self.ft_p,
               )
                respondeu[optou].vai()
-               self.ft.p.vai()
-        self.padre.entra(self.ft.p)
-        self.padre.vai=Texto(self.ft.p, "Em qual dia comemoramos o dia de São Jerônimo?",
+               self.ft_p.vai()
+        self.padre.entra(self.ft_p)
+        self.padre.vai=Texto(self.ft_p, "Em qual dia comemoramos o dia de São Jerônimo?",
               foi=resposta, A="01 de setembro", B="30 de outubro", C="30 de setembro").vai
             self.padre.entra(self.f_p)
             self.padre.vai=Texto(self.f_p, "Jerônimo morreu no dia 30 de setembro de 420 em Belém, por isso o dia da Biblía e de São Jerônimo são comemorados no dia 30 de setembro.").vai
@@ -217,14 +217,14 @@ class bala():
         def entrou_11(self,*_)
           def resposta(optou):
              respondeu = dict(
-              A=Texto(self.ft.p,
-              B=Texto(self.ft.p,
-              C=Texto(self.ft.p,
+              A=Texto(self.ft_p,
+              B=Texto(self.ft_p,
+              C=Texto(self.ft_p,
               )
                respondeu[optou].vai()
-               self.ft.p.vai()
-        self.padre.entra(self.ft.p)
-        self.padre.vai=Texto(self.ft.p, "Qual o animal podemos encontar ao lado de São Jerônimo?",
+               self.ft_p.vai()
+        self.padre.entra(self.ft_p)
+        self.padre.vai=Texto(self.ft_p, "Qual o animal podemos encontar ao lado de São Jerônimo?",
               foi=resposta, A="sapo", B="leão", C="cordeiro").vai
             self.padre.entra(self.leao)
             self.padre.vai=Texto(self.leao "É um leão!!").vai
@@ -232,14 +232,14 @@ class bala():
        def entrou_12(self,*_)
          def resposta(optou):
              respondeu = dict(
-              A=Texto(self.ft.p,
-              B=Texto(self.ft.p,
-              C=Texto(self.ft.p,
+              A=Texto(self.ft_p,
+              B=Texto(self.ft_p,
+              C=Texto(self.ft_p,
               )
                respondeu[optou].vai()
-               self.ft.p.vai()
-        self.padre.entra(self.ft.p)
-        self.padre.vai=Texto(self.ft.p, "Qual destas é uma frase de São Jerônimo",
+               self.ft_p.vai()
+        self.padre.entra(self.ft_p)
+        self.padre.vai=Texto(self.ft_p, "Qual destas é uma frase de São Jerônimo",
               foi=resposta, A="Depositemos sempre a nossa confiança no Espírito Santo, para descobrirmos em cada situação nova uma ocasião para alargar o amor redentor de Cristo.", B="O bom Deus, que conhece as recompensas que Ele reserva a seus amigos, gosta, muitas vezes, de fazê-los ganhar seus tesouros por meio de sacrifícios", C="Ignorar as Escrituras Sagradas é ignorar a Cristo.").vai
             self.padre.entra(self.frase)
             self.padre.vai=Texto(self.frase, "A frase mais conhecida de nosso padroeiro é:  Ignorar as Escrituras Sagradas é ignorar a Cristo").vai
