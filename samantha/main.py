@@ -101,7 +101,7 @@ class bala():
             respondeu[optou].vai()
             self.ft.p.vai()
         self.padre.entra(self.ft.p)
-        self.padre.vai=Texto(self.ft.p, "",
+        self.padre.vai=Texto(self.ft.p, "Você consegue adivinhar com quem foi esse sonho?",
             foi=resposta, A="Nossa Senhora", B="São Miguel", C="Jesus Cristo").vai
         self.padre.entra(self.sonho)
         self.padre.vai=Texto(sonho, "No sonho, Jerônimo apresentava-se como cristão e era repreedindo pelo próprio Cristo por estar faltando com a verdade.").vai
@@ -116,7 +116,7 @@ class bala():
             respondeu[optou].vai()
             self.ft.p.vai()
         self.padre.entra(self.ft.p)
-        self.padre.vai=Texto(self.ft.p, "",
+        self.padre.vai=Texto(self.ft.p, "Qual destes Papas batizou nosso padroeiro?",
             foi=resposta, A="Papa Francisco", B="Papa Libério", C="Papa Bento XVI").vai
             self.padre.entra(self.pl)
             self.padre.vai=.vai=Texto(self.pl, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.").vai
@@ -132,26 +132,11 @@ class bala():
             respondeu[optou].vai()
         self.ft.p.vai()
         self.padre.entra(self.ft.p)
-        self.padre.vai=Texto(self.ft.p, "",
+        self.padre.vai=Texto(self.ft.p, "Você sabe em qual ano São Jerônimo foi ordenado sacerdote?",
               foi=resposta, A="356", B="479", C="450").vai
         self.padre.entra(self.ordenacao)
         self.padre.vai=Texto(self.ordenacao= "Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
     
-        def entrou_curi(self,*_)
-          def resposta(optou):
-             respondeu = dict(
-              A=Texto(self.ft.p,
-              B=Texto(self.ft.p,
-              C=Texto(self.ft.p,
-              )
-              respondeu[optou].vai()
-              self.ft.p.vai()
-        self.padre.entra(self.ft.p)
-        self.padre.vai=Texto(self.ft.p, "",
-              foi=resposta, A="", B="", C="").vai
-            self.padre.entra(self.curiosidade)
-            self.padre.vai=Texto(self.curiosidade,"Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
-
         def entrou_6(self,*_)
           def resposta(optou):
              respondeu = dict(
@@ -162,7 +147,7 @@ class bala():
               respondeu[optou].vai()
               self.ft.p.vai()
         self.padre.entra(self.ft.p)
-        self.padre.vai=Texto(self.ft.p, "",
+        self.padre.vai=Texto(self.ft.p, "A pedido de qual papa Jerônimo traduziu as escrituras?",
               foi=resposta, A="Papa Damaso", B="Papa João Paulo II", C="Papa Leão XII").vai
              self.padre.entra(self.caverna)
             self.padre.vai=Texto(self.caverna,"Por ter aprendido as linguas originais para melhor compreender as escrituras, Nosso padroeiro pôde a pedido do Papa Damaso traduzir as escrituras para o Latim.").vai 
@@ -177,7 +162,7 @@ class bala():
                respondeu[optou].vai()
                self.ft.p.vai()
         self.padre.entra(self.ft.p)
-        self.padre.vai=Texto(self.ft.p, "",
+        self.padre.vai=Texto(self.ft.p,"De quais línguas foi traduzida a Sagrada Escritura? ",
               foi=resposta, A="Chinês, Inglês e Português.", B="Grego, Hebraico e Aramaico.", C="Russo, Espanhol e latim.").vai
             self.padre.entra(self.biblia)
             self.padre.vai=Texto(self.biblia, "As escrituras foram traduzidas do grego, hebraico e aramaico.").vai
