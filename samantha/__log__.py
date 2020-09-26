@@ -384,3 +384,10 @@ SyntaxError: invalid syntax
                                                                                                                  ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Sat Sep 26 2020 13:48:32.747 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 77
+  def entrou_2(self,*_):
+  ^
+IndentationError: unexpected indent
+'''},
