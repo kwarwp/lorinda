@@ -118,3 +118,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Sat Sep 26 2020 11:32:18.265 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 61
+  respondeu = dict(
+                                                                                                                                                                                  ^
+SyntaxError: invalid syntax
+'''},
