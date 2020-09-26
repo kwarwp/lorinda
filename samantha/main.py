@@ -27,7 +27,7 @@ PAPAD="https://imgur.com/a/bO5ZNKx"
 CAVERNA="https://imgur.com/fBFCru5"
 FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
 
- class kkkk():
+ class bala():
     def __init__(self):
     self.ft= Cena(img=FOTO_PAROQUIA)
     self.leao= Cena(img=LEAO)
@@ -128,4 +128,4 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
             self.padre.vai=Texto(self.cf, "Espero que tenham gostado de aprender um pouco mais da história do nosso amdado padroeiro São Jerônimo!").vai
             self.padre.vai=Texto(self.cf, " Até a próxima !!!").vai
 f_T.vai()
-kkkk()
+bala()
