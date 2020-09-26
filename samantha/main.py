@@ -34,7 +34,7 @@ class bala():
         self.f_t= Cena(img=FOTO_PRINCIPAL)
         self.dalmacia= Cena(img=DALMACIA)
         self.j_j= Elemento(img=JERONIMO_JOVEM)
-        self.ft.p= Cena(img=FUNDO_PERGUNTAS)
+        self.ft_p= Cena(img=FUNDO_PERGUNTAS)
         self.batizado= Cena(img=BATIZADO_JERONIMO)
         self.roma= Cena(img=ROMA)
         self.ordenacao= Cena(img=ORDDENACAO_SACERDOTAL)
@@ -60,19 +60,19 @@ class bala():
      def entrou_1(self,*_):
         def resposta(optou):
             respondeu = dict(
-            A=Texto(self.ft.p, "Ele irá a Roma."), 
-            B=Texto(self.ft.p,"correto!"foi=self.entrou_2),
-            C=Texto(self.ft.p,"Muitos santos são da Polônia, mas São Jerônimo não foi um deles."),
+            A=Texto(self.ft_p, "Ele irá a Roma."), 
+            B=Texto(self.ft_p,"correto!"foi=self.entrou_2),
+            C=Texto(self.ft_p,"Muitos santos são da Polônia, mas São Jerônimo não foi um deles."),
             )
             respondeu[optou].vai()
-        self.ft.p.vai()
-        self.padre.entra(self.ft.p)
-        self.padre.vai=Texto(self.ft.p, "Sabe onde Jerônimo nasceu?",
+        self.ft_p.vai()
+        self.padre.entra(self.ft_p)
+        self.padre.vai=Texto(self.ft_p, "Sabe onde Jerônimo nasceu?",
              foi=resposta, A="Roma", B="Dalmácia", C="Polônia").vai
-        self.ft.p.vai()
-        #self.padre.entra(self.dalmacia)
-        #self.padre.vai=Texto(self.dalmacia, "São Jerônimo nasceu na Dalmácia no ano de 340.").vai
-        #self.dalmacia.vai()
+        self.ft_p.vai()
+        self.padre.entra(self.dalmacia)
+        self.padre.vai=Texto(self.dalmacia, "São Jerônimo nasceu na Dalmácia no ano de 340.").vai
+        self.dalmacia.vai()
         
     def entrou_2(self,*_):
         def resposta(optou):
