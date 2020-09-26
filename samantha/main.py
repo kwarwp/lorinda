@@ -60,9 +60,9 @@ class bala():
      def entrou_1(self,*_):
         def resposta(optou):
             respondeu = dict(
-            A=Texto(self.ft.p,), 
-            B=Texto(self.ft.p,foi=self.entrou_2),
-            C=Texto(self.ft.p,),
+            A=Texto(self.ft.p, "Ele irá a Roma."), 
+            B=Texto(self.ft.p,"correto!"foi=self.entrou_2),
+            C=Texto(self.ft.p,"Muitos santos são da Polônia, mas São Jerônimo não foi um deles."),
             )
             respondeu[optou].vai()
         self.ft.p.vai()
