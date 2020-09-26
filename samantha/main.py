@@ -51,7 +51,7 @@ class bala():
         self.cf= Cena(img=CENA_FINAL)
         self.pd= Elemento(img=PAPAD)
     
-         def entrou_padre(self,*_):
+     def entrou_padre(self,*_):
             self.padre.entra(self.f_t)
             self.padre.vai=Texto(self.f_t, "olá pessoal, certinho?").vai
             self.padre.vai=Texto(self.f_t, "Eu sou o Padre Flávio e vou te ajudar nessa aventura sobre a história do nosso amado padroeiro").vai
