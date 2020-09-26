@@ -60,12 +60,12 @@ class bala():
      def entrou_1(self,*_):
         def resposta(optou):
             respondeu = dict(
-            A=Texto(self.ft.p,#é uma descrição da alternativa certo?
-            B=Texto(self.ft.p,
-            C=Texto(self.ft.p,
+            A=Texto(self.ft.p,#é uma descrição da alternativa certo? )
+            B=Texto(self.ft.p,foi=self.entrou_2)
+            C=Texto(self.ft.p,)
             )
             respondeu[optou].vai()
-        self.dalmacia.vai()
+        self.ft.p.vai()
         self.padre.entra(self.ft.p)
         self.padre.vai=Texto(self.ft.p, "Sabe onde Jerônimo nasceu?",
             foi=resposta, A="Roma", B="Dalmácia", C="Polônia").vai
@@ -77,38 +77,41 @@ class bala():
      def entrou_2(self,*_):
        def resposta(optou):
            respondeu = dict(
-           A=Texto(self.ft.p,
-           B=Texto(self.ft.p,
-           C=Texto(self.ft.p,
+           A=Texto(self.ft.p,)
+           B=Texto(self.ft.p,)
+           C=Texto(self.ft.p,)
            )
            respondeu[optou].vai()
+        self.ft.p.vai()
+        self.padre.entra(self.ft.p)
+        self.padre.vai=Texto(self.ft.p, "Após qual acontecimento ele foi para Roma estudar?",
            foi=resposta, A="A morte de seus pais", B="Uma grave doença", C="Um sonho").vai
          self.ft.p.vai 
          self.padre.entra(self.roma)
          self.padre.vai=Texto(self.roma, "Após a morte de seus pais, Jerônimo foi para Roma estudar e durante sua permanencia teve um sonho muito importante para sua conversão.").vai
           self.roma.vai()
         
-        def entrou_3(self,*_)
-             def resposta(optou):
-             respondeu = dict(
-              A=Texto(self.ft.p,
-              B=Texto(self.ft.p,
-              C=Texto(self.ft.p,
-              )
-               respondeu[optou].vai()
-              foi=resposta, A="Nossa Senhora", B="São Miguel", C="Jesus Cristo").vai
-            self.padre.entra(self.sonho)
-            self.padre.vai=Texto(sonho, "No sonho, Jerônimo apresentava-se como cristão e era repreedindo pelo próprio Cristo por estar faltando com a verdade.").vai
+     def entrou_3(self,*_)
+        def resposta(optou):
+            respondeu = dict(
+            A=Texto(self.ft.p,)
+            B=Texto(self.ft.p,)
+            C=Texto(self.ft.p,)
+            )
+            respondeu[optou].vai()
+            foi=resposta, A="Nossa Senhora", B="São Miguel", C="Jesus Cristo").vai
+        self.padre.entra(self.sonho)
+        self.padre.vai=Texto(sonho, "No sonho, Jerônimo apresentava-se como cristão e era repreedindo pelo próprio Cristo por estar faltando com a verdade.").vai
 
-        def entrou_4(self,*_)
-          def resposta(optou):
-             respondeu = dict(
-              A=Texto(self.ft.p,
-              B=Texto(self.ft.p,
-              C=Texto(self.ft.p,
-              )
-              respondeu[optou].vai()
-              foi=resposta, A="Papa Francisco", B="Papa Libério", C="Papa Bento XVI").vai
+    def entrou_4(self,*_)
+       def resposta(optou):
+            respondeu = dict(
+            A=Texto(self.ft.p,)
+            B=Texto(self.ft.p,)
+            C=Texto(self.ft.p,)
+            )
+            respondeu[optou].vai()
+            foi=resposta, A="Papa Francisco", B="Papa Libério", C="Papa Bento XVI").vai
             self.padre.entra(self.pl)
             self.padre.vai=.vai=Texto(self.pl, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.").vai
             self.padre.vai=Texto(self.fp, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.").vai
