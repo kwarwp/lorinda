@@ -116,12 +116,12 @@ class bala():
             self.padre.vai=.vai=Texto(self.pl, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.").vai
             self.padre.vai=Texto(self.fp, "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.").vai
         
-        def entrou_5(self,*_)
-          def resposta(optou):
-             respondeu = dict(
-              A=Texto(self.ft.p,
-              B=Texto(self.ft.p,
-              C=Texto(self.ft.p,
+    def entrou_5(self,*_)
+       def resposta(optou):
+          respondeu = dict(
+           A=Texto(self.ft.p,
+           B=Texto(self.ft.p,
+           C=Texto(self.ft.p,
               )
               respondeu[optou].vai()
               foi=resposta, A="356", B="479", C="450").vai
