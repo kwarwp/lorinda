@@ -74,7 +74,7 @@ class bala():
         self.padre.vai=Texto(self.dalmacia, "São Jerônimo nasceu na Dalmácia no ano de 340.").vai
         self.dalmacia.vai()
         
-    def entrou_2(self,*_):
+    def entrou_2(self,*_): 
         def resposta(optou):
             respondeu = dict(
             A=Texto(self.ft_p,"Parabéns! Você acertou")
