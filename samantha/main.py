@@ -62,9 +62,13 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
                 A=Texto(self.dalmacia,
                 B=Texto(self.dalmacia,
                 C=Texto(self.dalmacia,
+                )
+                 respondeu[optou].vai()
+                  foi=resposta, A="Egito", B="Dalmácia", C="Brasil").vai
+            self.dalmacia.vai()
             self.padre.entra(self.dalmacia)
             self.padre.vai=Texto(self.dalmacia, "São Jerônimo nasceu na Dalmácia no ano de 340.").vai
-        
+             
         
         def entrou_2(self,*_):
             self.padre.entra(self.roma)
