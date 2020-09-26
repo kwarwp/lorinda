@@ -178,7 +178,7 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
               C=Texto(self.ft.p,
               )
                respondeu[optou].vai()
-              foi=resposta, A="", B="", C="").vai
+              foi=resposta, A="Belém", B="Egito", C="Índia").vai
             self.padre.entra(self.belem)
             self.padre.vai=Texto(self.belem, "Após traduzir a sagrada escritura , Jerônimo mudou-se para Belém a cidade onde nasceu nosso Salvador.").vai
     
