@@ -60,12 +60,12 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
         def entrou_1(self,*_):
             def resposta(optou):
                 respondeu = dict(
-                A=Texto(self.ft.p,
+                A=Texto(self.ft.p,#é uma descrição da alternativa certo?
                 B=Texto(self.ft.p,
                 C=Texto(self.ft.p,
                 )
-                 respondeu[optou].vai()
-                  foi=resposta, A="Egito", B="Dalmácia", C="Brasil").vai
+                respondeu[optou].vai()
+                 foi=resposta, A="Roma", B="Dalmácia", C="Polônia").vai
             self.ft.p.vai()
             self.padre.entra(self.dalmacia)
             self.padre.vai=Texto(self.dalmacia, "São Jerônimo nasceu na Dalmácia no ano de 340.").vai
@@ -81,7 +81,7 @@ FOTO_PAROQUIA="https://imgur.com/zFwNqPr"
               respondeu[optou].vai()
             self.padre.entra(self.roma)
             self.padre.vai=Texto(self.roma, "Após a morte de seus pais, Jerônimo foi para Roma estudar e durante sua permanencia teve um sonho muito importante para sua conversão.").vai
-        
+              self.roma.vai()
         
         def entrou_3(self,*_)
              def resposta(optou):
