@@ -23,6 +23,7 @@ class TheCave:
         capel[0].meio = capel[1]
         capel[1].meio = capel[1].esquerda = capel[1].direita = sala.norte
         capel[0].vai()
+        self.e_placa = Elemento(self.placa, cena=sanct.leste)
         
         
 if __name__ == "__main__":
