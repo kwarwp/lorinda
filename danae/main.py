@@ -5,6 +5,7 @@ CENAS = "CkepkCR nnBZp4Y 1ZCmVlf W5Q3VcS".split()
 INTER = "XXQmytH UGVhUV6 1ZCmVlf bi4tHyr".split()
 SANCT = "5kwiit6 Bip0ltd jKNasd1 Ac7LD9Z".split()
 CENA = "https://i.imgur.com/%s.jpg"
+CAPEL = "XJTHqUW iiiorD4".split()
 PROP = "hB7FFDO i2jZEzM WwNrwlJ".split()
 
 class TheCave:
@@ -12,12 +13,15 @@ class TheCave:
         cena = Cena(CENA % CENAS)
         self.jero, self.placa, self.cruz = [CENA % obj for obj in PROP]
         
+        capel = [Cena(CENA % parede) for parede in CAPEL]
         sala = Sala(*[CENA % parede for parede in CENAS]) 
         atrio = Sala(*[CENA % parede for parede in INTER]) 
         sanct = Sala(*[CENA % parede for parede in SANCT]) 
         #cena.vai()
         cave = Labirinto(c=atrio,n=sanct, s=sala)
-        sala.norte.vai()
+        capel[0].meio = capel[1]
+        capel[1].meio = capel[1].esquerda = capel[1].direita = sala.norte
+        capel[0].vai()
         
         
 if __name__ == "__main__":
