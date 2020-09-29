@@ -8,6 +8,7 @@ CENA = "https://i.imgur.com/%s.jpg"
 CAPEL = "XJTHqUW iiiorD4".split()
 PROP = "S2td4Uk i2jZEzM WwNrwlJ u1bDkus cEJbS0C".split()  # hB7FFDO RO0oeZI
 MPROP = "Fxc4cCK 4yxhrO0".split()
+JEROM = "https://i.imgur.com/IGFstQy.png"
 class TheCave:
     def __init__(self):
         cena = Cena(CENA % CENAS)
@@ -30,6 +31,7 @@ class TheCave:
         self.e_placa = Elemento(self.placa, x=510, y=210, w=280, cena=atrio.leste)
         self.e_jero = Elemento(self.jero, x=360, y=214, w=147, h=250, cena=sanct.leste)
         self.e_jero = Elemento(self.pano, x=360, y=212, w=150, h=250, cena=sanct.leste)
+        self.e_jerom = Elemento(JEROM, x=0, y=400, w=150, h=250, cena=sanct.leste)
         
         
 if __name__ == "__main__":
