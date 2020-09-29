@@ -2,7 +2,7 @@
 from _spy.vitollino.main import Cena, Sala, Labirinto, Elemento, STYLE
 STYLE.update(width=900, height="650px")
 CENAS = "CkepkCR nnBZp4Y 1ZCmVlf W5Q3VcS".split()
-INTER = "XXQmytH UGVhUV6 1ZCmVlf bi4tHyr".split()
+INTER = "XXQmytH UGVhUV6 dIPsMeh bi4tHyr".split()  #
 SANCT = "5kwiit6 Bip0ltd jKNasd1 Ac7LD9Z".split()
 CENA = "https://i.imgur.com/%s.jpg"
 CAPEL = "XJTHqUW iiiorD4".split()
@@ -26,8 +26,8 @@ class TheCave:
         capel[0].meio = capel[1]
         capel[1].meio = capel[1].esquerda = capel[1].direita = sala.norte
         capel[0].vai()
-        atrio.leste.vai()
-        sanct.leste.vai()
+        #atrio.leste.vai()
+        #sanct.leste.vai()
         self.e_placa = Elemento(self.placa, x=510, y=210, w=280, cena=atrio.leste)
         self.e_jero = Elemento(self.jero, x=360, y=214, w=147, h=250, cena=sanct.leste)
         self.e_jero = Elemento(self.pano, x=360, y=212, w=150, h=250, cena=sanct.leste)
