@@ -1,5 +1,5 @@
 # lorinda.danae.main.py
-from _spy.vitollino.main import Cena, Sala, Labirinto, Elemento, STYLE
+from _spy.vitollino.main import Cena, Sala, Labirinto, Elemento, Texto, STYLE
 STYLE.update(width=900, height="650px")
 CENAS = "CkepkCR nnBZp4Y 1ZCmVlf W5Q3VcS".split()
 INTER = "XXQmytH UGVhUV6 dIPsMeh bi4tHyr".split()  #
@@ -9,6 +9,7 @@ CAPEL = "XJTHqUW iiiorD4".split()
 PROP = "S2td4Uk i2jZEzM WwNrwlJ u1bDkus cEJbS0C".split()  # hB7FFDO RO0oeZI
 MPROP = "Fxc4cCK 4yxhrO0".split()
 JEROM = "https://i.imgur.com/IGFstQy.png"
+SONHO = "https://i.imgur.com/uHw57i1.jpg"
 class TheCave:
     def __init__(self):
         cena = Cena(CENA % CENAS)
@@ -17,13 +18,14 @@ class TheCave:
         self.pano, self.livro = [
             CENA % obj for obj in MPROP]
         
-        capel = [Cena(CENA % parede) for parede in CAPEL]
+        self.capel = capel = [Cena(CENA % parede) for parede in CAPEL]
         sala = Sala(*[CENA % parede for parede in CENAS]) 
         atrio = Sala(*[CENA % parede for parede in INTER]) 
         sanct = Sala(*[CENA % parede for parede in SANCT]) 
         #cena.vai()
         cave = Labirinto(c=atrio,n=sanct, s=sala)
-        capel[0].meio = capel[1]
+        # capel[0].meio = capel[1]
+        capel[0].meio = Cena(vai=self.sao_jeronimo)
         capel[1].meio = capel[1].esquerda = capel[1].direita = sala.norte
         capel[0].vai()
         #atrio.leste.vai()
@@ -32,6 +34,15 @@ class TheCave:
         self.e_jero = Elemento(self.jero, x=360, y=214, w=147, h=250, cena=sanct.leste)
         self.e_jero = Elemento(self.pano, x=360, y=212, w=150, h=250, cena=sanct.leste)
         self.e_jerom = Elemento(JEROM, x=0, y=400, w=150, h=250, cena=sanct.leste)
+        
+    def sao_jeronimo(self, *_):
+        self.capel[1].vai()
+        busca = Texto(self.capel[1], "Visite a gruta e toque em um crucifixo iluminado", foi=busca.vai)
+        fala = Texto(self.capel[1], "Que bom você me visitar, aprenda meu caminho para santidade", foi=busca.vai)
+        self.e_jerom.vai = fala.vai
+        visao = Texto(self.capel[1], "Você se ajoelha e faz uma oração, São Jerônimo aparece numa visão",
+        foi=lambda *_: self.e_jerom.entra(self.capel[1]))
+        Texto(self.capel[1], "Você veio conhecer a gruta onde São Jerônimo traduziu a Bíblia", foi=visao.vai).vai()
         
         
 if __name__ == "__main__":
