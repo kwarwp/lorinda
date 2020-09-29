@@ -6,12 +6,12 @@ INTER = "XXQmytH UGVhUV6 1ZCmVlf bi4tHyr".split()
 SANCT = "5kwiit6 Bip0ltd jKNasd1 Ac7LD9Z".split()
 CENA = "https://i.imgur.com/%s.jpg"
 CAPEL = "XJTHqUW iiiorD4".split()
-PROP = "hB7FFDO i2jZEzM WwNrwlJ".split()
+PROP = "hB7FFDO i2jZEzM WwNrwlJ u1bDkus cEJbS0C".split()
 
 class TheCave:
     def __init__(self):
         cena = Cena(CENA % CENAS)
-        self.jero, self.placa, self.cruz = [CENA % obj for obj in PROP]
+        self.jero, self.placa, self.cruz , self.grego = [CENA % obj for obj in PROP]
         
         capel = [Cena(CENA % parede) for parede in CAPEL]
         sala = Sala(*[CENA % parede for parede in CENAS]) 
