@@ -1,11 +1,11 @@
 # lorinda.danae.main.py
 from _spy.vitollino.main import Cena, Sala, Labirinto, STYLE
 STYLE.update(width=900, height="650px")
-CENAS = "CkepkCR XXQmytH nnBZp4Y 1ZCmVlf".split()
-INTER = "Ac7LD9Z UGVhUV6 1ZCmVlf".split()
-SANCT = "5kwiit6 Bip0ltd jKNasd1".split()
+CENAS = "CkepkCR nnBZp4Y 1ZCmVlf W5Q3VcS".split()
+INTER = "XXQmytH UGVhUV6 1ZCmVlf Ac7LD9Z".split()
+SANCT = "5kwiit6 Bip0ltd jKNasd1"
 CENA = "https://i.imgur.com/%s.jpg"
-PROP = "hB7FFDO"
+PROP = "hB7FFDO i2jZEzM".split()
 
 class TheCave:
     def __init__(self):
