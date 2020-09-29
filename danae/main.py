@@ -2,8 +2,8 @@
 from _spy.vitollino.main import Cena, Sala, Labirinto, STYLE
 STYLE.update(width=900, height="650px")
 CENAS = "CkepkCR XXQmytH nnBZp4Y 1ZCmVlf".split()
-INTER = "1ZCmVlf UGVhUV6"
-SANCT = ""
+INTER = "Ac7LD9Z UGVhUV6 1ZCmVlf".split()
+SANCT = "5kwiit6 Bip0ltd jKNasd1".split()
 CENA = "https://i.imgur.com/%s.jpg"
 PROP = "hB7FFDO"
 
