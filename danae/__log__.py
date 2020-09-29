@@ -85,3 +85,10 @@ SyntaxError: invalid syntax
     self.e_placa = Elemento(self.placa, cena=sanct.leste)
 NameError: name 'Elemento' is not defined
 '''},
+{'date': 'Tue Sep 29 2020 17:10:50.672 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 29
+  self.e_jero = Elemento(self.jero, x=380, y=210, w=110, y=220, cena=sanct.leste)
+                                                          ^
+SyntaxError: keyword argument repeated
+'''},
