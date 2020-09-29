@@ -10,6 +10,7 @@ PROP = "S2td4Uk i2jZEzM WwNrwlJ u1bDkus cEJbS0C".split()  # hB7FFDO RO0oeZI
 MPROP = "Fxc4cCK 4yxhrO0".split()
 JEROM = "https://i.imgur.com/IGFstQy.png"
 SONHO = "https://i.imgur.com/uHw57i1.jpg"
+MARCA = "https://i.imgur.com/2moCwSz.png"
 class TheCave:
     def __init__(self):
         cena = Cena(CENA % CENAS)
@@ -19,8 +20,8 @@ class TheCave:
             CENA % obj for obj in MPROP]
         
         self.capel = capel = [Cena(CENA % parede) for parede in CAPEL]
-        sala = Sala(*[CENA % parede for parede in CENAS]) 
-        atrio = Sala(*[CENA % parede for parede in INTER]) 
+        self.sala = sala = Sala(*[CENA % parede for parede in CENAS]) 
+        self.atrio = atrio = Sala(*[CENA % parede for parede in INTER]) 
         sanct = Sala(*[CENA % parede for parede in SANCT]) 
         #cena.vai()
         cave = Labirinto(c=atrio,n=sanct, s=sala)
@@ -34,10 +35,15 @@ class TheCave:
         self.e_jero = Elemento(self.jero, x=360, y=214, w=147, h=250, cena=sanct.leste)
         self.e_jero = Elemento(self.pano, x=360, y=212, w=150, h=250, cena=sanct.leste)
         self.e_jerom = Elemento(JEROM, x=0, y=400, w=150, h=250, cena=sanct.leste)
+        self.e_vecruz = Elemento(MARCA, x=480, y=100, w=150, h=250, o=0.1, cena=capel[0],
+            vai= self.sao_jeronimo)
+        self.e_vecruz.o = 0.2
         
     def sao_jeronimo(self, *_):
         self.capel[1].vai()
-        busca = Texto(self.capel[1], "Visite a gruta e toque em um crucifixo iluminado", foi=busca.vai)
+        self.e_vecruz.x = 800
+        busca = Texto(self.capel[1], "Visite a gruta e toque em um crucifixo iluminado",
+            foi=lambda *_: self.e_vecruz.entra(self.sala.sul))
         fala = Texto(self.capel[1], "Que bom você me visitar, aprenda meu caminho para santidade", foi=busca.vai)
         self.e_jerom.vai = fala.vai
         visao = Texto(self.capel[1], "Você se ajoelha e faz uma oração, São Jerônimo aparece numa visão",
