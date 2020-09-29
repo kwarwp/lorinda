@@ -2,14 +2,15 @@
 from _spy.vitollino.main import Cena, Sala, Labirinto, STYLE
 STYLE.update(width=900, height="650px")
 CENAS = "CkepkCR nnBZp4Y 1ZCmVlf W5Q3VcS".split()
-INTER = "XXQmytH UGVhUV6 1ZCmVlf Ac7LD9Z".split()
-SANCT = "5kwiit6 Bip0ltd jKNasd1"
+INTER = "XXQmytH UGVhUV6 1ZCmVlf bi4tHyr".split()
+SANCT = "5kwiit6 Bip0ltd jKNasd1 Ac7LD9Z".split()
 CENA = "https://i.imgur.com/%s.jpg"
-PROP = "hB7FFDO i2jZEzM".split()
+PROP = "hB7FFDO i2jZEzM WwNrwlJ".split()
 
 class TheCave:
     def __init__(self):
         cena = Cena(CENA % CENAS)
+        self.jero, self.placa, self.cruz = [CENA % obj for obj in PROP]
         
         sala = Sala(*[CENA % parede for parede in CENAS]) 
         atrio = Sala(*[CENA % parede for parede in INTER]) 
