@@ -60,3 +60,10 @@ TypeError: __init__() takes 6 positional argument but more were given
     sanct = Sala(*[CENA % parede for parede in SANCT]) 
 TypeError: __init__() takes 6 positional argument but more were given
 '''},
+{'date': 'Tue Sep 29 2020 13:31:53.247 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 16
+  capel = [Cena(CENA % parede) for parede in CAPEL])
+                                                   ^
+SyntaxError: invalid syntax
+'''},
