@@ -81,6 +81,7 @@ class TheCave:
         foi=lambda *_: Puzzle(local, self.emenda, image=self.grego)).vai()
         
     def emenda(self, *_):
+        Texto(self.sala, "Deus seja louvado! Agora posso continuar escrevendo a Vulgata").vai()
         local = self.sanct.norte
         
 
@@ -89,6 +90,7 @@ class Puzzle :
          image = None):#COM IMAGEM 
         posiciona_proxima = self.posiciona_proxima
         self.image = image
+        self.sala = esta_cena
         class LinhaGeracional:
             """Representa cada uma das linhas recortadas do herdograma original"""
             def __init__(self, linha, posicao, image=image):
@@ -117,7 +119,7 @@ class Puzzle :
         self.altura_da_linha = 70  # cada peça do herdograma tem esta altura
         self.posicoes_montadas = []  #l ista das linhas já montadas no herdograma
         self.posicoes_corretas = [ 1,2,3,5,8,0,4,6,7,9,10,11] 
-        self.posicoes_corretas = [ 5,0,1,2,6,3,7,8,4] 
+        self.posicoes_corretas = [5, 2, 7, 0, 6, 8, 1, 3, 4] 
         
     def posiciona_proxima(self, posicao):
         largura_da_peca, inicio_horizontal, inicio_vertical, numero_de_pecas = 90, 300, 200, 9
@@ -129,7 +131,8 @@ class Puzzle :
             return (inicio_horizontal+largura_da_peca*(self.parte_inicial%numero_de_pecas_por_linha),
                     inicio_vertical+self.altura_da_linha*(self.parte_inicial//numero_de_pecas_por_linha))
         else:
-            if len(self.posicoes_montadas) == numero_de_pecas:  # se montou qutro peças incorretas reinicia o game
+            if len(self.posicoes_montadas) == numero_de_pecas: 
+                print(self.posicoes_montadas)# se montou qutro peças incorretas reinicia o game
                 [linha.zera() for linha in self.linhas]  # volta as peças para o topo
                 self.posicoes_montadas = []  # indica que nenhuma peça foi montada
                 self.parte_inicial = -1  # inicia a altura de ontagem da primeira peça
