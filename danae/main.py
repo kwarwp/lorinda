@@ -22,7 +22,7 @@ class TheCave:
         self.capel = capel = [Cena(CENA % parede) for parede in CAPEL]
         self.sala = sala = Sala(*[CENA % parede for parede in CENAS]) 
         self.atrio = atrio = Sala(*[CENA % parede for parede in INTER]) 
-        sanct = Sala(*[CENA % parede for parede in SANCT]) 
+        self.sanct = sanct = Sala(*[CENA % parede for parede in SANCT]) 
         #cena.vai()
         cave = Labirinto(c=atrio,n=sanct, s=sala)
         # capel[0].meio = capel[1]
@@ -31,7 +31,7 @@ class TheCave:
         capel[0].vai()
         #atrio.leste.vai()
         #sanct.leste.vai()
-        self.e_grego = Elemento(self.grego, x=510, y=210, w=280, cena=sanct.norte)
+        self.e_grego = Elemento(self.grego, x=510, y=210, w=280, cena=sanct.norte, vai=self.rasga)
         self.e_placa = Elemento(self.placa, x=510, y=210, w=280, cena=atrio.leste)
         self.e_jero = Elemento(self.jero, x=360, y=214, w=147, h=250, cena=sanct.leste)
         self.e_jero = Elemento(self.pano, x=360, y=212, w=150, h=250, cena=sanct.leste)
@@ -49,7 +49,7 @@ class TheCave:
         self.e_vecruz.x = 580
         self.e_vecruz.vai = self.o_sonho
         busca = Texto(self.capel[1], "Visite a gruta e toque em um crucifixo sob um foco de luz",
-            foi=lambda *_: self.e_vecruz.entra(self.sala.sul))
+            foi=lambda *_: self.e_vecruz.entra(self.sanct.norte))
         fala = Texto(self.capel[1], "Que bom você me visitar, aprenda meu caminho para santidade", foi=busca.vai)
         self.e_jerom.vai = fala.vai
         visao = Texto(self.capel[1], "Você se ajoelha e faz uma oração, São Jerônimo aparece numa visão",
@@ -60,12 +60,25 @@ class TheCave:
         local = Cena(SONHO)
         self.e_jerom.entra(local) 
         busca = Texto(local, "Eu acho que ele esta em cima da minha escrivaninha",
-            foi=lambda *_: self.e_vecruz.entra(self.sala.sul))
+            foi=lambda *_: self.e_grego.entra(self.sala.sul))
         fala = Texto(local, "Você precisa me ajudar a encontrar o pergaminho em grego que eu estava traduzindo", foi=busca.vai)
         self.e_jerom.vai = fala.vai
-        visao = Texto(local, "Neste sonho, Jesus me repreende porque não tenho me dedicado à leitura da Bíblia",
-        foi=fala.vai).vai()
-        Texto(self.sala.sul, "A devoção de São Jerônimo por Jesus invade seu coração e você entre em um sonho", foi=local.vai).vai()
+        visao = Texto(local, "Neste sonho, Jesus me repreende porque não tenho me dedicado à leitura da Bíblia"
+        ).vai()
+        Texto(self.sala.sul, "A devoção de São Jerônimo por Jesus invade seu coração e você entre em um sonho",
+        foi=local.vai).vai()
+        
+    def rasga(self, *_):
+        local = Cena(SONHO)
+        self.e_jerom.entra(local) 
+        busca = Texto(local, "Eu acho que ele esta em cima da minha escrivaninha",
+            foi=lambda *_: self.e_grego.entra(self.sala.sul))
+        fala = Texto(local, "Você precisa me ajudar a encontrar o pergaminho em grego que eu estava traduzindo", foi=busca.vai)
+        self.e_jerom.vai = fala.vai
+        visao = Texto(local, "Neste sonho, Jesus me repreende porque não tenho me dedicado à leitura da Bíblia"
+        ).vai()
+        Texto(self.sanct.norte, "O pergaminho é antigo, quanto tocado se desfaz em vários pedaços",
+        foi=local.vai).vai()
         
         
 if __name__ == "__main__":
