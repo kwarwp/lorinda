@@ -92,3 +92,10 @@ NameError: name 'Elemento' is not defined
                                                           ^
 SyntaxError: keyword argument repeated
 '''},
+{'date': 'Tue Sep 29 2020 21:41:30.833 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 56
+  self.e_jerom.entra(local)        self.e_vecruz.x = 800
+                                    ^
+SyntaxError: invalid syntax
+'''},
