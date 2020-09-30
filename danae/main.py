@@ -78,7 +78,7 @@ class TheCave:
         visao = Texto(local, "Neste sonho, Jesus me repreende porque não tenho me dedicado à leitura da Bíblia"
         ).vai()
         Texto(self.sanct.norte, "O pergaminho é antigo, quanto tocado se desfaz em vários pedaços",
-        foi=lambda *_: Puzzle(local, self.emenda)).vai()
+        foi=lambda *_: Puzzle(local, self.emenda, image=self.grego)).vai()
         
     def emenda(self, *_):
         local = self.sanct.norte
@@ -117,6 +117,7 @@ class Puzzle :
         self.altura_da_linha = 70  # cada peça do herdograma tem esta altura
         self.posicoes_montadas = []  #l ista das linhas já montadas no herdograma
         self.posicoes_corretas = [ 1,2,3,5,8,0,4,6,7,9,10,11] 
+        self.posicoes_corretas = [ 5,0,1,2,6,3,7,8,4] 
         
     def posiciona_proxima(self, posicao):
         largura_da_peca, inicio_horizontal, inicio_vertical, numero_de_pecas = 90, 300, 200, 9
