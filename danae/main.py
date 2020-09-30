@@ -69,7 +69,7 @@ class TheCave:
         foi=local.vai).vai()
         
     def rasga(self, *_):
-        local = Cena(SONHO)
+        local = self.sanct.norte
         self.e_jerom.entra(local) 
         busca = Texto(local, "Eu acho que ele esta em cima da minha escrivaninha",
             foi=lambda *_: self.e_grego.entra(self.sala.sul))
@@ -78,8 +78,71 @@ class TheCave:
         visao = Texto(local, "Neste sonho, Jesus me repreende porque não tenho me dedicado à leitura da Bíblia"
         ).vai()
         Texto(self.sanct.norte, "O pergaminho é antigo, quanto tocado se desfaz em vários pedaços",
-        foi=local.vai).vai()
+        foi=lambda *_: Puzzle(local, self.emenda)).vai()
         
+    def emenda(self, *_):
+        local = self.sanct.norte
+        
+
+class Puzzle :
+    def __init__(self, esta_cena, chama_quando_acerta, partes=(1,2,3,5,8,0,4,6,7,9),
+         image = None):#COM IMAGEM 
+        posiciona_proxima = self.posiciona_proxima
+        self.image = image
+        class LinhaGeracional:
+            """Representa cada uma das linhas recortadas do herdograma original"""
+            def __init__(self, linha, posicao, image=image):
+                self.posicao = posicao # posição original no topo da página
+                self.linha = Elemento(image, x=(posicao//3)*100, y=(posicao%3)*80+20, w=90, h=70,
+                cena=esta_cena)
+                self.linha.siz = (90*3, 70*3)
+                self.linha.pos = (-90*(linha//3), -70*(linha%3))
+                self.linha.vai = self.clica_e_posiciona_a_linha #quando clica, monta o herdograma
+            def zera(self):
+                self.linha.x = (self.posicao//3)*100  # posiciona cada peça com 200 pixels de distância
+                self.linha.y = (self.posicao%3)*80+20  # posiciona a peça no topo da página
+                self.linha.vai = self.clica_e_posiciona_a_linha
+            def clica_e_posiciona_a_linha(self, *_):
+                x, y = posiciona_proxima(self.posicao)
+                if y:  # se o y retornou zero é porque o posiciona próxima detectou montagem errada
+                    self.linha.x, self.linha.y = x, y # monta a linha no herdograma
+                    self.linha.vai = lambda *_:None #desativa o click da linha
+
+        # coloca cada uma das linhas embaralhadas 
+        self.linhas = [
+            LinhaGeracional(linha=uma_linha, posicao=uma_posicao)
+            for uma_posicao, uma_linha in enumerate(partes)]
+        self.acertou = chama_quando_acerta
+        self.parte_inicial = -1
+        self.altura_da_linha = 70  # cada peça do herdograma tem esta altura
+        self.posicoes_montadas = []  #l ista das linhas já montadas no herdograma
+        self.posicoes_corretas = [ 1,2,3,5,8,0,4,6,7,9,10,11] 
+        
+    def posiciona_proxima(self, posicao):
+        largura_da_peca, inicio_horizontal, inicio_vertical, numero_de_pecas = 90, 300, 200, 9
+        numero_de_pecas_por_linha = 3
+        self.parte_inicial += 1  # incrementa a posição para montar a próxima posiçao da peça
+        self.posicoes_montadas += [posicao]  # adiciona o índice desta peça na lista de peças montadas
+        if self.posicoes_montadas == self.posicoes_corretas:
+            self.acertou()  # invoca a ação acertou se montou nas posições corretas
+            return (inicio_horizontal+largura_da_peca*(self.parte_inicial%numero_de_pecas_por_linha),
+                    inicio_vertical+self.altura_da_linha*(self.parte_inicial//numero_de_pecas_por_linha))
+        else:
+            if len(self.posicoes_montadas) == numero_de_pecas:  # se montou qutro peças incorretas reinicia o game
+                [linha.zera() for linha in self.linhas]  # volta as peças para o topo
+                self.posicoes_montadas = []  # indica que nenhuma peça foi montada
+                self.parte_inicial = -1  # inicia a altura de ontagem da primeira peça
+                return 0, 0  #  retorna uma posição inválida para sinalizar a peça
+            return (inicio_horizontal+largura_da_peca*(self.parte_inicial%numero_de_pecas_por_linha),
+                    inicio_vertical+self.altura_da_linha*(self.parte_inicial//numero_de_pecas_por_linha))
+    def acertou(self):
+        Texto(self.sala, "Deus seja louvado! Agora posso continuar escrevendo a Vulgata").vai()
+        self.quartos2 = self.ajuda
+        def quartos2(self,*_):
+            # Figuras geométricas/Traços (simples, duplos, triplos)
+            #Casamento cosanguineo/Quatro indivíduas/Dois com anomalias/Dois normais do sexo masculino
+            #dar um motivo para fazer esse quebra cabeça
+            self.quartos2.vai()
         
 if __name__ == "__main__":
     TheCave()
