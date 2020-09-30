@@ -81,7 +81,7 @@ class TheCave:
         foi=lambda *_: Puzzle(local, self.emenda, image=self.grego)).vai()
         
     def emenda(self, *_):
-        Texto(self.sala, "Deus seja louvado! Agora posso continuar escrevendo a Vulgata").vai()
+        Texto(self.sanct.norte, "Deus seja louvado! Agora posso continuar escrevendo a Vulgata").vai()
         local = self.sanct.norte
         
 
