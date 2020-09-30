@@ -31,6 +31,7 @@ class TheCave:
         capel[0].vai()
         #atrio.leste.vai()
         #sanct.leste.vai()
+        self.e_grego = Elemento(self.grego, x=510, y=210, w=280, cena=sanct.norte)
         self.e_placa = Elemento(self.placa, x=510, y=210, w=280, cena=atrio.leste)
         self.e_jero = Elemento(self.jero, x=360, y=214, w=147, h=250, cena=sanct.leste)
         self.e_jero = Elemento(self.pano, x=360, y=212, w=150, h=250, cena=sanct.leste)
@@ -40,8 +41,12 @@ class TheCave:
         self.e_vecruz.o = 0.2
         
     def sao_jeronimo(self, *_):
+        self.e_vecruz = Elemento(MARCA, x=680, y=150, w=90, h=180, o=0.1, cena=self.sala.sul,
+            vai= self.o_sonho)
+        self.e_vecruz.o = 0.2
         self.capel[1].vai()
-        self.e_vecruz.x, self.e_vecruz.y, self.e_vecruz.w, self.e_vecruz.h = 900, 150, 180, 60
+        #self.e_vecruz.x, self.e_vecruz.y, self.e_vecruz.w, self.e_vecruz.h = 580, 150, 180, 60
+        self.e_vecruz.x = 580
         self.e_vecruz.vai = self.o_sonho
         busca = Texto(self.capel[1], "Visite a gruta e toque em um crucifixo sob um foco de luz",
             foi=lambda *_: self.e_vecruz.entra(self.sala.sul))
@@ -54,13 +59,13 @@ class TheCave:
     def o_sonho(self, *_):
         local = Cena(SONHO)
         self.e_jerom.entra(local) 
-        busca = Texto(local, "Visite a gruta e toque em um crucifixo sob um foco de luz",
+        busca = Texto(local, "Eu acho que ele esta em cima da minha escrivaninha",
             foi=lambda *_: self.e_vecruz.entra(self.sala.sul))
-        fala = Texto(local, "Que bom você me visitar, aprenda meu caminho para santidade", foi=busca.vai)
+        fala = Texto(local, "Você precisa me ajudar a encontrar o pergaminho em grego que eu estava traduzindo", foi=busca.vai)
         self.e_jerom.vai = fala.vai
-        visao = Texto(local, "Você se ajoelha e faz uma oração, São Jerônimo aparece numa visão",
-        foi=lambda *_: self.e_jerom.entra(self.capel[1]))
-        Texto(self.capel[1], "A devoção de São Jerônimo por Jesus invade seu coração e você entre em um sonho", foi=local.vai).vai()
+        visao = Texto(local, "Neste sonho, Jesus me repreende porque não tenho me dedicado à leitura da Bíblia",
+        foi=fala.vai).vai()
+        Texto(self.sala.sul, "A devoção de São Jerônimo por Jesus invade seu coração e você entre em um sonho", foi=local.vai).vai()
         
         
 if __name__ == "__main__":
