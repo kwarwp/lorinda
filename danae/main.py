@@ -41,7 +41,7 @@ class TheCave:
         
     def sao_jeronimo(self, *_):
         self.capel[1].vai()
-        self.e_vecruz.x = self.e_vecruz.y = self.e_vecruz.w = self.e_vecruz.h = 900, 150, 180, 60
+        self.e_vecruz.x, self.e_vecruz.y, self.e_vecruz.w, self.e_vecruz.h = 900, 150, 180, 60
         self.e_vecruz.vai = self.o_sonho
         busca = Texto(self.capel[1], "Visite a gruta e toque em um crucifixo sob um foco de luz",
             foi=lambda *_: self.e_vecruz.entra(self.sala.sul))
@@ -60,7 +60,7 @@ class TheCave:
         self.e_jerom.vai = fala.vai
         visao = Texto(local, "Você se ajoelha e faz uma oração, São Jerônimo aparece numa visão",
         foi=lambda *_: self.e_jerom.entra(self.capel[1]))
-        Texto(local, "A devoção de São Jerônimo por Jesus invade seu coração e você entre em um sonho", foi=local.vai).vai()
+        Texto(self.capel[1], "A devoção de São Jerônimo por Jesus invade seu coração e você entre em um sonho", foi=local.vai).vai()
         
         
 if __name__ == "__main__":
