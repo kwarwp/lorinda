@@ -100,7 +100,7 @@ class TheCave:
         Texto(local, "O pergaminho é antigo, quanto tocado se desfaz em vários pedaços",
         foi=rasgou).vai()
 
-class Altares
+class Altares:
     def __init__(self, sala, atrio, sanct):
         self.sala, self.atrio, self.sanct = sala, atrio, sanct
         self.icone = Elemento(self.jero, x=360, y=214, w=147, h=250, tit="icone", drag=True)
@@ -203,8 +203,8 @@ class Puzzle :
             self.quartos2.vai()
             
 def main():
-    atrio = Sala(*[CENA % parede for parede in CENAS]) 
-    atrio.norte.vai()
+    sala = Sala(*[CENA % parede for parede in CENAS]) 
+    sala.norte.vai()
     Altares(sala, sala, sala)
         
 if __name__ == "__main__":
