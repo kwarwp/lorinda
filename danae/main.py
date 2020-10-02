@@ -114,17 +114,27 @@ class Altares:
         "dai-me a graça de compreender com clareza a vossa palavra quando leio a Bíblia."
         drop =dict(icone=self.oracao)
         self.limbo = Cena("")
-        self.altar_estudio = Elemento(MARCA, x=480, y=100, w=150, h=250, o=0.2, cena=sala.norte,
+        self.altar_estudio = Elemento(MARCA, x=480, y=260, w=250, h=150, o=0.2, cena=sala.norte,
             drop=dict(icone=self.oracao_estudio))
-        self.altar_cripta = Elemento(MARCA, x=480, y=100, w=150, h=250, o=0.2, cena=sala.oeste,
+        self.altar_cripta = Elemento(MARCA, x=480, y=300, w=250, h=150, o=0.2, cena=sala.oeste,
             drop=dict(icone=self.oracao_cripta))
-        self.altar_nicho = Elemento(MARCA, x=480, y=100, w=150, h=250, o=0.2, cena=sala.leste,
+        self.altar_nicho = Elemento(MARCA, x=480, y=220, w=250, h=150, o=0.2, cena=sala.sul,
             drop=dict(icone=self.oracao_nicho))
     def oracao_nicho(self, *_):
-        self.icone.entra(self.sala.leste)
+        self.icone.entra(inv.cena)
         self.icone.x = 640
         self.icone.y = 340
-        Texto(self.sala.leste, **self.ora(self.altar_nicho))
+        Texto(inv.cena, **self.ora(self.altar_nicho))
+    def oracao_cripta(self, *_):
+        self.icone.entra(inv.cena)
+        self.icone.x = 640
+        self.icone.y = 340
+        Texto(inv.cena, **self.ora(self.altar_nicho))
+    def oracao_estudio(self, *_):
+        self.icone.entra(inv.cena)
+        self.icone.x = 640
+        self.icone.y = 340
+        Texto(inv.cena, **self.ora(self.altar_nicho))
         
     def ora(self, altar):
         def fim(*_):
