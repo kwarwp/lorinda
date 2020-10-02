@@ -34,8 +34,8 @@ class TheCave:
         self.e_limbo = Elemento("")
         self.e_grego = Elemento(self.grego, x=510, y=210, w=280, vai=self.rasga)
         self.e_placa = Elemento(self.placa, x=510, y=210, w=280, cena=atrio.leste)
-        self.e_jero = Elemento(self.jero, x=360, y=214, w=147, h=250, cena=sanct.leste)
-        self.e_jero = Elemento(self.pano, x=360, y=212, w=150, h=250, cena=sanct.leste)
+        self.e_jero = Elemento(self.jero, x=360, y=214, w=147, h=250, cena=sanct.leste, tit="icone", drag=True)
+        #self.e_jero = Elemento(self.pano, x=360, y=212, w=150, h=250, cena=sanct.leste)
         self.e_jerom = Elemento(JEROM, x=0, y=400, w=150, h=250, cena=sanct.leste)
         self.e_vecruz = Elemento(MARCA, x=480, y=100, w=150, h=250, o=0.1, cena=capel[0],
             vai= self.sao_jeronimo)
@@ -77,13 +77,19 @@ class TheCave:
         local.vai()
         visao = Texto(local, "Neste sonho, Jesus me repreende porque não tenho me dedicado à leitura da Bíblia"
         ).vai()
+    def toca(*_):
+            inv.bota(self.e_jero)
+            santo = Texto(local, "Preciso que você ore por mim, para que eu termine a tradução."
+            "Bote o meu retrato em trẽs altares diferentes da gruta e peça que Deus me ilumine",
+            foi=lambda *_: Altares(self.sala, self.atrio, self.sanct)).vai()
         
     def rasga(self, *_):
         def santo(*_):
-            self.e_jero.vai = lambda: inv.bota(self.e_jero)
+            self.e_jero.vai = toca
 
         def emenda(*_):
-            santo = Texto(local, "Deus o abençoe pela ajuda. Toque no meu retrato e ganhe um santinho").vai()
+            santo = Texto(local, "Deus o abençoe pela ajuda. Preciso que você ore por mim"
+            "Toque no meu retrato na parede e ganhe um santinho", foi=santo).vai()
             Texto(local, "Deus seja louvado! Agora posso continuar escrevendo a Vulgata", foi=santo.vai).vai()
             local = self.sanct.norte
         def rasgou(*_):
@@ -93,6 +99,41 @@ class TheCave:
         self.e_jerom.entra(local) 
         Texto(local, "O pergaminho é antigo, quanto tocado se desfaz em vários pedaços",
         foi=rasgou).vai()
+
+class Altares
+    def __init__(self, sala, atrio, sanct):
+        self.sala, self.atrio, self.sanct = sala, atrio, sanct
+        self.icone = inv["icone"]
+        self.oracao = "Ó Deus, criador do universo, que vos revelastes aos homens, através dos séculos,"
+        " pela Sagrada Eucaristia,",
+        "e levastes o vosso servo, São Jerônimo, a dedicar a sua vida ao estudo e à meditação da Bíblia,",
+        "dai-me a graça de compreender com clareza a vossa palavra quando leio a Bíblia."
+        drop =dict(icone=self.oracao)
+        self.limbo = Cena("")
+        self.altar_estudio = Elemento(MARCA, x=480, y=100, w=150, h=250, o=0.1, cena=capel[0],
+            drop=dict(icone=self.oracao_estudio))
+        self.altar_cripta = Elemento(MARCA, x=480, y=100, w=150, h=250, o=0.1, cena=capel[0],
+            drop=dict(icone=self.oracao_cripta))
+         = Elemento(MARCA, x=480, y=100, w=150, h=250, o=0.1, cena=capel[0],
+            drop=dict(icone=self.oracao_nicho))
+    def oracao_nicho(self, *_):
+        def fim(*_):
+        self.icone.entra(self.sala.leste)
+        self.icone.x = 640
+        self.icone.y = 340
+        Texto(self.sala.leste, **self.ora(self.altar_nicho))
+        
+    def ora(self, altar):
+        def fim(*_):
+            inv.bota(self.icone)
+            altar.entra(self.limbo)
+        def bencao(*_):
+            inv.tira("icone")
+            altar.entra(self.limbo)
+            Texto(inv.cena, "Que a graça de Nosso Senhor Jesus Cristo esteja com você!"
+            "Depois de trinta anos de estudos, consegui terminar a minha tradução da Bíblia"
+            
+        oracao = self.oracao.pop(0)
         
 
 class Puzzle :
