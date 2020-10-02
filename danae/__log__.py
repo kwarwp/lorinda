@@ -209,3 +209,10 @@ AttributeError: 'Altares' object has no attribute 'oracao_estudio'
                                                                                 ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Oct 02 2020 20:53:56.456 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 158
+  self.altar_estudio = Altar(self.oracao, x=480, y=260, ix=280, iy=240 cena=sala.norte)
+                                                                        ^
+SyntaxError: invalid syntax
+'''},
