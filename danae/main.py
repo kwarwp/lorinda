@@ -102,6 +102,8 @@ class TheCave:
 
 class Altares:
     def __init__(self, sala, atrio, sanct):
+        self.jero, self.placa, self.cruz , self.grego , self.vulgata = [
+            CENA % obj for obj in PROP]
         self.sala, self.atrio, self.sanct = sala, atrio, sanct
         self.icone = Elemento(self.jero, x=360, y=214, w=147, h=250, tit="icone", drag=True)
         # self.icone = inv["icone"]
