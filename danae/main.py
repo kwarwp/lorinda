@@ -103,12 +103,16 @@ class TheCave:
 
 class Altares:
     def __init__(self, sala, atrio, sanct):
+        self.icone = Elemento(self.jero, x=360, y=214, w=147, h=250, o=1, tit="icone", drag=True)
+        self.icone.w=60
+        self.icone.h=80
         class Altar:
-            def __init__(self,oracao, ax, ay, ix, iy, local):
-                self.oracao, self.ax, self.ay, self.ix, self.iy = oracao, ax, ay, ix, iy
-                self.altar = Elemento(MARCA, x=ax, y=ay, w=250, h=150, o=0.2, cena=local,
-                    drop=dict(icone=self.oracao))
-            def oracao(self, *_):
+            def __init__(self,oracao, x, y, ix, iy, cena):
+                self.oracao_, self.local, self.ix, self.iy = oracao, cena, ix, iy
+                self.altar = Elemento(MARCA, x=x, y=y, w=250, h=150, o=0.2, cena=cena,
+                    drop=dict(icone=self.orar))
+                self.limbo = Cena()
+            def orar(self, *_):
                 def fim(*_):
                     inv.bota(self.icone)
                     self.altar.entra(self.limbo)
@@ -117,16 +121,16 @@ class Altares:
                     self.altar.entra(self.limbo)
                     Texto(inv.cena, "Que a graça de Nosso Senhor Jesus Cristo esteja com você!"
                     "Depois de trinta anos de estudos, consegui terminar a minha tradução da Bíblia").vai()
-                def ora(
-                    oracao = self.oracao.pop(0)
+                def ora():
+                    oracao = self.oracao_.pop(0)
                     Texto(inv.cena, oracao).vai()
-                    return dict(tit=oracao, foi=lambda*_:fim() if self.oracao else lambda*_:bencao())
+                    return dict(tit=oracao, )
                 local= self.local
                 #inv.tira("icone")
                 self.icone.entra(local)
                 self.icone.x = self.ix
                 self.icone.y = self.iy
-                Texto(local, **self.ora(self.altar))
+                Texto(local, oracao, foi=lambda*_:fim() if self.oracao_ else lambda*_:bencao())
                 
             
             
@@ -146,12 +150,17 @@ class Altares:
         "dai-me a graça de compreender com clareza a vossa palavra quando leio a Bíblia."]
         drop =dict(icone=self.oracao)
         self.limbo = Cena("")
+        '''
         self.altar_estudio = Elemento(MARCA, x=480, y=260, w=250, h=150, o=0.2, cena=sala.norte,
             drop=dict(icone=self.oracao_estudio))
         self.altar_cripta = Elemento(MARCA, x=480, y=300, w=250, h=150, o=0.2, cena=sala.oeste,
             drop=dict(icone=self.oracao_cripta))
         self.altar_nicho = Elemento(MARCA, x=480, y=220, w=250, h=150, o=0.2, cena=sala.sul,
             drop=dict(icone=self.oracao_nicho))
+        '''
+        self.altar_estudio = Altar(self.oracao, x=480, y=260, ix=280, iy=240, cena=sala.norte)
+        self.altar_cripta = Altar(self.oracao, x=480, y=260, ix=280, iy=240, cena=sala.oeste)
+        self.altar_nicho = Altar(self.oracao, x=480, y=260, ix=280, iy=240, cena=sala.sul)
     def oracao_nicho(self, *_):
         local= self.sala.sul
         #inv.tira("icone")
