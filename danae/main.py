@@ -31,7 +31,6 @@ class TheCave:
         #capel[0].vai()
         #atrio.leste.vai()
         #sanct.leste.vai()
-        self.sao_jeronimo()
         self.e_limbo = Elemento("")
         self.e_grego = Elemento(self.grego, x=510, y=210, w=280, cena=sanct.norte, vai=self.rasga)
         self.e_placa = Elemento(self.placa, x=510, y=210, w=280, cena=atrio.leste)
@@ -41,15 +40,21 @@ class TheCave:
         self.e_vecruz = Elemento(MARCA, x=480, y=100, w=150, h=250, o=0.1, cena=capel[0],
             vai= self.sao_jeronimo)
         self.e_vecruz.o = 0.2
+        self.sao_jeronimo()
         
     def sao_jeronimo(self, *_):
+        def sonho(*_):
+            Texto(self.sala.sul, "A devoção de São Jerônimo invade seu coração"
+            " e você entra em um sonho que ele teve com Jesus",
+            foi=self.o_sonho).vai()
+            
         self.e_vecruz = Elemento(MARCA, x=680, y=150, w=90, h=180, o=0.1, cena=self.sala.sul,
-            vai= self.o_sonho)
+            vai= sonho)
         self.e_vecruz.o = 0.2
         self.capel[1].vai()
         #self.e_vecruz.x, self.e_vecruz.y, self.e_vecruz.w, self.e_vecruz.h = 580, 150, 180, 60
-        self.e_vecruz.x = 580
-        self.e_vecruz.vai = self.o_sonho
+        self.e_vecruz.x = 640
+        self.e_vecruz.vai = sonho
         busca = Texto(self.capel[1], "Visite a gruta e toque em um crucifixo sob um foco de luz",
             foi=lambda *_: self.e_vecruz.entra(self.sanct.norte))
         fala = Texto(self.capel[1], "Que bom você me visitar, aprenda meu caminho para santidade", foi=busca.vai)
@@ -59,16 +64,18 @@ class TheCave:
         Texto(self.capel[1], "Você veio conhecer a gruta onde São Jerônimo traduziu a Bíblia", foi=visao.vai).vai()
         
     def o_sonho(self, *_):
+        def acorda(*_):
+            self.e_grego.entra(self.sala.sul)
+            self.sala.sul.vai()
         local = Cena(SONHO)
         self.e_jerom.entra(local) 
         busca = Texto(local, "Eu acho que ele esta em cima da minha escrivaninha",
-            foi=lambda *_: self.e_grego.entra(self.sala.sul))
+            foi=acorda )
         fala = Texto(local, "Você precisa me ajudar a encontrar o pergaminho em grego que eu estava traduzindo", foi=busca.vai)
         self.e_jerom.vai = fala.vai
+        local.vai()
         visao = Texto(local, "Neste sonho, Jesus me repreende porque não tenho me dedicado à leitura da Bíblia"
         ).vai()
-        Texto(self.sala.sul, "A devoção de São Jerônimo por Jesus invade seu coração e você entre em um sonho",
-        foi=local.vai).vai()
         
     def rasga(self, *_):
         def rasgou(*_):
