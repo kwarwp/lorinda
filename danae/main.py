@@ -103,6 +103,35 @@ class TheCave:
 
 class Altares:
     def __init__(self, sala, atrio, sanct):
+        class Altar:
+            def __init__(self,oracao, ax, ay, ix, iy, local):
+                self.oracao, self.ax, self.ay, self.ix, self.iy = oracao, ax, ay, ix, iy
+                self.altar = Elemento(MARCA, x=ax, y=ay, w=250, h=150, o=0.2, cena=local,
+                    drop=dict(icone=self.oracao))
+            def oracao(self, *_):
+                def fim(*_):
+                    inv.bota(self.icone)
+                    self.altar.entra(self.limbo)
+                def bencao(*_):
+                    inv.tira("icone")
+                    self.altar.entra(self.limbo)
+                    Texto(inv.cena, "Que a graça de Nosso Senhor Jesus Cristo esteja com você!"
+                    "Depois de trinta anos de estudos, consegui terminar a minha tradução da Bíblia").vai()
+                def ora(
+                    oracao = self.oracao.pop(0)
+                    Texto(inv.cena, oracao).vai()
+                    return dict(tit=oracao, foi=lambda*_:fim() if self.oracao else lambda*_:bencao())
+                local= self.local
+                #inv.tira("icone")
+                self.icone.entra(local)
+                self.icone.x = self.ix
+                self.icone.y = self.iy
+                Texto(local, **self.ora(self.altar))
+                
+            
+            
+            
+            
         self.jero, self.placa, self.cruz , self.grego , self.vulgata = [
             CENA % obj for obj in PROP]
         self.sala, self.atrio, self.sanct = sala, atrio, sanct
@@ -125,7 +154,7 @@ class Altares:
             drop=dict(icone=self.oracao_nicho))
     def oracao_nicho(self, *_):
         local= self.sala.sul
-        inv.tira("icone")
+        #inv.tira("icone")
         self.icone.entra(local)
         self.icone.x = 640
         self.icone.y = 340
@@ -139,25 +168,27 @@ class Altares:
     def oracao_estudio(self, *_):
         local= self.sala.norte
         self.icone.entra(local)
-        self.icone.x = 240
-        self.icone.y = 140
+        self.icone.x = 280
+        self.icone.y = 240
         self.icone.w=60
         self.icone.h=80
         Texto(local, **self.ora(self.altar_estudio))
         
-    def ora(self, altar):
+    def ora(self, oaltar):
+        altar = oaltar
+        ico, lim = self.icone, self.limbo
         def fim(*_):
-            inv.bota(self.icone)
-            altar.entra(self.limbo)
+            inv.bota(ico)
+            altar.entra(lim)
         def bencao(*_):
             inv.tira("icone")
-            altar.entra(self.limbo)
+            altar.entra(ico)
             Texto(inv.cena, "Que a graça de Nosso Senhor Jesus Cristo esteja com você!"
             "Depois de trinta anos de estudos, consegui terminar a minha tradução da Bíblia").vai()
             
         oracao = self.oracao.pop(0)
         Texto(inv.cena, oracao).vai()
-        return dict(tit=oracao, foi=fim if self.oracao else bencao)
+        return dict(tit=oracao, foi=lambda*_:fim() if self.oracao else lambda*_:bencao())
         
 
 class Puzzle :
@@ -224,10 +255,10 @@ class Puzzle :
             self.quartos2.vai()
             
 def main():
+    inv.inicia()
     sala = Sala(*[CENA % parede for parede in CENAS]) 
     sala.norte.vai()
     inv.cena = sala.norte
-    inv.inicia()
     Altares(sala, sala, sala)
         
 if __name__ == "__main__":
