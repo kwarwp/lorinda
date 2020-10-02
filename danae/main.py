@@ -28,9 +28,11 @@ class TheCave:
         # capel[0].meio = capel[1]
         capel[0].meio = Cena(vai=self.sao_jeronimo)
         capel[1].meio = capel[1].esquerda = capel[1].direita = sala.norte
-        capel[0].vai()
+        #capel[0].vai()
         #atrio.leste.vai()
         #sanct.leste.vai()
+        self.sao_jeronimo()
+        self.e_limbo = Elemento("")
         self.e_grego = Elemento(self.grego, x=510, y=210, w=280, cena=sanct.norte, vai=self.rasga)
         self.e_placa = Elemento(self.placa, x=510, y=210, w=280, cena=atrio.leste)
         self.e_jero = Elemento(self.jero, x=360, y=214, w=147, h=250, cena=sanct.leste)
@@ -69,16 +71,17 @@ class TheCave:
         foi=local.vai).vai()
         
     def rasga(self, *_):
+        def rasgou(*_):
+            self.e_grego.entra(self.e_limbo)
+            Puzzle(local, self.emenda, image=self.grego)
         local = self.sanct.norte
         self.e_jerom.entra(local) 
-        busca = Texto(local, "Eu acho que ele esta em cima da minha escrivaninha",
-            foi=lambda *_: self.e_grego.entra(self.sala.sul))
         fala = Texto(local, "Você precisa me ajudar a encontrar o pergaminho em grego que eu estava traduzindo", foi=busca.vai)
         self.e_jerom.vai = fala.vai
         visao = Texto(local, "Neste sonho, Jesus me repreende porque não tenho me dedicado à leitura da Bíblia"
         ).vai()
         Texto(self.sanct.norte, "O pergaminho é antigo, quanto tocado se desfaz em vários pedaços",
-        foi=lambda *_: Puzzle(local, self.emenda, image=self.grego)).vai()
+        foi=rasgou).vai()
         
     def emenda(self, *_):
         Texto(self.sanct.norte, "Deus seja louvado! Agora posso continuar escrevendo a Vulgata").vai()
