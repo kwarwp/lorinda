@@ -1,5 +1,5 @@
 # lorinda.danae.main.py
-from _spy.vitollino.main import Cena, Sala, Labirinto, Elemento, Texto, STYLE
+from _spy.vitollino.main import Cena, Sala, Labirinto, Elemento, Texto, STYLE, INVENTARIO as inv
 STYLE.update(width=900, height="650px")
 CENAS = "CkepkCR nnBZp4Y 1ZCmVlf W5Q3VcS".split()
 INTER = "XXQmytH UGVhUV6 dIPsMeh bi4tHyr".split()  #
@@ -65,6 +65,7 @@ class TheCave:
         
     def o_sonho(self, *_):
         def acorda(*_):
+            self.e_vecruz.entra(self.limbo)
             self.e_grego.entra(self.sala.sul)
             self.sala.sul.vai()
         local = Cena(SONHO)
@@ -78,10 +79,12 @@ class TheCave:
         ).vai()
         
     def rasga(self, *_):
+        def santo(*_):
+            self.e_jero.vai = lambda: inv.bota(self.e_jero)
 
-        def emenda(self, *_):
-            Texto(local, "Deus o abençoe pela ajuda. Toque no meu retrato e ganhe um santinho").vai()
-            Texto(local, "Deus seja louvado! Agora posso continuar escrevendo a Vulgata").vai()
+        def emenda(*_):
+            santo = Texto(local, "Deus o abençoe pela ajuda. Toque no meu retrato e ganhe um santinho").vai()
+            Texto(local, "Deus seja louvado! Agora posso continuar escrevendo a Vulgata", foi=santo.vai).vai()
             local = self.sanct.norte
         def rasgou(*_):
             self.e_grego.entra(self.e_limbo)
