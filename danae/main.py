@@ -103,21 +103,22 @@ class TheCave:
 class Altares
     def __init__(self, sala, atrio, sanct):
         self.sala, self.atrio, self.sanct = sala, atrio, sanct
-        self.icone = inv["icone"]
+        self.icone = Elemento(self.jero, x=360, y=214, w=147, h=250, tit="icone", drag=True)
+        # self.icone = inv["icone"]
+        inv.bota("icone")
         self.oracao = "Ó Deus, criador do universo, que vos revelastes aos homens, através dos séculos,"
         " pela Sagrada Eucaristia,",
         "e levastes o vosso servo, São Jerônimo, a dedicar a sua vida ao estudo e à meditação da Bíblia,",
         "dai-me a graça de compreender com clareza a vossa palavra quando leio a Bíblia."
         drop =dict(icone=self.oracao)
         self.limbo = Cena("")
-        self.altar_estudio = Elemento(MARCA, x=480, y=100, w=150, h=250, o=0.1, cena=capel[0],
+        self.altar_estudio = Elemento(MARCA, x=480, y=100, w=150, h=250, o=0.2, cena=sala.norte,
             drop=dict(icone=self.oracao_estudio))
-        self.altar_cripta = Elemento(MARCA, x=480, y=100, w=150, h=250, o=0.1, cena=capel[0],
+        self.altar_cripta = Elemento(MARCA, x=480, y=100, w=150, h=250, o=0.2, cena=sala.oeste,
             drop=dict(icone=self.oracao_cripta))
-         = Elemento(MARCA, x=480, y=100, w=150, h=250, o=0.1, cena=capel[0],
+        self.altar_nicho = Elemento(MARCA, x=480, y=100, w=150, h=250, o=0.2, cena=sala.leste,
             drop=dict(icone=self.oracao_nicho))
     def oracao_nicho(self, *_):
-        def fim(*_):
         self.icone.entra(self.sala.leste)
         self.icone.x = 640
         self.icone.y = 340
@@ -131,9 +132,11 @@ class Altares
             inv.tira("icone")
             altar.entra(self.limbo)
             Texto(inv.cena, "Que a graça de Nosso Senhor Jesus Cristo esteja com você!"
-            "Depois de trinta anos de estudos, consegui terminar a minha tradução da Bíblia"
+            "Depois de trinta anos de estudos, consegui terminar a minha tradução da Bíblia").vai()
             
         oracao = self.oracao.pop(0)
+        Texto(inv.cena, oracao).vai()
+        return dict(txt=oracao, foi=fim if self.oracao else bencao)
         
 
 class Puzzle :
@@ -198,6 +201,12 @@ class Puzzle :
             #Casamento cosanguineo/Quatro indivíduas/Dois com anomalias/Dois normais do sexo masculino
             #dar um motivo para fazer esse quebra cabeça
             self.quartos2.vai()
+            
+def main():
+    atrio = Sala(*[CENA % parede for parede in CENAS]) 
+    atrio.norte.vai()
+    Altares(sala, sala, sala)
         
 if __name__ == "__main__":
-    TheCave()
+    #TheCave()
+    main()
