@@ -119,3 +119,10 @@ SyntaxError: invalid syntax
     self.e_jerom.vai = fala.vai
 AttributeError: 'TheCave' object has no attribute 'e_jerom'
 '''},
+{'date': 'Fri Oct 02 2020 17:43:21.674 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 103
+  class Altares
+                ^
+SyntaxError: invalid syntax
+'''},
