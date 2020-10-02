@@ -182,3 +182,23 @@ NameError: name 'atrio' is not defined
     self.icone = Elemento(self.jero, x=360, y=214, w=147, h=250, tit="icone", drag=True)
 AttributeError: 'Altares' object has no attribute 'jero'
 '''},
+{'date': 'Fri Oct 02 2020 17:47:06.935 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 214
+    main()
+  module <module> line 210
+    Altares(sala, sala, sala)
+  module <module> line 117
+    self.altar_estudio = Elemento(MARCA, x=480, y=100, w=150, h=250, o=0.2, cena=sala.norte,
+AttributeError: 'Altares' object has no attribute 'oracao_estudio'
+'''},
