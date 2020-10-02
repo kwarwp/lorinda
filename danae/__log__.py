@@ -99,3 +99,23 @@ SyntaxError: keyword argument repeated
                                     ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Oct 02 2020 13:07:41.389 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 155
+    TheCave()
+  module <module> line 34
+    self.sao_jeronimo()
+  module <module> line 56
+    self.e_jerom.vai = fala.vai
+AttributeError: 'TheCave' object has no attribute 'e_jerom'
+'''},
