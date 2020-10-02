@@ -202,3 +202,10 @@ AttributeError: 'Altares' object has no attribute 'jero'
     self.altar_estudio = Elemento(MARCA, x=480, y=100, w=150, h=250, o=0.2, cena=sala.norte,
 AttributeError: 'Altares' object has no attribute 'oracao_estudio'
 '''},
+{'date': 'Fri Oct 02 2020 20:40:12.767 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 120
+  def ora(
+                                                                                ^
+SyntaxError: invalid syntax
+'''},
