@@ -32,7 +32,7 @@ class TheCave:
         #atrio.leste.vai()
         #sanct.leste.vai()
         self.e_limbo = Elemento("")
-        self.e_grego = Elemento(self.grego, x=510, y=210, w=280, cena=sanct.norte, vai=self.rasga)
+        self.e_grego = Elemento(self.grego, x=510, y=210, w=280, vai=self.rasga)
         self.e_placa = Elemento(self.placa, x=510, y=210, w=280, cena=atrio.leste)
         self.e_jero = Elemento(self.jero, x=360, y=214, w=147, h=250, cena=sanct.leste)
         self.e_jero = Elemento(self.pano, x=360, y=212, w=150, h=250, cena=sanct.leste)
@@ -48,12 +48,12 @@ class TheCave:
             " e você entra em um sonho que ele teve com Jesus",
             foi=self.o_sonho).vai()
             
-        self.e_vecruz = Elemento(MARCA, x=680, y=150, w=90, h=180, o=0.1, cena=self.sala.sul,
+        self.e_vecruz = Elemento(MARCA, x=640, y=150, w=90, h=180, o=0.1, cena=self.sala.sul,
             vai= sonho)
         self.e_vecruz.o = 0.2
         self.capel[1].vai()
         #self.e_vecruz.x, self.e_vecruz.y, self.e_vecruz.w, self.e_vecruz.h = 580, 150, 180, 60
-        self.e_vecruz.x = 640
+        #self.e_vecruz.x = 640
         self.e_vecruz.vai = sonho
         busca = Texto(self.capel[1], "Visite a gruta e toque em um crucifixo sob um foco de luz",
             foi=lambda *_: self.e_vecruz.entra(self.sanct.norte))
@@ -78,21 +78,18 @@ class TheCave:
         ).vai()
         
     def rasga(self, *_):
+
+        def emenda(self, *_):
+            Texto(local, "Deus o abençoe pela ajuda. Toque no meu retrato e ganhe um santinho").vai()
+            Texto(local, "Deus seja louvado! Agora posso continuar escrevendo a Vulgata").vai()
+            local = self.sanct.norte
         def rasgou(*_):
             self.e_grego.entra(self.e_limbo)
-            Puzzle(local, self.emenda, image=self.grego)
+            Puzzle(local, emenda, image=self.grego)
         local = self.sanct.norte
         self.e_jerom.entra(local) 
-        fala = Texto(local, "Você precisa me ajudar a encontrar o pergaminho em grego que eu estava traduzindo", foi=busca.vai)
-        self.e_jerom.vai = fala.vai
-        visao = Texto(local, "Neste sonho, Jesus me repreende porque não tenho me dedicado à leitura da Bíblia"
-        ).vai()
-        Texto(self.sanct.norte, "O pergaminho é antigo, quanto tocado se desfaz em vários pedaços",
+        Texto(local, "O pergaminho é antigo, quanto tocado se desfaz em vários pedaços",
         foi=rasgou).vai()
-        
-    def emenda(self, *_):
-        Texto(self.sanct.norte, "Deus seja louvado! Agora posso continuar escrevendo a Vulgata").vai()
-        local = self.sanct.norte
         
 
 class Puzzle :
