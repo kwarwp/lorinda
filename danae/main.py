@@ -138,72 +138,16 @@ class Altares:
                 self.icone.y = self.iy
                 self.icone.w = 60
                 self.icone.h = 80
-                print(self.oracao_)
-                Texto(local, oracao, foi=lambda*_:fim() if self.oracao_ else lambda*_:bencao()).vai()
-                
-            
-            
-            
-        self.sala, self.atrio, self.sanct = sala, atrio, sanct
-        self.icone = Elemento(self.jero, x=360, y=214, w=147, h=250, o=1, tit="icone", drag=True)
-        self.icone.w=60
-        self.icone.h=80
-        # self.icone = inv["icone"]
+                Texto(local, oracao, foi=lambda*_:fim() if self.oracao_ else bencao()).vai()
+
         inv.bota(self.icone)
         self.oracao = ["Ó Deus, criador do universo, que vos revelastes aos homens, através dos séculos,"
         " pela Sagrada Eucaristia,",
         "e levastes o vosso servo, São Jerônimo, a dedicar a sua vida ao estudo e à meditação da Bíblia,",
         "dai-me a graça de compreender com clareza a vossa palavra quando leio a Bíblia."]
-        drop =dict(icone=self.oracao)
-        self.limbo = Cena("")
-        '''
-        self.altar_estudio = Elemento(MARCA, x=480, y=260, w=250, h=150, o=0.2, cena=sala.norte,
-            drop=dict(icone=self.oracao_estudio))
-        self.altar_cripta = Elemento(MARCA, x=480, y=300, w=250, h=150, o=0.2, cena=sala.oeste,
-            drop=dict(icone=self.oracao_cripta))
-        self.altar_nicho = Elemento(MARCA, x=480, y=220, w=250, h=150, o=0.2, cena=sala.sul,
-            drop=dict(icone=self.oracao_nicho))
-        '''
         self.altar_estudio = Altar(self.oracao, x=480, y=260, ix=280, iy=240, cena=sala.norte)
         self.altar_cripta = Altar(self.oracao, x=480, y=260, ix=280, iy=240, cena=sala.oeste)
         self.altar_nicho = Altar(self.oracao, x=480, y=260, ix=280, iy=240, cena=sala.sul)
-    def oracao_nicho(self, *_):
-        local= self.sala.sul
-        #inv.tira("icone")
-        self.icone.entra(local)
-        self.icone.x = 640
-        self.icone.y = 340
-        Texto(local, **self.ora(self.altar_nicho))
-    def oracao_cripta(self, *_):
-        local= self.sala.oeste
-        self.icone.entra(local)
-        self.icone.x = 640
-        self.icone.y = 340
-        Texto(local, **self.ora(self.altar_cripta))
-    def oracao_estudio(self, *_):
-        local= self.sala.norte
-        self.icone.entra(local)
-        self.icone.x = 280
-        self.icone.y = 240
-        self.icone.w=60
-        self.icone.h=80
-        Texto(local, **self.ora(self.altar_estudio))
-        
-    def ora(self, oaltar):
-        altar = oaltar
-        ico, lim = self.icone, self.limbo
-        def fim(*_):
-            inv.bota(ico)
-            altar.entra(lim)
-        def bencao(*_):
-            inv.tira("icone")
-            altar.entra(ico)
-            Texto(inv.cena, "Que a graça de Nosso Senhor Jesus Cristo esteja com você!"
-            "Depois de trinta anos de estudos, consegui terminar a minha tradução da Bíblia").vai()
-            
-        oracao = self.oracao.pop(0)
-        Texto(inv.cena, oracao).vai()
-        return dict(tit=oracao, foi=lambda*_:fim() if self.oracao else lambda*_:bencao())
         
 
 class Puzzle :
