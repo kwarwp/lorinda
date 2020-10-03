@@ -103,11 +103,15 @@ class TheCave:
 
 class Altares:
     def __init__(self, sala, atrio, sanct):
-        self.icone = Elemento(self.jero, x=360, y=214, w=147, h=250, o=1, tit="icone", drag=True)
+            
+        self.jero, self.placa, self.cruz , self.grego , self.vulgata = [
+            CENA % obj for obj in PROP]
+        self.icone = icon = Elemento(self.jero, x=360, y=214, w=147, h=250, o=1, tit="icone", drag=True)
         self.icone.w=60
         self.icone.h=80
         class Altar:
             def __init__(self,oracao, x, y, ix, iy, cena):
+                self.icone = icon
                 self.oracao_, self.local, self.ix, self.iy = oracao, cena, ix, iy
                 self.altar = Elemento(MARCA, x=x, y=y, w=250, h=150, o=0.2, cena=cena,
                     drop=dict(icone=self.orar))
@@ -117,27 +121,29 @@ class Altares:
                     inv.bota(self.icone)
                     self.altar.entra(self.limbo)
                 def bencao(*_):
-                    inv.tira("icone")
+                    #inv.tira("icone")
                     self.altar.entra(self.limbo)
-                    Texto(inv.cena, "Que a graça de Nosso Senhor Jesus Cristo esteja com você!"
-                    "Depois de trinta anos de estudos, consegui terminar a minha tradução da Bíblia").vai()
+                    self.icone.entra(self.limbo)
+                    Texto(inv.cena, "Que a graça de Nosso Senhor Jesus Cristo esteja com você!").vai()
+                    "Depois de trinta anos de estudos, consegui terminar a minha tradução da Bíblia"
                 def ora():
                     oracao = self.oracao_.pop(0)
                     Texto(inv.cena, oracao).vai()
                     return dict(tit=oracao, )
+                oracao = self.oracao_.pop(0)
                 local= self.local
-                #inv.tira("icone")
+                inv.tira("icone")
                 self.icone.entra(local)
                 self.icone.x = self.ix
                 self.icone.y = self.iy
-                Texto(local, oracao, foi=lambda*_:fim() if self.oracao_ else lambda*_:bencao())
+                self.icone.w = 60
+                self.icone.h = 80
+                print(self.oracao_)
+                Texto(local, oracao, foi=lambda*_:fim() if self.oracao_ else lambda*_:bencao()).vai()
                 
             
             
             
-            
-        self.jero, self.placa, self.cruz , self.grego , self.vulgata = [
-            CENA % obj for obj in PROP]
         self.sala, self.atrio, self.sanct = sala, atrio, sanct
         self.icone = Elemento(self.jero, x=360, y=214, w=147, h=250, o=1, tit="icone", drag=True)
         self.icone.w=60
