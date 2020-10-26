@@ -167,8 +167,8 @@ class gameg():
         livro = Elemento (img = LIVRO)
         #livro.entra(biblioteca)
         que = Cena(img = QUE)
-        #casa.vai()
-        self.biblioteca.vai()
+        casa.vai()
+        # self.biblioteca.vai()
     def mostra_biblioteca(self, *_):        
         self.biblioteca.vai()
         self.biblioteca.direita = self.pergaminho
