@@ -46,7 +46,7 @@ class Bala:
         self.sonho = Cena(img=SONHO)
         self.cr = Cena(img=CURIOSIDADE)
         self.caverna = Cena(img=CAVERNA)
-        #self.pl = Elemento(img=PAPA_LIBERIO)
+        #self.pl = Elemento(img=PAPA_LIBERI
         self.pl = Cena(img=PAPA_LIBERIO)
         self.j_c = Cena(img=JERONIMO_CAVERNA)
         self.biblia = Cena(img=BIBLIA)
@@ -59,7 +59,7 @@ class Bala:
         self.pd = Cena(img=PAPAD)
         self.f_t.vai()
         self.entrou_padre()
-        self.entrou_11()
+        
 
     def entrou_padre(self, *_):
         
