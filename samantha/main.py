@@ -265,7 +265,7 @@ class Bala:
             respondeu = dict(
                 A=Texto(self.frase, "O autor desta frase é João Paulo II"),
                 B=Texto(self.frase, "Esta frase é pensamento de Santa Teresinha"),
-                C=Texto(self.frase, "Correto!!",foi=self.conhecida),
+                C=Texto(self.frase, "Correto!!",foi=self.sagrada),
             )
             respondeu[optou].vai()
 
@@ -276,15 +276,15 @@ class Bala:
                                B="O bom Deus, que conhece as recompensas que Ele reserva a seus amigos, gosta, muitas vezes, de fazê-los ganhar seus tesouros por meio de sacrifícios",
                                C="Ignorar as Escrituras Sagradas é ignorar a Cristo.").vai
         self.padre.entra(self.frase)
-        self.conhecida = Texto(self.frase,
+        self.sagrada = Texto(self.frase,
                                "A frase mais conhecida de nosso padroeiro é:  Ignorar as Escrituras Sagradas é ignorar a Cristo", foi=entrou_final).vai
         self.frase.vai()
     
     def entrou_final(self, *_):
         self.padre.entra(self.cf)
         self.padre.vai = Texto(self.cf,
-                               "Espero que tenham gostado de aprender um pouco mais da história do nosso amdado padroeiro São Jerônimo!").vai
-        self.padre.vai = Texto(self.cf, " Até a próxima !!!").vai
+                               "Espero que tenham gostado de aprender um pouco mais da história do nosso amdado padroeiro São Jerônimo!", foi=self.fim).vai
+        self.fim = Texto(self.cf, " Até a próxima !!!").vai
 
-
+        self.cf.vai()
 Bala()
