@@ -561,3 +561,10 @@ TypeError: entra() got an unexpected keyword argument 'Texto'
     self.padre.entra(self.f_t, Texto = "Olá pessoal, certinho?").vai 
 TypeError: entra() got an unexpected keyword argument 'Texto'
 '''},
+{'date': 'Fri Nov 13 2020 17:12:22.805 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 160
+  self.ordenado = Texto(self.ordenacao,
+                                                                                                                                                                                                ^
+SyntaxError: invalid syntax
+'''},
