@@ -21,7 +21,7 @@ ORDDENACAO_SACERDOTAL = "https://imgur.com/qZ3zINX.jpg"
 SONHO = "https://i.imgur.com/uHw57i1.jpg"
 JERONIMO_CAVERNA = ""
 BIBLIA = "https://imgur.com/QPELbOd.jpg"
-VULGATA = ""
+VULGATA = "https://i.imgur.com/Uyy86ge.jpg"
 BELEM = "https://imgur.com/sf5X4cr.jpg"
 FOTO_DO_PADROEIRO = "https://imgur.com/Y0CZrXO.jpg"
 FRASE = "https://imgur.com/LR9Tnyf.jpg"
@@ -59,7 +59,7 @@ class Bala:
         self.pd = Cena(img=PAPAD)
         self.f_t.vai()
         self.entrou_padre()
-        self.entrou_6()
+        self.entrou_9()
 
     def entrou_padre(self, *_):
         
@@ -198,36 +198,35 @@ class Bala:
     def entrou_8(self, *_):
         def resposta(optou):
             respondeu = dict(
-                A=Texto(self.ft_p, ""),
-                B=Texto(self.ft_p, ""),
-                C=Texto(self.ft_p, ""),
+                A=Texto(self.vulgata, "não acertou"),
+                B=Texto(self.vulgata, "poxa, não é"),
+                C=Texto(self.vulgata, "isso mesmo, esta sabendo!", foi=self.traducao),
             )
             respondeu[optou].vai()
 
-        self.ft_p.vai()
-        self.padre.entra(self.ft_p)
-        self.padre.vai = Texto(self.ft_p, "Qual nome recebeu a tradução da biblía?",
+        
+        self.padre.vai = Texto(self.vulgata, "Qual nome recebeu a tradução da biblía?",
                                foi=resposta, A="Livro", B="Enciclopédia", C="Vulgata").vai
         self.padre.entra(self.vulgata)
-        self.padre.vai = Texto(self.vulgata, "A tradução da sagrada escritura recebeu o nome Vulgata.").vai
-
+        self.traducao = Texto(self.vulgata, "A tradução da sagrada escritura recebeu o nome Vulgata.", foi=self.entrou_9).vai
+        self.vulgata.vai()
     def entrou_9(self, *_):
         def resposta(optou):
             respondeu = dict(
-                A=Texto(self.ft_p, ""),
-                B=Texto(self.ft_p, ""),
-                C=Texto(self.ft_p, ""),
+                A=Texto(self.belem, "isso mesmo", foi=self.traduzir),
+                B=Texto(self.belem, "ainda não"),
+                C=Texto(self.belem, "não foi "),
             )
             respondeu[optou].vai()
 
-        self.ft_p.vai()
-        self.padre.entra(self.ft_p)
-        self.padre.vai = Texto(self.ft_p, "Para onde Jerônimo mudou-se após traduzir a Biblía?",
+       
+        self.padre.vai = Texto(self.belem, "Para onde Jerônimo mudou-se após traduzir a Biblía?",
                                foi=resposta, A="Belém", B="Egito", C="Índia").vai
         self.padre.entra(self.belem)
-        self.padre.vai = Texto(self.belem,
-                               "Após traduzir a sagrada escritura , Jerônimo mudou-se para Belém a cidade onde nasceu nosso Salvador.").vai
-
+        self.traduzir = Texto(self.belem,
+                               "Após traduzir a sagrada escritura , Jerônimo mudou-se para Belém a cidade onde nasceu nosso Salvador.",
+                              foi=self.entrou_10 ).vai
+        self.belem.vai()
     def entrou_10(self, *_):
         def resposta(optou):
             respondeu = dict(
