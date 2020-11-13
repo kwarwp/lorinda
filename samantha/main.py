@@ -192,7 +192,7 @@ class Bala:
                                foi=resposta, A="Chinês, Inglês e Português.", B="Grego, Hebraico e Aramaico.",
                                C="Russo, Espanhol e latim.").vai
         self.padre.entra(self.biblia)
-        self.escrituras = Texto(self.biblia, "As escrituras foram traduzidas do grego, hebraico e aramaico.").vai
+        self.escrituras = Texto(self.biblia, "As escrituras foram traduzidas do grego, hebraico e aramaico.",foi=self.entrou_8).vai
         self.biblia.vai()
 
     def entrou_8(self, *_):
