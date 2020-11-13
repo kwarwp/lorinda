@@ -58,11 +58,12 @@ class Bala:
         self.entrou_padre()
 
     def entrou_padre(self, *_):
-        self.padre.entra(self.f_t)
-        fala = Texto(self.f_t, "Olá pessoal, certinho?", foi=self.entrou_1)
-        self.padre.vai = Texto(self.f_t,
-                               "Eu sou o Padre Flávio e vou te ajudar nessa aventura sobre a história do nosso amado padroeiro",
-                               foi=fala.vai).vai
+        self.padre.entra(self.f_t, Texto = "Olá pessoal, certinho?").vai 
+       # self.padre.entra(self.f_t)
+       # fala = Texto(self.f_t, "Olá pessoal, certinho?", foi=self.entrou_1)
+       # self.padre.vai = Texto(self.f_t,
+                               #"Eu sou o Padre Flávio e vou te ajudar nessa aventura sobre a história do nosso amado padroeiro",
+                               #foi=fala.vai).vai
 
     def entrou_1(self, *_):
         def resposta(optou):
