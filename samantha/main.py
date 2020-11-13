@@ -277,14 +277,14 @@ class Bala:
                                C="Ignorar as Escrituras Sagradas é ignorar a Cristo.").vai
         self.padre.entra(self.frase)
         self.sagrada = Texto(self.frase,
-                               "A frase mais conhecida de nosso padroeiro é:  Ignorar as Escrituras Sagradas é ignorar a Cristo", foi=entrou_final).vai
+                               "A frase mais conhecida de nosso padroeiro é:  Ignorar as Escrituras Sagradas é ignorar a Cristo", foi=self.entrou_final).vai
         self.frase.vai()
     
     def entrou_final(self, *_):
         self.padre.entra(self.cf)
+        self.fim = Texto(self.cf, " Até a próxima !!!").vai
         self.padre.vai = Texto(self.cf,
                                "Espero que tenham gostado de aprender um pouco mais da história do nosso amdado padroeiro São Jerônimo!", foi=self.fim).vai
-        self.fim = Texto(self.cf, " Até a próxima !!!").vai
 
         self.cf.vai()
 Bala()
