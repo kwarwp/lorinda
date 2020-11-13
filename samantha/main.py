@@ -17,7 +17,8 @@ PAPA_LIBERIO = "https://imgur.com/vlIrMHW.jpg"
 BATIZADO_JERONIMO = ""
 ROMA = "https://imgur.com/Zh5yUpP.jpg"
 ORDDENACAO_SACERDOTAL = "https://imgur.com/qZ3zINX.jpg"
-SONHO = "blob:https://web.whatsapp.com/2960c698-2f09-4eff-abd9-6ee5d4b7ee47"
+#SONHO = "blob:https://web.whatsapp.com/2960c698-2f09-4eff-abd9-6ee5d4b7ee47"
+SONHO = "https://i.imgur.com/uHw57i1.jpg"
 JERONIMO_CAVERNA = ""
 BIBLIA = "https://imgur.com/QPELbOd.jpg"
 VULGATA = ""
@@ -45,7 +46,8 @@ class Bala:
         self.sonho = Cena(img=SONHO)
         self.cr = Cena(img=CURIOSIDADE)
         self.caverna = Cena(img=CAVERNA)
-        self.pl = Elemento(img=PAPA_LIBERIO)
+        #self.pl = Elemento(img=PAPA_LIBERIO)
+        self.pl = Cena(img=PAPA_LIBERIO)
         self.j_c = Cena(img=JERONIMO_CAVERNA)
         self.biblia = Cena(img=BIBLIA)
         self.vulgata = Cena(img=VULGATA)
@@ -56,14 +58,15 @@ class Bala:
         self.pd = Elemento(img=PAPAD)
         self.f_t.vai()
         self.entrou_padre()
+        self.entrou_4()
 
     def entrou_padre(self, *_):
         
         self.padre.entra(self.f_t)
-        Texto(self.f_t, "Olá pessoal, certinho?", foi=self.entrou_1).vai()
+        Texto(self.f_t, "Olá pessoal, certinho?" ).vai()
         self.padre.vai = Texto(self.f_t,
                                "Eu sou o Padre Flávio e vou te ajudar nessa aventura sobre a história do nosso amado padroeiro",
-                               ).vai
+                               foi=self.entrou_1).vai
 
     def entrou_1(self, *_):
         def resposta(optou):
@@ -87,74 +90,76 @@ class Bala:
     def entrou_2(self, *_):
         def resposta(optou):
             respondeu = dict(
-                A=Texto(self.ft_p, "Parabéns! Você acertou"),
-                B=Texto(self.ft_p, "Essa grave doença veio depois."),
-                C=Texto(self.ft_p, "O sonho aconteceu em Roma"),
+                A=Texto(self.roma, "Parabéns! Você acertou", foi=self.entrou_3),
+                B=Texto(self.roma, "Essa grave doença veio depois."),
+                C=Texto(self.roma, "O sonho aconteceu em Roma"),
             )
             respondeu[optou].vai()
 
         self.ft_p.vai()
         self.padre.entra(self.ft_p)
-        self.padre.vai = Texto(self.ft_p, "Após qual acontecimento ele foi para Roma estudar?",
-                               foi=resposta, A="A morte de seus pais", B="Uma grave doença", C="Um sonho").vai
+        acontecimento = Texto(self.roma, "Após qual acontecimento ele foi para Roma estudar?",
+                               foi=resposta, A="A morte de seus pais", B="Uma grave doença", C="Um sonho")
         self.ft_p.vai()
         self.padre.entra(self.roma)
         self.padre.vai = Texto(self.roma,
-                               "Após a morte de seus pais, Jerônimo foi para Roma estudar e durante sua permanencia teve um sonho muito importante para sua conversão.").vai
+                               "Após a morte de seus pais, Jerônimo foi para Roma estudar e durante sua permanencia teve um sonho muito importante para sua conversão."
+                               , foi=acontecimento.vai).vai
         self.roma.vai()
 
     def entrou_3(self, *_):
         def resposta(optou):
             respondeu = dict(
-                A=Texto(self.ft_p, "Também seria uma honra, mas não foi com nossa mãezinha."),
-                B=Texto(self.ft_p, "O Aracanjo não estava presente no sonho!"),
-                C=Texto(self.ft_p, "Você acertou")
+                A=Texto(self.sonho, "Também seria uma honra, mas não foi com nossa mãezinha."),
+                B=Texto(self.sonho, "O Aracanjo não estava presente no sonho!"),
+                C=Texto(self.sonho, "Você acertou", foi=self.entrou_4)
             )
             respondeu[optou].vai()
-            self.ft_p.vai()
+            # self.ft_p.vai()
 
         self.padre.entra(self.ft_p)
-        self.padre.vai = Texto(self.ft_p, "Você consegue adivinhar com quem foi esse sonho?",
+        sonhou = Texto(self.sonho, "Você consegue adivinhar com quem foi esse sonho?",
                                foi=resposta, A="Nossa Senhora", B="São Miguel", C="Jesus Cristo").vai
         self.padre.entra(self.sonho)
         self.padre.vai = Texto(self.sonho,
-                               "No sonho, Jerônimo apresentava-se como cristão e era repreedindo pelo próprio Cristo por estar faltando com a verdade.").vai
-
+                               "No sonho, Jerônimo apresentava-se como cristão e era repreedindo pelo próprio Cristo por estar faltando com a verdade.",
+                               foi = sonhou).vai
+        self.sonho.vai()
     def entrou_4(self, *_):
         def resposta(optou):
             respondeu = dict(
-                A=Texto(self.ft_p,"" ),
-                B=Texto(self.ft_p,""),
-                C=Texto(self.ft_p,"" )
+                A=Texto(self.pl,"Não tinha nascido" ),
+                B=Texto(self.pl,"Acertou", foi=self.entrou_5),
+                C=Texto(self.pl,"Não tinha nascido" )
             )
             respondeu[optou].vai()
-            self.ft_p.vai()
 
         self.padre.entra(self.ft_p)
-        self.padre.vai = Texto(self.ft_p, "Qual destes Papas batizou nosso padroeiro?",
+        batizou = Texto(self.pl, "Qual destes Papas batizou nosso padroeiro?",
                                foi=resposta, A="Papa Francisco", B="Papa Libério", C="Papa Bento XVI").vai
         self.padre.entra(self.pl)
         self.padre.vai = Texto(self.pl,
-                               "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.").vai
-        self.padre.vai = Texto(self.ft_p,
-                               "Aos 25 anos de idade Jerônimo foi batizado pelo Papa Libério no fim de sua permanencia em Roma.").vai
+                               "Aos 25 anos de idade Jerônimo foi batizado pelo Papa no fim de sua permanencia em Roma.",
+                               foi = batizou).vai
+        self.pl.vai()
 
     def entrou_5(self, *_):
         def resposta(optou):
             respondeu = dict(
-                A=Texto(self.ft_p, ""),
-                B=Texto(self.ft_p, ""),
-                C=Texto(self.ft_p, ""),
+                A=Texto(self.ordenacao, "OOps"),
+                B=Texto(self.ordenacao, "Acertou", foi= self.ordenado),
+                C=Texto(self.ordenacao, "OOps"),
             )
             respondeu[optou].vai()
 
         self.ft_p.vai()
         self.padre.entra(self.ft_p)
-        self.padre.vai = Texto(self.ft_p, "Você sabe em qual ano São Jerônimo foi ordenado sacerdote?",
-                               foi=resposta, A="356", B="479", C="450").vai
+        self.padre.vai = Texto(self.ordenacao, "Você sabe em qual ano São Jerônimo foi ordenado sacerdote?",
+                               foi=resposta, A="356", B="379", C="450").vai
         self.padre.entra(self.ordenacao)
-        self.padre.vai = Texto(self.ordenacao,
+        self.ordenado = Texto(self.ordenacao,
                                "Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
+        self.ordenacao.vai()
 
     def entrou_6(self, *_):
         def resposta(optou):
