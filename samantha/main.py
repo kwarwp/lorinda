@@ -12,7 +12,7 @@ DALMACIA = "https://imgur.com/dyLIQib.jpg"
 JERONIMO_JOVEM = "blob:https://web.whatsapp.com/edad8633-e384-4538-b7f3-ddd4837df1c0"
 FUNDO_PERGUNTAS = "https://imgur.com/w7OnO7L.jpg"
 CURIOSIDADE = ""
-LEAO = "blob:https://web.whatsapp.com/78b2c07d-57e3-4b38-92d1-2dfff506a540"
+LEAO = "https://1.bp.blogspot.com/-59thFerIMG4/VglSIs30pcI/AAAAAAAAIXE/EI8WJS59Xv0/s1600/sao-jeronimo11.jpg"
 PAPA_LIBERIO = "https://imgur.com/vlIrMHW.jpg"
 BATIZADO_JERONIMO = ""
 ROMA = "https://imgur.com/Zh5yUpP.jpg"
@@ -59,7 +59,7 @@ class Bala:
         self.pd = Cena(img=PAPAD)
         self.f_t.vai()
         self.entrou_padre()
-        self.entrou_9()
+        self.entrou_10()
 
     def entrou_padre(self, *_):
         
@@ -230,36 +230,35 @@ class Bala:
     def entrou_10(self, *_):
         def resposta(optou):
             respondeu = dict(
-                A=Texto(self.ft_p, ""),
-                B=Texto(self.ft_p, ""),
-                C=Texto(self.ft_p, ""),
+                A=Texto(self.f_p, "depois"),
+                B=Texto(self.f_p, "sim", foi=self.morte),
+                C=Texto(self.f_p, "foi depois"),
             )
             respondeu[optou].vai()
 
-        self.ft_p.vai()
-        self.padre.entra(self.ft_p)
-        self.padre.vai = Texto(self.ft_p, "Em qual dia comemoramos o dia de São Jerônimo?",
+
+        self.padre.vai = Texto(self.f_p, "Em qual dia comemoramos o dia de São Jerônimo?",
                                foi=resposta, A="01 de setembro", B="30 de outubro", C="30 de setembro").vai
         self.padre.entra(self.f_p)
-        self.padre.vai = Texto(self.f_p,
-                               "Jerônimo morreu no dia 30 de setembro de 420 em Belém, por isso o dia da Biblía e de São Jerônimo são comemorados no dia 30 de setembro.").vai
-
+        self.morte = Texto(self.f_p,
+                               "Jerônimo morreu no dia 30 de setembro de 420 em Belém, por isso o dia da Biblía e de São Jerônimo são comemorados no dia 30 de setembro."
+                               ,foi=self.entrou_11).vai
+        self.f_p.vai()
     def entrou_11(self, *_):
         def resposta(optou):
             respondeu = dict(
-                A=Texto(self.ft_p, ""),
-                B=Texto(self.ft_p, ""),
-                C=Texto(self.ft_p, ""),
+                A=Texto(self.leao, "nao"),
+                B=Texto(self.leao, "sim", foi=self.animal),
+                C=Texto(self.leao, "não"),
             )
             respondeu[optou].vai()
 
-        self.ft_p.vai()
-        self.padre.entra(self.ft_p)
-        self.padre.vai = Texto(self.ft_p, "Qual o animal podemos encontar ao lado de São Jerônimo?",
+        
+        self.padre.vai = Texto(self.leao, "Qual o animal podemos encontar ao lado de São Jerônimo?",
                                foi=resposta, A="sapo", B="leão", C="cordeiro").vai
         self.padre.entra(self.leao)
-        self.padre.vai = Texto(self.leao, "É um leão!!").vai
-
+        self.animal = Texto(self.leao, "É um leão!!",foi=self.entrou_12).vai
+        self.leao.vai()
     def entrou_12(self, *_):
         def resposta(optou):
             respondeu = dict(
