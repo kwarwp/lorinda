@@ -568,3 +568,10 @@ TypeError: entra() got an unexpected keyword argument 'Texto'
                                                                                                                                                                                                 ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Nov 13 2020 17:13:10.671 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 179
+  self.damaso = Texto(self.pd,
+                                                                                                                                                                                                                                                                ^
+SyntaxError: invalid syntax
+'''},
