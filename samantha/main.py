@@ -55,10 +55,11 @@ class Bala:
         self.f_p = Cena(img=FOTO_DO_PADROEIRO)
         self.frase = Cena(img=FRASE)
         self.cf = Cena(img=CENA_FINAL)
-        self.pd = Elemento(img=PAPAD)
+        #self.pd = Elemento(img=PAPAD)
+        self.pd = Cena(img=PAPAD)
         self.f_t.vai()
         self.entrou_padre()
-        self.entrou_4()
+        self.entrou_6()
 
     def entrou_padre(self, *_):
         
@@ -158,26 +159,28 @@ class Bala:
                                foi=resposta, A="356", B="379", C="450").vai
         self.padre.entra(self.ordenacao)
         self.ordenado = Texto(self.ordenacao,
-                               "Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.").vai
+                               "Jerônimo foi ordenado sacerdote no ano de 379, retirando-se para dedicar-se ao estudo.",
+                               foi=self.entrou_6).vai
         self.ordenacao.vai()
 
     def entrou_6(self, *_):
         def resposta(optou):
             respondeu = dict(
-                A=Texto(self.ft_p, ""),
-                B=Texto(self.ft_p, ""),
-                C=Texto(self.ft_p, ""),
+                A=Texto(self.pd, "Acertou", foi=self.damaso),
+                B=Texto(self.pd, "Nope"),
+                C=Texto(self.pd, "Nope"),
             )
             respondeu[optou].vai()
 
         self.ft_p.vai()
         self.padre.entra(self.ft_p)
-        self.padre.vai = Texto(self.ft_p, "A pedido de qual papa Jerônimo traduziu as escrituras?",
+        self.padre.vai = Texto(self.pd, "A pedido de qual papa Jerônimo traduziu as escrituras?",
                                foi=resposta, A="Papa Damaso", B="Papa João Paulo II", C="Papa Leão XII").vai
         self.padre.entra(self.pd)
-        self.padre.vai = Texto(self.pd,
-                               "Por ter aprendido as linguas originais para melhor compreender as escrituras, Nosso padroeiro pôde a pedido do Papa Damaso traduzir as escrituras para o Latim.").vai
-
+        self.damaso = Texto(self.pd,
+                               "Por ter aprendido as linguas originais para melhor compreender as escrituras, Nosso padroeiro pôde a pedido do Papa Damaso traduzir as escrituras para o Latim.",
+                               foi=self.entrou_7).vai
+        self.pd.vai()
     def entro_7(self, *_):
         def resposta(optou):
             respondeu = dict(
