@@ -60,10 +60,10 @@ class Bala:
     def entrou_padre(self, *_):
         
         self.padre.entra(self.f_t)
-        fala = Texto(self.f_t, "Olá pessoal, certinho?", foi=self.entrou_1)
+        Texto(self.f_t, "Olá pessoal, certinho?", foi=self.entrou_1).vai()
         self.padre.vai = Texto(self.f_t,
                                "Eu sou o Padre Flávio e vou te ajudar nessa aventura sobre a história do nosso amado padroeiro",
-                               foi=fala.vai).vai
+                               ).vai
 
     def entrou_1(self, *_):
         def resposta(optou):
