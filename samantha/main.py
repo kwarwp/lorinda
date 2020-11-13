@@ -26,7 +26,7 @@ BELEM = "https://imgur.com/sf5X4cr.jpg"
 FOTO_DO_PADROEIRO = "https://imgur.com/Y0CZrXO.jpg"
 FRASE = "https://imgur.com/LR9Tnyf.jpg"
 CENA_FINAL = "https://imgur.com/kRQyK02.jpg"
-PAPAD = "https://imgur.com/a/bO5ZNKx.jpg"
+PAPAD = "https://i.imgur.com/tav4zK0.jpeg"
 CAVERNA = "https://imgur.com/fBFCru5.jpg"
 FOTO_PAROQUIA = "https://imgur.com/zFwNqPr.jpg"
 
@@ -172,8 +172,6 @@ class Bala:
             )
             respondeu[optou].vai()
 
-        self.ft_p.vai()
-        self.padre.entra(self.ft_p)
         self.padre.vai = Texto(self.pd, "A pedido de qual papa Jerônimo traduziu as escrituras?",
                                foi=resposta, A="Papa Damaso", B="Papa João Paulo II", C="Papa Leão XII").vai
         self.padre.entra(self.pd)
@@ -181,22 +179,21 @@ class Bala:
                                "Por ter aprendido as linguas originais para melhor compreender as escrituras, Nosso padroeiro pôde a pedido do Papa Damaso traduzir as escrituras para o Latim.",
                                foi=self.entrou_7).vai
         self.pd.vai()
-    def entro_7(self, *_):
+    def entrou_7(self, *_):
         def resposta(optou):
             respondeu = dict(
-                A=Texto(self.ft_p, ""),
-                B=Texto(self.ft_p, ""),
-                C=Texto(self.ft_p, ""),
+                A=Texto(self.biblia, "sqn"),
+                B=Texto(self.biblia, "Acertou", foi=self.escrituras),
+                C=Texto(self.biblia, "sqn"),
             )
             respondeu[optou].vai()
 
-        self.ft_p.vai()
-        self.padre.entra(self.ft_p)
-        self.padre.vai = Texto(self.ft_p, "De quais línguas foi traduzida a Sagrada Escritura? ",
+        self.padre.vai = Texto(self.biblia, "De quais línguas foi traduzida a Sagrada Escritura? ",
                                foi=resposta, A="Chinês, Inglês e Português.", B="Grego, Hebraico e Aramaico.",
                                C="Russo, Espanhol e latim.").vai
         self.padre.entra(self.biblia)
-        self.padre.vai = Texto(self.biblia, "As escrituras foram traduzidas do grego, hebraico e aramaico.").vai
+        self.escrituras = Texto(self.biblia, "As escrituras foram traduzidas do grego, hebraico e aramaico.").vai
+        self.biblia.vai()
 
     def entrou_8(self, *_):
         def resposta(optou):
