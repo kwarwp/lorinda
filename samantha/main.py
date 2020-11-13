@@ -219,7 +219,7 @@ class Bala:
             )
             respondeu[optou].vai()
 
-       
+        
         self.padre.vai = Texto(self.belem, "Para onde Jerônimo mudou-se após traduzir a Biblía?",
                                foi=resposta, A="Belém", B="Egito", C="Índia").vai
         self.padre.entra(self.belem)
@@ -262,23 +262,22 @@ class Bala:
     def entrou_12(self, *_):
         def resposta(optou):
             respondeu = dict(
-                A=Texto(self.ft_p, "O autor desta frase é João Paulo II"),
-                B=Texto(self.ft_p, "Esta frase é pensamento de Santa Teresinha"),
-                C=Texto(self.ft_p, "Correto!!"),
+                A=Texto(self.frase, "O autor desta frase é João Paulo II"),
+                B=Texto(self.frase, "Esta frase é pensamento de Santa Teresinha"),
+                C=Texto(self.frase, "Correto!!",foi=self.conhecida),
             )
             respondeu[optou].vai()
 
-        self.ft_p.vai()
-        self.padre.entra(self.ft_p)
-        self.padre.vai = Texto(self.ft_p, "Qual destas é uma frase de São Jerônimo",
+        
+        self.padre.vai = Texto(self.frase, "Qual destas é uma frase de São Jerônimo",
                                foi=resposta,
                                A="Depositemos sempre a nossa confiança no Espírito Santo, para descobrirmos em cada situação nova uma ocasião para alargar o amor redentor de Cristo.",
                                B="O bom Deus, que conhece as recompensas que Ele reserva a seus amigos, gosta, muitas vezes, de fazê-los ganhar seus tesouros por meio de sacrifícios",
                                C="Ignorar as Escrituras Sagradas é ignorar a Cristo.").vai
         self.padre.entra(self.frase)
-        self.padre.vai = Texto(self.frase,
-                               "A frase mais conhecida de nosso padroeiro é:  Ignorar as Escrituras Sagradas é ignorar a Cristo").vai
-    
+        self.conhecida = Texto(self.frase,
+                               "A frase mais conhecida de nosso padroeiro é:  Ignorar as Escrituras Sagradas é ignorar a Cristo", foi=entrou_final).vai
+        self.frase.vai()
     
     def entrou_final(self, *_):
         self.padre.entra(self.cf)
