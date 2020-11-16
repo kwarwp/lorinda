@@ -231,8 +231,8 @@ class Bala:
         def resposta(optou):
             respondeu = dict(
                 A=Texto(self.f_p, "depois"),
-                B=Texto(self.f_p, "sim", foi=self.morte),
-                C=Texto(self.f_p, "foi depois"),
+                B=Texto(self.f_p, "foi antes"),
+                C=Texto(self.f_p, "sim", foi=self.morte),
             )
             respondeu[optou].vai()
 
