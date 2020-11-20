@@ -257,7 +257,7 @@ class Bala:
         self.padre.vai = Texto(self.leao, "Qual o animal podemos encontar ao lado de São Jerônimo?",
                                foi=resposta, A="sapo", B="leão", C="cordeiro").vai
         self.padre.entra(self.leao)
-        self.animal = Texto(self.leao, "É um leão!!", foi=self.entrou_12).vai
+        self.animal = Texto(self.leao, "Isso mesmo, é um leão!!", foi=self.entrou_12).vai
         self.leao.vai()
         
     def entrou_12(self, *_):
