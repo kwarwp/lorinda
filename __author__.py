@@ -12,3 +12,5 @@
 "sara": {"author_nick": "PIBIC-EM 2020", "author_name": "PIBIC-EM 2020", "author_email": "", "author_org": "LABASE", "author_site": "http://labase.superpython.net", "author_public": "on"},
 "stacy": {"author_nick": "PIBIC-EM 2020", "author_name": "PIBIC-EM 2020", "author_email": "", "author_org": "LABASE", "author_site": "http://labase.superpython.net", "author_public": "on"},
 "meredith": {"author_nick": "PIBIC-EM 2020", "author_name": "PIBIC-EM 2020", "author_email": "", "author_org": "LABASE", "author_site": "http://labase.superpython.net", "author_public": "on"},
+"libby": {"author_nick": "Jogo Célula 21", "author_name": "Jogo Célula 21", "author_email": "", "author_org": "LABASE", "author_site": "http://labase.superpython.net", "author_public": "on"},
+"kellee": {"author_nick": "Jogo Célula 21", "author_name": "Jogo Célula 21", "author_email": "", "author_org": "LABASE", "author_site": "http://labase.superpython.net", "author_public": "on"},
