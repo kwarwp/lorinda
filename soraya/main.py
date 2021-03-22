@@ -7,7 +7,7 @@ VILA_DE_KONOHA ="https://nerdhits.com.br/wp-content/uploads/2020/06/Konohagakure
 SONIC ="https://i.pinimg.com/originals/0b/61/b5/0b61b5543bcf94207bb8a9c08a6e99bb.png"
 class teste():
     def __init__ (self):
-    self.maracana= Cena(img=MARACANA)
+        self.maracana= Cena(img=MARACANA)
     self.vila_de_konoha= Cena(img=VILA_DE_KONOHA)
     self.sonic= Elemento(img=SONIC)
     self.picapau= Elemento(img=PICAPAU)
