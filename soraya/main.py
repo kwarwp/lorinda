@@ -8,6 +8,11 @@ SONIC ="https://i.pinimg.com/originals/0b/61/b5/0b61b5543bcf94207bb8a9c08a6e99bb
 class teste():
     def __init__ (self):
     self.maracana= Cena(img=MARACANA)
-    self.viladekonoha= Cena(img=VILADEKONOHA)
+    self.vila_de_konoha= Cena(img=VILA_DE_KONOHA)
     self.sonic= Elemento(img=SONIC)
     self.picapau= Elemento(img=PICAPAU)
+    self.picapau.entra(self.maracana)
+    self.sonic.entra(self.vila_de_konoha)
+    self.maracana.direita=self.vila_de_konoha
+    self.vila_de_konoha.esquerda=self.maracana
+    
