@@ -16,5 +16,5 @@ class teste():
         self.maracana.direita=self.vila_de_konoha
         self.vila_de_konoha.esquerda=self.maracana
         self.maracana.vai()
-teste():
+teste()
     
