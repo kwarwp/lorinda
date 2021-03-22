@@ -85,3 +85,10 @@ AttributeError: 'GUI' object has no attribute 'maracana'
     self.picapau.entra(self.maracana)
 AttributeError: 'GUI' object has no attribute 'maracana'
 '''},
+{'date': 'Mon Mar 22 2021 15:30:35.829 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 19
+  teste():
+          ^
+SyntaxError: invalid syntax
+'''},
