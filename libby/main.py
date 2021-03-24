@@ -11,6 +11,10 @@ MOEDAS = "https://thumbs.dreamstime.com/z/moeda-do-jogo-com-folha-trevo-rela%C3%
 CICLONE = "https://static.todamateria.com.br/upload/55/65/556506fa96eca-ciclone.jpg"
 MEMBRANA = "https://static.biologianet.com/2020/02/membrana-plasmatica.jpg"
 NPC = ""
+A = ""
+B = ""
+C = ""
+D = "" 
 class fase2():
     def __init__(self):
     self.npc= Elemento(img= NPC)
@@ -31,6 +35,11 @@ class fase2():
     self.npc.entra(self.celula,Tit = "Observe atentamente essas imagens e coloque as letras correspondentes."
     "Cada imagem terá apenas três letras, arraste para a área correspondente da célula")    #não temos ainda a imagem da célula
     self.npc.entra(self.membrana,Tit = "Você precisa de moedas de ATP para sair dessa dimenção, para isso, precisamos excluir a célula procarionte")
+    
+class celulas():
+    def __init__(self):
+    self.a= Elemento(img= A)
+    self.b= Elemento(img= B)
     
     
     
