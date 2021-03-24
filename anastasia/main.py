@@ -3,23 +3,31 @@ from _spy.vitollino.main import Jogo, STYLE
 from browser.timer import set_timeout
 STYLE.update(width=1350, height="600px")
 J = Jogo()
-SF = {"font-size":"30px", "transition": "left 2s, top 4s"}
+"""Usa o recurso novo do Vitollino Jogo. Jogo.c é Cena, Jogo.a é Elemento"""
+SF = {"font-size":"30px", "transition": "left 1s, top 1s"}
+"""Dá o tamanho da letra da legenda e faz a legenda se movimentar suavemente quando inicia e acerta"""
 
 class Associa:
+    """ Jogo que associa o nome de um objeto com o seu desenho
+    """
     CENA ="https://i.imgur.com/AD1wScZ.jpg"
     CELULA = "https://i.imgur.com/tcCj6nw.png"
-    VAZIO = "https://i.imgur.com/2moCwSz.png"
     VAZIO = "https://i.imgur.com/npb9Oej.png"
+    
     class Nome:
-        def __init__(self,nome, tit, x, y, cena):
+        """ Cria uma legenda a ser arrastada para a lacuna correta
+        
+        As legendas aparecem inicialmente no local certo e depois de um intervalo vão para o canto esquerdo
+        """
+        def __init__(self, nome, tit, x, y, cena):
             self.nome, self.tit, self.x, self.y = nome, tit, x, y
-            drop = {nome: self.acertou}
+            drop = {f"n_{tit}": self.acertou}
             self.lacuna = J.a(Associa.VAZIO, x=x, y=y, w=160, h=40, style=SF, cena=cena, drop=drop)
             self.o_nome = J.a(Associa.VAZIO, tit=f"n_{tit}", x=x, y=y, w=160, h=40, style=SF, cena=cena, drag=True)
             self.o_nome.elt.html = f"{nome}"
-            set_timeout(self.inicia, 3000+10*tit)
+            set_timeout(self.inicia, 2000+200*tit)
             
-        def acertou(self, ev=None):
+        def acertou(self, ev=None, nome=None):
             self.lacuna.elt.html = ""
             self.o_nome.x = self.x
             self.o_nome.y = self.y
