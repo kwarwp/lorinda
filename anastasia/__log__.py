@@ -41,3 +41,10 @@ Exception: undefined has no properties
   module '$exec_2652' line 30
         def __init__(self, nome, tit, x, y, cena, lacuna=Associa.VAZIO, legenda=Associa.VAZIO):
 '''},
+{'date': 'Wed Mar 24 2021 19:25:39.343 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 9
+  VAZIO = "https://i.imgur.com/npb9Oej.png"
+  ^
+IndentationError: unexpected indent
+'''},
