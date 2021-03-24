@@ -6,13 +6,13 @@ J = Jogo()
 """Usa o recurso novo do Vitollino Jogo. Jogo.c é Cena, Jogo.a é Elemento"""
 SF = {"font-size":"30px", "transition": "left 1s, top 1s"}
 """Dá o tamanho da letra da legenda e faz a legenda se movimentar suavemente quando inicia e acerta"""
+VAZIO = "https://i.imgur.com/npb9Oej.png"
 
 class Associa:
     """ Jogo que associa o nome de um objeto com o seu desenho
     """
     CENA ="https://i.imgur.com/AD1wScZ.jpg"
     CELULA = "https://i.imgur.com/tcCj6nw.png"
-    VAZIO = "https://i.imgur.com/npb9Oej.png"
     
     class Nome:
         """ Cria uma legenda a ser arrastada para a lacuna correta
@@ -27,7 +27,7 @@ class Associa:
         :param lacuna: imagem de fundo da lacuna
         :param legenda: imagem de fundo da legenda
         """
-        def __init__(self, nome, tit, x, y, cena, lacuna=Associa.VAZIO, legenda=Associa.VAZIO):
+        def __init__(self, nome, tit, x, y, cena, lacuna=VAZIO, legenda=VAZIO):
             self.nome, self.tit, self.x, self.y = nome, tit, x, y
             titulo = f"n_{tit}"
             drop = {titulo: self.acertou}
