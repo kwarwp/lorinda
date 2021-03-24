@@ -48,3 +48,10 @@ Exception: undefined has no properties
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Mar 24 2021 19:37:30.751 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 70
+  if self.pontua = 4:
+                  ^
+SyntaxError: invalid syntax
+'''},
