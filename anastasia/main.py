@@ -24,15 +24,17 @@ class Associa:
         :param    x: a posição horizontal da legenda
         :param    y: a posição vertical da legenda
         :param cena: a cena onde o jogo aparece
+        :param lacuna: imagem de fundo da lacuna
+        :param legenda: imagem de fundo da legenda
         """
-        def __init__(self, nome, tit, x, y, cena):
+        def __init__(self, nome, tit, x, y, cena, lacuna=Associa.VAZIO, legenda=Associa.VAZIO):
             self.nome, self.tit, self.x, self.y = nome, tit, x, y
             titulo = f"n_{tit}"
             drop = {titulo: self.acertou}
             """este dicionário determina que somente a legenda que tenha este título vai acionar o método acertou"""
-            self.lacuna = J.a(Associa.VAZIO, x=x, y=y, w=160, h=40, style=SF, cena=cena, drop=drop)
+            self.lacuna = J.a(lacuna, x=x, y=y, w=160, h=40, style=SF, cena=cena, drop=drop)
             """Cria um elemento que posiciona a lacuna e aceita um drop do elemento que tem o título correto"""
-            self.o_nome = J.a(Associa.VAZIO, tit=titulo, x=x, y=y, w=160, h=40, style=SF, cena=cena, drag=True)
+            self.o_nome = J.a(legenda, tit=titulo, x=x, y=y, w=160, h=40, style=SF, cena=cena, drag=True)
             """Cria um elemento que posiciona a legenda e tem o título eceito pela lacuna e pode ser arrastado"""
             self.o_nome.elt.html = f"{nome}"
             """Adiciona o nome no elemento que é a legenda"""
