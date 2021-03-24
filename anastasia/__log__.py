@@ -21,3 +21,10 @@
     self.nome = J.a(self.CELULA, x=400, y=50, w=100, h=50, cena=cena)
 AttributeError: 'Nome' object has no attribute 'CELULA'
 '''},
+{'date': 'Wed Mar 24 2021 18:04:27.330 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 15
+  self.nome = J.a(Associa.VAZIO, x=400, y=50, w=90, h=30, o=0.9, style={"font-size":"20px"} cena=cena)
+                                                                                             ^
+SyntaxError: invalid syntax
+'''},
