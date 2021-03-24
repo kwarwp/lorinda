@@ -28,6 +28,8 @@ class fase2():
     self.celula_4.entra(self.membrana)
     self.celula_5.entra(self.membrana)
     self.celula_6.entra(self.membrana)
+    self.npc.entra(self.celula,Tit = "Observe atentamente essas imagens e coloque as letras correspondentes."
+    "Cada imagem terá apenas três letras, arraste para a área correspondente da célula")    #não temos ainda a imagem da célula
     self.npc.entra(self.membrana,Tit = "Você precisa de moedas de ATP para sair dessa dimenção, para isso, precisamos excluir a célula procarionte")
     
     
