@@ -28,3 +28,10 @@ AttributeError: 'Nome' object has no attribute 'CELULA'
                                                                                              ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Mar 24 2021 18:08:36.892 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 22
+  self.mito = self.Nome(nome="mitocôndria"x=600, y=250, cena=self.cena)
+                                           ^
+SyntaxError: invalid syntax
+'''},
