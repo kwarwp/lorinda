@@ -18,24 +18,38 @@ class Associa:
         """ Cria uma legenda a ser arrastada para a lacuna correta
         
         As legendas aparecem inicialmente no local certo e depois de um intervalo vão para o canto esquerdo
+        
+        :param nome: o nome que aparece na legenda
+        :param  tit: a posição que a legenda assume no lado esquerdo
+        :param    x: a posição horizontal da legenda
+        :param    y: a posição vertical da legenda
+        :param cena: a cena onde o jogo aparece
         """
         def __init__(self, nome, tit, x, y, cena):
             self.nome, self.tit, self.x, self.y = nome, tit, x, y
-            drop = {f"n_{tit}": self.acertou}
+            titulo = f"n_{tit}"
+            drop = {titulo: self.acertou}
+            """este dicionário determina que somente a legenda que tenha este título vai acionar o método acertou"""
             self.lacuna = J.a(Associa.VAZIO, x=x, y=y, w=160, h=40, style=SF, cena=cena, drop=drop)
-            self.o_nome = J.a(Associa.VAZIO, tit=f"n_{tit}", x=x, y=y, w=160, h=40, style=SF, cena=cena, drag=True)
+            """Cria um elemento que posiciona a lacuna e aceita um drop do elemento que tem o título correto"""
+            self.o_nome = J.a(Associa.VAZIO, tit=titulo, x=x, y=y, w=160, h=40, style=SF, cena=cena, drag=True)
+            """Cria um elemento que posiciona a legenda e tem o título eceito pela lacuna e pode ser arrastado"""
             self.o_nome.elt.html = f"{nome}"
-            set_timeout(self.inicia, 2000+200*tit)
+            """Adiciona o nome no elemento que é a legenda"""
+            set_timeout(self.inicia, 1500+300*tit)
+            """Inicia um cronômetro para o jogador ter um tempinho para ver a solução, cada legenda leva mais tempo"""
             
         def acertou(self, ev=None, nome=None):
+            """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
             self.lacuna.elt.html = ""
             self.o_nome.x = self.x
             self.o_nome.y = self.y
             
         def inicia(self, ev=None):
+            """Quando inicia coloca interrogações na lacuna e posiciona a legenda à esquerda"""
             self.lacuna.elt.html = "??????????"
             self.o_nome.x = 100
-            self.o_nome.y = 50+100*self.tit
+            self.o_nome.y = 50+40*self.tit
         
 
     
