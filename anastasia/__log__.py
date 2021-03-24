@@ -35,3 +35,9 @@ SyntaxError: invalid syntax
                                            ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Mar 24 2021 19:24:43.875 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: undefined has no properties
+  module '$exec_2652' line 30
+        def __init__(self, nome, tit, x, y, cena, lacuna=Associa.VAZIO, legenda=Associa.VAZIO):
+'''},
