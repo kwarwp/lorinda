@@ -55,3 +55,10 @@ IndentationError: unexpected indent
                   ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Mar 24 2021 19:42:49.649 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 73
+  J.t( cena=self.cena, "Você acertou tudo! Parabéns!").vai()
+                                                     ^
+SyntaxError: non-keyword arg after keyword arg
+'''},
