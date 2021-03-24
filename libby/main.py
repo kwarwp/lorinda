@@ -40,6 +40,20 @@ class celulas():
     def __init__(self):
     self.a= Elemento(img= A)
     self.b= Elemento(img= B)
+    self.c= Elemento(img= C)
+    self.d= Elemento(img= D)
+    self.celula_1.entra(self.celula,x=50,y=50,z=50)
+    self.celula_2.entra(self.celula,x=60,y=60,z=60)
+    self.celula_3.entra(self.celula,x=70,y=70,z=70)
+    self.celula_4.entra(self.celula,x=80,y=80,z=80)
+    self.celula_5.entra(self.celula,x=90,y=90,z=90)
+    self.celula_6.entra(self.celula,x=100,y=100,z=100)
+    self.a.entra(self.celula,x=200,y=50,z=50,Tit= "Eu sou a membrana plasmatica")
+    self.b.entra(self.celula,x=250,y=60,z=60,Tit= "Eu sou um citoplasma")
+    self.c.entra(self.celula,x=300,y=70,z=70,Tit= "Eu sou o nucleo")
+    self.d.entra(self.celula,x=350,y=80,z=80,Tit= "Eu sou o material do nucleo espalhado no citoplasma")
+    
+    
     
     
     
