@@ -39,8 +39,8 @@ class Associa:
             """Cria um elemento que posiciona a legenda e tem o título eceito pela lacuna e pode ser arrastado"""
             self.o_nome.elt.html = f"{nome}"
             """Adiciona o nome no elemento que é a legenda"""
-            set_timeout(self.inicia, 2500+300*tit)
-            """Inicia um cronômetro para o jogador ter um tempinho para ver a solução, cada legenda leva mais tempo"""
+            set_timeout(self.inicia, 1500+300*tit)
+            """Inicia um cronômetro (1.5 seg) para o jogador ter um tempinho para ver a solução, cada legenda leva mais tempo"""
             
         def acertou(self, ev=None, nome=None):
             """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
