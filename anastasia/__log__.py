@@ -100,3 +100,10 @@ AttributeError: 'GUI' object has no attribute 'CENA'
     self.correto = " ".join(pecas)
 TypeError: sequence item 0: expected str instance, int found
 '''},
+{'date': 'Thu Mar 25 2021 16:46:26.119 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 124
+  self.venceu = J.n(cena, "Voce venceu!)
+                                        ^
+SyntaxError: EOL while scanning string literal
+'''},
