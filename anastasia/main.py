@@ -82,47 +82,51 @@ class Swap:
         swap = self
         class Peca(j.a):
             def __init__(self, local, indice):
-                self.indice = indice
+                self.local, self.indice = local, indice
                 pw, ph = w//dw, h//dh
                 lx, ly = x+local%dw*pw, y+local//dw*ph
                 px, py = indice%dw*pw, indice//dw*ph
                 super().__init__(img, x=lx, y=ly, w=pw, h=ph, drag=True, cena=cena)
                 self.siz = (w, h)
-                # self.elt.Id = f"_swap_{local}"
-                self.elt.Id = f"_swap_{indice}"
+                self.elt.Id = f"_swap_{local}"
                 self.pos = (-px, -py)
                 self.elt.ondrop = lambda ev: self.drop(ev)
             def drop(self, ev):
                 ev.preventDefault()
                 ev.stopPropagation()
                 src_id = ev.data['text']
-                tit = int(src_id.split('_')[-1])
-                print(f"indice -> {tit}")
-                self.dropped(ev, tit)
+                local = int(src_id.split('_')[-1])
+                print(f"local -> {local} | indice -> {self.indice}")
+                self.dropped(ev, local)
                 
-            def dropped(self, ev, indice):
-                print(f"indice, swap -> {indice}", swap.pecas[indice])
-                swap.pecas[indice].pra_la(self, self.x, self.y)
-                swap.montou(indice, self.indice)
-            def pra_la(self, peca, x, y):
-                peca.pra_ca(self.x, self.y)
+            def dropped(self, ev, local):
+                o_outro = swap.pecas[local].pra_la(self, self.x, self.y, local)
+                o_local = swap.pecas[local].local
+                print(f"indice, o outro -> {self.indice} @ {self.local} <-> {o_outro} @ {o_local}")
+                swap.montou()
+            def pra_la(self, peca, x, y, local):
+                self.local = peca.pra_ca(self.x, self.y, self.local)
                 self.x, self.y = x, y
-            def pra_ca(self, x, y):
+                return self.indice
+            def pra_ca(self, x, y, local):
+                self.local, local = local, self.local
                 self.x, self.y = x, y
+                return local
+            def certo(self):
+                return self.indice == self.local
             def __repr__(self):
                 return str(self.indice)
 
         from random import shuffle
         pecas = list(range(dw*dh))
-        self.correto = " ".join(str(pc) for pc in pecas)
         shuffle(pecas)
         self.pecas = [Peca(local, indice) for local, indice in enumerate(pecas)]
-        self.resultado = [str(peca) for peca in self.pecas]
-    def montou(self, origem, destino):
-        self.resultado[origem], self.resultado[destino] = self.resultado[destino], self.resultado[origem]
-        resultado = " ".join(self.resultado)
-        print(self.resultado, "<--->", self.correto, "<--->", origem, destino)
-        return resultado == self.correto
+        self.venceu = J.n(cena, "Voce venceu!")
+    def montou(self):
+        resultado = [peca.certo() for peca in self.pecas]
+        print(resultado)
+        self.venceu.vai() if all(resultado) else None 
+        return all(resultado)
         
 
 def main():
