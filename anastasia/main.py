@@ -78,19 +78,44 @@ class Associa:
 
 
 class Swap:
+    """ Jogo que embaralha as partes de um desenho e usa drag and drop para rearrumar.
+        
+        As peças aparecem inicialmente embaralhadas e devem ser arrastadas para o local onde deveriam estar
+        
+        :param    j: referência ao Jogo do Vitollino.
+        :param  img: a imagem que deve ser embaralhada
+        :param cena: a cena onde o jogo aparece
+        :param    x: a posição horizontal da imagem
+        :param    y: a posição vertical da imagem
+        :param    w: a largura da imagem
+        :param    h: a altura da imagem
+        :param   dw: quantidade de colunas que recortam a imagem
+        :param   dh: quantidade de linhas que recortam a imagem
+    """
     def __init__(self, j, img, cena, w=900,h=400,x=100,y=50,dw=3,dh=3):
         swap = self
         class Peca(j.a):
+            """ A Peça representa um recorte da imagem que vai ser embaralhada.
+            """
             def __init__(self, local, indice):
                 self.local, self.indice = local, indice
+                """ local em que a peça foi colocada; local onde a peça deveria estar"""
                 pw, ph = w//dw, h//dh
+                """largura e altura da peça"""
                 lx, ly = x+local%dw*pw, y+local//dw*ph
+                """posição horizontal e vertical em pixels onde a peça será desenhada"""
                 px, py = indice%dw*pw, indice//dw*ph
+                """posição horizontal e vertical em pixels onde o desenho da peça está na imagem"""
                 super().__init__(img, x=lx, y=ly, w=pw, h=ph, drag=True, cena=cena)
+                """chama o construtor do Elemento Vitollino passandoa as informações necessárias"""
                 self.siz = (w, h)
+                """redimensiona a figura da imagem para o tamanho fornecido"""
                 self.elt.Id = f"_swap_{local}"
+                """rotula o elemento da peça com a posição onde foi alocada"""
                 self.pos = (-px, -py)
+                """reposiciona a figura da imagem para o pedaço que vai aparecer na peça"""
                 self.elt.ondrop = lambda ev: self.drop(ev)
+                """captura o evento drop da peça para ser tratado pelo método self.drop"""
             def drop(self, ev):
                 ev.preventDefault()
                 ev.stopPropagation()
