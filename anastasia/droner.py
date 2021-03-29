@@ -22,6 +22,7 @@ J = Jogo()
 SF = {"font-size":"30px", "transition": "left 1s, top 1s"}
 """Dá o tamanho da letra da legenda e faz a legenda se movimentar suavemente quando inicia e acerta"""
 VAZIO = "https://i.imgur.com/npb9Oej.png"
+BORDA = "https://i.imgur.com/npb9Oej.png"
 KNOB  = "https://i.imgur.com/v8Lqqpt.png"
 ROSA = Rosa((0, -1), (1, 0), (0, 1), (-1, 0))
 CIS = {ROSA.norte: ROSA.leste, ROSA.leste: ROSA.norte, ROSA.sul: ROSA.oeste, ROSA.oeste: ROSA.sul}
