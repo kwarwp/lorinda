@@ -66,6 +66,14 @@ class Droner:
                 """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
                 self.rotate = rodado
                 self.elt.style.transform = f"rotate({self.rotate}deg)"
+                
+        class Borda(Anteparo):
+            def __init__(self, x, y, cena, jogo):
+                super().__init__(x=x, y=y, jogo=jogo, cena=cena, img=BORDA)
+            def rodar(self, ev=None, nome=None):
+                pass
+            def roda(self, rodado=0):
+                pass
 
         class Drone(J.a):
             """ Um drone que desvia para esquerda ou direita ao chocar com o anteparo
@@ -94,17 +102,28 @@ class Droner:
                 self.x = self.x + dx*GAP*2
                 self.y = self.y + dy*GAP*2
 
+            def inicia(self, ev=None, nome=None):
+                """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
+                dx, dy = self.azimuth
+                self.x = self.x + dx*GAP*2
+                self.y = self.y + dy*GAP*2
+
     
         self.cena = cena
         self.rotate = 0
         # Anteparo(200, 75, cena, self)
-        w = 11
-        self.anteparos = [Anteparo(GAP+2*GAP*(index%w), int(-0.5*GAP)+2*GAP*(index//w), cena, self) for index in range(w*6)]
+        self.anteparos = [self.cria(index) for index in range(w*6)]
         self.drone = Drone(int(1.25*GAP), int(1.75*GAP), cena, self)
         set_timeout(self.inicia, "1000")
         
+    def cria(self, index):
+        w = 11
+        x, y = GAP+2*GAP*(index%w), int(-0.5*GAP)+2*GAP*(index//w)
+        good = 0 < x < 11 and 0 < y < 6
+        return Anteparo(x, y, cena, self) if good else Borda(x, y, cena, self) 
+        
     def inicia(self, _=0):
-        self.drone.x = self.drone.x + int(2.0*GAP)
+        self.drone.inicia()
         
     def rodar(self, rodado=0):
         """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
