@@ -113,3 +113,31 @@ Exception: obj is undefined
   module '$exec_320' line 44
         def __init__(self, x, y, cena, jogo, img=Droner.KNOB):
 '''},
+{'date': 'Mon Mar 29 2021 11:05:30.124 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 67
+    main()
+  module <module> line 64
+    Droner(cena)
+  module <module> line 58
+    self.Anteparo(100, 100, cena, self)
+  module <module> line 46
+    super().__init__(img, x=lx, y=ly, w=pw, h=ph, cena=cena)
+NameError: name 'Anteparo' is not defined
+'''},
