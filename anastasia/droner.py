@@ -111,13 +111,14 @@ class Droner:
     
         self.cena = cena
         self.rotate = 0
+        self.w = 11
         # Anteparo(200, 75, cena, self)
-        self.anteparos = [self.cria(index) for index in range(w*6)]
+        self.anteparos = [self.cria(index) for index in range(self.w*6)]
         self.drone = Drone(int(1.25*GAP), int(1.75*GAP), cena, self)
         set_timeout(self.inicia, "1000")
         
     def cria(self, index):
-        w = 11
+        w = self.w
         x, y = GAP+2*GAP*(index%w), int(-0.5*GAP)+2*GAP*(index//w)
         good = 0 < x < 11 and 0 < y < 6
         return Anteparo(x, y, cena, self) if good else Borda(x, y, cena, self) 
