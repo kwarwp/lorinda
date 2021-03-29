@@ -59,6 +59,12 @@ class Droner:
             def rodar(self, ev=None, nome=None):
                 """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
                 self.jogo.rotate = self.rotate = (self.rotate+90) % 180
+                self.jogo.rodar(self.rotate)
+                self.elt.style.transform = f"rotate({self.rotate}deg)"
+
+            def roda(self, rodado=0):
+                """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
+                self.rotate = rodado
                 self.elt.style.transform = f"rotate({self.rotate}deg)"
 
         class Drone(J.a):
@@ -91,12 +97,18 @@ class Droner:
     
         self.cena = cena
         self.rotate = 0
-        Anteparo(200, 75, cena, self)
+        # Anteparo(200, 75, cena, self)
+        self.anteparos = [Anteparo(200+100*(index%8), 75+100*(index//8), cena, self) for index in range(32)]
         self.drone = Drone(100, 100, cena, self)
         set_timeout(self.inicia, "1000")
         
     def inicia(self, _=0):
         self.drone.x =200
+        
+    def rodar(self, , rodado=0):
+        """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
+        self.rotate = rodado
+        [anteparo.roda(rodado) for anteparo in self.anteparos]
         
 
 def main():
