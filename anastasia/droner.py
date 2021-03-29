@@ -104,7 +104,7 @@ class Droner:
         set_timeout(self.inicia, "1000")
         
     def inicia(self, _=0):
-        self.drone.x =int(2.25*GAP)
+        self.drone.x = self.drone.x + int(2.0*GAP)
         
     def rodar(self, rodado=0):
         """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
