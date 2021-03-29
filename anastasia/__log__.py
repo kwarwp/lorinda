@@ -107,3 +107,9 @@ TypeError: sequence item 0: expected str instance, int found
                                         ^
 SyntaxError: EOL while scanning string literal
 '''},
+{'date': 'Mon Mar 29 2021 11:04:37.510 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: obj is undefined
+  module '$exec_320' line 44
+        def __init__(self, x, y, cena, jogo, img=Droner.KNOB):
+'''},
