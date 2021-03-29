@@ -91,8 +91,8 @@ class Droner:
                 """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
                 dx, dy = self.azimuth = SWP[self.jogo.rotate][self.azimuth]
                 print(" end", self.x, self.y, dx, dy, self.azimuth)
-                self.x = self.x + dx*GAP
-                self.y = self.y + dy*GAP
+                self.x = self.x + dx*GAP*2
+                self.y = self.y + dy*GAP*2
 
     
         self.cena = cena
@@ -100,7 +100,7 @@ class Droner:
         # Anteparo(200, 75, cena, self)
         w = 11
         self.anteparos = [Anteparo(GAP+2*GAP*(index%w), int(-0.5*GAP)+2*GAP*(index//w), cena, self) for index in range(w*6)]
-        self.drone = Drone(int(1.25*GAP), int(0.75*GAP), cena, self)
+        self.drone = Drone(int(1.25*GAP), int(1.75*GAP), cena, self)
         set_timeout(self.inicia, "1000")
         
     def inicia(self, _=0):
