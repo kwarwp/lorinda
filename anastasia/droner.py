@@ -23,8 +23,8 @@ SF = {"font-size":"30px", "transition": "left 1s, top 1s"}
 VAZIO = "https://i.imgur.com/npb9Oej.png"
 KNOB  = "https://i.imgur.com/v8Lqqpt.png"
 ROSA = Rosa((0, -1), (1, 0), (0, 1), (-1, 0))
-CIS = {ROSA.norte: Rosa.leste, ROSA.leste: Rosa.norte, ROSA.sul: ROSA.oeste, ROSA.oeste, ROSA.sul}
-TRS = {ROSA.norte: Rosa.oeste, ROSA.leste: Rosa.sul, ROSA.sul: ROSA.leste, ROSA.oeste, ROSA.norte}
+CIS = {ROSA.norte: ROSA.leste, ROSA.leste: ROSA.norte, ROSA.sul: ROSA.oeste, ROSA.oeste, ROSA.sul}
+TRS = {ROSA.norte: ROSA.oeste, ROSA.leste: ROSA.sul, ROSA.sul: ROSA.leste, ROSA.oeste, ROSA.norte}
 SWP = {0: CIS, 90:TRS}
 
 class Droner:
