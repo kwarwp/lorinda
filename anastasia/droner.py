@@ -82,9 +82,9 @@ class Droner:
 
             def localiza(self):
                 """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
-                from random import choose, randint
+                from random import choice, randint
                 x, y = randint(1,10), randint(1,4)
-                ax, ay = azimuth = choose(list(ROSA))
+                ax, ay = azimuth = choice(list(ROSA))
                 cx, cy = [0, x, 10][ax+1], [0, y, 5][ay+1]
                 return cx, cy, azimuth
 
@@ -102,7 +102,8 @@ class Droner:
             def __init__(self, index, cena, jogo, img=self.DRONE):
                 pw = ph = Droner.KNOBS
                 self.jogo = jogo
-                x, y, _ = [coor + GAP//4 for coor in self.jogo.localiza(index)]
+                x, y, _ = [(coor + GAP//4) if isinstance(int,coor) else coor for coor in self.jogo.localiza(index)]
+                print (x, y, _)
                 super().__init__(img, x=x, y=y, w=pw, h=ph, style=SF, cena=cena)
                 # self.elt.style.transition = "left 1s top 1s"
                 self.elt.ontransitionend = self.rodar
@@ -114,7 +115,7 @@ class Droner:
                 """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
                 dx, dy = self.azimuth = SWP[self.jogo.rotate][self.azimuth]
                 print(" end", self.x, self.y, dx, dy, self.azimuth)
-                self.x, self.y, az = [coor + GAP//4 for coor in self.jogo.localiza(index)]
+                self.x, self.y, az = [(coor + GAP//4) if isinstance(int,coor) else coor for coor in self.jogo.localiza(index)]
                 self.azimuth = az or self.azimuth
 
             def inicia(self, ev=None, nome=None):
@@ -122,7 +123,7 @@ class Droner:
                 dx, dy = self.azimuth
                 #self.x = self.x + dx*GAP*2
                 #self.y = self.y + dy*GAP*2
-                self.x, self.y = [coor + GAP//4 for coor in self.jogo.localiza(index)]
+                self.x, self.y, _ = [(coor + GAP//4) if isinstance(int,coor) else coor for coor in self.jogo.localiza(index)]
 
     
         self.cena = cena
@@ -131,7 +132,7 @@ class Droner:
         # Anteparo(200, 75, cena, self)
         self.anteparos = [self.cria(index) for index in range(self.w*6)]
         # self.drone = Drone(int(1.25*GAP), int(1.75*GAP), cena, self)
-        self.drone = Drone(self.w+1, cena, self)
+        self.drone = Drone(self.w, cena, self)
         #set_timeout(self.inicia, "1000")
         
     def cria(self, index):
