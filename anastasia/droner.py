@@ -20,6 +20,7 @@ J = Jogo()
 SF = {"font-size":"30px", "transition": "left 1s, top 1s"}
 """Dá o tamanho da letra da legenda e faz a legenda se movimentar suavemente quando inicia e acerta"""
 VAZIO = "https://i.imgur.com/npb9Oej.png"
+KNOB  = "https://i.imgur.com/v8Lqqpt.png"
 
 class Droner:
     """ Jogo que direciona drones para atingir alvos
@@ -27,7 +28,6 @@ class Droner:
     CENA ="https://i.imgur.com/AD1wScZ.jpg"
     CELULA = "https://i.imgur.com/tcCj6nw.png"
     DRONE = "https://i.imgur.com/XDuFNZw.png"
-    KNOB  = "https://i.imgur.com/v8Lqqpt.png"
     KNOBS = 50
     
     class Anteparo(J.a):
@@ -41,9 +41,9 @@ class Droner:
         :param cena: a cena onde o anteparo aparece
         :param img: imagem de fundo do anteparo
         """
-        def __init__(self, x, y, cena, jogo, img=Droner.KNOB):
+        def __init__(self, x, y, cena, jogo, img=KNOB):
             pw = ph = Droner.KNOBS
-            super().__init__(img, x=lx, y=ly, w=pw, h=ph, cena=cena)
+            super().__init__(img, x=x, y=y, w=pw, h=ph, cena=cena)
             self.elt.onclick = self.rodar
             self.rotate = 0
             
@@ -55,7 +55,7 @@ class Droner:
     
     def __init__(self, cena):
         self.cena = cena
-        self.Anteparo(100, 100, cena, self)
+        Droner.Anteparo(100, 100, cena, self)
         
 
 def main():
