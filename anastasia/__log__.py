@@ -371,3 +371,9 @@ NameError: name 'BORDA' is not defined
                                            ^
 SyntaxError: non-keyword arg after keyword arg
 '''},
+{'date': 'Mon Mar 29 2021 16:12:29.547 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: $locals.index is undefined
+  module '$exec_2074' line 155
+main()
+'''},
