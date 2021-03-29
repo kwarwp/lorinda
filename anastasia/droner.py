@@ -12,9 +12,9 @@ Changelog
 """
 from _spy.vitollino.main import Jogo, STYLE
 from browser.timer import set_timeout
-from collections import nametuple
+from collections import namedtuple
 """Usa o timer do navegador para dar um tempinho inicial"""
-Rosa = nametuple("Rosa", "norte leste sul oeste")
+Rosa = namedtuple("Rosa", "norte leste sul oeste")
 STYLE.update(width=1350, height="600px")
 J = Jogo()
 """Usa o recurso novo do Vitollino Jogo. Jogo.c é Cena, Jogo.a é Elemento, Jogo.n é Texto"""
@@ -23,8 +23,8 @@ SF = {"font-size":"30px", "transition": "left 1s, top 1s"}
 VAZIO = "https://i.imgur.com/npb9Oej.png"
 KNOB  = "https://i.imgur.com/v8Lqqpt.png"
 ROSA = Rosa((0, -1), (1, 0), (0, 1), (-1, 0))
-CIS = {ROSA.norte: ROSA.leste, ROSA.leste: ROSA.norte, ROSA.sul: ROSA.oeste, ROSA.oeste, ROSA.sul}
-TRS = {ROSA.norte: ROSA.oeste, ROSA.leste: ROSA.sul, ROSA.sul: ROSA.leste, ROSA.oeste, ROSA.norte}
+CIS = {ROSA.norte: ROSA.leste, ROSA.leste: ROSA.norte, ROSA.sul: ROSA.oeste, ROSA.oeste: ROSA.sul}
+TRS = {ROSA.norte: ROSA.oeste, ROSA.leste: ROSA.sul, ROSA.sul: ROSA.leste, ROSA.oeste: ROSA.norte}
 SWP = {0: CIS, 90:TRS}
 
 class Droner:
@@ -90,6 +90,10 @@ class Droner:
         self.rotate = 0
         Anteparo(200, 75, cena, self)
         Drone(100, 100, cena, self)
+        set_timeout(self.inicia, "1000")
+        
+    def inicia(self, _=0):
+        self.drone.x =200
         
 
 def main():
