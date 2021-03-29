@@ -63,6 +63,10 @@ class Droner:
                 self.jogo.rodar(self.rotate)
                 self.elt.style.transform = f"rotate({self.rotate}deg)"
 
+            def localiza(self):
+                """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
+                return self.x, self.y
+
             def roda(self, rodado=0):
                 """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
                 self.rotate = rodado
@@ -87,14 +91,16 @@ class Droner:
             :param cena: a cena onde o anteparo aparece
             :param img: imagem de fundo do anteparo
             """
-            def __init__(self, x, y, cena, jogo, img=self.DRONE):
+            def __init__(self, index, cena, jogo, img=self.DRONE):
                 pw = ph = Droner.KNOBS
                 self.jogo = jogo
-                super().__init__(img, x=x, y=y, w=pw, h=ph, style=SF, cena=cena)
+                self.x, self.y = self.jogo.localiza(index)
+                super().__init__(img, x=self.x, y=self.y, w=pw, h=ph, style=SF, cena=cena)
                 # self.elt.style.transition = "left 1s top 1s"
                 self.elt.ontransitionend = self.rodar
                 self.rotate = 0
                 self.azimuth = ROSA.oeste
+                self.index = index
 
             def rodar(self, ev=None, nome=None):
                 """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
@@ -106,8 +112,9 @@ class Droner:
             def inicia(self, ev=None, nome=None):
                 """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
                 dx, dy = self.azimuth
-                self.x = self.x + dx*GAP*2
-                self.y = self.y + dy*GAP*2
+                #self.x = self.x + dx*GAP*2
+                #self.y = self.y + dy*GAP*2
+                self.x, self.y = self.jogo.localiza(indek, dx, dy)
 
     
         self.cena = cena
@@ -115,7 +122,8 @@ class Droner:
         self.w = 11
         # Anteparo(200, 75, cena, self)
         self.anteparos = [self.cria(index) for index in range(self.w*6)]
-        self.drone = Drone(int(1.25*GAP), int(1.75*GAP), cena, self)
+        # self.drone = Drone(int(1.25*GAP), int(1.75*GAP), cena, self)
+        self.drone = Drone(index = self.w+1, cena, self)
         #set_timeout(self.inicia, "1000")
         
     def cria(self, index):
@@ -127,6 +135,10 @@ class Droner:
         
     def inicia(self, _=0):
         self.drone.inicia()
+        
+    def localiza(self, index, dx=0, dy=0):
+        index = index + dx + self.w*dy
+        return self.anteparos[index].localiza()
         
     def rodar(self, rodado=0):
         """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
