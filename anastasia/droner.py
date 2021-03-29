@@ -12,8 +12,9 @@ Changelog
 """
 from _spy.vitollino.main import Jogo, STYLE
 from browser.timer import set_timeout
+from collections import nametuple
 """Usa o timer do navegador para dar um tempinho inicial"""
-
+Rosa = nametuple("Rosa", "norte leste sul oeste")
 STYLE.update(width=1350, height="600px")
 J = Jogo()
 """Usa o recurso novo do Vitollino Jogo. Jogo.c é Cena, Jogo.a é Elemento, Jogo.n é Texto"""
@@ -21,6 +22,10 @@ SF = {"font-size":"30px", "transition": "left 1s, top 1s"}
 """Dá o tamanho da letra da legenda e faz a legenda se movimentar suavemente quando inicia e acerta"""
 VAZIO = "https://i.imgur.com/npb9Oej.png"
 KNOB  = "https://i.imgur.com/v8Lqqpt.png"
+ROSA = Rosa((0, -1), (1, 0), (0, 1), (-1, 0))
+CIS = {ROSA.norte: Rosa.leste, ROSA.leste: Rosa.norte, ROSA.sul: ROSA.oeste, ROSA.oeste, ROSA.sul}
+TRS = {ROSA.norte: Rosa.oeste, ROSA.leste: Rosa.sul, ROSA.sul: ROSA.leste, ROSA.oeste, ROSA.norte}
+SWP = {0: CIS, 90:TRS}
 
 class Droner:
     """ Jogo que direciona drones para atingir alvos
@@ -29,33 +34,62 @@ class Droner:
     CELULA = "https://i.imgur.com/tcCj6nw.png"
     DRONE = "https://i.imgur.com/XDuFNZw.png"
     KNOBS = 50
-    
-    class Anteparo(J.a):
-        """ Um bloqueio que desvia o drone para esquerda ou direita
-        
-        As legendas aparecem inicialmente no local certo e depois de um intervalo vão para o canto esquerdo
-        
-        :param    x: a posição horizontal do anteparo
-        :param    y: a posição vertical do anteparo
-        :param jogo: o jogo que este anteparo aparece
-        :param cena: a cena onde o anteparo aparece
-        :param img: imagem de fundo do anteparo
-        """
-        def __init__(self, x, y, cena, jogo, img=KNOB):
-            pw = ph = Droner.KNOBS
-            super().__init__(img, x=x, y=y, w=pw, h=ph, cena=cena)
-            self.elt.onclick = self.rodar
-            self.rotate = 0
-            
-        def rodar(self, ev=None, nome=None):
-            """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
-            self.rotate = (self.rotate+90) % 180
-            self.elt.style.transform = f"rotate({self.rotate}deg)"
+    def __init__(self, cena):
+
+        class Anteparo(J.a):
+            """ Um bloqueio que desvia o drone para esquerda ou direita
+
+            As legendas aparecem inicialmente no local certo e depois de um intervalo vão para o canto esquerdo
+
+            :param    x: a posição horizontal do anteparo
+            :param    y: a posição vertical do anteparo
+            :param jogo: o jogo que este anteparo aparece
+            :param cena: a cena onde o anteparo aparece
+            :param img: imagem de fundo do anteparo
+            """
+            def __init__(self, x, y, cena, jogo, img=KNOB):
+                pw = ph = Droner.KNOBS*2
+                self.jogo = jogo
+                super().__init__(img, x=x, y=y, w=pw, h=ph, cena=cena)
+                self.elt.onclick = self.rodar
+                self.rotate = self.jogo.rotate
+
+            def rodar(self, ev=None, nome=None):
+                """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
+                self.jogo.rotate = self.rotate = (self.rotate+90) % 180
+                self.elt.style.transform = f"rotate({self.rotate}deg)"
+
+        class Drone(J.a):
+            """ Um drone que desvia para esquerda ou direita ao chocar com o anteparo
+
+            As legendas aparecem inicialmente no local certo e depois de um intervalo vão para o canto esquerdo
+
+            :param    x: a posição horizontal do anteparo
+            :param    y: a posição vertical do anteparo
+            :param jogo: o jogo que este anteparo aparece
+            :param cena: a cena onde o anteparo aparece
+            :param img: imagem de fundo do anteparo
+            """
+            def __init__(self, x, y, cena, jogo, img=self.DRONE):
+                pw = ph = Droner.KNOBS
+                self.jogo = jogo
+                super().__init__(img, x=x, y=y, w=pw, h=ph, cena=cena)
+                self.elt.style.transition = "left 1s top 1s"
+                self.elt.ontranstionend = self.rodar
+                self.rotate = 0
+                self.azimuth = ROSA.oeste
+
+            def rodar(self, ev=None, nome=None):
+                """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
+                dx, dy = self.azimuth = SWP[self.jogo.rotate][self.azimuth]
+                self.x = self.x + dx
+                self.y = self.x + y
 
     
-    def __init__(self, cena):
         self.cena = cena
-        Droner.Anteparo(100, 100, cena, self)
+        self.rotate = 0
+        Anteparo(200, 75, cena, self)
+        Drone(100, 100, cena, self)
         
 
 def main():
