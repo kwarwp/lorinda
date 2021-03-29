@@ -239,3 +239,10 @@ SyntaxError: invalid syntax
                                                                                           ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Mon Mar 29 2021 11:49:55.752 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 26
+  CIS = {ROSA.norte: ROSA.leste, ROSA.leste: ROSA.norte, ROSA.sul: ROSA.oeste, ROSA.oeste, ROSA.sul}
+                                                                                          ^
+SyntaxError: invalid syntax
+'''},
