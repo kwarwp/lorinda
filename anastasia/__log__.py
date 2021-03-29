@@ -423,3 +423,7 @@ AttributeError: 'Drone' object has no attribute 'elt'
     x, y, _ = [coor + GAP//4 for coor in self.jogo.localiza(index)]
 TypeError: unsupported operand types for +: 'NoneType' and 'int'
 '''},
+{'date': 'Mon Mar 29 2021 16:44:31.643 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: this.tree[2] is undefined>
+'''},
