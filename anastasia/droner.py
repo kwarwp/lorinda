@@ -65,7 +65,7 @@ class Droner:
 
             def localiza(self):
                 """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
-                return self.x, self.y
+                return self.x, self.y, None
 
             def roda(self, rodado=0):
                 """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
@@ -79,6 +79,14 @@ class Droner:
                 pass
             def roda(self, rodado=0):
                 pass
+
+            def localiza(self):
+                """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
+                from random import choose, randint
+                x, y = randint(1,10), randint(1,4)
+                ax, ay = azimuth = choose(list(ROSA))
+                cx, cy = [0, x, 10][ax+1], [0, y, 5][ay+1]
+                return cx, cy, azimuth
 
         class Drone(J.a):
             """ Um drone que desvia para esquerda ou direita ao chocar com o anteparo
@@ -94,7 +102,7 @@ class Droner:
             def __init__(self, index, cena, jogo, img=self.DRONE):
                 pw = ph = Droner.KNOBS
                 self.jogo = jogo
-                x, y = [coor + GAP//4 for coor in self.jogo.localiza(index)]
+                x, y, _ = [coor + GAP//4 for coor in self.jogo.localiza(index)]
                 super().__init__(img, x=x, y=y, w=pw, h=ph, style=SF, cena=cena)
                 # self.elt.style.transition = "left 1s top 1s"
                 self.elt.ontransitionend = self.rodar
@@ -106,7 +114,8 @@ class Droner:
                 """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
                 dx, dy = self.azimuth = SWP[self.jogo.rotate][self.azimuth]
                 print(" end", self.x, self.y, dx, dy, self.azimuth)
-                self.x, self.y = [coor + GAP//4 for coor in self.jogo.localiza(index)]
+                self.x, self.y, az = [coor + GAP//4 for coor in self.jogo.localiza(index)]
+                self.azimuth = az or self.azimuth
 
             def inicia(self, ev=None, nome=None):
                 """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
