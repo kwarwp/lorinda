@@ -313,3 +313,10 @@ NameError: name 'nametuple' is not defined
     set_timeout(self.inicia, "1000")
 AttributeError: 'Droner' object has no attribute 'inicia'
 '''},
+{'date': 'Mon Mar 29 2021 12:41:52.785 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 108
+  def rodar(self, , rodado=0):
+                   ^
+SyntaxError: invalid syntax
+'''},
