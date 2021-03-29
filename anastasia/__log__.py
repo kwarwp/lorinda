@@ -225,3 +225,10 @@ NameError: name 'Anteparo' is not defined
     def __init__(self, x, y, cena, jogo, img=Self.DRONE):
 NameError: name 'Self' is not defined
 '''},
+{'date': 'Mon Mar 29 2021 11:42:55.508 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 26
+  CIS = {ROSA.norte: Rosa.leste, ROSA.leste: Rosa.norte, ROSA.sul: ROSA.oeste, ROSA.oeste, ROSA.sul}
+                                                                                          ^
+SyntaxError: invalid syntax
+'''},
