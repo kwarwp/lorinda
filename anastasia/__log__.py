@@ -197,3 +197,31 @@ NameError: name 'Anteparo' is not defined
     super().__init__(img, x=x, y=y, w=pw, h=ph, cena=cena)
 NameError: name 'Anteparo' is not defined
 '''},
+{'date': 'Mon Mar 29 2021 11:17:32.412 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 90
+    main()
+  module <module> line 87
+    Droner(cena)
+  module <module> line 56
+    class Drone(J.a):
+  module <module> line 67
+    def __init__(self, x, y, cena, jogo, img=Self.DRONE):
+NameError: name 'Self' is not defined
+'''},
