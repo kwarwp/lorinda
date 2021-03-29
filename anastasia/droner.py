@@ -86,7 +86,7 @@ class Droner:
                 dx, dy = self.azimuth = SWP[self.jogo.rotate][self.azimuth]
                 print(" end", self.x, self.y, dx, dy, self.azimuth)
                 self.x = self.x + dx*GAP
-                self.y = self.x + dy*GAP
+                self.y = self.y + dy*GAP
 
     
         self.cena = cena
