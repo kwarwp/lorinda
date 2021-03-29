@@ -16,6 +16,7 @@ from collections import namedtuple
 """Usa o timer do navegador para dar um tempinho inicial"""
 Rosa = namedtuple("Rosa", "norte leste sul oeste")
 STYLE.update(width=1350, height="600px")
+SF = {"transition": "left 3s, top 3s"}
 J = Jogo()
 """Usa o recurso novo do Vitollino Jogo. Jogo.c é Cena, Jogo.a é Elemento, Jogo.n é Texto"""
 SF = {"font-size":"30px", "transition": "left 1s, top 1s"}
@@ -26,6 +27,7 @@ ROSA = Rosa((0, -1), (1, 0), (0, 1), (-1, 0))
 CIS = {ROSA.norte: ROSA.leste, ROSA.leste: ROSA.norte, ROSA.sul: ROSA.oeste, ROSA.oeste: ROSA.sul}
 TRS = {ROSA.norte: ROSA.oeste, ROSA.leste: ROSA.sul, ROSA.sul: ROSA.leste, ROSA.oeste: ROSA.norte}
 SWP = {0: CIS, 90:TRS}
+GAP = 100
 
 class Droner:
     """ Jogo que direciona drones para atingir alvos
@@ -73,23 +75,24 @@ class Droner:
             def __init__(self, x, y, cena, jogo, img=self.DRONE):
                 pw = ph = Droner.KNOBS
                 self.jogo = jogo
-                super().__init__(img, x=x, y=y, w=pw, h=ph, cena=cena)
-                self.elt.style.transition = "left 1s top 1s"
-                self.elt.ontranstionend = self.rodar
+                super().__init__(img, x=x, y=y, w=pw, h=ph, style=SF, cena=cena)
+                # self.elt.style.transition = "left 1s top 1s"
+                self.elt.ontransitionend = self.rodar
                 self.rotate = 0
                 self.azimuth = ROSA.oeste
 
             def rodar(self, ev=None, nome=None):
                 """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
                 dx, dy = self.azimuth = SWP[self.jogo.rotate][self.azimuth]
-                self.x = self.x + dx
-                self.y = self.x + y
+                print(" end", self.x, self.y, dx, dy, self.azimuth)
+                self.x = self.x + dx*GAP
+                self.y = self.x + dy*GAP
 
     
         self.cena = cena
         self.rotate = 0
         Anteparo(200, 75, cena, self)
-        Drone(100, 100, cena, self)
+        self.drone = Drone(100, 100, cena, self)
         set_timeout(self.inicia, "1000")
         
     def inicia(self, _=0):
