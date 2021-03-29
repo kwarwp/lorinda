@@ -364,3 +364,10 @@ NameError: name 'w' is not defined
     super().__init__(x=x, y=y, jogo=jogo, cena=cena, img=BORDA)
 NameError: name 'BORDA' is not defined
 '''},
+{'date': 'Mon Mar 29 2021 16:11:56.903 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 126
+  self.drone = Drone(index = self.w+1, cena, self)
+                                           ^
+SyntaxError: non-keyword arg after keyword arg
+'''},
