@@ -105,7 +105,7 @@ class Droner:
     def inicia(self, _=0):
         self.drone.x =200
         
-    def rodar(self, , rodado=0):
+    def rodar(self, rodado=0):
         """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
         self.rotate = rodado
         [anteparo.roda(rodado) for anteparo in self.anteparos]
