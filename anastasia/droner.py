@@ -27,7 +27,7 @@ ROSA = Rosa((0, -1), (1, 0), (0, 1), (-1, 0))
 CIS = {ROSA.norte: ROSA.leste, ROSA.leste: ROSA.norte, ROSA.sul: ROSA.oeste, ROSA.oeste: ROSA.sul}
 TRS = {ROSA.norte: ROSA.oeste, ROSA.leste: ROSA.sul, ROSA.sul: ROSA.leste, ROSA.oeste: ROSA.norte}
 SWP = {0: CIS, 90:TRS}
-GAP = 100
+GAP = 60
 
 class Droner:
     """ Jogo que direciona drones para atingir alvos
@@ -35,7 +35,7 @@ class Droner:
     CENA ="https://i.imgur.com/AD1wScZ.jpg"
     CELULA = "https://i.imgur.com/tcCj6nw.png"
     DRONE = "https://i.imgur.com/XDuFNZw.png"
-    KNOBS = 50
+    KNOBS = 30
     def __init__(self, cena):
 
         class Anteparo(J.a):
@@ -98,12 +98,13 @@ class Droner:
         self.cena = cena
         self.rotate = 0
         # Anteparo(200, 75, cena, self)
-        self.anteparos = [Anteparo(200+100*(index%8), 75+100*(index//8), cena, self) for index in range(32)]
-        self.drone = Drone(100, 100, cena, self)
+        w = 11
+        self.anteparos = [Anteparo(GAP+2*GAP*(index%w), int(-0.5*GAP)+2*GAP*(index//w), cena, self) for index in range(w*6)]
+        self.drone = Drone(int(1.25*GAP), int(0.75*GAP), cena, self)
         set_timeout(self.inicia, "1000")
         
     def inicia(self, _=0):
-        self.drone.x =200
+        self.drone.x =int(2.25*GAP)
         
     def rodar(self, rodado=0):
         """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
