@@ -113,6 +113,8 @@ class Droner:
             def __init__(self, index, cena, jogo, img=self.DRONE):
                 pw = ph = Droner.KNOBS
                 self.jogo = jogo
+                x, y, _ = self.jogo.localiza(index)
+                print (x, y, _)
                 x, y, _ = [(coor + GAP//4) if isinstance(int,coor) else coor for coor in self.jogo.localiza(index)]
                 print (x, y, _)
                 super().__init__(img, x=x, y=y, w=pw, h=ph, style=SF, cena=cena)
@@ -142,7 +144,7 @@ class Droner:
         self.w = 11
         # Anteparo(200, 75, cena, self)
         self.anteparos = [self.cria(index) for index in range(self.w*6)]
-        # self.drone = Drone(int(1.25*GAP), int(1.75*GAP), cena, self)
+        #self.drone = Drone(int(1.25*GAP), int(1.75*GAP), cena, self)
         self.drone = Drone(self.w, cena, self)
         #set_timeout(self.inicia, "1000")
         
