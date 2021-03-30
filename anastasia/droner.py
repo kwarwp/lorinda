@@ -42,7 +42,7 @@ class Droner:
         class Anteparo(J.a):
             """ Um bloqueio que desvia o drone para esquerda ou direita
 
-            As legendas aparecem inicialmente no local certo e depois de um intervalo vão para o canto esquerdo
+            Qualquer anteparo clicado gira todos os anteparos, mudando de esqurda para direita e vice-versa.
 
             :param    x: a posição horizontal do anteparo
             :param    y: a posição vertical do anteparo
@@ -58,21 +58,31 @@ class Droner:
                 self.rotate = self.jogo.rotate
 
             def rodar(self, ev=None, nome=None):
-                """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
+                """Quando o jogador clica, gira os anteparos"""
                 self.jogo.rotate = self.rotate = (self.rotate+90) % 180
                 self.jogo.rodar(self.rotate)
                 self.elt.style.transform = f"rotate({self.rotate}deg)"
 
             def localiza(self):
-                """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
+                """retorna a posição do anteparo corrente e o azimuth indicado para drone"""
                 return self.x, self.y, None
 
             def roda(self, rodado=0):
-                """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
+                """Gira o anteparo para a rotação dada"""
                 self.rotate = rodado
                 self.elt.style.transform = f"rotate({self.rotate}deg)"
                 
         class Borda(Anteparo):
+            """ Um bloqueio que para o drone e o relocaliza para uma outra borda aleatória.
+
+            Qualquer anteparo clicado gira todos os anteparos, mudando de esqurda para direita e vice-versa.
+
+            :param    x: a posição horizontal do anteparo
+            :param    y: a posição vertical do anteparo
+            :param jogo: o jogo que este anteparo aparece
+            :param cena: a cena onde o anteparo aparece
+            :param img: imagem de fundo do anteparo
+            """
             def __init__(self, x, y, cena, jogo):
                 super().__init__(x=x, y=y, jogo=jogo, cena=cena, img=BORDA)
             def rodar(self, ev=None, nome=None):
