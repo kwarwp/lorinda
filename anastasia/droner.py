@@ -112,9 +112,10 @@ class Droner:
             """
             def __init__(self, index, cena, jogo, img=self.DRONE):
                 pw = ph = Droner.KNOBS
+                print ("Drone.__init__", index, cena, jogo, img)
                 self.jogo = jogo
                 x, y, _ = self.jogo.localiza(index)
-                print (x, y, _)
+                print ("Drone.__init__", x, y, _)
                 x, y, _ = [(coor + GAP//4) if isinstance(int,coor) else coor for coor in self.jogo.localiza(index)]
                 print (x, y, _)
                 super().__init__(img, x=x, y=y, w=pw, h=ph, style=SF, cena=cena)
