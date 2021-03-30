@@ -160,6 +160,7 @@ class Droner:
         
     def localiza(self, index, dx=0, dy=0):
         index = index + dx + self.w*dy
+        print("localiza", index)
         return self.anteparos[index].localiza()
         
     def rodar(self, rodado=0):
