@@ -96,6 +96,7 @@ class Droner:
                 x, y = randint(1,10), randint(1,4)
                 ax, ay = azimuth = choice(list(ROSA))
                 cx, cy = [0, x, 10][ax+1], [0, y, 5][ay+1]
+                print("localiza", cx, cy, azimuth)
                 return cx, cy, azimuth
 
         class Drone(J.a):
