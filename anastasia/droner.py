@@ -43,8 +43,11 @@ class Droner:
     KNOBS = 30
     def __init__(self, cena):
     
-        class Dro:
-            def __init__(self, *args):
+        class Dro(J.a):
+            def __init__(self, index, cena, jogo, img=self.DRONE):
+                pw = ph = Droner.KNOBS
+                print("Drone.__init__", index, cena, jogo, img)
+                self.jogo = jogo
                 pass
 
 
@@ -154,7 +157,7 @@ class Droner:
         self.w = 11
         # Anteparo(200, 75, cena, self)
         self.anteparos = [self.cria(index) for index in range(self.w*6)]
-        self.a = Drone_(11, cena, self)
+        self.a = Dro(11, cena, self)
         #self.drone = Drone(int(1.25*GAP), int(1.75*GAP), cena, self)
         #self.drone = Dro(self.w, cena, self)
         #set_timeout(self.inicia, "1000")
