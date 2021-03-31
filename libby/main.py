@@ -30,7 +30,7 @@ class fase2():
         self.celula_3= Elemento(img= CELULA_3,x=450,y=150)
         self.celula_4= Elemento(img= CELULA_4,x=750,y=150)
         self.celula_5= Elemento(img= CELULA_5,x=450,y=250)
-        self.celula_6= Elemento(img= CELULA_6,x=850,y=250)
+        self.celula_6= Elemento(img= CELULA_6,x=750,y=250)
         self.membrana= Cena(img= MEMBRANA).vai()
         self.jogo = Associa(self.membrana, caixa=300, borda=20)
         self.celula_1.entra(self.membrana)
@@ -39,12 +39,12 @@ class fase2():
         self.celula_4.entra(self.membrana)
         self.celula_5.entra(self.membrana)
         self.celula_6.entra(self.membrana)
-        self.jogo.nome(nome="citoplasma, membrana, núcleo", tit=0, x=450, y=50)
+        self.jogo.nome(nome="meu núcleo é espalhado", tit=0, x=450, y=50)
         self.jogo.nome(nome="citoplasma, membrana, núcleo", tit=1, x=750, y=50)
         self.jogo.nome(nome="citoplasma, membrana, núcleo", tit=2, x=450, y=150)
         self.jogo.nome(nome="citoplasma, membrana, núcleo", tit=3, x=850, y=150)
         self.jogo.nome(nome="citoplasma, membrana, núcleo", tit=4, x=450, y=250)
-        self.jogo.nome(nome="citoplasma, membrana, núcleo", tit=5, x=850, y=250)
+        self.jogo.nome(nome="citoplasma, membrana, núcleo", tit=5, x=750, y=250)
         #self.npc.entra(self.celula,Tit = "Observe atentamente essas imagens e coloque as letras correspondentes."
         #"Cada imagem terá apenas três letras, arraste para a área correspondente da célula")    #não temos ainda a imagem da célula
         #self.npc.entra(self.membrana,Tit = "Você precisa de moedas de ATP para sair dessa dimenção, para isso, precisamos excluir a célula procarionte")
