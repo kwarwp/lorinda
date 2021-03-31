@@ -1,7 +1,8 @@
 # lorinda.libby.main.
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
 from _spy.vitollino.main import Inventario as inv 
-from anastasia.main import Associa
+from anastasia.main import Associa, SF
+SF.update({"font-size":"20px", "transition": "left 1s, top 1s"})
 STYLE.update(width=1000, height="600px")
 CELULA_1 = "https://img.pebmed.com.br/wp-content/uploads/2018/09/26163836/bacteria-3662695_640-min.jpg"
 CELULA_2 = "https://static.todamateria.com.br/upload/tc/ru/t_cruzi_1.jpg"
@@ -22,13 +23,13 @@ class fase2():
         #self.npc= Elemento(img= NPC)
         self.ciclone= Elemento(img= CICLONE)
         self.celula_1= Elemento(img= CELULA_1,x=450,y=50)
-        self.celula_2= Elemento(img= CELULA_2,x=850,y=50)
+        self.celula_2= Elemento(img= CELULA_2,x=750,y=50)
         self.celula_3= Elemento(img= CELULA_3,x=450,y=150)
-        self.celula_4= Elemento(img= CELULA_4,x=850,y=150)
+        self.celula_4= Elemento(img= CELULA_4,x=750,y=150)
         self.celula_5= Elemento(img= CELULA_5,x=450,y=250)
         self.celula_6= Elemento(img= CELULA_6,x=850,y=250)
         self.membrana= Cena(img= MEMBRANA).vai()
-        self.jogo = Associa(self.membrana, caixa=400, borda=20)
+        self.jogo = Associa(self.membrana, caixa=300, borda=20)
         self.celula_1.entra(self.membrana)
         self.celula_2.entra(self.membrana)
         self.celula_3.entra(self.membrana)
@@ -36,7 +37,7 @@ class fase2():
         self.celula_5.entra(self.membrana)
         self.celula_6.entra(self.membrana)
         self.jogo.nome(nome="citoplasma, membrana, núcleo", tit=0, x=450, y=50)
-        self.jogo.nome(nome="citoplasma, membrana, núcleo", tit=1, x=850, y=50)
+        self.jogo.nome(nome="citoplasma, membrana, núcleo", tit=1, x=750, y=50)
         self.jogo.nome(nome="citoplasma, membrana, núcleo", tit=2, x=450, y=150)
         self.jogo.nome(nome="citoplasma, membrana, núcleo", tit=3, x=850, y=150)
         self.jogo.nome(nome="citoplasma, membrana, núcleo", tit=4, x=450, y=250)
