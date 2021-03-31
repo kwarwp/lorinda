@@ -29,6 +29,7 @@ class fase2():
         self.celula_6= Elemento(img= CELULA_6,x=550,y=150)
         self.membrana= Cena(img= MEMBRANA).vai()
         self.jogo = Associa(self.membrana, caixa=300, borda=20)
+        self.jogo.nome(nome="citoplasma, membrana, núcleo", tit=0, x=350, y=50)
         self.celula_1.entra(self.membrana)
         self.celula_2.entra(self.membrana)
         self.celula_3.entra(self.membrana)
