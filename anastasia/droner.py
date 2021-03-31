@@ -30,6 +30,10 @@ TRS = {ROSA.norte: ROSA.oeste, ROSA.leste: ROSA.sul, ROSA.sul: ROSA.leste, ROSA.
 SWP = {0: CIS, 90:TRS}
 GAP = 60
 
+class A:
+    def __init__(self, *args):
+        pass
+
 class Droner:
     """ Jogo que direciona drones para atingir alvos
     """
@@ -41,7 +45,7 @@ class Droner:
     
         class Dro:
             def __init__(self, *args):
-                print("class Dro", args)
+                pass
 
 
         class Anteparo(J.a):
@@ -117,12 +121,12 @@ class Droner:
             """
             def __init__(self, index, cena, jogo, img=self.DRONE):
                 pw = ph = Droner.KNOBS
-                print ("Drone.__init__", index, cena, jogo, img)
+                #print ("Drone.__init__", index, cena, jogo, img)
                 self.jogo = jogo
                 x, y, _ = self.jogo.localiza(index)
-                print ("Drone.__init__", x, y, _)
+                #print ("Drone.__init__", x, y, _)
                 x, y, _ = [(coor + GAP//4) if isinstance(int,coor) else coor for coor in self.jogo.localiza(index)]
-                print (x, y, _)
+                #print (x, y, _)
                 super().__init__(img, x=x, y=y, w=pw, h=ph, style=SF, cena=cena)
                 # self.elt.style.transition = "left 1s top 1s"
                 self.elt.ontransitionend = self.rodar
@@ -150,7 +154,7 @@ class Droner:
         self.w = 11
         # Anteparo(200, 75, cena, self)
         self.anteparos = [self.cria(index) for index in range(self.w*6)]
-        self.a = Dro(0, 0, cena, self)
+        self.a = Drone_(11, cena, self)
         #self.drone = Drone(int(1.25*GAP), int(1.75*GAP), cena, self)
         #self.drone = Dro(self.w, cena, self)
         #set_timeout(self.inicia, "1000")
