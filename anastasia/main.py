@@ -162,7 +162,7 @@ def main():
     cena = J.c(Associa.CENA)
     celula = J.a(Associa.CELULA, x=300, y=50, w=600, h=500, cena=cena)
     # Swap(j=J, img=Associa.CELULA, cena=cena, w=600,h=500,x=300,y=50,dw=3,dh=3)
-    associa = Associa(cena, borda=50)
+    associa = Associa(cena, caixa=300, borda=20)
     mito = associa.nome(nome="mitocôndria", tit=0, x=650, y=150)
     nucle = associa.nome(nome="núcleo",  tit=1, x=550, y=220)
     reticulo = associa.nome(nome="reticulo", tit=2, x=450, y=100)
