@@ -30,7 +30,7 @@ class Associa:
         :param lacuna: imagem de fundo da lacuna
         :param legenda: imagem de fundo da legenda
         """
-        def __init__(self, nome, tit, x, y, cena, jogo, lacuna=VAZIO, legenda=VAZIO):
+        def __init__(self, nome, tit, x, y, cena, jogo, caixa=160, lacuna=VAZIO, legenda=VAZIO):
             self.nome, self.tit, self.x, self.y, self.jogo = nome, tit, x, y, jogo
             titulo = f"n_{tit}"
             """Este título serve para marcar cada legenda. É usado pelo drop para conferir se é a legenda certa"""
@@ -38,7 +38,7 @@ class Associa:
             """este dicionário determina que somente a legenda que tenha este título vai acionar o método acertou"""
             self.lacuna = J.a(lacuna, x=x, y=y, w=160, h=40, style=SF, cena=cena, drop=drop)
             """Cria um elemento que posiciona a lacuna e aceita um drop do elemento que tem o título correto"""
-            self.o_nome = J.a(legenda, tit=titulo, x=x, y=y, w=160, h=40, style=SF, cena=cena, drag=True)
+            self.o_nome = J.a(legenda, tit=titulo, x=x, y=y, w=caixa, h=40, style=SF, cena=cena, drag=True)
             """Cria um elemento que posiciona a legenda e tem o título eceito pela lacuna e pode ser arrastado"""
             self.o_nome.elt.html = f"{nome}"
             """Adiciona o nome no elemento que é a legenda"""
@@ -60,8 +60,8 @@ class Associa:
         
 
     
-    def __init__(self, cena):
-        self.cena = cena
+    def __init__(self, cena, caixa):
+        self.cena, self.caixa = cena, caixa
         self.pontua = 0
         '''
         self.mito = self.Nome(nome="mitocôndria", tit=0, x=650, y=150, jogo=self, cena=self.cena)
@@ -71,7 +71,7 @@ class Associa:
         #self.cena.vai()'''
         
     def nome(self, nome, tit=0, x=650, y=150):
-        return self.Nome(nome=nome, tit=tit, x=x, y=y, jogo=self, cena=self.cena)
+        return self.Nome(nome=nome, tit=tit, x=x, y=y,caixa=self.caixa, jogo=self, cena=self.cena)
         
     def pontuar(self):
         self.pontua += 1
