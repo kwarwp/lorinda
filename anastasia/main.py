@@ -60,15 +60,18 @@ class Associa:
         
 
     
-    def __init__(self):
-        self.cena = J.c(self.CENA)
+    def __init__(self, cena):
+        self.cena = cena
         self.pontua = 0
-        self.celula = J.a(self.CELULA, x=300, y=50, w=600, h=500, cena=self.cena)
+        '''
         self.mito = self.Nome(nome="mitocôndria", tit=0, x=650, y=150, jogo=self, cena=self.cena)
         self.nucle = self.Nome(nome="núcleo",  tit=1, x=550, y=220, jogo=self, cena=self.cena)
         self.reticulo = self.Nome(nome="reticulo", tit=2, x=450, y=100, jogo=self, cena=self.cena)
         self.ribossomo = self.Nome(nome="ribossomo",  tit=3, x=560, y=40, jogo=self, cena=self.cena)
-        self.cena.vai()
+        #self.cena.vai()'''
+        
+    def nome(self, nome, tit=0, x=650, y=150):
+        return self.Nome(nome=nome, tit=tit, x=x, y=y, jogo=self, cena=self.cena)
         
     def pontuar(self):
         self.pontua += 1
@@ -155,9 +158,14 @@ class Swap:
         
 
 def main():
-    # Associa()
     cena = J.c(Associa.CENA)
-    Swap(j=J, img=Associa.CELULA, cena=cena, w=600,h=500,x=300,y=50,dw=3,dh=3)
+    celula = J.a(Associa.CELULA, x=300, y=50, w=600, h=500, cena=cena)
+    # Swap(j=J, img=Associa.CELULA, cena=cena, w=600,h=500,x=300,y=50,dw=3,dh=3)
+    associa = Associa(cena)
+    mito = associa.nome(nome="mitocôndria", tit=0, x=650, y=150)
+    nucle = associa.nome(nome="núcleo",  tit=1, x=550, y=220)
+    reticulo = associa.nome(nome="reticulo", tit=2, x=450, y=100)
+    ribossomo = associa.nome(nome="ribossomo",  tit=3, x=560, y=40)
     cena.vai()
     
 main()
