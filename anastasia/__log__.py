@@ -564,3 +564,10 @@ AttributeError: 'Drone' object has no attribute 'DRONE'
     self.a = A(0, 0, cena, self)
 TypeError: __init__() takes 1 positional argument but more were given
 '''},
+{'date': 'Wed Mar 31 2021 14:32:07.280 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 47
+  def __init__(self, , index, cena, jogo, img=self.DRONE):
+                      ^
+SyntaxError: invalid syntax
+'''},
