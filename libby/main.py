@@ -1,7 +1,7 @@
 # lorinda.libby.main.
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
 from _spy.vitollino.main import Inventario as inv 
-from lorinda.anastasia.main import Associa
+from anastasia.main import Associa
 STYLE.update(width=1000, height="600px")
 CELULA_1 = "https://img.pebmed.com.br/wp-content/uploads/2018/09/26163836/bacteria-3662695_640-min.jpg"
 CELULA_2 = "https://static.todamateria.com.br/upload/tc/ru/t_cruzi_1.jpg"
