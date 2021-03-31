@@ -30,8 +30,8 @@ class Associa:
         :param lacuna: imagem de fundo da lacuna
         :param legenda: imagem de fundo da legenda
         """
-        def __init__(self, nome, tit, x, y, cena, jogo, caixa=160, lacuna=VAZIO, legenda=VAZIO):
-            self.nome, self.tit, self.x, self.y, self.jogo = nome, tit, x, y, jogo
+        def __init__(self, nome, tit, x, y, cena, jogo, caixa=160, borda=100, lacuna=VAZIO, legenda=VAZIO):
+            self.nome, self.tit, self.x, self.y, self.jogo, self.borda = nome, tit, x, y, jogo, borda
             titulo = f"n_{tit}"
             """Este título serve para marcar cada legenda. É usado pelo drop para conferir se é a legenda certa"""
             drop = {titulo: self.acertou}
@@ -55,13 +55,13 @@ class Associa:
         def inicia(self, ev=None):
             """Quando inicia coloca interrogações na lacuna e posiciona a legenda à esquerda"""
             self.lacuna.elt.html = "??????????"
-            self.o_nome.x = 100
+            self.o_nome.x = self.borda
             self.o_nome.y = 50+40*self.tit
         
 
     
-    def __init__(self, cena, caixa):
-        self.cena, self.caixa = cena, caixa
+    def __init__(self, cena, caixa=160, borda=100):
+        self.cena, self.caixa, self.borda = cena, caixa, borda
         self.pontua = 0
         '''
         self.mito = self.Nome(nome="mitocôndria", tit=0, x=650, y=150, jogo=self, cena=self.cena)
@@ -71,7 +71,8 @@ class Associa:
         #self.cena.vai()'''
         
     def nome(self, nome, tit=0, x=650, y=150):
-        return self.Nome(nome=nome, tit=tit, x=x, y=y,caixa=self.caixa, jogo=self, cena=self.cena)
+        return self.Nome(nome=nome, tit=tit, x=x, y=y,caixa=self.caixa, borda=self.borda,
+        jogo=self, cena=self.cena)
         
     def pontuar(self):
         self.pontua += 1
@@ -161,7 +162,7 @@ def main():
     cena = J.c(Associa.CENA)
     celula = J.a(Associa.CELULA, x=300, y=50, w=600, h=500, cena=cena)
     # Swap(j=J, img=Associa.CELULA, cena=cena, w=600,h=500,x=300,y=50,dw=3,dh=3)
-    associa = Associa(cena)
+    associa = Associa(cena, borda=50)
     mito = associa.nome(nome="mitocôndria", tit=0, x=650, y=150)
     nucle = associa.nome(nome="núcleo",  tit=1, x=550, y=220)
     reticulo = associa.nome(nome="reticulo", tit=2, x=450, y=100)
