@@ -39,6 +39,21 @@ class Droner:
     KNOBS = 30
     def __init__(self, cena):
 
+        class Drone(J.a):
+            """ Um drone que desvia para esquerda ou direita ao chocar com o anteparo
+
+            As legendas aparecem inicialmente no local certo e depois de um intervalo vão para o canto esquerdo
+
+            :param    x: a posição horizontal do anteparo
+            :param    y: a posição vertical do anteparo
+            :param jogo: o jogo que este anteparo aparece
+            :param cena: a cena onde o anteparo aparece
+            :param img: imagem de fundo do anteparo
+            """
+            def __init__(self, index, cena, jogo, img=self.DRONE):
+                pw = ph = Droner.KNOBS
+                print ("Drone.__init__", index, cena, jogo, img)
+
         class Anteparo(J.a):
             """ Um bloqueio que desvia o drone para esquerda ou direita
 
@@ -99,7 +114,7 @@ class Droner:
                 print("localiza", cx, cy, azimuth)
                 return cx, cy, azimuth
 
-        class Drone(J.a):
+        class Drone_(J.a):
             """ Um drone que desvia para esquerda ou direita ao chocar com o anteparo
 
             As legendas aparecem inicialmente no local certo e depois de um intervalo vão para o canto esquerdo
