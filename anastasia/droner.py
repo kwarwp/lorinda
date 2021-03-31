@@ -46,8 +46,8 @@ class Droner:
         class Dro(J.a):
             def __init__(self, index, cena, jogo, img=self.DRONE):
                 pw = ph = Droner.KNOBS
-                print("Drone.__init__", index, cena, jogo, img)
                 self.jogo = jogo
+                x, y, _ = self.jogo.localiza(index)
                 pass
 
 
