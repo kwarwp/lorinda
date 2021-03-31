@@ -591,3 +591,10 @@ SyntaxError: invalid syntax
     self.mito = self.Nome(nome="mitocôndria", tit=0, x=650, y=150, jogo=self, cena=self.cena)
 AttributeError: 'Associa' object has no attribute 'cena'
 '''},
+{'date': 'Wed Mar 31 2021 15:01:48.917 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 72
+  def nome(nome, tit=0, x=650, y=150, jogo=self, cena=self.cena)
+                                                                 ^
+SyntaxError: invalid syntax
+'''},
