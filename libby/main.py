@@ -1,6 +1,7 @@
 # lorinda.libby.main.
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
 from _spy.vitollino.main import Inventario as inv 
+from lorinda.anastasia.main import Associa
 STYLE.update(width=1000, height="600px")
 CELULA_1 = "https://img.pebmed.com.br/wp-content/uploads/2018/09/26163836/bacteria-3662695_640-min.jpg"
 CELULA_2 = "https://static.todamateria.com.br/upload/tc/ru/t_cruzi_1.jpg"
@@ -20,13 +21,14 @@ class fase2():
     def __init__(self):
         #self.npc= Elemento(img= NPC)
         self.ciclone= Elemento(img= CICLONE)
-        self.celula_1= Elemento(img= CELULA_1)
-        self.celula_2= Elemento(img= CELULA_2)
-        self.celula_3= Elemento(img= CELULA_3)
-        self.celula_4= Elemento(img= CELULA_4)
-        self.celula_5= Elemento(img= CELULA_5)
-        self.celula_6= Elemento(img= CELULA_6)
+        self.celula_1= Elemento(img= CELULA_1,x=350,y=50)
+        self.celula_2= Elemento(img= CELULA_2,x=450,y=50)
+        self.celula_3= Elemento(img= CELULA_3,x=550,y=50)
+        self.celula_4= Elemento(img= CELULA_4,x=350,y=150)
+        self.celula_5= Elemento(img= CELULA_5,x=450,y=150)
+        self.celula_6= Elemento(img= CELULA_6,x=550,y=150)
         self.membrana= Cena(img= MEMBRANA).vai()
+        self.jogo = Associa(self.membrana)
         self.celula_1.entra(self.membrana)
         self.celula_2.entra(self.membrana)
         self.celula_3.entra(self.membrana)
