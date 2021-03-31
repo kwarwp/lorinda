@@ -109,3 +109,10 @@ TypeError: 'module' object is not callable
     self.jogo = Associa(self.membrana, caixa=300, borda=20)
 TypeError: 'module' object is not callable
 '''},
+{'date': 'Wed Mar 31 2021 16:22:23.50 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 42
+  self.npc=Elemento(img=NPC, tit"Para sair desse mundo vc precisa achar o protozoário", x=950,y=350)
+                                 ^
+SyntaxError: invalid syntax
+'''},
