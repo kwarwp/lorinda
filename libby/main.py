@@ -21,8 +21,11 @@ D = ""
 class fase2():
     def __init__(self):
         #self.npc= Elemento(img= NPC)
+        def some(ev):
+            self.celula_1.x = -10000
         self.ciclone= Elemento(img= CICLONE)
         self.celula_1= Elemento(img= CELULA_1,x=450,y=50)
+        self.celula_1.elt.onclick = some
         self.celula_2= Elemento(img= CELULA_2,x=750,y=50)
         self.celula_3= Elemento(img= CELULA_3,x=450,y=150)
         self.celula_4= Elemento(img= CELULA_4,x=750,y=150)
