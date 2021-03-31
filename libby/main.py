@@ -13,7 +13,7 @@ CELULA_6 = "https://static.biologianet.com/conteudo/images/os-neuronios-sao-cons
 MOEDAS = "https://thumbs.dreamstime.com/z/moeda-do-jogo-com-folha-trevo-rela%C3%A7%C3%A3o-ouro-vetor-estilo-dos-desenhos-animados-isolado-114681804.jpg"
 CICLONE = "https://static.todamateria.com.br/upload/55/65/556506fa96eca-ciclone.jpg"
 MEMBRANA = "https://static.biologianet.com/2020/02/membrana-plasmatica.jpg"
-NPC = ""
+NPC = "https://i.pinimg.com/474x/be/e7/dc/bee7dcd4d7450467b2629d9c1754c30d.jpg"
 A = ""
 B = ""
 C = ""
@@ -39,12 +39,15 @@ class fase2():
         self.celula_4.entra(self.membrana)
         self.celula_5.entra(self.membrana)
         self.celula_6.entra(self.membrana)
+        self.npc=Elemento(img=NPC, x=900,y=350)
         self.jogo.nome(nome="meu núcleo é espalhado", tit=0, x=450, y=50)
         self.jogo.nome(nome="citoplasma, membrana, núcleo", tit=1, x=750, y=50)
         self.jogo.nome(nome="citoplasma, membrana, núcleo", tit=2, x=450, y=150)
         self.jogo.nome(nome="citoplasma, membrana, núcleo", tit=3, x=850, y=150)
         self.jogo.nome(nome="citoplasma, membrana, núcleo", tit=4, x=450, y=250)
         self.jogo.nome(nome="citoplasma, membrana, núcleo", tit=5, x=750, y=250)
+        self.jogo.nome(nome= "Para sair desse mundo vc precisa achar o protozoário",tit=6,x=900,y=350)
+
         #self.npc.entra(self.celula,Tit = "Observe atentamente essas imagens e coloque as letras correspondentes."
         #"Cada imagem terá apenas três letras, arraste para a área correspondente da célula")    #não temos ainda a imagem da célula
         #self.npc.entra(self.membrana,Tit = "Você precisa de moedas de ATP para sair dessa dimenção, para isso, precisamos excluir a célula procarionte")
