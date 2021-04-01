@@ -25,7 +25,7 @@ class fase2():
             self.celula_1.x = -10000
         self.ciclone= Elemento(img= CICLONE)
         self.celula_1= Elemento(img= CELULA_1,x=450,y=50)
-        self.celula_1.elt.onclick = some
+        self.celula_1.elt.onclick = some  #Sair dessa sala e ir para a sala kelle, depois que acertar
         self.celula_2= Elemento(img= CELULA_2,x=750,y=50)
         self.celula_3= Elemento(img= CELULA_3,x=450,y=150)
         self.celula_4= Elemento(img= CELULA_4,x=750,y=150)
@@ -51,8 +51,8 @@ class fase2():
         #self.npc.entra(self.celula,Tit = "Observe atentamente essas imagens e coloque as letras correspondentes."
         #"Cada imagem terá apenas três letras, arraste para a área correspondente da célula")    #não temos ainda a imagem da célula
         #self.npc.entra(self.membrana,Tit = "Você precisa de moedas de ATP para sair dessa dimenção, para isso, precisamos excluir a célula procarionte")
-
-class celulas():
+        
+"""class celulas():
     def __init__(self):
         self.a= Elemento(img= A)
         self.b= Elemento(img= B)
@@ -69,7 +69,7 @@ class celulas():
         self.c.entra(self.celula,x=300,y=70,z=70,Tit= "Eu sou o nucleo")
         self.d.entra(self.celula,x=350,y=80,z=80,Tit= "Eu sou o material do nucleo espalhado no citoplasma")
     
-    
+    """
 fase2()
     
     
