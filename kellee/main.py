@@ -33,3 +33,7 @@ class fase3():
     self.laboratoria_2= Cena(img=LABORATORIO)
     self.laboratorio_1.direita=self.laboratorio_2
     self.laboratorio_1.esquerda=self.laboratorio_1
+    self.maria.entra(self.laboratorio_2, tit= " Como ela desapareceu?")
+    self.npc.entra(self.laboratorio_2)
+    self.npc= Elemento(img=NPC, tit " Você não deve esquecer do seu verdadeiro propósito buscar, desvendar um grande enigma celular. Você deve sempre lembrar que para uma célula funcionar, todas as suas organelas conectadas devem estar. Quando uma proteína conseguir transportar, livre você estará!")
+    
