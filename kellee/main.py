@@ -3,10 +3,13 @@ from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
 from _spy.vitollino.main import Inventario as inv 
 
 
-MARIA = ""
+MARIA = "https://imgur.com/OTFGXEr"
 ROSALINDA = "https://imgur.com/0Dv7w29"
-LABORATORIO = ""
-
+LABORATORIO = "https://imgur.com/c71g0qt"
+LABORATORIO_1 = "https://imgur.com/c71g0qt"
+LABORATORIO_2 = "https://imgur.com/c71g0qt"
+LABORATORIO_3 = "https://imgur.com/c71g0qt"
+ESTRTURA= "https://imgur.com/iaGv545"
 class fase3():
     def __init__(self):
     self.laboratorio=Cena(img=LABORATORIO)
@@ -14,3 +17,15 @@ class fase3():
     self.rosalinda=Elemento(img=ROSALINDA, tit="as proteínas são muito importantes, para a nossa saúde e beleza! Precismos estuda-las, para nos manter saudáveis, fortes e bonitas. ")
     self.maria.entra(self.laboratorio)
     self.rosalinda.entra(self.laboratorio)
+    
+    def some (ev):
+        self.rosalinda=-100000
+    self.laboratorio_1 = Cena(img= LABORATORIO)
+    self.laboratorio.direita=self.laboratorio_1
+    self.laboratorio_1.esquerda=self.laboratorio
+    self.rosalinda.entra(self.laboratorio_1)
+    self.elt.onclick = some
+    self.maria.entra(self.laboratorio_1)
+    self.maria(tit=" Sim, elas são importantes.Então quer dizer que se eu não me alimentar bem, posso ter cabelos, unhas e pele feias?") 
+    self.rosalinda(tit= "sim claro")
+    #rosalinda some 
