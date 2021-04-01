@@ -37,3 +37,4 @@ class fase3():
     self.npc.entra(self.laboratorio_2)
     self.npc= Elemento(img=NPC, tit " Você não deve esquecer do seu verdadeiro propósito buscar, desvendar um grande enigma celular. Você deve sempre lembrar que para uma célula funcionar, todas as suas organelas conectadas devem estar. Quando uma proteína conseguir transportar, livre você estará!")
     
+    
