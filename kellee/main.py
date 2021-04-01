@@ -29,3 +29,7 @@ class fase3():
     self.maria(tit=" Sim, elas são importantes.Então quer dizer que se eu não me alimentar bem, posso ter cabelos, unhas e pele feias?") 
     self.rosalinda(tit= "sim claro")
     #rosalinda some 
+    
+    self.laboratoria_2= Cena(img=LABORATORIO)
+    self.laboratorio_1.direita=self.laboratorio_2
+    self.laboratorio_1.esquerda=self.laboratorio_1
