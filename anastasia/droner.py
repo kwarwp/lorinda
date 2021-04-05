@@ -19,7 +19,7 @@ STYLE.update(width=1350, height="600px")
 SF = {"transition": "left 8s, top 8s"}
 J = Jogo()
 """Usa o recurso novo do Vitollino Jogo. Jogo.c é Cena, Jogo.a é Elemento, Jogo.n é Texto"""
-SF = {"font-size":"30px", "transition": "left 5s, top 5s"}
+SF = {"font-size":"10px", "transition": "left 5s, top 5s"}
 """Dá o tamanho da letra da legenda e faz a legenda se movimentar suavemente quando inicia e acerta"""
 VAZIO = "https://i.imgur.com/npb9Oej.png"
 BORDA = "https://i.imgur.com/npb9Oej.png"
@@ -39,7 +39,7 @@ class Droner:
     """
     CENA ="https://i.imgur.com/AD1wScZ.jpg"
     CELULA = "https://i.imgur.com/tcCj6nw.png"
-    DRONE = "https://i.imgur.com/XDuFNZw.png"
+    DRONE = "https://i.imgur.com/ZfrJcyE.jpg"  # https://i.imgur.com/XDuFNZw.png"
     KNOBS = 30
     def __init__(self, cena):
 
