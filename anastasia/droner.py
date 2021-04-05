@@ -170,7 +170,6 @@ class Droner:
         w, cena = self.w, self.cena
         x, y = (index%w), (index//w)
         good = 0 < x < 10 and 0 < y < 5
-        x, y = GAP+2*GAP*x, int(-0.5*GAP)+2*GAP*y
         return Anteparo(x, y, cena, self) if good else Borda(x, y, cena, self) 
         
     def inicia(self, _=0):
