@@ -157,7 +157,7 @@ class Droner:
                 #self.y = self.y + dy*GAP*2
                 self.x, self.y = [(coor + GAP//4) for coor in (x, y)]
                 self.azimuth = az or self.azimuth
-                self.elt.html = f">{self.index}|{sel.azimuth}"
+                self.elt.html = f">{self.index}|{self.azimuth}"
 
     
         self.cena = cena
