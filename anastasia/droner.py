@@ -99,7 +99,7 @@ class Droner:
                 pass
 
             def localiza(self):
-                """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
+                """retorna a posição do anteparo corrente e o azimuth indicado para drone"""
                 from random import choice, randint
                 x, y = randint(1,10), randint(1,4)
                 ax, ay = azimuth = (0, 1) #choice(list(ROSA))
