@@ -48,7 +48,7 @@ class Droner:
                 pw = ph = Droner.KNOBS
                 self.jogo = jogo
                 # x, y, _ = self.jogo.localiza(index)
-                x, y, _ = [(coor + GAP//4) if isinstance(int,coor) else coor for coor in self.jogo.localiza(index)]
+                x, y= [(coor + GAP//4) for coor in (1, 2)]
                 #print (x, y, _)
                 super().__init__(img, x=x, y=y, w=pw, h=ph, style=SF, cena=cena)
                 pass
@@ -111,7 +111,7 @@ class Droner:
                 x, y = randint(1,10), randint(1,4)
                 ax, ay = azimuth = choice(list(ROSA))
                 cx, cy = [0, x, 10][ax+1], [0, y, 5][ay+1]
-                print("localiza", cx, cy, azimuth)
+                # print("localiza", cx, cy, azimuth)
                 return cx, cy, azimuth
 
         class Drone_(J.a):
