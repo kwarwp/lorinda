@@ -105,7 +105,7 @@ class Droner:
                 ax, ay = azimuth = (1, 0) #choice(list(ROSA))
                 cx, cy = [10, x, 0][ax+1], [0, y, 5][ay+1]
                 cx, cy = 0, 3
-                index = cx = cy*11
+                index = cx + cy*11
                 cx, cy = GAP+2*GAP*cx, int(-0.5*GAP)+2*GAP*cy
 
                 # print("localiza", cx, cy, azimuth)
@@ -128,7 +128,7 @@ class Droner:
                 #print ("Drone.__init__", index, cena, jogo, img)
                 self.jogo = jogo
                 self.index, x, y, azimuth = self.jogo.localiza(index)
-                print ("Drone.__init__", self.index,x, y, azimuth)
+                #print ("Drone.__init__", self.index,x, y, azimuth)
                 # x, y, _ = [(coor + GAP//4) if isinstance(int,coor) else coor for coor in self.jogo.localiza(index)]
                 x, y = [(coor + GAP//4)  for coor in (x, y)]
                 #print (x, y, _)
