@@ -128,7 +128,7 @@ class Droner:
                 #print ("Drone.__init__", index, cena, jogo, img)
                 self.jogo = jogo
                 self.index, x, y, azimuth = self.jogo.localiza(index)
-                #print ("Drone.__init__", x, y, _)
+                print ("Drone.__init__", self.index,x, y, azimuth)
                 # x, y, _ = [(coor + GAP//4) if isinstance(int,coor) else coor for coor in self.jogo.localiza(index)]
                 x, y = [(coor + GAP//4)  for coor in (x, y)]
                 #print (x, y, _)
