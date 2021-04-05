@@ -151,6 +151,7 @@ class Droner:
                 dx, dy = az or self.azimuth
                 x, y, az = self.jogo.localiza(self.index, dx, dy)
                 self.index += dx + dy*11
+                self.elt.html = f"{self.index}{dx}{dy}"
                 #self.x = self.x + dx*GAP*2
                 #self.y = self.y + dy*GAP*2
                 self.x, self.y = [(coor + GAP//4) for coor in (x, y)]
