@@ -30,6 +30,7 @@ class fase3():
     self.rosalinda(tit= "sim claro")
     #rosalinda some 
     
+    def parte_2():
     self.laboratoria_2= Cena(img=LABORATORIO)
     self.laboratorio_1.direita=self.laboratorio_2
     self.laboratorio_1.esquerda=self.laboratorio_1
