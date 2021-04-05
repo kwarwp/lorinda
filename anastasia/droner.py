@@ -16,10 +16,10 @@ from collections import namedtuple
 """Usa o timer do navegador para dar um tempinho inicial"""
 Rosa = namedtuple("Rosa", "norte leste sul oeste")
 STYLE.update(width=1350, height="600px")
-SF = {"transition": "left 3s, top 3s"}
+SF = {"transition": "left 8s, top 8s"}
 J = Jogo()
 """Usa o recurso novo do Vitollino Jogo. Jogo.c é Cena, Jogo.a é Elemento, Jogo.n é Texto"""
-SF = {"font-size":"30px", "transition": "left 1s, top 1s"}
+SF = {"font-size":"30px", "transition": "left 5s, top 5s"}
 """Dá o tamanho da letra da legenda e faz a legenda se movimentar suavemente quando inicia e acerta"""
 VAZIO = "https://i.imgur.com/npb9Oej.png"
 BORDA = "https://i.imgur.com/npb9Oej.png"
