@@ -47,8 +47,8 @@ class Droner:
             def __init__(self, index, cena, jogo, img=self.DRONE):
                 pw = ph = Droner.KNOBS
                 self.jogo = jogo
-                # x, y, _ = self.jogo.localiza(index)
-                x, y= [(coor + GAP//4) for coor in (1, 2)]
+                x, y, _ = self.jogo.localiza(index)
+                x, y= [(coor + GAP//4) for coor in (x, y)]
                 #print (x, y, _)
                 super().__init__(img, x=x, y=y, w=pw, h=ph, style=SF, cena=cena)
                 pass
@@ -70,6 +70,7 @@ class Droner:
                 self.jogo = jogo
                 super().__init__(img, x=x, y=y, w=pw, h=ph, cena=cena)
                 self.elt.onclick = self.rodar
+                self.elt.html = f"{x};{y}"
                 self.rotate = self.jogo.rotate
 
             def rodar(self, ev=None, nome=None):
@@ -111,10 +112,13 @@ class Droner:
                 x, y = randint(1,10), randint(1,4)
                 ax, ay = azimuth = choice(list(ROSA))
                 cx, cy = [0, x, 10][ax+1], [0, y, 5][ay+1]
+                cx, cy = GAP+2*GAP*cx, int(-0.5*GAP)+2*GAP*cy
+
                 # print("localiza", cx, cy, azimuth)
+                self.elt.html = f"{ax};{ay}|{cx}:{cy}"
                 return cx, cy, azimuth
 
-        class Drone_(J.a):
+        class Drone(J.a):
             """ Um drone que desvia para esquerda ou direita ao chocar com o anteparo
 
             As legendas aparecem inicialmente no local certo e depois de um intervalo vão para o canto esquerdo
@@ -129,15 +133,16 @@ class Droner:
                 pw = ph = Droner.KNOBS
                 #print ("Drone.__init__", index, cena, jogo, img)
                 self.jogo = jogo
-                x, y, _ = self.jogo.localiza(index)
+                x, y, azimuth = self.jogo.localiza(index)
                 #print ("Drone.__init__", x, y, _)
-                x, y, _ = [(coor + GAP//4) if isinstance(int,coor) else coor for coor in self.jogo.localiza(index)]
+                # x, y, _ = [(coor + GAP//4) if isinstance(int,coor) else coor for coor in self.jogo.localiza(index)]
+                x, y = [(coor + GAP//4)  for coor in (x, y)]
                 #print (x, y, _)
                 super().__init__(img, x=x, y=y, w=pw, h=ph, style=SF, cena=cena)
                 # self.elt.style.transition = "left 1s top 1s"
                 self.elt.ontransitionend = self.rodar
                 self.rotate = 0
-                self.azimuth = ROSA.oeste
+                self.azimuth = azimuth or ROSA.oeste
                 self.index = index
 
             def rodar(self, ev=None, nome=None):
@@ -160,7 +165,7 @@ class Droner:
         self.w = 11
         # Anteparo(200, 75, cena, self)
         self.anteparos = [self.cria(index) for index in range(self.w*6)]
-        self.a = Dro(11, cena, self)
+        self.a = Drone(0, cena, self)
         #self.drone = Drone(int(1.25*GAP), int(1.75*GAP), cena, self)
         #self.drone = Dro(self.w, cena, self)
         #set_timeout(self.inicia, "1000")
