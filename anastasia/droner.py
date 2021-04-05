@@ -127,7 +127,7 @@ class Droner:
                 pw = ph = Droner.KNOBS
                 #print ("Drone.__init__", index, cena, jogo, img)
                 self.jogo = jogo
-                x, y, azimuth = self.jogo.localiza(index)
+                self.index, x, y, azimuth = self.jogo.localiza(index)
                 #print ("Drone.__init__", x, y, _)
                 # x, y, _ = [(coor + GAP//4) if isinstance(int,coor) else coor for coor in self.jogo.localiza(index)]
                 x, y = [(coor + GAP//4)  for coor in (x, y)]
@@ -137,7 +137,7 @@ class Droner:
                 self.elt.ontransitionend = self.rodar
                 self.rotate = 0
                 self.azimuth = azimuth or ROSA.oeste
-                self.index = index
+                # self.index = index
 
             def rodar(self, ev=None, nome=None):
                 """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
