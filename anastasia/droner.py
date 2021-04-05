@@ -138,12 +138,28 @@ class Droner:
                 self.elt.ontransitionend = self.rodar
                 self.rotate = 0
                 self.azimuth = azimuth or ROSA.oeste
+                self.roda = self._rodar
                 # self.index = index
 
-            def rodar(self, ev=None, nome=None):
+            def rodar(self, ev=None):
                 """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
+                self.roda()
+                # print(" end", self.x, self.y, dx, dy, self.azimuth)
+                #  self.x, self.y, az = [(coor + GAP//4) if isinstance(int,coor) else coor for coor in self.jogo.localiza(index)]
+                # self.azimuth = az or self.azimuth
+
+            def _rodar(self):
+                """Quando o drone esbarra em um anteparo muda sua direção"""
                 azimuth = SWP[self.jogo.rotate][self.azimuth]
                 self.inicia(az=azimuth)
+                # print(" end", self.x, self.y, dx, dy, self.azimuth)
+                #  self.x, self.y, az = [(coor + GAP//4) if isinstance(int,coor) else coor for coor in self.jogo.localiza(index)]
+                # self.azimuth = az or self.azimuth
+
+            def _seguir(self):
+                """Quando o drone bate na borda ele segue o azimuth sorteado"""
+                self.inicia()
+                self.roda = self._rodar
                 # print(" end", self.x, self.y, dx, dy, self.azimuth)
                 #  self.x, self.y, az = [(coor + GAP//4) if isinstance(int,coor) else coor for coor in self.jogo.localiza(index)]
                 # self.azimuth = az or self.azimuth
@@ -173,7 +189,9 @@ class Droner:
         
     def start(self):
         # self.drone.o = 0.5
-        set_timeout(self.inicia, "1000")
+        #set_timeout(self.inicia, "1000")
+        pass
+
         
     def cria(self, index):
         w, cena = self.w, self.cena
