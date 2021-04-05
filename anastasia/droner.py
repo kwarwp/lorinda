@@ -73,7 +73,7 @@ class Droner:
 
             def localiza(self):
                 """retorna a posição do anteparo corrente e o azimuth indicado para drone"""
-                return self.x, self.y, None
+                return self.index, self.x, self.y, None
 
             def roda(self, rodado=0):
                 """Gira o anteparo para a rotação dada"""
@@ -102,14 +102,15 @@ class Droner:
                 """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
                 from random import choice, randint
                 x, y = randint(1,10), randint(1,4)
-                ax, ay = azimuth = choice(list(ROSA))
+                ax, ay = azimuth = (1, 0) #choice(list(ROSA))
                 cx, cy = [10, x, 0][ax+1], [0, y, 5][ay+1]
                 cx, cy = 0, 3
+                index = cx = cy*11
                 cx, cy = GAP+2*GAP*cx, int(-0.5*GAP)+2*GAP*cy
 
                 # print("localiza", cx, cy, azimuth)
-                # self.elt.html = f"{ax};{ay}|{cx}:{cy}"
-                return cx, cy, azimuth
+                self.elt.html = f"{ax};{ay}|{cx}:{cy}"
+                return index, cx, cy, azimuth
 
         class Drone(J.a):
             """ Um drone que desvia para esquerda ou direita ao chocar com o anteparo
@@ -150,8 +151,8 @@ class Droner:
             def inicia(self, ev=None, az=None):
                 """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
                 dx, dy = az or self.azimuth
-                x, y, az = self.jogo.localiza(self.index, dx, dy)
-                self.index = self.index + dx + dy*11
+                self.index, x, y, az = self.jogo.localiza(self.index, dx, dy)
+                # = self.index + dx + dy*11
                 self.elt.html = f">{self.index}|{dx}:{dy}"
                 #self.x = self.x + dx*GAP*2
                 #self.y = self.y + dy*GAP*2
