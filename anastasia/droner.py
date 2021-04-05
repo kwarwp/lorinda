@@ -42,17 +42,6 @@ class Droner:
     DRONE = "https://i.imgur.com/XDuFNZw.png"
     KNOBS = 30
     def __init__(self, cena):
-    
-        class Dro(J.a):
-            def __init__(self, index, cena, jogo, img=self.DRONE):
-                pw = ph = Droner.KNOBS
-                self.jogo = jogo
-                x, y, _ = self.jogo.localiza(index)
-                x, y= [(coor + GAP//4) for coor in (x, y)]
-                #print (x, y, _)
-                super().__init__(img, x=x, y=y, w=pw, h=ph, style=SF, cena=cena)
-                pass
-
 
         class Anteparo(J.a):
             """ Um bloqueio que desvia o drone para esquerda ou direita
@@ -68,9 +57,12 @@ class Droner:
             def __init__(self, x, y, cena, jogo, img=KNOB):
                 pw = ph = Droner.KNOBS*2
                 self.jogo = jogo
+                self.index = x + y * 11
+                x, y = GAP+2*GAP*x, int(-0.5*GAP)+2*GAP*y
+
                 super().__init__(img, x=x, y=y, w=pw, h=ph, cena=cena)
                 self.elt.onclick = self.rodar
-                self.elt.html = f"{x};{y}"
+                # self.elt.html = f"{x};{y}"
                 self.rotate = self.jogo.rotate
 
             def rodar(self, ev=None, nome=None):
@@ -115,7 +107,7 @@ class Droner:
                 cx, cy = GAP+2*GAP*cx, int(-0.5*GAP)+2*GAP*cy
 
                 # print("localiza", cx, cy, azimuth)
-                self.elt.html = f"{ax};{ay}|{cx}:{cy}"
+                # self.elt.html = f"{ax};{ay}|{cx}:{cy}"
                 return cx, cy, azimuth
 
         class Drone(J.a):
@@ -147,17 +139,21 @@ class Droner:
 
             def rodar(self, ev=None, nome=None):
                 """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
-                dx, dy = self.azimuth = SWP[self.jogo.rotate][self.azimuth]
-                print(" end", self.x, self.y, dx, dy, self.azimuth)
-                self.x, self.y, az = [(coor + GAP//4) if isinstance(int,coor) else coor for coor in self.jogo.localiza(index)]
-                self.azimuth = az or self.azimuth
+                azimuth = SWP[self.jogo.rotate][self.azimuth]
+                self.inicia(az=azimuth)
+                # print(" end", self.x, self.y, dx, dy, self.azimuth)
+                #  self.x, self.y, az = [(coor + GAP//4) if isinstance(int,coor) else coor for coor in self.jogo.localiza(index)]
+                # self.azimuth = az or self.azimuth
 
-            def inicia(self, ev=None, nome=None):
+            def inicia(self, ev=None, az=None):
                 """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
-                dx, dy = self.azimuth
+                dx, dy = az or self.azimuth
+                x, y, az = self.jogo.localiza(self.index, dx, dy)
+                self.index += dx + dy*11
                 #self.x = self.x + dx*GAP*2
                 #self.y = self.y + dy*GAP*2
-                self.x, self.y, _ = [(coor + GAP//4) if isinstance(int,coor) else coor for coor in self.jogo.localiza(index)]
+                self.x, self.y = [(coor + GAP//4) for coor in (x, y)]
+                self.azimuth = az or self.azimuth
 
     
         self.cena = cena
@@ -165,10 +161,10 @@ class Droner:
         self.w = 11
         # Anteparo(200, 75, cena, self)
         self.anteparos = [self.cria(index) for index in range(self.w*6)]
-        self.a = Drone(0, cena, self)
+        self.drone = Drone(0, cena, self)
         #self.drone = Drone(int(1.25*GAP), int(1.75*GAP), cena, self)
         #self.drone = Dro(self.w, cena, self)
-        #set_timeout(self.inicia, "1000")
+        set_timeout(self.inicia, "1000")
         
     def cria(self, index):
         w, cena = self.w, self.cena
