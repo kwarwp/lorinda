@@ -111,7 +111,7 @@ class Droner:
                 # print("localiza", cx, cy, azimuth)
                 self.elt.html = f"{ax};{ay}|{cx}:{cy}"
                 #self.jogo.start()
-                self.jogo.drone.seguir()
+                #self.jogo.drone.seguir()
                 return index, cx, cy, azimuth
 
         class Drone(J.a):
@@ -129,7 +129,7 @@ class Droner:
                 pw = ph = Droner.KNOBS
                 #print ("Drone.__init__", index, cena, jogo, img)
                 self.jogo = jogo
-                self.index, x, y, azimuth = self.jogo.localiza(index)
+                self.index, x, y = 0, 0, 0 #self.jogo.localiza(index)
                 #print ("Drone.__init__", self.index,x, y, azimuth)
                 # x, y, _ = [(coor + GAP//4) if isinstance(int,coor) else coor for coor in self.jogo.localiza(index)]
                 x, y = [(coor + GAP//4)  for coor in (x, y)]
@@ -138,7 +138,7 @@ class Droner:
                 # self.elt.style.transition = "left 1s top 1s"
                 self.elt.ontransitionend = self.rodar
                 self.rotate = 0
-                self.azimuth = azimuth or ROSA.oeste
+                self.azimuth = ROSA.oeste
                 self.roda = self._rodar
                 # self.index = index
 
@@ -186,15 +186,15 @@ class Droner:
         self.rotate = 0
         self.w = 11
         # Anteparo(200, 75, cena, self)
-        self.anteparos = [self.cria(index) for index in range(self.w*6)]
         self.drone = Drone(0, cena, self)
+        self.anteparos = [self.cria(index) for index in range(self.w*6)]
         #self.drone = Drone(int(1.25*GAP), int(1.75*GAP), cena, self)
         #self.drone = Dro(self.w, cena, self)
         self.start()
         
     def start(self):
-        # self.drone.o = 0.5
-        #set_timeout(self.inicia, "1000")
+        self.drone.o = 0.5
+        set_timeout(self.inicia, "1000")
         pass
 
         
