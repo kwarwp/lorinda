@@ -193,7 +193,7 @@ class Droner:
         self.start()
         
     def start(self):
-        self.drone.o = 0.5
+        self.drone.o = 0.3
         set_timeout(self.inicia, "1000")
         pass
 
