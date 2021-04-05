@@ -680,3 +680,31 @@ ValueError: need more than 2 values to unpack
     x, y, azimuth = self.jogo.localiza(index)
 ValueError: too many values to unpack (expected 3)
 '''},
+{'date': 'Mon Apr 05 2021 19:33:53.423 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 204
+    main()
+  module <module> line 201
+    Droner(cena)
+  module <module> line 169
+    self.drone = Drone(0, cena, self)
+  module <module> line 131
+    self.index, x, y, azimuth = self.jogo.localiza(index)
+  module <module> line 190
+    return self.anteparos[index].localiza()
+  module <module> line 113
+    self.jogo.start()
+  module <module> line 175
+    self.drone.o = 0.5
+AttributeError: 'Droner' object has no attribute 'drone'
+'''},
