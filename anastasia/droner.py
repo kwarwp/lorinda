@@ -151,12 +151,12 @@ class Droner:
             def inicia(self, ev=None, az=None):
                 """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
                 dx, dy = az or self.azimuth
-                self.index, x, y, az = self.jogo.localiza(self.index, dx, dy)
+                self.index, x, y, azn = self.jogo.localiza(self.index, dx, dy)
                 # = self.index + dx + dy*11
                 #self.x = self.x + dx*GAP*2
                 #self.y = self.y + dy*GAP*2
                 self.x, self.y = [(coor + GAP//4) for coor in (x, y)]
-                self.azimuth = az or self.azimuth
+                self.azimuth = azn or az or self.azimuth
                 self.elt.html = f">{self.index}|{self.azimuth}"
 
     
