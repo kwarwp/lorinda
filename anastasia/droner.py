@@ -110,7 +110,7 @@ class Droner:
 
                 # print("localiza", cx, cy, azimuth)
                 self.elt.html = f"{ax};{ay}|{cx}:{cy}"
-                #self.jogo.start()
+                self.jogo.start()
                 self.jogo.drone.seguir()
                 return index, cx, cy, azimuth
 
