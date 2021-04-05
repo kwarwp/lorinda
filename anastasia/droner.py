@@ -103,7 +103,7 @@ class Droner:
                 from random import choice, randint
                 x, y = randint(1,10), randint(1,4)
                 ax, ay = azimuth = choice(list(ROSA))
-                cx, cy = [0, x, 10][ax+1], [0, y, 5][ay+1]
+                cx, cy = [10, x, 0][ax+1], [0, y, 5][ay+1]
                 cx, cy = GAP+2*GAP*cx, int(-0.5*GAP)+2*GAP*cy
 
                 # print("localiza", cx, cy, azimuth)
