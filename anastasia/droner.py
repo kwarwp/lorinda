@@ -141,6 +141,7 @@ class Droner:
                 """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
                 azimuth = SWP[self.jogo.rotate][self.azimuth]
                 self.inicia(az=azimuth)
+                self.o = 1
                 # print(" end", self.x, self.y, dx, dy, self.azimuth)
                 #  self.x, self.y, az = [(coor + GAP//4) if isinstance(int,coor) else coor for coor in self.jogo.localiza(index)]
                 # self.azimuth = az or self.azimuth
