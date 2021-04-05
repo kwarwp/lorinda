@@ -102,7 +102,7 @@ class Droner:
                 """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
                 from random import choice, randint
                 x, y = randint(1,10), randint(1,4)
-                ax, ay = azimuth = choice(list(ROSA))
+                ax, ay = azimuth = (0, 1) #choice(list(ROSA))
                 cx, cy = [10, x, 0][ax+1], [0, y, 5][ay+1]
                 cy = 0
                 index = cx + cy*11
