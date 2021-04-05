@@ -111,6 +111,7 @@ class Droner:
                 # print("localiza", cx, cy, azimuth)
                 self.elt.html = f"{ax};{ay}|{cx}:{cy}"
                 #self.jogo.start()
+                self.jogo.drone.seguir()
                 return index, cx, cy, azimuth
 
         class Drone(J.a):
@@ -155,6 +156,10 @@ class Droner:
                 # print(" end", self.x, self.y, dx, dy, self.azimuth)
                 #  self.x, self.y, az = [(coor + GAP//4) if isinstance(int,coor) else coor for coor in self.jogo.localiza(index)]
                 # self.azimuth = az or self.azimuth
+
+            def seguir(self):
+                """Quando o drone bate na borda ele segue o azimuth sorteado"""
+                self.roda = self._seguir
 
             def _seguir(self):
                 """Quando o drone bate na borda ele segue o azimuth sorteado"""
