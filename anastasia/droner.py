@@ -107,13 +107,12 @@ class Droner:
             def __init__(self, x, y, cena, jogo):
                 super().__init__(x=x, y=y, jogo=jogo, cena=cena, img=BORDA)
                 class Partida(Anteparo):
-                    pass
 
-                def cheguei(self, drone, azimuth):
-                    """O drone chega ao anteparo e precisa ser direcionado"""
-                    dx, dy = self.azimuth
-                    destino = self.jogo.localiza(self.index, dx, dy)
-                    drone.segue(destino, self.azimuth, destino.x, destino.y, 1)
+                    def cheguei(self, drone, azimuth):
+                        """O drone chega ao anteparo e precisa ser direcionado"""
+                        dx, dy = self.azimuth
+                        destino = self.jogo.localiza(self.index, dx, dy)
+                        drone.segue(destino, self.azimuth, destino.x, destino.y, 1)
                 self.partida = Partida(x, y, cena, jogo)
                 ax = 0 if (0 < x < 10) else (1 if x == 0 else -1) 
                 ay = 0 if (0 < y < 10) else (1 if y == 0 else -1)
