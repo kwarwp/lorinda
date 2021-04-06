@@ -115,7 +115,8 @@ class Droner:
                     destino = self.jogo.localiza(self.index, dx, dy)
                     drone.segue(destino, self.azimuth, destino.x, destino.y, 1)
                 self.partida = Partida(x, y, cena, jogo)
-                self.partida.azimuth = 0 if 0 < x < 10 else 1 if x == 0 else -1 , 0 if 0 < y < 10 else 1 if y == 0 else -1
+                ax = 0 if (0 < x < 10) else (1 if x == 0 else -1) 
+                ay = 0 if (0 < y < 10) else (1 if y == 0 else -1)
 
 
             def partida(self):
