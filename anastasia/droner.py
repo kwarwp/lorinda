@@ -20,7 +20,7 @@ SF = {"transition": "left 8s, top 8s"}
 J = Jogo()
 NC = J.c()
 """Usa o recurso novo do Vitollino Jogo. Jogo.c é Cena, Jogo.a é Elemento, Jogo.n é Texto"""
-SF = {"font-size":"10px", "transition": "left 5s, top 5s"}
+SF = {"font-size":"8px", "color":"red", "transition": "left 5s, top 5s"}
 """Dá o tamanho da letra da legenda e faz a legenda se movimentar suavemente quando inicia e acerta"""
 VAZIO = "https://i.imgur.com/npb9Oej.png"
 BORDA = "https://i.imgur.com/npb9Oej.png"
@@ -196,6 +196,7 @@ class Droner:
                 """Quando o drone bate na borda ele segue o azimuth sorteado"""
                 self.destino, self.azimuth, x, y, self.o =  destino, azimuth, x, y, o
                 self.x, self.y = [(coor + GAP//4)  for coor in (x, y)]
+                self.elt.html = f"{str(self.destino)}\{self.azimuth}"
 
             def seguir(self):
                 """Quando o drone bate na borda ele segue o azimuth sorteado"""
