@@ -18,6 +18,7 @@ Rosa = namedtuple("Rosa", "norte leste sul oeste")
 STYLE.update(width=1350, height="600px")
 SF = {"transition": "left 8s, top 8s"}
 J = Jogo()
+NC = J.c()
 """Usa o recurso novo do Vitollino Jogo. Jogo.c é Cena, Jogo.a é Elemento, Jogo.n é Texto"""
 SF = {"font-size":"10px", "transition": "left 5s, top 5s"}
 """Dá o tamanho da letra da legenda e faz a legenda se movimentar suavemente quando inicia e acerta"""
@@ -113,7 +114,7 @@ class Droner:
                         dx, dy = self.azimuth
                         destino = self.jogo.localiza(self.index, dx, dy)
                         drone.segue(destino, self.azimuth, destino.x, destino.y, 1)
-                self._partida = Partida(x, y, cena, jogo)
+                self._partida = Partida(x, y, NC, jogo)
                 ax = 0 if (0 < x < 10) else (1 if x == 0 else -1) 
                 ay = 0 if (0 < y < 10) else (1 if y == 0 else -1)
                 self._partida.azimuth = ax, ay
