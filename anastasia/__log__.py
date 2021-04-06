@@ -846,3 +846,10 @@ AttributeError: 'Droner' object has no attribute 'drone'
     self.jogo.drone.seguir()
 AttributeError: 'Droner' object has no attribute 'drone'
 '''},
+{'date': 'Tue Apr 06 2021 12:25:40.792 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 118
+  self.partida.azimuth = 0 if 0 < x < 10 else 1 if x == 0 else -1 , 0 if 0 < y < 10 else 1 if y == 0 else -1
+                                                                   ^
+SyntaxError: invalid syntax
+'''},
