@@ -117,6 +117,7 @@ class Droner:
                 self.partida = Partida(x, y, cena, jogo)
                 ax = 0 if (0 < x < 10) else (1 if x == 0 else -1) 
                 ay = 0 if (0 < y < 10) else (1 if y == 0 else -1)
+                self.partida.azimuth = ax, ay
 
 
             def partida(self):
