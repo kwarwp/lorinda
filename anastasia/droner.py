@@ -117,6 +117,10 @@ class Droner:
                 self.partida = Partida(x, y, cena, jogo)
                 self.partida.azimuth = 0 if 0 < x < 10 else 1 if x == 0 else -1 , 0 if 0 < y < 10 else 1 if y == 0 else -1
 
+
+            def partida(self):
+                """retorna um anteparo normal"""
+                return self.partida
             def rodar(self, ev=None, nome=None):
                 pass
             def roda(self, rodado=0):
