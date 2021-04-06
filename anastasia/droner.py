@@ -113,15 +113,15 @@ class Droner:
                         dx, dy = self.azimuth
                         destino = self.jogo.localiza(self.index, dx, dy)
                         drone.segue(destino, self.azimuth, destino.x, destino.y, 1)
-                self.partida = Partida(x, y, cena, jogo)
+                self._partida = Partida(x, y, cena, jogo)
                 ax = 0 if (0 < x < 10) else (1 if x == 0 else -1) 
                 ay = 0 if (0 < y < 10) else (1 if y == 0 else -1)
-                self.partida.azimuth = ax, ay
+                self._partida.azimuth = ax, ay
 
 
             def partida(self):
                 """retorna um anteparo normal"""
-                return self.partida
+                return self._partida
             def rodar(self, ev=None, nome=None):
                 pass
             def roda(self, rodado=0):
