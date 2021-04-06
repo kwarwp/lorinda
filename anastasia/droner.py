@@ -65,6 +65,12 @@ class Droner:
                 # self.elt.html = f"{x};{y}"
                 self.rotate = self.jogo.rotate
 
+            def cheguei(self, drone, azimuth):
+                """O drone chega ao anteparo e precisa ser direcionado"""
+                dx, dy = azimuth = SWP[self.rotate][azimuth]
+                destino = self.jogo.localiza(self.index, dx, dy)
+                drone.segue(destino, azimuth, self.x, self.y, 1)
+
             def rodar(self, ev=None, nome=None):
                 """Quando o jogador clica, gira os anteparos"""
                 self.jogo.rotate = self.rotate = (self.rotate+90) % 180
@@ -73,7 +79,7 @@ class Droner:
 
             def localiza(self):
                 """retorna a posição do anteparo corrente e o azimuth indicado para drone"""
-                return self.index, self.x, self.y, None
+                return self, self.x, self.y, None
 
             def roda(self, rodado=0):
                 """Gira o anteparo para a rotação dada"""
@@ -98,7 +104,7 @@ class Droner:
             def roda(self, rodado=0):
                 pass
 
-            def localiza(self):
+            def localiza_(self):
                 """retorna a posição do anteparo corrente e o azimuth indicado para drone"""
                 from random import choice, randint
                 x, y = randint(1,10), randint(1,4)
@@ -129,7 +135,7 @@ class Droner:
                 pw = ph = Droner.KNOBS
                 #print ("Drone.__init__", index, cena, jogo, img)
                 self.jogo = jogo
-                self.index, x, y = 0, 0, 0 #self.jogo.localiza(index)
+                self.destino, x, y = None, 0, 0 #self.jogo.localiza(index)
                 #print ("Drone.__init__", self.index,x, y, azimuth)
                 # x, y, _ = [(coor + GAP//4) if isinstance(int,coor) else coor for coor in self.jogo.localiza(index)]
                 x, y = [(coor + GAP//4)  for coor in (x, y)]
@@ -144,6 +150,7 @@ class Droner:
 
             def rodar(self, ev=None):
                 """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
+                self.destino.cheguei(self, self.azimuth)
                 self.roda()
                 # print(" end", self.x, self.y, dx, dy, self.azimuth)
                 #  self.x, self.y, az = [(coor + GAP//4) if isinstance(int,coor) else coor for coor in self.jogo.localiza(index)]
@@ -156,6 +163,11 @@ class Droner:
                 # print(" end", self.x, self.y, dx, dy, self.azimuth)
                 #  self.x, self.y, az = [(coor + GAP//4) if isinstance(int,coor) else coor for coor in self.jogo.localiza(index)]
                 # self.azimuth = az or self.azimuth
+
+            def segue(self, destino, azimuth, x, y, o):
+                """Quando o drone bate na borda ele segue o azimuth sorteado"""
+                self.destino, self.azimuth, x, y, self.o =  destino, azimuth, x, y, o
+                self.x, self.y = [(coor + GAP//4)  for coor in (x, y)]
 
             def seguir(self):
                 """Quando o drone bate na borda ele segue o azimuth sorteado"""
@@ -173,7 +185,7 @@ class Droner:
                 """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
                 self.o = 1
                 dx, dy = az or self.azimuth
-                self.index, x, y, azn = self.jogo.localiza(self.index, dx, dy)
+                self.destino, x, y, azn = self.jogo.localiza(self.index, dx, dy)
                 # = self.index + dx + dy*11
                 #self.x = self.x + dx*GAP*2
                 #self.y = self.y + dy*GAP*2
@@ -185,11 +197,8 @@ class Droner:
         self.cena = cena
         self.rotate = 0
         self.w = 11
-        # Anteparo(200, 75, cena, self)
         self.drone = Drone(0, cena, self)
         self.anteparos = [self.cria(index) for index in range(self.w*6)]
-        #self.drone = Drone(int(1.25*GAP), int(1.75*GAP), cena, self)
-        #self.drone = Dro(self.w, cena, self)
         self.start()
         
     def start(self):
