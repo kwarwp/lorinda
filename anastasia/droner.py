@@ -108,7 +108,8 @@ class Droner:
             :param img: imagem de fundo do anteparo
             """
             def __init__(self, x, y, cena, jogo):
-                super().__init__(x=x, y=y, jogo=jogo, cena=cena, img=BORDA)
+                super().__init__(x=x, y=y, jogo=jogo, cena=cena, img=Droner.DRONE)
+                self.o = 0.5
                 class Partida(Anteparo):
 
                     def cheguei(self, drone, azimuth):
