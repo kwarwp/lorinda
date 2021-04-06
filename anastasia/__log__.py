@@ -949,3 +949,27 @@ AttributeError: 'NoneType' object has no attribute 'nome'
     self.scorer = dict(ponto=1, valor=cena.nome, carta=tit or img, casa=self.xy, move=None)
 AttributeError: 'NoneType' object has no attribute 'nome'
 '''},
+{'date': 'Tue Apr 06 2021 13:10:22.137 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 265
+    main()
+  module <module> line 262
+    Droner(cena)
+  module <module> line 230
+    self.anteparos = [self.cria(index) for index in range(self.w*6)]
+  module <module> line 243
+    return Anteparo(x, y, cena, self) if good else Borda(x, y, cena, self) 
+  module <module> line 111
+    super().__init__(x=x, y=y, jogo=jogo, cena=cena, img=DRONE)
+NameError: name 'DRONE' is not defined
+'''},
