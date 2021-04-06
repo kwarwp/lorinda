@@ -185,7 +185,7 @@ class Droner:
                 """Quando o jogador acerta, apaga as interrogações da lacuna e posiciona a legenda sobre a lacuna"""
                 self.o = 1
                 dx, dy = az or self.azimuth
-                self.destino, x, y, azn = self.jogo.localiza(self.index, dx, dy)
+                self.destino, x, y, azn = self.jogo.localiza(0, dx, dy)
                 # = self.index + dx + dy*11
                 #self.x = self.x + dx*GAP*2
                 #self.y = self.y + dy*GAP*2
