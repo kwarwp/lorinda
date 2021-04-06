@@ -92,6 +92,8 @@ class Droner:
                 self.elt.style.transform = f"rotate({self.rotate}deg)"
                 
             def __repr__(self):
+                return self.index, self.x, self.y                
+            def __str__(self):
                 return self.index, self.x, self.y
                 
         class Borda(Anteparo):
@@ -217,7 +219,7 @@ class Droner:
                 #self.y = self.y + dy*GAP*2
                 self.x, self.y = [(coor + GAP//4) for coor in (x, y)]
                 self.azimuth = azn or az or self.azimuth
-                self.elt.html = f">{self.destino}|{self.azimuth}"
+                self.elt.html = f">{str(self.destino)}|{self.azimuth}"
 
     
         self.cena = cena
