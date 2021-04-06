@@ -20,7 +20,7 @@ class fase3():
     
     def some (ev):
         self.rosalinda=-100000
-    self.laboratorio_1 = Cena(img= LABORATORIO)
+    self.laboratorio_1 = Cena(img= LABORATORIO_1)
     self.laboratorio.direita=self.laboratorio_1
     self.laboratorio_1.esquerda=self.laboratorio
     self.rosalinda.entra(self.laboratorio_1)
@@ -31,11 +31,18 @@ class fase3():
     #rosalinda some 
     
     def parte_2():
-    self.laboratoria_2= Cena(img=LABORATORIO)
+    self.laboratorio_2= Cena(img=LABORATORIO_2)
     self.laboratorio_1.direita=self.laboratorio_2
-    self.laboratorio_1.esquerda=self.laboratorio_1
+    self.laboratorio_2.esquerda=self.laboratorio_1
     self.maria.entra(self.laboratorio_2, tit= " Como ela desapareceu?")
     self.npc.entra(self.laboratorio_2)
     self.npc= Elemento(img=NPC, tit " Você não deve esquecer do seu verdadeiro propósito buscar, desvendar um grande enigma celular. Você deve sempre lembrar que para uma célula funcionar, todas as suas organelas conectadas devem estar. Quando uma proteína conseguir transportar, livre você estará!")
     
+    def parte_3():
+    self.laboratorio_3=Cena(img=LABORATORIO_3)
+    self.laboratorio_2.direita=self.laboratorio_3
+    self.laboratorio_3.esquerda=self.laboratorio_2
+    self.maria.entra(self.laboratorio_3, tit=" quem é você?")
+    self.dna=Elemento(img= DNA)
+    self.dna.entra(self.laboratorio_3, tit="COMO, VOCÊ NÃO SABE MEU NOME?DE QUE PLANETA VOCÊ É?EU SOU O MAIORAL! ")
     
