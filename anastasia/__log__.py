@@ -893,3 +893,31 @@ SyntaxError: invalid syntax
     self.rotate = self.jogo.rotate
 AttributeError: 'NoneType' object has no attribute 'rotate'
 '''},
+{'date': 'Tue Apr 06 2021 12:40:08.777 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 261
+    main()
+  module <module> line 258
+    Droner(cena)
+  module <module> line 226
+    self.anteparos = [self.cria(index) for index in range(self.w*6)]
+  module <module> line 239
+    return Anteparo(x, y, cena, self) if good else Borda(x, y, cena, self) 
+  module <module> line 116
+    self._partida = Partida(x, y, None, Jogo)
+  module <module> line 63
+    super().__init__(img, x=x, y=y, w=pw, h=ph, cena=cena)
+  module _spy.vitollino.main line 554
+    self.scorer = dict(ponto=1, valor=cena.nome, carta=tit or img, casa=self.xy, move=None)
+AttributeError: 'NoneType' object has no attribute 'nome'
+'''},
