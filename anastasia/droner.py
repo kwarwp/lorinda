@@ -77,6 +77,10 @@ class Droner:
                 self.jogo.rodar(self.rotate)
                 self.elt.style.transform = f"rotate({self.rotate}deg)"
 
+            def partida(self):
+                """retorna um anteparo normal"""
+                return self
+
             def localiza(self):
                 """retorna a posição do anteparo corrente e o azimuth indicado para drone"""
                 return self, self.x, self.y, None
@@ -85,6 +89,9 @@ class Droner:
                 """Gira o anteparo para a rotação dada"""
                 self.rotate = rodado
                 self.elt.style.transform = f"rotate({self.rotate}deg)"
+                
+            def __repr__(self):
+                return self.index, self.x, self.y
                 
         class Borda(Anteparo):
             """ Um bloqueio que para o drone e o relocaliza para uma outra borda aleatória.
@@ -99,26 +106,39 @@ class Droner:
             """
             def __init__(self, x, y, cena, jogo):
                 super().__init__(x=x, y=y, jogo=jogo, cena=cena, img=BORDA)
+                class Partida(Anteparo):
+                    pass
+
+                def cheguei(self, drone, azimuth):
+                    """O drone chega ao anteparo e precisa ser direcionado"""
+                    dx, dy = self.azimuth
+                    destino = self.jogo.localiza(self.index, dx, dy)
+                    drone.segue(destino, self.azimuth, destino.x, destino.y, 1)
+                self.partida = Partida(x, y, cena, jogo)
+                self.partida.azimuth = 0 if 0 < x < 10 else 1 if x == 0 else -1 , 0 if 0 < y < 10 else 1 if y == 0 else -1
+
             def rodar(self, ev=None, nome=None):
                 pass
             def roda(self, rodado=0):
                 pass
 
-            def localiza_(self):
-                """retorna a posição do anteparo corrente e o azimuth indicado para drone"""
+            def cheguei(self, drone, azimuth):
+                """O drone chega ao anteparo e precisa ser direcionado"""
                 from random import choice, randint
                 x, y = randint(1,10), randint(1,4)
-                ax, ay = azimuth = (0, 1) #choice(list(ROSA))
+                ax, ay = choice(list(ROSA)) #azimuth = (0, 1) 
                 cx, cy = [10, x, 0][ax+1], [0, y, 5][ay+1]
-                cy = 0
+                #cy = 0
                 index = cx + cy*11
+                destino, x, y, az = self.jogo.localiza(index)
                 cx, cy = GAP+2*GAP*cx, int(-0.5*GAP)+2*GAP*cy
 
                 # print("localiza", cx, cy, azimuth)
                 self.elt.html = f"{ax};{ay}|{cx}:{cy}"
-                self.jogo.start()
-                self.jogo.drone.seguir()
-                return index, cx, cy, azimuth
+                #self.jogo.start()
+                #self.jogo.drone.seguir()
+                #return index, cx, cy, azimuth
+                drone.segue(destino.partida(), azimuth, x, y, 0.5)
 
         class Drone(J.a):
             """ Um drone que desvia para esquerda ou direita ao chocar com o anteparo
@@ -191,7 +211,7 @@ class Droner:
                 #self.y = self.y + dy*GAP*2
                 self.x, self.y = [(coor + GAP//4) for coor in (x, y)]
                 self.azimuth = azn or az or self.azimuth
-                self.elt.html = f">{self.index}|{self.azimuth}"
+                self.elt.html = f">{self.destino}|{self.azimuth}"
 
     
         self.cena = cena
