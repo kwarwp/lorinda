@@ -20,7 +20,7 @@ SF = {"transition": "left 8s, top 8s"}
 J = Jogo()
 NC = J.c()
 """Usa o recurso novo do Vitollino Jogo. Jogo.c é Cena, Jogo.a é Elemento, Jogo.n é Texto"""
-SF = {"font-size":"10px", "color":"red", "transition": "left 5s, top 5s"}
+SF = {"font-size":"12px", "color":"red", "transition": "left 5s, top 5s"}
 """Dá o tamanho da letra da legenda e faz a legenda se movimentar suavemente quando inicia e acerta"""
 VAZIO = "https://i.imgur.com/npb9Oej.png"
 BORDA = "https://i.imgur.com/npb9Oej.png"
@@ -92,9 +92,9 @@ class Droner:
                 self.elt.style.transform = f"rotate({self.rotate}deg)"
                 
             def __repr__(self):
-                return f"i:{self.index}\nx:{self.x}\ny:{self.y}"                
+                return f"i:{self.index}\nx:{self.x}\ny:{self.y}\n"                
             def __str__(self):
-                return f"i:{self.index}\nx:{self.x}\ny:{self.y}\n"
+                return f"i:{self.index}&nbsp;x:{self.x}<br/>y:{self.y}<br/>"
                 
         class Borda(Anteparo):
             """ Um bloqueio que para o drone e o relocaliza para uma outra borda aleatória.
