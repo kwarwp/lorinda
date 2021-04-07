@@ -26,14 +26,17 @@ class fase3():
         self.laboratorio.vai()
     
     def some (self):
-        #self.rosalinda.x=-100000
+        def sumir(ev=0):
+            self.rosalinda.x=-100000
         self.laboratorio_1.vai()
         self.laboratorio_1.esquerda=self.laboratorio
         self.rosalinda.entra(self.laboratorio_1)
+        fala_rosalinda = "sim claro"
+        self.rosalinda.vai = Texto(self.laboratorio_1, fala_rosalinda, foi=sumir).vai
         #self.elt.onclick = some
         self.maria.entra(self.laboratorio_1)
         self.maria.tit=" Sim, elas são importantes.Então quer dizer que se eu não me alimentar bem, posso ter cabelos, unhas e pele feias?" 
-        self.rosalinda.tit= "sim claro"
+        self.rosalinda.tit= ""
         #rosalinda some 
     
     def parte_2():
