@@ -1,5 +1,5 @@
 # lorinda.kellee.main.py
-from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
+from _spy.vitollino.main import Cena, Elemento, Texto, STYLE, JOGO
 from _spy.vitollino.main import Inventario as inv 
 # salas do games da Angelica, lorinda-lisa-libby e kellee
 STYLE.update(width=600, height="600px")
@@ -14,6 +14,7 @@ LABORATORIO_4 = "https://imgur.com/c71g0qt.jpg"
 ESTRTURA= "https://imgur.com/iaGv545.png"
 DNA= "https://i.imgur.com/slnDrGI.png"
 NPC="https://i.imgur.com/hU2mulx.png"
+ENIGMA= "https://i.imgur.com/pwI7UL8.png"
 class fase3():
     def __init__(self):
         self.laboratorio=Cena(img=LABORATORIO)
@@ -63,7 +64,7 @@ class fase3():
         self.maria.tit=" quem é você?"
         self.dna=Elemento(img= DNA, y=450,x=200, tit="COMO, VOCÊ NÃO SABE MEU NOME?DE QUE PLANETA VOCÊ É?EU SOU O MAIORAL! ")
         self.dna.entra(self.laboratorio_3)
-        self.laboratorio_3.direita=Cena(vai=self.parte_3)
+        self.laboratorio_3.direita=Cena(vai=self.parte_4)
 
     def parte_4(self):
         self.laboratorio_4=Cena(img=LABORATORIO_4)
@@ -73,5 +74,11 @@ class fase3():
         self.npc.entra(self.laboratorio_4)
         self.dna.tit="vá estudar garota!"
         self.npc.tit=" Responda o enigma: Sou constituído por letras, que se encaixam perfeitamente, seguindo uma determinada ordem. Quando tem algum erro, pode provocar uma doença ou mutação."
+
+    def parte_5(self):
+        from lorinda.anastasia import Swap
+        self.laboratorio_4=Cena(img=LABORATORIO_4)
+        self.laboratorio_4.vai()
+        Swap(JOGO,ENIGMA,self.laboratorio_4)
         
-fase3()
+fase3()parte_5()
