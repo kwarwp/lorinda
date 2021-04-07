@@ -34,3 +34,10 @@ SyntaxError: invalid syntax
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Apr 07 2021 16:03:07.816 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 84
+  fase3()parte_5()
+          ^
+SyntaxError: invalid syntax
+'''},
