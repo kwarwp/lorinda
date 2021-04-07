@@ -12,7 +12,7 @@ LABORATORIO_2 = "https://imgur.com/c71g0qt.jpg"
 LABORATORIO_3 = "https://imgur.com/c71g0qt.jpg"
 ESTRTURA= "https://imgur.com/iaGv545.png"
 DNA= ""
-NPC=""
+NPC="https://i.imgur.com/hU2mulx.png"
 class fase3():
     def __init__(self):
         self.laboratorio=Cena(img=LABORATORIO)
@@ -37,15 +37,18 @@ class fase3():
         self.maria.entra(self.laboratorio_1)
         self.maria.tit=" Sim, elas são importantes.Então quer dizer que se eu não me alimentar bem, posso ter cabelos, unhas e pele feias?" 
         self.rosalinda.tit= ""
+        self.laboratorio_1.direita=Cena(vai=self.parte_2)
         #rosalinda some 
     
-    def parte_2():
+    def parte_2(self):
         self.laboratorio_2= Cena(img=LABORATORIO_2)
-        self.laboratorio_1.direita=self.laboratorio_2
+        #self.laboratorio_1.direita=self.laboratorio_2
+        self.laboratorio_2.vai()
         self.laboratorio_2.esquerda=self.laboratorio_1
-        self.maria.entra(self.laboratorio_2, tit= " Como ela desapareceu?")
+        self.maria.entra(self.laboratorio_2)
+        self.maria.tit= " Como ela desapareceu?"
+        self.npc= Elemento(img=NPC,y=400,w=160,h=160, tit=" Você não deve esquecer do seu verdadeiro propósito buscar, desvendar um grande enigma celular. Você deve sempre lembrar que para uma célula funcionar, todas as suas organelas conectadas devem estar. Quando uma proteína conseguir transportar, livre você estará!")
         self.npc.entra(self.laboratorio_2)
-        self.npc= Elemento(img=NPC, tit=" Você não deve esquecer do seu verdadeiro propósito buscar, desvendar um grande enigma celular. Você deve sempre lembrar que para uma célula funcionar, todas as suas organelas conectadas devem estar. Quando uma proteína conseguir transportar, livre você estará!")
     
     def parte_3():
         self.laboratorio_3=Cena(img=LABORATORIO_3)
