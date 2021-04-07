@@ -3,13 +3,13 @@ from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
 from _spy.vitollino.main import Inventario as inv 
 # salas do games da Angelica, lorinda-lisa-libby e kellee
 
-MARIA = "https://imgur.com/OTFGXEr"
-ROSALINDA = "https://imgur.com/0Dv7w29"
-LABORATORIO = "https://imgur.com/c71g0qt"
-LABORATORIO_1 = "https://imgur.com/c71g0qt"
-LABORATORIO_2 = "https://imgur.com/c71g0qt"
-LABORATORIO_3 = "https://imgur.com/c71g0qt"
-ESTRTURA= "https://imgur.com/iaGv545"
+MARIA = "https://imgur.com/OTFGXEr.png"
+ROSALINDA = "https://imgur.com/0Dv7w29.png"
+LABORATORIO = "https://imgur.com/c71g0qt.jpg"
+LABORATORIO_1 = "https://imgur.com/c71g0qt.jpg"
+LABORATORIO_2 = "https://imgur.com/c71g0qt.jpg"
+LABORATORIO_3 = "https://imgur.com/c71g0qt.jpg"
+ESTRTURA= "https://imgur.com/iaGv545.png"
 DNA= ""
 NPC=""
 class fase3():
