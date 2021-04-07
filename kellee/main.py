@@ -63,7 +63,7 @@ class fase3():
         self.maria.tit=" quem é você?"
         self.dna=Elemento(img= DNA, y=450,x=200, tit="COMO, VOCÊ NÃO SABE MEU NOME?DE QUE PLANETA VOCÊ É?EU SOU O MAIORAL! ")
         self.dna.entra(self.laboratorio_3)
-         self.laboratorio_3.direita=Cena(vai=self.parte_3)
+        self.laboratorio_3.direita=Cena(vai=self.parte_3)
 
     def parte_4(self):
         self.laboratorio_4=Cena(img=LABORATORIO_4)
