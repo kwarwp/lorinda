@@ -10,6 +10,7 @@ LABORATORIO = "https://imgur.com/c71g0qt.jpg"
 LABORATORIO_1 = "https://imgur.com/c71g0qt.jpg"
 LABORATORIO_2 = "https://imgur.com/c71g0qt.jpg"
 LABORATORIO_3 = "https://imgur.com/c71g0qt.jpg"
+LABORATORIO_4 = "https://imgur.com/c71g0qt.jpg"
 ESTRTURA= "https://imgur.com/iaGv545.png"
 DNA= "https://i.imgur.com/slnDrGI.png"
 NPC="https://i.imgur.com/hU2mulx.png"
@@ -62,12 +63,15 @@ class fase3():
         self.maria.tit=" quem é você?"
         self.dna=Elemento(img= DNA, y=450,x=200, tit="COMO, VOCÊ NÃO SABE MEU NOME?DE QUE PLANETA VOCÊ É?EU SOU O MAIORAL! ")
         self.dna.entra(self.laboratorio_3)
-    
+         self.laboratorio_3.direita=Cena(vai=self.parte_3)
+
     def parte_4(self):
         self.laboratorio_4=Cena(img=LABORATORIO_4)
-        self.laboratorio_3.direita=self.laboratorio_4
+        self.laboratorio_4.vai()
         self.laboratorio_4.esquerda=self.laboratorio_3
-        self.dna.entra(self.laboratorio_4, tit="vá estudar garota!")
-        self.npc.entra(self.laboratorio_4,tit=" Responda o enigma: Sou constituído por letras, que se encaixam perfeitamente, seguindo uma determinada ordem. Quando tem algum erro, pode provocar uma doença ou mutação.")
+        self.dna.entra(self.laboratorio_4)
+        self.npc.entra(self.laboratorio_4)
+        self.dna.tit="vá estudar garota!"
+        self.npc.tit=" Responda o enigma: Sou constituído por letras, que se encaixam perfeitamente, seguindo uma determinada ordem. Quando tem algum erro, pode provocar uma doença ou mutação."
         
 fase3()
