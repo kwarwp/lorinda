@@ -20,3 +20,10 @@ IndentationError: expected an indented block
                                                                                                                   ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Apr 07 2021 15:09:02.249 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 42
+  self.npc= Elemento(img=NPC, tit " Você não deve esquecer do seu verdadeiro propósito buscar, desvendar um grande enigma celular. Você deve sempre lembrar que para uma célula funcionar, todas as suas organelas conectadas devem estar. Quando uma proteína conseguir transportar, livre você estará!")
+                                   ^
+SyntaxError: invalid syntax
+'''},
