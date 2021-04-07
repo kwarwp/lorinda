@@ -11,7 +11,7 @@ LABORATORIO_1 = "https://imgur.com/c71g0qt.jpg"
 LABORATORIO_2 = "https://imgur.com/c71g0qt.jpg"
 LABORATORIO_3 = "https://imgur.com/c71g0qt.jpg"
 ESTRTURA= "https://imgur.com/iaGv545.png"
-DNA= ""
+DNA= "https://i.imgur.com/slnDrGI.png"
 NPC="https://i.imgur.com/hU2mulx.png"
 class fase3():
     def __init__(self):
@@ -49,17 +49,19 @@ class fase3():
         self.maria.tit= " Como ela desapareceu?"
         self.npc= Elemento(img=NPC,y=400,w=160,h=160, tit=" Você não deve esquecer do seu verdadeiro propósito buscar, desvendar um grande enigma celular. Você deve sempre lembrar que para uma célula funcionar, todas as suas organelas conectadas devem estar. Quando uma proteína conseguir transportar, livre você estará!")
         self.npc.entra(self.laboratorio_2)
+        self.laboratorio_2.direita=Cena(vai=self.parte_3)
     
-    def parte_3():
+    def parte_3(self):
         self.laboratorio_3=Cena(img=LABORATORIO_3)
-        self.laboratorio_2.direita=self.laboratorio_3
+        self.laboratorio_3.vai()
+        #self.laboratorio_2.direita=self.laboratorio_3
         self.laboratorio_3.esquerda=self.laboratorio_2
         self.npc.entra(self.laboratorio_3, tit=" ele não é muito simpático")
         self.maria.entra(self.laboratorio_3, tit=" quem é você?")
-        self.dna=Elemento(img= DNA)
-        self.dna.entra(self.laboratorio_3, tit="COMO, VOCÊ NÃO SABE MEU NOME?DE QUE PLANETA VOCÊ É?EU SOU O MAIORAL! ")
+        self.dna=Elemento(img= DNA, tit="COMO, VOCÊ NÃO SABE MEU NOME?DE QUE PLANETA VOCÊ É?EU SOU O MAIORAL! ")
+        self.dna.entra(self.laboratorio_3)
     
-    def parte_4():
+    def parte_4(self):
         self.laboratorio_4=Cena(img=LABORATORIO_4)
         self.laboratorio_3.direita=self.laboratorio_4
         self.laboratorio_4.esquerda=self.laboratorio_3
