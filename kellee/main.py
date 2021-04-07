@@ -56,9 +56,11 @@ class fase3():
         self.laboratorio_3.vai()
         #self.laboratorio_2.direita=self.laboratorio_3
         self.laboratorio_3.esquerda=self.laboratorio_2
-        self.npc.entra(self.laboratorio_3, tit=" ele não é muito simpático")
-        self.maria.entra(self.laboratorio_3, tit=" quem é você?")
-        self.dna=Elemento(img= DNA, tit="COMO, VOCÊ NÃO SABE MEU NOME?DE QUE PLANETA VOCÊ É?EU SOU O MAIORAL! ")
+        self.npc.entra(self.laboratorio_3)
+        self.maria.entra(self.laboratorio_3)
+        self.npc.tit=" ele não é muito simpático"
+        self.maria.tit=" quem é você?"
+        self.dna=Elemento(img= DNA, y=450,x=200, tit="COMO, VOCÊ NÃO SABE MEU NOME?DE QUE PLANETA VOCÊ É?EU SOU O MAIORAL! ")
         self.dna.entra(self.laboratorio_3)
     
     def parte_4(self):
