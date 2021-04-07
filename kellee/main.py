@@ -27,6 +27,7 @@ class fase3():
     
     def some (self):
         #self.rosalinda.x=-100000
+        self.laboratorio_1.vai()
         self.laboratorio_1.esquerda=self.laboratorio
         self.rosalinda.entra(self.laboratorio_1)
         #self.elt.onclick = some
