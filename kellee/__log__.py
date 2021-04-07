@@ -27,3 +27,10 @@ SyntaxError: invalid syntax
                                    ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Apr 07 2021 15:54:22.830 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 66
+  self.laboratorio_3.direita=Cena(vai=self.parte_3)
+  ^
+IndentationError: unexpected indent
+'''},
