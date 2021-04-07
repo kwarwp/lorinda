@@ -83,4 +83,4 @@ class fase3():
         self.laboratorio_5.vai()
         Swap(JOGO,ENIGMA,self.laboratorio_5, x=50, y=50, w=500,h=500)
         
-fase3().parte_5()
+fase3()
