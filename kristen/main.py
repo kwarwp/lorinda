@@ -6,6 +6,7 @@ STYLE["width"] = 900
 STYLE["heigth"] ='650px'
 
 MATHEUS = ""
+
 CALICE = "" 
 AMBULA = ""
 PATENA = ""
@@ -38,6 +39,7 @@ class Tiao:
     
     def entrou_theus(self, *_):
         self.theus.entra(self.paroquia)
-        Texto(self.paroquia, " Oie!").vai()
-        self.theus.vai = Texto(self.paroquia,  " ....."  foi=self.cena_1).vai
+        Texto(self.paroquia, " Bem vindos ao quiz dos corinhas.")       
+        self.theus.vai = Texto(self.paroquia,  " "  foi=self.cena_1).vai
+        
         
