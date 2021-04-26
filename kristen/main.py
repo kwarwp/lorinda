@@ -40,3 +40,4 @@ class Tiao:
         self.theus.entra(self.paroquia)
         Texto(self.paroquia, " Oie!").vai()
         self.theus.vai = Texto(self.paroquia,  " ....."  foi=self.cena_1).vai
+        
