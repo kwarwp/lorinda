@@ -5,7 +5,7 @@ from _spy.vitollino.main import INVENTARIO as inv
 STYLE["width"] = 900
 STYLE["heigth"] ='650px'
 
-MATHEUS-TIAO = ""
+MATHEUS = ""
 CALICE = "" 
 AMBULA = ""
 PATENA = ""
@@ -21,7 +21,7 @@ PRESBITERIO = "https://scontent.fcfb1-1.fna.fbcdn.net/v/t1.6435-9/168540222_4412
 
 class Tiao:
     def __init__(self):
-    self.tiao = Elemento(img=MATHEUS_TIAO)
+    self.theus = Elemento(img=MATHEUS)
     self.calice = Elemento 
     self.ambula = Elemento
     self.patena = Elemento
@@ -33,3 +33,4 @@ class Tiao:
     self.paroquia = Cena
     self.altar = Cena
     self.presbiterio = Cena 
+    self.paroquia.vai()
