@@ -21,16 +21,22 @@ PRESBITERIO = "https://scontent.fcfb1-1.fna.fbcdn.net/v/t1.6435-9/168540222_4412
 
 class Tiao:
     def __init__(self):
-    self.theus = Elemento(img=MATHEUS)
-    self.calice = Elemento 
-    self.ambula = Elemento
-    self.patena = Elemento
-    self.galheta = Elemento
-    self.jarro = Elemento
-    self.sanguineo = Elemento
-    self.corporal = Elemento
-    self.pala = Elemento
-    self.paroquia = Cena
-    self.altar = Cena
-    self.presbiterio = Cena 
-    self.paroquia.vai()
+        self.theus = Elemento(img=MATHEUS)
+        self.calice = Elemento 
+        self.ambula = Elemento
+        self.patena = Elemento
+        self.galheta = Elemento
+        self.jarro = Elemento
+        self.sanguineo = Elemento
+        self.corporal = Elemento
+        self.pala = Elemento
+        self.paroquia = Cena
+        self.altar = Cena
+        self.presbiterio = Cena 
+        self.paroquia.vai()
+        self.entrou_theus()
+    
+    def entrou_theus(self, *_):
+        self.theus.entra(self.paroquia)
+        Texto(self.paroquia, " Oie!").vai()
+        self.theus.vai = Texto(self.paroquia,  " ....."  foi=self.cena_1).vai
