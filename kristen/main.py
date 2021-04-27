@@ -106,11 +106,24 @@ class Tiao:
 
     self.igreja_p.vai()
     self.theus.entra(self.igreja_p)
-    self.theus.vai = Texto(self.igreja_p, "O que é Liturgia"
+    self.theus.vai = Texto(self.igreja_p, "O que é Liturgia?"
                            foi=resposta, A= "O livro que recebemos mensalmente.", B= "As orações que fazemos em casa.", C="A ação do povo, o serviço do povo.").vai
             
             
-            
+        
+    def entrou_cena4(self,*_):
+        def resposta(optou):
+            respondeu = dict(
+            A=Texto(self.igreja_p, "Acertou!", foi=self.entrou_cena5),
+            B=Texto(self.igreja_p, ""),
+            C=Texto(self.igreja_p, ""),
+         )
+        respondeu[optou].vai()
+        
+    self.igreja_p.vai()
+    self.theus.entra(self.igreja_p)
+    self.theus.vai = Texto(self.igreja, "O que são celebrações Litúrgicas?"    
+                           foi=resposta, A="Encontros de Deus com seu povo reunido.", B="Festa de aniversário.", C= "Celebração dos povos.").vai
             
             
             
