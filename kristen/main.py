@@ -72,8 +72,8 @@ class Tiao:
     def entrou_cena2(self, *_):
         def reposta(optpou):
             respondeu = dict(
-            A=Texto(self.ireja_p, "Correto!", foi=self.entrou_intro2),
-            B=Texto(self.igreja_p, "Errado."),
+            A=Texto(self.ireja_p, "Errado."),
+            B=Texto(self.igreja_p, "Correto!", foi=self.entrou_intro2),
             C=Texto(self.igreja_p, "Errado."),
          )
         respondeu[optou].vai()
