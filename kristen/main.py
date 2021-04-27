@@ -125,9 +125,13 @@ class Tiao:
     self.theus.vai = Texto(self.igreja, "O que são celebrações Litúrgicas?"    
                            foi=resposta, A="Encontros de Deus com seu povo reunido.", B="Festa de aniversário.", C= "Celebração dos povos.").vai
             
+        
+    def entrou_cena5(self, *_):
+        def resposta(optou):
+            respondeu = dict(
             
             
             
-            self.final.vai()
+            self.final.vai()  
 Tiao()
     
