@@ -42,6 +42,25 @@ class Tiao:
     def entrou_theus(self, *_):
         self.theus.entra(self.paroquia)
         Texto(self.paroquia, " Bem vindos ao quiz dos corinhas.")       
-        self.theus.vai = Texto(self.paroquia,  "Eu sou o Matheus! Neste jogo, testarei seus conhecimentos sobre o que foi ensinado em nossos encontros!"  foi=self.cena_1).vai
+        self.theus.vai = Texto(self.paroquia,  
+                               "Eu sou o Matheus! Neste jogo, testarei seus conhecimentos sobre o que foi ensinado em nossos encontros!" 
+                                foi=self.intro).vai
+        
+    def entrou_intro(self, *_):
+        self.theus.entra(self.igreja)
+        Texto(self.igreja, "Estão prontos?")
+        self.theus.vai = Texto(self.igreja,
+                               "Como foi ensinado em nossos encontros,o grupo de coroinhas é formado por meninos e meninas que, nas igrejas, realizam funções de auxílio ao que preside a celebração, especialmente o padre."
+                               foi=self.cena1).vai
+                               
+                               
+    def entrou_cena1(self, *_):
+        def resposta(optou):
+            respondeu = dict(
+            A=Texto(self.igreja_p, ""),
+            B=Texto(self.igreja_p,""),
+            C=Texto(self.igreja_p, "Correto!", foi=self.entrou_igreja),
+         )
+        respondeu[optou].vai()
         
         
