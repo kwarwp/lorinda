@@ -129,7 +129,9 @@ class Tiao:
     def entrou_cena5(self, *_):
         def resposta(optou):
             respondeu = dict(
-            
+            A=Texto(self.igreja_p,"Errado."),
+            B=Texto(self.igreja_p,"Errado."),
+            C=Texto(self.igreja_p,"Acertou!", foi-self.entrou_cena6),
             
             
             self.final.vai()  
