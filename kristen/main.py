@@ -63,4 +63,8 @@ class Tiao:
          )
         respondeu[optou].vai()
         
+    self.igreja_p.vai()
+    self.theus.entra(self.igrej_p)
+    self.theus.vai = Texto(self.igreja_p, "Qual destas é uma responsabilidade dos Coroinhas?"
+                           foi=resposta, A= "Responder mal os pais.", B= "Conversar,rir ou brincar durante a celebração.", C= "Ser cuidadoso com as coisas da Igreja.").vai
         
