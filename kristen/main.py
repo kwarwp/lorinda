@@ -11,29 +11,31 @@ CALICE = ""
 AMBULA = ""
 PATENA = ""
 GALHETA = ""
-JARRO-BACIA-MANUSTERGIO = ""
+JARRO_BACIA_ = ""
 SANGUINEO = ""
 CORPORAL = ""
 PALA = ""
 PAROQUIA = ""
 ALTAR = ""
+IGREJA_VELHA = ""
 PRESBITERIO = "https://scontent.fcfb1-1.fna.fbcdn.net/v/t1.6435-9/168540222_4412180955478316_593441197893704662_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=8bfeb9&_nc_eui2=AeGCOzl1cuuTXD_uWyjqV2DDmCHEghmzKhKYIcSCGbMqEnSR9qEKiqw1WlDrkYUaZbWF2P3dN7kHV4mgBvbpkhJ6&_nc_ohc=q9C75Mp_uKQAX-IbCvE&_nc_ht=scontent.fcfb1-1.fna&oh=1e4daad38474aea8803fe038836cc4a1&oe=60AA3B07" 
 
 
 class Tiao:
     def __init__(self):
         self.theus = Elemento(img=MATHEUS)
-        self.calice = Elemento 
-        self.ambula = Elemento
-        self.patena = Elemento
-        self.galheta = Elemento
-        self.jarro = Elemento
-        self.sanguineo = Elemento
-        self.corporal = Elemento
-        self.pala = Elemento
-        self.paroquia = Cena
-        self.altar = Cena
-        self.presbiterio = Cena 
+        self.calice = Elemento(img=CALICE) 
+        self.ambula = Elemento(img=AMBULA)
+        self.patena = Elemento(img=PATENA)
+        self.galheta = Elemento(img=GALHETA)
+        self.jarro = Elemento(img=JARRO_BACIA_MANUSTERGIO)
+        self.sanguineo = Elemento(img=SANGUINEO)
+        self.corporal = Elemento(img=CORPORAL)
+        self.pala = Elemento(img=PALA)
+        self.paroquia = Cena(img=PAROQUIA)
+        self.altar = Cena(img=ALTAR)
+        self.igreja = Cena(img=IGREJA_VELHA)
+        self.presbiterio = Cena(img=PRESBITERIO)
         self.paroquia.vai()
         self.entrou_theus()
     
