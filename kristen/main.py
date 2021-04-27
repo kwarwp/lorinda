@@ -71,7 +71,7 @@ class Tiao:
         
     def entrou_cena2(self, *_):
         def reposta(optpou):
-            respondeu dict(
+            respondeu = dict(
             A=Texto(self.ireja_p, "Correto!"),
             B=Texto(self.igreja_p, ""),
             C=Texto(self.igreja_p, ""),
@@ -82,8 +82,31 @@ class Tiao:
     self.theus.entra(self.igreja_p)
     self.theus.vai = Texto(self.igreja_p, "Chegando à igreja, para onde o coroinha deve se dirigir?"
                            foi=resposta, A= "Para a sacristia", B= "Para a Capela do Santíssimo", C= "Para o Presbitério").vai
-            
-            
+                           
+                           
+                           
+                           
+                           
+    def entrou_intro2(self, *_):
+    self.theus.entra(self.igreja)
+    Texto(self.igreja, " Nesta fase, recordamos a Liturgia ,  Celebrações Litúrgicas e alguns símbolos utilizados na liturgia.")
+    self.theus.vai = Texto(self.igreja,
+                            "Vamos nessa?"
+                             foi=self.cena3).vai
+                             
+                             
+    def entrou_cena3(self, *_):
+        def resposta(optou):
+            respondeu = dict(
+            A=Texto(self.igreja_p, ""),
+            B=Texto(self.igreja_p, ""),
+            C=Texto(self.igreja_p, ""),
+         )
+        respondeu[optou].vai() 
+
+    self.igreja_p.vai()
+    self.theus.entra(self.igreja_p)
+    self.theus.vai = Texto(self.igreja_p, ""
             
             
             
