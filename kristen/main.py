@@ -69,4 +69,29 @@ class Tiao:
                            foi=resposta, A= "Responder mal os pais.", B= "Conversar,rir ou brincar durante a celebração.", C= "Ser cuidadoso com as coisas da Igreja.").vai
         
         
-    def
+    def entrou_cena2(self, *_):
+        def reposta(optpou):
+            respondeu dict(
+            A=Texto(self.ireja_p, "Correto!"),
+            B=Texto(self.igreja_p, ""),
+            C=Texto(self.igreja_p, ""),
+         )
+        respondeu[optou].vai()
+        
+    self.igreja_p.vai()
+    self.theus.entra(self.igreja_p)
+    self.theus.vai = Texto(self.igreja_p, "Chegando à igreja, para onde o coroinha deve se dirigir?"
+                           foi=resposta, A= "Para a sacristia", B= "Para a Capela do Santíssimo", C= "Para o Presbitério").vai
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            self.final.vai()
+Tiao()
+    
