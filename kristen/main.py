@@ -100,14 +100,14 @@ class Tiao:
             respondeu = dict(
             A=Texto(self.igreja_p, ""),
             B=Texto(self.igreja_p, ""),
-            C=Texto(self.igreja_p, ""),
+            C=Texto(self.igreja_p, "Você acertou!"),
          )
         respondeu[optou].vai() 
 
     self.igreja_p.vai()
     self.theus.entra(self.igreja_p)
-    self.theus.vai = Texto(self.igreja_p, ""
-            
+    self.theus.vai = Texto(self.igreja_p, "O que é Liturgia"
+                           foi=resposta, A= "O livro que recebemos mensalmente.", B= "As orações que fazemos em casa.", C="A ação do povo, o serviço do povo.").vai
             
             
             
