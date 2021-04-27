@@ -139,6 +139,12 @@ class Tiao:
     self.thues.entra(self.igreja_p)
     self.theus.va = Texto(self.igreja, "O que significa INRI ?"
                           foi=resposta, A="Santíssima Trindade.", B="Nossa Senhora.",  C="Jesus Rei dos Judeus.").vai
+                          
+                        
+    def entrou_cena_6(self, *_):
+        def resposta(optou):
+             respondeu = dict(
+             
             
             self.final.vai()  
 Tiao()
