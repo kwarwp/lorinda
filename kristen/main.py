@@ -132,7 +132,13 @@ class Tiao:
             A=Texto(self.igreja_p,"Errado."),
             B=Texto(self.igreja_p,"Errado."),
             C=Texto(self.igreja_p,"Acertou!", foi-self.entrou_cena6),
-            
+        )
+        respondeu[optou].vai()
+        
+    self.igreja_p.vai()
+    self.thues.entra(self.igreja_p)
+    self.theus.va = Texto(self.igreja, "O que significa INRI ?"
+                          foi=resposta, A="Santíssima Trindade.", B="Nossa Senhora.",  C="Jesus Rei dos Judeus.").vai
             
             self.final.vai()  
 Tiao()
