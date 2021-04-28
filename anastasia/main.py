@@ -64,7 +64,7 @@ class Associa:
     def __init__(self, cena, acertou=None, caixa=160, borda=100):
         self.cena, self.caixa, self.borda = cena, caixa, borda
         self.pontua = 0
-        self.acertar = acertou or self.acerta
+        self.acertou = acertou or self.acerta
         '''
         self.mito = self.Nome(nome="mitocôndria", tit=0, x=650, y=150, jogo=self, cena=self.cena)
         self.nucle = self.Nome(nome="núcleo",  tit=1, x=550, y=220, jogo=self, cena=self.cena)
