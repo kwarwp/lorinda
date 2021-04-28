@@ -25,7 +25,7 @@ class Mochila:
         self.cena_anterior = inv.cena
         self.mochila.vai()
         
-    def fecha_mochila(self):
+    def fecha_mochila(self, _=0):
         self.cena_anterior.vai()
         
     def calcula_moeda(self):
