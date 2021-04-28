@@ -30,10 +30,9 @@ class Associa:
         :param lacuna: imagem de fundo da lacuna
         :param legenda: imagem de fundo da legenda
         """
-        def __init__(self, nome, tit, x, y, cena, jogo, caixa=160, borda=100, acertou=None,
+        def __init__(self, nome, tit, x, y, cena, jogo, caixa=160, borda=100,
             lacuna=VAZIO, legenda=VAZIO):
             self.nome, self.tit, self.x, self.y, self.jogo, self.borda = nome, tit, x, y, jogo, borda
-            self.acertar = acertou or self.acerta
             titulo = f"n_{tit}"
             """Este título serve para marcar cada legenda. É usado pelo drop para conferir se é a legenda certa"""
             drop = {titulo: self.acertou}
@@ -62,9 +61,10 @@ class Associa:
         
 
     
-    def __init__(self, cena, caixa=160, borda=100):
+    def __init__(self, cena, acertou=None, caixa=160, borda=100):
         self.cena, self.caixa, self.borda = cena, caixa, borda
         self.pontua = 0
+        self.acertar = acertou or self.acerta
         '''
         self.mito = self.Nome(nome="mitocôndria", tit=0, x=650, y=150, jogo=self, cena=self.cena)
         self.nucle = self.Nome(nome="núcleo",  tit=1, x=550, y=220, jogo=self, cena=self.cena)
