@@ -131,12 +131,12 @@ class Tiao:
             respondeu = dict(
             A=Texto(self.igreja_p,"Errado."),
             B=Texto(self.igreja_p,"Errado."),
-            C=Texto(self.igreja_p,"Acertou!", foi-self.entrou_cena6),
+            C=Texto(self.igreja_p,"Acertou!", foi=self.entrou_cena6),
         )
         respondeu[optou].vai()
         
     self.igreja_p.vai()
-    self.thues.entra(self.igreja_p)
+    self.theus.entra(self.igreja_p)
     self.theus.va = Texto(self.igreja, "O que significa INRI ?"
                           foi=resposta, A="Santíssima Trindade.", B="Nossa Senhora.",  C="Jesus Rei dos Judeus.").vai
                           
@@ -144,7 +144,16 @@ class Tiao:
     def entrou_cena_6(self, *_):
         def resposta(optou):
              respondeu = dict(
-             
+             A=Texto(self.igreja_p,"Errado."),
+             B=Texto(self.igreja_p,"Acertou!", foi=self.entrou_intro3),
+             C=Texto(self.igreja_p,"Errado."),
+        )
+        respondeu[optou].vai()
+        
+    self.igreja_p.vai()
+    self.theus.entra(igreja_p)
+    self.theus.vai = Texto(self.igreja, "O que siguinifica A e Ω ?"
+                           foi=resposta, A="Cristo.", B="Alfa e Ômega.", C="Jesus salvador dos homens.").vai
             
             self.final.vai()  
 Tiao()
