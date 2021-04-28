@@ -17,7 +17,7 @@ class Mochila:
         self.moedas = []
         self.mochila_inv = Elemento(self.MOCHILA)
         self.mochila_inv.vai = self.mostra_mochila
-        self.mochila_fecha = Elemento(self.VOLTA, x=0, y=550, w=600, h=50)
+        self.mochila_fecha = Elemento(self.VOLTA, cena=self.mochila, x=0, y=550, w=600, h=50)
         self.mochila_fecha.vai = self.fecha_mochila
         inv.bota(self.mochila_inv)
         
