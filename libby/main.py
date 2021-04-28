@@ -49,7 +49,7 @@ class fase2():
         self.jogo.nome(nome="citoplasma, membrana, núcleo", tit=5, x=750, y=250)
         self.jogo.nome(nome= "Para sair desse mundo vc precisa achar o protozoário",tit=6,x=900,y=350)
     def acertou(self):
-        Texto(self.cena, "Você acertou tudo! Parabéns! Você Ganhou cinco ATP").vai()
+        Texto(self.membrana, "Você acertou tudo! Parabéns! Você Ganhou cinco ATP").vai()
         MOCHILA.ganha_atp()
         MOCHILA.ganha_atp()
         MOCHILA.ganha_atp()
