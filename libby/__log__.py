@@ -140,3 +140,10 @@ SyntaxError: invalid syntax
     self.acertar = acertou or self.acerta
 AttributeError: 'Nome' object has no attribute 'acerta'
 '''},
+{'date': 'Wed Apr 28 2021 17:51:01.896 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 53
+  Texto(self.membrana, "Você acertou tudo! Parabéns! Você Ganhou cinco ATP, veja sua mochila"
+                                                                                                       ^
+SyntaxError: invalid syntax
+'''},
