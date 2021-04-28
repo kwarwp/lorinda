@@ -82,7 +82,7 @@ class Associa:
     def pontuar(self):
         self.pontua += 1
         if self.pontua == 4:
-            self.acertou
+            self.acertou()
 
 
 
