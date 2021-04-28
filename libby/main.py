@@ -34,7 +34,7 @@ class fase2():
         self.celula_6= Elemento(img= CELULA_6,x=750,y=250)
         self.membrana= Cena(img= MEMBRANA)
         self.membrana.vai()
-        self.jogo = Associa(self.membrana, caixa=300, borda=20, acertou=self.acertou)
+        self.jogo = Associa(self.membrana, caixa=300, borda=20, acertou=self.acertou, acertos=6)
         self.celula_1.entra(self.membrana)
         self.celula_2.entra(self.membrana)
         self.celula_3.entra(self.membrana)
