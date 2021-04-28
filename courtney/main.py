@@ -21,7 +21,7 @@ class Mochila:
         self.mochila_fecha.vai = self.fecha_mochila
         inv.bota(self.mochila_inv)
         
-    def mostra_mochila(self):
+    def mostra_mochila(self, _=0):
         self.cena_anterior = inv.cena
         self.mochila.vai()
         
