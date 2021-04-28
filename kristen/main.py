@@ -154,6 +154,57 @@ class Tiao:
     self.theus.entra(igreja_p)
     self.theus.vai = Texto(self.igreja, "O que siguinifica A e Ω ?"
                            foi=resposta, A="Cristo.", B="Alfa e Ômega.", C="Jesus salvador dos homens.").vai
+                           
+                           
+    def entrou_intro3(self, *_):
+    self.theus.entra(self.presbiterio)
+    Texto(self.presbiterio, "Nesta próxima fase, relembramos algumas posições em que os coroinhas ficam durante a celebração da Santa Missa.")
+    self.theus.vai = Texto(self.presbiterio,
+                            "Estão preparados?"
+                             foi=self.cena7).vai 
+                             
+                             
+    def entro_cena7(self, *_):
+        def resposta(optou):
+            respondeu = dict(
+            A=Texto(self.presbiterio_p,"Errado."),
+            B=Texto(self.presbiterio_p,"Errado."),
+            C=Texto(self.presbiterio_p,"Correto!", foi=self.entrou_cena8),
+        )
+        respondeu[optou].vai()
+        
+    self.prebiterio_p.vai()
+    self.theus.entra(presbiterio_p)
+    self.theus.vai = Texto(self.presbiterio, "O que siguinifica inclinar o corpo ?"
+                           foi=resposta, A="Escuta da palavra.", B="Oração profunda.", C="Reverência e honra.").vai
+                           
+    def entrou_cena8
+        def resposta(optou):
+            respondeu = dict(
+            A=Texto(self.presbiterio_p,"Errado."),
+            B=Texto(self.presbiterio_p,"Correto!", foi=self.entrou_cena9),
+            C=Texto(self.presbiterio_p,"Errado."),
+        )
+        respondeu[optou].vai()
+        
+    self.presbiterio_p.vai()
+    self.theus.entra(prebiterio_p)
+    self.theus.vai = Texto(self.presbiterio, "O que siguinifica estar sentado ?"
+                           foi=resposta, A="Humildade.", B="Escuta da palavra.", C="Reverência e honra.").vai
+                           
+    def entrou_cena9
+        def resposta(optou):
+            respondeu = dict(
+            A=Texto(self.presbiterio_p,"Correto!.", foi=self.entrou_cena9),
+            B=Texto(self.presbiterio_p,"Errado."),
+            C=Texto(self.presbiterio_p,"Errado."),
+        )
+        respondeu[optou].vai()
+        
+    self.presbiterio_p.vai()
+    self.theus.entra(presbiterio_p)
+    self.theus.vai = Texto(self.prebiterio, "O que siguinifica bater no peito ?"
+                           foi=resposta, A="Arrependimento dos pecados.", B="Peregrino.", C="Meditação.").vai
             
             self.final.vai()  
 Tiao()
