@@ -206,6 +206,6 @@ class Tiao:
     self.theus.vai = Texto(self.prebiterio, "O que siguinifica bater no peito ?"
                            foi=resposta, A="Arrependimento dos pecados.", B="Peregrino.", C="Meditação.").vai
             
-            self.final.vai()  
+        self.final.vai()  
 Tiao()
     
