@@ -33,7 +33,7 @@ class fase2():
         self.celula_5= Elemento(img= CELULA_5,x=450,y=250)
         self.celula_6= Elemento(img= CELULA_6,x=750,y=250)
         self.membrana= Cena(img= MEMBRANA).vai()
-        self.jogo = Associa(self.membrana, caixa=300, borda=20)
+        self.jogo = Associa(self.membrana, caixa=300, borda=20, acertou=self.acertou)
         self.celula_1.entra(self.membrana)
         self.celula_2.entra(self.membrana)
         self.celula_3.entra(self.membrana)
@@ -48,6 +48,15 @@ class fase2():
         self.jogo.nome(nome="citoplasma, membrana, núcleo", tit=4, x=450, y=250)
         self.jogo.nome(nome="citoplasma, membrana, núcleo", tit=5, x=750, y=250)
         self.jogo.nome(nome= "Para sair desse mundo vc precisa achar o protozoário",tit=6,x=900,y=350)
+    def acertou(self):
+        Texto(self.cena, "Você acertou tudo! Parabéns! Você Ganhou cinco ATP").vai()
+        MOCHILA.ganha_atp()
+        MOCHILA.ganha_atp()
+        MOCHILA.ganha_atp()
+        MOCHILA.ganha_atp()
+        MOCHILA.ganha_atp()
+        MOCHILA.mostra_mochila()
+
 
         #self.npc.entra(self.celula,Tit = "Observe atentamente essas imagens e coloque as letras correspondentes."
         #"Cada imagem terá apenas três letras, arraste para a área correspondente da célula")    #não temos ainda a imagem da célula
