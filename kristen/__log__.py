@@ -83,3 +83,10 @@ SyntaxError: invalid syntax
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Wed Apr 28 2021 21:54:50.923 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 44
+  self.theus.vai = Texto(self.paroquia,
+  ^
+IndentationError: unexpected indent
+'''},
