@@ -5,7 +5,7 @@ from _spy.vitollino.main import INVENTARIO as inv
 STYLE["width"] = 900
 STYLE["heigth"] ='650px'
 
-MATHEUS = "https://www.imagensempng.com.br/cartoon-quadrinhos-png/"
+MATHEUS = "https://www.imagensempng.com.br/cartoon-quadrinhos-png"
 CALICE = "" 
 AMBULA = ""
 PATENA = ""
@@ -17,7 +17,7 @@ PALA = ""
 PAROQUIA = "https://www.imagensempng.com.br/wp-content/uploads/apollo13_images/Efeito-Cartoon-Png-72qx5cm50i4sm57t6ga67lrxhbcdztvkhe.png"
 ALTAR = ""
 IGREJA_VELHA = ""
-PRESBITERIO = "https://scontent.fcfb1-1.fna.fbcdn.net/v/t1.6435-9/168540222_4412180955478316_593441197893704662_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=8bfeb9&_nc_eui2=AeGCOzl1cuuTXD_uWyjqV2DDmCHEghmzKhKYIcSCGbMqEnSR9qEKiqw1WlDrkYUaZbWF2P3dN7kHV4mgBvbpkhJ6&_nc_ohc=q9C75Mp_uKQAX-IbCvE&_nc_ht=scontent.fcfb1-1.fna&oh=1e4daad38474aea8803fe038836cc4a1&oe=60AA3B07" 
+PRESBITERIO = "" 
 
 
 class Tiao:
