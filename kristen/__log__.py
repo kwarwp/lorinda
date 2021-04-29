@@ -160,3 +160,10 @@ SyntaxError: invalid syntax
                                                                                                                                                                                                                     ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Apr 28 2021 22:08:54.718 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 46
+  "Eu sou o Matheus! Neste jogo, testarei seus conhecimentos sobre o que foi ensinado em nossos encontros!" 
+  ^
+IndentationError: unexpected indent
+'''},
