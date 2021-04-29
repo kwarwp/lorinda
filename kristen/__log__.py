@@ -174,3 +174,10 @@ IndentationError: unexpected indent
                                                                                                                                                                                    ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Apr 28 2021 22:10:24.422 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 45
+  self.theus.vai = Texto(self.paroquia,"Eu sou o Matheus! Neste jogo, testarei seus conhecimentos sobre o que foi ensinado em nossos encontros" foi=self.entrou_cena1).vai
+                                                                                                                                                 ^
+SyntaxError: invalid syntax
+'''},
