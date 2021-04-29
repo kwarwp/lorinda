@@ -104,3 +104,10 @@ SyntaxError: invalid syntax
                                                                                                                                                                                                                     ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Apr 28 2021 21:57:50.515 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 44
+  self.theus.vai = Texto(self.paroquia ,
+                                                                                                                                                                                                                     ^
+SyntaxError: invalid syntax
+'''},
