@@ -39,8 +39,9 @@ class Tiao:
         self.entrou_theus()
     
     def entrou_theus(self, *_):
+    
         self.theus.entra(self.paroquia)
-        Texto(self.paroquia, " Bem vindos ao quiz dos corinhas.")       
+        Texto(self.paroquia, " Bem vindos ao quiz dos corinhas.").vai()     
         self.theus.vai = Texto(self.paroquia,
                                "Eu sou o Matheus! Neste jogo, testarei seus conhecimentos sobre o que foi ensinado em nossos encontros!" 
                                 foi=self.intro).vai
