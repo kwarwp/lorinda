@@ -13,3 +13,10 @@ SyntaxError: invalid syntax
                                                                                                                                                                                                                      ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Apr 28 2021 21:46:14.110 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 45
+  self.theus.vai = Texto(self.paroquia,"Eu sou o Matheus! Neste jogo, testarei seus conhecimentos sobre o que foi ensinado em nossos encontros!" 
+                                                                                                                                                                                   ^
+SyntaxError: invalid syntax
+'''},
