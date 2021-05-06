@@ -1,7 +1,8 @@
 # lorinda.julia.main.py
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
 from _spy.vitollino.main import INVENTARIO as inv
-#from ruzwana.main import 
+
+from ruzwana.main import inventario
 
 STYLE["width"]=800
 STYLE["heigth"]="200px"
@@ -26,6 +27,7 @@ PLAY= ""
 class revista1():
     def __init__(self):
         self.escola=Cena(img=ESCOLA)
+
         
         Texto(self.escola,"Num futuro distante, um grupo de amigos estudavam e se divertiam juntos e além disso,  tinham poderes especiais, entretanto por conta de uma pandemia, toda a população humana foi obrigada a viver em isolamento."
                         "Após dois anos de confinamento a vacina foi descoberta, após a vacinação em massa,"
@@ -45,6 +47,7 @@ class revista1():
         self.escola.direita=Cena(vai=self.amem)
     def amem(self):
         self.mata=Cena(img=MATA)
+        inventario(cena=self.mata)
         self.mata.vai()
         Texto(self.mata, "caracteristicas dos personagens , click para descobrir seu personagem").vai()
         self.mata.esquerda=self.escola
