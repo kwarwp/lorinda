@@ -166,3 +166,10 @@ AttributeError: 'revista1' object has no attribute 'mata'
                            ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu May 06 2021 13:07:09.60 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 25
+  def __init__(self,escola.vai()):
+                           ^
+SyntaxError: invalid syntax
+'''},
