@@ -189,3 +189,10 @@ AttributeError: 'inventario' object has no attribute 'MOCHILA'
     self.mochila_inv = Elemento(self.MOCHILA)
 AttributeError: 'inventario' object has no attribute 'MOCHILA'
 '''},
+{'date': 'Thu May 06 2021 16:20:05.18 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 21
+  """
+  ^
+IndentationError: unexpected indent
+'''},
