@@ -15,7 +15,7 @@ class Item:
     def __init__(self, img, cena):
         self.cena = cena
         self.item= Elemento(img=img)
-        self.item_inv= Elemento(img=imagem)
+        self.item_inv= Elemento(img=img)
         # self.corda_inv.vai=self.mostra_corda
         inv.bota(self.item_inv)
         self.item_inv.vai = self.mostra_item
@@ -40,42 +40,6 @@ class inventario:
         self.kit= Item(img=KIT, cena=self.mochila)
         self.mapa= Item(img=MAPA, cena=self.mochila)
         self.bussula= Item(img=BUSSULA, cena=self.mochila)
-        
-        '''
-        self.corda= Elemento(img=CORDA)
-        self.corda_inv= Elemento(img=CORDA)
-        # self.corda_inv.vai=self.mostra_corda
-        inv.bota(self.corda_inv)
-        
-        self.faca= Elemento(img=FACA)
-        self.faca_inv= Elemento(img=FACA)
-        self.faca_inv.vai = self.mostra_faca
-        self.faca.vai = self.some_faca
-        self.corda_inv.vai = self.mostra_corda
-        self.corda.vai = self.some_corda
-        # self.faca_inv.vai=self.mostra_faca
-        inv.bota(self.faca_inv)
-        
-        self.fogo=Elemento(img=FOGO)
-        self.fogo_inv=Elemento(img=FOGO)
-        # self.fogo_inv=self.mostra_fogo
-        
-        self.kit=Elemento(img=KIT)
-        self.kit_inv=Elemento(img=KIT)
-        #self.kit_inv=self.mostra_kit
-        
-        self.mapa=Elemento(img=MAPA)
-        self.mapa_inv=Elemento(img=MAPA)
-        
-        self.bussula=Elemento(img=BUSSULA)
-        self.bussula_inv=Elemento(img=BUSSULA)
-        '''
-        
-    def mostra_faca(self, _=0):
-        self.faca.entra(self.mochila)
-        
-    def some_faca(self, _=0):
-        self.faca.x = -10000
         
     def mostra_corda(self, _=0):
         self.corda.entra(self.mochila)
