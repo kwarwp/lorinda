@@ -120,3 +120,10 @@ SyntaxError: invalid syntax
                                                                                                                                                                                                                          ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu May 06 2021 12:40:40.933 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 28
+  Texto(self.escola, "caracteristicas dos personagens , click para descobrir seu personagem").vai()
+  ^
+IndentationError: unexpected indent
+'''},
