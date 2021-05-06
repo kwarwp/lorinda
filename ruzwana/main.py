@@ -30,9 +30,9 @@ class Item:
 
 
 class inventario:
-    def __init__(self):
+    def __init__(self, cena=None):
         inv.inicia()
-        self.mochila=Cena(img=MOCHILA)
+        self.mochila= cena or Cena(img=MOCHILA)
         self.mochila.vai()
         self.corda= Item(img=CORDA, cena=self.mochila)
         self.faca= Item(img=FACA, cena=self.mochila)
