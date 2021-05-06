@@ -47,6 +47,8 @@ class inventario:
     def some_corda(self, _=0):
         self.corda.x = -10000
 
-MOCHILA=inventario()
+
+if __name__ == "__main__":
+    MOCHILA=inventario()
 
         
