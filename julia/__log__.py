@@ -106,3 +106,10 @@ TypeError: entra() got an unexpected keyword argument 'tit'
                                                                                                                                                                                                                          ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu May 06 2021 12:32:18.235 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 27
+  Texto(self.escola, "um grupo de amigos estudavam e se divertiam juntos e além disso,  tinham poderes especiais, entretanto por conta de uma pandemia, toda a população humana foi obrigada a viver em isolamento." )texto.vai()
+                                                                                                                                                                                                                       ^
+SyntaxError: invalid syntax
+'''},
