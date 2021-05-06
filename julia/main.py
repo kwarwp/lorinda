@@ -14,6 +14,9 @@ CORDA =""
 FACA =""
 ISQUEIRO =""
 KIT =""
+MAPA =""
+BUSSULA =""
+
 
 class revista1():
     def __init__(self):
@@ -37,5 +40,8 @@ class revista1():
     self.nena.entra(self.mata)
     self.perola.entra(self.mata)
     self.jackson.entra(self.mata)
+    
+    self.escola.vai()
+revista():
     
     
