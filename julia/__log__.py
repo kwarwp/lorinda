@@ -6,3 +6,10 @@
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Thu May 06 2021 12:15:41.647 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 23
+  self.escola=Cena(img=ESCOLA)
+  ^
+IndentationError: expected an indented block
+'''},
