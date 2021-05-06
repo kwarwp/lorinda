@@ -25,7 +25,10 @@ class revista1():
     def __init__(self):
         self.escola=Cena(img=ESCOLA)
         
-        Texto(self.escola,"deus me ajuda" ).vai()
+        Texto(self.escola,"Num futuro distante, um grupo de amigos estudavam e se divertiam juntos e além disso,  tinham poderes especiais, entretanto por conta de uma pandemia, toda a população humana foi obrigada a viver em isolamento."
+                        "Após dois anos de confinamento a vacina foi descoberta, após a vacinação em massa,"
+                        "os estudantes voltaram a se encontrar. Os amigos, que moravam mais perto da Mata Atlântica, na cidade de São Paulo,"
+                        "começaram a perceber o sumiço de alguns animais, e se reuniram para desvendar esse mistério!" ).vai()
         self.escola.vai()
         self.lily=Elemento(img=LILY,x=220,y=400,w=100,h=200)
         self.nena=Elemento(img=NENA,x=120,y=400,w=100,h=200)
@@ -56,8 +59,7 @@ class revista1():
         self.leila.entra(self.mata)
         self.leila.tit=" olá eu sou a leila, sou bem quieta e discreta, me pediram para trazer o fogo"
         self.mata.entra=Elemento(vai=self.personagem)
-    def personagem(self,amem):
-       
+
         
        
         
