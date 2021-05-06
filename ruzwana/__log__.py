@@ -22,3 +22,10 @@ SyntaxError: invalid syntax
     CORDA=corda()
 NameError: name 'corda' is not defined
 '''},
+{'date': 'Thu May 06 2021 15:29:13.292 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 15
+  self.mochila=Cena(img=MOCHILA).
+                                  ^
+SyntaxError: invalid syntax
+'''},
