@@ -23,7 +23,7 @@ class revista1():
     self.escola=Cena(img=ESCOLA, Texto= "um grupo de amigos estudavam e se divertiam juntos e além disso,  tinham poderes especiais, entretanto por conta de uma pandemia, toda a população humana foi obrigada a viver em isolamento." 
                                         "Após dois anos de confinamento a vacina foi descoberta, após a vacinação em massa, os estudantes voltaram a se encontrar. Os amigos, que moravam mais perto da Mata Atlântica, na cidade de São Paulo"
                                         "começaram a perceber o sumiço de alguns animais, e se reuniram para desvendar esse mistério!")
-    self.mata=Cena(img=MATA,Texto= "")
+    self.mata=Cena(img=MATA,Texto= "caracteristicas dos personagens , passe  o mouse para descobrir seu personagem")
     self.lily=Elemento(img=LILY)
     self.nena=Elemento(img=NENA)
     self.perola=Elemento(img=PEROLA)
@@ -37,7 +37,7 @@ class revista1():
     
     self.escola.direita=self.mata
     self.mata.esquerda=self.escola
-    self.nena.entra(self.mata)
+    self.nena.entra(self.mata,)
     self.perola.entra(self.mata)
     self.jackson.entra(self.mata)
     
