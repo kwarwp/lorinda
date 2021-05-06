@@ -27,7 +27,7 @@ class revista1():
         
         Texto(self.escola,"deus me ajuda" ).vai()
                                          
-        
+       
     def mata(self,*_):
         self.mata=Cena(img=MATA)
         Texto(self.mata, "caracteristicas dos personagens , click para descobrir seu personagem").vai()
