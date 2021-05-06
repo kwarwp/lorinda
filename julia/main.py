@@ -28,4 +28,10 @@ class revista1():
     self.jackson.entra(self.escola)
     self.leila.entra(self.escola)
     
+    self.escola.direita=self.mata
+    self.mata.esquerda=self.escola
+    self.nena.entra(self.mata)
+    self.perola.entra(self.mata)
+    self.jackson.entra(self.mata)
+    
     
