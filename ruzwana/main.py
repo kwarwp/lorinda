@@ -10,10 +10,38 @@ KIT =" https://i.imgur.com/ZVrPHcl.png"
 MAPA ="https://i.imgur.com/dXllrys.png"
 BUSSULA =" https://i.imgur.com/5OMt7f2.png"
 MOCHILA ="https://i.imgur.com/N8eUQ2S.png"
+
+class Item:
+    def __init__(self, img, cena):
+        self.cena = cena
+        self.item= Elemento(img=img)
+        self.item_inv= Elemento(img=imagem)
+        # self.corda_inv.vai=self.mostra_corda
+        inv.bota(self.item_inv)
+        self.item_inv.vai = self.mostra_item
+        self.item.vai = self.some_item
+        
+    def mostra_item(self, _=0):
+        self.item.entra(self.cena)
+        
+    def some_item(self, _=0):
+        self.item.x = -10000
+
+
+
 class inventario:
-     def __init__(self):
+    def __init__(self):
+        inv.inicia()
         self.mochila=Cena(img=MOCHILA)
         self.mochila.vai()
+        self.corda= Item(img=CORDA, cena=self.mochila)
+        self.faca= Item(img=FACA, cena=self.mochila)
+        self.fogo= Item(img=FOGO, cena=self.mochila)
+        self.kit= Item(img=KIT, cena=self.mochila)
+        self.mapa= Item(img=MAPA, cena=self.mochila)
+        self.bussula= Item(img=BUSSULA, cena=self.mochila)
+        
+        '''
         self.corda= Elemento(img=CORDA)
         self.corda_inv= Elemento(img=CORDA)
         # self.corda_inv.vai=self.mostra_corda
@@ -21,7 +49,12 @@ class inventario:
         
         self.faca= Elemento(img=FACA)
         self.faca_inv= Elemento(img=FACA)
+        self.faca_inv.vai = self.mostra_faca
+        self.faca.vai = self.some_faca
+        self.corda_inv.vai = self.mostra_corda
+        self.corda.vai = self.some_corda
         # self.faca_inv.vai=self.mostra_faca
+        inv.bota(self.faca_inv)
         
         self.fogo=Elemento(img=FOGO)
         self.fogo_inv=Elemento(img=FOGO)
@@ -34,8 +67,21 @@ class inventario:
         self.mapa=Elemento(img=MAPA)
         self.mapa_inv=Elemento(img=MAPA)
         
-        self.bussula=Elemento(img=ELEMENTO)
-        self.bussula_inv=Elemento(img=ELEMENTO)
+        self.bussula=Elemento(img=BUSSULA)
+        self.bussula_inv=Elemento(img=BUSSULA)
+        '''
+        
+    def mostra_faca(self, _=0):
+        self.faca.entra(self.mochila)
+        
+    def some_faca(self, _=0):
+        self.faca.x = -10000
+        
+    def mostra_corda(self, _=0):
+        self.corda.entra(self.mochila)
+        
+    def some_corda(self, _=0):
+        self.corda.x = -10000
 
 MOCHILA=inventario()
 
