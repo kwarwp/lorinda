@@ -17,6 +17,7 @@ class inventario():
         self.corda= Elemento(img=CORDA)
         self.corda_inv= Elemento(img=CORDA)
         self.corda_inv.vai=self.mostra_corda
+        self.corda_inv.entra(self.mochila)
         
         self.faca= Elemento(img=FACA)
         self.faca_inv= Elemento(img=FACA)
