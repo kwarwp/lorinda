@@ -47,16 +47,22 @@ class revista1():
         self.mata.esquerda=self.escola
         self.nena.entra(self.mata)
         self.nena.tit="Olá eu sou a Nena, eu amo cuidar do planeta, sou organixa e monitoro tudo, por isso que eu trouxe uma bússula"
+        self.perola.entra(self.mata)
+        self.perola.tit="Olá,eu sou a Pérola,eu sou bastante forte e sou da equipe de resgate do meu bairro, por isso eu trouxe o kit de primeiros socorros"
+        self.lily.entra(self.mata)
+        self.lily.tit="Olá eu sou a Lily Raquel, eu sou bem otimista e desbravadora, por isso trouxe um facão"
+        self.jackson.entra(self.mata)
+        self.jackson.tit="Olá eu sou o Jackson,me colocaram como líder do grupo,pois sou muito corajoso e bom em defesa, estou levando um mapa e corda "
+        self.leila.entra(self.mata)
+        self.leila.tit=" olá eu sou a leila, sou bem quieta e discreta, me pediram para trazer o fogo"
         self.mata.entra=Elemento(vai=self.personagem)
     def personagem(self,amem):
-        self.nena.entra(self.mata)
-        Texto(self.mata,"Olá eu sou a Nena, eu amo cuidar do planeta, sou organixa e monitoro tudo, por isso que eu trouxe uma bússula")
-        self.perola.entra(self.mata)
-        Texto(self.mata, "Olá,eu sou a Pérola,eu sou bastante forte e sou da equipe de resgate do meu bairro, por isso eu trouxe o kit de primeiros socorros")
-        self.lily.entra(self.mata)
-        Texto(self.mata,"Olá eu sou a Lily Raquel, eu sou bem otimista e desbravadora, por isso trouxe um facão")
-        self.jackson.entra(self.mata)
-        Texto(self.mata,"Olá eu sou o Jackson,me colocaram como líder do grupo,pois ").vai()
+       
+        
+       
+        
+       
+        Texto(self.mata,).vai()
         self.leila.entra(self.mata)
         
     
