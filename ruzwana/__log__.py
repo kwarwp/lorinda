@@ -232,3 +232,10 @@ AttributeError: 'inventario' object has no attribute 'mostra_corda'
     self.bussula=Elemento(img=ELEMENTO)
 NameError: name 'ELEMENTO' is not defined
 '''},
+{'date': 'Thu May 06 2021 19:29:54.598 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 42
+  def mostra_faca(self, _=0):
+  ^
+IndentationError: unexpected indent
+'''},
