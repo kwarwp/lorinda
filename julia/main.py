@@ -10,6 +10,10 @@ LEILA = " https://i.imgur.com/Vpw3hbY.png"
 MATA = ""
 ESCOLA = ""
 TUCANO = "https://i.imgur.com/mS9ASAx.png"
+CORDA =""
+FACA =""
+ISQUEIRO =""
+KIT =""
 
 class revista1():
     def __init__(self):
