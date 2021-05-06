@@ -127,3 +127,10 @@ SyntaxError: invalid syntax
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Thu May 06 2021 12:44:07.691 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 35
+  self.nena=Elemento(img=NENA,,x=120,y=520,w=60,h=100)
+                               ^
+SyntaxError: invalid syntax
+'''},
