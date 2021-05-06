@@ -159,3 +159,10 @@ SyntaxError: invalid syntax
     self.escola.direita=self.mata
 AttributeError: 'revista1' object has no attribute 'mata'
 '''},
+{'date': 'Thu May 06 2021 13:06:51.79 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 25
+  def __init__(self,escola.vai):
+                           ^
+SyntaxError: invalid syntax
+'''},
