@@ -113,3 +113,10 @@ SyntaxError: invalid syntax
                                                                                                                                                                                                                        ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu May 06 2021 12:33:22.882 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 27
+  t=Texto(self.escola, "um grupo de amigos estudavam e se divertiam juntos e além disso,  tinham poderes especiais, entretanto por conta de uma pandemia, toda a população humana foi obrigada a viver em isolamento." )t.vai()
+                                                                                                                                                                                                                         ^
+SyntaxError: invalid syntax
+'''},
