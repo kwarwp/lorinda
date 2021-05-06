@@ -26,21 +26,21 @@ class revista1():
         self.escola=Cena(img=ESCOLA)
         
         Texto(self.escola,"deus me ajuda" ).vai()
-                                         
-       
-    def mata(self,*_):
-        self.mata=Cena(img=MATA)
-        Texto(self.mata, "caracteristicas dos personagens , click para descobrir seu personagem").vai()
-        self.lily=Elemento(img=LILY,x=220,y=520,w=100,h=200)
-        self.nena=Elemento(img=NENA,x=120,y=520,w=60,h=100)
-        self.perola=Elemento(img=PEROLA,x=320,y=520,w=60,h=100)
-        self.jackson=Elemento(img=JACKSON,x=420,y=520,w=60,h=100)
-        self.leila=Elemento(img=LEILA,x=520,y=520,w=60,h=100)
+        
+        
+        self.lily=Elemento(img=LILY,x=220,y=400,w=100,h=200)
+        self.nena=Elemento(img=NENA,x=120,y=400,w=100,h=200)
+        self.perola=Elemento(img=PEROLA,x=320,y=400,w=100,h=200)
+        self.jackson=Elemento(img=JACKSON,x=420,y=400,w=120,h=220)
+        self.leila=Elemento(img=LEILA,x=520,y=400,w=100,h=200)
         self.lily.entra(self.escola)
         self.nena.entra(self.escola)
         self.perola.entra(self.escola)
         self.jackson.entra(self.escola)
         self.leila.entra(self.escola)
+        
+        self.mata=Cena(img=MATA)
+        Texto(self.mata, "caracteristicas dos personagens , click para descobrir seu personagem").vai()
     
         self.escola.direita=self.mata
         self.mata.esquerda=self.escola
