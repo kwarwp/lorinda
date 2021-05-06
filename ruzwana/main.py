@@ -10,14 +10,13 @@ KIT =" https://i.imgur.com/ZVrPHcl.png"
 MAPA ="https://i.imgur.com/dXllrys.png"
 BUSSULA =" https://i.imgur.com/5OMt7f2.png"
 MOCHILA ="https://i.imgur.com/N8eUQ2S.png"
-class inventario():
+class inventario:
      def __init__(self):
         self.mochila=Cena(img=MOCHILA)
         self.mochila.vai()
         self.corda= Elemento(img=CORDA)
         self.corda_inv= Elemento(img=CORDA)
         self.corda_inv.vai=self.mostra_corda
-        self.corda_inv.entra(self.mochila)
         
         self.faca= Elemento(img=FACA)
         self.faca_inv= Elemento(img=FACA)
