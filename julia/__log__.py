@@ -223,3 +223,10 @@ AttributeError: 'inventario' object has no attribute 'mostra_corda'
     from ruzwana.main import MOCHILA
 ImportError: cannot import name 'MOCHILA'
 '''},
+{'date': 'Thu May 06 2021 16:26:07.731 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 4
+  from ruzwana.main import 
+                           ^
+SyntaxError: trailing comma not allowed without surrounding parentheses
+'''},
