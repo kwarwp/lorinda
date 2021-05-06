@@ -39,15 +39,20 @@ class revista1():
         self.jackson.entra(self.escola)
         self.leila.entra(self.escola)
         
+    def mata(self):
         self.mata=Cena(img=MATA)
         Texto(self.mata, "caracteristicas dos personagens , click para descobrir seu personagem").vai()
     
         self.escola.direita=self.mata
         self.mata.esquerda=self.escola
-        #self.nena.entra(self.mata, tit="Olá eu sou a Nena, eu amo cuidar do planeta, sou organixa e monitoro tudo, por isso que eu trouxe uma bússula")
-       # self.perola.entra(self.mata, tit= "Olá,eu sou a Pérola,eu sou bastante forte e sou da equipe de resgate do meu bairro, por isso eu trouxe o kit de primeiros socorros")
-       # self.lily.entra(self.mata, tit="Olá eu sou a Lily Raquel, eu sou bem otimista e desbravadora, por isso trouxe um facão")
-       # self.jackson.entra(self.mata, tit ="Olá eu sou o Jackson,me colocaram como líder do grupo,pois ")
+        self.nena.entra(self.mata)
+        Texto(self.mata,"Olá eu sou a Nena, eu amo cuidar do planeta, sou organixa e monitoro tudo, por isso que eu trouxe uma bússula")
+        self.perola.entra(self.mata)
+        Texto(self.mata, "Olá,eu sou a Pérola,eu sou bastante forte e sou da equipe de resgate do meu bairro, por isso eu trouxe o kit de primeiros socorros")
+        self.lily.entra(self.mata)
+        Texto(self.mata,"Olá eu sou a Lily Raquel, eu sou bem otimista e desbravadora, por isso trouxe um facão")
+        self.jackson.entra(self.mata)
+        Texto(self.mata,"Olá eu sou o Jackson,me colocaram como líder do grupo,pois ").vai()
         #self.leila.entra(self.mata)
     
         self.escola.vai()
