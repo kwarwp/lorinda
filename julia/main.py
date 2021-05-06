@@ -26,8 +26,7 @@ class revista1():
         self.escola=Cena(img=ESCOLA)
         
         Texto(self.escola,"deus me ajuda" ).vai()
-        
-        
+        self.escola.vai()
         self.lily=Elemento(img=LILY,x=220,y=400,w=100,h=200)
         self.nena=Elemento(img=NENA,x=120,y=400,w=100,h=200)
         self.perola=Elemento(img=PEROLA,x=320,y=400,w=100,h=200)
@@ -38,13 +37,18 @@ class revista1():
         self.perola.entra(self.escola)
         self.jackson.entra(self.escola)
         self.leila.entra(self.escola)
-        
-    def mata(self):
+        self.escola.direita=Cena(vai=self.amem)
+    def amem(self):
         self.mata=Cena(img=MATA)
+        self.mata.vai()
         Texto(self.mata, "caracteristicas dos personagens , click para descobrir seu personagem").vai()
-    
+        self.mata.esquerda=self.escola
         self.escola.direita=self.mata
         self.mata.esquerda=self.escola
+        self.nena.entra(self.mata)
+        self.nena.tit="Olá eu sou a Nena, eu amo cuidar do planeta, sou organixa e monitoro tudo, por isso que eu trouxe uma bússula"
+        self.mata.entra=Elemento(vai=self.personagem)
+    def personagem(self,amem):
         self.nena.entra(self.mata)
         Texto(self.mata,"Olá eu sou a Nena, eu amo cuidar do planeta, sou organixa e monitoro tudo, por isso que eu trouxe uma bússula")
         self.perola.entra(self.mata)
@@ -53,7 +57,9 @@ class revista1():
         Texto(self.mata,"Olá eu sou a Lily Raquel, eu sou bem otimista e desbravadora, por isso trouxe um facão")
         self.jackson.entra(self.mata)
         Texto(self.mata,"Olá eu sou o Jackson,me colocaram como líder do grupo,pois ").vai()
-        #self.leila.entra(self.mata)
+        self.leila.entra(self.mata)
+        
+    
     
         self.escola.vai()
 revista1()
