@@ -1,6 +1,7 @@
 # lorinda.julia.main.py
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
-from _spy.vitollino.main import Inventario as inv
+from _spy.vitollino.main import INVENTARIO as inv
+from cortney import MOCHILA
 
 STYLE["width"]=800
 STYLE["heigth"]="200px"
@@ -19,6 +20,7 @@ FOGO =" https://i.imgur.com/oH55GvU.png"
 KIT =" https://i.imgur.com/ZVrPHcl.png"
 MAPA ="https://i.imgur.com/dXllrys.png"
 BUSSULA =" https://i.imgur.com/5OMt7f2.png"
+PLAY= ""
 
 
 class revista1():
