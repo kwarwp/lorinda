@@ -1,7 +1,7 @@
 # lorinda.julia.main.py
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
 from _spy.vitollino.main import INVENTARIO as inv
-from cortney import MOCHILA
+from ruzwana.main import MOCHILA
 
 STYLE["width"]=800
 STYLE["heigth"]="200px"
