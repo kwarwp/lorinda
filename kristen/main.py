@@ -5,7 +5,7 @@ from _spy.vitollino.main import INVENTARIO as inv
 STYLE["width"] = 900
 STYLE["heigth"] ='650px'
 
-MATHEUS = "https://www.imagensempng.com.br/cartoon-quadrinhos-png"
+MATHEUS = ""
 CALICE = "" 
 AMBULA = ""
 PATENA = ""
@@ -14,7 +14,7 @@ JARRO_BACIA_ = ""
 SANGUINEO = ""
 CORPORAL = ""
 PALA = ""
-PAROQUIA = "https://www.imagensempng.com.br/wp-content/uploads/apollo13_images/Efeito-Cartoon-Png-72qx5cm50i4sm57t6ga67lrxhbcdztvkhe.png"
+PAROQUIA = ""
 ALTAR = ""
 IGREJA_VELHA = ""
 PRESBITERIO = "" 
@@ -43,7 +43,7 @@ class Tiao:
     def entrou_theus(self, *_):
     
         self.theus.entra(self.paroquia)
-        Texto(self.paroquia, " Bem vindos ao quiz dos corinhas.").vai()       
+        Texto(self.paroquia, " Bem vindos ao quiz dos coroinhas.").vai()       
         self.theus.vai = Texto(self.paroquia,
                                "Eu sou o Matheus! Neste jogo, testarei seus conhecimentos sobre o que foi ensinado em nossos encontros" 
                                foi=self.entrou_cena1).vai
