@@ -18,6 +18,7 @@ PAROQUIA = "https://www.imagensempng.com.br/wp-content/uploads/apollo13_images/E
 ALTAR = ""
 IGREJA_VELHA = ""
 PRESBITERIO = "" 
+FINAL = ""
 
 
 class Tiao:
@@ -35,6 +36,7 @@ class Tiao:
         self.altar = Cena(img=ALTAR)
         self.igreja = Cena(img=IGREJA_VELHA)
         self.presbiterio = Cena(img=PRESBITERIO)
+        self.fim = Cena(img=FINAL)
         self.paroquia.vai()
         self.entrou_theus()
     
@@ -206,6 +208,6 @@ class Tiao:
     self.theus.vai = Texto(self.prebiterio, "O que siguinifica bater no peito ?"
                            foi=resposta, A="Arrependimento dos pecados.", B="Peregrino.", C="Meditação.").vai
             
-        self.final.vai()  
+        self.fim.vai()  
 Tiao()
     
