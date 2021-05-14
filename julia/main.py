@@ -63,7 +63,7 @@ class revista1():
         self.jackson.tit="Olá eu sou o Jackson,me colocaram como líder do grupo,pois sou muito corajoso e bom em defesa, estou levando um mapa e corda "
         self.leila.entra(self.mata)
         self.leila.tit=" olá eu sou a leila, sou bem quieta e discreta, me pediram para trazer o fogo"
-        self.mata.entra=Elemento(vai=self.personagem)
+        # self.mata.entra=Elemento(vai=self.personagem)
 
         
        
