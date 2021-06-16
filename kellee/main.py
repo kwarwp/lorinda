@@ -4,7 +4,7 @@ from _spy.vitollino.main import Inventario as inv
 # salas do games da Angelica, lorinda-lisa-libby e kellee
 STYLE.update(width=600, height="600px")
 
-MARIA = "https://imgur.com/OTFGXEr.png"
+MARIA = "https://i.imgur.com/FukdPW2.png"
 ROSALINDA = "https://imgur.com/0Dv7w29.png"
 LABORATORIO = "https://imgur.com/c71g0qt.jpg"
 LABORATORIO_1 = "https://imgur.com/c71g0qt.jpg"
@@ -13,7 +13,7 @@ LABORATORIO_3 = "https://imgur.com/c71g0qt.jpg"
 LABORATORIO_4 = "https://imgur.com/c71g0qt.jpg"
 LABORATORIO_5 = "https://imgur.com/c71g0qt.jpg"
 ESTRTURA= "https://imgur.com/iaGv545.png"
-DNA= "https://i.imgur.com/slnDrGI.png"
+DNA= "https://i.imgur.com/khPaSvV.png"
 NPC="https://i.imgur.com/hU2mulx.png"
 ENIGMA= "https://i.imgur.com/pwI7UL8.png"
 class fase3():
