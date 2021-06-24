@@ -76,6 +76,8 @@ class fase3():
         self.dna.tit="vá estudar garota!"
         self.npc.tit=" Responda o enigma: Sou constituído por letras, que se encaixam perfeitamente, seguindo uma determinada ordem. Quando tem algum erro, pode provocar uma doença ou mutação."
         self.laboratorio_4.direita=Cena(vai=self.parte_5)
+        
+        #GABARITO DNA  (ácido dexoxirribonucleico) COMO PODEMOS COLOCAR ISSO ??
 
     def parte_5(self):
         from anastasia.main import Swap
@@ -84,3 +86,23 @@ class fase3():
         Swap(JOGO,ENIGMA,self.laboratorio_5, x=50, y=50, w=500,h=500)
         
 fase3()
+
+class fase4():
+    def __init__(self):
+        self.maria=Elemento(img=MARIA, tit="não consigo sair daqui")
+        self.nucleo=Cena(img=NUCLEO)
+        self.maria.entra(self.nucleo)
+        self.npc=Elemento(img=NPC, "atenção garota, veja o DNA")
+        self.dna=Elemento(img=DNA, tit= "só eu trabalho aqui, vou ter que criar um RNA para me ajudar")
+        self.rna=Elemento(img=RNA, tit" Vamos lá galera, produzindo proteínas ") #aparece depois do dna
+        self.npc.entra(self.nucleo)
+        self.dna.entra(self.nucleo)
+        self.rna.entra(self.nucleo)
+    
+    
+    
+    
+    
+    
+    
+    
