@@ -42,15 +42,15 @@ class fase2():
         self.celula_5.entra(self.membrana)
         self.celula_6.entra(self.membrana)
         self.npc=Elemento(img=NPC, x=900,y=350)
-        self.jogo.nome(nome="1-meu núcleo é espalhado", tit=0, x=450, y=50)
-        self.jogo.nome(nome="2-citoplasma, membrana, núcleo", tit=1, x=750, y=50)
-        self.jogo.nome(nome="3-citoplasma, membrana, núcleo", tit=2, x=450, y=150)
-        self.jogo.nome(nome="4-citoplasma, membrana, núcleo", tit=3, x=850, y=150)
-        self.jogo.nome(nome="5-citoplasma, membrana, núcleo", tit=4, x=450, y=250)
-        self.jogo.nome(nome="6-citoplasma, membrana, núcleo", tit=5, x=750, y=250)
-        self.jogo.nome(nome= "7-Para sair desse mundo vc precisa achar o protozoário",tit=6,x=900,y=350)
+        self.jogo.nome(nome="1-Meu núcleo é espalhado", tit=0, x=450, y=50)
+        self.jogo.nome(nome="2-Citoplasma, membrana, núcleo", tit=1, x=750, y=50)
+        self.jogo.nome(nome="3-Citoplasma, membrana, núcleo", tit=2, x=450, y=150)
+        self.jogo.nome(nome="4-Citoplasma, membrana, núcleo", tit=3, x=850, y=150)
+        self.jogo.nome(nome="5-Citoplasma, membrana, núcleo", tit=4, x=450, y=250)
+        self.jogo.nome(nome="6-Citoplasma, membrana, núcleo", tit=5, x=750, y=250)
+        self.jogo.nome(nome= "Para sair desse mundo você precisa achar o protozoário",tit=6,x=1000,y=350)
     def acertou(self):
-        Texto(self.membrana, "Você acertou tudo! Parabéns! Você Ganhou cinco ATP, veja sua mochila",
+        Texto(self.membrana, "Você acertou tudo! Parabéns! Você ganhou cinco ATP, veja sua mochila",
         foi=MOCHILA.mostra_mochila).vai()
         MOCHILA.ganha_atp()
         MOCHILA.ganha_atp()
