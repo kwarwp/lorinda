@@ -106,8 +106,8 @@ class fase4():  # SEM NENHUMA IMAGEM
         self.npc.entra(self.nucleo)
         self.dna.entra(self.nucleo)
         self.rna.entra(self.nucleo)
-
         
+
         self.proteinas=Elemento(img=PROTEINA) #FICAR PASSANDO PELA CELULA
         self.proteina.entra(self.parede)
         self.jogo=Associa(self.parede, caixa=300, borda=20, acertou=self.acertou, acertos=6)
@@ -120,6 +120,18 @@ class fase4():  # SEM NENHUMA IMAGEM
         Texto(self.parede, "Você acertou tudo! Está sabendo tudo de biologia,
         foi=MOCHILA.mostra_mochila).vai()
         MOCHILA.ganha_atp()
+        
+class Move:# ainda não sei onde colocar exatamente
+    def __init__(self):
+        self.cena = Cena("")#parede
+        self.cena.vai()
+        self.movente = Elemento("", cena=self.cena,
+            vai=self.mover, style={"transition": "left 2s"})#proteina
+        
+    def mover(self, ev=None):
+        self.movente.x=800
+Move()     
+
     
     
     
