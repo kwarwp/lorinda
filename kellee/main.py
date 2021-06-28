@@ -1,6 +1,7 @@
 # lorinda.kellee.main.py
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE, JOGO
 from _spy.vitollino.main import Inventario as inv 
+from anastasia.main import Associa, SF
 # salas do games da Angelica, lorinda-lisa-libby e kellee
 STYLE.update(width=600, height="600px")
 
@@ -91,10 +92,14 @@ class fase4():  # SEM NENHUMA IMAGEM
     def __init__(self):
         self.maria=Elemento(img=MARIA, tit="não consigo sair daqui")
         self.nucleo=Cena(img=NUCLEO)
+        self.nucleo.vai()
+        self.parede=Cena(img=PAREDE)
+        self.parede.vai() #NÃO TENHO CERTEZA
+        
         self.maria.entra(self.nucleo)
         self.nucleo.direita=self.parede
         self.parede.esquerda=self.nucleo
-        self.parede=Cena(img=PAREDE)
+        
         self.npc=Elemento(img=NPC, tit= "atenção garota, veja o DNA")
         self.dna=Elemento(img=DNA, tit= "só eu trabalho aqui, vou ter que criar um RNA para me ajudar")
         self.rna=Elemento(img=RNA, tit= " Vamos lá galera, produzindo proteínas ") #aparece depois do dna
@@ -105,7 +110,7 @@ class fase4():  # SEM NENHUMA IMAGEM
         
         self.proteinas=Elemento(img=PROTEINA) #FICAR PASSANDO PELA CELULA
         self.proteina.entra(self.parede)
-        
+        self.jogo=Associa(self.parede, caixa=300, borda=20, acertou=self.acertou, acertos=6)
     
     
     
