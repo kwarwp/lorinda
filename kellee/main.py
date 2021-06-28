@@ -111,7 +111,15 @@ class fase4():  # SEM NENHUMA IMAGEM
         self.proteinas=Elemento(img=PROTEINA) #FICAR PASSANDO PELA CELULA
         self.proteina.entra(self.parede)
         self.jogo=Associa(self.parede, caixa=300, borda=20, acertou=self.acertou, acertos=6)
-    
+        self.jogo.nome(nome="Tradução"tit=0, x=450, y=50)
+        self.jogo.nome(nome="Retículo", tit=1, x=750, y=50)
+        self.jogo.nome(nome="Transcrição", tit=2, x=450, y=150)
+        self.jogo.nome(nome="Fagocitose", tit=3, x=850, y=150)
+        self.jogo.nome(nome="Pinocitose", tit=4, x=450, y=250)
+    def acertou(self):
+        Texto(self.parede, "Você acertou tudo! Está sabendo tudo de biologia,
+        foi=MOCHILA.mostra_mochila).vai()
+        MOCHILA.ganha_atp()
     
     
     
