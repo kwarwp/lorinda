@@ -87,18 +87,25 @@ class fase3():
         
 fase3()
 
-class fase4():
+class fase4():  # SEM NENHUMA IMAGEM
     def __init__(self):
         self.maria=Elemento(img=MARIA, tit="não consigo sair daqui")
         self.nucleo=Cena(img=NUCLEO)
         self.maria.entra(self.nucleo)
-        self.npc=Elemento(img=NPC, "atenção garota, veja o DNA")
+        self.nucleo.direita=self.parede
+        self.parede.esquerda=self.nucleo
+        self.parede=Cena(img=PAREDE)
+        self.npc=Elemento(img=NPC, tit= "atenção garota, veja o DNA")
         self.dna=Elemento(img=DNA, tit= "só eu trabalho aqui, vou ter que criar um RNA para me ajudar")
-        self.rna=Elemento(img=RNA, tit" Vamos lá galera, produzindo proteínas ") #aparece depois do dna
+        self.rna=Elemento(img=RNA, tit= " Vamos lá galera, produzindo proteínas ") #aparece depois do dna
         self.npc.entra(self.nucleo)
         self.dna.entra(self.nucleo)
         self.rna.entra(self.nucleo)
-    
+
+        
+        self.proteinas=Elemento(img=PROTEINA) #FICAR PASSANDO PELA CELULA
+        self.proteina.entra(self.parede)
+        
     
     
     
