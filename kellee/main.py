@@ -108,7 +108,7 @@ class fase4():  # SEM NENHUMA IMAGEM
         self.rna.entra(self.nucleo)
         
 
-        self.proteinas=Elemento(img=PROTEINA) #FICAR PASSANDO PELA CELULA
+        self.proteina=Elemento(img=PROTEINA) #FICAR PASSANDO PELA CELULA
         self.proteina.entra(self.parede)
         self.jogo=Associa(self.parede, caixa=300, borda=20, acertou=self.acertou, acertos=6)
         self.jogo.nome(nome="Tradução"tit=0, x=450, y=50)
