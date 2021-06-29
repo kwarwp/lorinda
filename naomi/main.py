@@ -9,11 +9,11 @@ class Move:
         self.parede.vai()
         self.movente = Elemento(img=PROTEINA, cena=self.parede,
             style={"transition": "left 2s"})
-        Texto(self.parede, "veja a proteina chegar na parede", foi=self.mover).vai()
-        self.pergunta()
+        # Texto(self.parede, "veja a proteina chegar na parede", foi=self.mover).vai()
         self.acabou = 2
+        self.pergunta()
     def pergunta(self, ev=None):
-        if self.acabou:
+        if self.acabou == 0:
             return
         self.acabou -= 1
         self.multi = Texto(self.parede, "processos corretos?",
