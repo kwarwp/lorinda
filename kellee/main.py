@@ -110,7 +110,10 @@ class fase4():  # SEM NENHUMA IMAGEM
         
     def npc(self):
         self.parede=Cena(img=PAREDE)
-        self.npc=Elemento(img=NPC)
+        self.npc=Elemento(img=NPC,tit="se vc acertar os processos irá ganhar moléculas de atp")
+        self.maria=Elemento(img=MARIA, tit="nossas, quantas proteínas diferentes são formadas")
+        self.npc.entra(self.parede)
+        self.maria.entra(self.parede)
         Texto(self.parede,"Marque os processos que o DNA executa para a produção de proteína"
         self.parede.vai()
         self.parede.esquerda=self.nucleo
@@ -132,16 +135,7 @@ class fase4():  # SEM NENHUMA IMAGEM
         foi=MOCHILA.mostra_mochila).vai()
         MOCHILA.ganha_atp()
         
-class Move:# ainda não sei onde colocar exatamente
-    def __init__(self):
-        self.cena = Cena("")#parede
-        self.cena.vai()
-        self.movente = Elemento("", cena=self.cena,
-            vai=self.mover, style={"transition": "left 2s"})#proteina
-        
-    def mover(self, ev=None):
-        self.movente.x=800
-Move()     
+
 
     
     
