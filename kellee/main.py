@@ -117,7 +117,7 @@ class fase4():  # SEM NENHUMA IMAGEM
         Texto(self.parede,"Marque os processos que o DNA executa para a produção de proteína").vai()
         self.parede.vai()
         self.parede.esquerda=self.nucleo
-        self.npc.entra(self.parede)
+
         
     #como colocar essa parte no jogo? sei que esta desorganizado 
         #self.proteina=Elemento(img=PROTEINA,cena=self.cena,vai=self.mover,style={"transition":"left2s"}) #FICAR PASSANDO PELA CELULA
