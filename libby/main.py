@@ -48,7 +48,7 @@ class fase2():
         self.jogo.nome(nome="4-Citoplasma, membrana, núcleo", tit=3, x=850, y=150)
         self.jogo.nome(nome="5-Citoplasma, membrana, núcleo", tit=4, x=450, y=250)
         self.jogo.nome(nome="6-Citoplasma, membrana, núcleo", tit=5, x=750, y=250)
-        self.jogo.nome(nome= "Para sair desse mundo você precisa achar o protozoário",tit=6,x=1000,y=350)
+        self.jogo.nome(nome= "Para sair desse mundo você precisa achar o protozoário",tit=6,x=1000,y=350)# como fazer para aparecer tudo ?
     def acertou(self):
         Texto(self.membrana, "Você acertou tudo! Parabéns! Você ganhou cinco ATP, veja sua mochila",
         foi=MOCHILA.mostra_mochila).vai()
