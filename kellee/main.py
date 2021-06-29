@@ -94,7 +94,7 @@ class fase4():  # SEM NENHUMA IMAGEM
         self.nucleo=Cena(img=NUCLEO)
         self.nucleo.vai()
         self.parede=Cena(img=PAREDE)
-        self.parede.vai() #NÃO TENHO CERTEZA
+        
         
         self.maria.entra(self.nucleo)
         self.nucleo.direita=self.parede
@@ -122,7 +122,7 @@ class fase4():  # SEM NENHUMA IMAGEM
     #como colocar essa parte no jogo? sei que esta desorganizado 
         #self.proteina=Elemento(img=PROTEINA,cena=self.cena,vai=self.mover,style={"transition":"left2s"}) #FICAR PASSANDO PELA CELULA
         #self.proteina.entra(self.parede)
-        self.jogo=Associa(self.parede, caixa=300, borda=20, acertou=self.acertou, acertos=6)
+        self.jogo=Associa(self.parede, caixa=300, borda=20, acertou=self.acertou, acertos=3)
         self.jogo.nome(nome="Tradução"tit=0, x=450, y=50)#clicar e acertar
         self.jogo.nome(nome="Retículo", tit=1, x=750, y=50)
         self.jogo.nome(nome="Transcrição", tit=2, x=450, y=150)#clicar e acertar
@@ -130,11 +130,15 @@ class fase4():  # SEM NENHUMA IMAGEM
         self.jogo.nome(nome="Pinocitose", tit=4, x=450, y=250)
         self.jogo.nome(nome="Proteína", tit=5, x=750, y=250)#clicar e acertar 
         
-    def acertou(self):
+    def acertou(self):  
         Texto(self.parede, "Você acertou tudo! Está sabendo tudo de biologia, a ordem certa é transcrição-tradução-proteína",
         foi=MOCHILA.mostra_mochila).vai()
         MOCHILA.ganha_atp()
-        
+fase4()
+
+class fase5():
+    
+
 
 
     
