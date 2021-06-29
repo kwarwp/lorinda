@@ -114,7 +114,7 @@ class fase4():  # SEM NENHUMA IMAGEM
         self.maria=Elemento(img=MARIA, tit="nossas, quantas proteínas diferentes são formadas")
         self.npc.entra(self.parede)
         self.maria.entra(self.parede)
-        Texto(self.parede,"Marque os processos que o DNA executa para a produção de proteína").vai()
+        Texto(self.parede,"Marque os processos que o DNA executa para a produção de proteína",foi=self.anda).vai()
         self.parede.vai()
         self.parede.esquerda=self.nucleo
 
@@ -129,7 +129,8 @@ class fase4():  # SEM NENHUMA IMAGEM
         self.jogo.nome(nome="Fagocitose", tit=3, x=850, y=150)
         self.jogo.nome(nome="Pinocitose", tit=4, x=450, y=250)
         self.jogo.nome(nome="Proteína", tit=5, x=750, y=250)#clicar e acertar 
-        
+    def anda(self,ev=None):
+        self.proteina.x=800
     def acertou(self):  
         Texto(self.parede, "Você acertou tudo! Está sabendo tudo de biologia, a ordem certa é transcrição-tradução-proteína",
         foi=MOCHILA.mostra_mochila).vai()
