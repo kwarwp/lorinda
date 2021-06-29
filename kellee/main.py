@@ -119,7 +119,7 @@ class fase4():  # SEM NENHUMA IMAGEM
         self.parede.esquerda=self.nucleo
 
         
-    #como colocar essa parte no jogo? sei que esta desorganizado 
+        #como colocar essa parte no jogo? sei que esta desorganizado 
         #self.proteina=Elemento(img=PROTEINA,cena=self.cena,vai=self.mover,style={"transition":"left2s"}) #FICAR PASSANDO PELA CELULA
         #self.proteina.entra(self.parede)
         self.jogo=Associa(self.parede, caixa=300, borda=20, acertou=self.acertou, acertos=3)
