@@ -11,7 +11,11 @@ class Move:
             style={"transition": "left 2s"})
         Texto(self.parede, "veja a proteina chegar na parede", foi=self.mover).vai()
         self.pergunta()
+        self.acabou = 2
     def pergunta(self, ev=None):
+        if self.acabou:
+            return
+        self.acabou -= 1
         self.multi = Texto(self.parede, "processos corretos?",
                            foi=self.resposta, A= "a b", B= "b c", C= "c d", D= "b d").vai()
 
