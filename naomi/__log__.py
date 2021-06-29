@@ -38,3 +38,10 @@ SyntaxError: invalid syntax
     self.cena.vai()
 AttributeError: 'Move' object has no attribute 'cena'
 '''},
+{'date': 'Mon Jun 28 2021 22:23:50.13 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 13
+  self.multi = Texto(self.parede, "processos corretos?"
+                                                                                    ^
+SyntaxError: invalid syntax
+'''},
