@@ -59,3 +59,10 @@ SyntaxError: invalid syntax
     Swap(JOGO,ENIGMA,self.laboratorio_4)
 TypeError: 'module' object is not callable
 '''},
+{'date': 'Mon Jun 28 2021 21:04:35.491 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 114
+  self.jogo.nome(nome="Tradução"tit=0, x=450, y=50)
+                                 ^
+SyntaxError: invalid syntax
+'''},
