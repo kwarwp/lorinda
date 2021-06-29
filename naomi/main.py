@@ -10,8 +10,20 @@ class Move:
         self.movente = Elemento(img=PROTEINA, cena=self.parede,
             style={"transition": "left 2s"})
         Texto(self.parede, "veja a proteina chegar na parede", foi=self.mover).vai()
-        
+        self.pergunta()
+    def pergunta(self, ev=None):
+        self.multi = Texto(self.parede, "processos corretos?",
+                           foi=self.resposta, A= "a b", B= "b c", C= "c d", D= "b d").vai()
+
     def mover(self, ev=None):
         self.movente.x=800
+        
+    def resposta(self, rep):
+        if rep == "A":
+            Texto(self.parede, "ganhou um ATP!").vai()
+        else:
+            Texto(self.parede, "Ops não acertou", foi=self.pergunta).vai()
+            
+            
         
 Move()
