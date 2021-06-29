@@ -120,8 +120,8 @@ class fase4():  # SEM NENHUMA IMAGEM
 
         
         #como colocar essa parte no jogo? sei que esta desorganizado 
-        #self.proteina=Elemento(img=PROTEINA,cena=self.cena,vai=self.mover,style={"transition":"left2s"}) #FICAR PASSANDO PELA CELULA
-        #self.proteina.entra(self.parede)
+        self.proteina=Elemento(img=PROTEINA,cena=self.cena,vai=self.mover,style={"transition":"left2s"}) #FICAR PASSANDO PELA CELULA
+        self.proteina.entra(self.parede)
         self.jogo=Associa(self.parede, caixa=300, borda=20, acertou=self.acertou, acertos=3)
         self.jogo.nome(nome="Tradução"tit=0, x=450, y=50)#clicar e acertar
         self.jogo.nome(nome="Retículo", tit=1, x=750, y=50)
