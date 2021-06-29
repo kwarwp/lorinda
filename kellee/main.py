@@ -97,7 +97,7 @@ class fase4():  # SEM NENHUMA IMAGEM
         
         
         self.maria.entra(self.nucleo)
-        self.nucleo.direita=self.parede
+        #self.nucleo.direita=self.parede
         self.parede.esquerda=self.nucleo
         
         self.npc=Elemento(img=NPC, tit= "atenção garota, veja o DNA")
@@ -114,7 +114,7 @@ class fase4():  # SEM NENHUMA IMAGEM
         self.maria=Elemento(img=MARIA, tit="nossas, quantas proteínas diferentes são formadas")
         self.npc.entra(self.parede)
         self.maria.entra(self.parede)
-        Texto(self.parede,"Marque os processos que o DNA executa para a produção de proteína"
+        Texto(self.parede,"Marque os processos que o DNA executa para a produção de proteína").vai()
         self.parede.vai()
         self.parede.esquerda=self.nucleo
         self.npc.entra(self.parede)
