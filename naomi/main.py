@@ -5,12 +5,17 @@ STYLE.update(width=1000, height="600px")
 
 class Move:
     def __init__(self):
+        
+        def pegou_atp(ev=None):
+            ATP = "https://i.imgur.com/k0Az1Ts.png"
+            self.ATP = Elemento(img=ATP, tit="ATP", x=600, y=500, cena=self.parede, drag=True)
         NPC = "https://i.imgur.com/slnDrGI.png"
         RIBOSSOMA = "https://i.imgur.com/Tf5yrKb.png"
         MARIA = "https://i.imgur.com/4yrnNgS.png"
         CELULAR = "https://i.imgur.com/hUBdEPI.jpg"
+        MOCHILA.esvazia_mochila()
         MOCHILA.ganha_atp()
-        MOCHILA.quando_pega(self.pegou_atp)
+        MOCHILA.quando_pega(pegou_atp)
 
         self.parede = Cena("https://i.imgur.com/sGoKfvs.jpg")
         self.parede.vai()
