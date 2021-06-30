@@ -7,7 +7,6 @@ class Move:
     def __init__(self):
         NPC = "https://i.imgur.com/slnDrGI.png"
         RIBOSSOMA = "https://i.imgur.com/Tf5yrKb.png"
-        ATP = "https://i.imgur.com/k0Az1Ts.png"
         MARIA = "https://i.imgur.com/4yrnNgS.png"
         CELULAR = "https://i.imgur.com/hUBdEPI.jpg"
         MOCHILA.ganha_atp()
@@ -15,7 +14,8 @@ class Move:
 
         self.parede = Cena("https://i.imgur.com/sGoKfvs.jpg")
         self.parede.vai()
-        self.NPC = Elemento(img=NPC, x=800, cena=self.parede, vai=self.aconselha)
+        #self.NPC = Elemento(img=NPC, x=800, cena=self.parede, vai=self.aconselha)
+        self.NPC = Elemento(img=NPC, x=800, cena=self.parede, vai=self.pegou_atp)
         self.celular = Elemento(img=CELULAR, x=800, y=500, w=100, h=100, cena=self.parede,
         drop={'ATP': self.usou_o_celular})
         self.movente = Elemento(img=RIBOSSOMA, cena=self.parede,
@@ -31,12 +31,14 @@ class Move:
         self.acabou = 2
         # self.pergunta()
         
-    def pegou_atp(self):
-        self.ATP = Elemento(img=ATP, tit="ATP", x=600, y=400, cena=self.parede, drag=True)
+    def pegou_atp(self, ev=None):
+        ATP = "https://i.imgur.com/k0Az1Ts.png"
+        self.ATP = Elemento(img=ATP, tit="ATP", x=600, y=500, cena=self.parede, drag=True)
         
-    def usou_o_celular(self, ev=None):
+    def usou_o_celular(self, atp, ev=None):
         txt = ('Na pesquisa vc descobre que é o ribossoma. Ao chamar pelo nome eles vão embora')
         Texto(self.parede, txt, foi=self.vai_embora).vai()
+        self.ATP.x = -1000
         
     def vai_embora(self, ev=None):
         self.movente.x=-600
