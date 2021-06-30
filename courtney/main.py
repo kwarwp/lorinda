@@ -48,7 +48,8 @@ class Mochila:
         
     def _pega_atp(self, _=0):
         self.cena_anterior.vai()
-        self.pega_atp()
+        vai = self.pega_atp
+        vai()
         
     def ganha_adp(self):
         xy = self.calcula_moeda()
