@@ -31,11 +31,12 @@ class Move:
         self.movente.elt.ontransitionend = self.persegue_maria
         self.movente1 = Elemento(img=LISOSSOMA, w=60, h=60, x=200, cena=self.parede,
             style={"transition": "left 5s, top 5s"})
-        self.organela = Elemento(img=RIBOSSOMA, x=300, y=400, w=60, h=60, cena=self.parede)
+        self.organela = Elemento(img=RIBOSSOMA, x=300, y=400, w=60, h=60, cena=self.parede,
+            style={"transition": "opacity 2s"})
         self.maria = Elemento(img=MARIA, x=600, y=400, cena=self.parede, vai=self.usou_o_celular,
             style={"transition": "left 4s"})
         self.maria.elt.ontransitionend = self.encosta_maria
-        txt = ('De repente Maria vê uma bolinha se desprendo do complexo de golgi,'
+        txt0 = ('De repente Maria vê uma bolinha se desprendo do complexo de golgi,'
             'ela encosta numa organela que está com uma placa escrito sem função,'
             'a bolinha vem na direção dessa organela e destrói a organela.')
         txt = ('Maria vê uma organela que está com uma placa escrito sem função,'
@@ -71,7 +72,7 @@ class Move:
         self.multi = Texto(self.parede, conselho).vai()
 
     def move_maria(self, ev=None):
-        self.maria.x=400
+        self.maria.x=300
 
     def encosta_maria(self, ev=None):
         txt = ('De repente Maria vê uma bolinha se desprendo do complexo de golgi,'
@@ -83,6 +84,19 @@ class Move:
         self.maria.x=800
         self.maria.elt.ontransitionend = lambda *_: None
 
+
+    def persegue_maria(self, ev=None):
+        self._persegue_maria()
+        self._persegue_maria = lambda *_: None
+
+
+    def _persegue_maria(self, ev=None):
+        self.organela.o = 0
+        self.movente.x=700
+        self.movente.y=400
+        self.movente1.x=650
+        self.movente1.y=400
+        self.maria.x=800
 
     def mover(self, ev=None):
         self.movente.x=400
