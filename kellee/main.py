@@ -143,8 +143,29 @@ class fase5():
         self.rosalinda=Elemento(img=ROSALINDA,tit ="Maria, olhe a estrutura")
         self.maria=Elemento(img=MARIA, tit="  quem é você? ")
         self.complexog=Elemento(img=COMPLEXOPG, tit="Sou uma organela, ué")
+        self.organela.direita=Cena(vai=self.mariafala) 
+    def mariafala(self):
+        self.organela=Cena(img=ORGANELA)
+        self.maria=Elemento(img=MARIA, tit="sim, mas qual é seu nome? Pode me ajudar a sair daqu"))
+        self.npc=Elemento(img=NPC, tit="Vim da Itália, era histologista, dei uma parte do meu nome para essa organela.Qual é meu nome?")
         
+        self.acabou = 2
+        self.pergunta()
+    def pergunta(self, ev=None):
+        if self.acabou == 0:
+            return
+        self.acabou -= 1
+        self.multi = Texto(self.parede, "Qual o meu nome?",
+                           foi=self.resposta, A= "Lisossomo", B= "Perisoxomo ", C= "complexo de golgi", D= "ribossomo").vai()
 
+    def mover(self, ev=None):
+        self.movente.x=800
+        def resposta(self, rep):
+        if rep == "C":
+            Texto(self.parede, "ganhou um ATP!").vai()
+        else:
+            Texto(self.parede, "Ops não acertou", foi=self.pergunta).vai()
+            
 
 
     
