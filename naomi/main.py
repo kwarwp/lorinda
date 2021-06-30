@@ -11,12 +11,13 @@ class Move:
         MARIA = "https://i.imgur.com/4yrnNgS.png"
         CELULAR = "https://i.imgur.com/hUBdEPI.jpg"
         MOCHILA.ganha_atp()
-        #MOCHILA.quando_pega(self.pegou_atp)
+        MOCHILA.quando_pega(self.pegou_atp)
 
         self.parede = Cena("https://i.imgur.com/sGoKfvs.jpg")
         self.parede.vai()
         self.NPC = Elemento(img=NPC, x=800, cena=self.parede, vai=self.aconselha)
-        self.celular = Elemento(img=CELULAR, x=800, y=500, w=100, h=100, cena=self.parede)
+        self.celular = Elemento(img=CELULAR, x=800, y=500, w=100, h=100, cena=self.parede,
+        drop={'ATP': self.usou_o_celular})
         self.movente = Elemento(img=RIBOSSOMA, cena=self.parede,
             style={"transition": "left 5s, top 5s"})
         self.movente1 = Elemento(img=RIBOSSOMA, y=100, cena=self.parede,
@@ -31,7 +32,7 @@ class Move:
         # self.pergunta()
         
     def pegou_atp(self):
-        self.ATP = Elemento(img=ATP, x=600, y=400, cena=self.parede, drag=True)
+        self.ATP = Elemento(img=ATP, tit="ATP", x=600, y=400, cena=self.parede, drag=True)
         
     def usou_o_celular(self, ev=None):
         txt = ('Na pesquisa vc descobre que é o ribossoma. Ao chamar pelo nome eles vão embora')
