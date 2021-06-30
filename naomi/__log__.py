@@ -85,3 +85,10 @@ AttributeError: 'Move' object has no attribute 'acabou'
     if self.acabou:
 AttributeError: 'Move' object has no attribute 'acabou'
 '''},
+{'date': 'Wed Jun 30 2021 19:35:02.997 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 19
+  self.celular = Elemento(img=CELULAR, x=800, y=500, w=100, h=100 cena=self.parede)
+                                                                   ^
+SyntaxError: invalid syntax
+'''},
