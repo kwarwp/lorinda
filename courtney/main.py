@@ -19,10 +19,12 @@ class Mochila:
         self.mochila_inv.vai = self.mostra_mochila
         self.mochila_fecha = Elemento(self.VOLTA, cena=self.mochila, x=0, y=550, w=600, h=50)
         self.mochila_fecha.vai = self.fecha_mochila
+        self.pega_atp = lambda *_: None
         inv.bota(self.mochila_inv)
         
-    def mostra_mochila(self, _=0):
+    def mostra_mochila(self, _=0, pega_atp=lambda *_: None):
         self.cena_anterior = inv.cena
+        self.pega_atp = pega_atp
         self.mochila.vai()
         
     def fecha_mochila(self, _=0):
@@ -34,8 +36,11 @@ class Mochila:
         
     def ganha_atp(self):
         xy = self.calcula_moeda()
-        Elemento(self.ATP, cena=self.mochila, w=50, h=50, **xy)
+        Elemento(self.ATP, cena=self.mochila, w=50, h=50, vai=self._pega_atp, **xy)
         self.moedas.append(self.ATP)
+        
+    def _pega_atp(self, _=0):
+        self.pega_atp()
         
     def ganha_adp(self):
         xy = self.calcula_moeda()
