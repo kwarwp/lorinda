@@ -138,7 +138,12 @@ class fase4():  # SEM NENHUMA IMAGEM
 fase4()
 
 class fase5():
-    
+    def __init__(self):
+        self.organela=Cena(img=ORGANELA)
+        self.rosalinda=Elemento(img=ROSALINDA,tit ="Maria, olhe a estrutura")
+        self.maria=Elemento(img=MARIA, tit="  quem é você? ")
+        self.complexog=Elemento(img=COMPLEXOPG, tit="Sou uma organela, ué")
+        
 
 
 
