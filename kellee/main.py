@@ -165,6 +165,7 @@ class fase5():
             Texto(self.parede, "ganhou um ATP!").vai()
         else:
             Texto(self.parede, "Ops não acertou", foi=self.pergunta).vai()
+
             
 
 
