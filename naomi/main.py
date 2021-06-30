@@ -15,10 +15,12 @@ class Move:
         CELULAR = "https://i.imgur.com/hUBdEPI.jpg"
         MOCHILA.esvazia_mochila()
         MOCHILA.ganha_atp()
-        MOCHILA.quando_pega(pegou_atp)
+        #MOCHILA.quando_pega(pegou_atp)
 
         self.parede = Cena("https://i.imgur.com/sGoKfvs.jpg")
         self.parede.vai()
+        self._parede_vai = self.parede.vai
+        self.parede.vai = self.pegou_atp
         #self.NPC = Elemento(img=NPC, x=800, cena=self.parede, vai=self.aconselha)
         self.NPC = Elemento(img=NPC, x=800, cena=self.parede, vai=self.pegou_atp)
         self.celular = Elemento(img=CELULAR, x=800, y=500, w=100, h=100, cena=self.parede,
@@ -39,6 +41,7 @@ class Move:
     def pegou_atp(self, ev=None):
         ATP = "https://i.imgur.com/k0Az1Ts.png"
         self.ATP = Elemento(img=ATP, tit="ATP", x=600, y=500, cena=self.parede, drag=True)
+        self._parede_vai()
         
     def usou_o_celular(self, atp, ev=None):
         txt = ('Na pesquisa vc descobre que é o ribossoma. Ao chamar pelo nome eles vão embora')
