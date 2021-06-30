@@ -32,6 +32,7 @@ class Mochila:
         
     def esvazia_mochila(self, _=0):
         inv.inicia()
+        inv.bota(self.mochila_inv)
         
     def quando_pega(self, pega_atp=lambda *_: None, _=0):
         self.pega_atp = pega_atp
