@@ -30,6 +30,9 @@ class Mochila:
     def fecha_mochila(self, _=0):
         self.cena_anterior.vai()
         
+    def esvazia_mochila(self, _=0):
+        inv.inicia()
+        
     def quando_pega(self, pega_atp=lambda *_: None, _=0):
         self.pega_atp = pega_atp
         
@@ -43,8 +46,8 @@ class Mochila:
         self.moedas.append(self.ATP)
         
     def _pega_atp(self, _=0):
-        self.pega_atp()
         self.cena_anterior.vai()
+        self.pega_atp()
         
     def ganha_adp(self):
         xy = self.calcula_moeda()
