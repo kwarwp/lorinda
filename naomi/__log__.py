@@ -128,3 +128,10 @@ AttributeError: 'Mochila' object has no attribute 'quando_pega'
     MOCHILA.esvazia_mochila()
 AttributeError: 'Mochila' object has no attribute 'esvazia_mochila'
 '''},
+{'date': 'Wed Jun 30 2021 20:33:17.29 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 33
+  self.organela = Elemento(img=RIBOSSOMA, x=300, y=600, w=60, h=60, y=100, cena=self.parede)
+                                                                     ^
+SyntaxError: keyword argument repeated
+'''},
