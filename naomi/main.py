@@ -20,6 +20,7 @@ class Move:
 
         self.parede = Cena("https://i.imgur.com/sGoKfvs.jpg")
         self.parede.vai()
+        self.matou_organela = True
         self._parede_vai = self.parede.vai
         self.parede.vai = self.pegou_atp
         self.NPC = Elemento(img=NPC, x=800, cena=self.parede, vai=self.aconselha)
@@ -51,7 +52,7 @@ class Move:
         self._parede_vai()
         
     def usou_o_celular(self, atp, ev=None):
-        txt = ('Na pesquisa vc descobre que é o ribossoma. Ao chamar pelo nome eles vão embora')
+        txt = ('Na pesquisa vc descobre que é o lisossoma. Ao chamar pelo nome eles vão embora')
         Texto(self.parede, txt, foi=self.vai_embora).vai()
         self.ATP.x = -1000
         
@@ -72,22 +73,22 @@ class Move:
         self.multi = Texto(self.parede, conselho).vai()
 
     def move_maria(self, ev=None):
-        self.maria.x=300
+        self.maria.x=340
 
     def encosta_maria(self, ev=None):
-        txt = ('De repente Maria vê uma bolinha se desprendo do complexo de golgi,'
-        'Ela encosta na organela que está com a placa escrito sem função,'
-            'a bolinha vem na direção dessa organela e destrói a organela.')
-        Texto(self.parede, txt, foi=self.mover).vai()
+        txt = ('Ela encosta na organela que está com a placa escrito sem função.'
+        'De repente Maria vê umas bolinhas se desprendo do complexo de golgi,'
+            'as bolinhas vem na direção dessa organela e destrói a organela.')
+        Texto(self.parede, txt, foi=self.mover).vai() if self.matou_organela else None
+        # self.matou_organela = False
 
     def foge_maria(self, ev=None):
         self.maria.x=800
-        self.maria.elt.ontransitionend = lambda *_: None
 
 
     def persegue_maria(self, ev=None):
-        self._persegue_maria()
-        self._persegue_maria = lambda *_: None
+        self._persegue_maria() if self.matou_organela else None
+        self.matou_organela = False
 
 
     def _persegue_maria(self, ev=None):
@@ -99,11 +100,11 @@ class Move:
         self.maria.x=800
 
     def mover(self, ev=None):
-        self.movente.x=400
+        self.movente.x=300
         self.movente.y=400
-        self.movente1.x=400
+        self.movente1.x=300
         self.movente1.y=400
-        self.maria.x=800
+        # self.maria.x=400
         
     def resposta(self, rep):
         if rep == "A":
