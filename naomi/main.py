@@ -165,7 +165,7 @@ class Fase7():
         self.redemoinho.x = 2000
         self.maria.x = 2000
         self.maria_double.x = 2000
-        self.maria_double.elt.style.transform = "rotate 350deg"
+        self.maria_double.elt.style.transform = "rotate(200deg)"
         
     def entra_redemoinho(self, _=0):
         afala = "Maria: De novo, este redemoinho louco?"
@@ -175,7 +175,7 @@ class Fase7():
         self.maria.responde = self.anda_redemoinho
         #self.maria.x = 600
         self.maria_double=Elemento(img=MARIA, x=400, y=200, w=100, h=200, cena=self.celula,
-        style= {"transition": "left 8s rotate 4s"})
+        style= {"transition": "left 8s, transform 1s"})
         self.redemoinho.entra(self.celula)
         self.maria.entra(self.celula)
         self.maria.fala()
