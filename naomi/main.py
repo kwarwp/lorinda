@@ -134,14 +134,16 @@ class Fase7():
             drop = {"glicose": faz_luz})
         afala = "Eu sou uma molécula capaz de fornecer energia, mitocôndrias adoram me engolir"
         self.glicose = Personagem(GLICOSE, x=0, y=100,
-            w=100, h=100, cena=self.celula, afala=afala)
+            w=100, h=100, afala=afala)
         self.glicose.tit = "glicose"
         self.glicose.drag = True
         afala = "Ribossomo:Porque perdi minha outra parte e preciso encontrá-la. Eu preciso gerar proteínas"
-        self.ribossoma = Personagem(RIBOSSOMA, x=200, y=200, w=100, h=100, afala=afala, cena=self.celula,
+        self.ribossoma = Personagem(RIBOSSOMA, x=200, y=200, w=100, h=100, afala=afala,
         responde=self.glicose.fala)
         afala = "Maria: por que você está triste?"
         self.maria=Personagem(img=MARIA, x=0, y=400, w=100, h=200, afala=afala, responde=self.ribossomo)
+        self.glicose.entra(self.celula)
+        self.ribossoma.entra(self.celula)
         self.maria.entra(self.celula)
         self.maria.fala()
    
