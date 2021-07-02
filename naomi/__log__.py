@@ -171,3 +171,10 @@ AttributeError: 'Move' object has no attribute 'persegue_maria'
     self.movente.elt.ontransitionend = self.persegue_maria
 AttributeError: 'Move' object has no attribute 'persegue_maria'
 '''},
+{'date': 'Fri Jul 02 2021 13:25:30.141 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 57
+  Texto(self.parede, txt, A="Complexo de Golgi", B="Ribossomo", C"Vacúolo").vai()
+                                                                  ^
+SyntaxError: invalid syntax
+'''},
