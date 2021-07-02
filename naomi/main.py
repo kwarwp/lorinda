@@ -14,6 +14,9 @@ class Move:
         LISOSSOMA = "https://i.imgur.com/g0OplxP.png"
         MARIA = "https://i.imgur.com/4yrnNgS.png"
         CELULAR = "https://i.imgur.com/hUBdEPI.jpg"
+        MITOCONDRIA=""
+        RIBOSSOMO=""
+        GLICOSE=""
         MOCHILA.esvazia_mochila()
         MOCHILA.ganha_atp()
         #MOCHILA.quando_pega(pegou_atp)
