@@ -17,6 +17,10 @@ ESTRTURA= "https://imgur.com/iaGv545.png"
 DNA= "https://i.imgur.com/khPaSvV.png"
 NPC="https://i.imgur.com/hU2mulx.png"
 ENIGMA= "https://i.imgur.com/pwI7UL8.png"
+NUCLEO="https://i.imgur.com/hU2mulx.png" # trocar essa imagem
+PAREDE="https://i.imgur.com/hU2mulx.png" # trocar essa imagem
+ORGANELA="https://i.imgur.com/hU2mulx.png" # trocar essa imagem
+COMPLEXOG="https://i.imgur.com/hU2mulx.png" # trocar essa imagem
 class fase3():
     def __init__(self):
         self.laboratorio=Cena(img=LABORATORIO)
