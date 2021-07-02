@@ -130,18 +130,19 @@ class Fase7():
         def faz_luz(_, ev=None):
             self.escuro.x = -10000
             self.mitocondria.o = 1
-        self.mitocondria = Elemento(MITOCONDRIA, x=50, y=50, w=900, h=500, o=0.1, cena=self.celula,
+            self.glicose.x = -10000
+        self.mitocondria = Elemento(MITOCONDRIA, x=20, y=20, w=950, h=550, o=0.1, cena=self.celula,
             drop = {"glicose": faz_luz})
-        afala = "Eu sou uma molécula capaz de fornecer energia, mitocôndrias adoram me engolir"
-        self.glicose = Personagem(GLICOSE, x=0, y=100,
-            w=100, h=100, afala=afala)
-        self.glicose.tit = "glicose"
-        self.glicose.drag = True
-        afala = "Ribossomo:Porque perdi minha outra parte e preciso encontrá-la. Eu preciso gerar proteínas"
-        self.ribossoma = Personagem(RIBOSSOMA, x=200, y=200, w=100, h=100, afala=afala,
-        responde=self.glicose.fala)
-        afala = "Maria: por que você está triste?"
-        self.maria=Personagem(img=MARIA, x=0, y=400, w=100, h=200, afala=afala, responde=self.ribossomo)
+        afala = "Glicose: Eu sou uma molécula capaz de fornecer energia, mitocôndrias adoram me engolir"
+        self.glicose = Elemento(GLICOSE, x=0, y=100, tit = "glicose", drag = True,
+            w=100, h=100)
+        self.glicose = Personagem(GLICOSE, x=-10000, y=100,w=100, h=100, afala=afala)
+        afala = "Ribossomo: Porque perdi minha outra parte e preciso encontrá-la. Eu preciso gerar proteínas"
+        self.ribossoma = Personagem(RIBOSSOMA, x=200, y=200, w=80, h=80, afala=afala,
+            responde=self.glicose_fake.fala)
+        afala = "Maria: Ribossomo, por que você está triste?"
+        self.maria=Personagem(img=MARIA, x=400, y=200, w=100, h=200, afala=afala, responde=self.ribossoma.fala)
+        self.glicose_fake.entra(self.celula)
         self.glicose.entra(self.celula)
         self.ribossoma.entra(self.celula)
         self.maria.entra(self.celula)
