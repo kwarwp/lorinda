@@ -1,6 +1,7 @@
 # lorinda.naomi.main.py
 from _spy.vitollino.main import Cena, Elemento,Texto, STYLE
 from courtney.main import MOCHILA
+from tracy.main import Personagem
 STYLE.update(width=1000, height="600px")
 
 class Move:
@@ -14,9 +15,6 @@ class Move:
         LISOSSOMA = "https://i.imgur.com/g0OplxP.png"
         MARIA = "https://i.imgur.com/4yrnNgS.png"
         CELULAR = "https://i.imgur.com/hUBdEPI.jpg"
-        MITOCONDRIA=""
-        RIBOSSOMO=""
-        GLICOSE=""
         MOCHILA.esvazia_mochila()
         MOCHILA.ganha_atp()
         #MOCHILA.quando_pega(pegou_atp)
@@ -114,24 +112,41 @@ class Move:
             Texto(self.parede, "ganhou um ATP!").vai()
         else:
             Texto(self.parede, "Ops não acertou", foi=self.pergunta).vai()
+            
+GLICOSE = "https://i.imgur.com/vgrC2fM.png"
+RIBOSSOMA = "https://i.imgur.com/Tf5yrKb.png"
+MITOCONDRIA = "https://i.imgur.com/YpXXhJF.png"
+MARIA = "https://i.imgur.com/4yrnNgS.png"
+ESCURO = "https://i.imgur.com/cQogon6.jpg"
+CELULA = "https://i.imgur.com/ujAF00x.jpg"
+CICLONE = "https://i.imgur.com/BC6X7ho.gif"
 
-class Fase7()
+class Fase7():
     def __init__(self):
-        self.mitocondria=Cena(img=MITOCONDRIA)
-        self.mitocondria.vai()
-        self.glicose=Personagem(img=GLICOSE, x=0, afala"")
-        self.ribossomo=Personagem(img=RIBOSSOMO,x=200,afala"Ribossomo:Porque perdi minha outra parte e preciso encontrá-la. Eu preciso gerar proteínas",responde=self.ribossomofala)
-        self.maria=Personagem(img=MARIA, afala"Maria: por que você está triste?",responde=self.ribossomo)
-        self.maria.entra(self.mitocondria)
-        self.ribossomo.entra(self.mitocondria)
-       
+        self.celula = Cena(CELULA)
+        self.celula.vai()
+        self.escuro = Elemento(ESCURO, x=0, y=0, w=1000, h=600, o=0.92, cena=self.celula)
+        
+        def faz_luz(_, ev=None):
+            self.escuro.x = -10000
+            self.mitocondria.o = 1
+        self.mitocondria = Elemento(MITOCONDRIA, x=50, y=50, w=900, h=500, o=0.1, cena=self.celula,
+            drop = {"glicose": faz_luz})
+        afala = "Eu sou uma molécula capaz de fornecer energia, mitocôndrias adoram me engolir"
+        self.glicose = Personagem(GLICOSE, tit="glicose", x=0, y=100,
+            w=100, h=100, cena=self.celula, afala=afala, drag=True)
+        afala = "Ribossomo:Porque perdi minha outra parte e preciso encontrá-la. Eu preciso gerar proteínas"
+        self.ribossoma = Personagem(RIBOSSOMA, x=200, y=200, w=100, h=100, afala=afala, cena=self.celula,
+        responde=self.glicose.fala)
+        afala = "Maria: por que você está triste?"
+        self.maria=Personagem(img=MARIA, x=0, y=400, w=100, h=200, afala=afala, responde=self.ribossomo)
+        self.maria.entra(self.celula)
         self.maria.fala()
-        self.ribossomo.fala()
    
     def ribossomofala(self):
         self.mitocondria=Cena(img=MITOCONDRIA)
         self.mitocondria.vai()
-        self.ribossomo=Personagem(img=ribossomo,x=0, afala="No caminho eu te explico...",responde=)
+        self.ribossomo=Personagem(img=RIBOSSOMA,x=0, afala="No caminho eu te explico...")
         self.maria=Personagem(img=MARIA, afala="Mas está tudo escuro, como vamos achar?",responde=self.ribossomo)
         self.maria.entra(self.mitocondria)
         self.ribossomo.entra(self.mitocondria)
@@ -139,5 +154,5 @@ class Fase7()
         self.maria.fala()
         self.ribossomo.fala()
 if __name__ == "__main__":            
-     
+    Fase7()     
     #Move()
