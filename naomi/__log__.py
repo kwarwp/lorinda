@@ -178,3 +178,10 @@ AttributeError: 'Move' object has no attribute 'persegue_maria'
                                                                   ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Jul 02 2021 13:25:51.971 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 64
+  Texto(self.parede, txt, foi=self.vai_embora).vai()
+  ^
+IndentationError: unexpected indent
+'''},
