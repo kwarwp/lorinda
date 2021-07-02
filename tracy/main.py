@@ -186,37 +186,39 @@ class Fase4():  # SEM NENHUMA IMAGEM
 class Fase5():
     def __init__(self):
         self.organela=Cena(img=ORGANELA)
-        self.rosalinda=Elemento(img=ROSALINDA)
+        self.rosalinda=Elemento(img=ROSALINDA,x=200,y=400)
         self.rosalinda.entra(self.organela)
-        
-        self.complexog=Personagem(img=COMPLEXOG, afala="Sou uma organela, ué",responde=self.mariafala)
-        self.maria=Personagem(img=MARIA, afala="  quem é você? ",responde=self.complexog.fala)
+        self.organela.vai()
+        self.complexog=Personagem(img=COMPLEXOG,x=0, afala="Sou uma organela, ué",responde=self.mariafala)
+        self.maria=Personagem(img=MARIA, afala="Maria: quem é você? ",responde=self.complexog.fala)
         self.maria.entra(self.organela)
         self.complexog.entra(self.organela)
         self.organela.direita=Cena(vai=self.mariafala) 
         Texto(self.organela,"Maria, olhe a estrutura",foi=self.maria.fala).vai()
         
-    def mariafala(self):
+    def mariafala(self,ev=0):
         self.organela=Cena(img=ORGANELA)
-        self.npc=Personagem(img=NPC, afala="Vim da Itália, era histologista, dei uma parte do meu nome para essa organela.Qual é meu nome?",rwsponde=self.pergunta)
+        self.organela.vai()
+        self.npc=Personagem(img=NPC,x=0, afala="Vim da Itália, era histologista, dei uma parte do meu nome para essa organela.Qual é meu nome?",responde=self.pergunta)
         self.maria=Personagem(img=MARIA, afala="sim, mas qual é seu nome? Pode me ajudar a sair daqui",responde=self.npc.fala)
-        
+        self.maria.entra(self.organela)
+        self.npc.entra(self.organela)
         self.acabou = 2
         self.maria.fala()
     def pergunta(self, ev=None):
         if self.acabou == 0:
             return
         self.acabou -= 1
-        self.multi = Texto(self.parede, "Qual o meu nome?",
+        self.multi = Texto(self.organela, "Qual o meu nome?",
                            foi=self.resposta, A= "Lisossomo", B= "Perisoxomo ", C= "complexo de golgi", D= "ribossomo").vai()
 
     def mover(self, ev=None):
         self.movente.x=800
     def resposta(self, rep):
         if rep == "C":
-            Texto(self.parede, "ganhou um ATP!").vai()
+            Texto(self.organela, "ganhou um ATP!").vai()
         else:
-            Texto(self.parede, "Ops não acertou", foi=self.pergunta).vai()
+            Texto(self.organela, "Ops não acertou", foi=self.pergunta).vai()
         
         
 
