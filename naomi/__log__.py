@@ -185,3 +185,10 @@ SyntaxError: invalid syntax
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Fri Jul 02 2021 17:53:55.336 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 116
+  class Fase7()
+                ^
+SyntaxError: invalid syntax
+'''},
