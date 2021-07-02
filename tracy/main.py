@@ -183,9 +183,44 @@ class Fase4():  # SEM NENHUMA IMAGEM
         else:
             Texto(self.parede, "Ops não acertou", foi=self.pergunta).vai()
 
+class Fase5():
+    def __init__(self):
+        self.organela=Cena(img=ORGANELA)
+        self.rosalinda=Elemento(img=ROSALINDA)
+        self.rosalinda.entra(self.organela)
+        
+        self.complexog=Personagem(img=COMPLEXOG, afala="Sou uma organela, ué",responde=self.mariafala)
+        self.maria=Personagem(img=MARIA, afala="  quem é você? ",responde=self.complexog.fala)
+        self.maria.entra(self.organela)
+        self.complexog.entra(self.organela)
+        self.organela.direita=Cena(vai=self.mariafala) 
+        Texto(self.organela,"Maria, olhe a estrutura",foi=self.maria.fala).vai()
+        
+    def mariafala(self):
+        self.organela=Cena(img=ORGANELA)
+        self.npc=Personagem(img=NPC, afala="Vim da Itália, era histologista, dei uma parte do meu nome para essa organela.Qual é meu nome?",rwsponde=self.pergunta)
+        self.maria=Personagem(img=MARIA, afala="sim, mas qual é seu nome? Pode me ajudar a sair daqui",responde=self.npc.fala)
+        
+        self.acabou = 2
+        self.maria.fala()
+    def pergunta(self, ev=None):
+        if self.acabou == 0:
+            return
+        self.acabou -= 1
+        self.multi = Texto(self.parede, "Qual o meu nome?",
+                           foi=self.resposta, A= "Lisossomo", B= "Perisoxomo ", C= "complexo de golgi", D= "ribossomo").vai()
+
+    def mover(self, ev=None):
+        self.movente.x=800
+    def resposta(self, rep):
+        if rep == "C":
+            Texto(self.parede, "ganhou um ATP!").vai()
+        else:
+            Texto(self.parede, "Ops não acertou", foi=self.pergunta).vai()
         
         
 
 if __name__ == "__main__":
     #Fase3()
-    Fase4()
+    #Fase4()
+    Fase5()
