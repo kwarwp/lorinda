@@ -146,7 +146,7 @@ class fase5():
         self.organela.direita=Cena(vai=self.mariafala) 
     def mariafala(self):
         self.organela=Cena(img=ORGANELA)
-        self.maria=Elemento(img=MARIA, tit="sim, mas qual é seu nome? Pode me ajudar a sair daqu"))
+        self.maria=Elemento(img=MARIA, tit="sim, mas qual é seu nome? Pode me ajudar a sair daqu")
         self.npc=Elemento(img=NPC, tit="Vim da Itália, era histologista, dei uma parte do meu nome para essa organela.Qual é meu nome?")
         
         self.acabou = 2
@@ -160,7 +160,7 @@ class fase5():
 
     def mover(self, ev=None):
         self.movente.x=800
-        def resposta(self, rep):
+    def resposta(self, rep):
         if rep == "C":
             Texto(self.parede, "ganhou um ATP!").vai()
         else:
