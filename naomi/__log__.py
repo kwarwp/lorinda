@@ -235,3 +235,21 @@ TypeError: __init__() got an unexpected keyword argument 'tit'
     self.glicose = Personagem(GLICOSE, x=0, y=100,
 TypeError: __init__() got an unexpected keyword argument 'cena'
 '''},
+{'date': 'Fri Jul 02 2021 18:03:34.946 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 161
+    Fase7()     
+  module <module> line 144
+    self.maria=Personagem(img=MARIA, x=0, y=400, w=100, h=200, afala=afala, responde=self.ribossomo)
+AttributeError: 'Fase7' object has no attribute 'ribossomo'
+'''},
