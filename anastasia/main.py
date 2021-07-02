@@ -173,5 +173,7 @@ def main():
     reticulo = associa.nome(nome="reticulo", tit=2, x=450, y=100)
     ribossomo = associa.nome(nome="ribossomo",  tit=3, x=560, y=40)
     cena.vai()
-    
-main()
+
+
+if __name__ == "__main__":
+    main()
