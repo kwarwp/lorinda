@@ -53,18 +53,18 @@ class Move:
         self._parede_vai()
         
     def usou_o_celular(self, atp, ev=None):
-        txt = ('Gugol: Qual é a organela responsável por criar os lisossomos?')
-        Texto(self.parede, txt, A="Complexo de Golgi", B="Ribossomo", C="Vacúolo",
+        txt = ('Gugol: Qual é o nome da organela formada a partir do Complexo de Golgi')
+        Texto(self.parede, txt, A="Lisossomo", B="Ribossomo", C="Vacúolo",
         foi=self.resposta_da_pesquisa).vai()
         self.ATP.x = -1000
         
     def resposta_da_pesquisa(self, resposta, ev=None):
         if resposta == "A":
             txt = ("Você acertou. Passou um lero no complexo "
-                   "de Golgi e ele chamou os cachorro de volta!")
+                   "de Golgi e ele chamou os cachorro lisossomo de volta!")
             Texto(self.parede, txt, foi=self.vai_embora).vai()
         else:
-            Texto(self.parede, "Ops não acertou", foi=self.pergunta).vai()
+            Texto(self.parede, "Ops não acertou, pegue outro ATP para nova consulta").vai()
         
     def vai_embora(self, ev=None):
         self.movente.x=-600
@@ -128,7 +128,7 @@ class Move:
         if rep == "A":
             Texto(self.parede, "ganhou um ATP!").vai()
         else:
-            Texto(self.parede, "Ops não acertou, use outro ATP", foi=self.pergunta).vai()
+            Texto(self.parede, "Ops não acertou", foi=self.pergunta).vai()
             
             
         
