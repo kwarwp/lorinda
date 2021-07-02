@@ -158,11 +158,12 @@ class Fase4():  # SEM NENHUMA IMAGEM
         self.parede.vai()
         self.maria.fala()
         self.maria.afala="Marque os processos que o DNA executa para a produção de proteína"
+        self.maria.responde=self.pergunta
         self.npc.fala(responde=self.maria.fala)
         self.parede.esquerda=self.nucleo
         
         self.acabou = 2
-        self.pergunta()
+        #self.pergunta()
     def pergunta(self, ev=None):
         if self.acabou == 0:
             return
