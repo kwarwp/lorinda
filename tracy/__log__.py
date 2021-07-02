@@ -24,3 +24,10 @@ TypeError: 'str' object is not callable
                                                                                                                   ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Jul 02 2021 16:18:30.73 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 194
+  Texto=(self.organela,"Maria, olhe a estrutura",foi=self.maria.fala).vai()
+                                                                     ^
+SyntaxError: invalid syntax
+'''},
