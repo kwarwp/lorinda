@@ -98,10 +98,11 @@ class Fase3():
         self.npc.entra(self.laboratorio_3)
         self.maria.entra(self.laboratorio_3)
         self.npc.afala = "Roboide: ele não é muito simpático"
+        self.npc.responde = self.parte_4
         maria_texto= "Maria:   quem é você?"
-        self.dna=Personagem(img= DNA, y=450,x=200, responde=self.npc.fala, afala="COMO, VOCÊ NÃO SABE MEU NOME? DE QUE PLANETA VOCÊ É?EU SOU O MAIORAL! ")
-        self.maria.fala(self.laboratorio_3,responde=self.dna.fala, texto=maria_texto) 
+        self.dna=Personagem(img= DNA, y=400,x=200, responde=self.npc.fala, afala="COMO, VOCÊ NÃO SABE MEU NOME? DE QUE PLANETA VOCÊ É?EU SOU O MAIORAL! ")
         self.dna.entra(self.laboratorio_3)
+        self.maria.fala(self.laboratorio_3,responde=self.dna.fala, texto=maria_texto) 
         self.laboratorio_3.direita=Cena(vai=self.parte_4)
 
     def parte_4(self):
@@ -110,8 +111,12 @@ class Fase3():
         self.laboratorio_4.esquerda=self.laboratorio_3
         self.dna.entra(self.laboratorio_4)
         self.npc.entra(self.laboratorio_4)
-        self.dna.tit="vá estudar garota!"
-        self.npc.tit=" Responda o enigma: Sou constituído por letras, que se encaixam perfeitamente, seguindo uma determinada ordem. Quando tem algum erro, pode provocar uma doença ou mutação."
+        self.maria.entra(self.laboratorio_4)
+        self.dna.afala="vá estudar garota!"
+        self.dna.responde = self.parte_5
+        self.npc.afala=" Responda o enigma: Sou constituído por letras, que se encaixam perfeitamente, seguindo uma determinada ordem. Quando tem algum erro, pode provocar uma doença ou mutação."
+        self.npc.responde = self.dna.fala
+        self.npc.fala()
         self.laboratorio_4.direita=Cena(vai=self.parte_5)
         
         #GABARITO DNA  (ácido dexoxirribonucleico) COMO PODEMOS COLOCAR ISSO ??
