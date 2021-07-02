@@ -73,3 +73,10 @@ SyntaxError: invalid syntax
                                                                                             ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Jul 02 2021 13:44:25.123 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 164
+  if rep == "C":
+  ^
+IndentationError: expected an indented block
+'''},
