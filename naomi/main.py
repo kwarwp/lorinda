@@ -133,8 +133,10 @@ class Fase7():
         self.mitocondria = Elemento(MITOCONDRIA, x=50, y=50, w=900, h=500, o=0.1, cena=self.celula,
             drop = {"glicose": faz_luz})
         afala = "Eu sou uma molécula capaz de fornecer energia, mitocôndrias adoram me engolir"
-        self.glicose = Personagem(GLICOSE, tit="glicose", x=0, y=100,
-            w=100, h=100, cena=self.celula, afala=afala, drag=True)
+        self.glicose = Personagem(GLICOSE, x=0, y=100,
+            w=100, h=100, cena=self.celula, afala=afala)
+        self.glicose.tit = "glicose"
+        self.glicose.drag = True
         afala = "Ribossomo:Porque perdi minha outra parte e preciso encontrá-la. Eu preciso gerar proteínas"
         self.ribossoma = Personagem(RIBOSSOMA, x=200, y=200, w=100, h=100, afala=afala, cena=self.celula,
         responde=self.glicose.fala)
