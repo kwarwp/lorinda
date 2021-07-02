@@ -17,3 +17,10 @@
     self.maria.fala()
 TypeError: 'str' object is not callable
 '''},
+{'date': 'Fri Jul 02 2021 15:52:37.50 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 160
+  self.maria.afala=(self.parede,"Marque os processos que o DNA executa para a produção de proteína",foi=self.anda).vai()
+                                                                                                                  ^
+SyntaxError: invalid syntax
+'''},
