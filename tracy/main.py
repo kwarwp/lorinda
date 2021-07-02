@@ -127,6 +127,61 @@ class Fase3():
         self.laboratorio_5.vai()
         Swap(JOGO,ENIGMA,self.laboratorio_5, x=50, y=50, w=500,h=500)
         
+class Fase4():  # SEM NENHUMA IMAGEM
+    def __init__(self):
+        self.rna=Personagem(img=RNA, x=0,afala= "RNA:Vamos lá galera, produzindo proteínas ",responde=self.fala_npc) #aparece depois do dna
+        self.dna=Personagem(img=DNA,x=100 ,afala= "DNA:só eu trabalho aqui, vou ter que criar um RNA para me ajudar",responde=self.rna.fala)
+        self.npc=Personagem(img=NPC,x=200, afala= "Roboide: Atenção garota, veja o DNA",responde=self.dna.fala)
+        self.maria=Personagem(img=MARIA, afala="Maria: não consigo sair daqui",responde=self.npc.fala)
+        self.nucleo=Cena(img=NUCLEO)
+        self.nucleo.vai()
+        self.parede=Cena(img=PAREDE)
+        
+        
+        self.maria.entra(self.nucleo)
+        #self.nucleo.direita=self.parede
+        self.parede.esquerda=self.nucleo
+        
+        self.npc.entra(self.nucleo)
+        self.dna.entra(self.nucleo)
+        self.rna.entra(self.nucleo)
+        self.maria.fala()
+        self.nucleo.direita=Cena(vai=self.npc)
+        
+    def fala_npc(self):
+        self.npc.afala="se vc acertar os processos irá ganhar moléculas de atp"
+        self.maria.afala="nossas, quantas proteínas diferentes são formadas"
+        self.maria.responde=self.npc.fala
+        self.npc.entra(self.parede)
+        self.maria.entra(self.parede)
+        
+        self.parede.vai()
+        self.maria.fala()
+        self.maria.afala="Marque os processos que o DNA executa para a produção de proteína"
+        self.npc.fala(responde=self.maria.fala)
+        self.parede.esquerda=self.nucleo
+        
+        self.acabou = 2
+        self.pergunta()
+    def pergunta(self, ev=None):
+        if self.acabou == 0:
+            return
+        self.acabou -= 1
+        self.multi = Texto(self.parede, "Quais são os processos do DNA?",
+                           foi=self.resposta, A= "Tradução, Transdução e proteína", B= "Fagositose,Tradução e Proteína", C= "Pnocitose,Tradução e proteína", D= "Fagocitose,Transdução e Proteína").vai()
+
+    def mover(self, ev=None):
+        self.movente.x=800
+        
+    def resposta(self, rep):
+        if rep == "A":
+            Texto(self.parede, "ganhou um ATP!").vai()
+        else:
+            Texto(self.parede, "Ops não acertou", foi=self.pergunta).vai()
+
+        
+        
 
 if __name__ == "__main__":
-    Fase3()
+    #Fase3()
+    Fase4()
