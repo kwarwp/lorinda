@@ -66,3 +66,10 @@ TypeError: 'module' object is not callable
                                  ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Jul 02 2021 13:43:18.784 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 149
+  self.maria=Elemento(img=MARIA, tit="sim, mas qual é seu nome? Pode me ajudar a sair daqu"))
+                                                                                            ^
+SyntaxError: invalid syntax
+'''},
