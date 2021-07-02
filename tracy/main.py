@@ -149,17 +149,20 @@ class Fase4():  # SEM NENHUMA IMAGEM
         self.nucleo.direita=Cena(vai=self.npc)
         
     def fala_npc(self):
+        self.maria1=Personagem(img=MARIA,afala="Marque os processos que o DNA executa para a produção de proteína")
         self.npc.afala="se vc acertar os processos irá ganhar moléculas de atp"
         self.maria.afala="nossas, quantas proteínas diferentes são formadas"
         self.maria.responde=self.npc.fala
+        self.npc.responde=self.maria1.fala
         self.npc.entra(self.parede)
         self.maria.entra(self.parede)
+        self.maria1.entra(self.parede)
         
         self.parede.vai()
         self.maria.fala()
-        self.maria.afala="Marque os processos que o DNA executa para a produção de proteína"
-        self.maria.responde=self.pergunta
-        self.npc.fala(responde=self.maria.fala)
+        
+        self.maria1.responde=self.pergunta
+      
         self.parede.esquerda=self.nucleo
         
         self.acabou = 2
