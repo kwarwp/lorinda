@@ -127,6 +127,7 @@ class Fase7():
             self.escuro.x = -10000
             self.mitocondria.o = 1
             self.glicose.x = -10000
+            self.entra_redemoinho()
         self.celula = Cena(CELULA)
         self.celula.vai()
         self.escuro = Elemento(ESCURO, x=0, y=0, w=1000, h=600, o=0.92, cena=self.celula)
@@ -151,10 +152,28 @@ class Fase7():
         self.ribossoma = Personagem(RIBOSSOMA, x=200, y=200, w=80, h=80, afala=afala,
             responde=self.glicose_fake.fala)
         afala = "Maria: Mas está tudo escuro, como vamos achar?"
-        self.maria=Personagem(img=MARIA, x=400, y=200, w=100, h=200, afala=afala, responde=self.ribossoma.fala)
+        # self.maria=Personagem(img=MARIA, x=400, y=200, w=100, h=200, afala=afala, responde=self.ribossoma.fala)
+        self.maria.afala = afala
+        self.maria.responde = self.ribossoma.fala
         self.glicose_fake.entra(self.celula)
         self.glicose.entra(self.celula)
         self.ribossoma.entra(self.celula)
+        self.maria.entra(self.celula)
+        self.maria.fala()
+        
+    def anda_redemoinho(self, _=0):
+        self.redemoinho.x = 2000
+        self.maria.x = 2000
+        
+    def entra_redemoinho(self, _=0):
+        afala = "Maria: De novo, este redemoinho louco?"
+        self.redemoinho = Elemento(CICLONE, x=0, y=0, w=600, h=600, o=0.8, cena=self.celula,
+        style= {"transition": "left 4s"})
+        self.maria.afala = afala
+        self.maria.responde = self.anda_redemoinho
+        #self.maria.x = 600
+        self.maria.style= {"transition": "left 4s"}
+        self.redemoinho.entra(self.celula)
         self.maria.entra(self.celula)
         self.maria.fala()
    
