@@ -271,3 +271,10 @@ AttributeError: 'Fase7' object has no attribute 'ribossomo'
     self.ribossoma = Personagem(RIBOSSOMA, x=200, y=200, w=80, h=80, afala=afala,
 AttributeError: 'Fase7' object has no attribute 'glicose_fake'
 '''},
+{'date': 'Fri Jul 02 2021 18:49:58.470 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 175
+  self.maria.style= {"transition": "left 4s"})
+                                             ^
+SyntaxError: invalid syntax
+'''},
