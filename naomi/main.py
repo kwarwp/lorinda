@@ -123,24 +123,34 @@ CICLONE = "https://i.imgur.com/BC6X7ho.gif"
 
 class Fase7():
     def __init__(self):
-        self.celula = Cena(CELULA)
-        self.celula.vai()
-        self.escuro = Elemento(ESCURO, x=0, y=0, w=1000, h=600, o=0.92, cena=self.celula)
-        
         def faz_luz(_, ev=None):
             self.escuro.x = -10000
             self.mitocondria.o = 1
             self.glicose.x = -10000
+        self.celula = Cena(CELULA)
+        self.celula.vai()
+        self.escuro = Elemento(ESCURO, x=0, y=0, w=1000, h=600, o=0.92, cena=self.celula)
         self.mitocondria = Elemento(MITOCONDRIA, x=20, y=20, w=950, h=550, o=0.1, cena=self.celula,
             drop = {"glicose": faz_luz})
-        afala = "Glicose: Eu sou uma molécula capaz de fornecer energia, mitocôndrias adoram me engolir"
         self.glicose = Elemento(GLICOSE, x=0, y=100, tit = "glicose", drag = True,
             w=100, h=100)
-        self.glicose = Personagem(GLICOSE, x=-10000, y=100,w=100, h=100, afala=afala)
         afala = "Ribossomo: Porque perdi minha outra parte e preciso encontrá-la. Eu preciso gerar proteínas"
         self.ribossoma = Personagem(RIBOSSOMA, x=200, y=200, w=80, h=80, afala=afala,
-            responde=self.glicose_fake.fala)
+            responde=self.ribossomo_fala)
         afala = "Maria: Ribossomo, por que você está triste?"
+        self.maria=Personagem(img=MARIA, x=400, y=200, w=100, h=200, afala=afala, responde=self.ribossoma.fala)
+        self.glicose.entra(self.celula)
+        self.ribossoma.entra(self.celula)
+        self.maria.entra(self.celula)
+        self.maria.fala()
+        
+    def ribossomo_fala(self, _=0):
+        afala = "Glicose: Eu sou uma molécula capaz de fornecer energia, mitocôndrias adoram me engolir"
+        self.glicose_fake = Personagem(GLICOSE, x=-10000, y=100,w=100, h=100, afala=afala)
+        afala = "Ribossomo: No caminho eu te explico..."
+        self.ribossoma = Personagem(RIBOSSOMA, x=200, y=200, w=80, h=80, afala=afala,
+            responde=self.glicose_fake.fala)
+        afala = "Maria: Mas está tudo escuro, como vamos achar?"
         self.maria=Personagem(img=MARIA, x=400, y=200, w=100, h=200, afala=afala, responde=self.ribossoma.fala)
         self.glicose_fake.entra(self.celula)
         self.glicose.entra(self.celula)
