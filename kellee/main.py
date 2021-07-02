@@ -21,6 +21,7 @@ NUCLEO="https://i.imgur.com/hU2mulx.png" # trocar essa imagem
 PAREDE="https://i.imgur.com/hU2mulx.png" # trocar essa imagem
 ORGANELA="https://i.imgur.com/hU2mulx.png" # trocar essa imagem
 COMPLEXOG="https://i.imgur.com/hU2mulx.png" # trocar essa imagem
+RNA= "https://i.imgur.com/khPaSvV.png" # trocar essa imagem
 class fase3():
     def __init__(self):
         self.laboratorio=Cena(img=LABORATORIO)
