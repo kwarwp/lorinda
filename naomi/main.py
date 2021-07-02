@@ -21,6 +21,7 @@ class Move:
         self.parede = Cena("https://i.imgur.com/sGoKfvs.jpg")
         self.parede.vai()
         self.matou_organela = True
+        self.fugiu = False
         self._parede_vai = self.parede.vai
         self.parede.vai = self.pegou_atp
         self.NPC = Elemento(img=NPC, x=800, cena=self.parede, vai=self.aconselha)
@@ -40,7 +41,7 @@ class Move:
         txt0 = ('De repente Maria vê uma bolinha se desprendo do complexo de golgi,'
             'ela encosta numa organela que está com uma placa escrito sem função,'
             'a bolinha vem na direção dessa organela e destrói a organela.')
-        txt = ('Maria vê uma organela que está com uma placa escrito sem função,'
+        txt = ('Maria vê uma organela que está com uma placa escrito sem função, '
             'e vai ver o do que se trata.')
         Texto(self.parede, txt, foi=self.move_maria).vai()
         self.acabou = 2
@@ -52,9 +53,18 @@ class Move:
         self._parede_vai()
         
     def usou_o_celular(self, atp, ev=None):
-        txt = ('Na pesquisa vc descobre que é o lisossoma. Ao chamar pelo nome eles vão embora')
-        Texto(self.parede, txt, foi=self.vai_embora).vai()
+        txt = ('Gugol: Qual é a organela responsável por criar os lisossomos?')
+        Texto(self.parede, txt, A="Complexo de Golgi", B="Ribossomo", C="Vacúolo",
+        foi=self.resposta_da_pesquisa).vai()
         self.ATP.x = -1000
+        
+    def resposta_da_pesquisa(self, resposta, ev=None):
+        if resposta == "A":
+            txt = ("Você acertou. Passou um lero no complexo "
+                   "de Golgi e ele chamou os cachorro de volta!")
+            Texto(self.parede, txt, foi=self.vai_embora).vai()
+        else:
+            Texto(self.parede, "Ops não acertou", foi=self.pergunta).vai()
         
     def vai_embora(self, ev=None):
         self.movente.x=-600
@@ -69,7 +79,9 @@ class Move:
         self.multi = Texto(self.parede, "processos corretos?",
                            foi=self.resposta, A= "a b", B= "b c", C= "c d", D= "b d").vai()
     def aconselha(self, ev=None):
-        conselho = "Pegue um ATP da mochila e jogue no celular"
+        conselho = ('Pegue um ATP da mochila e jogue no celular. '
+        'Descubra na pesquisa a organela que liberou os lisossomos. '
+        'Falando com ele, ele pode aliviar a sua barra.')
         self.multi = Texto(self.parede, conselho).vai()
 
     def move_maria(self, ev=None):
@@ -79,7 +91,12 @@ class Move:
         txt = ('Ela encosta na organela que está com a placa escrito sem função.'
         'De repente Maria vê umas bolinhas se desprendo do complexo de golgi,'
             'as bolinhas vem na direção dessa organela e destrói a organela.')
-        Texto(self.parede, txt, foi=self.mover).vai() if self.matou_organela else None
+        if self.matou_organela:
+            Texto(self.parede, txt, foi=self.mover).vai()  
+        elif self.fugiu:
+            txt = ('Socorro DNA! Estas organelas acham que estou sem função na célula!.'
+            'Elas vão me destruir! Me dá uma dica!')
+            Texto(self.parede, txt).vai() 
         # self.matou_organela = False
 
     def foge_maria(self, ev=None):
@@ -98,6 +115,7 @@ class Move:
         self.movente1.x=650
         self.movente1.y=400
         self.maria.x=800
+        self.fugiu = True
 
     def mover(self, ev=None):
         self.movente.x=300
@@ -110,7 +128,7 @@ class Move:
         if rep == "A":
             Texto(self.parede, "ganhou um ATP!").vai()
         else:
-            Texto(self.parede, "Ops não acertou", foi=self.pergunta).vai()
+            Texto(self.parede, "Ops não acertou, use outro ATP", foi=self.pergunta).vai()
             
             
         
