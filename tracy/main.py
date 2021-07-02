@@ -25,13 +25,13 @@ RNA= "https://i.imgur.com/khPaSvV.png" # trocar essa imagem
 
 
 class Personagem(Elemento):
-    def __init__(self, img=MARIA, x=300, y=400, w=180, h=200, texto="", responde=None):
+    def __init__(self, img=MARIA, x=300, y=400, w=180, h=200, afala="", responde=None):
         super().__init__(img=img, x=x, y=y, w=w, h=h)
-        self.texto = texto
+        self.afala = afala
         self.responde = responde
         
-    def fala(self, cena, responde=None, texto=""):
-        Texto(cena, texto if texto else self.texto, foi=responde if responde else self.responde).vai()
+    def fala(self, cena=None, responde=None, texto=""):
+        Texto(self.cena, texto if texto else self.afala, foi=responde if responde else self.responde).vai()
 
 
 
@@ -43,13 +43,13 @@ class Fase3():
             " Precismos estuda-las, para nos manter saudáveis, fortes e bonitas. ")
             Texto(self.laboratorio, rosalinda, foi=self.some).vai()
             
-        self.maria = Personagem()
         fala = ('Maria: Oi,  Dr. Rosalinda sou sua fã, li todos os seus livros e seu artigo'
         ' sobre "Direcionamento de Proteínas", ou seja, como as proteínas percorrem toda a célula')
-        self.maria.fala(self.laboratorio, responde=rosalinda_fala, texto=fala)
+        self.maria = Personagem(responde=rosalinda_fala, afala=fala)
+        self.maria.entra(self.laboratorio)
+        self.maria.fala()
         #self.maria=Elemento(img=MARIA, x=300, y=400, w=180, h=200, tit='oi,  Dr. Rosalinda sou sua fã, li todos os seus livros e seu artigo sobre "Direcionamento de Proteínas", ou seja, como as proteínas percorrem toda a célula')
         self.rosalinda=Elemento(img=ROSALINDA, x=100, y=400, w=180, h=200, tit="as proteínas são muito importantes, para a nossa saúde e beleza! Precismos estuda-las, para nos manter saudáveis, fortes e bonitas. ")
-        self.maria.entra(self.laboratorio)
         self.rosalinda.entra(self.laboratorio)
         self.laboratorio_1 = Cena(img= LABORATORIO_1)
         # self.laboratorio.direita=self.laboratorio_1
@@ -84,7 +84,7 @@ class Fase3():
         self.laboratorio_2.esquerda=self.laboratorio_1
         self.maria.entra(self.laboratorio_2)
         maria_texto= "Maria:  Como ela desapareceu?"
-        self.npc= Personagem(img=NPC,y=400,w=160,h=160, texto=texto)
+        self.npc= Personagem(img=NPC,x=0, y=400,w=160,h=160, afala=texto, responde=self.parte_3)
         self.maria.fala(self.laboratorio_2,responde=self.npc.fala, texto=maria_texto) 
         
         self.npc.entra(self.laboratorio_2)
@@ -97,9 +97,9 @@ class Fase3():
         self.laboratorio_3.esquerda=self.laboratorio_2
         self.npc.entra(self.laboratorio_3)
         self.maria.entra(self.laboratorio_3)
-        self.npc.texto = "Roboide: ele não é muito simpático"
+        self.npc.afala = "Roboide: ele não é muito simpático"
         maria_texto= "Maria:   quem é você?"
-        self.dna=Personagem(img= DNA, y=450,x=200, responde=self.npc.fala, texto="COMO, VOCÊ NÃO SABE MEU NOME? DE QUE PLANETA VOCÊ É?EU SOU O MAIORAL! ")
+        self.dna=Personagem(img= DNA, y=450,x=200, responde=self.npc.fala, afala="COMO, VOCÊ NÃO SABE MEU NOME? DE QUE PLANETA VOCÊ É?EU SOU O MAIORAL! ")
         self.maria.fala(self.laboratorio_3,responde=self.dna.fala, texto=maria_texto) 
         self.dna.entra(self.laboratorio_3)
         self.laboratorio_3.direita=Cena(vai=self.parte_4)
