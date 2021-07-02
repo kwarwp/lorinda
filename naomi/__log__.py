@@ -192,3 +192,10 @@ IndentationError: unexpected indent
                 ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Jul 02 2021 17:54:04.485 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 148
+  self.ribossomo=Personagem(img=ribossomo,x=0, afala="No caminho eu te explico...",responde=)
+                                                                                             ^
+SyntaxError: invalid syntax
+'''},
