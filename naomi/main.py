@@ -21,7 +21,6 @@ class Move:
         self.parede = Cena("https://i.imgur.com/sGoKfvs.jpg")
         self.parede.vai()
         self.matou_organela = True
-        self.fugiu = False
         self._parede_vai = self.parede.vai
         self.parede.vai = self.pegou_atp
         self.NPC = Elemento(img=NPC, x=800, cena=self.parede, vai=self.aconselha)
@@ -41,7 +40,7 @@ class Move:
         txt0 = ('De repente Maria vê uma bolinha se desprendo do complexo de golgi,'
             'ela encosta numa organela que está com uma placa escrito sem função,'
             'a bolinha vem na direção dessa organela e destrói a organela.')
-        txt = ('Maria vê uma organela que está com uma placa escrito sem função, '
+        txt = ('Maria vê uma organela que está com uma placa escrito sem função,'
             'e vai ver o do que se trata.')
         Texto(self.parede, txt, foi=self.move_maria).vai()
         self.acabou = 2
@@ -53,18 +52,9 @@ class Move:
         self._parede_vai()
         
     def usou_o_celular(self, atp, ev=None):
-        txt = ('Gugol: Qual é o nome da organela formada a partir do Complexo de Golgi')
-        Texto(self.parede, txt, A="Lisossomo", B="Ribossomo", C="Vacúolo",
-        foi=self.resposta_da_pesquisa).vai()
+        txt = ('Na pesquisa vc descobre que é o lisossoma. Ao chamar pelo nome eles vão embora')
+        Texto(self.parede, txt, foi=self.vai_embora).vai()
         self.ATP.x = -1000
-        
-    def resposta_da_pesquisa(self, resposta, ev=None):
-        if resposta == "A":
-            txt = ("Você acertou. Passou um lero no complexo "
-                   "de Golgi e ele chamou os cachorro lisossomo de volta!")
-            Texto(self.parede, txt, foi=self.vai_embora).vai()
-        else:
-            Texto(self.parede, "Ops não acertou, pegue outro ATP para nova consulta").vai()
         
     def vai_embora(self, ev=None):
         self.movente.x=-600
@@ -79,9 +69,7 @@ class Move:
         self.multi = Texto(self.parede, "processos corretos?",
                            foi=self.resposta, A= "a b", B= "b c", C= "c d", D= "b d").vai()
     def aconselha(self, ev=None):
-        conselho = ('Pegue um ATP da mochila e jogue no celular. '
-        'Descubra na pesquisa a organela que liberou os lisossomos. '
-        'Falando com ele, ele pode aliviar a sua barra.')
+        conselho = "Pegue um ATP da mochila e jogue no celular"
         self.multi = Texto(self.parede, conselho).vai()
 
     def move_maria(self, ev=None):
@@ -91,12 +79,7 @@ class Move:
         txt = ('Ela encosta na organela que está com a placa escrito sem função.'
         'De repente Maria vê umas bolinhas se desprendo do complexo de golgi,'
             'as bolinhas vem na direção dessa organela e destrói a organela.')
-        if self.matou_organela:
-            Texto(self.parede, txt, foi=self.mover).vai()  
-        elif self.fugiu:
-            txt = ('Socorro DNA! Estas organelas acham que estou sem função na célula!.'
-            'Elas vão me destruir! Me dá uma dica!')
-            Texto(self.parede, txt).vai() 
+        Texto(self.parede, txt, foi=self.mover).vai() if self.matou_organela else None
         # self.matou_organela = False
 
     def foge_maria(self, ev=None):
@@ -115,7 +98,6 @@ class Move:
         self.movente1.x=650
         self.movente1.y=400
         self.maria.x=800
-        self.fugiu = True
 
     def mover(self, ev=None):
         self.movente.x=300
@@ -129,7 +111,30 @@ class Move:
             Texto(self.parede, "ganhou um ATP!").vai()
         else:
             Texto(self.parede, "Ops não acertou", foi=self.pergunta).vai()
-            
-            
-        
-Move()
+
+class Fase7()
+    def __init__(self):
+        self.mitocondria=Cena(img=MITOCONDRIA)
+        self.mitocondria.vai()
+        self.glicose=Personagem(img=GLICOSE, x=0, afala"")
+        self.ribossomo=Personagem(img=RIBOSSOMO,x=200,afala"Ribossomo:Porque perdi minha outra parte e preciso encontrá-la. Eu preciso gerar proteínas",responde=self.ribossomofala)
+        self.maria=Personagem(img=MARIA, afala"Maria: por que você está triste?",responde=self.ribossomo)
+        self.maria.entra(self.mitocondria)
+        self.ribossomo.entra(self.mitocondria)
+       
+        self.maria.fala()
+        self.ribossomo.fala()
+   
+    def ribossomofala(self):
+        self.mitocondria=Cena(img=MITOCONDRIA)
+        self.mitocondria.vai()
+        self.ribossomo=Personagem(img=ribossomo,x=0, afala="No caminho eu te explico...",responde=)
+        self.maria=Personagem(img=MARIA, afala="Mas está tudo escuro, como vamos achar?",responde=self.ribossomo)
+        self.maria.entra(self.mitocondria)
+        self.ribossomo.entra(self.mitocondria)
+       
+        self.maria.fala()
+        self.ribossomo.fala()
+if __name__ == "__main__":            
+     
+    #Move()
