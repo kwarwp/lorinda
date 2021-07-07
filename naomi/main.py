@@ -4,7 +4,7 @@ from courtney.main import MOCHILA
 from tracy.main import Personagem
 STYLE.update(width=1000, height="600px")
 
-class Move:
+class Fase6:
     def __init__(self):
         
         def pegou_atp(ev=None):
@@ -35,7 +35,7 @@ class Move:
             style={"transition": "left 5s, top 5s"})
         self.organela = Elemento(img=RIBOSSOMA, x=300, y=400, w=60, h=60, cena=self.parede,
             style={"transition": "opacity 2s"})
-        self.maria = Elemento(img=MARIA, x=600, y=400, cena=self.parede, vai=self.usou_o_celular,
+        self.maria = Elemento(img=MARIA, x=600, y=400, cena=self.parede, # vai=self.usou_o_celular,
             style={"transition": "left 4s"})
         self.maria.elt.ontransitionend = self.encosta_maria
         txt0 = ('De repente Maria vê uma bolinha se desprendo do complexo de golgi,'
@@ -58,6 +58,7 @@ class Move:
         self.ATP.x = -1000
         
     def vai_embora(self, ev=None):
+        self.movente.elt.ontransitioend = Fase7
         self.movente.x=-600
         self.movente.y=-400
         self.movente1.x=200
@@ -83,7 +84,12 @@ class Move:
         Texto(self.parede, txt, foi=self.mover).vai() if self.matou_organela else None
         # self.matou_organela = False
 
+    def pede_socorro(self, ev=None):
+        txt = ('Socorro DNA!')
+        Texto(self.parede, txt).vai()
+
     def foge_maria(self, ev=None):
+        self.maria.elt.ontransitionend = self.pede_socorro
         self.maria.x=800
 
 
@@ -122,7 +128,7 @@ CELULA = "https://i.imgur.com/ujAF00x.jpg"
 CICLONE = "https://i.imgur.com/BC6X7ho.gif"
 
 class Fase7():
-    def __init__(self):
+    def __init__(self, _=0):
         def faz_luz(_, ev=None):
             self.escuro.x = -10000
             self.mitocondria.o = 1
@@ -193,5 +199,5 @@ class Fase7():
         self.maria.fala()
         self.ribossomo.fala()
 if __name__ == "__main__":            
-    Fase7()     
+    Fase6()     
     #Move()
