@@ -101,7 +101,7 @@ class Swap:
         :param   dw: quantidade de colunas que recortam a imagem
         :param   dh: quantidade de linhas que recortam a imagem
     """
-    def __init__(self, j, img, cena, w=900,h=400,x=100,y=50,dw=3,dh=3):
+    def __init__(self, j, img, cena, w=900,h=400,x=100,y=50,dw=3,dh=3, venceu=None):
         swap = self
         class Peca(j.a):
             """ A Peça representa um recorte da imagem que vai ser embaralhada.
@@ -155,7 +155,7 @@ class Swap:
         pecas = list(range(dw*dh))
         shuffle(pecas)
         self.pecas = [Peca(local, indice) for local, indice in enumerate(pecas)]
-        self.venceu = J.n(cena, "Voce venceu!")
+        self.venceu = venceu or J.n(cena, "Voce venceu!")
     def montou(self):
         resultado = [peca.certo() for peca in self.pecas]
         print(resultado)
