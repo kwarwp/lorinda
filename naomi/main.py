@@ -168,11 +168,11 @@ class Fase7():
         self.maria_double.elt.style.transform = "rotate(200deg)"
         
     def entra_redemoinho(self, _=0):
-        from amanda.main import Fase10
+        from amanda.main import main
         afala = "Maria: De novo, este redemoinho louco?"
         self.redemoinho = Elemento(CICLONE, x=0, y=0, w=600, h=600, o=0.8, cena=self.celula,
         style= {"transition": "left 8s"})
-        self.redemoinho.elt.ontransitionend = Fase10
+        self.redemoinho.elt.ontransitionend = main
         self.maria.afala = afala
         self.maria.responde = self.anda_redemoinho
         #self.maria.x = 600
