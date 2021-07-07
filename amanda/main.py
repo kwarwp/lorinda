@@ -70,7 +70,7 @@ class Fase10:
         
 def main():
     cena = JOGO.c('https://i.imgur.com/ujAF00x.jpg').vai()
-    t = JOGO.n(cena, 'É isto! A Parede Celular!'
+    t = JOGO.n(cena, 'É isto! A Parede Celular!')
     Swap(JOGO, PAREDE, cena, w=700,h=200,x=50,y=150,dw=7,dh=2, venceu=t)
     
     
