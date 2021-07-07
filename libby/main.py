@@ -19,7 +19,7 @@ A = ""
 B = ""
 C = ""
 D = "" 
-class fase2():
+class Fase2():
     def __init__(self):
         #self.npc= Elemento(img= NPC)
         def some(ev):
@@ -81,6 +81,8 @@ class fase2():
         self.d.entra(self.celula,x=350,y=80,z=80,Tit= "Eu sou o material do nucleo espalhado no citoplasma")
     
     """
-fase2()
+    
+if __name__ == "__main__":
+    Fase2()
     
     
