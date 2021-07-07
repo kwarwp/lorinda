@@ -162,22 +162,22 @@ class Fase7():
         self.maria.fala()
         
     def anda_redemoinho(self, _=0):
-        self.redemoinho.x = 2000
-        self.maria.x = 2000
-        self.maria_double.x = 2000
+        self.redemoinho.x = 1500
+        self.maria.x = 1500
+        self.maria_double.x = 1500
         self.maria_double.elt.style.transform = "rotate(200deg)"
         
     def entra_redemoinho(self, _=0):
         from amanda.main import main
         afala = "Maria: De novo, este redemoinho louco?"
         self.redemoinho = Elemento(CICLONE, x=0, y=0, w=600, h=600, o=0.8, cena=self.celula,
-        style= {"transition": "left 8s"})
+        style= {"transition": "left 6s"})
         self.redemoinho.elt.ontransitionend = main
         self.maria.afala = afala
         self.maria.responde = self.anda_redemoinho
         #self.maria.x = 600
         self.maria_double=Elemento(img=MARIA, x=400, y=200, w=100, h=200, cena=self.celula,
-        style= {"transition": "left 8s, transform 1s"})
+        style= {"transition": "left 6s, transform 1s"})
         self.redemoinho.entra(self.celula)
         self.maria.entra(self.celula)
         self.maria.fala()
