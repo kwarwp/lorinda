@@ -1,9 +1,11 @@
 # lorinda.amanda.main.py
-from _spy.vitollino.main import Cena,Elemento,Texto,STYLE
+from _spy.vitollino.main import Cena,Elemento,Texto,STYLE, JOGO
 from _spy.vitollino.main import Inventario as inv
+from anastasia.main import Swap
 
 STYLE["width"] = 800
 STYLE["height"] = "600px"
+PAREDE = "https://i.imgur.com/ZAoCT4o.png"
 P = ""
 A = ""
 R= ""
@@ -65,3 +67,12 @@ class Fase10:
                 self.linha_inicial = 300  # inicia a altura de ontagem da primeira peça
                 return 0, 0  #  retorna uma posição inválida para sinalizar a peça
         return 300, self.linha_inicial
+        
+def main():
+    cena = JOGO.c('https://i.imgur.com/ujAF00x.jpg').vai()
+    Swap(JOGO, PAREDE, cena, w=700,h=200,x=50,y=150,dw=7,dh=2)
+    
+    
+if __name__ == "__main__":
+    main()
+    
