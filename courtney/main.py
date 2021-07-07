@@ -11,7 +11,7 @@ class Mochila:
     VOLTA = "https://i.imgur.com/PL5FFhk.png"
     def __init__(self):
         self.mochila = Cena(self.MOCHILA)
-        self.mochila.vai()
+        #self.mochila.vai()
         #self.atp = Elemento(self.ATP, cena=self.mochila)
         #self.adp = Elemento(self.ADP, cena=self.mochila, x=90)
         self.moedas = []
