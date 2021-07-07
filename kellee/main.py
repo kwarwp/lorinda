@@ -91,7 +91,7 @@ class fase3():
         self.laboratorio_5.vai()
         Swap(JOGO,ENIGMA,self.laboratorio_5, x=50, y=50, w=500,h=500)
         
-fase3()
+#fase3()
 
 class fase4():  # SEM NENHUMA IMAGEM
     def __init__(self):
@@ -140,7 +140,7 @@ class fase4():  # SEM NENHUMA IMAGEM
             Texto(self.parede, "ganhou um ATP!").vai()
         else:
             Texto(self.parede, "Ops não acertou", foi=self.pergunta).vai()
-fase4()
+#fase4()
 
 class fase5():
     def __init__(self):
