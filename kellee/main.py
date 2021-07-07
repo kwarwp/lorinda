@@ -22,7 +22,9 @@ PAREDE="https://i.imgur.com/hU2mulx.png" # trocar essa imagem
 ORGANELA="https://i.imgur.com/hU2mulx.png" # trocar essa imagem
 COMPLEXOG="https://i.imgur.com/hU2mulx.png" # trocar essa imagem
 RNA= "https://i.imgur.com/khPaSvV.png" # trocar essa imagem
-class fase3():
+
+
+class Fase3():
     def __init__(self):
         self.laboratorio=Cena(img=LABORATORIO)
         self.maria=Elemento(img=MARIA, x=300, y=400, w=180, h=200, tit='oi,  Dr. Rosalinda sou sua fã, li todos os seus livros e seu artigo sobre "Direcionamento de Proteínas", ou seja, como as proteínas percorrem toda a célula')
@@ -89,11 +91,12 @@ class fase3():
         from anastasia.main import Swap
         self.laboratorio_5=Cena(img=LABORATORIO_5)
         self.laboratorio_5.vai()
-        Swap(JOGO,ENIGMA,self.laboratorio_5, x=50, y=50, w=500,h=500)
+        text = Texto(self.laboratorio_5, "foi!", foi=Fase4)
+        Swap(JOGO,ENIGMA,self.laboratorio_5, x=50, y=50, w=500,h=500, venceu=text)
         
 #fase3()
 
-class fase4():  # SEM NENHUMA IMAGEM
+class Fase4():  # SEM NENHUMA IMAGEM
     def __init__(self):
         self.maria=Elemento(img=MARIA, tit="não consigo sair daqui")
         self.nucleo=Cena(img=NUCLEO)
@@ -142,7 +145,7 @@ class fase4():  # SEM NENHUMA IMAGEM
             Texto(self.parede, "Ops não acertou", foi=self.pergunta).vai()
 #fase4()
 
-class fase5():
+class Fase5():
     def __init__(self):
         self.organela=Cena(img=ORGANELA)
         self.rosalinda=Elemento(img=ROSALINDA,tit ="Maria, olhe a estrutura")
@@ -172,7 +175,9 @@ class fase5():
             Texto(self.parede, "Ops não acertou", foi=self.pergunta).vai()
 
             
-
+    
+if __name__ == "__main__":
+    Fase3()
 
     
     
