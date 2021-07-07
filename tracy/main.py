@@ -125,7 +125,8 @@ class Fase3():
         from anastasia.main import Swap
         self.laboratorio_5=Cena(img=LABORATORIO_5)
         self.laboratorio_5.vai()
-        Swap(JOGO,ENIGMA,self.laboratorio_5, x=50, y=50, w=500,h=500)
+        text = Texto(self.laboratorio_5, "foi!", foi=Fase4)
+        Swap(JOGO,ENIGMA,self.laboratorio_5, x=50, y=50, w=500,h=500, venceu=text)
         
 class Fase4():  # SEM NENHUMA IMAGEM
     def __init__(self):
@@ -225,4 +226,4 @@ class Fase5():
 if __name__ == "__main__":
     #Fase3()
     #Fase4()
-    Fase5()
+    Fase3()
