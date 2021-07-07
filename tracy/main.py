@@ -180,7 +180,7 @@ class Fase4():  # SEM NENHUMA IMAGEM
         
     def resposta(self, rep):
         if rep == "A":
-            Texto(self.parede, "ganhou um ATP!").vai()
+            Texto(self.parede, "ganhou um ATP!", foi=Fase5).vai()
         else:
             Texto(self.parede, "Ops não acertou", foi=self.pergunta).vai()
 
@@ -226,4 +226,4 @@ class Fase5():
 if __name__ == "__main__":
     #Fase3()
     #Fase4()
-    Fase3()
+    Fase4()
