@@ -58,7 +58,7 @@ class Fase6:
         self.ATP.x = -1000
         
     def vai_embora(self, ev=None):
-        self.movente.elt.ontransitioend = Fase7
+        self.movente.elt.ontransitionend = Fase7
         self.movente.x=-600
         self.movente.y=-400
         self.movente1.x=200
@@ -89,7 +89,6 @@ class Fase6:
         Texto(self.parede, txt).vai()
 
     def foge_maria(self, ev=None):
-        self.maria.elt.ontransitionend = self.pede_socorro
         self.maria.x=800
 
 
@@ -99,6 +98,7 @@ class Fase6:
 
 
     def _persegue_maria(self, ev=None):
+        self.maria.elt.ontransitionend = self.pede_socorro
         self.organela.o = 0
         self.movente.x=700
         self.movente.y=400
