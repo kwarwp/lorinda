@@ -28,7 +28,7 @@ RNA= "https://i.imgur.com/khPaSvV.png" # trocar essa imagem
 class Fase3():
     def __init__(self):
         self.inicio=Cena(img=INICIO)
-        self.foco=Elemento(img=FOCO, x=250, y=280, w=90, h=150, style={"opacity": 0}, vai.self.laboratorio)
+        self.foco=Elemento(img=FOCO, x=250, y=280, w=90, h=150, style={"opacity": 0})
         self.foco.entra(self.inicio)
         
         self.laboratorio=Cena(img=LABORATORIO)
@@ -36,6 +36,7 @@ class Fase3():
         self.rosalinda=Elemento(img=ROSALINDA, x=100, y=400, w=180, h=200, tit="as proteínas são muito importantes, para a nossa saúde e beleza! Precismos estuda-las, para nos manter saudáveis, fortes e bonitas. ")
         self.maria.entra(self.laboratorio)
         self.rosalinda.entra(self.laboratorio)
+        self.foco.vai=self.laboratorio.vai
         self.laboratorio_1 = Cena(img= LABORATORIO_1)
         # self.laboratorio.direita=self.laboratorio_1
         self.laboratorio.direita=Cena(vai=self.some)
