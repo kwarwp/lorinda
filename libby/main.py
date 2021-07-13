@@ -6,7 +6,7 @@ from courtney.main import MOCHILA
 SF.update({"font-size":"20px", "transition": "left 1s, top 1s"})
 STYLE.update(width=1000, height="600px")
 #bacteriaCerto
-CELULA_1 = "https://img.pebmed.com.br/wp-content/uploads/2018/09/26163836/bacteria-3662695_640-min.jpg"
+CELULA_1 = "https://i.imgur.com/eBUMZZE.png"
 #protozoarioCERTO
 CELULA_2 = "https://i.imgur.com/rjEEZ5R.png"
 #vegetalCERTO
