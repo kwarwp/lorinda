@@ -21,8 +21,8 @@ ENIGMA= "https://i.imgur.com/pwI7UL8.png"
 NUCLEO="https://i.imgur.com/o56gJGV.png" # trocar essa imagemTROCADA
 PAREDE="https://i.imgur.com/hU2mulx.png" # trocar essa imagem
 ORGANELA="https://i.imgur.com/cjB4JUv.jpg" # trocar essa imagemTROCADA
-COMPLEXOG="https://i.imgur.com/KEeZgXc.jpg" # trocar essa imagem
-RNA= "https://i.imgur.com/Fiq5UIH.png" # trocar essa imagem
+COMPLEXOG="https://i.imgur.com/KEeZgXc.jpg" # trocar essa imagemTROCADA
+RNA= "https://i.imgur.com/Fiq5UIH.png" # trocar essa imagemTROCADA
 
 
 class Fase3():
