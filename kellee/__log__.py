@@ -134,3 +134,10 @@ NameError: name 'NUCLEO' is not defined
     self.rna=Elemento(img=RNA, tit= " Vamos lá galera, produzindo proteínas ") #aparece depois do dna
 NameError: name 'RNA' is not defined
 '''},
+{'date': 'Tue Jul 13 2021 18:47:52.510 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 31
+  self.foco=Elemento(img=FOCO, x=250, y=280, w=90, h=150, style={"opacity": 0} vai.self.laboratorio)
+                                                                                ^
+SyntaxError: invalid syntax
+'''},
