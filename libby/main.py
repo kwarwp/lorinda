@@ -5,15 +5,21 @@ from anastasia.main import Associa, SF
 from courtney.main import MOCHILA
 SF.update({"font-size":"20px", "transition": "left 1s, top 1s"})
 STYLE.update(width=1000, height="600px")
+#bacteriaCerto
 CELULA_1 = "https://img.pebmed.com.br/wp-content/uploads/2018/09/26163836/bacteria-3662695_640-min.jpg"
-CELULA_2 = "https://static.todamateria.com.br/upload/tc/ru/t_cruzi_1.jpg"
+#protozoarioCERTO
+CELULA_2 = "https://i.imgur.com/rjEEZ5R.png"
+#vegetalCERTO
 CELULA_3 = "https://img2.gratispng.com/20180602/bga/kisspng-plant-cell-cl-lula-eucariota-cl-lula-animal-animal-cell-5b1365ea94c884.3552609815279979306094.jpg"
-CELULA_4 = "https://png.pngtree.com/png-vector/20191007/ourmid/pngtree-sperm-cells-icon-flat-style-png-image_1796531.jpg" 
-CELULA_5 = "https://www.infoescola.com/wp-content/uploads/2020/01/celula-caliciforme-1029137758.jpg"
+#espermatozoide
+CELULA_4 = "https://i.imgur.com/pHmxGpO.png" 
+#espermatozoide
+CELULA_5 = "https://i.imgur.com/ByzUX4t.jpg"
+#nervosa neuronio
 CELULA_6 = "https://static.biologianet.com/conteudo/images/os-neuronios-sao-constituidos-basicamente-por-um-corpo-celular-dendritos-axonio-5b3b696bc348e.jpg"
 MOEDAS = "https://i.imgur.com/VfyiFmY.png"
 CICLONE = "https://static.todamateria.com.br/upload/55/65/556506fa96eca-ciclone.jpg"
-MEMBRANA = "https://static.biologianet.com/2020/02/membrana-plasmatica.jpg"
+MEMBRANA = "https://i.imgur.com/oxhyQrE.png"
 NPC = "https://i.imgur.com/pgk5Kk0.png"
 A = ""
 B = ""
