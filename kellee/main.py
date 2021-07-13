@@ -4,7 +4,7 @@ from _spy.vitollino.main import Inventario as inv
 from anastasia.main import Associa, SF
 # salas do games da Angelica, lorinda-lisa-libby e kellee
 STYLE.update(width=600, height="600px")
-INICIO = "https://i.imgur.com/6vAoUiq.png"
+#INICIO = "https://i.imgur.com/6vAoUiq.png"
 FOCO="https://i.imgur.com/6e096Va.png"
 MARIA = "https://i.imgur.com/FukdPW2.png"
 ROSALINDA = "https://imgur.com/0Dv7w29.png"
@@ -27,20 +27,20 @@ RNA= "https://i.imgur.com/khPaSvV.png" # trocar essa imagem
 
 class Fase3():
     def __init__(self):
-        self.inicio=Cena(img=INICIO)
-        self.foco=Elemento(img=FOCO, x=250, y=280, w=90, h=150, style={"opacity": 0})
-        self.foco.entra(self.inicio)
+        #self.inicio=Cena(img=INICIO)
+        #self.foco=Elemento(img=FOCO, x=250, y=280, w=90, h=150, style={"opacity": 0})
+        #self.foco.entra(self.inicio)
         
         self.laboratorio=Cena(img=LABORATORIO)
         self.maria=Elemento(img=MARIA, x=300, y=400, w=180, h=200, tit='oi,  Dr. Rosalinda sou sua fã, li todos os seus livros e seu artigo sobre "Direcionamento de Proteínas", ou seja, como as proteínas percorrem toda a célula')
         self.rosalinda=Elemento(img=ROSALINDA, x=100, y=400, w=180, h=200, tit="as proteínas são muito importantes, para a nossa saúde e beleza! Precismos estuda-las, para nos manter saudáveis, fortes e bonitas. ")
         self.maria.entra(self.laboratorio)
         self.rosalinda.entra(self.laboratorio)
-        self.foco.vai=self.laboratorio.vai
+        #self.foco.vai=self.laboratorio.vai
         self.laboratorio_1 = Cena(img= LABORATORIO_1)
         # self.laboratorio.direita=self.laboratorio_1
         self.laboratorio.direita=Cena(vai=self.some)
-        self.inicio.vai()
+        self.laboratorio.vai()
     
     def some (self):
         def sumir(ev=0):
