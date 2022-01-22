@@ -70,11 +70,11 @@ class apresentacao():
         self.corredor.esquerda=self.fiocruz
         self.celula= Cena(img= CELULA)#QUANDO CLICA NO MICRÓSCÓPIO IRÁ PARA ESSA CENA
         #self.casa.foi=self.entrou_maria
-        Texto(self.casa, "Maria hoje tem um compromisso", foi=self.entrou_maria).vai()
+        Texto(self.casa, "Maria hoje tem um compromisso. Ela não sabe, mas vai viver uma experiência extraordinária.", foi=self.entrou_maria).vai()
     def entrou_maria(self,*_):
         self.maria.entra(self.casa)
         self.maria.vai= Texto(self.casa,
-        " olá me chamo Maria e amo estudar biologia e lutar pelos direitos das mulheres",
+        " Olá! Me chamo Maria. Amo estudar biologia e lutar pelos direitos das mulheres.",
         foi=self.entrou_rua).vai
     def entrou_rua(self,*_):
         self.rua.vai()
