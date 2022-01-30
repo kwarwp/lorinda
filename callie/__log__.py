@@ -27,3 +27,10 @@ SyntaxError: invalid syntax
           ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Sun Jan 30 2022 17:31:27.227 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 4
+  DOENTE=
+          ^
+SyntaxError: invalid syntax
+'''},
