@@ -103,7 +103,7 @@ class oi:
         self.dica.entra(self.um.oeste)
         self.faladica= Texto(self.um.oeste, "Met(metionina)")
         self.dica.vai=self.faladica.vai
-        self.falamido= Texto(self.um.oeste, "Uma grande parte dos nossos células, músculos e tecido é constituído por aminoácidos, o que significa que realizar muitas funções importantes do corpo, tais como as células dando a sua estrutura. Eles também desempenham um papel chave no transporte e armazenamento de nutrientes.Descubra no código genético embaralhado, aquele que representa o códon de início.")
+        self.falamido= Texto(self.um.oeste, "Uma grande parte dos nossos células, músculos e tecido é constituído por aminoácidos, o que significa que realizar muitas funções importantes do corpo, tais como as células dando a sua estrutura. Eles também desempenham um papel chave no transporte e armazenamento de nutrientes.")
         self.aminoacido.vai=self.falamido.vai
 
 
