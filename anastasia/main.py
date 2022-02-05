@@ -68,7 +68,7 @@ class Associa:
         '''
         self.mito = self.Nome(nome="mitocôndria", tit=0, x=650, y=150, jogo=self, cena=self.cena)
         self.nucle = self.Nome(nome="núcleo",  tit=1, x=550, y=220, jogo=self, cena=self.cena)
-        self.reticulo = self.Nome(nome="reticulo", tit=2, x=450, y=100, jogo=self, cena=self.cena)
+        self.reticulo = self.Nome(nome="retículo endoplasmático", tit=2, x=450, y=100, jogo=self, cena=self.cena)
         self.ribossomo = self.Nome(nome="ribossomo",  tit=3, x=560, y=40, jogo=self, cena=self.cena)
         #self.cena.vai()'''
         
