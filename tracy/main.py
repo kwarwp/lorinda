@@ -211,7 +211,7 @@ class Fase5():
             return
         self.acabou -= 1
         self.multi = Texto(self.organela, "Qual o meu nome?",
-                           foi=self.resposta, A= "Lisossomo", B= "Perisoxomo ", C= "complexo de golgi", D= "ribossomo").vai()
+                           foi=self.resposta, A= "Lisossomo", B= "Perisoxomo ", C= "Complexo de Golgi", D= "Ribossomo").vai()
 
     def mover(self, ev=None):
         self.movente.x=800
