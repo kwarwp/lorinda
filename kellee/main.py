@@ -154,9 +154,9 @@ class Fase4():  # SEM NENHUMA IMAGEM
 class Fase5():
     def __init__(self):
         self.organela=Cena(img=ORGANELA)
-        self.rosalinda=Elemento(img=ROSALINDA,tit ="Maria, olhe a estrutura")
-        self.maria=Elemento(img=MARIA, x=100, tit="  quem é você? ")
-        self.complexog=Elemento(img=COMPLEXOG, x=200, tit="Sou uma organela, ué")
+        self.rosalinda=Elemento(img=ROSALINDA,tit ="Maria, olhe a estrutura", cena=self.organela)
+        self.maria=Elemento(img=MARIA, x=100, tit="  quem é você? ", cena=self.organela)
+        self.complexog=Elemento(img=COMPLEXOG, x=200, tit="Sou uma organela, ué", cena=self.organela)
         self.organela.direita=Cena(vai=self.mariafala)
         self.organela.vai()
     def mariafala(self):
