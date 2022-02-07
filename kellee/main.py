@@ -114,17 +114,17 @@ class Fase4():  # SEM NENHUMA IMAGEM
         #self.nucleo.direita=self.parede
         self.parede.esquerda=self.nucleo
         
-        self.npc=Elemento(img=NPC, tit= "atenção garota, veja o DNA")
-        self.dna=Elemento(img=DNA, tit= "só eu trabalho aqui, vou ter que criar um RNA para me ajudar")
-        self.rna=Elemento(img=RNA, tit= " Vamos lá galera, produzindo proteínas ") #aparece depois do dna
+        self.npc=Elemento(img=NPC, x=100, tit= "atenção garota, veja o DNA")
+        self.dna=Elemento(img=DNA, x=200, tit= "só eu trabalho aqui, vou ter que criar um RNA para me ajudar")
+        self.rna=Elemento(img=RNA, x=300, tit= " Vamos lá galera, produzindo proteínas ") #aparece depois do dna
         self.npc.entra(self.nucleo)
         self.dna.entra(self.nucleo)
         self.rna.entra(self.nucleo)
         self.nucleo.direita=Cena(vai=self.npc)
         
-    def npc(self):
+    def npc(self, *_):
         self.parede=Cena(img=PAREDE)
-        self.npc=Elemento(img=NPC,tit="se vc acertar os processos irá ganhar moléculas de atp")
+        self.npc=Elemento(img=NPC, x=100,tit="se vc acertar os processos irá ganhar moléculas de atp")
         self.maria=Elemento(img=MARIA, tit="nossas, quantas proteínas diferentes são formadas")
         self.npc.entra(self.parede)
         self.maria.entra(self.parede)
@@ -183,7 +183,8 @@ class Fase5():
             
     
 if __name__ == "__main__":
-    Fase3()
+    #Fase3()
+    Fase4()
 
     
     
