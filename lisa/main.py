@@ -128,6 +128,11 @@ apresentacao()
 #print (apresentacao)
 #PROCARIONTE = TRYPANOSOMA_CRUZI = NEURONIO = BACTERIA = "https://i.imgur.com/illvVvw.jpg"
 #ESPERMATOZOIDE = HEMACIA = ELODEA = CALCIFORME = NPC = "https://i.imgur.com/illvVvw.jpg"
+class Fase0(): 
+    def __init__(self, maria=None):
+        self.laboratorio= Cena(img =  LABORATORIO)
+    def vai(self, *_):
+        self.laboratorio.vai()
 class Fase1(): 
     def __init__(self, maria=None):
         self.laboratorio= Cena(img =  LABORATORIO)
@@ -202,7 +207,8 @@ class Fase1():
         self.maria.entra(self.laboratorio)
         #self.celula.vai()
 #Fase1().vai()
-apresentacao().vai()
+#apresentacao().vai()
+Fase0().vai()
 #print(Fase1)
 
 
