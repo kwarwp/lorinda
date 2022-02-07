@@ -161,25 +161,27 @@ class Fase5():
         self.organela.vai()
     def mariafala(self):
         self.organela=Cena(img=ORGANELA)
-        self.maria=Elemento(img=MARIA, tit="sim, mas qual é seu nome? Pode me ajudar a sair daqu")
-        self.npc=Elemento(img=NPC, tit="Vim da Itália, era histologista, dei uma parte do meu nome para essa organela.Qual é meu nome?")
-        
+        self.maria=Elemento(img=MARIA, x=100, tit="sim, mas qual é seu nome? Pode me ajudar a sair daqu", cena=self.organela)
+        self.npc=Elemento(img=NPC, tit="Vim da Itália, era histologista, dei uma parte do meu nome para essa organela.Qual é meu nome?", cena=self.organela)
+        self.organela.vai()
         self.acabou = 2
         self.pergunta()
     def pergunta(self, ev=None):
         if self.acabou == 0:
             return
         self.acabou -= 1
-        self.multi = Texto(self.parede, "Qual o meu nome?",
+        self.multi = Texto(self.organela, "Qual o meu nome?",
                            foi=self.resposta, A= "Lisossomo", B= "Perisoxomo ", C= "complexo de golgi", D= "ribossomo").vai()
 
     def mover(self, ev=None):
         self.movente.x=800
     def resposta(self, rep):
+        from parisa.main import oi
+
         if rep == "C":
-            Texto(self.parede, "ganhou um ATP!").vai()
+            Texto(self.organela, "ganhou um ATP!", foi=oi).vai()
         else:
-            Texto(self.parede, "Ops não acertou", foi=self.pergunta).vai()
+            Texto(self.organela, "Ops não acertou", foi=self.pergunta).vai()
 
             
     
