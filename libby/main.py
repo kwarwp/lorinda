@@ -31,16 +31,16 @@ class Fase2():
         def some(ev):
             self.celula_1.x = -10000
         self.ciclone= Elemento(img= CICLONE)
-        self.celula_1= Elemento(img= CELULA_1,x=450,y=50)
+        self.celula_1= Elemento(img= CELULA_1,x=450,y=50, vai=self.acertou)
         self.celula_1.elt.onclick = some  #Sair dessa sala e ir para a sala kelle, depois que acertar
-        self.celula_2= Elemento(img= CELULA_2,x=750,y=50)
-        self.celula_3= Elemento(img= CELULA_3,x=450,y=150)
-        self.celula_4= Elemento(img= CELULA_4,x=750,y=150)
-        self.celula_5= Elemento(img= CELULA_5,x=450,y=250)
-        self.celula_6= Elemento(img= CELULA_6,x=750,y=250)
+        self.celula_2= Elemento(img= CELULA_2,x=750,y=50, vai=self.errou)
+        self.celula_3= Elemento(img= CELULA_3,x=450,y=150, vai=self.errou)
+        self.celula_4= Elemento(img= CELULA_4,x=750,y=150, vai=self.errou)
+        self.celula_5= Elemento(img= CELULA_5,x=450,y=250, vai=self.errou)
+        self.celula_6= Elemento(img= CELULA_6,x=750,y=250, vai=self.errou)
         self.membrana= Cena(img= MEMBRANA)
         self.membrana.vai()
-        self.jogo = Associa(self.membrana, caixa=300, borda=20, acertou=self.acertou, acertos=6)
+        #self.jogo = Associa(self.membrana, caixa=300, borda=20, acertou=self.acertou, acertos=6)
         self.celula_1.entra(self.membrana)
         self.celula_2.entra(self.membrana)
         self.celula_3.entra(self.membrana)
@@ -48,13 +48,15 @@ class Fase2():
         self.celula_5.entra(self.membrana)
         self.celula_6.entra(self.membrana)
         self.npc=Elemento(img=NPC, x=900,y=350)
-        self.jogo.nome(nome="1-Meu núcleo é espalhado", tit=0, x=450, y=50)
+        
+        """self.jogo.nome(nome="1-Meu núcleo é espalhado", tit=0, x=450, y=50)
         self.jogo.nome(nome="2-Citoplasma, membrana, núcleo", tit=1, x=750, y=50)
         self.jogo.nome(nome="3-Citoplasma, membrana, núcleo", tit=2, x=450, y=150)
         self.jogo.nome(nome="4-Citoplasma, membrana, núcleo", tit=3, x=850, y=150)
         self.jogo.nome(nome="5-Citoplasma, membrana, núcleo", tit=4, x=450, y=250)
         self.jogo.nome(nome="6-Citoplasma, membrana, núcleo", tit=5, x=750, y=250)
-        self.jogo.nome(nome= "Para sair desse mundo você precisa achar o protozoário",tit=6,x=1000,y=350)# como fazer para aparecer tudo ?
+        self.jogo.nome(nome= "Para sair desse mundo você precisa achar o protozoário",tit=6,x=1000,y=350)# como fazer para aparecer tudo ?"""
+    
     def acertou(self):
         Texto(self.membrana, "Você acertou tudo! Parabéns! Você ganhou cinco ATP, veja sua mochila",
         foi=MOCHILA.mostra_mochila).vai()
@@ -64,7 +66,9 @@ class Fase2():
         MOCHILA.ganha_atp()
         MOCHILA.ganha_atp()
 
-
+    def errou(self):
+        Texto(self.membrana, "poxa , não sou  , pois eu tenho Citoplasma, membrana, núcleo ").vai()
+       
         #self.npc.entra(self.celula,Tit = "Observe atentamente essas imagens e coloque as letras correspondentes."
         #"Cada imagem terá apenas três letras, arraste para a área correspondente da célula")    #não temos ainda a imagem da célula
         #self.npc.entra(self.membrana,Tit = "Você precisa de moedas de ATP para sair dessa dimenção, para isso, precisamos excluir a célula procarionte")
