@@ -220,3 +220,10 @@ AttributeError: 'Fase3' object has no attribute 'laboratorio'
     self.foco.vai=self.laboratorio.vai
 AttributeError: 'Fase3' object has no attribute 'laboratorio'
 '''},
+{'date': 'Mon Feb 07 2022 19:46:15.215 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 118
+  self.dna=Elemento(img=DNA, x=100 tit= "só eu trabalho aqui, vou ter que criar um RNA para me ajudar")
+                                    ^
+SyntaxError: invalid syntax
+'''},
