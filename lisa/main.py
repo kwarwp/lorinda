@@ -139,7 +139,7 @@ class Fase0():
         t = Texto(self.laboratorio, "Aprenda a Jogar:")
         t.vai()
     def segue(self, *_):
-        Fase1.vai()
+        apresentacao().vai()
 class Fase1(): 
     def __init__(self, maria=None):
         self.laboratorio= Cena(img =  LABORATORIO)
