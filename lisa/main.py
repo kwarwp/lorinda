@@ -134,6 +134,8 @@ class Fase0():
         self.laboratorio= Cena(img =  ABERTURA)
     def vai(self, *_):
         self.laboratorio.vai()
+        t = Texto(self.laboratorio, "Aprenda a Jogar:")
+        t.vai()
 class Fase1(): 
     def __init__(self, maria=None):
         self.laboratorio= Cena(img =  LABORATORIO)
