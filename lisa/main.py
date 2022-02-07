@@ -6,7 +6,7 @@ STYLE["height"] = "550px"
 GRUPO_ESTUDANTES="https://i.imgur.com/jIEEVl7.png"
 DRA_ROSALIND="https://i.imgur.com/sBZyLaX.jpg"
 EQUIPAMENTO="https://i.imgur.com/ANZw77S.png"
-ABERTURA="https://i.imgur.com/ANZw77S.png"
+ABERTURA="https://i.imgur.com/g3wt0Vb.jpg"
 LABORATORIO="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/InvestigadoresUR.JPG/350px-InvestigadoresUR.JPG"
 RUA= "https://i.imgur.com/GAoOTwn.jpg"
 ESTRANHA= "https://i.imgur.com/o2iRg01.png"
@@ -131,7 +131,7 @@ apresentacao()
 #ESPERMATOZOIDE = HEMACIA = ELODEA = CALCIFORME = NPC = "https://i.imgur.com/illvVvw.jpg"
 class Fase0(): 
     def __init__(self, maria=None):
-        self.laboratorio= Cena(img =  LABORATORIO)
+        self.laboratorio= Cena(img =  ABERTURA)
     def vai(self, *_):
         self.laboratorio.vai()
 class Fase1(): 
