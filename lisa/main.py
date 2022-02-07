@@ -3,6 +3,7 @@ from _spy.vitollino.main import Cena, Elemento, Labirinto, Texto, Codigo, Sala, 
 from _spy.vittolino.main import INVENTARIO as inv
 STYLE["width"] = 1150
 STYLE["height"] = "550px"
+SETA = "https://i.imgur.com/N3JNtRW.png"
 GRUPO_ESTUDANTES="https://i.imgur.com/jIEEVl7.png"
 DRA_ROSALIND="https://i.imgur.com/sBZyLaX.jpg"
 EQUIPAMENTO="https://i.imgur.com/ANZw77S.png"
@@ -132,10 +133,13 @@ apresentacao()
 class Fase0(): 
     def __init__(self, maria=None):
         self.laboratorio= Cena(img =  ABERTURA)
+        self.seta = Elemento(SETA, x=300, y=400, w=400, cena=self.laboratorio, vai=self.segue)
     def vai(self, *_):
         self.laboratorio.vai()
         t = Texto(self.laboratorio, "Aprenda a Jogar:")
         t.vai()
+    def segue(self, *_):
+        Fase1.vai()
 class Fase1(): 
     def __init__(self, maria=None):
         self.laboratorio= Cena(img =  LABORATORIO)
