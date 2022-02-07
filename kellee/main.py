@@ -120,20 +120,20 @@ class Fase4():  # SEM NENHUMA IMAGEM
         self.npc.entra(self.nucleo)
         self.dna.entra(self.nucleo)
         self.rna.entra(self.nucleo)
-        self.nucleo.direita=Cena(vai=self.npc)
+        self.nucleo.direita=Cena(vai=self.cena_parede)
         
-    def npc(self, *_):
+    def cena_parede(self, *_):
         self.parede=Cena(img=PAREDE)
         self.npc=Elemento(img=NPC, x=100,tit="se vc acertar os processos irá ganhar moléculas de atp")
         self.maria=Elemento(img=MARIA, tit="nossas, quantas proteínas diferentes são formadas")
         self.npc.entra(self.parede)
         self.maria.entra(self.parede)
-        Texto(self.parede,"Marque os processos que o DNA executa para a produção de proteína",foi=self.anda).vai()
+        Texto(self.parede,"Marque os processos que o DNA executa para a produção de proteína",foi=self.pergunta).vai()
         self.parede.vai()
         self.parede.esquerda=self.nucleo
         
         self.acabou = 2
-        self.pergunta()
+        #self.pergunta()
     def pergunta(self, ev=None):
         if self.acabou == 0:
             return
@@ -146,7 +146,7 @@ class Fase4():  # SEM NENHUMA IMAGEM
         
     def resposta(self, rep):
         if rep == "A":
-            Texto(self.parede, "ganhou um ATP!").vai()
+            Texto(self.parede, "ganhou um ATP!", foi=Fase5).vai()
         else:
             Texto(self.parede, "Ops não acertou", foi=self.pergunta).vai()
 #fase4()
@@ -156,7 +156,7 @@ class Fase5():
         self.organela=Cena(img=ORGANELA)
         self.rosalinda=Elemento(img=ROSALINDA,tit ="Maria, olhe a estrutura")
         self.maria=Elemento(img=MARIA, tit="  quem é você? ")
-        self.complexog=Elemento(img=COMPLEXOPG, tit="Sou uma organela, ué")
+        self.complexog=Elemento(img=COMPLEXOG, tit="Sou uma organela, ué")
         self.organela.direita=Cena(vai=self.mariafala) 
     def mariafala(self):
         self.organela=Cena(img=ORGANELA)
