@@ -147,3 +147,10 @@ AttributeError: 'Nome' object has no attribute 'acerta'
                                                                                                        ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Mon Feb 07 2022 19:30:23.969 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 94
+  Fase2()   
+  ^
+IndentationError: unexpected indent
+'''},
