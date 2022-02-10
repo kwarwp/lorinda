@@ -211,8 +211,9 @@ class Fase11():
     def __init__(self):
         self.laboratorio=Cena(img=LABORATORIO)
         afala="de novo, nãoooo"
-        self.maria=Personagem(img= MARIA,afala=afala)
+        self.maria=Personagem(img= MARIA,afala=afala,responde=self.entra_redemoinho )
         self.maria.entra(self.laboratorio)
+        self.laboratorio.vai()
         self.maria.fala()
         
         
@@ -226,6 +227,8 @@ class Fase11():
     def entra_redemoinho(self, _=0):
         #from amanda.main import main
         afala = "Maria: eu finalmente consegui sair desse lugar"
+        self.redemoinho = Elemento(CICLONE, x=0, y=0, w=600, h=600, o=0.8, cena=self.laboratorio,
+        style= {"transition": "left 6s"})
         self.redemoinho.elt.ontransitionend = main
         self.redemoinho.entra(self.laboratorio)
         self.maria.afala = afala
