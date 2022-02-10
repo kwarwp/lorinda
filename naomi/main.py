@@ -1,8 +1,11 @@
 # lorinda.naomi.main.py
-from _spy.vitollino.main import Cena, Elemento,Texto, STYLE
+from _spy.vitollino.main import Cena, Elemento,Texto, STYLE,JOGO
 from courtney.main import MOCHILA
 from tracy.main import Personagem
+from anastasia.main import Swap
 STYLE.update(width=1000, height="600px")
+
+PAREDE = "https://i.imgur.com/ZAoCT4o.png"
 
 class Fase6:
     def __init__(self):
@@ -173,10 +176,27 @@ class Fase7():
         self.maria_double.x = 1500
         self.maria_double.elt.style.transform = "rotate(200deg)"
     def main(self,_=0):
-        cena = JOGO.c('https://i.imgur.com/ujAF00x.jpg').vai()
-        t = JOGO.n(cena, 'É isto! A Parede Celular!',foi=Fase11)
+        self.parede=cena = JOGO.c('https://i.imgur.com/ujAF00x.jpg').vai()
+        t = JOGO.n(cena, 'É isto! A Parede Celular!',foi=self.maria_sai)
         Swap(JOGO, PAREDE, cena, w=700,h=200,x=50,y=150,dw=7,dh=2, venceu=t) 
-        
+    
+    def maria_sai(self):
+        self.maria.entra(self.parede)
+        self.parede.vai()
+        self.maria.fala()
+    def outro_redemoinho(self):
+        afala = 'Maria: eu finalmente consegui sair desse lugar'
+        self.outro_redemoinho = Elemento(CICLONE, x=0, y=0, w=600, h=600, o=0.8, cena=self.laboratorio,
+        style= {"transition": "left 6s"})
+        self.outro_redemoinho.elt.ontransitionend = main
+        self.outro_redemoinho.entra(self.laboratorio)
+        self.maria.afala = afala
+        self.maria.responde = self.anda_redemoinho
+        self.maria_double=Elemento(img=MARIA, x=400, y=200, w=100, h=200, cena=self.laboratorio,
+        style= {"transition": "left 6s, transform 1s"})
+        self.redemoinho.entra(self.laboratorio)
+        self.maria.entra(self.laboratorio)
+        self.maria.fala()
     def entra_redemoinho(self, _=0):
         #from amanda.main import main
         afala = "Maria: De novo, este redemoinho louco?"
@@ -239,6 +259,6 @@ class Fase11():
         self.maria.entra(self.laboratorio)
         self.maria.fala()
 if __name__ == "__main__": 
-    Fase11()
+    Fase7()
     
     #Move()
