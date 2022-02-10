@@ -58,8 +58,9 @@ class Fase2():
         self.jogo.nome(nome= "Para sair desse mundo você precisa achar o protozoário",tit=6,x=1000,y=350)# como fazer para aparecer tudo ?"""
     
     def acertou(self,*_):
+        from kelle.main import Fase3
         Texto(self.membrana, "Você acertou tudo! Parabéns! Você ganhou cinco ATP, veja sua mochila",
-        foi=MOCHILA.mostra_mochila).vai()
+        foi=Fase3).vai()
         MOCHILA.ganha_atp()
         MOCHILA.ganha_atp()
         MOCHILA.ganha_atp()
@@ -68,7 +69,8 @@ class Fase2():
 
     def errou(self, *_):
         Texto(self.membrana, "poxa , não sou eu , pois tenho Citoplasma, membrana, núcleo ").vai()
-       
+    
+    
         #self.npc.entra(self.celula,Tit = "Observe atentamente essas imagens e coloque as letras correspondentes."
         #"Cada imagem terá apenas três letras, arraste para a área correspondente da célula")    #não temos ainda a imagem da célula
         #self.npc.entra(self.membrana,Tit = "Você precisa de moedas de ATP para sair dessa dimenção, para isso, precisamos excluir a célula procarionte")
