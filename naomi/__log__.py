@@ -371,3 +371,10 @@ AttributeError: 'Fase11' object has no attribute 'entra'
                       ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Feb 10 2022 16:16:56.965 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 184
+  def outro_redemoinho(self)
+                             ^
+SyntaxError: invalid syntax
+'''},
