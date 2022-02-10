@@ -278,3 +278,10 @@ AttributeError: 'Fase7' object has no attribute 'glicose_fake'
                                              ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Feb 10 2022 15:32:13.416 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 204
+  LABORATORIO="https://i.imgur.com/g3wt0Vb.jpg"
+  ^
+IndentationError: expected an indented block
+'''},
