@@ -1147,3 +1147,10 @@ TypeError: __init__() missing 1 positional argument: maria
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Thu Feb 10 2022 17:28:04.30 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 199
+  def entrou_celula(self, *_):
+  ^
+IndentationError: unexpected indent
+'''},
