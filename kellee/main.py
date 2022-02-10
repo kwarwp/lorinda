@@ -26,7 +26,7 @@ RNA= "https://i.imgur.com/Fiq5UIH.png" # trocar essa imagemTROCADA
 
 
 class Fase3():
-    def __init__(self):
+    def __init__(self,*_):
         #self.inicio=Cena(img=INICIO)
         #self.foco=Elemento(img=FOCO, x=250, y=280, w=90, h=150, style={"opacity": 0})
         #self.foco.entra(self.inicio)
