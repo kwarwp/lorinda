@@ -172,13 +172,17 @@ class Fase7():
         self.maria.x = 1500
         self.maria_double.x = 1500
         self.maria_double.elt.style.transform = "rotate(200deg)"
+    def main(self,_=0):
+        cena = JOGO.c('https://i.imgur.com/ujAF00x.jpg').vai()
+        t = JOGO.n(cena, 'É isto! A Parede Celular!',foi=Fase11)
+        Swap(JOGO, PAREDE, cena, w=700,h=200,x=50,y=150,dw=7,dh=2, venceu=t) 
         
     def entra_redemoinho(self, _=0):
-        from amanda.main import main
+        #from amanda.main import main
         afala = "Maria: De novo, este redemoinho louco?"
         self.redemoinho = Elemento(CICLONE, x=0, y=0, w=600, h=600, o=0.8, cena=self.celula,
         style= {"transition": "left 6s"})
-        self.redemoinho.elt.ontransitionend = main
+        self.redemoinho.elt.ontransitionend = self.main
         self.maria.afala = afala
         self.maria.responde = self.anda_redemoinho
         #self.maria.x = 600
@@ -198,6 +202,40 @@ class Fase7():
        
         self.maria.fala()
         self.ribossomo.fala()
-if __name__ == "__main__":            
-    Fase6()     
+#if __name__ == "__main__":            
+    #Fase6()  
+ 
+LABORATORIO="https://i.imgur.com/g3wt0Vb.jpg"
+CICLONE = "https://i.imgur.com/BC6X7ho.gif"
+class Fase11():
+    def __init__(self):
+        self.laboratorio=Cena(img=LABORATORIO)
+        afala="de novo, nãoooo"
+        self.maria=Personagem(img= MARIA,fala=afala)
+        self.maria.entra(self.laboratorio)
+        self.maria.fala()
+        
+        
+    def anda_redemoinho(self, _=0):
+        self.redemoinho.x = 1500
+        self.maria.x = 1500
+        self.maria_double.x = 1500
+        self.maria_double.elt.style.transform = "rotate(200deg)"
+        
+        
+    def entra_redemoinho(self, _=0):
+        #from amanda.main import main
+        afala = "Maria: eu finalmente consegui sair desse lugar"
+        self.redemoinho.elt.ontransitionend = main
+        self.redemoinho.entra(self.laboratorio)
+        self.maria.afala = afala
+        self.maria.responde = self.anda_redemoinho
+        self.maria_double=Elemento(img=MARIA, x=400, y=200, w=100, h=200, cena=self.laboratorio,
+        style= {"transition": "left 6s, transform 1s"})
+        self.redemoinho.entra(self.laboratorio)
+        self.maria.entra(self.laboratorio)
+        self.maria.fala()
+if __name__ == "__main__": 
+    Fase11()
+    
     #Move()
