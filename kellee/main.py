@@ -176,18 +176,18 @@ class Fase5():
     def mover(self, ev=None):
         self.movente.x=800
     def resposta(self, rep):
-        from parisa.main import oi
+        from naomi.main import Fase6
 
         if rep == "C":
-            Texto(self.organela, "ganhou um ATP!", foi=oi).vai()
+            Texto(self.organela, "ganhou um ATP!", foi=Fase6).vai()
         else:
             Texto(self.organela, "Ops não acertou", foi=self.pergunta).vai()
 
             
     
 if __name__ == "__main__":
-    #Fase3()
-    Fase4()
+    Fase3()
+    #Fase4()
 
     
     
