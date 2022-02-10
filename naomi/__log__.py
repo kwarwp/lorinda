@@ -385,3 +385,10 @@ SyntaxError: invalid syntax
                              ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Feb 10 2022 16:17:34.185 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 186
+  afala = "Maria: eu finalmente consegui sair desse lugar"
+  ^
+IndentationError: expected an indented block
+'''},
