@@ -154,7 +154,8 @@ class Fase1():
         self.elodea= Elemento(img= ELODEA)
         self.calciforme= Elemento(img=CALCIFORME)
         self.npc= Elemento(img= NPC,texto = "você precisa descobrir quem é procarionte para a próxima fase", cena=self.laboratorio)#resposta certa é a bactéria
-        self.npc.texto.foi = self.entrou_procarionte
+        self.npc.texto.foi = self.entrou_celula
+    """
     def entrou_procarionte(self, *_):
         self.procarionte.entra(self.laboratorio)
         self.procarionte.vai=Texto(self.laboratorio,
@@ -194,7 +195,7 @@ class Fase1():
         self.calciforme.entra(self.laboratorio)
         self.calciforme.vai=Texto(self.laboratorio,
         "eu fico no instestino delgado eu tenho diversas funções, uma dela pe revestir com muco para proteger onde estou",
-        foi=self.entrou_celula).vai
+        foi=self.entrou_celula).vai"""
     def entrou_celula(self, *_):
         self.celula.vai()
         self.maria.entra(self.celula)
