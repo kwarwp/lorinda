@@ -177,25 +177,27 @@ class Fase7():
         self.maria_double.elt.style.transform = "rotate(200deg)"
     def main(self,_=0):
         self.parede=cena = JOGO.c('https://i.imgur.com/ujAF00x.jpg').vai()
-        t = JOGO.n(cena, 'É isto! A Parede Celular!',foi=self.maria_sai)
-        Swap(JOGO, PAREDE, cena, w=700,h=200,x=50,y=150,dw=7,dh=2, venceu=t) 
+        t = JOGO.n(cena, 'É isto! A Parede Celular!',foi=self.maria_sai).vai()
+        #Swap(JOGO, PAREDE, cena, w=700,h=200,x=50,y=150,dw=7,dh=2, venceu=t) 
     
     def maria_sai(self):
         self.maria.entra(self.parede)
-        self.parede.vai()
+        #self.parede.vai()
+        self.maria.responde=self.outro_redemoinho
         self.maria.fala()
+        
     def outro_redemoinho(self):
         afala = 'Maria: eu finalmente consegui sair desse lugar'
-        self.outro_redemoinho = Elemento(CICLONE, x=0, y=0, w=600, h=600, o=0.8, cena=self.laboratorio,
+        self.redemoinho = Elemento(CICLONE, x=0, y=0, w=600, h=600, o=0.8, cena=self.parede,
         style= {"transition": "left 6s"})
-        self.outro_redemoinho.elt.ontransitionend = main
-        self.outro_redemoinho.entra(self.laboratorio)
+        self.redemoinho.elt.ontransitionend = Fase11
+        self.redemoinho.entra(self.parede)
         self.maria.afala = afala
         self.maria.responde = self.anda_redemoinho
-        self.maria_double=Elemento(img=MARIA, x=400, y=200, w=100, h=200, cena=self.laboratorio,
+        self.maria_double=Elemento(img=MARIA, x=400, y=200, w=100, h=200, cena=self.parede,
         style= {"transition": "left 6s, transform 1s"})
-        self.redemoinho.entra(self.laboratorio)
-        self.maria.entra(self.laboratorio)
+        self.redemoinho.entra(self.parede)
+        self.maria.entra(self.parede)
         self.maria.fala()
     def entra_redemoinho(self, _=0):
         #from amanda.main import main
@@ -228,36 +230,24 @@ class Fase7():
 LABORATORIO="https://i.imgur.com/g3wt0Vb.jpg"
 CICLONE = "https://i.imgur.com/BC6X7ho.gif"
 class Fase11():
-    def __init__(self):
+    def __init__(self, *_):
         self.laboratorio=Cena(img=LABORATORIO)
-        afala="de novo, nãoooo"
-        self.maria=Personagem(img= MARIA,afala=afala,responde=self.entra_redemoinho )
+        afala="ufaa, graças a vocês consegui sair citanópolis  "
+        self.maria=Personagem(img= MARIA,afala=afala,responde=self.the_end )
         self.maria.entra(self.laboratorio)
         self.laboratorio.vai()
         self.maria.fala()
         
-        
-    def anda_redemoinho(self, _=0):
-        self.redemoinho.x = 1500
-        self.maria.x = 1500
-        self.maria_double.x = 1500
-        self.maria_double.elt.style.transform = "rotate(200deg)"
+
         
         
-    def entra_redemoinho(self, _=0):
+    def the_end(self, _=0):
         #from amanda.main import main
         afala = "Maria: eu finalmente consegui sair desse lugar"
-        self.redemoinho = Elemento(CICLONE, x=0, y=0, w=600, h=600, o=0.8, cena=self.laboratorio,
-        style= {"transition": "left 6s"})
-        self.redemoinho.elt.ontransitionend = main
-        self.redemoinho.entra(self.laboratorio)
-        self.maria.afala = afala
-        self.maria.responde = self.anda_redemoinho
-        self.maria_double=Elemento(img=MARIA, x=400, y=200, w=100, h=200, cena=self.laboratorio,
-        style= {"transition": "left 6s, transform 1s"})
-        self.redemoinho.entra(self.laboratorio)
-        self.maria.entra(self.laboratorio)
-        self.maria.fala()
+        end="https://i.imgur.com/PGl5zCl.jpg"
+        self.the_end = Elemento(end, x=0, y=0, w=600, h=600, o=0.8, cena=self.laboratorio)
+        
+        
 if __name__ == "__main__": 
     Fase7()
     
