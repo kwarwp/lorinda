@@ -364,3 +364,10 @@ AttributeError: 'Fase11' object has no attribute 'entra'
     self.maria=Personagem(img= MARIA,afala=afala,responde=self.entra.redemoinho )
 AttributeError: 'Fase11' object has no attribute 'entra'
 '''},
+{'date': 'Thu Feb 10 2022 16:16:37.633 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 180
+  def maria_sai(self)
+                      ^
+SyntaxError: invalid syntax
+'''},
