@@ -8,7 +8,7 @@ STYLE.update(width=1000, height="600px")
 PAREDE = "https://i.imgur.com/ZAoCT4o.png"
 
 class Fase6:
-    def __init__(self):
+    def __init__(self,*_):
         
         def pegou_atp(ev=None):
             ATP = "https://i.imgur.com/k0Az1Ts.png"
