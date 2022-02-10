@@ -1140,3 +1140,10 @@ SyntaxError: invalid syntax
     Fase1().vai()
 TypeError: __init__() missing 1 positional argument: maria
 '''},
+{'date': 'Thu Feb 10 2022 17:27:49.674 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 158
+  """
+  ^
+IndentationError: unexpected indent
+'''},
