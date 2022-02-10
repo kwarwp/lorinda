@@ -58,7 +58,7 @@ class Fase2():
         self.jogo.nome(nome= "Para sair desse mundo você precisa achar o protozoário",tit=6,x=1000,y=350)# como fazer para aparecer tudo ?"""
     
     def acertou(self,*_):
-        from kelle.main import Fase3
+        from kellee.main import Fase3
         Texto(self.membrana, "Você acertou tudo! Parabéns! Você ganhou cinco ATP, veja sua mochila",
         foi=Fase3).vai()
         MOCHILA.ganha_atp()
