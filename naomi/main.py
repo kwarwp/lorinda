@@ -211,7 +211,7 @@ class Fase11():
     def __init__(self):
         self.laboratorio=Cena(img=LABORATORIO)
         afala="de novo, nãoooo"
-        self.maria=Personagem(img= MARIA,fala=afala)
+        self.maria=Personagem(img= MARIA,afala=afala)
         self.maria.entra(self.laboratorio)
         self.maria.fala()
         
