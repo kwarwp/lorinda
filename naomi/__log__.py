@@ -399,3 +399,10 @@ IndentationError: expected an indented block
   ^
 IndentationError: expected an indented block
 '''},
+{'date': 'Thu Feb 10 2022 16:23:42.893 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 188
+  afala = 'Maria: eu finalmente consegui sair desse lugar'
+  ^
+IndentationError: expected an indented block
+'''},
