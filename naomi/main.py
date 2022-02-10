@@ -177,8 +177,8 @@ class Fase7():
         self.maria_double.elt.style.transform = "rotate(200deg)"
     def main(self,_=0):
         self.parede=cena = JOGO.c('https://i.imgur.com/ujAF00x.jpg').vai()
-        t = JOGO.n(cena, 'É isto! A Parede Celular!',foi=self.maria_sai).vai()
-        #Swap(JOGO, PAREDE, cena, w=700,h=200,x=50,y=150,dw=7,dh=2, venceu=t) 
+        t = JOGO.n(cena, 'É isto! A Parede Celular!',foi=self.maria_sai)
+        Swap(JOGO, PAREDE, cena, w=700,h=200,x=50,y=150,dw=7,dh=2, venceu=t) 
     
     def maria_sai(self):
         self.maria.entra(self.parede)
@@ -249,6 +249,6 @@ class Fase11():
         
         
 if __name__ == "__main__": 
-    Fase7()
+    Fase6()
     
     #Move()
