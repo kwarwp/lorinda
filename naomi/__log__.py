@@ -378,3 +378,10 @@ SyntaxError: invalid syntax
                              ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Feb 10 2022 16:17:19.899 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 185
+  def outro_redemoinho(self)
+                             ^
+SyntaxError: invalid syntax
+'''},
