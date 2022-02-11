@@ -16,9 +16,9 @@ class Reticulo:
         lab0 = Labirinto(sala_a, sala_b, sala_b, sala_b, sala_b)
         lab1 = Labirinto(sala_b, sala_a, sala_a, sala_a, sala_a)
         #Elemento("https://i.imgur.com/cTgMqWX.png", cena =sala_b.norte)
-        Elemento("https://i.imgur.com/YKNLls2.png", x= 500, y=200, w=200, h=300, cena =sala_b.norte)
-        sala_b.norte.vai()
-        Elemento("https://i.imgur.com/h6fl6wy.png", x= 600, w=300, cena =sala_b.norte)
+        Elemento("https://i.imgur.com/YKNLls2.png", x= 500, y=200, w=200, h=300, cena =sala_a.norte)
+        sala_a.norte.vai()
+        Elemento("https://i.imgur.com/h6fl6wy.png", x= 600, w=300, cena =sala_a.norte)
 
 
     
