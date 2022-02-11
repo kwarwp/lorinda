@@ -67,8 +67,8 @@ class Reticulo:
         texto="Entendi, o retículo parece rugoso aqui pois está cheio destas bolinhas, os ribossomas")
         Elemento("https://i.imgur.com/h6fl6wy.png", x= 600, w=300, cena =sala_a.norte)
     def leste(self):
-        Elemento(PROTEINA, tit="PROTEÍNA", x= 400, y=200, w=200, h=300, cena =sala_a.leste,
-        texto="Aqui no retículo rugoso se faz a montagem de proteínas, em especial as que vão sair da célula")
+        Elemento(PROTEINA, tit="PROTEÍNA POLIPEPTíDIO", x= 400, y=200, w=200, h=300, cena =sala_a.leste,
+        texto="Aqui no retículo rugoso se faz a montagem de proteínas compridas, formando cadeias polipeptídicas, em especial as que vão sair da célula")
         Elemento(MARIA, tit="MARIA", x= 700, y=200, w=200, h=300, cena =sala_a.leste,
         texto="Certo, as proteínas montadas que vão sair da célula serão enviadas para o complexo de Golgi para empacotamento")
         Elemento(MONTAGEM, x= 600, w=300, cena =sala_a.leste)
