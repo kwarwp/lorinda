@@ -1,8 +1,9 @@
 # lorinda.stacy.main.py
-from _spy.vitollino.main import Cena,Elemento,Texto
+from _spy.vitollino.main import Cena,Elemento,Texto, Sala, Labirinto, STYLE
 from _spy.vitollino.main import Inventario as inv
+STYLE.update(width=1000, height="600px")
 
-RETICULO = ["f1dGlgQ wYdLfWl kVrzia6 6IHDCU9".split(), "f1dGlgQ wYdLfWl kVrzia6 6IHDCU9".split()]
+RETICULO = ["xMzJZEC wYdLfWl kVrzia6 6IHDCU9".split(), "V961vkS bo5bxUQ ySe17QP lv1Ga2i".split()]
 IM = "https://i.imgur.com/{}.jpg"
 
 class Reticulo:
