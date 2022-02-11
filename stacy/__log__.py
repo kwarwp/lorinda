@@ -104,3 +104,10 @@ NameError: name 'Elemrnto' is not defined
                                             ^
 SyntaxError: EOL while scanning string literal
 '''},
+{'date': 'Fri Feb 11 2022 17:29:12.340 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 61
+  Personagem(MARIA, tit="MARIA", x= 700, y=200, w=200, h=300, cena =sala_a.norte
+                                                                                          ^
+SyntaxError: invalid syntax
+'''},
