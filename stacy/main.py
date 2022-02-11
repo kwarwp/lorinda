@@ -50,9 +50,12 @@ class Reticulo:
         self.bsul()
         sala_a.norte.vai()
     def oeste(self):
-        Elemento(PROTEINA, x= 300, y=200, w=200, h=300, cena =sala_a.oeste)
-        Elemento(GLICOSE, x= 500, y=200, w=200, h=300, cena =sala_a.oeste)
-        Elemento(MARIA, x= 700, y=200, w=200, h=300, cena =sala_a.oeste)
+        Elemento(PROTEINA, x= 300, y=200, w=200, h=300, cena =sala_a.oeste,
+        texto="Aqui no rugoso também fazemos a glicosilação das proteínas, isto é vamos inserir glicose na molécula de proteína")
+        Elemento(GLICOSE, x= 500, y=200, w=200, h=300, cena =sala_a.oeste,
+        texto="pois é eu sou a glicose que vai ser usada para clicolisar a molécula de proteína")
+        Elemento(MARIA, x= 700, y=200, w=200, h=300, cena =sala_a.oeste,
+        texto="Glicolizar, que coisa complicada!")
         Elemento("https://i.imgur.com/EDgO8xF.png", x= 600, w=300, cena =sala_a.oeste)
         #Elemento("https://i.imgur.com/cTgMqWX.png", cena =sala_b.norte)
     def norte(self):
