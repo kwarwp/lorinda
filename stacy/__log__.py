@@ -97,3 +97,10 @@ NameError: name 'Elemrnto' is not defined
     Elemrnto("https://i.imgur.com/cTgMqWX.png", cena =sala_b.norte)
 NameError: name 'Elemrnto' is not defined
 '''},
+{'date': 'Fri Feb 11 2022 16:27:25.941 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 5
+  MARIA = "https://i.imgur.com/FukdPW2.jpg""
+                                            ^
+SyntaxError: EOL while scanning string literal
+'''},
