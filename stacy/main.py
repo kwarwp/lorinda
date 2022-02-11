@@ -34,6 +34,8 @@ class Personagem(Elemento):
 
 class Reticulo:
     def __init__(self, *_, voltar=None):
+        STYLE.update(width=1000, height="600px")
+
         self.voltar = voltar or lambda *_:None
         self.vai_reticulo()
         
