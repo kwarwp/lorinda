@@ -100,7 +100,7 @@ class apresentacao():
         self.chefe.vai= Texto(self.fiocruz, "Boa tarde, Maria! Temos um tempo antes da entrevista. Fique à vontade, se quiser, pode explorar os laboratórios para estudar.").vai
         self.maria.entra(self.fiocruz)
         self.maria.vai=Texto(self.fiocruz,
-        "nossa um pedaço de vidro, tenho um tempo antes da entrevista do estagio a moça disse que eu poderia ficar nos laboratórios estudando",
+        "Nossa! Uma lâmina! Tenho um tempo antes da entrevista do estágio, vou procurar um laboratório",
         foi=self.entrou_laboratorio).vai
     def entrou_laboratorio(self,*_):
         self.laboratorio.vai()
@@ -117,11 +117,11 @@ class apresentacao():
     def entrou_cartaz(self,*_):
         self.cartaz.entra(self.laboratorio)
         self.cartaz.vai=Texto(self.laboratorio, 
-        "para se usar o microscópio faça isso...",
+        "Um laboratório é um local que deve ser utilizado com muita responsabilidade. Existem normas de segurança que precisam ser seguidas, no laboratório há reagentes químicos e aparelhos, que se usados de maneira errada podem causar acidentes",
         foi=self.entrou_microscopio).vai
     def entrou_microscopio(self,*_):
         self.microscopio.entra(self.laboratorio)
-        self.microscopio.vai= Texto(self.laboratorio, " olá, eu sou utilizado para ver coisas que o olho humano não ve ",
+        self.microscopio.vai= Texto(self.laboratorio, "  Neste laboratório tem vários microscópios, microscópios ópticos e também eletrônico. Você pode utiliza-los para descobrir o que tem nessa lâmina.",
         foi=Fase1(self.maria).vai).vai
     def vai(self):
 
