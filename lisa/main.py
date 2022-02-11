@@ -32,7 +32,7 @@ TRYPANOSOMA_CRUZI = "https://imgur.com/ccjY50N.jpg"
 ESPERMATOZOIDE = "https://imgur.com/RD0Fe3X.jpg"
 ELODEA = "https://img1.gratispng.com/20180404/jkq/kisspng-algae-seaweed-aquatic-plants-aloe-5ac4853e2c61d2.8993360815228286061818.jpg"
 CALCIFORME = "https://imgur.com/2kY3sBX.jpg"
-NPC = "https://www.kindpng.com/picc/m/496-4964664_angry-npc-hd-png-download.png"
+NPC = "https://imgur.com/VcPXMYC.png"
 #colocar imagens da class apresentação 
 class apresentacao():
     def __init__(self):
