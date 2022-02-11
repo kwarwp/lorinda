@@ -32,7 +32,7 @@ class Fase2():
         def some(ev):
             self.celula_1.x = -10000
         self.ciclone= Elemento(img= CICLONE)
-        self.celula_1= Elemento(img= CELULA_1,x=450,y=50, vai=self.acertou)
+        self.celula_1= Elemento(img= CELULA_1,x=450,y=50,Tit= "Sou uma célula procarionte. Tenho como característica principal, é que meu material genético não está envolto por uma membrana nuclear. Ele fica espalhado pelo citoplasma, em regiões conhecidas como nucleóides, onde fica o DNA circular do tipo cromossômico", vai=self.acertou)
         #self.celula_1.elt.onclick = some  #Sair dessa sala e ir para a sala kelle, depois que acertar
         self.celula_2= Elemento(img= CELULA_2,x=750,y=50, vai=self.errou)
         self.celula_3= Elemento(img= CELULA_3,x=450,y=150, vai=self.errou)
