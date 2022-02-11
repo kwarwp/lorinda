@@ -16,6 +16,7 @@ class Reticulo:
         lab0 = Labirinto(sala_a, sala_b, sala_b, sala_b, sala_b)
         lab1 = Labirinto(sala_b, sala_a, sala_a, sala_a, sala_a)
         sala_b.norte.vai()
+        Elemrnto("https://i.imgur.com/cTgMqWX.png", cena =sala_b.norte)
 
 
     
