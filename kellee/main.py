@@ -161,14 +161,14 @@ class Fase5():
         self.maria=Elemento(img=MARIA, x=100, tit="  quem é você? ", cena=self.organela)
         self.complexog=Elemento(img=COMPLEXOG, x=200, tit="Sou uma organela, ué", cena=self.organela)
         self.organela.direita=Cena(vai=self.mariafala)
-        vai_reticulo = Elemento(SETA, tit"Conheça melhor o Retículo Endoplasmático clicando nesta Seta", x=100, y=200,
-        vai=self.viagem_reticulo)
+        vai_reticulo = Elemento(SETA, tit="Conheça melhor o Retículo Endoplasmático clicando nesta Seta", x=100, y=200,
+        vai=self.viagem_reticulo, cena=self.organela)
         self.organela.vai()
         
     def viagem_reticulo(self, *_):
         from stacy.main import Reticulo
         Reticulo(voltar=self.mariafala)
-    def mariafala(self):
+    def mariafala(self, *_):
         self.organela=Cena(img=ORGANELA)
         self.maria=Elemento(img=MARIA, x=100, tit="sim, mas qual é seu nome? Pode me ajudar a sair daqu", cena=self.organela)
         self.npc=Elemento(img=NPC, tit="Vim da Itália, era histologista, dei uma parte do meu nome para essa organela.Qual é meu nome?", cena=self.organela)
