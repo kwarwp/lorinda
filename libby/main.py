@@ -32,13 +32,13 @@ class Fase2():
         def some(ev):
             self.celula_1.x = -10000
         self.ciclone= Elemento(img= CICLONE)
-        self.celula_1= Elemento(img= CELULA_1,x=450,y=50, vai=self.acertou)
+        self.celula_1= Elemento(img= CELULA_1,x=450,y=50, tit="Sou uma célula procarionte. Tenho como característica principal, é que meu material genético não está envolto por uma membrana nuclear. Ele fica espalhado pelo citoplasma, em regiões conhecidas como nucleóides, onde fica o DNA circular do tipo cromossômico. ", vai=self.acertou)
         #self.celula_1.elt.onclick = some  #Sair dessa sala e ir para a sala kelle, depois que acertar
-        self.celula_2= Elemento(img= CELULA_2,x=750,y=50, vai=self.errou)
-        self.celula_3= Elemento(img= CELULA_3,x=450,y=150, vai=self.errou)
-        self.celula_4= Elemento(img= CELULA_4,x=750,y=150, vai=self.errou)
-        self.celula_5= Elemento(img= CELULA_5,x=450,y=250, vai=self.errou)
-        self.celula_6= Elemento(img= CELULA_6,x=750,y=250, vai=self.errou)
+        self.celula_2= Elemento(img= CELULA_2,x=750,y=50,tit="Sou a célula vegetal, sou o componente básico de todos os seres vivos que fazem parte do Reino Vegetal. Possuo núcleo organizado e vários tipos de organelas. Parede celular, plastos e vacúolos são estruturas que pertencem apenas a mim, pois são específicas para o estilo de vida das plantas.", vai=self.errou)
+        self.celula_3= Elemento(img= CELULA_3,x=450,y=150,tit="Sou a hemácia. Faço parte do grupo de células que compõem o sangue. Sou especialista em transportar O2 e CO2. Quando madura, não possuo núcleo. Tenho forma bicôncava, o que facilita as trocas gasosas. Essa forma se deve à presença de proteínas estruturais no citoesqueleto.", vai=self.errou)
+        self.celula_4= Elemento(img= CELULA_4,x=750,y=150,tit="Pertenço ao sistema reprodutor masculino, tenho uma função muito importante, transfiro o DNA masculino ao ovócito. Possuo numerosas mitocôndrias que me fornecem ATP (adenosina trifosfato) para a locomoção. Sou a única célula dos mamíferos que possui flagelo. Sou o espermatozoide.", vai=self.errou)
+        self.celula_5= Elemento(img= CELULA_5,x=450,y=250,tit="Sou a célula caliciforme do intestino, sou um exemplo de uma célula epitelial especializada na síntese e exportação de proteínas para o meio extracelular. Me localizo, principalmente, no intestino delgado. Sou responsável pela produção e secreção do muco que reveste e protege o epitélio intestinal. Sou uma célula alongada, e, como esperado, muito rica em organelas relacionadas à rota secretora ou de exportação. Assim, verifica-se em mim a presença de um retículo endoplasmático granular abundante, um complexo de Golgi bem desenvolvido que dá origem a inúmeras vesículas secretoras. Estas vesículas dirigem-se à membrana plasmática apical, com a qual se fundem (por exocitose), descarregando seu conteúdo (o muco) na luz do intestino.", vai=self.errou)
+        self.celula_6= Elemento(img= CELULA_6,x=750,y=250,tit="Sou uma célula altamente especializada em processar informações, capaz de transmitir o impulso nervoso para outras células. Possuo estruturas celulares como núcleo e mitocôndrias, como outras células, mas tenho uma forma diferenciada, que está relacionada com a minha função. Me chamo neurônio.", vai=self.errou)
         self.membrana= Cena(img= MEMBRANA)
         self.membrana.vai()
         #self.jogo = Associa(self.membrana, caixa=300, borda=20, acertou=self.acertou, acertos=6)
