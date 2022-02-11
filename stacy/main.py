@@ -89,7 +89,7 @@ class Reticulo:
         #Elemento("https://i.imgur.com/cTgMqWX.png", cena =sala_b.norte)
     def bnorte(self):
         Elemento(CALCIO, tit="CALCIO", x= 400, y=200, w=200, h=300, cena =sala_b.norte,
-        texto="oi gente sou o Cálcio, eu ajudo na contração muscular e sou armazenado aqui no rtículo endoplasmático liso")
+        texto="Oi gente sou o Cálcio, eu ajudo na contração muscular e sou armazenado aqui no retículo endoplasmático liso")
         Elemento(MARIA, tit="MARIA", x= 700, y=200, w=200, h=300, cena =sala_b.norte,
         texto="É por isso que o retículo liso tem forma de tubos, serve para guardar coisas!")
         Elemento(IONSCALCIO, x= 600, w=300, cena =sala_b.norte)
