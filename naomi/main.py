@@ -13,7 +13,7 @@ class Fase6:
         def pegou_atp(ev=None):
             ATP = "https://i.imgur.com/k0Az1Ts.png"
             self.ATP = Elemento(img=ATP, tit="ATP", x=600, y=500, cena=self.parede, drag=True)
-        NPC = "https://i.imgur.com/slnDrGI.png"
+        NPC = "https://imgur.com/VcPXMYC.png"
         RIBOSSOMA = "https://i.imgur.com/Tf5yrKb.png"
         LISOSSOMA = "https://i.imgur.com/g0OplxP.png"
         MARIA = "https://i.imgur.com/4yrnNgS.png"
