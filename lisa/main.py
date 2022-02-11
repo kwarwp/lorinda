@@ -37,7 +37,7 @@ NPC = "https://imgur.com/VcPXMYC.png"
 class apresentacao():
     def __init__(self):
         self.casa = Cena(img = CASA)#maria vai para fio cruz
-        self.maria= Elemento(img= MARIA, x=460, y=450, w=150, h=80)
+        self.maria= Elemento(img= MARIA, x=460, y=300, w=300, h=250)
         self.rua= Cena(img= RUA)
         self.estranha= Elemento(img= ESTRANHA, x=600, y=450, texto= "Guarde e proteja esse pacote com sua própria vida")
         self.pacote=Elemento(img=PACOTE, x=760, y=450) #, tit="pacote")
