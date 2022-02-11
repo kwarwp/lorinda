@@ -154,3 +154,10 @@ SyntaxError: invalid syntax
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Fri Feb 11 2022 12:52:30.941 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 11
+  CELULA_2 = "https://imgur.com/zpc9NP0.jpg""
+                                             ^
+SyntaxError: EOL while scanning string literal
+'''},
