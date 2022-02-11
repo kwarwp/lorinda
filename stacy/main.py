@@ -67,33 +67,37 @@ class Reticulo:
         texto="Entendi, o retículo parece rugoso aqui pois está cheio destas bolinhas, os ribossomas")
         Elemento("https://i.imgur.com/h6fl6wy.png", x= 600, w=300, cena =sala_a.norte)
     def leste(self):
-        Elemento(PROTEINA, x= 400, y=200, w=200, h=300, cena =sala_a.leste,
+        Elemento(PROTEINA, tit="PROTEÍNA", x= 400, y=200, w=200, h=300, cena =sala_a.leste,
         texto="Aqui no retículo rugoso se faz a montagem de proteínas, em especial as que vão sair da célula")
-        Elemento(MARIA, x= 700, y=200, w=200, h=300, cena =sala_a.leste,
+        Elemento(MARIA, tit="MARIA", x= 700, y=200, w=200, h=300, cena =sala_a.leste,
         texto="Certo, as proteínas montadas que vão sair da célula serão enviadas para o complexo de Golgi para empacotamento")
         Elemento(MONTAGEM, x= 600, w=300, cena =sala_a.leste)
     def sul(self):
         Elemento(LIPIDEO, x= 400, y=200, w=200, h=300, cena =sala_a.sul)
-        Elemento(MARIA, x= 700, y=200, w=200, h=300, cena =sala_a.sul)
+        Elemento(MARIA, tit="MARIA", x= 700, y=200, w=200, h=300, cena =sala_a.sul)
         Elemento(FOSFOLIPIDEO, x= 600, w=300, cena =sala_a.sul)
     def boeste(self):
         Elemento(ALCOOL, x= 300, y=200, w=200, h=300, cena =sala_b.oeste,
         texto="Hic! Acho que bebi demais! Hic!'")
         Elemento(ENZIMA, x= 500, y=200, w=200, h=300, cena =sala_b.oeste,
         texto="Eu sou a enzima desidrogenaze. Aqui no retículo liso eu vou desintoxicar o organismo quebrando as substâncias tóxicas")
-        Elemento(MARIA, x= 700, y=200, w=200, h=300, cena =sala_b.oeste,
+        Elemento(MARIA, tit="MARIA", x= 700, y=200, w=200, h=300, cena =sala_b.oeste,
         texo="As pessoas não deveriam exagerar na bebida, vai ter que ter muito retículo liso para o detox!")
         Elemento(TOXICO, x= 600, w=300, cena =sala_b.oeste)
         #Elemento("https://i.imgur.com/cTgMqWX.png", cena =sala_b.norte)
     def bnorte(self):
-        Elemento(CALCIO, x= 400, y=200, w=200, h=300, cena =sala_b.norte,
+        Elemento(CALCIO, tit="CALCIO", x= 400, y=200, w=200, h=300, cena =sala_b.norte,
         texto="oi gente sou o Cálcio, eu ajudo na contração muscular e sou armazenado aqui no rtículo endoplasmático liso")
-        Elemento(MARIA, x= 700, y=200, w=200, h=300, cena =sala_b.norte,
+        Elemento(MARIA, tit="MARIA", x= 700, y=200, w=200, h=300, cena =sala_b.norte,
         texto="É por isso que o retículo liso tem forma de tubos, serve para guardar coisas!")
         Elemento(IONSCALCIO, x= 600, w=300, cena =sala_b.norte)
     def bleste(self):
-        Elemento(CARBOIDRATO, x= 400, y=200, w=200, h=300, cena =sala_b.leste)
-        Elemento(MARIA, x= 700, y=200, w=200, h=300, cena =sala_b.leste)
+        Elemento(CARBOIDRATO, tit="CARBOIDRATO", x= 400, y=200, w=200, h=300, cena =sala_b.leste,
+        texto="Aqui no retículo liso vai acontecer a minha metabolização, eu que sou o carboidrato")
+        Elemento(GLICOSE, tit="GLICOSE", x= 500, y=200, w=200, h=300, cena =sala_a.oeste,
+        texto="Eu sou a glicose resultante da metabolização do carboidrato")
+        Elemento(MARIA, tit="MARIA", x= 700, y=200, w=200, h=300, cena =sala_b.leste,
+        texto="O retículo liso é fundamental na formação de glicose por meio da hidrólise do glicogênio.")
         Elemento(METACARBOIDRATO, x= 600, w=300, cena =sala_b.leste)
     def bsul(self):
         Elemento(LIPIDEO, x= 400, y=200, w=200, h=300, cena =sala_b.sul)
