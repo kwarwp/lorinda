@@ -248,3 +248,10 @@ SyntaxError: invalid syntax
                                                                                                                                                                                                                    ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Feb 11 2022 19:06:04.254 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 80
+  self.maria.tit=" Maria o observa atentamente.Maria caminha pelo meio daquele material gelatinoso e se aproxima dele. Ele percebe que está sendo observado e olha com uma cara não muito amigável.Quem é você?" 
+                                                                                                                                                                                                                 ^
+SyntaxError: invalid syntax
+'''},
