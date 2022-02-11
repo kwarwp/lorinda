@@ -154,7 +154,7 @@ class Fase1():
         self.hemacia= Elemento(img= HEMACIA)
         self.elodea= Elemento(img= ELODEA)
         self.calciforme= Elemento(img=CALCIFORME)
-        self.npc= Elemento(img= NPC,texto = "você precisa descobrir quem é procarionte para a próxima fase", cena=self.laboratorio)#resposta certa é a bactéria
+        self.npc= Elemento(img= NPC,texto = "Para começar a sua missão, você precisa passar por uma estrutura muito relevante para a célula. É ela quem tem a função de proteger, delimitar, transportar e selecionar as substâncias que entram e saem da célula. Você sabia que as células presentes nos seres vivos são classificadas em eucariontes e procariontes? Mas para seguir adiante, você precisa clicar na célula procarionte", cena=self.laboratorio)#resposta certa é a bactéria
         self.npc.texto.foi = self.entrou_celula
     """
     def entrou_procarionte(self, *_):
@@ -207,9 +207,7 @@ class Fase1():
         self.maria.vai=Texto(self.celula,"como posso sair desse lugar?").vai
     def faladepois2(self,*_):
         from libby.main import Fase2
-        self.npc.vai=Texto(self.celula,"  vc foi trazida para outra dimensão, a dimensão microscópica das células" 
- "Para sair, vc terá  que vencer alguns enigmas e desafios,"
- " relacionados ao mundo das células ou ficará presa aqui para sempre.", foi=Fase2).vai 
+        self.npc.vai=Texto(self.celula,"  você foi trazida para outra dimensão, a dimensão microscópica das células. Para você sair terá que vencer alguns enigmas e desafios relacionados ao mundo das células ou ficará presa aqui para sempre.", foi=Fase2).vai 
     def vai(self):
 
         self.laboratorio.vai()
