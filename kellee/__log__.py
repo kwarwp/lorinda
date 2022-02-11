@@ -227,3 +227,10 @@ AttributeError: 'Fase3' object has no attribute 'laboratorio'
                                     ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Feb 11 2022 18:44:06.835 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 80
+  self.maria.tit=" Maria o observa atentamente.  Maria caminha pelo meio daquele material gelatinoso e se aproxima dele. Ele percebe que está sendo observado e olha com uma cara não muito amigável.Quem é você?" 
+                                                                                                                                                                                                                   ^
+SyntaxError: invalid syntax
+'''},
