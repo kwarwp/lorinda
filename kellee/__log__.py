@@ -262,3 +262,10 @@ SyntaxError: invalid syntax
                                                                                                                                                                                                                  ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Fri Feb 11 2022 19:48:57.234 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 164
+  vai_reticulo = Elemento(SETA, tit"Conheça melhor o Retículo Endoplasmático clicando nesta Seta", x=100, y=200,
+                                    ^
+SyntaxError: invalid syntax
+'''},
