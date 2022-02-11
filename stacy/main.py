@@ -84,7 +84,7 @@ class Reticulo:
         Elemento(ENZIMA, tit="ENZIMA", x= 500, y=200, w=200, h=300, cena =sala_b.oeste,
         texto="Eu sou a enzima desidrogenaze. Aqui no retículo liso eu vou desintoxicar o organismo quebrando as substâncias tóxicas")
         Elemento(MARIA, tit="MARIA", x= 700, y=200, w=200, h=300, cena =sala_b.oeste,
-        texo="As pessoas não deveriam exagerar na bebida, vai ter que ter muito retículo liso para o detox!")
+        texto="As pessoas não deveriam exagerar na bebida, vai ter que ter muito retículo liso para o detox!")
         Elemento(TOXICO, x= 600, w=300, cena =sala_b.oeste)
         #Elemento("https://i.imgur.com/cTgMqWX.png", cena =sala_b.norte)
     def bnorte(self):
