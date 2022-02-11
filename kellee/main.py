@@ -19,7 +19,7 @@ ESTRTURA= "https://imgur.com/iaGv545.png"
 DNA= "https://i.imgur.com/khPaSvV.png"
 NPC="https://imgur.com/VcPXMYC.png"
 ENIGMA= "https://i.imgur.com/pwI7UL8.png"
-NUCLEO="https://imgur.com/undefined.jpg" # trocar essa imagemTROCADA
+NUCLEO="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/o-nucleo-envolto-por-uma-membrana-apresenta-em-seu-interior-os-cromossomos-5a86b19fdc671.jpg" # trocar essa imagemTROCADA
 PAREDE="https://i.imgur.com/hU2mulx.png" # trocar essa imagem
 ORGANELA="https://i.imgur.com/cjB4JUv.jpg" # trocar essa imagemTROCADA
 COMPLEXOG="https://i.imgur.com/KEeZgXc.jpg" # trocar essa imagemTROCADA
@@ -77,9 +77,7 @@ class Fase3():
         self.npc.entra(self.laboratorio_3)
         self.maria.entra(self.laboratorio_3)
         self.npc.tit=" Maria ele não é muito simpático. É o todo poderoso! E se acha"
-        self.maria.tit="Maria o observa atentamente. "\
-        "Maria caminha pelo meio daquele material gelatinoso e se aproxima dele."\
-        "Ele percebe que está sendo observado e olha com uma cara não muito amigável.Quem é você?"#" Maria o observa atentamente." 
+        self.maria.tit=" Maria o observa atentamente.  Maria caminha pelo meio daquele material gelatinoso e se aproxima dele. Ele percebe que está sendo observado e olha com uma cara não muito amigável.Quem é você?" 
         self.dna=Elemento(img= DNA, y=450,x=200, tit="COMO, VOCÊ NÃO SABE MEU NOME!?DE QUE PLANETA VOCÊ É?!EU SOU O MAIORAL!! ")
         self.dna.entra(self.laboratorio_3)
         self.laboratorio_3.direita=Cena(vai=self.parte_4)
