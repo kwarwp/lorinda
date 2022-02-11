@@ -17,6 +17,7 @@ IONSCALCIO = "https://i.imgur.com/PXkUsU4.png"
 TOXICO = "https://i.imgur.com/qJfC3K0.png"
 ENZIMA = "https://imgur.com/v3jd24d.png"
 ALCOOL = "https://i.imgur.com/a3uJqr5.png"
+SAIDA = "https://i.imgur.com/iEiiGKK.png"
 
 RETICULO = ["xMzJZEC wYdLfWl kVrzia6 6IHDCU9".split(), "V961vkS bo5bxUQ ySe17QP lv1Ga2i".split()]
 IM = "https://i.imgur.com/{}.jpg"
@@ -32,8 +33,10 @@ class Personagem(Elemento):
         Texto(self.cena, texto if texto else self.afala, foi=responde if responde else self.responde).vai()
 
 class Reticulo:
-    def __init__(self, *_):
+    def __init__(self, *_, voltar=None):
+        self.voltar = voltar or lambda *_:None
         self.vai_reticulo()
+        
     def vai_reticulo(self):
         self.sala_a = sala_a = Sala(*[IM.format(lnk) for lnk in RETICULO[0]])
         sala_b_args = [IM.format(lnk) for lnk in RETICULO[1]]
@@ -71,6 +74,7 @@ class Reticulo:
         texto="Aqui no retículo rugoso se faz a montagem de proteínas compridas, formando cadeias polipeptídicas, em especial as que vão sair da célula")
         Elemento(MARIA, tit="MARIA", x= 700, y=200, w=200, h=300, cena =sala_a.leste,
         texto="Certo, as proteínas montadas que vão sair da célula serão enviadas para o complexo de Golgi para empacotamento")
+        Elemento(SAIDA, tit="Saída, de volta a Citonópolis", x= 150, y=330, w=200, h=200, cena =sala_a.leste, vai=self.voltar)
         Elemento(MONTAGEM, x= 600, w=300, cena =sala_a.leste)
     def sul(self):
         Elemento(LIPIDEO, tit="FOSFOLIPIDIO", x= 400, y=200, w=200, h=300, cena =sala_a.sul,
