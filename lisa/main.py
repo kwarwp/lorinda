@@ -39,7 +39,7 @@ class apresentacao():
         self.casa = Cena(img = CASA)#maria vai para fio cruz
         self.maria= Elemento(img= MARIA, x=460, y=300, w=300, h=250)
         self.rua= Cena(img= RUA)
-        self.estranha= Elemento(img= ESTRANHA, x=600, y=450, texto= "Guarde e proteja esse pacote com sua própria vida")
+        self.estranha= Elemento(img= ESTRANHA, x=600, y=450, texto= "Guarde e proteja esse pacote com sua própria vida. Nele tem um mistério que só você poderá desvendar.")
         self.pacote=Elemento(img=PACOTE, x=760, y=450) #, tit="pacote")
         self.casa.direita=Cena(vai=self.entrou_rua)#self.rua
         self.rua.esquerda=self.casa
@@ -89,10 +89,10 @@ class apresentacao():
         self.rua2.vai()
         self.maria.entra(self.rua2)
         pega= Texto(self.rua2, 
-        "por via das dúvidas você pega o pacote assim mesmo",
+        "Mas estou muito curiosa, vou abrir depois .",
         foi=self.entra_fiocruz)
         self.maria.vai= Texto(self.rua2, 
-        "parece uma pessoa estranha, não quero aceitar nada dela",
+        " Que pessoa estranha, não quero nada aceitar dela",
         foi=pega.vai).vai
     def entra_fiocruz(self,*_):
         self.fiocruz.vai()
