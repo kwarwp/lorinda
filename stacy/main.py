@@ -50,11 +50,11 @@ class Reticulo:
         self.bsul()
         sala_a.norte.vai()
     def oeste(self):
-        Elemento(PROTEINA, x= 300, y=200, w=200, h=300, cena =sala_a.oeste,
+        Elemento(PROTEINA, tit="PROTEÍNA", x= 300, y=200, w=200, h=300, cena =sala_a.oeste,
         texto="Aqui no rugoso também fazemos a glicosilação das proteínas, isto é vamos inserir glicose na molécula de proteína")
-        Elemento(GLICOSE, x= 500, y=200, w=200, h=300, cena =sala_a.oeste,
+        Elemento(GLICOSE, tit="GLICOSE", x= 500, y=200, w=200, h=300, cena =sala_a.oeste,
         texto="pois é eu sou a glicose que vai ser usada para clicolisar a molécula de proteína")
-        Elemento(MARIA, x= 700, y=200, w=200, h=300, cena =sala_a.oeste,
+        Elemento(MARIA, tit="MARIA", x= 700, y=200, w=200, h=300, cena =sala_a.oeste,
         texto="Glicolizar, que coisa complicada!")
         Elemento("https://i.imgur.com/EDgO8xF.png", x= 600, w=300, cena =sala_a.oeste)
         #Elemento("https://i.imgur.com/cTgMqWX.png", cena =sala_b.norte)
@@ -73,13 +73,15 @@ class Reticulo:
         texto="Certo, as proteínas montadas que vão sair da célula serão enviadas para o complexo de Golgi para empacotamento")
         Elemento(MONTAGEM, x= 600, w=300, cena =sala_a.leste)
     def sul(self):
-        Elemento(LIPIDEO, x= 400, y=200, w=200, h=300, cena =sala_a.sul)
-        Elemento(MARIA, tit="MARIA", x= 700, y=200, w=200, h=300, cena =sala_a.sul)
+        Elemento(LIPIDEO, tit="FOSFOLIPIDIO", x= 400, y=200, w=200, h=300, cena =sala_a.sul,
+        texto="Oi gente eu sou um lipído, mais precisamente um fosfolipídio, essencial para construção da membrana celular")
+        Elemento(MARIA, tit="MARIA", x= 700, y=200, w=200, h=300, cena =sala_a.sul
+        texto="Muito útil este retículo endoplasmático, os lipídios são os blocos de construção das estruturas celulares")
         Elemento(FOSFOLIPIDEO, x= 600, w=300, cena =sala_a.sul)
     def boeste(self):
-        Elemento(ALCOOL, x= 300, y=200, w=200, h=300, cena =sala_b.oeste,
+        Elemento(ALCOOL, tit="ALCOOL", x= 300, y=200, w=200, h=300, cena =sala_b.oeste,
         texto="Hic! Acho que bebi demais! Hic!'")
-        Elemento(ENZIMA, x= 500, y=200, w=200, h=300, cena =sala_b.oeste,
+        Elemento(ENZIMA, tit="ENZIMA", x= 500, y=200, w=200, h=300, cena =sala_b.oeste,
         texto="Eu sou a enzima desidrogenaze. Aqui no retículo liso eu vou desintoxicar o organismo quebrando as substâncias tóxicas")
         Elemento(MARIA, tit="MARIA", x= 700, y=200, w=200, h=300, cena =sala_b.oeste,
         texo="As pessoas não deveriam exagerar na bebida, vai ter que ter muito retículo liso para o detox!")
@@ -100,8 +102,10 @@ class Reticulo:
         texto="O retículo liso é fundamental na formação de glicose por meio da hidrólise do glicogênio.")
         Elemento(METACARBOIDRATO, x= 600, w=300, cena =sala_b.leste)
     def bsul(self):
-        Elemento(LIPIDEO, x= 400, y=200, w=200, h=300, cena =sala_b.sul)
-        Elemento(MARIA, x= 700, y=200, w=200, h=300, cena =sala_b.sul)
+        Elemento(LIPIDEO, tit="LIPIDIO", x= 400, y=200, w=200, h=300, cena =sala_b.sul,
+        texto="Oi gente eu sou um lipído, e seu produzido aqui no retículo endoplasmático liso")
+        Elemento(MARIA, tit="MARIA", x= 700, y=200, w=200, h=300, cena =sala_b.sul,
+        texto="Aqui no retículo liso, temos a síntese dos lipídios e também alguns hormônios")
         Elemento(SINLIPIDEO, x= 600, w=300, cena =sala_b.sul)
 
 
