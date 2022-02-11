@@ -151,15 +151,23 @@ class Fase4():  # SEM NENHUMA IMAGEM
         else:
             Texto(self.parede, "Ops não acertou", foi=self.pergunta).vai()
 #fase4()
+SETA = "https://i.imgur.com/N3JNtRW.png"
 
 class Fase5():
     def __init__(self):
+    
         self.organela=Cena(img=ORGANELA)
         self.rosalinda=Elemento(img=ROSALINDA,tit ="Maria, olhe a estrutura", cena=self.organela)
         self.maria=Elemento(img=MARIA, x=100, tit="  quem é você? ", cena=self.organela)
         self.complexog=Elemento(img=COMPLEXOG, x=200, tit="Sou uma organela, ué", cena=self.organela)
         self.organela.direita=Cena(vai=self.mariafala)
+        vai_reticulo = Elemento(SETA, tit"Conheça melhor o Retículo Endoplasmático clicando nesta Seta", x=100, y=200,
+        vai=self.viagem_reticulo)
         self.organela.vai()
+        
+    def viagem_reticulo(self, *_):
+        from stacy.main import Reticulo
+        Reticulo(voltar=self.mariafala)
     def mariafala(self):
         self.organela=Cena(img=ORGANELA)
         self.maria=Elemento(img=MARIA, x=100, tit="sim, mas qual é seu nome? Pode me ajudar a sair daqu", cena=self.organela)
@@ -187,8 +195,8 @@ class Fase5():
             
     
 if __name__ == "__main__":
-    Fase3()
-    #Fase4()
+    #Fase3()
+    Fase5()
 
     
     
