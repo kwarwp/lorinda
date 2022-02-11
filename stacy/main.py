@@ -75,7 +75,7 @@ class Reticulo:
     def sul(self):
         Elemento(LIPIDEO, tit="FOSFOLIPIDIO", x= 400, y=200, w=200, h=300, cena =sala_a.sul,
         texto="Oi gente eu sou um lipído, mais precisamente um fosfolipídio, essencial para construção da membrana celular")
-        Elemento(MARIA, tit="MARIA", x= 700, y=200, w=200, h=300, cena =sala_a.sul
+        Elemento(MARIA, tit="MARIA", x= 700, y=200, w=200, h=300, cena =sala_a.sul,
         texto="Muito útil este retículo endoplasmático, os lipídios são os blocos de construção das estruturas celulares")
         Elemento(FOSFOLIPIDEO, x= 600, w=300, cena =sala_a.sul)
     def boeste(self):
