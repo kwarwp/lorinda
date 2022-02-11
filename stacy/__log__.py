@@ -155,3 +155,10 @@ TypeError: __init__() got an unexpected keyword argument 'cena'
     Personagem(PROTEINA, tit="PROTEÍNA", x= 400, y=200, w=200, h=300, cena =sala_a.norte,
 TypeError: __init__() got an unexpected keyword argument 'fala'
 '''},
+{'date': 'Fri Feb 11 2022 18:58:38.299 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 78
+  Elemento(MARIA, tit="MARIA", x= 700, y=200, w=200, h=300, cena =sala_a.sul
+                                                                                      ^
+SyntaxError: invalid syntax
+'''},
