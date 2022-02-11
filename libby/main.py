@@ -10,7 +10,7 @@ CELULA_1 = "https://imgur.com/ifgaFEO.jpg"
 #protozoarioCERTO
 CELULA_2 = "https://imgur.com/zpc9NP0.jpg"
 #vegetalCERTO
-CELULA_3 = "https://img2.gratispng.com/20180602/bga/kisspng-plant-cell-cl-lula-eucariota-cl-lula-animal-animal-cell-5b1365ea94c884.3552609815279979306094.jpg"
+CELULA_3 = "https://imgur.com/6sZ3B2K.jpg"
 #espermatozoide
 CELULA_4 = "https://imgur.com/RD0Fe3X.jpg" 
 #espermatozoide
