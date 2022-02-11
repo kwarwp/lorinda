@@ -155,7 +155,7 @@ class Fase7():
         self.maria.fala()
         
     def ribossomo_fala(self, _=0):
-        afala = "Glicose: Eu sou uma molécula capaz de fornecer energia, mitocôndrias adoram me engolir"
+        afala = "Eu sou um interruptor, acoplado a mitocôndria, se você me ligar irá fazer o ribossomo achar sua parte"
         self.glicose_fake = Personagem(GLICOSE, x=-10000, y=100,w=100, h=100, afala=afala)
         afala = "Ribossomo: No caminho eu te explico..."
         self.ribossoma = Personagem(RIBOSSOMA, x=200, y=200, w=80, h=80, afala=afala,
