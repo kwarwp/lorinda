@@ -8,8 +8,8 @@ STYLE.update(width=600, height="600px")
 FOCO="https://i.imgur.com/6e096Va.png"
 MARIA = "https://i.imgur.com/FukdPW2.png"
 ROSALINDA = "https://imgur.com/0Dv7w29.png"
-LABORATORIO = "https://i.imgur.com/Y4qjEjo.png"
-LABORATORIO_1 = "https://i.imgur.com/Y4qjEjo.png"
+LABORATORIO = "https://imgur.com/Ley1AXg.jpg"
+LABORATORIO_1 = "https://imgur.com/Ley1AXg.jpg"
 LABORATORIO_2 = "https://i.imgur.com/Y4qjEjo.png"
 LABORATORIO_3 = "https://i.imgur.com/Y4qjEjo.png"
 LABORATORIO_4 = "https://i.imgur.com/Y4qjEjo.png"
@@ -33,8 +33,8 @@ class Fase3():
         #self.foco.entra(self.inicio)
         
         self.laboratorio=Cena(img=LABORATORIO)
-        self.maria=Elemento(img=MARIA, x=300, y=400, w=180, h=200, tit='oi,  Dr. Rosalinda sou sua fã, li todos os seus livros e seu artigo sobre "Direcionamento de Proteínas", ou seja, como as proteínas percorrem toda a célula')
-        self.rosalinda=Elemento(img=ROSALINDA, x=100, y=400, w=180, h=200, tit="as proteínas são muito importantes, para a nossa saúde e beleza! Precismos estuda-las, para nos manter saudáveis, fortes e bonitas. ")
+        self.maria=Elemento(img=MARIA, x=300, y=400, w=180, h=200, tit='Oi, Dra. Rosalinda! Sou sua fã!  Li todos os seus livros e seu artigo sobre "Direcionamento de Proteínas", ou seja, como as proteínas percorrem toda a célula.')
+        self.rosalinda=Elemento(img=ROSALINDA, x=100, y=400, w=180, h=200, tit="As proteínas são muito importantes para a nossa saúde e beleza! Precisamos estuda-las para nos manter saudáveis, fortes e bonitas. ")
         self.maria.entra(self.laboratorio)
         self.rosalinda.entra(self.laboratorio)
         #self.foco.vai=self.laboratorio.vai
@@ -53,8 +53,8 @@ class Fase3():
         self.rosalinda.vai = Texto(self.laboratorio_1, fala_rosalinda, foi=sumir).vai
         #self.elt.onclick = some
         self.maria.entra(self.laboratorio_1)
-        self.maria.tit=" Sim, elas são importantes.Então quer dizer que se eu não me alimentar bem, posso ter cabelos, unhas e pele feias?" 
-        self.rosalinda.tit= ""
+        self.maria.tit=" Então quer dizer que se eu não me alimentar bem, posso ter cabelos, unhas e pele feias?" 
+        self.rosalinda.tit= "Sim claro"
         self.laboratorio_1.direita=Cena(vai=self.parte_2)
         #rosalinda some 
     
@@ -65,7 +65,7 @@ class Fase3():
         self.laboratorio_2.esquerda=self.laboratorio_1
         self.maria.entra(self.laboratorio_2)
         self.maria.tit= " Como ela desapareceu?"
-        self.npc= Elemento(img=NPC,y=400,w=160,h=160, tit=" Você não deve esquecer do seu verdadeiro propósito buscar, desvendar um grande enigma celular. Você deve sempre lembrar que para uma célula funcionar, todas as suas organelas conectadas devem estar. Quando uma proteína conseguir transportar, livre você estará!")
+        self.npc= Elemento(img=NPC,y=400,w=160,h=160, tit=" Você não deve esquecer do seu verdadeiro propósito buscar, desvendar um grande enigma celular. Você deve sempre lembrar que para uma célula funcionar, todas as suas organelas conectadas devem estar. ")
         self.npc.entra(self.laboratorio_2)
         self.laboratorio_2.direita=Cena(vai=self.parte_3)
     
@@ -76,9 +76,10 @@ class Fase3():
         self.laboratorio_3.esquerda=self.laboratorio_2
         self.npc.entra(self.laboratorio_3)
         self.maria.entra(self.laboratorio_3)
-        self.npc.tit=" ele não é muito simpático"
-        self.maria.tit=" quem é você?"
-        self.dna=Elemento(img= DNA, y=450,x=200, tit="COMO, VOCÊ NÃO SABE MEU NOME?DE QUE PLANETA VOCÊ É?EU SOU O MAIORAL! ")
+        self.npc.tit=" Maria ele não é muito simpático. É o todo poderoso! E se acha"
+        self.maria.tit="  Maria o observa atentamente.  Maria caminha pelo meio daquele material gelatinoso e se aproxima dele. Ele percebe que está sendo observado e olha com uma cara não muito amigável.Quem é você?" 
+
+        self.dna=Elemento(img= DNA, y=450,x=200, tit="COMO, VOCÊ NÃO SABE MEU NOME!?DE QUE PLANETA VOCÊ É?!EU SOU O MAIORAL!! ")
         self.dna.entra(self.laboratorio_3)
         self.laboratorio_3.direita=Cena(vai=self.parte_4)
 
@@ -88,8 +89,8 @@ class Fase3():
         self.laboratorio_4.esquerda=self.laboratorio_3
         self.dna.entra(self.laboratorio_4)
         self.npc.entra(self.laboratorio_4)
-        self.dna.tit="vá estudar garota!"
-        self.npc.tit=" Responda o enigma: Sou constituído por letras, que se encaixam perfeitamente, seguindo uma determinada ordem. Quando tem algum erro, pode provocar uma doença ou mutação."
+        self.dna.tit= "vá estudar garota!"
+        self.npc.tit=" Responda o enigma: No meu interior há uma molécula constituída por letras que se encaixam perfeitamente seguindo uma determinada ordem. Quando nela há algum erro pode provocar uma doença ou mutação. Monte o quebra-cabeça e passe de fase."
         self.laboratorio_4.direita=Cena(vai=self.parte_5)
         
         #GABARITO DNA  (ácido dexoxirribonucleico) COMO PODEMOS COLOCAR ISSO ??
