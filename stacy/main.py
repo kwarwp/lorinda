@@ -2,4 +2,21 @@
 from _spy.vitollino.main import Cena,Elemento,Texto
 from _spy.vitollino.main import Inventario as inv
 
-RUA = "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimage.freepik.com%2Fvetores-gratis%2Filustracao-de-rua-da-cidade_1284-10867.jpg&imgrefurl=https%3A%2F%2Fbr.freepik.com%2Fvetores-gratis%2Filustracao-de-rua-da-cidade_3817795.htm&tbnid=CQcjp8wYdbeSDM&vet=12ahUKEwjShJ_0s_DoAhWXCrkGHaZyBtEQMygDegUIARDnAQ..i&docid=ch1VsUym1oK8iM&w=626&h=626&hl=pt-BR&safe=images&ved=2ahUKEwjShJ_0s_DoAhWXCrkGHaZyBtEQMygDegUIARDnAQ"
+RETICULO = ["f1dGlgQ wYdLfWl kVrzia6 6IHDCU9".split(), "f1dGlgQ wYdLfWl kVrzia6 6IHDCU9".split()]
+IM = "https://i.imgur.com/{}.jpg"
+
+class Reticulo:
+    def __init__(self, *_):
+        self.vai_reticulo()
+    def vai_reticulo(self):
+        sala_a = Sala(*[IM.format(lnk) for lnk in RETICULO[0]])
+        sala_b_args = [IM.format(lnk) for lnk in RETICULO[1]]
+        sala_b = Sala(*sala_b_args)
+        lab0 = Labirinto(sala_a, sala_b, sala_b, sala_b, sala_b)
+        lab1 = Labirinto(sala_b, sala_a, sala_a, sala_a, sala_a)
+        sala_b.norte.vai()
+
+
+    
+if __name__ == "__main__":
+    Reticulo()
