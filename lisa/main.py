@@ -111,7 +111,7 @@ class apresentacao():
     def entrou_lamina(self,*_):
         self.lamina.entra(self.laboratorio)
         self.lamina.vai= Texto(self.laboratorio, 
-        "nossa um pedaço de vidro, tenho um tempo antes da entrevista do estagio a moça disse que eu poderia ficar nos laboratórios estudando",
+        " O que será que tem nessa lâmina?",
         foi=self.entrou_cartaz).vai
    
     def entrou_cartaz(self,*_):
