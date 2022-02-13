@@ -83,7 +83,7 @@ class apresentacao():
         self.rua.vai()
         self.maria.entra(self.rua)
         self.maria.vai= Texto(self.rua, 
-        "estou indo para FIOCRUZ, acho que vou conseguir um estágio lá, uip",
+        "Estou indo para FIOCRUZ, acho que vou conseguir um estágio lá, uip",
         foi=self.entrou_rua2).vai
     def entrou_rua2(self,*_):
         self.rua2.vai()
