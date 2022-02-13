@@ -106,7 +106,7 @@ class apresentacao():
         self.laboratorio.vai()
         self.maria.entra(self.laboratorio)
         self.maria.vai= Texto(self.laboratorio, 
-        "aqui tem uns equipamentos para ver esse vidro, escolha qual vc acha melhor",
+        "Aqui tem uns equipamentos para ver essa lâmina, escolha qual vc acha melhor",
         foi=self.entrou_lamina).vai
     def entrou_lamina(self,*_):
         self.lamina.entra(self.laboratorio)
