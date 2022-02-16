@@ -202,12 +202,12 @@ class Fase1():
         self.maria.entra(self.celula)
         self.maria.vai=Texto(self.celula, "ONDE ESTOU?", foi=self.faladepois1).vai
         self.npc.entra(self.celula)
-        self.npc.vai=Texto(self.celula, " na cidade das células! CITONÓPOLIS", foi=self.faladepois2).vai
+        self.npc.vai=Texto(self.celula, " Na cidade das células! CITONÓPOLIS", foi=self.faladepois2).vai
     def faladepois1(self,*_):
-        self.maria.vai=Texto(self.celula,"como posso sair desse lugar?").vai
+        self.maria.vai=Texto(self.celula,"Como posso sair desse lugar?").vai
     def faladepois2(self,*_):
         from libby.main import Fase2
-        self.npc.vai=Texto(self.celula,"  você foi trazida para outra dimensão, a dimensão microscópica das células. Para você sair terá que vencer alguns enigmas e desafios relacionados ao mundo das células ou ficará presa aqui para sempre.", foi=Fase2).vai 
+        self.npc.vai=Texto(self.celula,"  Você foi trazida para outra dimensão, a dimensão microscópica das células. Para você sair terá que vencer alguns enigmas e desafios relacionados ao mundo das células ou ficará presa aqui para sempre.", foi=Fase2).vai 
     def vai(self):
 
         self.laboratorio.vai()
