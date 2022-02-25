@@ -129,7 +129,7 @@ class apresentacao():
     def ciclone(self, *_):
         self.redemoinho = Elemento(CICLONE, x=0, y=0, w=600, h=600, o=0.8, cena=self.laboratorio,
         style= {"transition": "left 6s"})
-        self.redemoinho.elt.ontransitionend = Fase1(self.maria).vai
+        self.redemoinho.elt.ontransitionend = Fase1(self.maria).entrou_celula
         self.maria_double=Elemento(img=MARIA, x=300, y=300, w=350, h=250, cena=self.laboratorio,
         style= {"transition": "left 6s, transform 1s"})
         Texto(self.laboratorio, 
