@@ -33,6 +33,8 @@ ESPERMATOZOIDE = "https://imgur.com/RD0Fe3X.jpg"
 ELODEA = "https://img1.gratispng.com/20180404/jkq/kisspng-algae-seaweed-aquatic-plants-aloe-5ac4853e2c61d2.8993360815228286061818.jpg"
 CALCIFORME = "https://imgur.com/2kY3sBX.jpg"
 NPC = "https://imgur.com/VcPXMYC.png"
+CICLONE = "https://i.imgur.com/BC6X7ho.gif"
+
 #colocar imagens da class apresentação 
 class apresentacao():
     def __init__(self):
@@ -122,7 +124,22 @@ class apresentacao():
     def entrou_microscopio(self,*_):
         self.microscopio.entra(self.laboratorio)
         self.microscopio.vai= Texto(self.laboratorio, "  Neste laboratório tem vários microscópios, microscópios ópticos e também eletrônico. Você pode utiliza-los para descobrir o que tem nessa lâmina.",
-        foi=Fase1(self.maria).vai).vai
+        foi=self.ciclone).vai
+        #foi=Fase1(self.maria).vai).vai
+    def ciclone(self, *_):
+        self.redemoinho = Elemento(CICLONE, x=0, y=0, w=600, h=600, o=0.8, cena=self.laboratorio,
+        style= {"transition": "left 6s"})
+        self.redemoinho.elt.ontransitionend = Fase1(self.maria).vai
+        self.maria_double=Elemento(img=MARIA, x=300, y=300, w=350, h=250, cena=self.laboratorio,
+        style= {"transition": "left 6s, transform 1s"})
+        Texto(self.laboratorio, 
+        "Eita! O que será este redemoinho que apareceu do nada no laboratório?",foi=self.anda_redemoinho).vai()
+        
+    def anda_redemoinho(self, _=0):
+        self.redemoinho.x = 1500
+        self.maria.x = 1500
+        self.maria_double.x = 1500
+        self.maria_double.elt.style.transform = "rotate(300deg)"
     def vai(self):
 
     
