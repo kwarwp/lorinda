@@ -60,7 +60,7 @@ class apresentacao():
         self.pacote.entra(self.rua2)
         self.rua2.direita=self.fiocruz
         self.fiocruz.esquerda=self.rua2
-        self.chefe=Elemento(img=CHEFE, x=590, y=450, w=350, h=250)
+        self.chefe=Elemento(img=CHEFE, x=250, y=390, w=150, h=150)
         self.laboratorio= Cena(img= LABORATORIO)
         self.cartaz=Elemento(CARTAZ, x=400)
         self.microscopio = Elemento(img = MICROSCOPIO, x=760, y=350)
@@ -224,8 +224,16 @@ class Fase1():
     def faladepois1(self,*_):
         self.maria.vai=Texto(self.celula,"Como posso sair desse lugar?").vai
     def faladepois2(self,*_):
+        #from libby.main import Fase2
+        self.npc.vai=Texto(self.celula,"  Você foi trazida para outra dimensão, a dimensão microscópica das células. Para você sair terá que vencer alguns enigmas e desafios relacionados ao mundo das células ou ficará presa aqui para sempre.", foi=self.faladepois3).vai 
+    def faladepois3(self,*_):
         from libby.main import Fase2
-        self.npc.vai=Texto(self.celula,"  Você foi trazida para outra dimensão, a dimensão microscópica das células. Para você sair terá que vencer alguns enigmas e desafios relacionados ao mundo das células ou ficará presa aqui para sempre.", foi=Fase2).vai 
+        fala = "Para começar a sua missão, você precisa passar por uma estrutura muito relevante para a célula."\
+        "É ela quem tem a função de proteger, delimitar, transportar e selecionar as substâncias que entram e saem da célula."\
+        "Você sabia que as células presentes nos seres vivos são classificadas em eucariontes e procariontes?" \
+        "Mas para seguir adiante, você precisa clicar na célula procarionte"#resposta certa é a bactéria
+
+        Texto(self.celula, fala, foi=Fase2).vai() 
     def vai(self, *_):
 
         self.laboratorio.vai()
