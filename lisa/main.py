@@ -229,9 +229,9 @@ class Fase1():
     def faladepois3(self,*_):
         from libby.main import Fase2
         fala = "Para começar a sua missão, você precisa passar por uma estrutura muito relevante para a célula."\
-        "É ela quem tem a função de proteger, delimitar, transportar e selecionar as substâncias que entram e saem da célula."\
-        "Você sabia que as células presentes nos seres vivos são classificadas em eucariontes e procariontes?" \
-        "Mas para seguir adiante, você precisa clicar na célula procarionte"#resposta certa é a bactéria
+        " É ela quem tem a função de proteger, delimitar, transportar e selecionar as substâncias que entram e saem da célula."\
+        " Você sabia que as células presentes nos seres vivos são classificadas em eucariontes e procariontes?" \
+        " Mas para seguir adiante, você precisa clicar na célula procarionte"#resposta certa é a bactéria
 
         Texto(self.celula, fala, foi=Fase2).vai() 
     def vai(self, *_):
