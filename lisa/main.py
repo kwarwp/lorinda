@@ -225,7 +225,7 @@ class Fase1():
     def faladepois2(self,*_):
         from libby.main import Fase2
         self.npc.vai=Texto(self.celula,"  Você foi trazida para outra dimensão, a dimensão microscópica das células. Para você sair terá que vencer alguns enigmas e desafios relacionados ao mundo das células ou ficará presa aqui para sempre.", foi=Fase2).vai 
-    def vai(self):
+    def vai(self, *_):
 
         self.laboratorio.vai()
         self.maria.entra(self.laboratorio)
