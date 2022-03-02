@@ -100,8 +100,7 @@ class apresentacao():
     def entrou_fiocruz(self,*_):
         self.fiocruz.vai()
         self.chefe.entra(self.fiocruz)
-        self.chefe.vai=Texto(self.fiocruz, 
-        "Boa tarde, Maria! Temos um tempo antes da entrevista. Fique à vontade, se quiser, pode explorar os laboratórios para estudar.").vai
+        self.chefe.vai=Texto(self.fiocruz,"Boa tarde, Maria! Temos um tempo antes da entrevista. Fique à vontade, se quiser, pode explorar os laboratórios para estudar.").vai
         self.maria.entra(self.fiocruz)
         self.maria.vai=Texto(self.fiocruz,
         "Nossa! Uma lâmina! Tenho um tempo antes da entrevista do estágio, vou procurar um laboratório",
