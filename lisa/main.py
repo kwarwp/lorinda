@@ -97,7 +97,7 @@ class apresentacao():
         self.maria.vai= Texto(self.rua2, 
         " Que pessoa estranha, não quero nada aceitar dela",
         foi=pega.vai).vai
-    def entrou_fiocruz(self,*_):
+    def entra_fiocruz(self,*_):
         self.fiocruz.vai()
         self.chefe.entra(self.fiocruz)
         self.chefe.vai=Texto(self.fiocruz,"Boa tarde, Maria! Temos um tempo antes da entrevista. Fique à vontade, se quiser, pode explorar os laboratórios para estudar.").vai
