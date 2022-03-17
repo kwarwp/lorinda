@@ -41,7 +41,7 @@ CICLONE = "https://i.imgur.com/BC6X7ho.gif"
 class apresentacao():
     def __init__(self):
         self.casa = Cena(img = CASA)#maria vai para fio cruz
-        self.maria= Elemento(img= MARIA, x=300, y=300, w=350, h=250)
+        self.maria= Elemento(img= MARIA, x=400, y=300, w=200, h=250)
         self.rua= Cena(img= RUA)
         self.estranha= Elemento(img= ESTRANHA, x=600, y=400, texto= "Guarde e proteja esse pacote com sua própria vida. Nele tem um mistério que só você poderá desvendar.")
         self.pacote=Elemento(img=PACOTE, x=760, y=450) #, tit="pacote")
