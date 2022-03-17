@@ -38,7 +38,7 @@ class Fase3():
         #self.rosalinda=Elemento(img=ROSALINDA, x=100, y=400, w=180, h=200, tit="As proteínas são muito importantes para a nossa saúde e beleza! Precisamos estuda-las para nos manter saudáveis, fortes e bonitas. ")
         mtit = ('Oi, Dra. Rosalinda! Sou sua fã!  Li todos os seus livros e seu artigo sobre "Direcionamento de Proteínas",' 
         'ou seja, como as proteínas percorrem toda a célula.')
-        self.maria=Elemento(img=MARIA, x=300, y=400, w=180, h=200, texto=mtit)
+        self.maria=Elemento(img=MARIA, x=300, y=300, w=280, h=300, texto=mtit)
         rtit = ("As proteínas são muito importantes para a nossa saúde e beleza!"
         "Precisamos estuda-las para nos manter saudáveis, fortes e bonitas. ")
         self.rosalinda=Elemento(img=ROSALINDA, x=100, y=400, w=180, h=200, texto=rtit)
