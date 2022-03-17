@@ -15,7 +15,8 @@ ESTRANHA= "https://i.imgur.com/f1dGlgQ.png"
 CASA= "https://i.imgur.com/pi9jHVf.png"
 PACOTE = "https://i.imgur.com/ZwnOqUW.jpg"
 RUA2 = "https://i.imgur.com/063NauC.jpg"
-MARIA = "https://i.imgur.com/FukdPW2.jpg"
+#MARIA = "https://i.imgur.com/FukdPW2.jpg"
+MARIA = "https://i.imgur.com/1sI2ePw.png"
 FIOCRUZ = "https://i.imgur.com/Fins20m.jpg"
 #CHEFE = "https://imgur.com/eAp7OQu.jpg"
 CHEFE = "https://imgur.com/zAMmqNJ.png"
@@ -60,7 +61,7 @@ class apresentacao():
         self.pacote.entra(self.rua2)
         self.rua2.direita=self.fiocruz
         self.fiocruz.esquerda=self.rua2
-        self.chefe=Elemento(img=CHEFE, x=250, y=390, w=150, h=150)
+        self.chefe=Elemento(img=CHEFE, x=200, y=390, w=150, h=150)
         self.laboratorio= Cena(img= LABORATORIO)
         self.cartaz=Elemento(CARTAZ, x=400)
         self.microscopio = Elemento(img = MICROSCOPIO, x=760, y=350)
