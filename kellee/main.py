@@ -202,8 +202,8 @@ class Fase5():
             
     
 if __name__ == "__main__":
-    Fase3()
-    #Fase5()
+    #Fase3()
+    Fase5()
 
     
     
