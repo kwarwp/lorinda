@@ -16,30 +16,40 @@ CELULA_4 = "https://imgur.com/RD0Fe3X.jpg"
 #espermatozoide
 CELULA_5 = "https://imgur.com/2kY3sBX.jpg"
 #nervosa neuronio
+MARIA = "https://i.imgur.com/1sI2ePw.png"
 
 CELULA_6 = "https://imgur.com/YK4fgSr.jpg"
 MOEDAS = "https://i.imgur.com/VfyiFmY.png"
 CICLONE = "https://static.todamateria.com.br/upload/55/65/556506fa96eca-ciclone.jpg"
-MEMBRANA = "https://i.imgur.com/SVGoGCK.jpg"
+CELULA = "https://i.imgur.com/SVGoGCK.jpg"
 NPC = "https://imgur.com/VcPXMYC.png"
+MEMBRANA = "https://i.imgur.com/5NdRkMo.jpg"
 A = ""
 B = ""
 C = ""
-D = "" 
+D = ""
+LIVRO = "https://i.imgur.com/tOQ2Lq0.png"
+class Fase1(): 
+    def __init__(self, maria=None):
+        self.laboratorio= Cena(img =  LABORATORIO)
+        self.celula = Cena(CELULA)
+        self.livro = Elemento(LIVRO, x=500, y=40, w=500, h=500, cena=self.celula)
+
 class Fase2():
     def __init__(self):
         #self.npc= Elemento(img= NPC)
         def some(ev):
             self.celula_1.x = -10000
         self.ciclone= Elemento(img= CICLONE)
-        self.celula_1= Elemento(img= CELULA_1,x=750,y=150, tit="Tenho como característica principal, é que meu material genético não está envolto por uma membrana nuclear. Ele fica espalhado pelo citoplasma, em regiões conhecidas como nucleóides, onde fica o DNA circular do tipo cromossômico. ", vai=self.acertou)
+        self.membrana= Cena(img= CELULA)
+        self.livro = Elemento(LIVRO, x=300, y=10, w=700, h=500, cena=self.membrana)
+        self.celula_1= Elemento(img= CELULA_1,x=750,y=150,  tit="Tenho como característica principal, é que meu material genético não está envolto por uma membrana nuclear. Ele fica espalhado pelo citoplasma, em regiões conhecidas como nucleóides, onde fica o DNA circular do tipo cromossômico. ", vai=self.acertou)
         #self.celula_1.elt.onclick = some  #Sair dessa sala e ir para a sala kelle, depois que acertar
         self.celula_2= Elemento(img= CELULA_2,x=750,y=50,tit="Sou a célula vegetal, sou o componente básico de todos os seres vivos que fazem parte do Reino Vegetal. Possuo núcleo organizado e vários tipos de organelas. Parede celular, plastos e vacúolos são estruturas que pertencem apenas a mim, pois são específicas para o estilo de vida das plantas.", vai=self.errou)
         self.celula_3= Elemento(img= CELULA_3,x=450,y=150,tit="Sou a hemácia. Faço parte do grupo de células que compõem o sangue. Sou especialista em transportar O2 e CO2. Quando madura, não possuo núcleo. Tenho forma bicôncava, o que facilita as trocas gasosas. Essa forma se deve à presença de proteínas estruturais no citoesqueleto.", vai=self.errou)
-        self.celula_4= Elemento(img= CELULA_4,x=450,y=50,tit="Pertenço ao sistema reprodutor masculino, tenho uma função muito importante, transfiro o DNA masculino ao ovócito. Possuo numerosas mitocôndrias que me fornecem ATP (adenosina trifosfato) para a locomoção. Sou a única célula dos mamíferos que possui flagelo. Sou o espermatozoide.", vai=self.errou)
+        self.celula_4= Elemento(img= CELULA_4,x=450,y=50, w=150, h=150, tit="Pertenço ao sistema reprodutor masculino, tenho uma função muito importante, transfiro o DNA masculino ao ovócito. Possuo numerosas mitocôndrias que me fornecem ATP (adenosina trifosfato) para a locomoção. Sou a única célula dos mamíferos que possui flagelo. Sou o espermatozoide.", vai=self.errou)
         self.celula_5= Elemento(img= CELULA_5,x=450,y=250,tit="Sou a célula caliciforme do intestino, sou um exemplo de uma célula epitelial especializada na síntese e exportação de proteínas para o meio extracelular. Me localizo, principalmente, no intestino delgado. Sou responsável pela produção e secreção do muco que reveste e protege o epitélio intestinal. Sou uma célula alongada, e, como esperado, muito rica em organelas relacionadas à rota secretora ou de exportação. Assim, verifica-se em mim a presença de um retículo endoplasmático granular abundante, um complexo de Golgi bem desenvolvido que dá origem a inúmeras vesículas secretoras. Estas vesículas dirigem-se à membrana plasmática apical, com a qual se fundem (por exocitose), descarregando seu conteúdo (o muco) na luz do intestino.", vai=self.errou)
         self.celula_6= Elemento(img= CELULA_6,x=750,y=250,tit="Sou uma célula altamente especializada em processar informações, capaz de transmitir o impulso nervoso para outras células. Possuo estruturas celulares como núcleo e mitocôndrias, como outras células, mas tenho uma forma diferenciada, que está relacionada com a minha função. Me chamo neurônio.", vai=self.errou)
-        self.membrana= Cena(img= MEMBRANA)
         self.membrana.vai()
         #self.jogo = Associa(self.membrana, caixa=300, borda=20, acertou=self.acertou, acertos=6)
         self.celula_1.entra(self.membrana)
@@ -60,7 +70,33 @@ class Fase2():
     
     def acertou(self,*_):
         from kellee.main import Fase3
+        MOCHILA.ganha_atp()
+        MOCHILA.ganha_atp()
+        MOCHILA.ganha_atp()
+        MOCHILA.ganha_atp()
+        MOCHILA.ganha_atp()
         Texto(self.membrana, "Você acertou tudo! Parabéns! Você ganhou cinco ATP, veja sua mochila",
+        foi=self.atravessa_membrana).vai()
+    
+    def atravessa_membrana(self,*_):
+        def maria_anda(*_):
+            self.maria.y = 450
+            self.maria.o = 0.2
+        def maria_chega(*_):
+            self.maria.y = 450
+            self.maria.o = 1
+            self.maria.vai = self.atravessou_membrana
+        self.membrana = Cena(MEMBRANA).vai()
+        Texto(self.membrana, "Você acertou tudo! Parabéns! Você ganhou cinco ATP, veja sua mochila").vai()
+        fala = Texto(self.membrana, "Tenho que atravessar a membrana para entrar na célula", foi=maria_anda)
+        self.maria = Elemento(img= MARIA, x=460, y=50, w=150, h=120, cena=self.membrana, vai=fala.vai,
+        style= {"transition": "top 5s, opacity 5s"})
+        self.maria.elt.ontransitionend = maria_chega
+        
+    
+    def atravessou_membrana(self,*_):
+        from kellee.main import Fase3
+        Texto(self.membrana, "Você atravessou a membrana!",
         foi=Fase3).vai()
         MOCHILA.ganha_atp()
         MOCHILA.ganha_atp()
