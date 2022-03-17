@@ -6,7 +6,8 @@ from anastasia.main import Swap
 STYLE.update(width=1000, height="600px")
 
 PAREDE = "https://i.imgur.com/ZAoCT4o.png"
-
+SEMFUNCAO = "https://i.imgur.com/u7zMLPW.png"
+GOLGI = "https://i.imgur.com/PUbco5w.png"
 class Fase6:
     def __init__(self,*_):
         
@@ -31,12 +32,16 @@ class Fase6:
         #self.NPC = Elemento(img=NPC, x=800, cena=self.parede, vai=self.pegou_atp)
         self.celular = Elemento(img=CELULAR, x=800, y=500, w=100, h=100, cena=self.parede,
         drop={'ATP': self.usou_o_celular})
-        self.movente = Elemento(img=LISOSSOMA, w=60, h=60, cena=self.parede,
+        self.movente = Elemento(img=GOLGI, w=260, h=260, cena=self.parede,
+            style={"transition": "left 5s, top 5s"})
+        self.movente = Elemento(img=LISOSSOMA, x=30, y=180, w=60, h=60, cena=self.parede,
             style={"transition": "left 5s, top 5s"})
         self.movente.elt.ontransitionend = self.persegue_maria
-        self.movente1 = Elemento(img=LISOSSOMA, w=60, h=60, x=200, cena=self.parede,
+        self.movente1 = Elemento(img=LISOSSOMA, w=60, h=60, x=180, y=140, cena=self.parede,
             style={"transition": "left 5s, top 5s"})
         self.organela = Elemento(img=RIBOSSOMA, x=300, y=400, w=60, h=60, cena=self.parede,
+            style={"transition": "opacity 2s"})
+        self.placa_organela = Elemento(img=SEMFUNCAO, x=280, y=380, w=80, h=30, cena=self.parede,
             style={"transition": "opacity 2s"})
         self.maria = Elemento(img=MARIA, x=600, y=400, cena=self.parede, # vai=self.usou_o_celular,
             style={"transition": "left 4s"})
@@ -102,6 +107,7 @@ class Fase6:
 
     def _persegue_maria(self, ev=None):
         self.maria.elt.ontransitionend = self.pede_socorro
+        self.placa_organela.o = 0
         self.organela.o = 0
         self.movente.x=700
         self.movente.y=400
