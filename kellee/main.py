@@ -2,6 +2,7 @@
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE, JOGO
 from _spy.vitollino.main import Inventario as inv 
 from anastasia.main import Associa, SF
+from tracy.main import Personagem
 # salas do games da Angelica, lorinda-lisa-libby e kellee
 STYLE.update(width=600, height="600px")
 #INICIO = "https://i.imgur.com/6vAoUiq.png"
@@ -33,8 +34,14 @@ class Fase3():
         #self.foco.entra(self.inicio)
         
         self.laboratorio=Cena(img=LABORATORIO)
-        self.maria=Elemento(img=MARIA, x=300, y=400, w=180, h=200, tit='Oi, Dra. Rosalinda! Sou sua fã!  Li todos os seus livros e seu artigo sobre "Direcionamento de Proteínas", ou seja, como as proteínas percorrem toda a célula.')
-        self.rosalinda=Elemento(img=ROSALINDA, x=100, y=400, w=180, h=200, tit="As proteínas são muito importantes para a nossa saúde e beleza! Precisamos estuda-las para nos manter saudáveis, fortes e bonitas. ")
+        #self.maria=Elemento(img=MARIA, x=300, y=400, w=180, h=200, tit='Oi, Dra. Rosalinda! Sou sua fã!  Li todos os seus livros e seu artigo sobre "Direcionamento de Proteínas", ou seja, como as proteínas percorrem toda a célula.')
+        #self.rosalinda=Elemento(img=ROSALINDA, x=100, y=400, w=180, h=200, tit="As proteínas são muito importantes para a nossa saúde e beleza! Precisamos estuda-las para nos manter saudáveis, fortes e bonitas. ")
+        mtit = ('Oi, Dra. Rosalinda! Sou sua fã!  Li todos os seus livros e seu artigo sobre "Direcionamento de Proteínas",' 
+        'ou seja, como as proteínas percorrem toda a célula.')
+        self.maria=Elemento(img=MARIA, x=300, y=400, w=180, h=200, texto=mtit)
+        rtit = ("As proteínas são muito importantes para a nossa saúde e beleza!"
+        "Precisamos estuda-las para nos manter saudáveis, fortes e bonitas. ")
+        self.rosalinda=Elemento(img=ROSALINDA, x=100, y=400, w=180, h=200, texto=rtit)
         self.maria.entra(self.laboratorio)
         self.rosalinda.entra(self.laboratorio)
         #self.foco.vai=self.laboratorio.vai
@@ -195,8 +202,8 @@ class Fase5():
             
     
 if __name__ == "__main__":
-    #Fase3()
-    Fase5()
+    Fase3()
+    #Fase5()
 
     
     
