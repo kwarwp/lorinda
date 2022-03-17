@@ -87,7 +87,6 @@ class Fase2():
             self.maria.o = 1
             self.maria.vai = self.atravessou_membrana
         self.membrana = Cena(MEMBRANA).vai()
-        Texto(self.membrana, "Você acertou tudo! Parabéns! Você ganhou cinco ATP, veja sua mochila").vai()
         fala = Texto(self.membrana, "Tenho que atravessar a membrana para entrar na célula", foi=maria_anda)
         self.maria = Elemento(img= MARIA, x=460, y=50, w=150, h=120, cena=self.membrana, vai=fala.vai,
         style= {"transition": "top 5s, opacity 5s"})
