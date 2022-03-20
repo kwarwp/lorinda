@@ -156,7 +156,7 @@ class Fase0():
         self.seta = Elemento(SETA, x=300, y=400, w=400, cena=self.laboratorio, vai=self.segue)
     def vai(self, *_):
         self.laboratorio.vai()
-        t = Texto(self.laboratorio, "Aprenda a jogar. Olá! Agora iremos começar uma grande aventura...Para isso, preciso que prestem bastante atenção!! Toda vez que aparecer um personagem e não aparecer uma caixinha como essa, é só passar o mouse por cima do personagem ou elemento e lembre-se, sempre comece pela Maria, ela é o personagem principal.")
+        t = Texto(self.laboratorio, "Aprenda a jogar. Olá! Agora iremos começar uma grande aventura. Para isso, é só clicar em cima dos personagens. Toda vez que aparecer mais de um personagem, comece pela Maria, ela é a personagem principal.")
         t.vai()
     def segue(self, *_):
         apresentacao().vai()
