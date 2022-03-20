@@ -219,7 +219,7 @@ class Fase1():
     def entrou_celula(self, *_):
         self.celula.vai()
         self.maria.entra(self.celula)
-        self.maria.vai=Texto(self.celula, "ONDE ESTOU?", foi=self.faladepois1).vai
+        self.maria.vai=Texto(self.celula, "Onde estou?", foi=self.faladepois1).vai
         self.npc.entra(self.celula)
         self.npc.vai=Texto(self.celula, " Na cidade das células! CITONÓPOLIS", foi=self.faladepois2).vai
     def faladepois1(self,*_):
@@ -232,7 +232,7 @@ class Fase1():
         fala = "Para começar a sua missão, você precisa passar por uma estrutura muito relevante para a célula."\
         " É ela quem tem a função de proteger, delimitar, transportar e selecionar as substâncias que entram e saem da célula."\
         " Você sabia que as células presentes nos seres vivos são classificadas em eucariontes e procariontes?" \
-        " Mas para seguir adiante e passar pela membrana plasmática, você precisa clicar na célula procarionte"#resposta certa é a bactéria
+        " Mas para seguir adiante e passar pela membrana plasmática, você precisa clicar na célula procarionte."#resposta certa é a bactéria
 
         Texto(self.celula, fala, foi=Fase2).vai() 
     def vai(self, *_):
