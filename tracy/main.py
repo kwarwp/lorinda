@@ -201,7 +201,7 @@ class Fase5():
         self.organela=Cena(img=ORGANELA)
         self.organela.vai()
         self.npc=Personagem(img=NPC,x=0, afala="Vim da Itália, era histologista, dei uma parte do meu nome para essa organela.Qual é meu nome?",responde=self.pergunta)
-        self.maria=Personagem(img=MARIA, afala="sim, mas qual é seu nome? Pode me ajudar a sair daqui",responde=self.npc.fala)
+        self.maria=Personagem(img=MARIA, afala="Sim, mas qual é seu nome? Pode me ajudar a sair daqui",responde=self.npc.fala)
         self.maria.entra(self.organela)
         self.npc.entra(self.organela)
         self.acabou = 2
@@ -211,14 +211,14 @@ class Fase5():
             return
         self.acabou -= 1
         self.multi = Texto(self.organela, "Qual o meu nome?",
-                           foi=self.resposta, A= "Lisossomo", B= "Perisoxomo ", C= "Complexo de Golgi", D= "Ribossomo").vai()
+                           foi=self.resposta, A= "Lisossomo", B= "Peroxissomo ", C= "Complexo de Golgi", D= "Ribossomo").vai()
 
     def mover(self, ev=None):
         self.movente.x=800
     def resposta(self, rep):
         from naomi.main import Fase7
         if rep == "C":
-            Texto(self.organela, "ganhou um ATP!", foi=Fase7).vai()
+            Texto(self.organela, "Ganhou um ATP!", foi=Fase7).vai()
         else:
             Texto(self.organela, "Ops não acertou", foi=self.pergunta).vai()
         
