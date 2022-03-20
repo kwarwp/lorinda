@@ -41,7 +41,7 @@ class Fase3():
         self.maria=Elemento(img=MARIA, x=300, y=300, w=280, h=300, texto=mtit)
         rtit = ("As proteínas são muito importantes para a nossa saúde e beleza!"
         "Precisamos estuda-las para nos manter saudáveis, fortes e bonitas. ")
-        self.rosalinda=Elemento(img=ROSALINDA, x=80, y=100, w=100, h=200, texto=rtit)
+        self.rosalinda=Elemento(img=ROSALINDA, x=80, y=250, w=100, h=200, texto=rtit)
         self.maria.entra(self.laboratorio)
         self.rosalinda.entra(self.laboratorio)
         #self.foco.vai=self.laboratorio.vai
