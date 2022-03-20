@@ -93,7 +93,7 @@ class Fase6:
         # self.matou_organela = False
 
     def pede_socorro(self, ev=None):
-        txt = ('Socorro DNA!')
+        txt = ('Socorro NPC!')
         Texto(self.parede, txt).vai()
 
     def foge_maria(self, ev=None):
