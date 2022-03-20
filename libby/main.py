@@ -104,7 +104,7 @@ class Fase2():
         MOCHILA.ganha_atp()
 
     def errou(self, *_):
-        Texto(self.membrana, "Poxa! Não sou eu, pois tenho citoplasma, membrana plasmática e núcleo. ").vai()
+        Texto(self.membrana, "Poxa! Não sou eu, pois sou uma célula eucarionte. ").vai()
     
     
         #self.npc.entra(self.celula,Tit = "Observe atentamente essas imagens e coloque as letras correspondentes."
