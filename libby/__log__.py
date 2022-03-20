@@ -233,3 +233,10 @@ TypeError: entra() got an unexpected keyword argument 'Tit'
     self.livro = Elemento(LIVRO, x=500, y=40, w=700, h=500, cena=self.membrana)
 AttributeError: 'Fase2' object has no attribute 'membrana'
 '''},
+{'date': 'Sat Mar 19 2022 22:27:00.231 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 46
+  self.celula_1= Elemento(img= CELULA_1,x=750,y=150, w=150, h= 150  tit="Tenho como característica principal, é que meu material genético não está envolto por uma membrana nuclear. Ele fica espalhado pelo citoplasma, em regiões conhecidas como nucleóides, onde fica o DNA circular do tipo cromossômico. ", vai=self.acertou)
+                                                                     ^
+SyntaxError: invalid syntax
+'''},
