@@ -88,7 +88,7 @@ class Fase2():
             self.maria.vai = self.atravessou_membrana
         self.membrana = Cena(MEMBRANA).vai()
         fala = Texto(self.membrana, "Tenho que atravessar a membrana plasmática para entrar na célula", foi=maria_anda)
-        self.maria = Elemento(img= MARIA, x=460, y=50, w=150, h=120, cena=self.membrana, vai=fala.vai,
+        self.maria = Elemento(img= MARIA, x=400, y=50, w=150, h=120, cena=self.membrana, vai=fala.vai,
         style= {"transition": "top 5s, opacity 5s"})
         self.maria.elt.ontransitionend = maria_chega
         
