@@ -294,3 +294,10 @@ TypeError: __init__() got an unexpected keyword argument 'texto'
                                                                                                                                                                                                                                                                       ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Sat Mar 19 2022 23:12:07.827 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 39
+  mtit = ('Oi, Dra. Rosalinda! Vim ao seu laboratório pois sou sua fã!  Admiro seu trabalho sobre a difração dos raios-x e me encanta saber que foi você quem realmente descobriu o formato helicoidal do DNA.Quero aprender sobre proteínas, me ajuda?",' 
+                                                                                                                                                                                                                                                                      ^
+SyntaxError: invalid syntax
+'''},
