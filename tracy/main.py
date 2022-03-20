@@ -173,7 +173,7 @@ class Fase4():  # SEM NENHUMA IMAGEM
             return
         self.acabou -= 1
         self.multi = Texto(self.parede, "Quais são os processos do DNA?",
-                           foi=self.resposta, A= "Tradução, Transdução e proteína", B= "Fagositose,Tradução e Proteína", C= "Pnocitose,Tradução e proteína", D= "Fagocitose,Transdução e Proteína").vai()
+                           foi=self.resposta, A= "Transcrição, tradução e proteína", B= "Fagocitose,tradução e proteína", C= "Pinocitose,tradução e proteína", D= "Fagocitose,transdução e proteína").vai()
 
     def mover(self, ev=None):
         self.movente.x=800
