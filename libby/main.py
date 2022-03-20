@@ -75,7 +75,7 @@ class Fase2():
         MOCHILA.ganha_atp()
         MOCHILA.ganha_atp()
         MOCHILA.ganha_atp()
-        Texto(self.membrana, "Você acertou tudo! Parabéns! Você ganhou cinco ATP, veja sua mochila",
+        Texto(self.membrana, "Você acertou! Parabéns! Você ganhou cinco ATP, veja sua mochila.",
         foi=self.atravessa_membrana).vai()
     
     def atravessa_membrana(self,*_):
