@@ -87,7 +87,7 @@ class Fase2():
             self.maria.o = 1
             self.maria.vai = self.atravessou_membrana
         self.membrana = Cena(MEMBRANA).vai()
-        fala = Texto(self.membrana, "Tenho que atravessar a membrana plasmática para entrar na célula", foi=maria_anda)
+        fala = Texto(self.membrana, "Tenho que atravessar a membrana plasmática para entrar na célula.", foi=maria_anda)
         self.maria = Elemento(img= MARIA, x=200, y=50, w=150, h=120, cena=self.membrana, vai=fala.vai,
         style= {"transition": "top 5s, opacity 5s"})
         self.maria.elt.ontransitionend = maria_chega
@@ -95,7 +95,7 @@ class Fase2():
     
     def atravessou_membrana(self,*_):
         from kellee.main import Fase3
-        Texto(self.membrana, "Você atravessou a membrana plasmática, uma estrutura fantástica que é constituída por uma bicamada lipídica com proteínas inseridas, além de carboidratos e esteroides.!",
+        Texto(self.membrana, "Você atravessou a membrana plasmática. Uma estrutura fantástica que é constituída por uma bicamada lipídica com proteínas inseridas, além de carboidratos e esteroides.",
         foi=Fase3).vai()
         MOCHILA.ganha_atp()
         MOCHILA.ganha_atp()
