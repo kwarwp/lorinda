@@ -132,7 +132,7 @@ class apresentacao():
         self.redemoinho = Elemento(CICLONE, x=0, y=0, w=600, h=600, o=0.8, cena=self.laboratorio,
         style= {"transition": "left 6s"})
         self.redemoinho.elt.ontransitionend = Fase1(self.maria).entrou_celula
-        self.maria_double=Elemento(img=MARIA, x=300, y=300, w=350, h=250, cena=self.laboratorio,
+        self.maria_double=Elemento(img=MARIA, x=300, y=300, w=250, h=250, cena=self.laboratorio,
         style= {"transition": "left 6s, transform 1s"})
         Texto(self.laboratorio, 
         "Eita! O que será este redemoinho que apareceu do nada no laboratório?",foi=self.anda_redemoinho).vai()
@@ -156,7 +156,7 @@ class Fase0():
         self.seta = Elemento(SETA, x=300, y=400, w=400, cena=self.laboratorio, vai=self.segue)
     def vai(self, *_):
         self.laboratorio.vai()
-        t = Texto(self.laboratorio, "Aprenda a jogar. Olá! Agora iremos começar uma grande aventura. Para isso, é só clicar em cima dos personagens.")
+        t = Texto(self.laboratorio, "Olá! Agora iremos começar uma grande aventura. Para jogar, é só clicar em cima dos personagens e objetos que aparecerem.")
         t.vai()
     def segue(self, *_):
         apresentacao().vai()
