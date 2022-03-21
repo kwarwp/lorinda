@@ -95,7 +95,7 @@ class Fase2():
     
     def atravessou_membrana(self,*_):
         from kellee.main import Fase3
-        Texto(self.membrana, "Você atravessou a membrana plasmática. Uma estrutura fantástica que é constituída por uma bicamada lipídica com proteínas inseridas, além de carboidratos e esteroides.",
+        Texto(self.membrana, "Você atravessou a membrana plasmática. Uma estrutura fantástica que possui composição lipoproteica, ou seja, é formada por proteínas e lipídios. Ela é composta por duas camadas de lipídios e as proteínas estão imersas nessas camadas. Esses lipídios mudam constantemente de posição e as proteínas distribuídas pela membrana lembram um mosaico, por isso, esse modelo de membrana recebeu o nome de “modelo do mosaico fluido”.",
         foi=Fase3).vai()
         MOCHILA.ganha_atp()
         MOCHILA.ganha_atp()
