@@ -95,7 +95,7 @@ class Fase2():
     
     def atravessou_membrana(self,*_):
         from kellee.main import Fase3
-        Texto(self.membrana, "Você atravessou a membrana!",
+        Texto(self.membrana, "Você atravessou a membrana plasmática, uma estrutura fantástica que é constituída por uma bicamada lipídica com proteínas inseridas, além de carboidratos e esteroides.!",
         foi=Fase3).vai()
         MOCHILA.ganha_atp()
         MOCHILA.ganha_atp()
