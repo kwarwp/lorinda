@@ -122,9 +122,9 @@ class Fase4():  # SEM NENHUMA IMAGEM
         #self.nucleo.direita=self.parede
         self.parede.esquerda=self.nucleo
         
-        self.npc=Elemento(img=NPC, x=100, tit= "atenção garota, veja o DNA")
-        self.dna=Elemento(img=DNA, x=200, tit= "só eu trabalho aqui, vou ter que criar um RNA para me ajudar")
-        self.rna=Elemento(img=RNA, x=300, tit= " Vamos lá galera, produzindo proteínas ") #aparece depois do dna
+        self.npc=Elemento(img=NPC, x=100, tit= "Atenção garota, veja o DNA")
+        self.dna=Elemento(img=DNA, x=200, tit= "Só eu trabalho aqui? Vou ter que criar um RNA para me ajudar.")
+        self.rna=Elemento(img=RNA, x=300, tit= " Vamos lá galera! Produzindo proteínas. ") #aparece depois do dna
         self.npc.entra(self.nucleo)
         self.dna.entra(self.nucleo)
         self.rna.entra(self.nucleo)
