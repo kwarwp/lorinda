@@ -39,7 +39,7 @@ class Fase3():
         mtit = ('Oi, Dra. Rosalinda! Vim ao seu laboratório pois sou sua fã!  Admiro seu trabalho sobre a difração dos raio-x e me encanta saber que foi você quem realmente descobriu o formato helicoidal do DNA",' 
         'Quero aprender sobre proteínas, me ajuda?')
         self.maria=Elemento(img=MARIA, x=50, y=280, w=280, h=300, texto=mtit)
-        rtit = ("As proteínas são muito importantes para a nossa saúde e beleza!"
+        rtit = ("As proteínas são moléculas orgânicas fundamentais para os seres vivos, elas são muito importantes para a nossa saúde e beleza!"
         "Precisamos estuda-las para nos manter saudáveis, fortes e bonitas. ")
         self.rosalinda=Elemento(img=ROSALINDA, x=300, y=280, w=280, h=300, texto=rtit)
         self.maria.entra(self.laboratorio)
@@ -60,8 +60,8 @@ class Fase3():
         self.rosalinda.vai = Texto(self.laboratorio_1, fala_rosalinda, foi=sumir).vai
         #self.elt.onclick = some
         self.maria.entra(self.laboratorio_1)
-        self.maria.tit=" Então quer dizer que se eu não me alimentar bem, posso ter cabelos, unhas e pele feias?" 
-        self.rosalinda.tit= "Sim claro"
+        self.maria.tit=" Quais as funções delas no nosso organismo?" 
+        self.rosalinda.tit= "Elas tem inúmeras funções. Tem função estrutural, pois são os constituintes básicos das fibras musculares, cabelo, ossos, dentes e pele. Também desempenham importante papel na proteção do organismo contra os agentes patológicos, é o caso dos anticorpos; na constituição de hormônios importantes para o bom funcionamento do organismo, em especial, a insulina, o FSH e o LH; na aceleração das reações químicas que acontecem no organismo."
         self.laboratorio_1.direita=Cena(vai=self.parte_2)
         #rosalinda some 
     
