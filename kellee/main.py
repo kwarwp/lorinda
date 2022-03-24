@@ -85,7 +85,7 @@ class Fase3():
         self.maria.entra(self.laboratorio_3)
         self.npc.tit=" Maria ele não é muito simpático. É o todo poderoso! E se acha"
         self.maria.tit="Maria o observa atentamente,Maria caminha pelo meio daquele material gelatinoso e se aproximadele.Ele percebe que está sendo observado e olha com uma cara não muito amigavel.quem é você?"
-        self.dna=Elemento(img= DNA, y=450,x=200,w=200, h=200, tit="COMO, VOCÊ NÃO SABE MEU NOME!?DE QUE PLANETA VOCÊ É?!EU SOU O MAIORAL!! ")
+        self.dna=Elemento(img= DNA, y=450,x=200,tit="COMO, VOCÊ NÃO SABE MEU NOME!?DE QUE PLANETA VOCÊ É?!EU SOU O MAIORAL!! ")
         self.dna.entra(self.laboratorio_3)
         self.laboratorio_3.direita=Cena(vai=self.parte_4)
 
