@@ -61,7 +61,7 @@ class Fase6:
         self._parede_vai()
         
     def usou_o_celular(self, atp, ev=None):
-        txt = ('Na pesquisa vc descobre que é o lisossoma. Ao chamar pelo nome eles vão embora')
+        txt = ('Pesquise no celular, eles são os lisossomos.São estruturas arredondadas e ricas em enzimas digestivas. Essas enzimas são produzidas pelo retículo endoplasmático rugoso e depois enviadas para o complexo golgiense, onde são armazenadas em pequenas vesículas. Essas vesículas se soltam e originam os lisossomos.')
         Texto(self.parede, txt, foi=self.vai_embora).vai()
         self.ATP.x = -1000
         
