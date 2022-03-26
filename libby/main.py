@@ -6,7 +6,7 @@ from courtney.main import MOCHILA
 SF.update({"font-size":"20px", "transition": "left 1s, top 1s"})
 STYLE.update(width=1000, height="600px")
 #bacteriaCerto
-CELULA_1 = "https://s1.static.brasilescola.uol.com.br/be/conteudo/images/o-nucleo-envolto-por-uma-membrana-apresenta-em-seu-interior-os-cromossomos-5a86b19fdc671.jpg"
+CELULA_1 = "https://imgur.com/ifgaFEO.jpg"
 #protozoarioCERTO
 CELULA_2 = "https://imgur.com/zpc9NP0.jpg"
 #vegetalCERTO
@@ -23,7 +23,7 @@ MOEDAS = "https://i.imgur.com/VfyiFmY.png"
 CICLONE = "https://static.todamateria.com.br/upload/55/65/556506fa96eca-ciclone.jpg"
 CELULA = "https://i.imgur.com/SVGoGCK.jpg"
 NPC = "https://imgur.com/VcPXMYC.png"
-MEMBRANA = "https://i.imgur.com/5NdRkMo.jpg"
+MEMBRANA = "https://s1.static.brasilescola.uol.com.br/be/conteudo/images/o-nucleo-envolto-por-uma-membrana-apresenta-em-seu-interior-os-cromossomos-5a86b19fdc671.jpg"
 A = ""
 B = ""
 C = ""
@@ -48,7 +48,8 @@ class Fase2():
         self.celula_2= Elemento(img= CELULA_2,x=550,y=300, w=150, h=150, tit="Sou a célula vegetal, sou o componente básico de todos os seres vivos que fazem parte do Reino Vegetal. Possuo núcleo organizado e vários tipos de organelas. Parede celular, plastos e vacúolos são estruturas que pertencem apenas a mim, pois são específicas para o estilo de vida das plantas.", vai=self.errou)
         self.celula_3= Elemento(img= CELULA_3,x=550,y=120, w=150, h=150, tit="Sou a hemácia. Faço parte do grupo de células que compõem o sangue. Sou especialista em transportar O2 e CO2. Quando madura, não possuo núcleo. Tenho forma bicôncava, o que facilita as trocas gasosas. Essa forma se deve à presença de proteínas estruturais no citoesqueleto.", vai=self.errou)
         self.celula_4= Elemento(img= CELULA_4,x=150,y=120, w=150, h=150, tit="Pertenço ao sistema reprodutor masculino, tenho uma função muito importante, transfiro o DNA masculino ao ovócito. Possuo numerosas mitocôndrias que me fornecem ATP (adenosina trifosfato) para a locomoção. Sou a única célula dos mamíferos que possui flagelo. Sou o espermatozoide.", vai=self.errou)
-        self.celula_5= Elemento(img= CELULA_5,x=350,y=120,w=150, h=150, tit="Sou a célula caliciforme do intestino, sou um exemplo de uma célula epitelial especializada na síntese e exportação de proteínas para o meio extracelular. Me localizo, principalmente, no intestino delgado. Sou responsável pela produção e secreção do muco que reveste e protege o epitélio intestinal. Sou uma célula alongada, e, como esperado, muito rica em organelas relacionadas à rota secretora ou de exportação. Assim, verifica-se em mim a presença de um retículo endoplasmático granular abundante, um complexo de Golgi bem desenvolvido que dá origem a inúmeras vesículas secretoras. Estas vesículas dirigem-se à membrana plasmática apical, com a qual se fundem (por exocitose), descarregando seu conteúdo (o muco) na luz do intestino.", vai=self.errou)
+        self.celula_5= Elemento(img= CELULA_5,x=350,y=120,w=150, h=150, tit="Sou a célula caliciforme do intestino, sou um exemplo de uma célula epitelial especializada na síntese e exportação de proteínas para o meio extracelular. Me localizo, principalmente, no intestino delgado. Sou responsável pela produção e secreção do muco que reveste e protege o epitélio intestinal. Sou uma célula alongada, e, como esperado, muito rica em organelas relacionadas à rota secretora ou de exportação. Assim, verifica-se em mim a presença de um retículo endoplasmático granular abundante, um complexo de Golgi bem desenvolvido que dá origem a inúmeras vesículas secretoras. Estas vesículas dirigem-se à membrana plasmática apical, com a qual se fundem (por exocitose), descarregando seu conteúdo (o muco) na luz do intestino."
+        , vai=self.errou)
         self.celula_6= Elemento(img= CELULA_6,x=350,y=300,w=150, h=150, tit="Sou uma célula altamente especializada em processar informações, capaz de transmitir o impulso nervoso para outras células. Possuo estruturas celulares como núcleo e mitocôndrias, como outras células, mas tenho uma forma diferenciada, que está relacionada com a minha função. Me chamo neurônio.", vai=self.errou)
         self.membrana.vai()
         #self.jogo = Associa(self.membrana, caixa=300, borda=20, acertou=self.acertou, acertos=6)
