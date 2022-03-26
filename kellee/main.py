@@ -22,7 +22,7 @@ NPC="https://imgur.com/VcPXMYC.png"
 ENIGMA= "https://i.imgur.com/pwI7UL8.png"
 NUCLEO="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/o-nucleo-envolto-por-uma-membrana-apresenta-em-seu-interior-os-cromossomos-5a86b19fdc671.jpg" # trocar essa imagemTROCADA
 PAREDE="https://i.imgur.com/hU2mulx.png" # trocar essa imagem
-ORGANELA="https://i.imgur.com/cjB4JUv.jpg" # trocar essa imagemTROCADA
+ORGANELA="https://www.genome.gov/sites/default/files/tg/es/illustration/___Citoplasma.jpg" # trocar essa imagemTROCADA
 COMPLEXOG="https://i.imgur.com/KEeZgXc.jpg" # trocar essa imagemTROCADA
 RNA= "https://i.imgur.com/Fiq5UIH.png" # trocar essa imagemTROCADA
 
