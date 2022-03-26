@@ -6,7 +6,7 @@ from courtney.main import MOCHILA
 SF.update({"font-size":"20px", "transition": "left 1s, top 1s"})
 STYLE.update(width=1000, height="600px")
 #bacteriaCerto
-CELULA_1 = "https://imgur.com/ifgaFEO.jpg"
+CELULA_1 = "https://s1.static.brasilescola.uol.com.br/be/conteudo/images/o-nucleo-envolto-por-uma-membrana-apresenta-em-seu-interior-os-cromossomos-5a86b19fdc671.jpg"
 #protozoarioCERTO
 CELULA_2 = "https://imgur.com/zpc9NP0.jpg"
 #vegetalCERTO
