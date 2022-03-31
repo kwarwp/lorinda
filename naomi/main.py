@@ -181,6 +181,10 @@ class Fase7():
         self.maria.x = 1500
         self.maria_double.x = 1500
         self.maria_double.elt.style.transform = "rotate(200deg)"
+    LABORATORIO="https://i.imgur.com/g3wt0Vb.jpg"
+    def laboratorio(self):
+        self.laboratorio=Cena =(LABORATORIO)
+        self.maria.entra(self.laboratorio)
     def main(self,_=0):
         self.parede=cena = JOGO.c('https://i.imgur.com/ujAF00x.jpg').vai()
         t = JOGO.n(cena, 'É isto! A Parede Celular!',foi=self.maria_sai)
