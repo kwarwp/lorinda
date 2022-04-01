@@ -186,7 +186,7 @@ class Fase5():
         if self.acabou == 0:
             return
         self.acabou -= 1
-        self.multi = Texto(self.organela, "Qual o meu nome?",
+        self.multi = Texto(self.organela, "Sou responsável por armazenar, transformar e exportar as substâncias produzidas no Retículo Endoplasmático Liso e Rugoso.Qual o meu nome?",
                            foi=self.resposta, A= "Lisossomo", B= "Peroxissomo ", C= "Complexo de Golgi", D= "Ribossomo").vai()
 
     def mover(self, ev=None):
