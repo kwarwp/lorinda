@@ -427,3 +427,10 @@ IndentationError: unexpected indent
   ^
 IndentationError: unexpected indent
 '''},
+{'date': 'Thu Mar 31 2022 21:02:00.791 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 187
+  def laboratorio(self _=0):
+  ^
+IndentationError: unexpected indent
+'''},
