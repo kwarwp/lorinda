@@ -22,7 +22,7 @@ NPC="https://imgur.com/VcPXMYC.png"
 ENIGMA= "https://i.imgur.com/pwI7UL8.png"
 NUCLEO="https://i.imgur.com/0OsquxQ.jpeg" # trocar essa imagemTROCADA
 PAREDE="https://i.imgur.com/khPaSvV.png" # trocar essa imagem
-ORGANELA="https://i.imgur.com/16VYFae.png" # trocar essa imagemTROCADA
+ORGANELA="https://i.imgur.com/kfZUTfR.png" # trocar essa imagemTROCADA
 COMPLEXOG="https://www.estudopratico.com.br/wp-content/uploads/2013/05/complexo-golgi.jpg" # trocar essa imagemTROCADA
 RNA= "https://i.imgur.com/Fiq5UIH.png" # trocar essa imagemTROCADA
 
