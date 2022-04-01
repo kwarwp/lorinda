@@ -315,3 +315,10 @@ SyntaxError: invalid syntax
                                                                                                                                                                                                                                                                       ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Thu Mar 31 2022 22:28:25.706 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 26
+  COMPLEXOG="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/o-complexo-golgiense-relaciona-se-com-secrecao-celular-5991c3a570ecb.jpg
+                                                                                                                                                  ^
+SyntaxError: EOL while scanning string literal
+'''},
