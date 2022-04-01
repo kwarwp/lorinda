@@ -95,7 +95,7 @@ class Fase3():
         self.laboratorio_4.esquerda=self.laboratorio_3
         self.dna.entra(self.laboratorio_4)
         self.npc.entra(self.laboratorio_4)
-        self.dna.tit= "vá estudar garota!"
+        self.dna.tit= "Vá estudar garota!"
         self.npc.tit=" Responda o enigma: No meu interior há uma molécula constituída por letras que se encaixam perfeitamente seguindo uma determinada ordem. Quando nela há algum erro pode provocar uma doença ou mutação. Monte o quebra-cabeça e passe de fase."
         self.laboratorio_4.direita=Cena(vai=self.parte_5)
         
@@ -105,14 +105,14 @@ class Fase3():
         from anastasia.main import Swap
         self.laboratorio_5=Cena(img=LABORATORIO_5)
         self.laboratorio_5.vai()
-        text = Texto(self.laboratorio_5, "foi!", foi=Fase4)
+        text = Texto(self.laboratorio_5, "Foi!", foi=Fase4)
         Swap(JOGO,ENIGMA,self.laboratorio_5, x=50, y=50, w=500,h=500, venceu=text)
         
 #fase3()
 
 class Fase4():  # SEM NENHUMA IMAGEM
     def __init__(self):
-        self.maria=Elemento(img=MARIA, tit="não consigo sair daqui")
+        self.maria=Elemento(img=MARIA, tit="Não consigo sair daqui")
         self.nucleo=Cena(img=NUCLEO)
         self.nucleo.vai()
         self.parede=Cena(img=PAREDE)
@@ -165,10 +165,10 @@ class Fase5():
     
         self.organela=Cena(img=ORGANELA)
         self.rosalinda=Elemento(img=ROSALINDA,tit ="Maria, olhe a estrutura", cena=self.organela)
-        self.maria=Elemento(img=MARIA, x=100, tit="  quem é você? ", cena=self.organela)
+        self.maria=Elemento(img=MARIA, x=100, tit="  Quem é você? ", cena=self.organela)
         self.complexog=Elemento(img=COMPLEXOG, x=200, tit="Sou uma organela, ué", cena=self.organela)
         self.organela.direita=Cena(vai=self.mariafala)
-        vai_reticulo = Elemento(SETA, tit="Conheça melhor o Retículo Endoplasmático clicando nesta Seta", x=100, y=200,
+        vai_reticulo = Elemento(SETA, tit="Conheça melhor o Retículo Endoplasmático clicando nesta seta", x=100, y=200,
         vai=self.viagem_reticulo, cena=self.organela)
         self.organela.vai()
         
