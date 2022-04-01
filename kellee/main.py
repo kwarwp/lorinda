@@ -154,9 +154,9 @@ class Fase4():  # SEM NENHUMA IMAGEM
         
     def resposta(self, rep):
         if rep == "A":
-            Texto(self.parede, "ganhou um ATP!", foi=Fase5).vai()
+            Texto(self.parede, "Ganhou um ATP!", foi=Fase5).vai()
         else:
-            Texto(self.parede, "Ops não acertou", foi=self.pergunta).vai()
+            Texto(self.parede, "Ops não acertou!", foi=self.pergunta).vai()
 #fase4()
 SETA = "https://i.imgur.com/N3JNtRW.png"
 
