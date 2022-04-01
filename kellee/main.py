@@ -168,7 +168,7 @@ class Fase5():
         self.maria=Elemento(img=MARIA, x=100, tit="  Quem é você? ", cena=self.organela)
         self.complexog=Elemento(img=COMPLEXOG, x=200, tit="Sou uma organela, ué", cena=self.organela)
         self.organela.direita=Cena(vai=self.mariafala)
-        vai_reticulo = Elemento(SETA, tit="Conheça melhor o Retículo Endoplasmático clicando nesta seta", x=100, y=200,
+        vai_reticulo = Elemento(SETA, tit="Conheça melhor o Retículo Endoplasmático clicando nesta seta", x=20, y=200,
         vai=self.viagem_reticulo, cena=self.organela)
         self.organela.vai()
         
