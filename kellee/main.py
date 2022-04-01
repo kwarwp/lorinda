@@ -12,7 +12,7 @@ ROSALINDA = "https://imgur.com/0Dv7w29.png"
 LABORATORIO = "https://imgur.com/Ley1AXg.jpg"
 LABORATORIO_1 = "https://imgur.com/Ley1AXg.jpg"
 LABORATORIO_2 = "https://i.imgur.com/Y4qjEjo.png"
-LABORATORIO_3 = "https://i.imgur.com/Y4qjEjo.png"
+LABORATORIO_3 = "https://s1.static.brasilescola.uol.com.br/be/conteudo/images/o-nucleo-envolto-por-uma-membrana-apresenta-em-seu-interior-os-cromossomos-5a86b19fdc671.jpg"
 LABORATORIO_4 = "https://i.imgur.com/Y4qjEjo.png"
 LABORATORIO_5 = "https://i.imgur.com/J8JTLqK.jpg"
 ESTRTURA= "https://imgur.com/iaGv545.png"
@@ -23,7 +23,7 @@ ENIGMA= "https://i.imgur.com/pwI7UL8.png"
 NUCLEO="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/o-nucleo-envolto-por-uma-membrana-apresenta-em-seu-interior-os-cromossomos-5a86b19fdc671.jpg" # trocar essa imagemTROCADA
 PAREDE="https://i.imgur.com/hU2mulx.png" # trocar essa imagem
 ORGANELA="https://www.genome.gov/sites/default/files/tg/es/illustration/___Citoplasma.jpg" # trocar essa imagemTROCADA
-COMPLEXOG="https://i.imgur.com/KEeZgXc.jpg" # trocar essa imagemTROCADA
+COMPLEXOG="https://www.estudopratico.com.br/wp-content/uploads/2013/05/complexo-golgi.jpg" # trocar essa imagemTROCADA
 RNA= "https://i.imgur.com/Fiq5UIH.png" # trocar essa imagemTROCADA
 
 
