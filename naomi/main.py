@@ -184,14 +184,6 @@ class Fase7():
   
     def main(self,_=0):
         self.parede=cena = JOGO.c('https://i.imgur.com/ujAF00x.jpg').vai()
-        afala = "Maria: Nossa! Que estrutura é essa?"
-        afala = "Npc: É uma estrutura que envolve a membrana plasmática, e está presente em células vegetais, organismos procariotose alguns eucariotos, como fungos. Tem como principal função, proteger a célula."
-        afala = "Maria: E agora como faço para sair daqui?"
-        afala = "Npc: Junte seus ATPs. Você precisa resolver o enigma. Coloque as letras corretas e livres você estará."
-        self.maria.entra(self.parede)
-        self.NPC.entra(self.parede)
-        self.maria.afala = afala
-        self.maria.responde = self.NPC.fala
         t = JOGO.n(cena, 'É isto! A Parede Celular!',foi=self.maria_sai)
         Swap(JOGO, PAREDE, cena, w=700,h=200,x=50,y=150,dw=7,dh=2, venceu=t) 
     
