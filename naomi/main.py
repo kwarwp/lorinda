@@ -250,7 +250,7 @@ class Fase11():
         
     def the_end(self, _=0):
         #from amanda.main import main
-        afala = "Maria: eu finalmente consegui sair desse lugar"
+        afala = "Maria: Ufa! Eu finalmente consegui sair desse lugar. Sua missão agora é ensinar aos outros, tudo o que aprendeu sobre organelas celulares."
         end="https://i.imgur.com/PGl5zCl.jpg"
         self.the_end = Elemento(end, x=0, y=0, w=600, h=600, o=0.8, cena=self.laboratorio)
         
