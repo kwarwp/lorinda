@@ -154,7 +154,7 @@ class Fase7():
             drop = {"glicose": faz_luz})
         self.glicose = Elemento(GLICOSE, x=0, y=100, tit = "glicose", drag = True,
             w=100, h=100)
-        afala = "Ribossomo: Porque perdi minha outra parte e preciso encontrá-la. Eu preciso gerar proteínas"
+        afala = "Ribossomo: Porque perdi minha outra parte e preciso encontrá-la. Eu preciso produzir proteínas"
         self.ribossoma = Personagem(RIBOSSOMA, x=200, y=200, w=80, h=80, afala=afala,
             responde=self.ribossomo_fala)
         afala = "Maria: Ribossomo, por que você está triste?"
