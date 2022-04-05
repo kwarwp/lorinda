@@ -455,3 +455,10 @@ SyntaxError: EOL while scanning string literal
                                                                                 ^
 SyntaxError: EOL while scanning string literal
 '''},
+{'date': 'Mon Apr 04 2022 22:04:10.372 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 67
+  'Essa organela é fundamental nos processos de fagocitose e pinocitose, em que a célula captura partículas através de pseudópodes para sua nutrição ou para destruir possíveis agentes 
+                                                                                                                                                                                        ^
+SyntaxError: EOL while scanning string literal
+'''},
