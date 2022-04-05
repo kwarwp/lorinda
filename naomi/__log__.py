@@ -441,3 +441,10 @@ IndentationError: unexpected indent
                                                                                                            ^
 SyntaxError: EOL while scanning string literal
 '''},
+{'date': 'Mon Apr 04 2022 22:03:34.747 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 68
+  'através de pseudópodes para sua nutrição ou para destruir possíveis agentes 
+                                                                               ^
+SyntaxError: EOL while scanning string literal
+'''},
