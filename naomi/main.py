@@ -18,7 +18,7 @@ class Fase6:
         RIBOSSOMA = "https://i.imgur.com/Tf5yrKb.png"
         LISOSSOMA = "https://i.imgur.com/g0OplxP.png"
         MARIA = "https://i.imgur.com/4yrnNgS.png"
-        CELULAR = "https://i.imgur.com/hUBdEPI.jpg"
+        CELULAR = "https://www.neoenergia.com/pt-br/te-interessa/meio-ambiente/PublishingImages/fotos/covid-virus-bacteria.png"
         MOCHILA.esvazia_mochila()
         MOCHILA.ganha_atp()
         #MOCHILA.quando_pega(pegou_atp)
@@ -61,7 +61,9 @@ class Fase6:
         self._parede_vai()
         
     def usou_o_celular(self, atp, ev=None):
-        txt = ('Eles são os lisossomos.São estruturas arredondadas e ricas em enzimas digestivas. Essas enzimas são produzidas pelo retículo endoplasmático rugoso e depois enviadas para o complexo golgiense, onde são armazenadas em pequenas vesículas. Essas vesículas se soltam e originam os lisossomos.')
+        txt = ('Eles são os lisossomos.São estruturas arredondadas e ricas em enzimas digestivas.'
+        'Essas enzimas são produzidas pelo retículo endoplasmático rugoso e depois enviadas para o complexo golgiense,'
+        'onde são armazenadas em pequenas vesículas. Essas vesículas se soltam e originam os lisossomos.')
         Texto(self.parede, txt, foi=self.vai_embora).vai()
         self.ATP.x = -1000
         
@@ -79,7 +81,7 @@ class Fase6:
         self.multi = Texto(self.parede, "processos corretos?",
                            foi=self.resposta, A= "a b", B= "b c", C= "c d", D= "b d").vai()
     def aconselha(self, ev=None):
-        conselho = "Pegue um ATP da mochila e jogue no celular"
+        conselho = "Pegue um ATP da mochila e jogue nos vírus e bactérias."
         self.multi = Texto(self.parede, conselho).vai()
 
     def move_maria(self, ev=None):
