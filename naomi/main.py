@@ -61,9 +61,11 @@ class Fase6:
         self._parede_vai()
         
     def usou_o_celular(self, atp, ev=None):
-        txt = ('Eles são os lisossomos.São estruturas arredondadas e ricas em enzimas digestivas.'
-        'Essas enzimas são produzidas pelo retículo endoplasmático rugoso e depois enviadas para o complexo golgiense,'
-        'onde são armazenadas em pequenas vesículas. Essas vesículas se soltam e originam os lisossomos.')
+        txt = ('Eles são os lisossomos. São estruturas arredondadas e ricas em enzimas digestivas.'
+        ' Essas enzimas são produzidas pelo retículo endoplasmático rugoso e depois enviadas para o complexo golgiense,'
+        ' onde são armazenadas em pequenas vesículas. Essas vesículas se soltam e originam os lisossomos.'
+        ' Essa organela é fundamental nos processos de fagocitose e pinocitose, em que a célula captura partículas através de pseudópodes para sua nutrição ou para destruir possíveis agentes' 
+        ' nocivos')
         Texto(self.parede, txt, foi=self.vai_embora).vai()
         self.ATP.x = -1000
         
