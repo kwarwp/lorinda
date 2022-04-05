@@ -50,7 +50,7 @@ class Fase6:
             'ela encosta numa organela que está com uma placa escrito sem função,'
             'a bolinha vem na direção dessa organela e destrói a organela.')
         txt = ('Maria vê uma organela que está com uma placa escrito sem função'
-            'e vai ver o do que se trata.')
+            ' e vai ver do que se trata.')
         Texto(self.parede, txt, foi=self.move_maria).vai()
         self.acabou = 2
         # self.pergunta()
@@ -86,9 +86,9 @@ class Fase6:
         self.maria.x=340
 
     def encosta_maria(self, ev=None):
-        txt = ('Ela encosta na organela que está com a placa escrito sem função.'
-        'De repente Maria vê umas bolinhas se desprendo do complexo de Golgi,'
-            'as bolinhas vem na direção dessa organela e destrói a organela.')
+        txt = ('Ela encosta nessa organela e '
+        'de repente vê umas bolinhas se desprendendo do complexo de Golgi.'
+            ' As bolinhas vem na direção da organela e a destrói. Elas atacam Maria, que corre.')
         Texto(self.parede, txt, foi=self.mover).vai() if self.matou_organela else None
         # self.matou_organela = False
 
