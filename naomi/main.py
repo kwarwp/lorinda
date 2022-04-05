@@ -165,9 +165,9 @@ class Fase7():
         self.maria.fala()
         
     def ribossomo_fala(self, _=0):
-        afala = "Eu sou um interruptor, acoplado a mitocôndria, se você me ligar irá fazer o ribossomo achar sua parte"
+        afala = "Você está em cima de uma mitocôndria. Acople a molécula de glicose para liberar energia e acender a luz, assim o ribossomo poderá encontrar sua outra parte."
         self.glicose_fake = Personagem(GLICOSE, x=-10000, y=100,w=100, h=100, afala=afala)
-        afala = "Ribossomo: No caminho eu te explico..."
+        afala = "Ribossomo: Maria, olhe onde você está..."
         self.ribossoma = Personagem(RIBOSSOMA, x=200, y=200, w=80, h=80, afala=afala,
             responde=self.glicose_fake.fala)
         afala = "Maria: Mas está tudo escuro, como vamos achar?"
