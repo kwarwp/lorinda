@@ -72,7 +72,7 @@ class Fase3():
         self.laboratorio_2.esquerda=self.laboratorio_1
         self.maria.entra(self.laboratorio_2)
         self.maria.tit= " Como ela desapareceu?"
-        self.npc= Elemento(img=NPC,y=400,w=160,h=160, tit=" Você não deve esquecer do seu verdadeiro propósito buscar, desvendar um grande enigma celular. Você deve sempre lembrar que para uma célula funcionar, todas as suas organelas conectadas devem estar. ")
+        self.npc= Elemento(img=NPC,y=400,w=200,h=200, tit=" Você não deve esquecer do seu verdadeiro propósito buscar, desvendar um grande enigma celular. Você deve sempre lembrar que para uma célula funcionar, todas as suas organelas conectadas devem estar. ")
         self.npc.entra(self.laboratorio_2)
         self.laboratorio_2.direita=Cena(vai=self.parte_3)
     
@@ -165,7 +165,7 @@ class Fase5():
     
         self.organela=Cena(img=ORGANELA)
         self.rosalinda=Elemento(img=ROSALINDA,tit ="Maria, olhe a estrutura", cena=self.organela)
-        self.maria=Elemento(img=MARIA, x=100, tit="  Quem é você? ", cena=self.organela)
+        self.maria=Elemento(img=MARIA, x=300, tit="  Quem é você? ", cena=self.organela)
         self.complexog=Elemento(img=COMPLEXOG, x=200, tit="Sou uma organela, ué", cena=self.organela)
         self.organela.direita=Cena(vai=self.mariafala)
         vai_reticulo = Elemento(SETA, tit="Conheça melhor o Retículo Endoplasmático clicando nesta seta", x=20, y=200,
@@ -177,7 +177,7 @@ class Fase5():
         Reticulo(voltar=self.mariafala)
     def mariafala(self, *_):
         self.organela=Cena(img=ORGANELA)
-        self.maria=Elemento(img=MARIA, x=100, tit="sim, mas qual é seu nome? Pode me ajudar a sair daqu", cena=self.organela)
+        self.maria=Elemento(img=MARIA, x=300, tit="sim, mas qual é seu nome? Pode me ajudar a sair daqu", cena=self.organela)
         self.npc=Elemento(img=NPC, tit="Vim da Itália, era histologista, dei uma parte do meu nome para essa organela.Qual é meu nome?", cena=self.organela)
         self.organela.vai()
         self.acabou = 2
