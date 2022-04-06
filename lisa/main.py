@@ -215,7 +215,8 @@ class Fase1():
         self.calciforme.entra(self.laboratorio)
         self.calciforme.vai=Texto(self.laboratorio,
         "eu fico no instestino delgado eu tenho diversas funções, uma dela pe revestir com muco para proteger onde estou",
-        foi=self.entrou_celula).vai"""
+        foi=self.entrou_celula).vai
+        
     def entrou_celula(self, *_):
         self.celula.vai()
         self.maria.entra(self.celula)
