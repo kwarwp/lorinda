@@ -240,7 +240,7 @@ class Fase1():
 
         self.laboratorio.vai()
         self.maria.entra(self.laboratorio)
-        #self.celula.vai()
+        self.celula.vai()
 Fase1().vai()
 apresentacao().vai()
 Fase0().vai()
