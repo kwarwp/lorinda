@@ -244,7 +244,7 @@ class Fase1():
 Fase1().vai()
 apresentacao().vai()
 Fase0().vai()
- print(Fase1)
+print(Fase1)
 
 
 
