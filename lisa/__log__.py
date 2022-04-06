@@ -1210,3 +1210,10 @@ SyntaxError: invalid syntax : triple string end not found
             ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Apr 06 2022 16:02:06.232 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 247
+  print(Fase1)
+  ^
+IndentationError: unexpected indent
+'''},
