@@ -43,7 +43,7 @@ class Fase6:
             style={"transition": "opacity 2s"})
         self.placa_organela = Elemento(img=SEMFUNCAO, x=280, y=380, w=80, h=30, cena=self.parede,
             style={"transition": "opacity 2s"})
-        self.maria = Elemento(img=MARIA, x=600, y=400, cena=self.parede, # vai=self.usou_o_celular,
+        self.maria = Elemento(img=MARIA, x=600, y=390, cena=self.parede, # vai=self.usou_o_celular,
             style={"transition": "left 4s"})
         self.maria.elt.ontransitionend = self.encosta_maria
         txt0 = ('De repente Maria vê uma bolinha se desprendo do complexo de golgi,'
@@ -87,7 +87,7 @@ class Fase6:
         self.multi = Texto(self.parede, conselho).vai()
 
     def move_maria(self, ev=None):
-        self.maria.x=340
+        self.maria.x=400
 
     def encosta_maria(self, ev=None):
         txt = ('Ela encosta nessa organela e '
@@ -155,10 +155,10 @@ class Fase7():
         self.glicose = Elemento(GLICOSE, x=0, y=100, tit = "glicose", drag = True,
             w=100, h=100)
         afala = "Ribossomo: Porque perdi minha outra parte e preciso encontrá-la. Eu preciso produzir proteínas"
-        self.ribossoma = Personagem(RIBOSSOMA, x=200, y=200, w=80, h=80, afala=afala,
+        self.ribossoma = Personagem(RIBOSSOMA, x=300, y=300, w=90, h=90, afala=afala,
             responde=self.ribossomo_fala)
         afala = "Maria: Ribossomo, por que você está triste?"
-        self.maria=Personagem(img=MARIA, x=400, y=200, w=100, h=200, afala=afala, responde=self.ribossoma.fala)
+        self.maria=Personagem(img=MARIA, x=500, y=300, w=200, h=300, afala=afala, responde=self.ribossoma.fala)
         self.glicose.entra(self.celula)
         self.ribossoma.entra(self.celula)
         self.maria.entra(self.celula)
@@ -168,7 +168,7 @@ class Fase7():
         afala = "Você está em cima de uma mitocôndria. Acople a molécula de glicose para liberar energia e acender a luz, assim o ribossomo poderá encontrar sua outra parte."
         self.glicose_fake = Personagem(GLICOSE, x=-10000, y=100,w=100, h=100, afala=afala)
         afala = "Ribossomo: Maria, olhe onde você está..."
-        self.ribossoma = Personagem(RIBOSSOMA, x=200, y=200, w=80, h=80, afala=afala,
+        self.ribossoma = Personagem(RIBOSSOMA, x=300, y=300, w=90, h=90, afala=afala,
             responde=self.glicose_fake.fala)
         afala = "Maria: Mas está tudo escuro, como vamos achar?"
         # self.maria=Personagem(img=MARIA, x=400, y=200, w=100, h=200, afala=afala, responde=self.ribossoma.fala)
@@ -205,7 +205,7 @@ class Fase7():
         self.redemoinho.entra(self.parede)
         self.maria.afala = afala
         self.maria.responde = self.anda_redemoinho
-        self.maria_double=Elemento(img=MARIA, x=400, y=200, w=100, h=200, cena=self.parede,
+        self.maria_double=Elemento(img=MARIA, x=500, y=300, w=200, h=300, cena=self.parede,
         style= {"transition": "left 6s, transform 1s"})
         self.redemoinho.entra(self.parede)
         self.maria.entra(self.parede)
@@ -219,7 +219,7 @@ class Fase7():
         self.maria.afala = afala
         self.maria.responde = self.anda_redemoinho
         #self.maria.x = 600
-        self.maria_double=Elemento(img=MARIA, x=400, y=200, w=100, h=200, cena=self.celula,
+        self.maria_double=Elemento(img=MARIA, x=500, y=300, w=200, h=300, cena=self.celula,
         style= {"transition": "left 6s, transform 1s"})
         self.redemoinho.entra(self.celula)
         self.maria.entra(self.celula)
