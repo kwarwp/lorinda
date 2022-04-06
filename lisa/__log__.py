@@ -1203,3 +1203,10 @@ SyntaxError: invalid syntax : triple string end not found
                                                                                                                                                                                                            ^
 SyntaxError: invalid syntax : triple string end not found
 '''},
+{'date': 'Wed Apr 06 2022 15:57:36.744 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 218
+  foi=self.entrou_celula).vai"""
+            ^
+SyntaxError: invalid syntax
+'''},
