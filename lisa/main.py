@@ -61,7 +61,7 @@ class apresentacao():
         self.pacote.entra(self.rua2)
         self.rua2.direita=self.fiocruz
         self.fiocruz.esquerda=self.rua2
-        self.chefe=Elemento(img=CHEFE, x=300, y=390, w=150, h=150)
+        self.chefe=Elemento(img=CHEFE, x=200, y=390, w=200, h=150)
         self.laboratorio= Cena(img= LABORATORIO)
         self.cartaz=Elemento(CARTAZ, x=400)
         self.microscopio = Elemento(img = MICROSCOPIO, x=760, y=350)
