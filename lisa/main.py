@@ -117,7 +117,7 @@ class apresentacao():
         self.lamina.vai= Texto(self.laboratorio, 
         " O que será que tem nessa lâmina?",
         foi=self.entrou_cartaz).vai
-   
+    
     def entrou_cartaz(self,*_):
         self.cartaz.entra(self.laboratorio)
         self.cartaz.vai=Texto(self.laboratorio, 
@@ -241,10 +241,10 @@ class Fase1():
         self.laboratorio.vai()
         self.maria.entra(self.laboratorio)
         #self.celula.vai()
-#Fase1().vai()
-#apresentacao().vai()
+Fase1().vai()
+apresentacao().vai()
 Fase0().vai()
-#print(Fase1)
+ print(Fase1)
 
 
 
