@@ -175,7 +175,7 @@ class Fase1():
         self.calciforme= Elemento(img=CALCIFORME)
         self.npc= Elemento(img= NPC,texto = "Para começar a sua missão, você precisa passar por uma estrutura muito relevante para a célula. É ela quem tem a função de proteger, delimitar, transportar e selecionar as substâncias que entram e saem da célula. Você sabia que as células presentes nos seres vivos são classificadas em eucariontes e procariontes? Mas para seguir adiante, você precisa clicar na célula procarionte", cena=self.laboratorio)#resposta certa é a bactéria
         self.npc.texto.foi = self.entrou_celula
-    """
+    
     def entrou_procarionte(self, *_):
         self.procarionte.entra(self.laboratorio)
         self.procarionte.vai=Texto(self.laboratorio,
