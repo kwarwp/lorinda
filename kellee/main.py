@@ -38,7 +38,7 @@ class Fase3():
         #self.rosalinda=Elemento(img=ROSALINDA, x=100, y=400, w=180, h=200, tit="As proteínas são muito importantes para a nossa saúde e beleza! Precisamos estuda-las para nos manter saudáveis, fortes e bonitas. ")
         mtit = ('Oi, Dra. Rosalinda! Vim ao seu laboratório pois sou sua fã!  Admiro seu trabalho sobre a difração dos raio-x e me encanta saber que foi você quem realmente descobriu o formato helicoidal do DNA",' 
         'Quero aprender sobre proteínas, me ajuda?')
-        self.maria=Elemento(img=MARIA, x=100, y=280, w=280, h=300, texto=mtit)
+        self.maria=Elemento(img=MARIA, x=200, y=280, w=280, h=300, texto=mtit)
         rtit = ("As proteínas são moléculas orgânicas fundamentais para os seres vivos, elas são muito importantes para a nossa saúde e beleza!"
         "Precisamos estuda-las para nos manter saudáveis, fortes e bonitas. ")
         self.rosalinda=Elemento(img=ROSALINDA, x=300, y=280, w=280, h=300, texto=rtit)
@@ -85,7 +85,7 @@ class Fase3():
         self.maria.entra(self.laboratorio_3)
         self.npc.tit=" Maria ele não é muito simpático. É o todo poderoso! E se acha"
         self.maria.tit="Maria o observa atentamente,Maria caminha pelo meio daquele material gelatinoso e se aproximadele.Ele percebe que está sendo observado e olha com uma cara não muito amigavel.quem é você?"
-        self.dna=Elemento(img= DNA, y=450,x=200,tit="COMO, VOCÊ NÃO SABE MEU NOME!?DE QUE PLANETA VOCÊ É?!EU SOU O MAIORAL!! ")
+        self.dna=Elemento(img= DNA, y=450,x=300,tit="COMO, VOCÊ NÃO SABE MEU NOME!?DE QUE PLANETA VOCÊ É?!EU SOU O MAIORAL!! ")
         self.dna.entra(self.laboratorio_3)
         self.laboratorio_3.direita=Cena(vai=self.parte_4)
 
@@ -122,8 +122,8 @@ class Fase4():  # SEM NENHUMA IMAGEM
         #self.nucleo.direita=self.parede
         self.parede.esquerda=self.nucleo
         
-        self.npc=Elemento(img=NPC, x=100, tit= "Atenção garota, veja o DNA")
-        self.dna=Elemento(img=DNA, x=200, tit= "Só eu trabalho aqui? Vou ter que criar um RNA para me ajudar.")
+        self.npc=Elemento(img=NPC, x=200, tit= "Atenção garota, veja o DNA")
+        self.dna=Elemento(img=DNA, x=300, tit= "Só eu trabalho aqui? Vou ter que criar um RNA para me ajudar.")
         self.rna=Elemento(img=RNA, x=300, tit= " Vamos lá galera! Produzindo proteínas. ") #aparece depois do dna
         self.npc.entra(self.nucleo)
         self.dna.entra(self.nucleo)
