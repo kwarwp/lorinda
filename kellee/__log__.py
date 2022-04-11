@@ -422,3 +422,10 @@ SyntaxError: invalid syntax
     self.rosalinda=Elemento(img=ROSALINDA, x=o, y=350, w=200, h=200, tit ="Maria, olhe a estrutura", cena=self.organela)
 NameError: name 'o' is not defined
 '''},
+{'date': 'Sun Apr 10 2022 22:38:33.427 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 168
+  self.maria=Elemento(img=MARIA, x=150, y-350, w=200, h=200, tit="  Quem é você? ", cena=self.organela)
+                                             ^
+SyntaxError: non-keyword arg after keyword arg
+'''},
