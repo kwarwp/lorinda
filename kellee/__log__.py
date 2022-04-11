@@ -397,3 +397,10 @@ SyntaxError: invalid syntax
                                                                                                 ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Sun Apr 10 2022 22:27:52.41 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 170
+  self.maria= (texto="sim, mas qual é seu nome? Pode me ajudar a sair daqu", cena=self.organela)
+                                                                                                ^
+SyntaxError: invalid syntax
+'''},
