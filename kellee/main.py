@@ -177,8 +177,8 @@ class Fase5():
         Reticulo(voltar=self.mariafala)
     def mariafala(self, *_):
         self.organela=Cena(img=ORGANELA)
-        self.maria=Elemento(img=MARIA, x=300, tit="Sim, mas qual é seu nome? Pode me ajudar a sair daqui?", cena=self.organela)
-        self.npc=Elemento(img=NPC, tit="Ele veio da Itália, era histologista, deu uma parte do meu nome para essa organela.Qual o seu nome?", cena=self.organela)
+        self.maria=Elemento(img=MARIA, x=100, y=400, w=200, h=200, tit="Sim, mas qual é o nome dele? Será que ele pode me ajudar a sair daqui?", cena=self.organela)
+        self.npc=Elemento(img=NPC, x=300, y=475, tit="Ele veio da Itália, era histologista, deu uma parte do meu nome para essa organela.Qual o seu nome?", cena=self.organela)
         self.organela.vai()
         self.acabou = 2
         self.pergunta()
