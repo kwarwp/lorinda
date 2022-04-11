@@ -376,3 +376,10 @@ TypeError: __init__() got multiple values for argument 'self'
     self.rosalinda=Elemento(img=ROSALINDA, self="Maria, olhe a estrutura", cena=self.organela)
 TypeError: __init__() got multiple values for argument 'self'
 '''},
+{'date': 'Sun Apr 10 2022 22:00:29.934 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 168
+  self.maria=Elemento(img=MARIA, x=100,y=200 tit="  Quem é você? ", cena=self.organela)
+                                              ^
+SyntaxError: invalid syntax
+'''},
