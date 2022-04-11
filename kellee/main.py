@@ -195,9 +195,9 @@ class Fase5():
         from naomi.main import Fase6
 
         if rep == "C":
-            Texto(self.organela, "ganhou um ATP!", foi=Fase6).vai()
+            Texto(self.organela, "Ganhou um ATP!", foi=Fase6).vai()
         else:
-            Texto(self.organela, "Ops não acertou", foi=self.pergunta).vai()
+            Texto(self.organela, "Ops! Não acertou", foi=self.pergunta).vai()
 
             
     
