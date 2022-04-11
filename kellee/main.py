@@ -164,9 +164,9 @@ class Fase5():
     def __init__(self):
     
         self.organela=Cena(img=ORGANELA)
-        self.rosalinda=Elemento(img=ROSALINDA,tit ="Maria, olhe a estrutura", cena=self.organela)
-        self.maria=Elemento(img=MARIA, x=300, tit="  Quem é você? ", cena=self.organela)
-        self.complexog=Elemento(img=COMPLEXOG, x=200, tit="Sou uma organela, ué", cena=self.organela)
+        self.rosalinda=Elemento(img=ROSALINDA, x=0, y=350, w=200, h=200, tit ="Maria, olhe a estrutura ao seu lado.", cena=self.organela)
+        self.maria=Elemento(img=MARIA, x=150, y=350, w=200, h=200, tit=" Quem é você? ", cena=self.organela)
+        self.complexog=Elemento(img=COMPLEXOG, x=350, y=350, w=200, h=200,  tit="Sou uma organela, ué", cena=self.organela)
         self.organela.direita=Cena(vai=self.mariafala)
         vai_reticulo = Elemento(SETA, tit="Conheça melhor o Retículo Endoplasmático clicando nesta seta", x=20, y=200,
         vai=self.viagem_reticulo, cena=self.organela)
