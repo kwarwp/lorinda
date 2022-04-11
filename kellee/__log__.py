@@ -383,3 +383,10 @@ TypeError: __init__() got multiple values for argument 'self'
                                               ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Sun Apr 10 2022 22:26:18.911 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 170
+  self.maria=(texto="sim, mas qual é seu nome? Pode me ajudar a sair daqu", cena=self.organela)
+                                                                                               ^
+SyntaxError: invalid syntax
+'''},
