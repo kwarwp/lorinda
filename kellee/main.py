@@ -60,8 +60,8 @@ class Fase3():
         self.rosalinda.vai = Texto(self.laboratorio_1, fala_rosalinda, foi=sumir).vai
         #self.elt.onclick = some
         self.maria.entra(self.laboratorio_1)
-        self.maria.texto=" Quais as funções delas no nosso organismo?" 
-        self.rosalinda.texto= "Elas tem inúmeras funções. Tem função estrutural, pois são os constituintes básicos das fibras musculares, cabelo, ossos, dentes e pele. Também desempenham importante papel na proteção do organismo contra os agentes patológicos, é o caso dos anticorpos; na constituição de hormônios importantes para o bom funcionamento do organismo, em especial, a insulina, o FSH e o LH; na aceleração das reações químicas que acontecem no organismo."
+        self.maria.tit=" Quais as funções delas no nosso organismo?" 
+        self.rosalinda.tit= "Elas tem inúmeras funções. Tem função estrutural, pois são os constituintes básicos das fibras musculares, cabelo, ossos, dentes e pele. Também desempenham importante papel na proteção do organismo contra os agentes patológicos, é o caso dos anticorpos; na constituição de hormônios importantes para o bom funcionamento do organismo, em especial, a insulina, o FSH e o LH; na aceleração das reações químicas que acontecem no organismo."
         self.laboratorio_1.direita=Cena(vai=self.parte_2)
         #rosalinda some 
     
