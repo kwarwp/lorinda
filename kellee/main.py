@@ -92,7 +92,7 @@ class Fase3():
         tit = (" Você não deve esquecer do seu verdadeiro propósito buscar, desvendar um grande enigma celular."
         " Você deve sempre lembrar que para uma célula funcionar, todas as suas organelas conectadas devem estar. ")
 
-        self.npc= Elemento(img=NPC,y=400,w=200,h=200, texto=tit, foi=self.parte_3)
+        self.npc= Elemento(img=NPC,y=300,w=150,h=150, texto=tit, foi=self.parte_3)
         vai = self.npc.vai
         self.npc.vai = lambda *_: None
         def maria_falou(*_):
@@ -283,10 +283,8 @@ class Fase5():
             
     
 if __name__ == "__main__":
-    #Fase3().parte_3()
-    #Fase4()
-    Fase5()
-
+    Fase3().parte_3()
+    
     
     
     
