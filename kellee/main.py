@@ -92,7 +92,7 @@ class Fase3():
         tit = (" Você não deve esquecer do seu verdadeiro propósito buscar, desvendar um grande enigma celular."
         " Você deve sempre lembrar que para uma célula funcionar, todas as suas organelas conectadas devem estar. ")
 
-        self.npc= Elemento(img=NPC,y=300,w=150,h=150, texto=tit, foi=self.parte_3)
+        self.npc= Elemento(img=NPC, y=400,w=200,h=200, texto=tit, foi=self.parte_3)
         vai = self.npc.vai
         self.npc.vai = lambda *_: None
         def maria_falou(*_):
@@ -105,29 +105,29 @@ class Fase3():
     def parte_3(self):
         self.laboratorio_3=Cena(img=LABORATORIO_3)
         self.laboratorio_3.vai()
-        texto=("Maria o observa atentamente,Maria caminha pelo meio daquele material gelatinoso e se aproxima dele."
-        " Ele percebe que está sendo observado e olha com uma cara não muito amigavel. Quem é você?")
-        tit = " Maria ele não é muito simpático. É o todo poderoso! E se acha"
-        self.dna=Elemento(img= DNA, x=450,y=300,w=200, h=200)
+        texto=("Maria observa atentamente um indivíduo que apareceu ao seu lado e se aproxima dele."
+        " Ela percebe que ele a olha com uma cara não muito amigável e pergunta, quem é você? NPC, você o conhece?")
+        tit = " Maria, ele não é muito simpático. É o todo poderoso! Ele se acha."
+        self.dna=Elemento(img= DNA, x=400,y=350,w=250, h=250)
         
         dna_vai = self.dna.vai
         self.dna.vai = lambda *_: None
         def npc_falou(*_):
-            self.dna.vai = Texto(self.laboratorio_3,"COMO, VOCÊ NÃO SABE MEU NOME!? DE QUE PLANETA VOCÊ É?! EU SOU O MAIORAL!!",
+            self.dna.vai = Texto(self.laboratorio_3,"Como você não sabe o meu nome? De que planeta você é?! EU SOU O MAIORAL!!",
             foi=self.parte_4).vai
 
-        self.npc= Elemento(img=NPC,y=400,w=200,h=200, texto=tit, foi=npc_falou)
+        self.npc= Elemento(img=NPC,y=450,w=150,h=150, texto=tit, foi=npc_falou)
         vai = self.npc.vai
         self.npc.vai = lambda *_: None
         def maria_falou(*_):
             self.npc.vai = vai
-        self.maria=Elemento(img=MARIA, x=100, y=280, w=280, h=300, texto=texto, foi=maria_falou)
+        self.maria=Elemento(img=MARIA, x=150, y=325, w=280, h=300, texto=texto, foi=maria_falou)
         #self.laboratorio_2.direita=self.laboratorio_3
         #self.laboratorio_3.esquerda=self.laboratorio_2
         self.npc.entra(self.laboratorio_3)
         self.maria.entra(self.laboratorio_3)
-        self.npc.tit=" Maria ele não é muito simpático. É o todo poderoso! E se acha"
-        self.maria.tit="Maria o observa atentamente,Maria caminha pelo meio daquele material gelatinoso e se aproximadele.Ele percebe que está sendo observado e olha com uma cara não muito amigavel.quem é você?"
+        #self.npc.tit=" Maria ele não é muito simpático. É o todo poderoso! E se acha"
+        #self.maria.tit="Maria o observa atentamente,Maria caminha pelo meio daquele material gelatinoso e se aproximadele.Ele percebe que está sendo observado e olha com uma cara não muito amigavel.quem é você?"
         self.dna.entra(self.laboratorio_3)
         #self.laboratorio_3.direita=Cena(vai=self.parte_4)
 
@@ -143,12 +143,12 @@ class Fase3():
         self.dna.tit= "Vá estudar garota!"
         def dna_falou(*_):
             self.dna.vai = lambda *_: None
-            fala = (" Responda o enigma: No meu interior há uma molécula constituída por letras que se encaixam"
+            fala = (" Desvende o enigma: No interior do núcleo há uma molécula constituída por letras que se encaixam"
             " perfeitamente seguindo uma determinada ordem. Quando nela há algum erro pode provocar uma doença ou mutação."
             " Monte o quebra-cabeça e passe de fase.")
             self.npc.vai = Texto(self.laboratorio_4, fala, foi=self.parte_5).vai
         self.dna.vai = Texto(self.laboratorio_4, "Vá estudar garota!", foi=dna_falou).vai
-        self.npc.tit=" Responda o enigma: No meu interior há uma molécula constituída por letras que se encaixam perfeitamente seguindo uma determinada ordem. Quando nela há algum erro pode provocar uma doença ou mutação. Monte o quebra-cabeça e passe de fase."
+        #self.npc.tit=" Responda o enigma: No meu interior há uma molécula constituída por letras que se encaixam perfeitamente seguindo uma determinada ordem. Quando nela há algum erro pode provocar uma doença ou mutação. Monte o quebra-cabeça e passe de fase."
         # self.laboratorio_4.direita=Cena(vai=self.parte_5)
         
         #GABARITO DNA  (ácido dexoxirribonucleico) COMO PODEMOS COLOCAR ISSO ??
@@ -174,7 +174,7 @@ class Fase4():  # SEM NENHUMA IMAGEM
         self.dna.vai = lambda *_: None
         def npc_falou(*_):
             self.dna.vai = dna_vai
-        self.npc=Elemento(img=NPC, x=200, texto= "Atenção garota, veja o DNA", foi=npc_falou)
+        self.npc=Elemento(img=NPC, x=200, texto= "Atenção Maria, veja o DNA", foi=npc_falou)
         vai = self.npc.vai
         self.npc.vai = lambda *_: None
         def maria_falou(*_):
@@ -198,7 +198,7 @@ class Fase4():  # SEM NENHUMA IMAGEM
         def npc_falou(*_):
             Texto(self.parede,"Marque os processos que o DNA executa para a produção de proteína",foi=self.pergunta).vai()
 
-        self.npc=Elemento(img=NPC,x=400, w=200, h=250, texto="se vc acertar os processos irá ganhar moléculas de atp", foi=npc_falou)
+        self.npc=Elemento(img=NPC,x=400, w=200, h=250, texto="Se você acertar os processos irá ganhar uma molécula de ATP", foi=npc_falou)
         vai = self.npc.vai
         self.npc.vai = lambda *_: None
         def maria_falou(*_):
