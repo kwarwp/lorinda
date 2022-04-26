@@ -447,3 +447,21 @@ SyntaxError: non-keyword arg after keyword arg
     vai = self.rosalinda.vai
 AttributeError: 'Fase3' object has no attribute 'rosalinda'
 '''},
+{'date': 'Mon Apr 25 2022 21:15:11.141 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 210
+    Fase3()
+  module <module> line 42
+    self.maria=Elemento(img=MARIA, x=100, y=280, w=280, h=300, texto=mtit, foi=maria_falou)
+UnboundLocalError: local variable 'maria_falou' referenced before assignment
+'''},
