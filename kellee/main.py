@@ -105,6 +105,16 @@ class Fase3():
     def parte_3(self):
         self.laboratorio_3=Cena(img=LABORATORIO_3)
         self.laboratorio_3.vai()
+        texto=("Maria o observa atentamente,Maria caminha pelo meio daquele material gelatinoso e se aproxima dele."
+        " Ele percebe que está sendo observado e olha com uma cara não muito amigavel. Quem é você?")
+        tit = " Maria ele não é muito simpático. É o todo poderoso! E se acha"
+
+        self.npc= Elemento(img=NPC,y=400,w=200,h=200, texto=tit, foi=self.parte_3)
+        vai = self.npc.vai
+        self.npc.vai = lambda *_: None
+        def maria_falou(*_):
+            self.npc.vai = vai
+        self.maria=Elemento(img=MARIA, x=100, y=280, w=280, h=300, texto=texto, foi=maria_falou)
         #self.laboratorio_2.direita=self.laboratorio_3
         self.laboratorio_3.esquerda=self.laboratorio_2
         self.npc.entra(self.laboratorio_3)
@@ -228,7 +238,7 @@ class Fase5():
             
     
 if __name__ == "__main__":
-    Fase3()
+    Fase3().parte_3()
     #Fase5()
 
     
