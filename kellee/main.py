@@ -108,8 +108,13 @@ class Fase3():
         texto=("Maria o observa atentamente,Maria caminha pelo meio daquele material gelatinoso e se aproxima dele."
         " Ele percebe que está sendo observado e olha com uma cara não muito amigavel. Quem é você?")
         tit = " Maria ele não é muito simpático. É o todo poderoso! E se acha"
+        self.dna=Elemento(img= DNA, x=450,y=300,w=200, h=200, texto="COMO, VOCÊ NÃO SABE MEU NOME!?DE QUE PLANETA VOCÊ É?!EU SOU O MAIORAL!! ")
+        dna_vai = self.dna.vai
+        self.dna.vai = lambda *_: None
+        def npc_falou(*_):
+            self.dna.vai = dna_vai
 
-        self.npc= Elemento(img=NPC,y=400,w=200,h=200, texto=tit, foi=self.parte_3)
+        self.npc= Elemento(img=NPC,y=400,w=200,h=200, texto=tit, foi=npc_falou)
         vai = self.npc.vai
         self.npc.vai = lambda *_: None
         def maria_falou(*_):
@@ -121,7 +126,6 @@ class Fase3():
         self.maria.entra(self.laboratorio_3)
         self.npc.tit=" Maria ele não é muito simpático. É o todo poderoso! E se acha"
         self.maria.tit="Maria o observa atentamente,Maria caminha pelo meio daquele material gelatinoso e se aproximadele.Ele percebe que está sendo observado e olha com uma cara não muito amigavel.quem é você?"
-        self.dna=Elemento(img= DNA, x=450,y=300,w=200, h=200, tit="COMO, VOCÊ NÃO SABE MEU NOME!?DE QUE PLANETA VOCÊ É?!EU SOU O MAIORAL!! ")
         self.dna.entra(self.laboratorio_3)
         self.laboratorio_3.direita=Cena(vai=self.parte_4)
 
