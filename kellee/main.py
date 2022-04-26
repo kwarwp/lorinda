@@ -88,9 +88,17 @@ class Fase3():
         #self.laboratorio_1.direita=self.laboratorio_2
         self.laboratorio_2.vai()
         self.laboratorio_2.esquerda=self.laboratorio_1
+        texto= " Como ela desapareceu?"
+        tit = (" Você não deve esquecer do seu verdadeiro propósito buscar, desvendar um grande enigma celular."
+        " Você deve sempre lembrar que para uma célula funcionar, todas as suas organelas conectadas devem estar. ")
+
+        self.npc= Elemento(img=NPC,y=400,w=200,h=200, texto=tit, foi=self.parte_3)
+        vai = self.npc.vai
+        self.npc.vai = lambda *_: None
+        def maria_falou(*_):
+            self.npc.vai = vai
+        self.maria=Elemento(img=MARIA, x=100, y=280, w=280, h=300, texto=texto, foi=maria_falou)
         self.maria.entra(self.laboratorio_2)
-        self.maria.tit= " Como ela desapareceu?"
-        self.npc= Elemento(img=NPC,y=400,w=200,h=200, tit=" Você não deve esquecer do seu verdadeiro propósito buscar, desvendar um grande enigma celular. Você deve sempre lembrar que para uma célula funcionar, todas as suas organelas conectadas devem estar. ")
         self.npc.entra(self.laboratorio_2)
         self.laboratorio_2.direita=Cena(vai=self.parte_3)
     
