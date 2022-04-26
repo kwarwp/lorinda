@@ -60,6 +60,15 @@ class Fase3():
     def some (self):
         def sumir(ev=0):
             self.rosalinda.x=-100000
+        def maria_falou(*_):
+            rose_fala = ("Elas tem inúmeras funções. Tem função estrutural,"
+            "pois são os constituintes básicos das fibras musculares, cabelo, ossos, dentes e pele."
+            " Também desempenham importante papel na proteção do organismo contra os agentes patológicos,"
+            " é o caso dos anticorpos; na constituição de hormônios importantes para o bom funcionamento do organismo,"
+            " em especial, a insulina, o FSH e o LH; na aceleração das reações químicas que acontecem no organismo.")
+            self.rosalinda.vai = Texto(self.laboratorio_1, rose_fala, foi=sumir).vai
+        texto=" Quais as funções delas no nosso organismo?" 
+        self.maria=Elemento(img=MARIA, x=100, y=280, w=280, h=300, texto=texto, foi=maria_falou)
         def rosa_falou(*_):
             self.maria.vai = vai
         vai = self.maria.vai
@@ -71,8 +80,6 @@ class Fase3():
         self.rosalinda.vai = Texto(self.laboratorio_1, fala_rosalinda, foi=rosa_falou).vai
         #self.elt.onclick = some
         self.maria.entra(self.laboratorio_1)
-        self.maria._texto=" Quais as funções delas no nosso organismo?" 
-        self.rosalinda.tit= "Elas tem inúmeras funções. Tem função estrutural, pois são os constituintes básicos das fibras musculares, cabelo, ossos, dentes e pele. Também desempenham importante papel na proteção do organismo contra os agentes patológicos, é o caso dos anticorpos; na constituição de hormônios importantes para o bom funcionamento do organismo, em especial, a insulina, o FSH e o LH; na aceleração das reações químicas que acontecem no organismo."
         self.laboratorio_1.direita=Cena(vai=self.parte_2)
         #rosalinda some 
     
