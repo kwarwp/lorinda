@@ -519,3 +519,10 @@ AttributeError: 'Fase3' object has no attribute 'laboratorio_2'
     self.laboratorio_3.esquerda=self.laboratorio_2
 AttributeError: 'Fase3' object has no attribute 'laboratorio_2'
 '''},
+{'date': 'Mon Apr 25 2022 22:58:52.456 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 201
+  self.npc=Elemento(img=NPC,x=400, w=200, h=250, x=100, texto="se vc acertar os processos irá ganhar moléculas de atp", foi=npc_falou)
+                                                  ^
+SyntaxError: keyword argument repeated
+'''},
