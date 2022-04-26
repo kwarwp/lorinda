@@ -131,10 +131,10 @@ class Fase3():
         self.dna.entra(self.laboratorio_3)
         #self.laboratorio_3.direita=Cena(vai=self.parte_4)
 
-    def parte_4(self):
+    def parte_4(self, *_):
         self.laboratorio_4=Cena(img=LABORATORIO_4)
         self.laboratorio_4.vai()
-        self.laboratorio_4.esquerda=self.laboratorio_3
+        # self.laboratorio_4.esquerda=self.laboratorio_3
         self.dna.entra(self.laboratorio_4)
         self.npc.entra(self.laboratorio_4)
         self.maria.entra(self.laboratorio_4)
@@ -146,10 +146,10 @@ class Fase3():
             fala = (" Responda o enigma: No meu interior há uma molécula constituída por letras que se encaixam"
             " perfeitamente seguindo uma determinada ordem. Quando nela há algum erro pode provocar uma doença ou mutação."
             " Monte o quebra-cabeça e passe de fase.")
-            self.npc.vai = Texto(self.laboratorio_4, fala, foi=self.parte_5)
-        self.dna.vai = Texto("Vá estudar garota!")
+            self.npc.vai = Texto(self.laboratorio_4, fala, foi=self.parte_5).vai
+        self.dna.vai = Texto(self.laboratorio_4, "Vá estudar garota!", foi=dna_falou).vai
         self.npc.tit=" Responda o enigma: No meu interior há uma molécula constituída por letras que se encaixam perfeitamente seguindo uma determinada ordem. Quando nela há algum erro pode provocar uma doença ou mutação. Monte o quebra-cabeça e passe de fase."
-        self.laboratorio_4.direita=Cena(vai=self.parte_5)
+        # self.laboratorio_4.direita=Cena(vai=self.parte_5)
         
         #GABARITO DNA  (ácido dexoxirribonucleico) COMO PODEMOS COLOCAR ISSO ??
 
@@ -164,7 +164,22 @@ class Fase3():
 
 class Fase4():  # SEM NENHUMA IMAGEM
     def __init__(self):
-        self.maria=Elemento(img=MARIA, tit="Não consigo sair daqui")
+        self.rna=Elemento(img=RNA, x=450, texto= " Vamos lá galera! Produzindo proteínas. ", foi=self.cena_parede) #aparece depois do dna
+        def dna_falou(*_):
+            self.rna.entra(self.nucleo)
+
+        
+        self.dna=Elemento(img=DNA, x=350, texto= "Só eu trabalho aqui? Vou ter que criar um RNA para me ajudar.", foi=dna_falou)
+        dna_vai = self.dna.vai
+        self.dna.vai = lambda *_: None
+        def npc_falou(*_):
+            self.dna.vai = dna_vai
+        self.npc=Elemento(img=NPC, x=200, texto= "Atenção garota, veja o DNA", foi=npc_falou)
+        vai = self.npc.vai
+        self.npc.vai = lambda *_: None
+        def maria_falou(*_):
+            self.npc.vai = vai
+        self.maria=Elemento(img=MARIA, texto="Não consigo sair daqui", foi = maria_falou)
         self.nucleo=Cena(img=NUCLEO)
         self.nucleo.vai()
         self.parede=Cena(img=PAREDE)
@@ -174,21 +189,23 @@ class Fase4():  # SEM NENHUMA IMAGEM
         #self.nucleo.direita=self.parede
         self.parede.esquerda=self.nucleo
         
-        self.npc=Elemento(img=NPC, x=200, tit= "Atenção garota, veja o DNA")
-        self.dna=Elemento(img=DNA, x=300, tit= "Só eu trabalho aqui? Vou ter que criar um RNA para me ajudar.")
-        self.rna=Elemento(img=RNA, x=300, tit= " Vamos lá galera! Produzindo proteínas. ") #aparece depois do dna
         self.npc.entra(self.nucleo)
         self.dna.entra(self.nucleo)
-        self.rna.entra(self.nucleo)
-        self.nucleo.direita=Cena(vai=self.cena_parede)
+        #self.nucleo.direita=Cena(vai=self.cena_parede)
         
     def cena_parede(self, *_):
         self.parede=Cena(img=PAREDE)
-        self.npc=Elemento(img=NPC, x=100,tit="se vc acertar os processos irá ganhar moléculas de atp")
-        self.maria=Elemento(img=MARIA, tit="nossas, quantas proteínas diferentes são formadas")
+        def npc_falou(*_):
+            Texto(self.parede,"Marque os processos que o DNA executa para a produção de proteína",foi=self.pergunta).vai()
+
+        self.npc=Elemento(img=NPC,x=400, w=200, h=250, texto="se vc acertar os processos irá ganhar moléculas de atp", foi=npc_falou)
+        vai = self.npc.vai
+        self.npc.vai = lambda *_: None
+        def maria_falou(*_):
+            self.npc.vai = vai
+        self.maria=Elemento(img=MARIA, w=200, h=250, texto="nossas, quantas proteínas diferentes são formadas", foi=maria_falou)
         self.npc.entra(self.parede)
         self.maria.entra(self.parede)
-        Texto(self.parede,"Marque os processos que o DNA executa para a produção de proteína",foi=self.pergunta).vai()
         self.parede.vai()
         self.parede.esquerda=self.nucleo
         
@@ -216,10 +233,18 @@ class Fase5():
     def __init__(self):
     
         self.organela=Cena(img=ORGANELA)
-        self.rosalinda=Elemento(img=ROSALINDA, x=0, y=350, w=200, h=200, tit ="Maria, olhe a estrutura ao seu lado.", cena=self.organela)
-        self.maria=Elemento(img=MARIA, x=150, y=350, w=200, h=200, tit=" Quem é você? ", cena=self.organela)
-        self.complexog=Elemento(img=COMPLEXOG, x=350, y=350, w=200, h=200,  tit="Sou uma organela, ué", cena=self.organela)
-        self.organela.direita=Cena(vai=self.mariafala)
+        self.complexog=Elemento(img=COMPLEXOG, x=350, y=350, w=200, h=200,  texto="Sou uma organela, ué", foi=self.mariafala, cena=self.organela)
+        complexog = self.complexog.vai
+        self.complexog.vai = lambda *_: None
+        def maria_falou(*_):
+            self.complexog.vai = complexog
+        self.maria=Elemento(img=MARIA, x=150, y=350, w=200, h=200, texto=" Quem é você? ",foi=maria_falou, cena=self.organela)
+        maria = self.maria.vai
+        self.maria.vai = lambda *_: None
+        def rose_falou(*_):
+            self.maria.vai = maria
+        self.rosalinda=Elemento(img=ROSALINDA, x=0, y=350, w=200, h=200,foi=rose_falou, texto ="Maria, olhe a estrutura ao seu lado.", cena=self.organela)
+        # self.organela.direita=Cena(vai=self.mariafala)
         vai_reticulo = Elemento(SETA, tit="Conheça melhor o Retículo Endoplasmático clicando nesta seta", x=20, y=200,
         vai=self.viagem_reticulo, cena=self.organela)
         self.organela.vai()
@@ -229,11 +254,15 @@ class Fase5():
         Reticulo(voltar=self.mariafala)
     def mariafala(self, *_):
         self.organela=Cena(img=ORGANELA)
-        self.maria=Elemento(img=MARIA, x=100, y=400, w=200, h=200, tit="Sim, mas qual é o nome dele? Será que ele pode me ajudar a sair daqui?", cena=self.organela)
-        self.npc=Elemento(img=NPC, x=300, y=475, tit="Ele veio da Itália, era histologista, deu uma parte do meu nome para essa organela.Qual o seu nome?", cena=self.organela)
+        self.npc=Elemento(img=NPC, x=300, y=475,foi=self.pergunta, texto="Ele veio da Itália, era histologista, deu uma parte do meu nome para essa organela.Qual o seu nome?", cena=self.organela)
+        vai = self.npc.vai
+        self.npc.vai = lambda *_: None
+        def maria_falou(*_):
+            self.npc.vai = vai
+        self.maria=Elemento(img=MARIA, x=100, y=400, w=200, h=200,foi=maria_falou, texto="Sim, mas qual é o nome dele? Será que ele pode me ajudar a sair daqui?", cena=self.organela)
         self.organela.vai()
         self.acabou = 2
-        self.pergunta()
+        #self.pergunta()
     def pergunta(self, ev=None):
         if self.acabou == 0:
             return
@@ -254,8 +283,9 @@ class Fase5():
             
     
 if __name__ == "__main__":
-    Fase3().parte_3()
-    #Fase5()
+    #Fase3().parte_3()
+    #Fase4()
+    Fase5()
 
     
     
