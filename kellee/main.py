@@ -108,11 +108,13 @@ class Fase3():
         texto=("Maria o observa atentamente,Maria caminha pelo meio daquele material gelatinoso e se aproxima dele."
         " Ele percebe que está sendo observado e olha com uma cara não muito amigavel. Quem é você?")
         tit = " Maria ele não é muito simpático. É o todo poderoso! E se acha"
-        self.dna=Elemento(img= DNA, x=450,y=300,w=200, h=200, texto="COMO, VOCÊ NÃO SABE MEU NOME!?DE QUE PLANETA VOCÊ É?!EU SOU O MAIORAL!! ")
+        self.dna=Elemento(img= DNA, x=450,y=300,w=200, h=200)
+        
         dna_vai = self.dna.vai
         self.dna.vai = lambda *_: None
         def npc_falou(*_):
-            self.dna.vai = dna_vai
+            self.dna.vai = Texto(self.laboratorio_3,"COMO, VOCÊ NÃO SABE MEU NOME!? DE QUE PLANETA VOCÊ É?! EU SOU O MAIORAL!!",
+            foi=self.parte_4).vai
 
         self.npc= Elemento(img=NPC,y=400,w=200,h=200, texto=tit, foi=npc_falou)
         vai = self.npc.vai
@@ -121,13 +123,13 @@ class Fase3():
             self.npc.vai = vai
         self.maria=Elemento(img=MARIA, x=100, y=280, w=280, h=300, texto=texto, foi=maria_falou)
         #self.laboratorio_2.direita=self.laboratorio_3
-        self.laboratorio_3.esquerda=self.laboratorio_2
+        #self.laboratorio_3.esquerda=self.laboratorio_2
         self.npc.entra(self.laboratorio_3)
         self.maria.entra(self.laboratorio_3)
         self.npc.tit=" Maria ele não é muito simpático. É o todo poderoso! E se acha"
         self.maria.tit="Maria o observa atentamente,Maria caminha pelo meio daquele material gelatinoso e se aproximadele.Ele percebe que está sendo observado e olha com uma cara não muito amigavel.quem é você?"
         self.dna.entra(self.laboratorio_3)
-        self.laboratorio_3.direita=Cena(vai=self.parte_4)
+        #self.laboratorio_3.direita=Cena(vai=self.parte_4)
 
     def parte_4(self):
         self.laboratorio_4=Cena(img=LABORATORIO_4)
@@ -135,7 +137,17 @@ class Fase3():
         self.laboratorio_4.esquerda=self.laboratorio_3
         self.dna.entra(self.laboratorio_4)
         self.npc.entra(self.laboratorio_4)
+        self.maria.entra(self.laboratorio_4)
+        self.maria.tit = ""
+        self.maria.vai = lambda *_: None
         self.dna.tit= "Vá estudar garota!"
+        def dna_falou(*_):
+            self.dna.vai = lambda *_: None
+            fala = (" Responda o enigma: No meu interior há uma molécula constituída por letras que se encaixam"
+            " perfeitamente seguindo uma determinada ordem. Quando nela há algum erro pode provocar uma doença ou mutação."
+            " Monte o quebra-cabeça e passe de fase.")
+            self.npc.vai = Texto(self.laboratorio_4, fala, foi=self.parte_5)
+        self.dna.vai = Texto("Vá estudar garota!")
         self.npc.tit=" Responda o enigma: No meu interior há uma molécula constituída por letras que se encaixam perfeitamente seguindo uma determinada ordem. Quando nela há algum erro pode provocar uma doença ou mutação. Monte o quebra-cabeça e passe de fase."
         self.laboratorio_4.direita=Cena(vai=self.parte_5)
         
