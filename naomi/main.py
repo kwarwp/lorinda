@@ -10,7 +10,8 @@ SEMFUNCAO = "https://i.imgur.com/u7zMLPW.png"
 GOLGI = "https://i.imgur.com/PUbco5w.png"
 class Fase6:
     def __init__(self,*_):
-        
+        STYLE.update(width=1000, height="600px")
+
         def pegou_atp(ev=None):
             ATP = "https://i.imgur.com/k0Az1Ts.png"
             self.ATP = Elemento(img=ATP, tit="ATP", x=600, y=500, cena=self.parede, drag=True)
