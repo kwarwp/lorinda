@@ -32,35 +32,46 @@ class Fase3():
         #self.inicio=Cena(img=INICIO)
         #self.foco=Elemento(img=FOCO, x=250, y=280, w=90, h=150, style={"opacity": 0})
         #self.foco.entra(self.inicio)
+            
         
         self.laboratorio=Cena(img=LABORATORIO)
         #self.maria=Elemento(img=MARIA, x=300, y=400, w=180, h=200, tit='Oi, Dra. Rosalinda! Sou sua fã!  Li todos os seus livros e seu artigo sobre "Direcionamento de Proteínas", ou seja, como as proteínas percorrem toda a célula.')
         #self.rosalinda=Elemento(img=ROSALINDA, x=100, y=400, w=180, h=200, tit="As proteínas são muito importantes para a nossa saúde e beleza! Precisamos estuda-las para nos manter saudáveis, fortes e bonitas. ")
         mtit = ('Oi, Dra. Rosalinda! Vim ao seu laboratório pois sou sua fã!  Admiro seu trabalho sobre a difração dos raio-x e me encanta saber que foi você quem realmente descobriu o formato helicoidal do DNA",' 
         'Quero aprender sobre proteínas, me ajuda?')
-        self.maria=Elemento(img=MARIA, x=200, y=280, w=280, h=300, texto=mtit)
         rtit = ("As proteínas são moléculas orgânicas fundamentais para os seres vivos, elas são muito importantes para a nossa saúde e beleza!"
         "Precisamos estuda-las para nos manter saudáveis, fortes e bonitas. ")
-        self.rosalinda=Elemento(img=ROSALINDA, x=300, y=280, w=280, h=300, texto=rtit)
+        def maria_falou(*_):
+            self.rosalinda.vai = vai
+        self.maria=Elemento(img=MARIA, x=100, y=280, w=280, h=300, texto=mtit, foi=self.some)
+        vai = self.maria.vai
+        self.maria.vai = lambda *_: None
+        def rosa_falou(*_):
+            self.maria.vai = vai
+        self.rosalinda=Elemento(img=ROSALINDA, x=300, y=280, w=280, h=300, texto=rtit, foi=rosa_falou)
         self.maria.entra(self.laboratorio)
         self.rosalinda.entra(self.laboratorio)
         #self.foco.vai=self.laboratorio.vai
         self.laboratorio_1 = Cena(img= LABORATORIO_1)
         # self.laboratorio.direita=self.laboratorio_1
-        self.laboratorio.direita=Cena(vai=self.some)
+        # self.laboratorio.direita=Cena(vai=self.some)
         self.laboratorio.vai()
     
     def some (self):
         def sumir(ev=0):
             self.rosalinda.x=-100000
+        def rosa_falou(*_):
+            self.maria.vai = vai
+        vai = self.maria.vai
+        self.maria.vai = lambda *_: None
         self.laboratorio_1.vai()
-        self.laboratorio_1.esquerda=self.laboratorio
+        # self.laboratorio_1.esquerda=self.laboratorio
         self.rosalinda.entra(self.laboratorio_1)
         fala_rosalinda = "sim claro"
-        self.rosalinda.vai = Texto(self.laboratorio_1, fala_rosalinda, foi=sumir).vai
+        self.rosalinda.vai = Texto(self.laboratorio_1, fala_rosalinda, foi=rosa_falou).vai
         #self.elt.onclick = some
         self.maria.entra(self.laboratorio_1)
-        self.maria.tit=" Quais as funções delas no nosso organismo?" 
+        self.maria._texto=" Quais as funções delas no nosso organismo?" 
         self.rosalinda.tit= "Elas tem inúmeras funções. Tem função estrutural, pois são os constituintes básicos das fibras musculares, cabelo, ossos, dentes e pele. Também desempenham importante papel na proteção do organismo contra os agentes patológicos, é o caso dos anticorpos; na constituição de hormônios importantes para o bom funcionamento do organismo, em especial, a insulina, o FSH e o LH; na aceleração das reações químicas que acontecem no organismo."
         self.laboratorio_1.direita=Cena(vai=self.parte_2)
         #rosalinda some 
@@ -202,8 +213,8 @@ class Fase5():
             
     
 if __name__ == "__main__":
-    #Fase3()
-    Fase5()
+    Fase3()
+    #Fase5()
 
     
     
