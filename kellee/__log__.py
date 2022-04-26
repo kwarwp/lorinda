@@ -526,3 +526,10 @@ AttributeError: 'Fase3' object has no attribute 'laboratorio_2'
                                                   ^
 SyntaxError: keyword argument repeated
 '''},
+{'date': 'Tue Apr 26 2022 20:57:16.624 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 177
+  self.npc=Elemento(img=NPC, x=200,y=50 texto= "Atenção Maria, veja o DNA", foi=npc_falou)
+                                         ^
+SyntaxError: invalid syntax
+'''},
