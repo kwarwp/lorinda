@@ -206,7 +206,7 @@ class Fase7():
         self.redemoinho.entra(self.parede)
         self.maria.afala = afala
         self.maria.responde = self.anda_redemoinho
-        self.maria_double=Elemento(img=MARIA, x=500, y=300, w=200, h=300, cena=self.parede,
+        self.maria_double=Elemento(img=MARIA, x=500, y=150, w=200, h=300, cena=self.parede,
         style= {"transition": "left 6s, transform 1s"})
         self.redemoinho.entra(self.parede)
         self.maria.entra(self.parede)
@@ -220,7 +220,7 @@ class Fase7():
         self.maria.afala = afala
         self.maria.responde = self.anda_redemoinho
         #self.maria.x = 600
-        self.maria_double=Elemento(img=MARIA, x=500, y=300, w=200, h=300, cena=self.celula,
+        self.maria_double=Elemento(img=MARIA, x=500, y=150, w=200, h=300, cena=self.celula,
         style= {"transition": "left 6s, transform 1s"})
         self.redemoinho.entra(self.celula)
         self.maria.entra(self.celula)
@@ -261,6 +261,6 @@ class Fase11():
         
         
 if __name__ == "__main__": 
-    Fase6()
+    Fase7()
     
     #Move()
