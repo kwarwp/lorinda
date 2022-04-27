@@ -40,11 +40,11 @@ class Fase6:
         self.movente.elt.ontransitionend = self.persegue_maria
         self.movente1 = Elemento(img=LISOSSOMA, w=60, h=60, x=180, y=140, cena=self.parede,
             style={"transition": "left 5s, top 5s"})
-        self.organela = Elemento(img=RIBOSSOMA, x=300, y=400, w=60, h=60, cena=self.parede,
+        self.organela = Elemento(img=RIBOSSOMA, x=350, y=400, w=60, h=60, cena=self.parede,
             style={"transition": "opacity 2s"})
-        self.placa_organela = Elemento(img=SEMFUNCAO, x=280, y=380, w=80, h=30, cena=self.parede,
+        self.placa_organela = Elemento(img=SEMFUNCAO, x=300, y=380, w=80, h=30, cena=self.parede,
             style={"transition": "opacity 2s"})
-        self.maria = Elemento(img=MARIA, x=600, y=390, cena=self.parede, # vai=self.usou_o_celular,
+        self.maria = Elemento(img=MARIA, x=450, y=390,w=150,h=150, cena=self.parede, # vai=self.usou_o_celular,
             style={"transition": "left 4s"})
         self.maria.elt.ontransitionend = self.encosta_maria
         txt0 = ('De repente Maria vê uma bolinha se desprendo do complexo de golgi,'
@@ -151,15 +151,15 @@ class Fase7():
         self.celula = Cena(CELULA)
         self.celula.vai()
         self.escuro = Elemento(ESCURO, x=0, y=0, w=1000, h=600, o=0.92, cena=self.celula)
-        self.mitocondria = Elemento(MITOCONDRIA, x=20, y=20, w=950, h=550, o=0.1, cena=self.celula,
+        self.mitocondria = Elemento(MITOCONDRIA, x=20, y=40, w=950, h=550, o=0.1, cena=self.celula,
             drop = {"glicose": faz_luz})
         self.glicose = Elemento(GLICOSE, x=0, y=100, tit = "glicose", drag = True,
             w=100, h=100)
         afala = "Ribossomo: Porque perdi minha outra parte e preciso encontrá-la. Eu preciso produzir proteínas"
-        self.ribossoma = Personagem(RIBOSSOMA, x=300, y=300, w=90, h=90, afala=afala,
+        self.ribossoma = Personagem(RIBOSSOMA, x=200, y=750, w=90, h=90, afala=afala,
             responde=self.ribossomo_fala)
         afala = "Maria: Ribossomo, por que você está triste?"
-        self.maria=Personagem(img=MARIA, x=500, y=300, w=200, h=300, afala=afala, responde=self.ribossoma.fala)
+        self.maria=Personagem(img=MARIA, x=500, y=150, w=200, h=300, afala=afala, responde=self.ribossoma.fala)
         self.glicose.entra(self.celula)
         self.ribossoma.entra(self.celula)
         self.maria.entra(self.celula)
@@ -169,7 +169,7 @@ class Fase7():
         afala = "Você está em cima de uma mitocôndria. Acople a molécula de glicose para liberar energia e acender a luz, assim o ribossomo poderá encontrar sua outra parte."
         self.glicose_fake = Personagem(GLICOSE, x=-10000, y=100,w=100, h=100, afala=afala)
         afala = "Ribossomo: Maria, olhe onde você está..."
-        self.ribossoma = Personagem(RIBOSSOMA, x=300, y=300, w=90, h=90, afala=afala,
+        self.ribossoma = Personagem(RIBOSSOMA, x=300, y=200, w=90, h=90, afala=afala,
             responde=self.glicose_fake.fala)
         afala = "Maria: Mas está tudo escuro, como vamos achar?"
         # self.maria=Personagem(img=MARIA, x=400, y=200, w=100, h=200, afala=afala, responde=self.ribossoma.fala)
@@ -261,6 +261,6 @@ class Fase11():
         
         
 if __name__ == "__main__": 
-    Fase6()
+    Fase7()
     
     #Move()
