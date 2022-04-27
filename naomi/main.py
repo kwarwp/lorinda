@@ -40,11 +40,11 @@ class Fase6:
         self.movente.elt.ontransitionend = self.persegue_maria
         self.movente1 = Elemento(img=LISOSSOMA, w=60, h=60, x=180, y=140, cena=self.parede,
             style={"transition": "left 5s, top 5s"})
-        self.organela = Elemento(img=RIBOSSOMA, x=350, y=400, w=60, h=60, cena=self.parede,
+        self.organela = Elemento(img=RIBOSSOMA, x=400, y=400, w=60, h=60, cena=self.parede,
             style={"transition": "opacity 2s"})
-        self.placa_organela = Elemento(img=SEMFUNCAO, x=300, y=380, w=80, h=30, cena=self.parede,
+        self.placa_organela = Elemento(img=SEMFUNCAO, x=375, y=380, w=80, h=30, cena=self.parede,
             style={"transition": "opacity 2s"})
-        self.maria = Elemento(img=MARIA, x=450, y=390,w=150,h=150, cena=self.parede, # vai=self.usou_o_celular,
+        self.maria = Elemento(img=MARIA, x=600, y=390,w=150,h=150, cena=self.parede, # vai=self.usou_o_celular,
             style={"transition": "left 4s"})
         self.maria.elt.ontransitionend = self.encosta_maria
         txt0 = ('De repente Maria vê uma bolinha se desprendo do complexo de golgi,'
@@ -261,6 +261,6 @@ class Fase11():
         
         
 if __name__ == "__main__": 
-    Fase7()
+    Fase6()
     
     #Move()
