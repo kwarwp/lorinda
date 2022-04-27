@@ -199,7 +199,7 @@ class Fase7():
         self.maria.fala()
          
     def outro_redemoinho(self):
-        afala = 'De novo, este redemoinho louco?'
+        afala = 'De novo este redemoinho louco?'
         self.redemoinho = Elemento(CICLONE, x=0, y=0, w=600, h=600, o=0.8, cena=self.parede,
         style= {"transition": "left 6s"})
         self.redemoinho.elt.ontransitionend = Fase11
@@ -213,7 +213,7 @@ class Fase7():
         self.maria.fala()
     def entra_redemoinho(self, _=0):
         #from amanda.main import main
-        afala = "Maria: eu finalmente consegui sair desse lugar"
+        afala = "Maria: Eu finalmente consegui sair desse lugar"
         self.redemoinho = Elemento(CICLONE, x=0, y=0, w=600, h=600, o=0.8, cena=self.celula,
         style= {"transition": "left 6s"})
         self.redemoinho.elt.ontransitionend = self.main
