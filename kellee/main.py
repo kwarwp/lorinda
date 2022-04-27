@@ -105,10 +105,10 @@ class Fase3():
     def parte_3(self):
         self.laboratorio_3=Cena(img=LABORATORIO_3)
         self.laboratorio_3.vai()
-        texto=("Maria observa atentamente um indivíduo que apareceu ao seu lado e se aproxima dele."
+        texto=("Maria observa atentamente a estrutura onde está, ela tem duas membranas, poros e no seu interior alguém dá muitas ordens."
         " Ela percebe que ele a olha com uma cara não muito amigável e pergunta, quem é você? NPC, você o conhece?")
         tit = " Maria, ele não é muito simpático. É o todo poderoso! Ele se acha."
-        self.dna=Elemento(img= DNA, x=400,y=350,w=250, h=250)
+        self.dna=Elemento(img= DNA, x=255,y=150,w=200, h=200)
         
         dna_vai = self.dna.vai
         self.dna.vai = lambda *_: None
@@ -116,12 +116,12 @@ class Fase3():
             self.dna.vai = Texto(self.laboratorio_3,"Como você não sabe o meu nome? De que planeta você é?! EU SOU O MAIORAL!!",
             foi=self.parte_4).vai
 
-        self.npc= Elemento(img=NPC,y=450,w=150,h=150, texto=tit, foi=npc_falou)
+        self.npc= Elemento(img=NPC,x=25, y=450,w=150,h=150, texto=tit, foi=npc_falou)
         vai = self.npc.vai
         self.npc.vai = lambda *_: None
         def maria_falou(*_):
             self.npc.vai = vai
-        self.maria=Elemento(img=MARIA, x=150, y=325, w=280, h=300, texto=texto, foi=maria_falou)
+        self.maria=Elemento(img=MARIA, x=350, y=325, w=280, h=300, texto=texto, foi=maria_falou)
         #self.laboratorio_2.direita=self.laboratorio_3
         #self.laboratorio_3.esquerda=self.laboratorio_2
         self.npc.entra(self.laboratorio_3)
@@ -283,8 +283,8 @@ class Fase5():
             
     
 if __name__ == "__main__":
-    #Fase3().parte_3()
-    Fase4()
+    Fase3().parte_3()
+    #Fase4()
     
     
     
