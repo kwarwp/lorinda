@@ -203,7 +203,7 @@ class Fase4():  # SEM NENHUMA IMAGEM
         self.npc.vai = lambda *_: None
         def maria_falou(*_):
             self.npc.vai = vai
-        self.maria=Elemento(img=MARIA, w=200, h=250, texto="nossas, quantas proteínas diferentes são formadas", foi=maria_falou)
+        self.maria=Elemento(img=MARIA, w=200, h=250, texto="Nossa! Quantas proteínas diferentes são formadas.", foi=maria_falou)
         self.npc.entra(self.parede)
         self.maria.entra(self.parede)
         self.parede.vai()
