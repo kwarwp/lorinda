@@ -164,22 +164,22 @@ class Fase3():
 
 class Fase4():  # SEM NENHUMA IMAGEM
     def __init__(self):
-        self.rna=Elemento(img=RNA, x=450, texto= " Vamos lá galera! Produzindo proteínas. ", foi=self.cena_parede) #aparece depois do dna
+        self.rna=Elemento(img=RNA, x=450, y=50, w=150, h=150, texto= " Vamos lá galera! Produzindo proteínas. ", foi=self.cena_parede) #aparece depois do dna
         def dna_falou(*_):
             self.rna.entra(self.nucleo)
 
         
-        self.dna=Elemento(img=DNA, x=350, texto= "Só eu trabalho aqui? Vou ter que criar um RNA para me ajudar.", foi=dna_falou)
+        self.dna=Elemento(img=DNA, x=300,y=0, w=200, h=200, texto= "Só eu trabalho aqui? Vou ter que criar um RNA para me ajudar.", foi=dna_falou)
         dna_vai = self.dna.vai
         self.dna.vai = lambda *_: None
         def npc_falou(*_):
             self.dna.vai = dna_vai
-        self.npc=Elemento(img=NPC, x=200, texto= "Atenção Maria, veja o DNA", foi=npc_falou)
+        self.npc=Elemento(img=NPC, x=200,y=25, texto= "Atenção Maria, veja o DNA", foi=npc_falou)
         vai = self.npc.vai
         self.npc.vai = lambda *_: None
         def maria_falou(*_):
             self.npc.vai = vai
-        self.maria=Elemento(img=MARIA, texto="Não consigo sair daqui", foi = maria_falou)
+        self.maria=Elemento(img=MARIA, x=0, y=0, w=200, h=200, texto="Não consigo sair daqui", foi = maria_falou)
         self.nucleo=Cena(img=NUCLEO)
         self.nucleo.vai()
         self.parede=Cena(img=PAREDE)
@@ -233,7 +233,7 @@ class Fase5():
     def __init__(self):
     
         self.organela=Cena(img=ORGANELA)
-        self.complexog=Elemento(img=COMPLEXOG, x=350, y=350, w=200, h=200,  texto="Sou uma organela, ué", foi=self.mariafala, cena=self.organela)
+        self.complexog=Elemento(img=COMPLEXOG, x=350, y=350, w=200, h=200,  texto="Sou uma organela, ué!", foi=self.mariafala, cena=self.organela)
         complexog = self.complexog.vai
         self.complexog.vai = lambda *_: None
         def maria_falou(*_):
@@ -254,12 +254,12 @@ class Fase5():
         Reticulo(voltar=self.mariafala)
     def mariafala(self, *_):
         self.organela=Cena(img=ORGANELA)
-        self.npc=Elemento(img=NPC, x=300, y=475,foi=self.pergunta, texto="Ele veio da Itália, era histologista, deu uma parte do meu nome para essa organela.Qual o seu nome?", cena=self.organela)
+        self.npc=Elemento(img=NPC, x=300, y=475,foi=self.pergunta, texto="Quem o descobriu foi um histologista italiano, ele deu uma parte do meu nome para essa organela.Qual o seu nome?", cena=self.organela)
         vai = self.npc.vai
         self.npc.vai = lambda *_: None
         def maria_falou(*_):
             self.npc.vai = vai
-        self.maria=Elemento(img=MARIA, x=100, y=400, w=200, h=200,foi=maria_falou, texto="Sim, mas qual é o nome dele? Será que ele pode me ajudar a sair daqui?", cena=self.organela)
+        self.maria=Elemento(img=MARIA, x=100, y=400, w=200, h=200,foi=maria_falou, texto="Sim, NPC...Mas qual é o nome dele? Será que ele pode me ajudar a sair daqui?", cena=self.organela)
         self.organela.vai()
         self.acabou = 2
         #self.pergunta()
@@ -283,7 +283,8 @@ class Fase5():
             
     
 if __name__ == "__main__":
-    Fase3().parte_3()
+    #Fase3().parte_3()
+    Fase4()
     
     
     
