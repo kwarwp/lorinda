@@ -188,9 +188,10 @@ class Fase7():
         self.maria_double.elt.style.transform = "rotate(200deg)"
   
     def main(self,_=0):
-        self.parede=cena = JOGO.c('https://i.imgur.com/ujAF00x.jpg').vai()
+        Dialogo(self.maria_sai)
+        '''self.parede=cena = JOGO.c('https://i.imgur.com/ujAF00x.jpg').vai()
         t = JOGO.n(cena, 'É isto! A Parede Celular!',foi=self.maria_sai)
-        Swap(JOGO, PAREDE, cena, w=700,h=200,x=50,y=150,dw=7,dh=2, venceu=t) 
+        Swap(JOGO, PAREDE, cena, w=700,h=200,x=50,y=150,dw=7,dh=2, venceu=t)''' 
     
     def maria_sai(self):
         self.maria.entra(self.parede)
@@ -238,7 +239,36 @@ class Fase7():
         self.ribossomo.fala()
 #if __name__ == "__main__":            
     #Fase6()  
- 
+
+class Dialogo:
+    def __init__(self, saida):
+        self.saida = saida
+        self.cena = cena = JOGO.c('https://i.imgur.com/ujAF00x.jpg').vai()
+        fala = ("NPC: É uma estrutura que envolve a membrana plasmática,"
+        " e está presente em células vegetais, organismos procariotos e alguns eucariotos, como os fungos."
+        " Tem como principal função, proteger a célula.")
+        self.npc = Elemento(NPC, x=400, y=300, w=100, cena=cena, texto=fala, foi=self.maria_fala)
+        vai = self.npc.vai
+        self.npc.vai, self.npc_vai = self.nada, self.npc.vai
+        def maria_fala(*_):
+            self.npc.vai = self.npc_vai
+            self.maria.vai, self.maria_vai = self.nada, self.maria.vai
+        self.maria = Elemento(MARIA, x=200, y=300, w=100, cena=cena, texto="Nossa! Que estrutura é essa?", foi=maria_fala)
+    def nada(self, *_):
+        pass
+    def maria_fala(self, *_):
+        self.npc.vai, self.npc_vai = self.nada, self.npc.vai
+        self.maria.vai = Texto(self.cena, "Maria pergunta: E agora como faço para sair daqui?", foi=self.npc_fala).vai
+    def npc_fala(self, *_):
+        fala = "NPC: Você precisa resolver o enigma. Forme a palavra correta e livre você estará."
+        self.npc.vai = Texto(self.cena, fala, foi=self.jogar).vai
+
+    def jogar(self, _=0):
+        cena = JOGO.c('https://i.imgur.com/ujAF00x.jpg').vai()
+        t = JOGO.n(cena, 'É isto! A Parede Celular!', foi=self.saida)
+        Swap(JOGO, PAREDE, cena, w=700,h=200,x=50,y=150,dw=7,dh=2, venceu=t)
+        
+        
 LABORATORIO="https://i.imgur.com/g3wt0Vb.jpg"
 CICLONE = "https://i.imgur.com/BC6X7ho.gif"
 class Fase11():
