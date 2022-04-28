@@ -8,6 +8,11 @@ STYLE.update(width=1000, height="600px")
 PAREDE = "https://i.imgur.com/ZAoCT4o.png"
 SEMFUNCAO = "https://i.imgur.com/u7zMLPW.png"
 GOLGI = "https://i.imgur.com/PUbco5w.png"
+NPC = "https://imgur.com/VcPXMYC.png"
+RIBOSSOMA = "https://i.imgur.com/Tf5yrKb.png"
+LISOSSOMA = "https://i.imgur.com/g0OplxP.png"
+MARIA = "https://i.imgur.com/4yrnNgS.png"
+CELULAR = "https://www.neoenergia.com/pt-br/te-interessa/meio-ambiente/PublishingImages/fotos/covid-virus-bacteria.png"
 class Fase6:
     def __init__(self,*_):
         STYLE.update(width=1000, height="600px")
@@ -15,11 +20,6 @@ class Fase6:
         def pegou_atp(ev=None):
             ATP = "https://i.imgur.com/k0Az1Ts.png"
             self.ATP = Elemento(img=ATP, tit="ATP", x=600, y=500, cena=self.parede, drag=True)
-        NPC = "https://imgur.com/VcPXMYC.png"
-        RIBOSSOMA = "https://i.imgur.com/Tf5yrKb.png"
-        LISOSSOMA = "https://i.imgur.com/g0OplxP.png"
-        MARIA = "https://i.imgur.com/4yrnNgS.png"
-        CELULAR = "https://www.neoenergia.com/pt-br/te-interessa/meio-ambiente/PublishingImages/fotos/covid-virus-bacteria.png"
         MOCHILA.esvazia_mochila()
         MOCHILA.ganha_atp()
         #MOCHILA.quando_pega(pegou_atp)
@@ -247,13 +247,13 @@ class Dialogo:
         fala = ("NPC: É uma estrutura que envolve a membrana plasmática,"
         " e está presente em células vegetais, organismos procariotos e alguns eucariotos, como os fungos."
         " Tem como principal função, proteger a célula.")
-        self.npc = Elemento(NPC, x=400, y=300, w=100, cena=cena, texto=fala, foi=self.maria_fala)
+        self.npc = Elemento(NPC, x=600, y=300, w=200, cena=cena, texto=fala, foi=self.maria_fala)
         vai = self.npc.vai
         self.npc.vai, self.npc_vai = self.nada, self.npc.vai
         def maria_fala(*_):
             self.npc.vai = self.npc_vai
             self.maria.vai, self.maria_vai = self.nada, self.maria.vai
-        self.maria = Elemento(MARIA, x=200, y=300, w=100, cena=cena, texto="Nossa! Que estrutura é essa?", foi=maria_fala)
+        self.maria = Elemento(MARIA, x=200, y=150, w=400, h=500, cena=cena, texto="Nossa! Que estrutura é essa?", foi=maria_fala)
     def nada(self, *_):
         pass
     def maria_fala(self, *_):
@@ -291,6 +291,7 @@ class Fase11():
         
         
 if __name__ == "__main__": 
-    Fase6()
+    #Fase6()
+    Fase7()
     
     #Move()
