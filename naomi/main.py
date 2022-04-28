@@ -261,6 +261,6 @@ class Fase11():
         
         
 if __name__ == "__main__": 
-    Fase11()
+    Fase6()
     
     #Move()
