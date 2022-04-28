@@ -25,8 +25,8 @@ RNA= "https://i.imgur.com/khPaSvV.png" # trocar essa imagem
 
 
 class Personagem(Elemento):
-    def __init__(self, img=MARIA, x=300, y=400, w=180, h=200, afala="", responde=None):
-        super().__init__(img=img, x=x, y=y, w=w, h=h)
+    def __init__(self, img=MARIA, x=300, y=400, w=180, h=200, afala="", responde=None, **kwargs):
+        super().__init__(img=img, x=x, y=y, w=w, h=h, **kwargs)
         self.afala = afala
         self.responde = responde
         
