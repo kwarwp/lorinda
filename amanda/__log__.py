@@ -24,3 +24,10 @@ SyntaxError: invalid syntax
     npc = Elemento(NPC, x=400, y=300, w=100, cena=cena, texto="fala", foi=self.jogar)
 AttributeError: 'GUI' object has no attribute 'jogar'
 '''},
+{'date': 'Wed Apr 27 2022 21:58:47.933 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 77
+  fala = ("NPC: É uma estrutura que envolve a membrana plasmática,"
+                                                                                                                                                                                                                                                  ^
+SyntaxError: invalid syntax
+'''},
