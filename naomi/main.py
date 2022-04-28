@@ -159,7 +159,7 @@ class Fase7():
         self.ribossoma = Personagem(RIBOSSOMA, x=200, y=750, w=90, h=90, afala=afala,
             responde=self.ribossomo_fala)
         afala = "Maria: Ribossomo, por que você está triste?"
-        self.maria=Personagem(img=MARIA, x=500, y=150, w=200, h=300, afala=afala, responde=self.ribossoma.fala)
+        self.maria=Personagem(img=MARIA, x=500, y=150, w=200, h=300, afala=afala, responde=self.ribossoma.fala, drop = {"glicose": faz_luz})
         self.glicose.entra(self.celula)
         self.ribossoma.entra(self.celula)
         self.maria.entra(self.celula)
