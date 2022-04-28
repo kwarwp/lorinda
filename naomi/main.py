@@ -121,9 +121,9 @@ class Fase6:
         self.maria.x=800
 
     def mover(self, ev=None):
-        self.movente.x=300
+        self.movente.x=300+100
         self.movente.y=400
-        self.movente1.x=300
+        self.movente1.x=300+100
         self.movente1.y=400
         # self.maria.x=400
         
@@ -151,7 +151,7 @@ class Fase7():
         self.celula = Cena(CELULA)
         self.celula.vai()
         self.escuro = Elemento(ESCURO, x=0, y=0, w=1000, h=600, o=0.92, cena=self.celula)
-        self.mitocondria = Elemento(MITOCONDRIA, x=20, y=40, w=950, h=550, o=0.1, cena=self.celula,
+        self.mitocondria = Elemento(MITOCONDRIA, x=20, y=40, w=950, h=550, o=0.6, cena=self.celula,
             drop = {"glicose": faz_luz})
         self.glicose = Elemento(GLICOSE, x=0, y=100, tit = "glicose", drag = True,
             w=100, h=100)
