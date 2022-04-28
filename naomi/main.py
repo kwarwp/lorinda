@@ -214,7 +214,7 @@ class Fase7():
         self.maria.fala()
     def entra_redemoinho(self, _=0):
         #from amanda.main import main
-        afala = "Maria: Eu finalmente consegui sair desse lugar"
+        afala = "Maria: Acho que finalmente conseguirei sair desse lugar."
         self.redemoinho = Elemento(CICLONE, x=0, y=0, w=600, h=600, o=0.8, cena=self.celula,
         style= {"transition": "left 6s"})
         self.redemoinho.elt.ontransitionend = self.main
@@ -244,7 +244,7 @@ class Dialogo:
     def __init__(self, saida):
         self.saida = saida
         self.cena = cena = JOGO.c('https://i.imgur.com/ujAF00x.jpg').vai()
-        fala = ("NPC: É uma estrutura que envolve a membrana plasmática,"
+        fala = ("Atenção a dica. É uma estrutura que envolve a membrana plasmática"
         " e está presente em células vegetais, organismos procariotos e alguns eucariotos, como os fungos."
         " Tem como principal função, proteger a célula.")
         self.npc = Elemento(NPC, x=600, y=300, w=200, cena=cena, texto=fala, foi=self.maria_fala)
@@ -253,14 +253,14 @@ class Dialogo:
         def maria_fala(*_):
             self.npc.vai = self.npc_vai
             self.maria.vai, self.maria_vai = self.nada, self.maria.vai
-        self.maria = Elemento(MARIA, x=200, y=150, w=400, h=500, cena=cena, texto="Nossa! Que estrutura é essa?", foi=maria_fala)
+        self.maria = Elemento(MARIA, x=200, y=150, w=400, h=500, cena=cena, texto="Oh! Não! Ainda estou presa.", foi=maria_fala)
     def nada(self, *_):
         pass
     def maria_fala(self, *_):
         self.npc.vai, self.npc_vai = self.nada, self.npc.vai
-        self.maria.vai = Texto(self.cena, "Maria pergunta: E agora como faço para sair daqui?", foi=self.npc_fala).vai
+        self.maria.vai = Texto(self.cena, "Que estrutura é essa?", foi=self.npc_fala).vai
     def npc_fala(self, *_):
-        fala = "NPC: Você precisa resolver o enigma. Forme a palavra correta e livre você estará."
+        fala = "Resolva o enigma. Forme a palavra correta e livre você estará."
         self.npc.vai = Texto(self.cena, fala, foi=self.jogar).vai
 
     def jogar(self, _=0):
