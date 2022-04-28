@@ -5,6 +5,9 @@ from anastasia.main import Swap
 
 STYLE["width"] = 800
 STYLE["height"] = "600px"
+MARIA = "https://i.imgur.com/1sI2ePw.png"
+NPC = "https://imgur.com/VcPXMYC.png"
+
 PAREDE = "https://i.imgur.com/ZAoCT4o.png"
 P = ""
 A = ""
@@ -69,6 +72,15 @@ class Fase10:
         return 300, self.linha_inicial
         
 def main(_=0):
+    cena = JOGO.c('https://i.imgur.com/ujAF00x.jpg').vai()
+    npc = Elemento(NPC, x=400, y=300, w=100, cena=cena, texto="fala", foi=self.jogar)
+    vai = npc.vai
+    def maria_fala(*_):
+        npc.vai = vai
+    maria = Elemento(MARIA, x=200, y=300, w=100, cena=cena, texto="Nossa! Que estrutura é essa?", foi=maria_fala)
+    t = JOGO.n(cena, 'É isto! A Parede Celular!').vai()
+        
+def jogar(_=0):
     cena = JOGO.c('https://i.imgur.com/ujAF00x.jpg').vai()
     t = JOGO.n(cena, 'É isto! A Parede Celular!')
     Swap(JOGO, PAREDE, cena, w=700,h=200,x=50,y=150,dw=7,dh=2, venceu=t)
