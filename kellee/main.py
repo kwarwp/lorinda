@@ -134,19 +134,20 @@ class Fase3():
     def parte_4(self, *_):
         self.laboratorio_4=Cena(img=LABORATORIO_4)
         self.laboratorio_4.vai()
+        #Texto(self.laboratorio_4, "p4").vai()
         # self.laboratorio_4.esquerda=self.laboratorio_3
         self.dna.entra(self.laboratorio_4)
         self.npc.entra(self.laboratorio_4)
         self.maria.entra(self.laboratorio_4)
         self.maria.tit = ""
         self.maria.vai = lambda *_: None
-        self.dna.tit= "Vá estudar garota!"
+        # self.dna.tit= "Vá estudar garota!"
         def dna_falou(*_):
             self.dna.vai = lambda *_: None
             fala = (" Desvende o enigma: No interior do núcleo há uma molécula constituída por letras que se encaixam"
             " perfeitamente seguindo uma determinada ordem. Quando nela há algum erro pode provocar uma doença ou mutação."
             " Monte o quebra-cabeça e passe de fase.")
-            self.npc.vai = Texto(self.laboratorio_4, fala, foi=self.parte_5).vai
+            Texto(self.laboratorio_4, fala, foi=self.parte_5).vai()
         self.dna.vai = Texto(self.laboratorio_4, "Vá estudar garota!", foi=dna_falou).vai
         #self.npc.tit=" Responda o enigma: No meu interior há uma molécula constituída por letras que se encaixam perfeitamente seguindo uma determinada ordem. Quando nela há algum erro pode provocar uma doença ou mutação. Monte o quebra-cabeça e passe de fase."
         # self.laboratorio_4.direita=Cena(vai=self.parte_5)
