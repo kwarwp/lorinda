@@ -164,6 +164,8 @@ class Fase7():
         self.ribossoma.entra(self.celula)
         self.maria.entra(self.celula)
         self.maria.fala()
+
+        self.parede = Cena("https://i.imgur.com/sGoKfvs.jpg")
         
     def ribossomo_fala(self, _=0):
         afala = "Você está em cima de uma mitocôndria. Acople a molécula de glicose para liberar energia e acender a luz, assim o ribossomo poderá encontrar sua outra parte."
@@ -194,8 +196,9 @@ class Fase7():
         Swap(JOGO, PAREDE, cena, w=700,h=200,x=50,y=150,dw=7,dh=2, venceu=t)''' 
     
     def maria_sai(self):
+        #self.maria.entra(self.parede)
         self.maria.entra(self.parede)
-        #self.parede.vai()
+        self.parede.vai()
         self.maria.responde=self.outro_redemoinho
         self.maria.fala()
          
@@ -265,7 +268,7 @@ class Dialogo:
 
     def jogar(self, _=0):
         cena = JOGO.c('https://i.imgur.com/ujAF00x.jpg').vai()
-        t = JOGO.n(cena, 'É isto! A Parede Celular!', foi=self.saida)
+        t = JOGO.n(cena, 'É isto! A Parede Celular!', foi=self.saida)  # .vai()
         Swap(JOGO, PAREDE, cena, w=700,h=200,x=50,y=150,dw=7,dh=2, venceu=t)
         
         
