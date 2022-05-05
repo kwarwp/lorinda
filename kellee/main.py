@@ -106,7 +106,7 @@ class Fase3():
         self.laboratorio_3=Cena(img=LABORATORIO_3)
         self.laboratorio_3.vai()
         texto=("Maria observa atentamente a estrutura onde está, ela tem duas membranas, poros e no seu interior alguém dá muitas ordens."
-        " Ela percebe que ele a olha com uma cara não muito amigável e pergunta, quem é você? NPC, você o conhece?")
+        " Ela percebe que ele a olha com uma cara não muito amigável e pergunta, quem é você? Dr. Robert, você o conhece?")
         tit = " Maria, ele não é muito simpático. É o todo poderoso! Ele se acha."
         self.dna=Elemento(img= DNA, x=255,y=150,w=200, h=200)
         
@@ -260,7 +260,7 @@ class Fase5():
         self.npc.vai = lambda *_: None
         def maria_falou(*_):
             self.npc.vai = vai
-        self.maria=Elemento(img=MARIA, x=100, y=400, w=200, h=200,foi=maria_falou, texto="Sim, NPC...Mas qual é o nome dele? Será que ele pode me ajudar a sair daqui?", cena=self.organela)
+        self.maria=Elemento(img=MARIA, x=100, y=400, w=200, h=200,foi=maria_falou, texto="Sim, Dr. Robert...Mas qual é o nome dele? Será que ele pode me ajudar a sair daqui?", cena=self.organela)
         self.organela.vai()
         self.acabou = 2
         #self.pergunta()
