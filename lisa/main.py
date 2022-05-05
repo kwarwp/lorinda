@@ -104,7 +104,7 @@ class apresentacao():
         self.chefe.vai=Texto(self.fiocruz,"Boa tarde, Maria! Temos um tempo antes da entrevista. Fique à vontade, se quiser, pode explorar os laboratórios para estudar.").vai
         self.maria.entra(self.fiocruz)
         self.maria.vai=Texto(self.fiocruz,
-        "Nossa! Uma lâmina! Tenho um tempo antes da entrevista do estágio, vou procurar um laboratório",
+        "Vou aproveitar esse tempo que tenho antes da entrevista do estágio e vou procurar um laboratório",
         foi=self.entrou_laboratorio).vai
     def entrou_laboratorio(self,*_):
         self.laboratorio.vai()
@@ -222,7 +222,7 @@ class Fase1():
         self.maria.entra(self.celula)
         self.maria.vai=Texto(self.celula, "Onde estou?", foi=self.faladepois1).vai
         self.npc.entra(self.celula)
-        self.npc.vai=Texto(self.celula, " Na cidade das células! CITONÓPOLIS", foi=self.faladepois2).vai
+        self.npc.vai=Texto(self.celula, " Oi! Eu sou o Dr. Robert. Você está na cidade das células! CITONÓPOLIS", foi=self.faladepois2).vai
     def faladepois1(self,*_):
         self.maria.vai=Texto(self.celula,"Como posso sair desse lugar?").vai
     def faladepois2(self,*_):
