@@ -47,7 +47,7 @@ class Fase6:
         self.maria = Elemento(img=MARIA, x=600, y=390,w=150,h=150, cena=self.parede, # vai=self.usou_o_celular,
             style={"transition": "left 4s"})
         self.maria.elt.ontransitionend = self.encosta_maria
-        txt0 = ('De repente Maria vê uma bolinha se desprendo do complexo de golgi,'
+        txt0 = ('De repente Maria vê uma bolinha se desprendo do complexo de Golgi,'
             'ela encosta numa organela que está com uma placa escrito sem função,'
             'a bolinha vem na direção dessa organela e destrói a organela.')
         txt = ('Maria vê uma organela que está com uma placa escrito sem função'
@@ -98,7 +98,7 @@ class Fase6:
         # self.matou_organela = False
 
     def pede_socorro(self, ev=None):
-        txt = ('Socorro NPC!')
+        txt = ('Socorro Dr. Robert!')
         Texto(self.parede, txt).vai()
 
     def foge_maria(self, ev=None):
@@ -129,9 +129,9 @@ class Fase6:
         
     def resposta(self, rep):
         if rep == "A":
-            Texto(self.parede, "ganhou um ATP!").vai()
+            Texto(self.parede, "Ganhou um ATP!").vai()
         else:
-            Texto(self.parede, "Ops não acertou", foi=self.pergunta).vai()
+            Texto(self.parede, "Ops! Não acertou", foi=self.pergunta).vai()
             
 GLICOSE = "https://i.imgur.com/vgrC2fM.png"
 RIBOSSOMA = "https://i.imgur.com/Tf5yrKb.png"
