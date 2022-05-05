@@ -76,7 +76,7 @@ class Fase3():
         self.laboratorio_1.vai()
         # self.laboratorio_1.esquerda=self.laboratorio
         self.rosalinda.entra(self.laboratorio_1)
-        fala_rosalinda = "sim claro"
+        fala_rosalinda = "Sim, claro!"
         self.rosalinda.vai = Texto(self.laboratorio_1, fala_rosalinda, foi=rosa_falou).vai
         #self.elt.onclick = some
         self.maria.entra(self.laboratorio_1)
