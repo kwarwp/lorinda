@@ -87,16 +87,16 @@ class apresentacao():
         self.rua.vai()
         self.maria.entra(self.rua)
         self.maria.vai= Texto(self.rua, 
-        "Estou indo para Fiocruz, acho que vou conseguir um estágio lá, uip",
+        "Estou indo para Fiocruz, acho que vou conseguir um estágio lá, uip!",
         foi=self.entrou_rua2).vai
     def entrou_rua2(self,*_):
         self.rua2.vai()
         self.maria.entra(self.rua2)
         pega= Texto(self.rua2, 
-        "Mas estou muito curiosa, vou abrir depois .",
+        "Mas estou muito curiosa, vou abrir depois.",
         foi=self.entra_fiocruz)
         self.maria.vai= Texto(self.rua2, 
-        " Que pessoa estranha, não quero nada aceitar dela",
+        " Que pessoa estranha, não quero nada aceitar dela.",
         foi=pega.vai).vai
     def entra_fiocruz(self,*_):
         self.fiocruz.vai()
@@ -104,13 +104,13 @@ class apresentacao():
         self.chefe.vai=Texto(self.fiocruz,"Boa tarde, Maria! Temos um tempo antes da entrevista. Fique à vontade, se quiser, pode explorar os laboratórios para estudar.").vai
         self.maria.entra(self.fiocruz)
         self.maria.vai=Texto(self.fiocruz,
-        "Vou aproveitar esse tempo que tenho antes da entrevista do estágio e vou procurar um laboratório",
+        "Vou aproveitar esse tempo que tenho antes da entrevista do estágio e vou procurar um laboratório.",
         foi=self.entrou_laboratorio).vai
     def entrou_laboratorio(self,*_):
         self.laboratorio.vai()
         self.maria.entra(self.laboratorio)
         self.maria.vai= Texto(self.laboratorio, 
-        "Aqui tem vários microscópios",
+        "Aqui tem vários microscópios.",
         foi=self.entrou_lamina).vai
     def entrou_lamina(self,*_):
         self.lamina.entra(self.laboratorio)
