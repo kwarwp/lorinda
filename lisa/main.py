@@ -125,7 +125,7 @@ class apresentacao():
         foi=self.entrou_microscopio).vai
     def entrou_microscopio(self,*_):
         self.microscopio.entra(self.laboratorio)
-        self.microscopio.vai= Texto(self.laboratorio, "  Neste laboratório tem vários microscópios, microscópios ópticos e também eletrônico. Você pode utiliza-los para descobrir o que tem nessa lâmina.",
+        self.microscopio.vai= Texto(self.laboratorio, "  Neste laboratório tem vários microscópios ópticos. Você pode utiliza-los para descobrir o que tem nessa lâmina.",
         foi=self.ciclone).vai
         #foi=Fase1(self.maria).vai).vai
     def ciclone(self, *_):
