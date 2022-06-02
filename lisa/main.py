@@ -64,7 +64,7 @@ class apresentacao():
         self.chefe=Elemento(img=CHEFE, x=200, y=390, w=200, h=200)
         self.laboratorio= Cena(img= LABORATORIO)
         self.cartaz=Elemento(CARTAZ, x=400)
-        self.microscopio = Elemento(img = MICROSCOPIO, x=760, y=350)
+        self.microscopio = Elemento(img = MICROSCOPIO, x=760)
         # cartaz= Elemento(img= CARTAZ)
         #chefe.entra(fiocruz)
         #será que assim vai? colocar separado? mas se colocar assim os dois textos vão aparecer
