@@ -71,3 +71,7 @@ AttributeError: 'Jogo' object has no attribute 'rt'
     nome_ator = zip( atores, nomes, atores[1:]+[None])
 NameError: name 'atores' is not defined
 '''},
+{'date': 'Mon Jun 06 2022 12:53:03.20 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+Exception: <TypeError: bases[i].$dict is undefined>
+'''},
