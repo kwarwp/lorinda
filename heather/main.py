@@ -32,6 +32,8 @@ class Fase3():
         #self.inicio=Cena(img=INICIO)
         #self.foco=Elemento(img=FOCO, x=250, y=280, w=90, h=150, style={"opacity": 0})
         #self.foco.entra(self.inicio)
+        def sumir(ev=0):
+            self.rosalinda.x=-100000
             
         
         c = self.laboratorio=Cena(img=LABORATORIO)
@@ -41,6 +43,12 @@ class Fase3():
         'Quero aprender sobre proteínas, me ajuda?')
         rtit = ("As proteínas são moléculas orgânicas fundamentais para os seres vivos, elas são muito importantes para a nossa saúde e beleza!"
         "Precisamos estuda-las para nos manter saudáveis, fortes e bonitas. ")
+        texto=" Quais as funções delas no nosso organismo?" 
+        rose_fala = ("Elas tem inúmeras funções. Tem função estrutural,"
+                     "pois são os constituintes básicos das fibras musculares, cabelo, ossos, dentes e pele."
+                     " Também desempenham importante papel na proteção do organismo contra os agentes patológicos,"
+                     " é o caso dos anticorpos; na constituição de hormônios importantes para o bom funcionamento do organismo,"
+                     " em especial, a insulina, o FSH e o LH; na aceleração das reações químicas que acontecem no organismo.")
         def maria_falou(*_):
             self.rosalinda.vai = vai
         #m = self.maria=Elemento(img=MARIA, x=100, y=280, w=280, h=300, texto=mtit, foi=self.some)
@@ -58,7 +66,9 @@ class Fase3():
         #rot = [Fala(ato, nom, prox, None) for ato, nom, prox in nome_ator]
         rot = [
                Fala(m, mtit, r, None),
-               Fala(r, rtit, None, None),
+               Fala(r, rtit, m, None),
+               Fala(m, texto, r, None),
+               Fala(r, rose_fala, None, sumir),
                ]
         Roteiro(c, rot, ele, self.some)
         #self.foco.vai=self.laboratorio.vai
