@@ -100,7 +100,7 @@ class Fase3():
         #rosalinda some 
     
     def parte_2(self):
-        self.laboratorio_2= Cena(img=LABORATORIO_2)
+        c = self.laboratorio_2= Cena(img=LABORATORIO_2)
         #self.laboratorio_1.direita=self.laboratorio_2
         self.laboratorio_2.vai()
         self.laboratorio_2.esquerda=self.laboratorio_1
@@ -108,14 +108,14 @@ class Fase3():
         npc = "Dr. Robert"
         robert = (" Você não deve esquecer do seu verdadeiro propósito buscar, desvendar um grande enigma celular."
         " Você deve sempre lembrar que para uma célula funcionar, todas as suas organelas conectadas devem estar. ")
-        texto=("Maria observa atentamente a estrutura onde está, ela tem duas membranas,"
+        rob_ob=("Maria observa atentamente a estrutura onde está, ela tem duas membranas,"
         " poros e no seu interior alguém dá muitas ordens."
         " Ela percebe que ele a olha com uma cara não muito amigável")
         quem_ = "Quem é você? Dr. Robert, você o conhece?"
-        amigavael = " Maria, ele não é muito simpático. É o todo poderoso! Ele se acha."
+        amigavel = " Maria, ele não é muito simpático. É o todo poderoso! Ele se acha."
         dna_e = "Como você não sabe o meu nome? De que planeta você é?! EU SOU O MAIORAL!!",
 
-        r = self.npc= Elemento(img=NPC, y=400,w=200,h=200, texto=npc, foi=self.parte_3)
+        r = self.npc= Elemento(img=NPC, y=400,w=200,h=200) #, texto=npc, foi=self.parte_3)
         m = self.maria
         vai = self.npc.vai
         self.npc.vai = lambda *_: None
@@ -124,20 +124,22 @@ class Fase3():
         #self.maria=Elemento(img=MARIA, x=100, y=280, w=280, h=300, texto=texto, foi=maria_falou)
         self.maria.entra(self.laboratorio_2)
         self.npc.entra(self.laboratorio_2)
-        self.laboratorio_2.direita=Cena(vai=self.parte_3)
-        ele = [Ator(self.maria,"Maria", 0.4, A.e),
-               Ator(self.npc, npc, 1, A.e)]
+        d = self.dna=Elemento(img= DNA, tit="DNA", x=255,y=150,w=200, h=200)
+        # self.laboratorio_2.direita=Cena(vai=self.parte_3)
+        ele = [Ator(self.maria,"Maria", 0.4, A.e), Ator(self.dna,"DNA", 0.4, A.e),
+               Ator(self.npc, npc, 0.6, A.e)]
         rot = [
                Fala(m, texto, r, None),
                Fala(r, robert, m, None),
                Fala(m, "Esta estrutura!", r, None),
-               Fala(r, texto, m, None),
+               Fala(r, rob_ob, m, lambda *_: d.entra(c)),
                Fala(m, quem_, r, None),
                Fala(r, amigavel, m, None),
-               Fala(m, "Dá para notar daqui. Mas afinal, quem é este sujeito?", r, None),
-               Fala(r, dna_e, m, None),
+               Fala(m, "Dá para notar daqui. Mas afinal, quem é este sujeito?", d, None),
+               Fala(d, dna_e, m, None),
                Fala(m, "Que você se acha o maioral, já sabia, mas qualé o seu nome?", None, self.parte_3),
                ]
+        Roteiro(c, rot, ele,None)
     
     def parte_3(self):
         self.laboratorio_3=Cena(img=LABORATORIO_3)
