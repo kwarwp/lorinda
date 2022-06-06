@@ -193,50 +193,39 @@ class Fase5():
     def __init__(self):
     
         c = self.organela=Cena(img=ORGANELA)
-        g = self.complexog=Elemento(img=COMPLEXOG, x=350, y=350, w=200, h=200,  texto="Sou uma organela, ué!", foi=self.mariafala, cena=self.organela)
-        n = self.npc=Elemento(img=NPC, x=300, y=475,foi=self.pergunta, texto="Quem o descobriu foi um histologista italiano, ele deu uma parte do meu nome para essa organela.Qual o seu nome?", cena=self.organela)
+        g = self.complexog=Elemento(img=COMPLEXOG, x=350, y=150, w=200, h=200, cena=c)
+        n = self.npc=Elemento(img=NPC, x=450, y=450, cena=c)
         self.acabou = 2
-        complexog = self.complexog.vai
-        self.complexog.vai = lambda *_: None
-        def maria_falou(*_):
-            self.complexog.vai = complexog
-        m = self.maria=Elemento(img=MARIA, x=150, y=350, w=200, h=200, texto=" Quem é você? ",foi=maria_falou, cena=self.organela)
-        maria = self.maria.vai
-        self.maria.vai = lambda *_: None
-        def rose_falou(*_):
-            self.maria.vai = maria
-        r = self.rosalinda=Elemento(img=ROSALINDA, x=0, y=350, w=200, h=200,foi=rose_falou, texto ="Maria, olhe a estrutura ao seu lado.", cena=self.organela)
-        # self.organela.direita=Cena(vai=self.mariafala)
+        m = self.maria=Elemento(img=MARIA, x=210, y=350, w=200, h=200, cena=c)
+        r = self.rosalinda=Elemento(img=ROSALINDA, x=0, y=350, w=200, h=200, cena=c)
         vai_reticulo = Elemento(SETA, tit="Conheça melhor o Retículo Endoplasmático clicando nesta seta", x=20, y=200,
         vai=self.viagem_reticulo, cena=self.organela)
         self.organela.vai()
         #self.parede.esquerda=self.nucleo
         npc = "Dr. Robert"
-        ele = [Ator(m,"Maria", 0.4, A.e), Ator(r, "Dr. Rosalinda", 0.6, A.e), Ator(n,npc, 0.4, A.e)]
+        self.ele = [Ator(m,"Maria", 0.4, A.e), Ator(r, "Dr. Rosalinda", 0.6, A.e), Ator(n,npc, 0.4, A.e)]
                
         rot = [
                Fala(m, "Quem é você?", r, None),
                Fala(r, "Maria, olhe a estrutura ao seu lado.", n, None),
                Fala(n, "Quem a descobriu foi um histologista italiano, ele deu uma parte do seu nome para essa organela", m, None),
-               Fala(m, "Sim, Dr. Robert...Mas qual é o nome dele? Será que ele pode me ajudar a sair daqui?", n, None),
+               Fala(m, "E esta seta vermelha, para que serve?", r, None),
+               Fala(r, "É a porta para entrar em uma viagem de conhecimento do Retículo Endoplasmático! Eu recomendo!", m, None),
+               Fala(m, "Sim, mas Dr. Robert, qual é o nome desta organela? Será que ele pode me ajudar a sair daqui?", n, None),
                Fala(n, "É bem possível que ele ajude, mas você terá que acertar o seu nome", None, self.pergunta),
                ]
-        Roteiro(c, rot, ele,None)
+        Roteiro(c, rot, self.ele,None)
+        
+    def mariafala(self, *_):
+        rot = [
+               Fala(m, "Sim, mas Dr. Robert, qual é o nome desta organela? Será que ele pode me ajudar a sair daqui?", n, None),
+               Fala(n, "É bem possível que ele ajude, mas você terá que acertar o seu nome", None, self.pergunta),
+               ]
+        Roteiro(self.organela, rot, self.ele,None)
         
     def viagem_reticulo(self, *_):
         from stacy.main import Reticulo
         Reticulo(voltar=self.mariafala)
-    def mariafala(self, *_):
-        self.organela=Cena(img=ORGANELA)
-        self.npc=Elemento(img=NPC, x=300, y=475,foi=self.pergunta, texto="Quem o descobriu foi um histologista italiano, ele deu uma parte do meu nome para essa organela.Qual o seu nome?", cena=self.organela)
-        vai = self.npc.vai
-        self.npc.vai = lambda *_: None
-        def maria_falou(*_):
-            self.npc.vai = vai
-        self.maria=Elemento(img=MARIA, x=100, y=400, w=200, h=200,foi=maria_falou, texto="Sim, Dr. Robert...Mas qual é o nome dele? Será que ele pode me ajudar a sair daqui?", cena=self.organela)
-        self.organela.vai()
-        self.acabou = 2
-        #self.pergunta()
     def pergunta(self, ev=None):
         if self.acabou == 0:
             return
