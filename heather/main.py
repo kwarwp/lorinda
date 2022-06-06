@@ -192,22 +192,36 @@ SETA = "https://i.imgur.com/N3JNtRW.png"
 class Fase5():
     def __init__(self):
     
-        self.organela=Cena(img=ORGANELA)
-        self.complexog=Elemento(img=COMPLEXOG, x=350, y=350, w=200, h=200,  texto="Sou uma organela, ué!", foi=self.mariafala, cena=self.organela)
+        c = self.organela=Cena(img=ORGANELA)
+        g = self.complexog=Elemento(img=COMPLEXOG, x=350, y=350, w=200, h=200,  texto="Sou uma organela, ué!", foi=self.mariafala, cena=self.organela)
+        n = self.npc=Elemento(img=NPC, x=300, y=475,foi=self.pergunta, texto="Quem o descobriu foi um histologista italiano, ele deu uma parte do meu nome para essa organela.Qual o seu nome?", cena=self.organela)
+        self.acabou = 2
         complexog = self.complexog.vai
         self.complexog.vai = lambda *_: None
         def maria_falou(*_):
             self.complexog.vai = complexog
-        self.maria=Elemento(img=MARIA, x=150, y=350, w=200, h=200, texto=" Quem é você? ",foi=maria_falou, cena=self.organela)
+        m = self.maria=Elemento(img=MARIA, x=150, y=350, w=200, h=200, texto=" Quem é você? ",foi=maria_falou, cena=self.organela)
         maria = self.maria.vai
         self.maria.vai = lambda *_: None
         def rose_falou(*_):
             self.maria.vai = maria
-        self.rosalinda=Elemento(img=ROSALINDA, x=0, y=350, w=200, h=200,foi=rose_falou, texto ="Maria, olhe a estrutura ao seu lado.", cena=self.organela)
+        r = self.rosalinda=Elemento(img=ROSALINDA, x=0, y=350, w=200, h=200,foi=rose_falou, texto ="Maria, olhe a estrutura ao seu lado.", cena=self.organela)
         # self.organela.direita=Cena(vai=self.mariafala)
         vai_reticulo = Elemento(SETA, tit="Conheça melhor o Retículo Endoplasmático clicando nesta seta", x=20, y=200,
         vai=self.viagem_reticulo, cena=self.organela)
         self.organela.vai()
+        #self.parede.esquerda=self.nucleo
+        npc = "Dr. Robert"
+        ele = [Ator(m,"Maria", 0.4, A.e), Ator(r, "Dr. Rosalinda", 0.6, A.e), Ator(n,npc, 0.4, A.e)]
+               
+        rot = [
+               Fala(m, "Quem é você?", r, None),
+               Fala(r, "Maria, olhe a estrutura ao seu lado.", n, None),
+               Fala(n, "Quem a descobriu foi um histologista italiano, ele deu uma parte do seu nome para essa organela", m, None),
+               Fala(m, "Sim, Dr. Robert...Mas qual é o nome dele? Será que ele pode me ajudar a sair daqui?", n, None),
+               Fala(n, "É bem possível que ele ajude, mas você terá que acertar o seu nome", None, self.pergunta),
+               ]
+        Roteiro(c, rot, ele,None)
         
     def viagem_reticulo(self, *_):
         from stacy.main import Reticulo
@@ -245,4 +259,4 @@ class Fase5():
 if __name__ == "__main__":
     # Fase3().parte_3()
     #Fase3() #.parte_2()
-    Fase4()
+    Fase5()
