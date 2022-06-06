@@ -120,22 +120,10 @@ class Fase3():
 
 class Fase4():  # SEM NENHUMA IMAGEM
     def __init__(self):
-        a = self.rna=Elemento(img=RNA, x=450, y=50, w=150, h=150, texto= " Vamos lá galera! Produzindo proteínas. ", foi=self.cena_parede) #aparece depois do dna
-        def dna_falou(*_):
-            self.rna.entra(self.nucleo)
-
-        
-        d = self.dna=Elemento(img=DNA, x=300,y=0, w=200, h=200, texto= "Só eu trabalho aqui? Vou ter que criar um RNA para me ajudar.", foi=dna_falou)
-        dna_vai = self.dna.vai
-        self.dna.vai = lambda *_: None
-        def npc_falou(*_):
-            self.dna.vai = dna_vai
-        r = self.npc=Elemento(img=NPC, x=200,y=25, texto= "Atenção Maria, veja o DNA", foi=npc_falou)
-        vai = self.npc.vai
-        self.npc.vai = lambda *_: None
-        def maria_falou(*_):
-            self.npc.vai = vai
-        m = self.maria=Elemento(img=MARIA, x=0, y=0, w=200, h=200, texto="Não consigo sair daqui", foi = maria_falou)
+        a = self.rna=Elemento(img=RNA, x=450, y=50, w=150, h=150)
+        d = self.dna=Elemento(img=DNA, x=300,y=0, w=200, h=200)
+        r = self.npc=Elemento(img=NPC, x=200,y=25)
+        m = self.maria=Elemento(img=MARIA, x=0, y=0, w=200, h=200)
         c = self.nucleo=Cena(img=NUCLEO)
         self.nucleo.vai()
         self.parede=Cena(img=PAREDE)
@@ -167,17 +155,6 @@ class Fase4():  # SEM NENHUMA IMAGEM
         
     def cena_parede(self, *_):
         c = self.parede=Cena(img=PAREDE)
-        '''
-        def npc_falou(*_):
-            Texto(self.parede,"Marque os processos que o DNA executa para a produção de proteína",foi=self.pergunta).vai()
-
-        self.npc=Elemento(img=NPC,x=400, w=200, h=250, texto="Se você acertar os processos irá ganhar uma molécula de ATP", foi=npc_falou)
-        vai = self.npc.vai
-        self.npc.vai = lambda *_: None
-        def maria_falou(*_):
-            self.npc.vai = vai
-        self.maria=Elemento(img=MARIA, w=200, h=250, texto="Nossa! Quantas proteínas diferentes são produzidas.", foi=maria_falou)
-        '''
         m, r = self.maria, self.npc
         self.acabou = 2
         self.npc.entra(self.parede)
