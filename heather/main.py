@@ -49,23 +49,16 @@ class Fase3():
                      " Também desempenham importante papel na proteção do organismo contra os agentes patológicos,"
                      " é o caso dos anticorpos; na constituição de hormônios importantes para o bom funcionamento do organismo,"
                      " em especial, a insulina, o FSH e o LH; na aceleração das reações químicas que acontecem no organismo.")
-        def maria_falou(*_):
-            self.rosalinda.vai = vai
-        #m = self.maria=Elemento(img=MARIA, x=100, y=280, w=280, h=300, texto=mtit, foi=self.some)
         m = self.maria=Elemento(img=MARIA, x=100, y=280, w=280, h=300)
-        #vai = self.maria.vai
-        #self.maria.vai = lambda *_: None
-        def rosa_falou(*_):
-            self.maria.vai = vai
-        #r = self.rosalinda=Elemento(img=ROSALINDA, x=300, y=280, w=280, h=300, texto=rtit, foi=rosa_falou)
         r = self.rosalinda=Elemento(img=ROSALINDA, x=300, y=280, w=280, h=300)
         self.maria.entra(self.laboratorio)
         self.rosalinda.entra(self.laboratorio)
         ele = [Ator(self.maria,"Maria", 0.4, A.e),
                Ator(self.rosalinda, "Dr. Rosalinda", 0.4, A.e)]
-        #rot = [Fala(ato, nom, prox, None) for ato, nom, prox in nome_ator]
         rot = [
                Fala(m, mtit, r, None),
+               Fala(r, "Sim, claro!", m, None),
+               Fala(m, "O que são as proteínas?", r, None),
                Fala(r, rtit, m, None),
                Fala(m, texto, r, None),
                Fala(r, rose_fala, None, sumir),
