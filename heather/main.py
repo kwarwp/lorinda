@@ -61,7 +61,8 @@ class Fase3():
                Fala(m, "O que são as proteínas?", r, None),
                Fala(r, rtit, m, None),
                Fala(m, texto, r, None),
-               Fala(r, rose_fala, None, sumir),
+               Fala(r, rose_fala, m, sumir),
+               Fala(m, "Dr. Rosalinda? Doutora?", None, self.parte_2),
                ]
         Roteiro(c, rot, ele, self.some)
         #self.foco.vai=self.laboratorio.vai
