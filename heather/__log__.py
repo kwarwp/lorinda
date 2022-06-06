@@ -215,3 +215,10 @@ NameError: name 'c' is not defined
                                                    ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Mon Jun 06 2022 18:40:44.85 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 186
+  ele = [Ator(m,"Maria", 0.4, A.e)
+                                                   ^
+SyntaxError: invalid syntax
+'''},
