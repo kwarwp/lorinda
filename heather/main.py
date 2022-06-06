@@ -116,18 +116,14 @@ class Fase3():
         quem_ = "Quem é você? Dr. Robert, você o conhece?"
         amigavel = "Maria, ele não é muito simpático. É o todo poderoso! Ele se acha."
         dna_e = "Como você não sabe o meu nome? De que planeta você é?! EU SOU O MAIORAL!!"
+        desvende = (" Desvende o enigma: No interior do núcleo há uma molécula constituída por letras que se encaixam"
+            " perfeitamente seguindo uma determinada ordem. Quando nela há algum erro pode provocar uma doença ou mutação."
+            " Monte o quebra-cabeça e passe de fase.")
 
         r = self.npc= Elemento(img=NPC, y=400,w=200,h=200) #, texto=npc, foi=self.parte_3)
-        m = self.maria
-        vai = self.npc.vai
-        self.npc.vai = lambda *_: None
-        def maria_falou(*_):
-            self.npc.vai = vai
-        #self.maria=Elemento(img=MARIA, x=100, y=280, w=280, h=300, texto=texto, foi=maria_falou)
         self.maria.entra(self.laboratorio_2)
         self.npc.entra(self.laboratorio_2)
         d = self.dna=Elemento(img= DNA, tit="DNA", x=255,y=150,w=200, h=200)
-        # self.laboratorio_2.direita=Cena(vai=self.parte_3)
         ele = [Ator(self.maria,"Maria", 0.4, A.e), Ator(self.dna,"DNA", 0.4, A.e),
                Ator(self.npc, npc, 0.6, A.e)]
         rot = [
@@ -139,7 +135,9 @@ class Fase3():
                Fala(r, amigavel, m, None),
                Fala(m, "Dá para notar daqui. Mas afinal, quem é este sujeito?", d, desce),
                Fala(d, dna_e, m, None),
-               Fala(m, "Que você se acha o maioral, já sabia, mas qualé o seu nome?", None, self.parte_4),
+               Fala(m, "Que você se acha o maioral, já sabia, mas qualé o seu nome?", d, None),
+               Fala(d, "Vai estudar, garota!", r, None),
+               Fala(r, desvende, None, self.parte_5),
                ]
         Roteiro(c, rot, ele,None)
     
