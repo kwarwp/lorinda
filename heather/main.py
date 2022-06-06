@@ -253,4 +253,4 @@ class Fase5():
 if __name__ == "__main__":
     # Fase3().parte_3()
     #Fase3() #.parte_2()
-    Fase5()
+    Fase3()
