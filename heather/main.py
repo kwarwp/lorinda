@@ -1,7 +1,7 @@
 # lorinda.heather.main.py
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE, JOGO
 from _spy.vitollino.main import Inventario as inv 
-from _spy.vitollino.jogos import Ator, Fala
+from _spy.vitollino.jogos import Ator, Fala, A
 from anastasia.main import Associa, SF
 from tracy.main import Personagem
 # salas do games da Angelica, lorinda-lisa-libby e kellee
