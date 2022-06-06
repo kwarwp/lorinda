@@ -44,6 +44,7 @@ class Fase3():
                      " em especial, a insulina, o FSH e o LH; na aceleração das reações químicas que acontecem no organismo.")
         m = self.maria=Elemento(img=MARIA, x=100, y=280, w=280, h=300)
         r = self.rosalinda=Elemento(img=ROSALINDA, x=300, y=280, w=280, h=300)
+        self.placa = Elemento("https://i.imgur.com/ilGy2kj.png", x=250, y=60, w=200,h=70, cena=c)
         self.maria.entra(self.laboratorio)
         self.rosalinda.entra(self.laboratorio)
         ele = [Ator(self.maria,"Maria", 0.4, A.e),
