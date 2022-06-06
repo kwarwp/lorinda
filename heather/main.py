@@ -217,13 +217,13 @@ class Fase5():
         Roteiro(c, rot, self.ele,None)
         
     def mariafala(self, *_):
-        m, n = self.maria, self.npc
+        m, n, r = self.maria, self.npc, self.rosalinda
         self.organela.vai()
         rot = [
                Fala(m, "De volta a Citonópolis! Onde estavamos mesmo?", r, None),
                Fala(r, "Estávamos observando esta fascinante organela, com muitas dobras.", n, None),
                Fala(n, "Quem a descobriu foi um histologista italiano, ele deu uma parte do seu nome para essa organela", m, None),
-               Fala(m, "Sim, mas Dr. Robert, qual é o nome desta cientista? Será que ele pode me ajudar a sair daqui?", n, None),
+               Fala(m, "Sim, mas Dr. Robert, qual é o nome deste cientista? Será que ele pode me ajudar a sair daqui?", n, None),
                Fala(n, "É bem possível que ele ajude, mas você terá que acertar o seu nome", None, self.pergunta),
                ]
         Roteiro(self.organela, rot, self.ele,None)
