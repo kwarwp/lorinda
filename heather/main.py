@@ -198,7 +198,7 @@ class Fase5():
         self.acabou = 2
         m = self.maria=Elemento(img=MARIA, x=210, y=350, w=200, h=200, cena=c)
         r = self.rosalinda=Elemento(img=ROSALINDA, x=0, y=350, w=200, h=200, cena=c)
-        vai_reticulo = Elemento(SETA, tit="Conheça melhor o Retículo Endoplasmático clicando nesta seta", x=20, y=200,
+        vai_reticulo = Elemento(SETA, tit="Conheça melhor o Retículo Endoplasmático clicando nesta seta", x=20, y=150,
         vai=self.viagem_reticulo, cena=self.organela)
         self.organela.vai()
         #self.parede.esquerda=self.nucleo
