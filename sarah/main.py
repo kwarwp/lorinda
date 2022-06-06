@@ -32,7 +32,7 @@ class Roteiro:
                 self.ator, self.fala, self.prox = ator, fala, prox
                 self._foi = act or self.nada
                 minih = 80 / mini
-                self.mini = Elemento(ator.img, cena=cena, w=80, h=80, tipo=f"80px {minih}px",
+                self.mini = Elemento(ator.img, cena=cena, w=ator.w, h=ator.h, tipo=f"80px {minih}px",
                                      style=dict(top="20%", margin="-10px 10%"))
                 super().__init__(cena, fala, **kwarg)
 
