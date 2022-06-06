@@ -211,14 +211,19 @@ class Fase5():
                Fala(n, "Quem a descobriu foi um histologista italiano, ele deu uma parte do seu nome para essa organela", m, None),
                Fala(m, "E esta seta vermelha, para que serve?", r, None),
                Fala(r, "É a porta para entrar em uma viagem de conhecimento do Retículo Endoplasmático! Eu recomendo!", m, None),
-               Fala(m, "Sim, mas Dr. Robert, qual é o nome desta organela? Será que ele pode me ajudar a sair daqui?", n, None),
+               Fala(m, "Sim, mas Dr. Robert, qual é o nome deste cientista? Será que ele pode me ajudar a sair daqui?", n, None),
                Fala(n, "É bem possível que ele ajude, mas você terá que acertar o seu nome", None, self.pergunta),
                ]
         Roteiro(c, rot, self.ele,None)
         
     def mariafala(self, *_):
+        m, n = self.maria, self.npc
+        self.organela.vai()
         rot = [
-               Fala(m, "Sim, mas Dr. Robert, qual é o nome desta organela? Será que ele pode me ajudar a sair daqui?", n, None),
+               Fala(m, "De volta a Citonópolis! Onde estavamos mesmo?", r, None),
+               Fala(r, "Estávamos observando esta fascinante organela, com muitas dobras.", n, None),
+               Fala(n, "Quem a descobriu foi um histologista italiano, ele deu uma parte do seu nome para essa organela", m, None),
+               Fala(m, "Sim, mas Dr. Robert, qual é o nome desta cientista? Será que ele pode me ajudar a sair daqui?", n, None),
                Fala(n, "É bem possível que ele ajude, mas você terá que acertar o seu nome", None, self.pergunta),
                ]
         Roteiro(self.organela, rot, self.ele,None)
