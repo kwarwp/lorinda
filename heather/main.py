@@ -44,9 +44,9 @@ class Fase3():
         rtit = ("As proteínas são moléculas orgânicas fundamentais para os seres vivos, elas são muito importantes para a nossa saúde e beleza!"
         "Precisamos estuda-las para nos manter saudáveis, fortes e bonitas. ")
         texto=" Quais as funções delas no nosso organismo?" 
-        rose_fala = ("Elas tem inúmeras funções. Tem função estrutural,"
-                     "pois são os constituintes básicos das fibras musculares, cabelo, ossos, dentes e pele."
-                     " Também desempenham importante papel na proteção do organismo contra os agentes patológicos,"
+        rose_fala = ("Elas tem inúmeras funções. Tem função estrutural, "
+                     "pois são os constituintes básicos das fibras musculares, cabelo, ossos, dentes e pele.")
+        rose_mais = (" Também desempenham importante papel na proteção do organismo contra os agentes patológicos,"
                      " é o caso dos anticorpos; na constituição de hormônios importantes para o bom funcionamento do organismo,"
                      " em especial, a insulina, o FSH e o LH; na aceleração das reações químicas que acontecem no organismo.")
         m = self.maria=Elemento(img=MARIA, x=100, y=280, w=280, h=300)
@@ -61,7 +61,9 @@ class Fase3():
                Fala(m, "O que são as proteínas?", r, None),
                Fala(r, rtit, m, None),
                Fala(m, texto, r, None),
-               Fala(r, rose_fala, m, sumir),
+               Fala(r, rose_fala, m, None),
+               Fala(m, "Estou impressionada! Elas são muito importantes!", r, None),
+               Fala(r, rose_mais, m, some),
                Fala(m, "Dr. Rosalinda? Doutora?", None, self.parte_2),
                ]
         Roteiro(c, rot, ele, self.some)
