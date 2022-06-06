@@ -1,6 +1,7 @@
 # lorinda.heather.main.py
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE, JOGO
 from _spy.vitollino.main import Inventario as inv 
+from _spy.vitollino.jogos import Ator, Fala
 from anastasia.main import Associa, SF
 from tracy.main import Personagem
 # salas do games da Angelica, lorinda-lisa-libby e kellee
@@ -32,7 +33,7 @@ class Fase3():
         #self.foco.entra(self.inicio)
             
         
-        self.laboratorio=Cena(img=LABORATORIO)
+        c = self.laboratorio=Cena(img=LABORATORIO)
         #self.maria=Elemento(img=MARIA, x=300, y=400, w=180, h=200, tit='Oi, Dra. Rosalinda! Sou sua fã!  Li todos os seus livros e seu artigo sobre "Direcionamento de Proteínas", ou seja, como as proteínas percorrem toda a célula.')
         #self.rosalinda=Elemento(img=ROSALINDA, x=100, y=400, w=180, h=200, tit="As proteínas são muito importantes para a nossa saúde e beleza! Precisamos estuda-las para nos manter saudáveis, fortes e bonitas. ")
         mtit = ('Oi, Dra. Rosalinda! Vim ao seu laboratório pois sou sua fã!  Admiro seu trabalho sobre a difração dos raio-x e me encanta saber que foi você quem realmente descobriu o formato helicoidal do DNA",' 
@@ -41,14 +42,25 @@ class Fase3():
         "Precisamos estuda-las para nos manter saudáveis, fortes e bonitas. ")
         def maria_falou(*_):
             self.rosalinda.vai = vai
-        self.maria=Elemento(img=MARIA, x=100, y=280, w=280, h=300, texto=mtit, foi=self.some)
-        vai = self.maria.vai
-        self.maria.vai = lambda *_: None
+        #m = self.maria=Elemento(img=MARIA, x=100, y=280, w=280, h=300, texto=mtit, foi=self.some)
+        m = self.maria=Elemento(img=MARIA, x=100, y=280, w=280, h=300)
+        #vai = self.maria.vai
+        #self.maria.vai = lambda *_: None
         def rosa_falou(*_):
             self.maria.vai = vai
-        self.rosalinda=Elemento(img=ROSALINDA, x=300, y=280, w=280, h=300, texto=rtit, foi=rosa_falou)
+        #r = self.rosalinda=Elemento(img=ROSALINDA, x=300, y=280, w=280, h=300, texto=rtit, foi=rosa_falou)
+        r = self.rosalinda=Elemento(img=ROSALINDA, x=300, y=280, w=280, h=300)
         self.maria.entra(self.laboratorio)
         self.rosalinda.entra(self.laboratorio)
+        ele = [Ator(self.maria,"Maria", 0.2, A.e),
+               Ator(self.rosalinda, "Dr. Rosalinda", 0.2, A.e)]
+        nome_ator = zip( atores, nomes, atores[1:]+[None])
+        #rot = [Fala(ato, nom, prox, None) for ato, nom, prox in nome_ator]
+        rot = [
+               Fala(m, mtit, r, None),
+               Fala(r, rtit, m, None),
+               ]
+        JOGO.rt(c, rot, ele, self.some)
         #self.foco.vai=self.laboratorio.vai
         self.laboratorio_1 = Cena(img= LABORATORIO_1)
         # self.laboratorio.direita=self.laboratorio_1
@@ -282,5 +294,6 @@ class Fase5():
             
     
 if __name__ == "__main__":
-    Fase3().parte_3()
+    # Fase3().parte_3()
+    Fase3()
     #Fase4()
