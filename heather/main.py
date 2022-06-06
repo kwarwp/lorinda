@@ -63,7 +63,7 @@ class Fase3():
                Fala(m, texto, r, None),
                Fala(r, rose_fala, m, None),
                Fala(m, "Estou impressionada! Elas são muito importantes!", r, None),
-               Fala(r, rose_mais, m, some),
+               Fala(r, rose_mais, m, sumir),
                Fala(m, "Dr. Rosalinda? Doutora?", None, self.parte_2),
                ]
         Roteiro(c, rot, ele, self.some)
@@ -111,7 +111,7 @@ class Fase3():
         texto=("Maria observa atentamente a estrutura onde está, ela tem duas membranas,"
         " poros e no seu interior alguém dá muitas ordens."
         " Ela percebe que ele a olha com uma cara não muito amigável")
-        quem_ = "Quem é você? Dr. Robert, você o conhece?")
+        quem_ = "Quem é você? Dr. Robert, você o conhece?"
         amigavael = " Maria, ele não é muito simpático. É o todo poderoso! Ele se acha."
         dna_e = "Como você não sabe o meu nome? De que planeta você é?! EU SOU O MAIORAL!!",
 
