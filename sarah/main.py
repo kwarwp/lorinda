@@ -33,7 +33,7 @@ class Roteiro:
                 self._foi = act or self.nada
                 minih = 100/mini
                 self.mini = Elemento(ator.img, cena=cena, w=ator.w, h=ator.h * mini, tipo=f"100% {100/mini}%",
-                                     style=dict(position="relative", top="", bottom="", margin="-10px -minih"))
+                                     style=dict(top="", bottom="65%", margin="-10px -minih"))
                 self.POP.div <= self.mini.elt
                 super().__init__(cena, fala, **kwarg)
 
