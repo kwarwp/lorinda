@@ -93,3 +93,10 @@ Exception: <TypeError: bases[i].$dict is undefined>
     rot = [
 NameError: name 'rose_mai' is not defined
 '''},
+{'date': 'Mon Jun 06 2022 17:28:52.756 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 114
+  quem_ = "Quem é você? Dr. Robert, você o conhece?")
+           ^
+SyntaxError: invalid syntax
+'''},
