@@ -208,3 +208,10 @@ AttributeError: 'Fase3' object has no attribute 'some'
     Roteiro(c, rot, ele,None)
 NameError: name 'c' is not defined
 '''},
+{'date': 'Mon Jun 06 2022 18:40:06.224 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 186
+  ele = [Ator(m,"Maria", 0.4, A.e)
+                                                   ^
+SyntaxError: invalid syntax
+'''},
