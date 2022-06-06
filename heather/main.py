@@ -1,9 +1,10 @@
 # lorinda.heather.main.py
 from _spy.vitollino.main import Cena, Elemento, Texto, STYLE, JOGO
 from _spy.vitollino.main import Inventario as inv 
-from _spy.vitollino.jogos import Ator, Fala, A
+# from _spy.vitollino.jogos import
 from anastasia.main import Associa, SF
 from tracy.main import Personagem
+from sarah.main import Ator, Fala, A, Roteiro
 # salas do games da Angelica, lorinda-lisa-libby e kellee
 STYLE.update(width=600, height="600px")
 #INICIO = "https://i.imgur.com/6vAoUiq.png"
@@ -54,13 +55,12 @@ class Fase3():
         self.rosalinda.entra(self.laboratorio)
         ele = [Ator(self.maria,"Maria", 0.2, A.e),
                Ator(self.rosalinda, "Dr. Rosalinda", 0.2, A.e)]
-        nome_ator = zip( atores, nomes, atores[1:]+[None])
         #rot = [Fala(ato, nom, prox, None) for ato, nom, prox in nome_ator]
         rot = [
                Fala(m, mtit, r, None),
                Fala(r, rtit, m, None),
                ]
-        JOGO.rt(c, rot, ele, self.some)
+        Roteiro(c, rot, ele, self.some)
         #self.foco.vai=self.laboratorio.vai
         self.laboratorio_1 = Cena(img= LABORATORIO_1)
         # self.laboratorio.direita=self.laboratorio_1
