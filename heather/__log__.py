@@ -190,3 +190,21 @@ NameError: name 'm' is not defined
     Roteiro(c, rot, ele, self.some)
 AttributeError: 'Fase3' object has no attribute 'some'
 '''},
+{'date': 'Mon Jun 06 2022 18:30:00.626 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''Traceback (most recent call last):
+  module _core.main line 180
+    dialog.action(lambda *_: self.start()
+  module _core.supygirls_factory line 135
+    self.act(self, lambda *_: self.hide() or extra()) if self.act else None
+  module _core.supygirls_factory line 310
+    return self._first_response(lambda: self._executa_acao(), self.extra, self.error)
+  module _core.supygirls_factory line 282
+    traceback.print_exc(file=sys.stderr)
+  module _core.supygirls_factory line 299
+    exec(self.code, glob)  # dict(__name__="__main__"))
+  module <module> line 263
+    Fase4()
+  module <module> line 167
+    Roteiro(c, rot, ele,None)
+NameError: name 'c' is not defined
+'''},
