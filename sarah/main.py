@@ -1,5 +1,5 @@
 # lorinda.sarah.main.py
-from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
+from _spy.vitollino.main import Cena, Elemento, Texto, STYLE, Popup
 from collections import namedtuple
 Ator = namedtuple('Elenco','ator nome mini alinha')
 Fala = namedtuple('Fala','ator fala prox age')  # , defaults=(None,)*4)
@@ -34,7 +34,7 @@ class Roteiro:
                 minih = 100/mini
                 self.mini = Elemento(ator.img, cena=cena, w=ator.w, h=ator.h * mini, tipo=f"100% {100/mini}%",
                                      style=dict(top="", bottom="65%", margin="-10px -minih"))
-                self.POP.div <= self.mini.elt
+                Popup.POP.div <= self.mini.elt
                 super().__init__(cena, fala, **kwarg)
 
             def esconde(self, *_):
