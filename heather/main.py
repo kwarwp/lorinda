@@ -101,7 +101,7 @@ class Fase3():
                Fala(r, amigavel, m, None),
                Fala(m, "Dá para notar daqui. Mas afinal, quem é este sujeito?", d, desce),
                Fala(d, dna_e, m, None),
-               Fala(m, "Que você se acha o maioral, já sabia, mas qualé o seu nome?", d, None),
+               Fala(m, "Que você se acha o maioral, já sabia, mas qual é o seu nome?", d, None),
                Fala(d, "Vai estudar, garota!", r, None),
                Fala(r, desvende, None, self.parte_5),
                ]
@@ -120,22 +120,22 @@ class Fase3():
 
 class Fase4():  # SEM NENHUMA IMAGEM
     def __init__(self):
-        self.rna=Elemento(img=RNA, x=450, y=50, w=150, h=150, texto= " Vamos lá galera! Produzindo proteínas. ", foi=self.cena_parede) #aparece depois do dna
+        a = self.rna=Elemento(img=RNA, x=450, y=50, w=150, h=150, texto= " Vamos lá galera! Produzindo proteínas. ", foi=self.cena_parede) #aparece depois do dna
         def dna_falou(*_):
             self.rna.entra(self.nucleo)
 
         
-        self.dna=Elemento(img=DNA, x=300,y=0, w=200, h=200, texto= "Só eu trabalho aqui? Vou ter que criar um RNA para me ajudar.", foi=dna_falou)
+        d = self.dna=Elemento(img=DNA, x=300,y=0, w=200, h=200, texto= "Só eu trabalho aqui? Vou ter que criar um RNA para me ajudar.", foi=dna_falou)
         dna_vai = self.dna.vai
         self.dna.vai = lambda *_: None
         def npc_falou(*_):
             self.dna.vai = dna_vai
-        self.npc=Elemento(img=NPC, x=200,y=25, texto= "Atenção Maria, veja o DNA", foi=npc_falou)
+        r = self.npc=Elemento(img=NPC, x=200,y=25, texto= "Atenção Maria, veja o DNA", foi=npc_falou)
         vai = self.npc.vai
         self.npc.vai = lambda *_: None
         def maria_falou(*_):
             self.npc.vai = vai
-        self.maria=Elemento(img=MARIA, x=0, y=0, w=200, h=200, texto="Não consigo sair daqui", foi = maria_falou)
+        m = self.maria=Elemento(img=MARIA, x=0, y=0, w=200, h=200, texto="Não consigo sair daqui", foi = maria_falou)
         self.nucleo=Cena(img=NUCLEO)
         self.nucleo.vai()
         self.parede=Cena(img=PAREDE)
@@ -148,9 +148,27 @@ class Fase4():  # SEM NENHUMA IMAGEM
         self.npc.entra(self.nucleo)
         self.dna.entra(self.nucleo)
         #self.nucleo.direita=Cena(vai=self.cena_parede)
+        npc = "Dr. Robert"
+        texto= "Só eu trabalho aqui? Vou ter que criar um RNA para me ajudar."
+        ele = [Ator(m,"Maria", 0.4, A.e), Ator(self.dna,"DNA", 0.4, A.e),
+               Ator(r, npc, 0.6, A.e),
+               Ator(a, "RNA", 0.6, A.e),
+               Ator(d, "DNA", 0.6, A.e)]
+        rot = [
+               Fala(m, "Não consigo sair daqui", r, None),
+               Fala(r, "Atenção Maria, veja o DNA", d, None),
+               Fala(d, texto, a, None),
+               Fala(a, "Vamos lá galera! Produzindo proteínas!", m, None),
+               Fala(m, "Alguém me explica como se sai daqui!", r, None),
+               Fala(r, "Marque os processos que o DNA executa para a produção de proteína", m, self.cena_parede),
+               Fala(m, "Nossa! Quantas proteínas diferentes são produzidas.", r, None),
+               Fala(r, "Se você acertar os processos irá ganhar uma molécula de ATP", d, self.pergunta),
+               ]
+        Roteiro(c, rot, ele,None)
         
     def cena_parede(self, *_):
         self.parede=Cena(img=PAREDE)
+        '''
         def npc_falou(*_):
             Texto(self.parede,"Marque os processos que o DNA executa para a produção de proteína",foi=self.pergunta).vai()
 
@@ -160,10 +178,11 @@ class Fase4():  # SEM NENHUMA IMAGEM
         def maria_falou(*_):
             self.npc.vai = vai
         self.maria=Elemento(img=MARIA, w=200, h=250, texto="Nossa! Quantas proteínas diferentes são produzidas.", foi=maria_falou)
+        '''
         self.npc.entra(self.parede)
         self.maria.entra(self.parede)
         self.parede.vai()
-        self.parede.esquerda=self.nucleo
+        #self.parede.esquerda=self.nucleo
         
         self.acabou = 2
         #self.pergunta()
@@ -240,5 +259,5 @@ class Fase5():
     
 if __name__ == "__main__":
     # Fase3().parte_3()
-    Fase3().parte_2()
-    #Fase4()
+    #Fase3() #.parte_2()
+    Fase4()
