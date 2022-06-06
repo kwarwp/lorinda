@@ -59,7 +59,7 @@ class Fase3():
                Fala(r, rose_mais, m, sumir),
                Fala(m, "Dr. Rosalinda? Doutora?", None, self.parte_2),
                ]
-        Roteiro(c, rot, ele, self.some)
+        Roteiro(c, rot, ele, None)
         self.laboratorio_1 = Cena(img= LABORATORIO_1)
         self.laboratorio.vai()
     
