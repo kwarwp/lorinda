@@ -53,8 +53,8 @@ class Fase3():
         r = self.rosalinda=Elemento(img=ROSALINDA, x=300, y=280, w=280, h=300)
         self.maria.entra(self.laboratorio)
         self.rosalinda.entra(self.laboratorio)
-        ele = [Ator(self.maria,"Maria", 0.3, A.e),
-               Ator(self.rosalinda, "Dr. Rosalinda", 0.3, A.e)]
+        ele = [Ator(self.maria,"Maria", 0.4, A.e),
+               Ator(self.rosalinda, "Dr. Rosalinda", 0.4, A.e)]
         #rot = [Fala(ato, nom, prox, None) for ato, nom, prox in nome_ator]
         rot = [
                Fala(m, mtit, r, None),
