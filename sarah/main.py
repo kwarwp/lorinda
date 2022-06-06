@@ -32,8 +32,8 @@ class Roteiro:
                 self.ator, self.fala, self.prox = ator, fala, prox
                 self._foi = act or self.nada
                 minih = 100/mini
-                self.mini = Elemento(ator.img, cena=cena, y=-60, w=ator.w, h=ator.h * mini, tipo=f"100% {100/mini}%",
-                                     style=dict(top="", bottom="100%", margin="-100px -minih"))
+                self.mini = Elemento(ator.img, cena=cena, x=-60, w=ator.w, h=ator.h * mini, tipo=f"100% {100/mini}%",
+                                     style=dict(top="", bottom="100%", margin="-150px -minih"))
                 super().__init__(cena, fala, **kwarg)
 
             def esconde(self, *_):
