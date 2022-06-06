@@ -136,7 +136,7 @@ class Fase4():  # SEM NENHUMA IMAGEM
         def maria_falou(*_):
             self.npc.vai = vai
         m = self.maria=Elemento(img=MARIA, x=0, y=0, w=200, h=200, texto="Não consigo sair daqui", foi = maria_falou)
-        self.nucleo=Cena(img=NUCLEO)
+        c = self.nucleo=Cena(img=NUCLEO)
         self.nucleo.vai()
         self.parede=Cena(img=PAREDE)
         
@@ -157,17 +157,16 @@ class Fase4():  # SEM NENHUMA IMAGEM
         rot = [
                Fala(m, "Não consigo sair daqui", r, None),
                Fala(r, "Atenção Maria, veja o DNA", d, None),
-               Fala(d, texto, a, None),
+               Fala(d, texto, a, lambda *_: a.entra(c)),
                Fala(a, "Vamos lá galera! Produzindo proteínas!", m, None),
-               Fala(m, "Alguém me explica como se sai daqui!", r, None),
-               Fala(r, "Marque os processos que o DNA executa para a produção de proteína", m, self.cena_parede),
-               Fala(m, "Nossa! Quantas proteínas diferentes são produzidas.", r, None),
-               Fala(r, "Se você acertar os processos irá ganhar uma molécula de ATP", d, self.pergunta),
+               Fala(m, "Nossa! Quantas proteínas diferentes são produzidas!", d, None),
+               Fala(d, "Realmente! Aqui somos produtivos, sempre fazendo muitas coisas.", m, None),
+               Fala(m, "Alguém me explica como se sai daqui!", None, self.cena_parede)
                ]
         Roteiro(c, rot, ele,None)
         
     def cena_parede(self, *_):
-        self.parede=Cena(img=PAREDE)
+        c = self.parede=Cena(img=PAREDE)
         '''
         def npc_falou(*_):
             Texto(self.parede,"Marque os processos que o DNA executa para a produção de proteína",foi=self.pergunta).vai()
@@ -179,12 +178,21 @@ class Fase4():  # SEM NENHUMA IMAGEM
             self.npc.vai = vai
         self.maria=Elemento(img=MARIA, w=200, h=250, texto="Nossa! Quantas proteínas diferentes são produzidas.", foi=maria_falou)
         '''
+        m, r = self.maria, self.npc
+        self.acabou = 2
         self.npc.entra(self.parede)
         self.maria.entra(self.parede)
         self.parede.vai()
         #self.parede.esquerda=self.nucleo
-        
-        self.acabou = 2
+        npc = "Dr. Robert"
+        ele = [Ator(r, npc, 0.6, A.e), Ator(m,"Maria", 0.4, A.e)]
+               
+        rot = [
+               Fala(r, "Marque os processos que o DNA executa para a produção de proteína", m, None),
+               Fala(m, "Se eu acertar, vai ter um jeito de sair daqui?.", r, None),
+               Fala(r, "Se você acertar os processos, irá ganhar uma molécula de ATP", None, self.pergunta),
+               ]
+        Roteiro(c, rot, ele,None)
         #self.pergunta()
     def pergunta(self, ev=None):
         if self.acabou == 0:
