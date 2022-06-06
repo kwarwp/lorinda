@@ -31,8 +31,8 @@ class Roteiro:
             def __init__(self, ator, fala, prox, act=None, mini=1, **kwarg):
                 self.ator, self.fala, self.prox = ator, fala, prox
                 self._foi = act or self.nada
-                minih = ator.h * mini
-                self.mini = Elemento(ator.img, cena=cena, w=ator.w, h=minih, #, tipo=f"{ator.w}px {minih}px",
+                minih = ator.h / mini
+                self.mini = Elemento(ator.img, cena=cena, w=ator.w, h=minih, tipo=f"100% {minih}%",
                                      style=dict(bottom="65%", margin="-10px -minih"))
                 super().__init__(cena, fala, **kwarg)
 
