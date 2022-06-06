@@ -105,18 +105,39 @@ class Fase3():
         self.laboratorio_2.vai()
         self.laboratorio_2.esquerda=self.laboratorio_1
         texto= " Como ela desapareceu?"
-        tit = (" Você não deve esquecer do seu verdadeiro propósito buscar, desvendar um grande enigma celular."
+        npc = "Dr. Robert"
+        robert = (" Você não deve esquecer do seu verdadeiro propósito buscar, desvendar um grande enigma celular."
         " Você deve sempre lembrar que para uma célula funcionar, todas as suas organelas conectadas devem estar. ")
+        texto=("Maria observa atentamente a estrutura onde está, ela tem duas membranas,"
+        " poros e no seu interior alguém dá muitas ordens."
+        " Ela percebe que ele a olha com uma cara não muito amigável")
+        quem_ = "Quem é você? Dr. Robert, você o conhece?")
+        amigavael = " Maria, ele não é muito simpático. É o todo poderoso! Ele se acha."
+        dna_e = "Como você não sabe o meu nome? De que planeta você é?! EU SOU O MAIORAL!!",
 
-        self.npc= Elemento(img=NPC, y=400,w=200,h=200, texto=tit, foi=self.parte_3)
+        r = self.npc= Elemento(img=NPC, y=400,w=200,h=200, texto=npc, foi=self.parte_3)
+        m = self.maria
         vai = self.npc.vai
         self.npc.vai = lambda *_: None
         def maria_falou(*_):
             self.npc.vai = vai
-        self.maria=Elemento(img=MARIA, x=100, y=280, w=280, h=300, texto=texto, foi=maria_falou)
+        #self.maria=Elemento(img=MARIA, x=100, y=280, w=280, h=300, texto=texto, foi=maria_falou)
         self.maria.entra(self.laboratorio_2)
         self.npc.entra(self.laboratorio_2)
         self.laboratorio_2.direita=Cena(vai=self.parte_3)
+        ele = [Ator(self.maria,"Maria", 0.4, A.e),
+               Ator(self.npc, npc, 1, A.e)]
+        rot = [
+               Fala(m, texto, r, None),
+               Fala(r, robert, m, None),
+               Fala(m, "Esta estrutura!", r, None),
+               Fala(r, texto, m, None),
+               Fala(m, quem_, r, None),
+               Fala(r, amigavel, m, None),
+               Fala(m, "Dá para notar daqui. Mas afinal, quem é este sujeito?", r, None),
+               Fala(r, dna_e, m, None),
+               Fala(m, "Que você se acha o maioral, já sabia, mas qualé o seu nome?", None, self.parte_3),
+               ]
     
     def parte_3(self):
         self.laboratorio_3=Cena(img=LABORATORIO_3)
@@ -301,5 +322,5 @@ class Fase5():
     
 if __name__ == "__main__":
     # Fase3().parte_3()
-    Fase3()
+    Fase3().parte_2()
     #Fase4()
