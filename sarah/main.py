@@ -34,7 +34,7 @@ class Roteiro:
                 minih = 100/mini
                 self.mini = Elemento(ator.img, cena=cena, w=ator.w, h=ator.h * mini, tipo=f"100% {100/mini}%",
                                      style=dict(position="relative", top="", bottom="", margin="-10px -minih"))
-                self.div <= self.mini.elt
+                self.POP.div <= self.mini.elt
                 super().__init__(cena, fala, **kwarg)
 
             def esconde(self, *_):
