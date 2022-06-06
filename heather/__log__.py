@@ -222,3 +222,10 @@ SyntaxError: invalid syntax
                                                    ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Mon Jun 06 2022 18:41:06.296 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 186
+  ele = [Ator(m,"Maria", 0.4, A.e),
+                                                                                   ^
+SyntaxError: invalid syntax
+'''},
