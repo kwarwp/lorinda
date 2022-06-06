@@ -29,16 +29,9 @@ RNA= "https://i.imgur.com/Fiq5UIH.png" # trocar essa imagemTROCADA
 
 class Fase3():
     def __init__(self,*_):
-        #self.inicio=Cena(img=INICIO)
-        #self.foco=Elemento(img=FOCO, x=250, y=280, w=90, h=150, style={"opacity": 0})
-        #self.foco.entra(self.inicio)
         def sumir(ev=0):
             self.rosalinda.x=-100000
-            
-        
         c = self.laboratorio=Cena(img=LABORATORIO)
-        #self.maria=Elemento(img=MARIA, x=300, y=400, w=180, h=200, tit='Oi, Dra. Rosalinda! Sou sua fã!  Li todos os seus livros e seu artigo sobre "Direcionamento de Proteínas", ou seja, como as proteínas percorrem toda a célula.')
-        #self.rosalinda=Elemento(img=ROSALINDA, x=100, y=400, w=180, h=200, tit="As proteínas são muito importantes para a nossa saúde e beleza! Precisamos estuda-las para nos manter saudáveis, fortes e bonitas. ")
         mtit = ('Oi, Dra. Rosalinda! Vim ao seu laboratório pois sou sua fã!  Admiro seu trabalho sobre a difração dos raio-x e me encanta saber que foi você quem realmente descobriu o formato helicoidal do DNA",' 
         'Quero aprender sobre proteínas, me ajuda?')
         rtit = ("As proteínas são moléculas orgânicas fundamentais para os seres vivos, elas são muito importantes para a nossa saúde e beleza!"
@@ -67,37 +60,9 @@ class Fase3():
                Fala(m, "Dr. Rosalinda? Doutora?", None, self.parte_2),
                ]
         Roteiro(c, rot, ele, self.some)
-        #self.foco.vai=self.laboratorio.vai
         self.laboratorio_1 = Cena(img= LABORATORIO_1)
-        # self.laboratorio.direita=self.laboratorio_1
-        # self.laboratorio.direita=Cena(vai=self.some)
         self.laboratorio.vai()
     
-    def some (self):
-        def sumir(ev=0):
-            self.rosalinda.x=-100000
-        def maria_falou(*_):
-            rose_fala = ("Elas tem inúmeras funções. Tem função estrutural,"
-            "pois são os constituintes básicos das fibras musculares, cabelo, ossos, dentes e pele."
-            " Também desempenham importante papel na proteção do organismo contra os agentes patológicos,"
-            " é o caso dos anticorpos; na constituição de hormônios importantes para o bom funcionamento do organismo,"
-            " em especial, a insulina, o FSH e o LH; na aceleração das reações químicas que acontecem no organismo.")
-            self.rosalinda.vai = Texto(self.laboratorio_1, rose_fala, foi=sumir).vai
-        texto=" Quais as funções delas no nosso organismo?" 
-        self.maria=Elemento(img=MARIA, x=100, y=280, w=280, h=300, texto=texto, foi=maria_falou)
-        def rosa_falou(*_):
-            self.maria.vai = vai
-        vai = self.maria.vai
-        self.maria.vai = lambda *_: None
-        self.laboratorio_1.vai()
-        # self.laboratorio_1.esquerda=self.laboratorio
-        self.rosalinda.entra(self.laboratorio_1)
-        fala_rosalinda = "Sim, claro!"
-        self.rosalinda.vai = Texto(self.laboratorio_1, fala_rosalinda, foi=rosa_falou).vai
-        #self.elt.onclick = some
-        self.maria.entra(self.laboratorio_1)
-        self.laboratorio_1.direita=Cena(vai=self.parte_2)
-        #rosalinda some 
     
     def parte_2(self):
         def desce():
@@ -121,6 +86,7 @@ class Fase3():
             " Monte o quebra-cabeça e passe de fase.")
 
         r = self.npc= Elemento(img=NPC, y=400,w=200,h=200) #, texto=npc, foi=self.parte_3)
+        m = self.maria
         self.maria.entra(self.laboratorio_2)
         self.npc.entra(self.laboratorio_2)
         d = self.dna=Elemento(img= DNA, tit="DNA", x=255,y=150,w=200, h=200)
@@ -140,56 +106,6 @@ class Fase3():
                Fala(r, desvende, None, self.parte_5),
                ]
         Roteiro(c, rot, ele,None)
-    
-    def parte_3(self):
-        self.laboratorio_3=Cena(img=LABORATORIO_3)
-        self.laboratorio_3.vai()
-        texto=("Maria observa atentamente a estrutura onde está, ela tem duas membranas, poros e no seu interior alguém dá muitas ordens."
-        " Ela percebe que ele a olha com uma cara não muito amigável e pergunta, quem é você? Dr. Robert, você o conhece?")
-        tit = " Maria, ele não é muito simpático. É o todo poderoso! Ele se acha."
-        self.dna=Elemento(img= DNA, x=255,y=150,w=200, h=200)
-        
-        dna_vai = self.dna.vai
-        self.dna.vai = lambda *_: None
-        def npc_falou(*_):
-            self.dna.vai = Texto(self.laboratorio_3,"Como você não sabe o meu nome? De que planeta você é?! EU SOU O MAIORAL!!",
-            foi=self.parte_4).vai
-
-        self.npc= Elemento(img=NPC,x=25, y=450,w=150,h=150, texto=tit, foi=npc_falou)
-        vai = self.npc.vai
-        self.npc.vai = lambda *_: None
-        def maria_falou(*_):
-            self.npc.vai = vai
-        self.maria=Elemento(img=MARIA, x=350, y=325, w=280, h=300, texto=texto, foi=maria_falou)
-        #self.laboratorio_2.direita=self.laboratorio_3
-        #self.laboratorio_3.esquerda=self.laboratorio_2
-        self.npc.entra(self.laboratorio_3)
-        self.maria.entra(self.laboratorio_3)
-        #self.npc.tit=" Maria ele não é muito simpático. É o todo poderoso! E se acha"
-        #self.maria.tit="Maria o observa atentamente,Maria caminha pelo meio daquele material gelatinoso e se aproximadele.Ele percebe que está sendo observado e olha com uma cara não muito amigavel.quem é você?"
-        self.dna.entra(self.laboratorio_3)
-        #self.laboratorio_3.direita=Cena(vai=self.parte_4)
-
-    def parte_4(self, *_):
-        self.laboratorio_4=Cena(img=LABORATORIO_4)
-        self.laboratorio_4.vai()
-        #Texto(self.laboratorio_4, "p4").vai()
-        # self.laboratorio_4.esquerda=self.laboratorio_3
-        self.dna.entra(self.laboratorio_4)
-        self.npc.entra(self.laboratorio_4)
-        self.maria.entra(self.laboratorio_4)
-        self.maria.tit = ""
-        self.maria.vai = lambda *_: None
-        # self.dna.tit= "Vá estudar garota!"
-        def dna_falou(*_):
-            self.dna.vai = lambda *_: None
-            fala = (" Desvende o enigma: No interior do núcleo há uma molécula constituída por letras que se encaixam"
-            " perfeitamente seguindo uma determinada ordem. Quando nela há algum erro pode provocar uma doença ou mutação."
-            " Monte o quebra-cabeça e passe de fase.")
-            Texto(self.laboratorio_4, fala, foi=self.parte_5).vai()
-        self.dna.vai = Texto(self.laboratorio_4, "Vá estudar garota!", foi=dna_falou).vai
-        #self.npc.tit=" Responda o enigma: No meu interior há uma molécula constituída por letras que se encaixam perfeitamente seguindo uma determinada ordem. Quando nela há algum erro pode provocar uma doença ou mutação. Monte o quebra-cabeça e passe de fase."
-        # self.laboratorio_4.direita=Cena(vai=self.parte_5)
         
         #GABARITO DNA  (ácido dexoxirribonucleico) COMO PODEMOS COLOCAR ISSO ??
 
