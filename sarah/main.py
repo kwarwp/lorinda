@@ -84,6 +84,7 @@ class Roteiro:
         else:
             for ato in self.atores:
                 ato.elt.style.filter = "brightness(100%)"
+            self.foi()
 
     def scripter(self, *_):
         return self.roteiro.pop(0)
