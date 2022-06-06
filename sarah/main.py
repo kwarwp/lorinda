@@ -32,7 +32,7 @@ class Roteiro:
                 self.ator, self.fala, self.prox = ator, fala, prox
                 self._foi = act or self.nada
                 minih = 100/mini
-                self.mini = Elemento(ator.img, cena=cena, w=ator.w, h=ator.h * mini, tipo=f"100% {100/mini}%",
+                self.mini = Elemento(ator.img, cena=cena, y=-60, w=ator.w, h=ator.h * mini, tipo=f"100% {100/mini}%",
                                      style=dict(top="", bottom="100%", margin="-100px -minih"))
                 super().__init__(cena, fala, **kwarg)
 
@@ -45,10 +45,11 @@ class Roteiro:
                 self._foi()
 
             def vai(self, *_):
-                from browser import document
+                from browser import document, html
                 super().vai()
                 #Popup.POP.div <= self.mini.elt
                 document["__baloon__"] <= self.mini.elt
+                document["__baloon__"] <= html.H1(ator.nome)
                 self.ator.elt.style.filter = "brightness(5%)"
                 self.ator.vai = self.nada
 
