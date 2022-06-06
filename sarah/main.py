@@ -50,7 +50,7 @@ class Roteiro:
                 #Popup.POP.div <= self.mini.elt
                 document["__baloon__"] <= self.mini.elt
                 document["__baloon__"] <= html.DIV(self.ator.tit, 
-                style=dict(bottom="100%", left=self.ator.w - 150, background="white"))
+                style=dict(position="absolute", bottom="100%", left=self.ator.w - 60, background="white", padding="5px"))
                 self.ator.elt.style.filter = "brightness(5%)"
                 self.ator.vai = self.nada
 
