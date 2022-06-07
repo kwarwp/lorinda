@@ -8,6 +8,8 @@ from sarah.main import Ator, Fala, A, Roteiro
 # salas do games da Angelica, lorinda-lisa-libby e kellee
 STYLE.update(width=600, height="600px")
 #INICIO = "https://i.imgur.com/6vAoUiq.png"
+REOSALIND = "https://i.imgur.com/ilGy2kj.png"
+ROSALIND = "https://i.imgur.com/Nu49Nha.png"
 FOCO="https://i.imgur.com/6e096Va.png"
 MARIA = "https://i.imgur.com/FukdPW2.png"
 ROSALINDA = "https://imgur.com/0Dv7w29.png"
@@ -44,7 +46,7 @@ class Fase3():
                      " em especial, a insulina, o FSH e o LH; na aceleração das reações químicas que acontecem no organismo.")
         m = self.maria=Elemento(img=MARIA, x=100, y=280, w=280, h=300)
         r = self.rosalinda=Elemento(img=ROSALINDA, x=300, y=280, w=280, h=300)
-        self.placa = Elemento("https://i.imgur.com/ilGy2kj.png", x=250, y=60, w=200,h=70, cena=c)
+        self.placa = Elemento(ROSALIND, x=360, y=40, w=240,h=60, cena=c)
         self.maria.entra(self.laboratorio)
         self.rosalinda.entra(self.laboratorio)
         ele = [Ator(self.maria,"Maria", 0.4, A.e),
