@@ -277,7 +277,7 @@ CICLONE = "https://i.imgur.com/BC6X7ho.gif"
 class Fase11():
     def __init__(self, *_):
         self.laboratorio=Cena(img=LABORATORIO)
-        afala="Ufaaa!!! Graças a vocês consegui sair de Citonópolis.Sua missão agora é ensinar aos outros, tudo o que aprendeu sobre organelas celulares."
+        afala="Ufaaa!!! Graças a vocês consegui sair de Citonópolis.Sua missão agora é ensinar aos outros tudo o que aprendeu sobre organelas celulares."
         self.maria=Personagem(img= MARIA,x=550,y=300, w=300, h=300,afala=afala,responde=self.the_end )
         self.maria.entra(self.laboratorio)
         self.laboratorio.vai()
