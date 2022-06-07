@@ -12,6 +12,8 @@ class Roteiro:
         _prox = zip(roteiro, roteiro[1:] + [Fala(None, "", None, None)])
         self.foi = foi if foi else lambda *_: None
         roteiro = [Fala(a, f, g if g else (p.ator if p else None), x) for [a, f, g, x], p in _prox]
+        self.rotid = ''.join(ator_.nome[0] if ator_.nome else '_' for ator_ in elenco)+f"@{len(roteiro)}"
+        self.rotsiz = len(roteiro)
         # print(list(prox))
         # print(roteiro)
         # return
@@ -72,6 +74,7 @@ class Roteiro:
 
     def segue(self, *_):
         ator, fala, prox, action = self.scripter()
+        score = dict()
         # ator.elt.style.filter = "brightness(30%)"
         fala = self._fala(ator, fala, prox, action, mini=self.dic_ator[ator].mini)  # .vai()
         if prox:
