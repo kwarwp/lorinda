@@ -196,8 +196,8 @@ class Fase5():
     def __init__(self):
     
         c = self.organela=Cena(img=ORGANELA)
-        g = self.complexog=Elemento(img=COMPLEXOG, x=350, y=150, w=200, h=200, cena=c)
-        n = self.npc=Elemento(img=NPC, x=450, y=450, cena=c)
+        g = self.complexog=Elemento(img=COMPLEXOG, x=350, y=350, w=200, h=200, cena=c)
+        n = self.npc=Elemento(img=NPC, x=450, y=150, cena=c)
         self.acabou = 2
         m = self.maria=Elemento(img=MARIA, x=210, y=350, w=200, h=200, cena=c)
         r = self.rosalinda=Elemento(img=ROSALINDA, x=0, y=350, w=200, h=200, cena=c)
@@ -256,4 +256,4 @@ class Fase5():
 if __name__ == "__main__":
     # Fase3().parte_3()
     #Fase3() #.parte_2()
-    Fase3()
+    Fase5()
