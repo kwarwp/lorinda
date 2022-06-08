@@ -1,11 +1,14 @@
 # lorinda.heather.main.py
-from _spy.vitollino.main import Cena, Elemento, Texto, STYLE, JOGO
+from _spy.vitollino.main import Cena, Elemento, Texto, STYLE, JOGO,INVENTARIO
 from _spy.vitollino.main import Inventario as inv 
 # from _spy.vitollino.jogos import
 from anastasia.main import Associa, SF
 from tracy.main import Personagem
 from sarah.main import Ator, Fala, A, Roteiro
 # salas do games da Angelica, lorinda-lisa-libby e kellee
+sco = INVENTARIO.score
+score = dict(casa="heather", carta="", move="local", ponto=0, valor="local")
+
 STYLE.update(width=600, height="600px")
 #INICIO = "https://i.imgur.com/6vAoUiq.png"
 REOSALIND = "https://i.imgur.com/ilGy2kj.png"
@@ -34,6 +37,8 @@ class Fase3():
         def sumir(ev=0):
             self.rosalinda.x=-100000
         c = self.laboratorio=Cena(img=LABORATORIO)
+        score.update(carta="Fase3", valor="parte_0")
+        sco(**score)
         mtit = ('Oi, Dra. Rosalinda! Vim ao seu laboratório pois sou sua fã!  Admiro seu trabalho sobre a difração dos raio-x e me encanta saber que foi você quem realmente descobriu o formato helicoidal do DNA",' 
         'Quero aprender sobre proteínas, me ajuda?')
         rtit = ("As proteínas são moléculas orgânicas fundamentais para os seres vivos, elas são muito importantes para a nossa saúde e beleza!"
