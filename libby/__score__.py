@@ -6,3 +6,4 @@
   {'doc_id': 'af1631e8', 'carta': 'parte_3', 'casa': 'Fase2', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1654689715507},
   {'doc_id': 'af1631e8', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1654689717308},
   {'doc_id': 'af1631e8', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'dialogo', 'ponto': 1, 'valor': 'MD@9', '_level': 1, 'tempo': 1654689723085},
+  {'doc_id': 'af1631e8', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'dialogo', 'ponto': 2, 'valor': 'MD@9', '_level': 1, 'tempo': 1654689726098},
