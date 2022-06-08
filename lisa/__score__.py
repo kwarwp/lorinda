@@ -367,3 +367,4 @@
   {'doc_id': '4ed39c16', 'carta': 'parte_3', 'casa': 'Fase5', 'move': 'pergunta', 'ponto': 3, 'valor': 'False', '_level': 1, 'tempo': 1654690504326},
   {'doc_id': '4ed39c16', 'carta': 'parte_3', 'casa': 'Fase5', 'move': 'pergunta', 'ponto': 2, 'valor': 'False', '_level': 1, 'tempo': 1654690505409},
   {'doc_id': '4ed39c16', 'carta': 'parte_3', 'casa': 'Fase5', 'move': 'pergunta', 'ponto': 2, 'valor': 'False', '_level': 1, 'tempo': 1654690507078},
+  {'doc_id': '4ed39c16', 'carta': 'parte_3', 'casa': 'Fase5', 'move': 'pergunta', 'ponto': 1, 'valor': 'True', '_level': 1, 'tempo': 1654690508098},
