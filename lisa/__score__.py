@@ -1715,3 +1715,4 @@
   {'doc_id': 'c76c3ce8', 'carta': 'parte_2', 'casa': 'Fase3', 'move': 'dialogo', 'ponto': 1, 'valor': 'MDD@11', '_level': 1, 'tempo': 1654695405660},
   {'doc_id': '5c279d85', 'carta': 'parte_3', 'casa': 'Fase5', 'move': 'pergunta', 'ponto': 4, 'valor': 'False', '_level': 1, 'tempo': 1654695342748},
   {'doc_id': 'c76c3ce8', 'carta': 'parte_2', 'casa': 'Fase3', 'move': 'dialogo', 'ponto': 2, 'valor': 'MDD@11', '_level': 1, 'tempo': 1654695412740},
+  {'doc_id': '5c279d85', 'carta': 'parte_3', 'casa': 'Fase5', 'move': 'pergunta', 'ponto': 3, 'valor': 'True', '_level': 1, 'tempo': 1654695351936},
