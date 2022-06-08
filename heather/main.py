@@ -37,7 +37,7 @@ class Fase3():
         def sumir(ev=0):
             self.rosalinda.x=-100000
         c = self.laboratorio=Cena(img=LABORATORIO)
-        score.update(carta="Fase3", valor="parte_0")
+        score.update(carta="Fase3", ponto="parte_0")
         sco(**score)
         mtit = ('Oi, Dra. Rosalinda! Vim ao seu laboratório pois sou sua fã!  Admiro seu trabalho sobre a difração dos raio-x e me encanta saber que foi você quem realmente descobriu o formato helicoidal do DNA",' 
         'Quero aprender sobre proteínas, me ajuda?')
@@ -67,7 +67,7 @@ class Fase3():
                Fala(r, rose_mais, m, sumir),
                Fala(m, "Dr. Rosalinda? Doutora?", None, self.parte_2),
                ]
-        Roteiro(c, rot, ele, None)
+        Roteiro(c, rot, ele, None, loc=("Fase3", "parte_0"))
         self.laboratorio_1 = Cena(img= LABORATORIO_1)
         self.laboratorio.vai()
     
@@ -76,6 +76,8 @@ class Fase3():
         def desce():
             d.y = 250
         c = self.laboratorio_2= Cena(img=LABORATORIO_2)
+        score.update(carta="Fase3", ponto="parte_2")
+        sco(**score)
         #self.laboratorio_1.direita=self.laboratorio_2
         self.laboratorio_2.vai()
         self.laboratorio_2.esquerda=self.laboratorio_1
@@ -113,12 +115,14 @@ class Fase3():
                Fala(d, "Vai estudar, garota!", r, None),
                Fala(r, desvende, None, self.parte_5),
                ]
-        Roteiro(c, rot, ele,None)
+        Roteiro(c, rot, ele,None, loc=("Fase3", "parte_2"))
         
         #GABARITO DNA  (ácido dexoxirribonucleico) COMO PODEMOS COLOCAR ISSO ??
 
     def parte_5(self):
         from anastasia.main import Swap
+        score.update(carta="Fase3", ponto="parte_5")
+        sco(**score)
         self.laboratorio_5=Cena(img=LABORATORIO_5)
         self.laboratorio_5.vai()
         text = Texto(self.laboratorio_5, "Foi!", foi=Fase4)
@@ -128,6 +132,8 @@ class Fase3():
 
 class Fase4():  # SEM NENHUMA IMAGEM
     def __init__(self):
+        score.update(carta="Fase4", ponto="parte_0")
+        sco(**score)
         a = self.rna=Elemento(img=RNA, x=450, y=50, w=150, h=150)
         d = self.dna=Elemento(img=DNA, x=300,y=0, w=200, h=200)
         r = self.npc=Elemento(img=NPC, x=200,y=25)
@@ -159,10 +165,12 @@ class Fase4():  # SEM NENHUMA IMAGEM
                Fala(d, "Realmente! Aqui somos produtivos, sempre fazendo muitas coisas.", m, None),
                Fala(m, "Alguém me explica como se sai daqui!", None, self.cena_parede)
                ]
-        Roteiro(c, rot, ele,None)
+        Roteiro(c, rot, ele,None, loc=("Fase4", "parte_0"))
         
     def cena_parede(self, *_):
         c = self.parede=Cena(img=PAREDE)
+        score.update(carta="Fase4", ponto="parte_1")
+        sco(**score)
         m, r = self.maria, self.npc
         self.acabou = 2
         self.npc.entra(self.parede)
@@ -177,9 +185,11 @@ class Fase4():  # SEM NENHUMA IMAGEM
                Fala(m, "Se eu acertar, vai ter um jeito de sair daqui?.", r, None),
                Fala(r, "Se você acertar os processos, irá ganhar uma molécula de ATP", None, self.pergunta),
                ]
-        Roteiro(c, rot, ele,None)
+        Roteiro(c, rot, ele,None, loc=("Fase4", "parte_1"))
         #self.pergunta()
     def pergunta(self, ev=None):
+        score.update(carta="Fase4", ponto="parte_1", move="pergunta")
+        sco(**score)
         if self.acabou == 0:
             return
         self.acabou -= 1
@@ -192,8 +202,12 @@ class Fase4():  # SEM NENHUMA IMAGEM
     def resposta(self, rep):
         if rep == "A":
             Texto(self.parede, "Ganhou um ATP!", foi=Fase5).vai()
+            score.update(carta="Fase4", ponto="parte_2", move="pergunta", valor="True")
+            sco(**score)
         else:
             Texto(self.parede, "Ops não acertou!", foi=self.pergunta).vai()
+            score.update(carta="Fase4", ponto="parte_2", move="pergunta", valor="False")
+            sco(**score)
 #fase4()
 SETA = "https://i.imgur.com/N3JNtRW.png"
 
@@ -201,6 +215,8 @@ class Fase5():
     def __init__(self):
     
         c = self.organela=Cena(img=ORGANELA)
+        score.update(carta="Fase5", ponto="parte_0", move="local", valor="local")
+        sco(**score)
         g = self.complexog=Elemento(img=COMPLEXOG, x=350, y=350, w=200, h=200, cena=c)
         n = self.npc=Elemento(img=NPC, x=450, y=150, cena=c)
         self.acabou = 2
@@ -222,7 +238,7 @@ class Fase5():
                Fala(m, "Sim, mas Dr. Robert, qual é o nome deste cientista? Será que ele pode me ajudar a sair daqui?", n, None),
                Fala(n, "É bem possível que ele ajude, mas você terá que acertar o seu nome", None, self.pergunta),
                ]
-        Roteiro(c, rot, self.ele,None)
+        Roteiro(c, rot, self.ele,None, loc=("Fase5", "parte_0"))
         
     def mariafala(self, *_):
         m, n, r = self.maria, self.npc, self.rosalinda
@@ -234,12 +250,16 @@ class Fase5():
                Fala(m, "Sim, mas Dr. Robert, qual é o nome deste cientista? Será que ele pode me ajudar a sair daqui?", n, None),
                Fala(n, "É bem possível que ele ajude, mas você terá que acertar o seu nome", None, self.pergunta),
                ]
-        Roteiro(self.organela, rot, self.ele,None)
+        Roteiro(self.organela, rot, self.ele,None, loc=("Fase5", "parte_1"))
         
     def viagem_reticulo(self, *_):
         from stacy.main import Reticulo
+        score.update(carta="Fase5", ponto="parte_2", move="portal", valor="local")
+        sco(**score)
         Reticulo(voltar=self.mariafala)
     def pergunta(self, ev=None):
+        score.update(carta="Fase5", ponto="parte_3", move="pergunta", valor=self.acabou)
+        sco(**score)
         if self.acabou == 0:
             return
         self.acabou -= 1
@@ -253,12 +273,18 @@ class Fase5():
 
         if rep == "C":
             Texto(self.organela, "Ganhou um ATP!", foi=Fase6).vai()
+            score.update(carta="Fase5", ponto="parte_3", move="pergunta", valor="True")
+            sco(**score)
         else:
             Texto(self.organela, "Ops! Não acertou", foi=self.pergunta).vai()
+            score.update(carta="Fase5", ponto="parte_3", move="pergunta", valor="False")
+            sco(**score)
 
             
     
 if __name__ == "__main__":
+    scor = dict(casa="heather", carta="main", move="main", ponto=0, valor="local")
+    sco(**score)
     # Fase3().parte_3()
     #Fase3() #.parte_2()
     Fase3()
