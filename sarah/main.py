@@ -4,7 +4,6 @@ from collections import namedtuple
 Ator = namedtuple('Elenco','ator nome mini alinha')
 Fala = namedtuple('Fala','ator fala prox age')  # , defaults=(None,)*4)
 A = namedtuple('Ali','e m d')(-1, 0, 1)
-    def score(self, casa, carta, move, ponto, valor, _level=1):
 
 class Roteiro:
     def __init__(self, cena, roteiro, elenco=(), foi=None, loc=(0, 0)):
@@ -76,7 +75,7 @@ class Roteiro:
     def segue(self, *_):
         ator, fala, prox, action = self.scripter()
         casa, carta = self.local
-        score = dict(casa=casa, carta=carta, move="dialogo", ponto=self.rotsiz-len(self.roteiro), valor=self.rotid):
+        score = dict(casa=casa, carta=carta, move="dialogo", ponto=self.rotsiz-len(self.roteiro), valor=self.rotid)
 
         # ator.elt.style.filter = "brightness(30%)"
         fala = self._fala(ator, fala, prox, action, mini=self.dic_ator[ator].mini)  # .vai()
