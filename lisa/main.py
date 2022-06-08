@@ -1,6 +1,8 @@
 # lorinda.lisa.main.py
-from _spy.vitollino.main import Cena, Elemento, Labirinto, Texto, Codigo, Sala, STYLE
+from _spy.vitollino.main import Cena, Elemento, Labirinto, Texto, Codigo, Sala, STYLE,INVENTARIO
 from _spy.vittolino.main import INVENTARIO as inv
+sco = INVENTARIO.score
+score = dict(casa="lisa", carta="", move="local", ponto=0, valor="local")
 STYLE["width"] = 1150
 STYLE["height"] = "550px"
 SETA = "https://i.imgur.com/N3JNtRW.png"
@@ -156,12 +158,16 @@ class Fase0():
         self.seta = Elemento(SETA, x=300, y=400, w=400, cena=self.laboratorio, vai=self.segue)
     def vai(self, *_):
         self.laboratorio.vai()
+        score.update(casa="Fase0", carta="parte_1")
+        sco(**score)
         t = Texto(self.laboratorio, "Olá! Agora iremos começar uma grande aventura. Para jogar, é só clicar em cima dos personagens e objetos que aparecerem.")
         t.vai()
     def segue(self, *_):
         apresentacao().vai()
 class Fase1(): 
     def __init__(self, maria=None):
+        score.update(casa="Fase1", carta="parte_0")
+        sco(**score)
         self.laboratorio= Cena(img =  LABORATORIO)
         self.celula = Cena(CELULA)
         self.maria=maria or Elemento(img= MARIA, x=460, y=450, w=150, h=80)
@@ -177,6 +183,8 @@ class Fase1():
         self.npc.texto.foi = self.entrou_celula
     
     def entrou_procarionte(self, *_):
+        score.update(casa="Fase1", carta="parte_1")
+        sco(**score)
         self.procarionte.entra(self.laboratorio)
         self.procarionte.vai=Texto(self.laboratorio,
         " oi eu sou uma célula procarionte,e me chama assim pq eu tenho apenas uma célula no meu corpo",
@@ -218,18 +226,26 @@ class Fase1():
         foi=self.entrou_celula).vai
         
     def entrou_celula(self, *_):
+        score.update(casa="Fase1", carta="parte_a")
+        sco(**score)
         self.celula.vai()
         self.maria.entra(self.celula)
         self.maria.vai=Texto(self.celula, "Onde estou?", foi=self.faladepois1).vai
         self.npc.entra(self.celula)
         self.npc.vai=Texto(self.celula, " Oi! Eu sou o Dr. Robert. Você está na cidade das células! CITONÓPOLIS", foi=self.faladepois2).vai
     def faladepois1(self,*_):
+        score.update(casa="Fase1", carta="parte_b")
+        sco(**score)
         self.maria.vai=Texto(self.celula,"Como posso sair desse lugar?").vai
     def faladepois2(self,*_):
+        score.update(casa="Fase1", carta="parte_c")
+        sco(**score)
         #from libby.main import Fase2
         self.npc.vai=Texto(self.celula,"  Você foi trazida para outra dimensão, a dimensão microscópica das células. Para você sair terá que vencer alguns enigmas e desafios relacionados ao mundo das células ou ficará presa aqui para sempre.", foi=self.faladepois3).vai 
     def faladepois3(self,*_):
         from libby.main import Fase2
+        score.update(casa="Fase1", carta="parte_d")
+        sco(**score)
         fala = "Para começar a sua missão, você precisa passar por uma estrutura muito relevante para a célula."\
         " É ela quem tem a função de proteger, delimitar, transportar e selecionar as substâncias que entram e saem da célula."\
         " Você sabia que as células presentes nos seres vivos são classificadas em eucariontes e procariontes?" \
@@ -237,6 +253,8 @@ class Fase1():
 
         Texto(self.celula, fala, foi=Fase2).vai() 
     def vai(self, *_):
+        score.update(casa="Fase1", carta="parte_e")
+        sco(**score)
 
         self.laboratorio.vai()
         self.maria.entra(self.laboratorio)
@@ -245,6 +263,8 @@ Fase1().vai()
 apresentacao().vai()
 Fase0().vai()
 print(Fase1)
+scor = dict(casa="Fase3", carta="main", move="main", ponto=0, valor="local")
+sco(**score)
 
 
 
