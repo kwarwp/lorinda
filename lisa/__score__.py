@@ -1097,3 +1097,4 @@
   {'doc_id': '9509e910', 'carta': 'parte_1', 'casa': 'Fase0', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1654693371761},
   {'doc_id': '9509e910', 'carta': 'parte_1', 'casa': 'Fase0', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1654693371872},
   {'doc_id': '466892f9', 'carta': 'parte_3', 'casa': 'Fase2', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1654693377955},
+  {'doc_id': '466892f9', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'pergunta', 'ponto': 2, 'valor': 'True', '_level': 1, 'tempo': 1654693380999},
