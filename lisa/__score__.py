@@ -2205,3 +2205,4 @@
   {'doc_id': '04371ac6', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'dialogo', 'ponto': 3, 'valor': 'MD@9', '_level': 1, 'tempo': 1654698852166},
   {'doc_id': '04371ac6', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'dialogo', 'ponto': 4, 'valor': 'MD@9', '_level': 1, 'tempo': 1654698853804},
   {'doc_id': '04371ac6', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'dialogo', 'ponto': 5, 'valor': 'MD@9', '_level': 1, 'tempo': 1654698855260},
+  {'doc_id': '5c279d85', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'pergunta', 'ponto': 3, 'valor': 'True', '_level': 1, 'tempo': 1654698776430},
