@@ -73,3 +73,4 @@
   {'doc_id': 'b80b4990', 'carta': 'parte_2', 'casa': 'Fase4', 'move': 'pergunta', 'ponto': 0, 'valor': 'False', '_level': 1, 'tempo': 1654687690472},
   {'doc_id': 'b80b4990', 'carta': 'parte_1', 'casa': 'Fase4', 'move': 'pergunta', 'ponto': 0, 'valor': 'False', '_level': 1, 'tempo': 1654687692517},
   {'doc_id': 'b80b4990', 'carta': '', 'casa': 'heather', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1654688203349},
+  {'doc_id': 'b80b4990', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1654688203378},
