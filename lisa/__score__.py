@@ -913,3 +913,4 @@
   {'doc_id': 'b76c46a3', 'carta': 'parte_6', 'casa': 'Fase6', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1654692343970},
   {'doc_id': '9c4e58fd', 'carta': 'parte_4', 'casa': 'Fase2', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1654692302731},
   {'doc_id': '8278a2be', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'dialogo', 'ponto': 9, 'valor': 'MD@9', '_level': 1, 'tempo': 1654692314221},
+  {'doc_id': '8278a2be', 'carta': 'parte_2', 'casa': 'Fase3', 'move': 'pergunta', 'ponto': 3, 'valor': 'True', '_level': 1, 'tempo': 1654692315883},
