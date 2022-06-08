@@ -303,3 +303,4 @@
   {'doc_id': 'a42ac145', 'carta': 'parte_1', 'casa': 'Fase4', 'move': 'dialogo', 'ponto': 1, 'valor': 'DM@3', '_level': 1, 'tempo': 1654690413967},
   {'doc_id': '4ed39c16', 'carta': 'parte_1', 'casa': 'Fase4', 'move': 'pergunta', 'ponto': 4, 'valor': 'False', '_level': 1, 'tempo': 1654690351198},
   {'doc_id': '4ed39c16', 'carta': 'parte_2', 'casa': 'Fase4', 'move': 'pergunta', 'ponto': 3, 'valor': 'True', '_level': 1, 'tempo': 1654690352466},
+  {'doc_id': '8278a2be', 'carta': 'parte_2', 'casa': 'Fase3', 'move': 'dialogo', 'ponto': 4, 'valor': 'MDD@11', '_level': 1, 'tempo': 1654690338628},
