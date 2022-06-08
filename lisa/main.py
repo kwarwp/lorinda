@@ -154,6 +154,8 @@ apresentacao()
 #ESPERMATOZOIDE = HEMACIA = ELODEA = CALCIFORME = NPC = "https://i.imgur.com/illvVvw.jpg"
 class Fase0(): 
     def __init__(self, maria=None):
+        score.update(casa="Fase0", carta="parte_0")
+        sco(**score)
         self.laboratorio= Cena(img =  ABERTURA)
         self.seta = Elemento(SETA, x=300, y=400, w=400, cena=self.laboratorio, vai=self.segue)
     def vai(self, *_):
@@ -262,7 +264,7 @@ class Fase1():
 Fase1().vai()
 apresentacao().vai()
 Fase0().vai()
-print(Fase1)
+#print(Fase1)
 scor = dict(casa="Fase3", carta="main", move="main", ponto=0, valor="local")
 sco(**score)
 
