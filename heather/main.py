@@ -125,8 +125,8 @@ class Fase3():
         sco(**score)
         self.laboratorio_5=Cena(img=LABORATORIO_5)
         self.laboratorio_5.vai()
-        text = Texto(self.laboratorio_5, "Foi!", foi=Fase4)
-        Swap(JOGO,ENIGMA,self.laboratorio_5, x=50, y=50, w=500,h=500, venceu=text)
+        text = Texto(self.laboratorio_5, "Foi!", foi=Fase4).vai()
+        #Swap(JOGO,ENIGMA,self.laboratorio_5, x=50, y=50, w=500,h=500, venceu=text)
         
 #fase3()
 
@@ -172,7 +172,7 @@ class Fase4():  # SEM NENHUMA IMAGEM
         score.update(casa="Fase4", carta="parte_1")
         sco(**score)
         m, r = self.maria, self.npc
-        self.acabou = 2
+        self.acabou = 5
         self.npc.entra(self.parede)
         self.maria.entra(self.parede)
         self.parede.vai()
@@ -191,7 +191,7 @@ class Fase4():  # SEM NENHUMA IMAGEM
         score.update(casa="Fase4", carta="parte_1", move="pergunta")
         sco(**score)
         if self.acabou == 0:
-            return
+            self.cena_parede()
         self.acabou -= 1
         self.multi = Texto(self.parede, "Quais são os processos do DNA?",
                            foi=self.resposta, A= "Transcrição, tradução e proteína", B= "Fagocitose,tradução e proteína", C= "Pinocitose,tradução e proteína", D= "Fagocitose,transdução e proteína").vai()
@@ -202,11 +202,11 @@ class Fase4():  # SEM NENHUMA IMAGEM
     def resposta(self, rep):
         if rep == "A":
             Texto(self.parede, "Ganhou um ATP!", foi=Fase5).vai()
-            score.update(casa="Fase4", carta="parte_2", move="pergunta", valor="True")
+            score.update(casa="Fase4", carta="parte_2", move="pergunta", valor="True", ponto=self.acabou)
             sco(**score)
         else:
             Texto(self.parede, "Ops não acertou!", foi=self.pergunta).vai()
-            score.update(casa="Fase4", carta="parte_2", move="pergunta", valor="False")
+            score.update(casa="Fase4", carta="parte_2", move="pergunta", valor="False", ponto=self.acabou)
             sco(**score)
 #fase4()
 SETA = "https://i.imgur.com/N3JNtRW.png"
@@ -219,7 +219,7 @@ class Fase5():
         sco(**score)
         g = self.complexog=Elemento(img=COMPLEXOG, x=350, y=350, w=200, h=200, cena=c)
         n = self.npc=Elemento(img=NPC, x=450, y=150, cena=c)
-        self.acabou = 2
+        self.acabou = 5
         m = self.maria=Elemento(img=MARIA, x=210, y=350, w=200, h=200, cena=c)
         r = self.rosalinda=Elemento(img=ROSALINDA, x=0, y=350, w=200, h=200, cena=c)
         vai_reticulo = Elemento(SETA, tit="Conheça melhor o Retículo Endoplasmático clicando nesta seta", x=20, y=150,
@@ -258,10 +258,10 @@ class Fase5():
         sco(**score)
         Reticulo(voltar=self.mariafala)
     def pergunta(self, ev=None):
-        score.update(casa="Fase5", carta="parte_3", move="pergunta", valor=self.acabou)
+        score.update(casa="Fase5", carta="parte_3", move="pergunta", ponto=self.acabou)
         sco(**score)
         if self.acabou == 0:
-            return
+            self.mariafala()
         self.acabou -= 1
         self.multi = Texto(self.organela, "Sou responsável por armazenar, transformar e exportar as substâncias produzidas no retículo endoplasmático liso e rugoso.Qual o meu nome?",
                            foi=self.resposta, A= "Lisossomo", B= "Peroxissomo ", C= "Complexo de Golgi", D= "Ribossomo").vai()
@@ -273,11 +273,11 @@ class Fase5():
 
         if rep == "C":
             Texto(self.organela, "Ganhou um ATP!", foi=Fase6).vai()
-            score.update(casa="Fase5", carta="parte_3", move="pergunta", valor="True")
+            score.update(casa="Fase5", carta="parte_3", move="pergunta", valor="True", ponto=self.acabou)
             sco(**score)
         else:
             Texto(self.organela, "Ops! Não acertou", foi=self.pergunta).vai()
-            score.update(casa="Fase5", carta="parte_3", move="pergunta", valor="False")
+            score.update(casa="Fase5", carta="parte_3", move="pergunta", valor="False", ponto=self.acabou)
             sco(**score)
 
             
