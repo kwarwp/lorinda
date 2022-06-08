@@ -1,10 +1,12 @@
 # lorinda.libby.main.
-from _spy.vitollino.main import Cena, Elemento, Texto, STYLE
+from _spy.vitollino.main import Cena, Elemento, Texto, STYLE,INVENTARIO 
 from _spy.vitollino.main import INVENTARIO as inv 
 from anastasia.main import Associa, SF
 from courtney.main import MOCHILA
 SF.update({"font-size":"20px", "transition": "left 1s, top 1s"})
 STYLE.update(width=1000, height="600px")
+sco = INVENTARIO.score
+score = dict(casa="libby", carta="", move="local", ponto=0, valor="local")
 #bacteriaCerto
 CELULA_1 = "https://imgur.com/ifgaFEO.jpg"
 #protozoarioCERTO
@@ -59,6 +61,8 @@ class Fase2():
         self.celula_5.entra(self.membrana)
         self.celula_6.entra(self.membrana)
         self.npc=Elemento(img=NPC, x=900,y=350)
+        score.update(casa="Fase2", carta="parte_0")
+        sco(**score)
         
         """self.jogo.nome(nome="1-Meu núcleo é espalhado", tit=0, x=450, y=50)
         self.jogo.nome(nome="2-Citoplasma, membrana, núcleo", tit=1, x=750, y=50)
@@ -71,6 +75,8 @@ class Fase2():
     def acertou(self,*_):
         #from kellee.main import Fase3
         from heather.main import Fase3
+        score.update(casa="Fase2", carta="parte_1")
+        sco(**score)
         MOCHILA.ganha_atp()
         MOCHILA.ganha_atp()
         MOCHILA.ganha_atp()
@@ -80,6 +86,8 @@ class Fase2():
         foi=self.atravessa_membrana).vai()
     
     def atravessa_membrana(self,*_):
+        score.update(casa="Fase2", carta="parte_2")
+        sco(**score)
         def maria_anda(*_):
             self.maria.y = 450
             self.maria.o = 0.2
@@ -97,6 +105,8 @@ class Fase2():
     def atravessou_membrana(self,*_):
         #from kellee.main import Fase3
         from heather.main import Fase3
+        score.update(casa="Fase2", carta="parte_3")
+        sco(**score)
         Texto(self.membrana, "Você atravessou a membrana plasmática. Uma estrutura fantástica que possui composição lipoproteica, ou seja, é formada por proteínas e lipídios. Ela é composta por duas camadas de lipídios e as proteínas estão imersas nessas camadas. Esses lipídios mudam constantemente de posição e as proteínas distribuídas pela membrana lembram um mosaico, por isso, esse modelo de membrana recebeu o nome de “modelo do mosaico fluido”.",
         foi=Fase3).vai()
         MOCHILA.ganha_atp()
@@ -106,6 +116,8 @@ class Fase2():
         MOCHILA.ganha_atp()
 
     def errou(self, *_):
+        score.update(casa="Fase2", carta="parte_4")
+        sco(**score)
         Texto(self.membrana, "Poxa! Não sou eu, pois sou uma célula eucarionte. ").vai()
     
     
