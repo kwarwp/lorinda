@@ -2965,3 +2965,4 @@
   {'doc_id': 'e08d01bf', 'carta': 'parte_3', 'casa': 'Fase5', 'move': 'pergunta', 'ponto': 4, 'valor': 'False', '_level': 1, 'tempo': 1654700120002},
   {'doc_id': 'e08d01bf', 'carta': 'parte_3', 'casa': 'Fase5', 'move': 'pergunta', 'ponto': 4, 'valor': 'False', '_level': 1, 'tempo': 1654700123218},
   {'doc_id': 'e08d01bf', 'carta': 'parte_3', 'casa': 'Fase5', 'move': 'pergunta', 'ponto': 3, 'valor': 'False', '_level': 1, 'tempo': 1654700125821},
+  {'doc_id': 'e08d01bf', 'carta': 'parte_3', 'casa': 'Fase5', 'move': 'pergunta', 'ponto': 3, 'valor': 'False', '_level': 1, 'tempo': 1654700128634},
