@@ -1,9 +1,11 @@
 # lorinda.naomi.main.py
-from _spy.vitollino.main import Cena, Elemento,Texto, STYLE,JOGO
+from _spy.vitollino.main import Cena, Elemento,Texto, STYLE,JOGO,INVENTARIO 
 from courtney.main import MOCHILA
 from tracy.main import Personagem
 from anastasia.main import Swap
 STYLE.update(width=1000, height="600px")
+sco = INVENTARIO.score
+score = dict(casa="libby", carta="", move="local", ponto=0, valor="local")
 
 PAREDE = "https://i.imgur.com/ZAoCT4o.png"
 SEMFUNCAO = "https://i.imgur.com/u7zMLPW.png"
@@ -23,6 +25,8 @@ class Fase6:
         MOCHILA.esvazia_mochila()
         MOCHILA.ganha_atp()
         #MOCHILA.quando_pega(pegou_atp)
+        score.update(casa="Fase6", carta="parte_0")
+        sco(**score)
 
         self.parede = Cena("https://i.imgur.com/sGoKfvs.jpg")
         self.parede.vai()
@@ -53,11 +57,13 @@ class Fase6:
         txt = ('Maria vê uma organela que está com uma placa escrito sem função'
             ' e vai ver do que se trata.')
         Texto(self.parede, txt, foi=self.move_maria).vai()
-        self.acabou = 2
+        self.acabou = 6
         # self.pergunta()
         
     def pegou_atp(self, ev=None):
         ATP = "https://i.imgur.com/k0Az1Ts.png"
+        score.update(casa="Fase6", carta="parte_1")
+        sco(**score)
         self.ATP = Elemento(img=ATP, tit="ATP", x=600, y=500, cena=self.parede, drag=True)
         self._parede_vai()
         
@@ -67,10 +73,14 @@ class Fase6:
         ' onde são armazenadas em pequenas vesículas, que se soltam e originam os lisossomos.'
         ' Essa organela é fundamental nos processos de fagocitose e pinocitose, em que a célula captura partículas através de pseudópodes para sua nutrição ou para destruir possíveis agentes' 
         ' nocivos')
+        score.update(casa="Fase6", carta="parte_2")
+        sco(**score)
         Texto(self.parede, txt, foi=self.vai_embora).vai()
         self.ATP.x = -1000
         
     def vai_embora(self, ev=None):
+        score.update(casa="Fase6", carta="parte_3")
+        sco(**score)
         self.movente.elt.ontransitionend = Fase7
         self.movente.x=-600
         self.movente.y=-400
@@ -78,19 +88,27 @@ class Fase6:
         self.movente1.y=-400
     
     def pergunta(self, ev=None):
+        score.update(casa="Fase6", carta="parte_4", move="pergunta", ponto=self.acabou)
+        sco(**score)
         if self.acabou == 0:
             return
         self.acabou -= 1
         self.multi = Texto(self.parede, "processos corretos?",
                            foi=self.resposta, A= "a b", B= "b c", C= "c d", D= "b d").vai()
     def aconselha(self, ev=None):
+        score.update(casa="Fase6", carta="parte_4", move="local", ponto=0)
+        sco(**score)
         conselho = "Pegue um ATP da mochila e jogue nos vírus e bactérias."
         self.multi = Texto(self.parede, conselho).vai()
 
     def move_maria(self, ev=None):
+        score.update(casa="Fase6", carta="parte_5", move="local", ponto=0)
+        sco(**score)
         self.maria.x=400
 
     def encosta_maria(self, ev=None):
+        score.update(casa="Fase6", carta="parte_6", move="local", ponto=0)
+        sco(**score)
         txt = ('Ela encosta nessa organela e '
         'de repente vê umas bolinhas se desprendendo do complexo de Golgi.'
             ' As bolinhas vem na direção da organela e a destrói. Elas atacam Maria, que corre.')
@@ -98,6 +116,8 @@ class Fase6:
         # self.matou_organela = False
 
     def pede_socorro(self, ev=None):
+        score.update(casa="Fase6", carta="parte_7", move="local", ponto=0)
+        sco(**score)
         txt = ('Socorro Dr. Robert!')
         Texto(self.parede, txt).vai()
 
@@ -130,8 +150,12 @@ class Fase6:
     def resposta(self, rep):
         if rep == "A":
             Texto(self.parede, "Ganhou um ATP!").vai()
+            score.update(casa="Fase6", carta="parte_9", move="pergunta", valor="True", ponto=self.acabou)
+            sco(**score)
         else:
             Texto(self.parede, "Ops! Não acertou", foi=self.pergunta).vai()
+            score.update(casa="Fase6", carta="parte_9", move="pergunta", valor="False", ponto=self.acabou)
+            sco(**score)
             
 GLICOSE = "https://i.imgur.com/vgrC2fM.png"
 RIBOSSOMA = "https://i.imgur.com/Tf5yrKb.png"
@@ -149,6 +173,8 @@ class Fase7():
             self.glicose.x = -10000
             self.entra_redemoinho()
         self.celula = Cena(CELULA)
+        score.update(casa="Fase7", carta="parte_0")
+        sco(**score)
         self.celula.vai()
         self.escuro = Elemento(ESCURO, x=0, y=0, w=1000, h=600, o=0.92, cena=self.celula)
         self.mitocondria = Elemento(MITOCONDRIA, x=20, y=40, w=950, h=550, o=0.6, cena=self.celula,
@@ -168,6 +194,8 @@ class Fase7():
         self.parede = Cena("https://i.imgur.com/sGoKfvs.jpg")
         
     def ribossomo_fala(self, _=0):
+        score.update(casa="Fase7", carta="parte_1")
+        sco(**score)
         afala = "Você está em cima de uma mitocôndria. Acople a molécula de glicose para liberar energia e acender a luz, assim o ribossomo poderá encontrar sua outra parte."
         self.glicose_fake = Personagem(GLICOSE, x=-10000, y=100,w=100, h=100, afala=afala)
         afala = "Ribossomo: Maria, olhe onde você está..."
@@ -190,12 +218,16 @@ class Fase7():
         self.maria_double.elt.style.transform = "rotate(200deg)"
   
     def main(self,_=0):
+        score.update(casa="Fase7", carta="parte_3")
+        sco(**score)
         Dialogo(self.maria_sai)
         '''self.parede=cena = JOGO.c('https://i.imgur.com/ujAF00x.jpg').vai()
         t = JOGO.n(cena, 'É isto! A Parede Celular!',foi=self.maria_sai)
         Swap(JOGO, PAREDE, cena, w=700,h=200,x=50,y=150,dw=7,dh=2, venceu=t)''' 
     
     def maria_sai(self):
+        score.update(casa="Fase7", carta="parte_4")
+        sco(**score)
         #self.maria.entra(self.parede)
         self.maria.entra(self.parede)
         self.parede.vai()
@@ -203,6 +235,8 @@ class Fase7():
         self.maria.fala()
          
     def outro_redemoinho(self):
+        score.update(casa="Fase7", carta="parte_5")
+        sco(**score)
         afala = 'De novo este redemoinho louco?'
         self.redemoinho = Elemento(CICLONE, x=0, y=0, w=600, h=600, o=0.8, cena=self.parede,
         style= {"transition": "left 6s"})
@@ -216,6 +250,8 @@ class Fase7():
         self.maria.entra(self.parede)
         self.maria.fala()
     def entra_redemoinho(self, _=0):
+        score.update(casa="Fase7", carta="parte_6")
+        sco(**score)
         #from amanda.main import main
         afala = "Maria: Acho que finalmente conseguirei sair desse lugar."
         self.redemoinho = Elemento(CICLONE, x=0, y=0, w=600, h=600, o=0.8, cena=self.celula,
@@ -231,6 +267,8 @@ class Fase7():
         self.maria.fala()
    
     def ribossomofala(self):
+        score.update(casa="Fase7", carta="parte_7")
+        sco(**score)
         self.mitocondria=Cena(img=MITOCONDRIA)
         self.mitocondria.vai()
         self.ribossomo=Personagem(img=RIBOSSOMA,x=0, afala="No caminho eu te explico...")
@@ -245,6 +283,8 @@ class Fase7():
 
 class Dialogo:
     def __init__(self, saida):
+        score.update(casa="Fase9", carta="parte_0")
+        sco(**score)
         self.saida = saida
         self.cena = cena = JOGO.c('https://i.imgur.com/ujAF00x.jpg').vai()
         fala = ("Atenção a dica. É uma estrutura que envolve a membrana plasmática"
@@ -260,14 +300,20 @@ class Dialogo:
     def nada(self, *_):
         pass
     def maria_fala(self, *_):
+        score.update(casa="Fase9", carta="parte_1")
+        sco(**score)
         self.npc.vai, self.npc_vai = self.nada, self.npc.vai
         self.maria.vai = Texto(self.cena, "Que estrutura é essa?", foi=self.npc_fala).vai
     def npc_fala(self, *_):
+        score.update(casa="Fase9", carta="parte_2")
+        sco(**score)
         fala = "Resolva o enigma. Forme a palavra correta e livre você estará."
         self.npc.vai = Texto(self.cena, fala, foi=self.jogar).vai
 
     def jogar(self, _=0):
         cena = JOGO.c('https://i.imgur.com/ujAF00x.jpg').vai()
+        score.update(casa="Fase9", carta="parte_3")
+        sco(**score)
         t = JOGO.n(cena, 'É isto! A Parede Celular!', foi=self.saida)  # .vai()
         Swap(JOGO, PAREDE, cena, w=700,h=200,x=50,y=150,dw=7,dh=2, venceu=t)
         
@@ -277,6 +323,8 @@ CICLONE = "https://i.imgur.com/BC6X7ho.gif"
 class Fase11():
     def __init__(self, *_):
         self.laboratorio=Cena(img=LABORATORIO)
+        score.update(casa="Fase11", carta="parte_0")
+        sco(**score)
         afala="Ufaaa!!! Graças a vocês consegui sair de Citonópolis.Sua missão agora é ensinar aos outros tudo o que aprendeu sobre organelas celulares."
         self.maria=Personagem(img= MARIA,x=550,y=300, w=300, h=300,afala=afala,responde=self.the_end )
         self.maria.entra(self.laboratorio)
@@ -287,6 +335,8 @@ class Fase11():
         
         
     def the_end(self, _=0):
+        score.update(casa="Fase11", carta="parte_1")
+        sco(**score)
         #from amanda.main import main
         afala = "Maria: Ufa! Eu finalmente consegui sair desse lugar. Sua missão agora é ensinar aos outros, tudo o que aprendeu sobre organelas celulares."
         end="https://i.imgur.com/PGl5zCl.jpg"
@@ -294,6 +344,8 @@ class Fase11():
         
         
 if __name__ == "__main__": 
+    score.update(casa="Fase6", carta="parte_A")
+    sco(**score)
     #Fase6()
     Fase7()
     
