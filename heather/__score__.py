@@ -71,3 +71,4 @@
   {'doc_id': 'b80b4990', 'carta': 'parte_2', 'casa': 'Fase4', 'move': 'pergunta', 'ponto': 0, 'valor': 'False', '_level': 1, 'tempo': 1654687685660},
   {'doc_id': 'b80b4990', 'carta': 'parte_1', 'casa': 'Fase4', 'move': 'pergunta', 'ponto': 0, 'valor': 'False', '_level': 1, 'tempo': 1654687687771},
   {'doc_id': 'b80b4990', 'carta': 'parte_2', 'casa': 'Fase4', 'move': 'pergunta', 'ponto': 0, 'valor': 'False', '_level': 1, 'tempo': 1654687690472},
+  {'doc_id': 'b80b4990', 'carta': 'parte_1', 'casa': 'Fase4', 'move': 'pergunta', 'ponto': 0, 'valor': 'False', '_level': 1, 'tempo': 1654687692517},
