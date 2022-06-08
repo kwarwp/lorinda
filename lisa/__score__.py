@@ -2955,3 +2955,4 @@
   {'doc_id': '8500353d', 'carta': 'parte_0', 'casa': 'Fase11', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1654699943538},
   {'doc_id': '8500353d', 'carta': 'parte_1', 'casa': 'Fase11', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1654699945579},
   {'doc_id': 'f74fcfaf', 'carta': 'parte_2', 'casa': 'Fase5', 'move': 'portal', 'ponto': 3, 'valor': 'local', '_level': 1, 'tempo': 1654700105927},
+  {'doc_id': 'e08d01bf', 'carta': 'parte_2', 'casa': 'Fase5', 'move': 'portal', 'ponto': 4, 'valor': 'local', '_level': 1, 'tempo': 1654700048370},
