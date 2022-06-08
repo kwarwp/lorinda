@@ -1980,3 +1980,4 @@
   {'doc_id': '824d4f2a', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'dialogo', 'ponto': 5, 'valor': 'MD@9', '_level': 1, 'tempo': 1654696217870},
   {'doc_id': 'ae40ae66', 'carta': 'parte_1', 'casa': 'Fase5', 'move': 'dialogo', 'ponto': 3, 'valor': 'MDD@5', '_level': 1, 'tempo': 1654696273007},
   {'doc_id': '824d4f2a', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'dialogo', 'ponto': 6, 'valor': 'MD@9', '_level': 1, 'tempo': 1654696222536},
+  {'doc_id': 'ae40ae66', 'carta': 'parte_1', 'casa': 'Fase5', 'move': 'dialogo', 'ponto': 4, 'valor': 'MDD@5', '_level': 1, 'tempo': 1654696284943},
