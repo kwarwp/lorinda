@@ -1025,3 +1025,4 @@
   {'doc_id': '8278a2be', 'carta': 'parte_2', 'casa': 'Fase6', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1654693024344},
   {'doc_id': 'eadcfde5', 'carta': 'parte_0', 'casa': 'Fase1', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1654693035319},
   {'doc_id': 'eadcfde5', 'carta': 'parte_e', 'casa': 'Fase1', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1654693035484},
+  {'doc_id': 'eadcfde5', 'carta': 'parte_0', 'casa': 'Fase0', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1654693035660},
