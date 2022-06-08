@@ -125,8 +125,8 @@ class Fase3():
         sco(**score)
         self.laboratorio_5=Cena(img=LABORATORIO_5)
         self.laboratorio_5.vai()
-        text = Texto(self.laboratorio_5, "Foi!", foi=Fase4).vai()
-        #Swap(JOGO,ENIGMA,self.laboratorio_5, x=50, y=50, w=500,h=500, venceu=text)
+        text = Texto(self.laboratorio_5, "Foi!", foi=Fase4)#.vai()
+        Swap(JOGO,ENIGMA,self.laboratorio_5, x=50, y=50, w=500,h=500, venceu=text)
         
 #fase3()
 
