@@ -1,14 +1,15 @@
 # lorinda.sarah.main.py
-from _spy.vitollino.main import Cena, Elemento, Texto, STYLE, Popup
+from _spy.vitollino.main import Cena, Elemento, Texto, STYLE, Popup, INVENTARIO
 from collections import namedtuple
 Ator = namedtuple('Elenco','ator nome mini alinha')
 Fala = namedtuple('Fala','ator fala prox age')  # , defaults=(None,)*4)
 A = namedtuple('Ali','e m d')(-1, 0, 1)
-
+    def score(self, casa, carta, move, ponto, valor, _level=1):
 
 class Roteiro:
-    def __init__(self, cena, roteiro, elenco=(), foi=None):
+    def __init__(self, cena, roteiro, elenco=(), foi=None, loc=(0, 0)):
         self.dic_ator = {a.ator: a for a in elenco}
+        self.local = loc
         _prox = zip(roteiro, roteiro[1:] + [Fala(None, "", None, None)])
         self.foi = foi if foi else lambda *_: None
         roteiro = [Fala(a, f, g if g else (p.ator if p else None), x) for [a, f, g, x], p in _prox]
@@ -74,9 +75,12 @@ class Roteiro:
 
     def segue(self, *_):
         ator, fala, prox, action = self.scripter()
-        score = dict()
+        casa, carta = self.local
+        score = dict(casa=casa, carta=carta, move="dialogo", ponto=self.rotsiz-len(self.roteiro), valor=self.rotid):
+
         # ator.elt.style.filter = "brightness(30%)"
         fala = self._fala(ator, fala, prox, action, mini=self.dic_ator[ator].mini)  # .vai()
+        INVENTARIO.score(**score)
         if prox:
             prox.vai = self.segue
         fala.vai()
