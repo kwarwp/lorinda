@@ -33,3 +33,4 @@
   {'doc_id': '6ab9d247', 'carta': 'Fase3', 'casa': 'heather', 'move': 'local', 'ponto': 'parte_5', 'valor': 'local', '_level': 1, 'tempo': 1654686470233},
   {'doc_id': 'b80b4990', 'carta': '', 'casa': 'heather', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1654687570275},
   {'doc_id': 'b80b4990', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1654687570325},
+  {'doc_id': 'b80b4990', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'dialogo', 'ponto': 1, 'valor': 'MD@9', '_level': 1, 'tempo': 1654687572545},
