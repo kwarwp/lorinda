@@ -22,3 +22,4 @@
   {'doc_id': 'bea8a053', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'dialogo', 'ponto': 6, 'valor': 'MD@9', '_level': 1, 'tempo': 1656812157477},
   {'doc_id': 'bea8a053', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'dialogo', 'ponto': 7, 'valor': 'MD@9', '_level': 1, 'tempo': 1656812160958},
   {'doc_id': 'bea8a053', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'dialogo', 'ponto': 8, 'valor': 'MD@9', '_level': 1, 'tempo': 1656812164391},
+  {'doc_id': 'bea8a053', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'dialogo', 'ponto': 9, 'valor': 'MD@9', '_level': 1, 'tempo': 1656812171253},
