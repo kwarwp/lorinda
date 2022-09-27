@@ -202,3 +202,10 @@ SyntaxError: invalid syntax
                                                                                                                                                                                                                  ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Tue Sep 27 2022 13:17:47.665 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 47
+  self.coroinha.vai = Texto(self.paroquia,
+                                                                                                                                                                                                                     ^
+SyntaxError: invalid syntax
+'''},
