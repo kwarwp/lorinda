@@ -5,7 +5,7 @@ from _spy.vitollino.main import INVENTARIO as inv
 STYLE["width"] = 900
 STYLE["heigth"] ='650px'
 
-MATHEUS = ""
+COROINHA = ""
 CALICE = "" 
 AMBULA = ""
 PATENA = ""
@@ -21,9 +21,9 @@ PRESBITERIO = ""
 FINAL = ""
 
 
-class Tiao:
+class Jerominho:
     def __init__(self):
-        self.theus = Elemento(img=MATHEUS)
+        self.coroinha = Elemento(img=COROINHA)
         self.calice = Elemento(img=CALICE) 
         self.ambula = Elemento(img=AMBULA)
         self.patena = Elemento(img=PATENA)
@@ -38,20 +38,20 @@ class Tiao:
         self.presbiterio = Cena(img=PRESBITERIO)
         self.fim = Cena(img=FINAL)
         self.paroquia.vai()
-        self.entrou_theus()
+        self.entrou_coroinha()
     
     def entrou_theus(self, *_):
     
         self.theus.entra(self.paroquia)
         Texto(self.paroquia, " Bem vindos ao quiz dos coroinhas.").vai()       
-        self.theus.vai = Texto(self.paroquia,
-                               "Eu sou o Matheus! Neste jogo, testarei seus conhecimentos sobre o que foi ensinado em nossos encontros" 
+        self.coroinha.vai = Texto(self.paroquia,
+                               "Eu sou o Tarcisio! Neste jogo, testarei seus conhecimentos sobre o que foi ensinado em nossos encontros" 
                                foi=self.entrou_cena1).vai
         
     def entrou_intro(self, *_):
-        self.theus.entra(self.igreja)
+        self.coroinha.entra(self.igreja)
         Texto(self.igreja, "Estão prontos?")
-        self.theus.vai = Texto(self.igreja,
+        self.coroinha.vai = Texto(self.igreja,
                                "Como foi ensinado em nossos encontros,o grupo de coroinhas é formado por meninos e meninas que, nas igrejas, realizam funções de auxílio ao que preside a celebração, especialmente o padre."
                                foi=self.cena1).vai
                                
@@ -66,8 +66,8 @@ class Tiao:
         respondeu[optou].vai()
         
     self.igreja_p.vai()
-    self.theus.entra(self.igrej_p)
-    self.theus.vai = Texto(self.igreja_p, "Qual destas é uma responsabilidade dos Coroinhas?"
+    self.coroinha.entra(self.igrej_p)
+    self.coroinha.vai = Texto(self.igreja_p, "Qual destas é uma responsabilidade dos Coroinhas?"
                            foi=resposta, A= "Responder mal os pais.", B= "Conversar,rir ou brincar durante a celebração.", C= "Ser cuidadoso com as coisas da Igreja.").vai
         
         
@@ -81,8 +81,8 @@ class Tiao:
         respondeu[optou].vai()
         
     self.igreja_p.vai()
-    self.theus.entra(self.igreja_p)
-    self.theus.vai = Texto(self.igreja_p, "Chegando à igreja, para onde o coroinha deve se dirigir?"
+    self.coroinha.entra(self.igreja_p)
+    self.coroinha.vai = Texto(self.igreja_p, "Chegando à igreja, para onde o coroinha deve se dirigir?"
                            foi=resposta, A= "Para a sacristia", B= "Para a Capela do Santíssimo", C= "Para o Presbitério").vai
                            
                            
@@ -92,7 +92,7 @@ class Tiao:
     def entrou_intro2(self, *_):
     self.theus.entra(self.igreja)
     Texto(self.igreja, " Nesta fase, recordamos a Liturgia ,  Celebrações Litúrgicas e alguns símbolos utilizados na liturgia.")
-    self.theus.vai = Texto(self.igreja,
+    self.coroinha.vai = Texto(self.igreja,
                             "Vamos nessa?"
                              foi=self.cena3).vai
                              
@@ -107,8 +107,8 @@ class Tiao:
         respondeu[optou].vai() 
 
     self.igreja_p.vai()
-    self.theus.entra(self.igreja_p)
-    self.theus.vai = Texto(self.igreja_p, "O que é Liturgia?"
+    self.coroinha.entra(self.igreja_p)
+    self.coroinha.vai = Texto(self.igreja_p, "O que é Liturgia?"
                            foi=resposta, A= "O livro que recebemos mensalmente.", B= "As orações que fazemos em casa.", C="A ação do povo, o serviço do povo.").vai
             
             
@@ -123,8 +123,8 @@ class Tiao:
         respondeu[optou].vai()
         
     self.igreja_p.vai()
-    self.theus.entra(self.igreja_p)
-    self.theus.vai = Texto(self.igreja, "O que são celebrações Litúrgicas?"    
+    self.coroinha.entra(self.igreja_p)
+    self.coroinha.vai = Texto(self.igreja, "O que são celebrações Litúrgicas?"    
                            foi=resposta, A="Encontros de Deus com seu povo reunido.", B="Festa de aniversário.", C= "Celebração dos povos.").vai
             
         
@@ -138,8 +138,8 @@ class Tiao:
         respondeu[optou].vai()
         
     self.igreja_p.vai()
-    self.theus.entra(self.igreja_p)
-    self.theus.va = Texto(self.igreja, "O que significa INRI ?"
+    self.coroinha.entra(self.igreja_p)
+    self.coroinha.vai = Texto(self.igreja, "O que significa INRI ?"
                           foi=resposta, A="Santíssima Trindade.", B="Nossa Senhora.",  C="Jesus Rei dos Judeus.").vai
                           
                         
@@ -153,15 +153,15 @@ class Tiao:
         respondeu[optou].vai()
         
     self.igreja_p.vai()
-    self.theus.entra(igreja_p)
-    self.theus.vai = Texto(self.igreja, "O que siguinifica A e Ω ?"
+    self.coroinha.entra(igreja_p)
+    self.coroinha.vai = Texto(self.igreja, "O que siguinifica A e Ω ?"
                            foi=resposta, A="Cristo.", B="Alfa e Ômega.", C="Jesus salvador dos homens.").vai
                            
                            
     def entrou_intro3(self, *_):
     self.theus.entra(self.presbiterio)
     Texto(self.presbiterio, "Nesta próxima fase, relembramos algumas posições em que os coroinhas ficam durante a celebração da Santa Missa.")
-    self.theus.vai = Texto(self.presbiterio,
+    self.coroinha.vai = Texto(self.presbiterio,
                             "Estão preparados?"
                              foi=self.cena7).vai 
                              
@@ -176,8 +176,8 @@ class Tiao:
         respondeu[optou].vai()
         
     self.prebiterio_p.vai()
-    self.theus.entra(presbiterio_p)
-    self.theus.vai = Texto(self.presbiterio, "O que siguinifica inclinar o corpo ?"
+    self.coroinha.entra(presbiterio_p)
+    self.coroinha.vai = Texto(self.presbiterio, "O que siguinifica inclinar o corpo ?"
                            foi=resposta, A="Escuta da palavra.", B="Oração profunda.", C="Reverência e honra.").vai
                            
     def entrou_cena8
@@ -190,8 +190,8 @@ class Tiao:
         respondeu[optou].vai()
         
     self.presbiterio_p.vai()
-    self.theus.entra(prebiterio_p)
-    self.theus.vai = Texto(self.presbiterio, "O que siguinifica estar sentado ?"
+    self.coroinha.entra(prebiterio_p)
+    self.coroinha.vai = Texto(self.presbiterio, "O que siguinifica estar sentado ?"
                            foi=resposta, A="Humildade.", B="Escuta da palavra.", C="Reverência e honra.").vai
                            
     def entrou_cena9
@@ -204,10 +204,10 @@ class Tiao:
         respondeu[optou].vai()
         
     self.presbiterio_p.vai()
-    self.theus.entra(presbiterio_p)
-    self.theus.vai = Texto(self.prebiterio, "O que siguinifica bater no peito ?"
+    self.coroinha.entra(presbiterio_p)
+    self.coroinha.vai = Texto(self.prebiterio, "O que siguinifica bater no peito ?"
                            foi=resposta, A="Arrependimento dos pecados.", B="Peregrino.", C="Meditação.").vai
             
         self.fim.vai()  
-Tiao()
+Jerominho()
     
