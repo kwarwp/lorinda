@@ -58,9 +58,9 @@ class Reticulo:
         Elemento(PROTEINA, tit="PROTEÍNA", x= 300, y=200, w=200, h=300, cena =sala_a.oeste,
         texto="Aqui no rugoso também fazemos a glicosilação das proteínas, isto é vamos inserir glicose na molécula de proteína")
         Elemento(GLICOSE, tit="GLICOSE", x= 500, y=200, w=200, h=300, cena =sala_a.oeste,
-        texto="pois é eu sou a glicose que vai ser usada para clicolisar a molécula de proteína")
+        texto="pois é eu sou a glicose que vai ser usada para glicosilar a molécula de proteína.")
         Elemento(MARIA, tit="MARIA", x= 700, y=200, w=200, h=300, cena =sala_a.oeste,
-        texto="Glicolizar, que coisa complicada!")
+        texto="Glicosilar, que coisa complicada!")
         Elemento("https://i.imgur.com/EDgO8xF.png", x= 600, w=300, cena =sala_a.oeste)
         #Elemento("https://i.imgur.com/cTgMqWX.png", cena =sala_b.norte)
     def norte(self):
