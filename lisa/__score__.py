@@ -3353,3 +3353,4 @@
   {'doc_id': 'c3ca386c', 'carta': 'parte_0', 'casa': 'Fase4', 'move': 'dialogo', 'ponto': 4, 'valor': 'MDDRD@7', '_level': 1, 'tempo': 1667655579316},
   {'doc_id': 'c3ca386c', 'carta': 'parte_0', 'casa': 'Fase4', 'move': 'dialogo', 'ponto': 5, 'valor': 'MDDRD@7', '_level': 1, 'tempo': 1667655601805},
   {'doc_id': 'c3ca386c', 'carta': 'parte_0', 'casa': 'Fase4', 'move': 'dialogo', 'ponto': 6, 'valor': 'MDDRD@7', '_level': 1, 'tempo': 1667655623097},
+  {'doc_id': 'c3ca386c', 'carta': 'parte_0', 'casa': 'Fase4', 'move': 'dialogo', 'ponto': 7, 'valor': 'MDDRD@7', '_level': 1, 'tempo': 1667655646887},
