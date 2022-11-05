@@ -3384,3 +3384,4 @@
   {'doc_id': 'c3ca386c', 'carta': 'parte_1', 'casa': 'Fase2', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1667658360355},
   {'doc_id': 'c3ca386c', 'carta': 'parte_2', 'casa': 'Fase2', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1667658361887},
   {'doc_id': 'c3ca386c', 'carta': 'parte_3', 'casa': 'Fase2', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1667658373483},
+  {'doc_id': 'c3ca386c', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'pergunta', 'ponto': 4, 'valor': 'True', '_level': 1, 'tempo': 1667658375663},
