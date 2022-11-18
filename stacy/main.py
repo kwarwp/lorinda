@@ -109,9 +109,9 @@ class Reticulo:
         Elemento(METACARBOIDRATO, x= 600, w=300, cena =sala_b.leste)
     def bsul(self):
         Elemento(LIPIDEO, tit="LIPIDIO", x= 400, y=200, w=200, h=300, cena =sala_b.sul,
-        texto="Oi gente eu sou um lipído, e seu produzido aqui no retículo endoplasmático liso")
+        texto="Oi gente eu sou um lipídio e seu produzido aqui no retículo endoplasmático liso")
         Elemento(MARIA, tit="MARIA", x= 700, y=200, w=200, h=300, cena =sala_b.sul,
-        texto="Aqui no retículo liso, temos a síntese dos lipídios e também alguns hormônios")
+        texto="Aqui no retículo liso temos a síntese dos lipídios e também alguns hormônios")
         Elemento(SINLIPIDEO, x= 600, w=300, cena =sala_b.sul)
 
 
