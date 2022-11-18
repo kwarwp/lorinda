@@ -67,9 +67,9 @@ class Reticulo:
         def dica(*_):
             Texto(self.sala_a.norte, "depois de clicar nos dois personagens, vá para outra sala clicando na esquerda, direita ou topo").vai()
         Personagem(PROTEINA, tit="PROTEÍNA", x= 400, y=200, w=200, h=300, cena =sala_a.norte,
-        texto="Aqui os ribossomas fabricam a mim, PROTEíNA, me despejando nesta parte do retículo rugoso")
+        texto="Aqui os ribossomos fabricam a mim, PROTEÍNA, me despejando nesta parte do retículo rugoso")
         Personagem(MARIA, tit="MARIA", x= 700, y=200, w=200, h=300, cena =sala_a.norte, foi=dica,
-        texto="Entendi, o retículo parece rugoso aqui pois está cheio destas bolinhas, os ribossomas")
+        texto="Entendi, o retículo parece rugoso aqui pois está cheio destas bolinhas, os ribossomos")
         Elemento("https://i.imgur.com/h6fl6wy.png", x= 600, w=300, cena =sala_a.norte)
     def leste(self):
         Elemento(PROTEINA, tit="PROTEÍNA POLIPEPTíDIO", x= 400, y=200, w=200, h=300, cena =sala_a.leste,
