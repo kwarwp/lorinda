@@ -3779,3 +3779,4 @@
   {'doc_id': '49ca2977', 'carta': 'parte_0', 'casa': 'Fase7', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1668825075523},
   {'doc_id': '49ca2977', 'carta': 'parte_1', 'casa': 'Fase7', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1668825192767},
   {'doc_id': '49ca2977', 'carta': 'parte_6', 'casa': 'Fase7', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1668825260859},
+  {'doc_id': '49ca2977', 'carta': 'parte_3', 'casa': 'Fase7', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1668825288086},
