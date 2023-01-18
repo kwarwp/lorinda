@@ -3898,3 +3898,4 @@
   {'doc_id': '49a20d1c', 'carta': 'parte_6', 'casa': 'Fase6', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1673991460650},
   {'doc_id': '49a20d1c', 'carta': 'parte_7', 'casa': 'Fase6', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1673991460717},
   {'doc_id': '49a20d1c', 'carta': 'parte_4', 'casa': 'Fase6', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1673991464733},
+  {'doc_id': '49a20d1c', 'carta': 'parte_1', 'casa': 'Fase6', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1673991471346},
