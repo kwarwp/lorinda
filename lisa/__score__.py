@@ -4045,3 +4045,4 @@
   {'doc_id': 'ce1dbebe', 'carta': 'parte_0', 'casa': 'Fase1', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1674166090116},
   {'doc_id': 'ce1dbebe', 'carta': 'parte_a', 'casa': 'Fase1', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1674166098417},
   {'doc_id': 'ce1dbebe', 'carta': 'parte_b', 'casa': 'Fase1', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1674166102120},
+  {'doc_id': 'ce1dbebe', 'carta': 'parte_c', 'casa': 'Fase1', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1674166106485},
