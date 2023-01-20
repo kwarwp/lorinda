@@ -130,3 +130,4 @@
   {'doc_id': 'b80b4990', 'carta': 'parte_3', 'casa': 'Fase5', 'move': 'pergunta', 'ponto': 2, 'valor': 'True', '_level': 1, 'tempo': 1654688385488},
   {'doc_id': '5be158e7', 'carta': '', 'casa': 'heather', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1667659334924},
   {'doc_id': '5be158e7', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1667659334965},
+  {'doc_id': 'a1ca9368', 'carta': '', 'casa': 'heather', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1674163686083},
