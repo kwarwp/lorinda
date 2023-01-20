@@ -4055,3 +4055,4 @@
   {'doc_id': 'ce1dbebe', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'dialogo', 'ponto': 1, 'valor': 'MD@9', '_level': 1, 'tempo': 1674166140561},
   {'doc_id': 'ce1dbebe', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'dialogo', 'ponto': 2, 'valor': 'MD@9', '_level': 1, 'tempo': 1674166144289},
   {'doc_id': 'ce1dbebe', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'dialogo', 'ponto': 3, 'valor': 'MD@9', '_level': 1, 'tempo': 1674166147737},
+  {'doc_id': 'ce1dbebe', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'dialogo', 'ponto': 4, 'valor': 'MD@9', '_level': 1, 'tempo': 1674166151004},
