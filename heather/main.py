@@ -91,7 +91,7 @@ class Fase3():
         quem_ = "Quem é você? Dr. Robert, você o conhece?"
         amigavel = "Maria, ele não é muito simpático. É o todo poderoso! Ele se acha."
         dna_e = "Como você não sabe o meu nome? De que planeta você é?! EU SOU O MAIORAL!!"
-        desvende = (" Desvende o enigma: No interior do núcleo há uma molécula constituída por letras que se encaixam"
+        desvende = (" Desvende o enigma: No interior do núcleo há uma molécula constituída por bases que se encaixam"
             " perfeitamente seguindo uma determinada ordem. Quando nela há algum erro pode provocar uma doença ou mutação."
             " Monte o quebra-cabeça e passe de fase.")
 
