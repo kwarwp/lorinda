@@ -138,3 +138,4 @@
   {'doc_id': 'a1ca9368', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'dialogo', 'ponto': 4, 'valor': 'MD@9', '_level': 1, 'tempo': 1674163699776},
   {'doc_id': 'a1ca9368', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'dialogo', 'ponto': 5, 'valor': 'MD@9', '_level': 1, 'tempo': 1674163703005},
   {'doc_id': 'a1ca9368', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'dialogo', 'ponto': 6, 'valor': 'MD@9', '_level': 1, 'tempo': 1674163706437},
+  {'doc_id': 'a1ca9368', 'carta': 'parte_0', 'casa': 'Fase3', 'move': 'dialogo', 'ponto': 7, 'valor': 'MD@9', '_level': 1, 'tempo': 1674163709800},
