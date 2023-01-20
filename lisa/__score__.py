@@ -4076,3 +4076,4 @@
   {'doc_id': 'ce1dbebe', 'carta': 'parte_5', 'casa': 'Fase3', 'move': 'pergunta', 'ponto': 4, 'valor': 'True', '_level': 1, 'tempo': 1674166250251},
   {'doc_id': 'ce1dbebe', 'carta': 'parte_0', 'casa': 'Fase4', 'move': 'pergunta', 'ponto': 4, 'valor': 'True', '_level': 1, 'tempo': 1674166268616},
   {'doc_id': 'ce1dbebe', 'carta': 'parte_0', 'casa': 'Fase4', 'move': 'dialogo', 'ponto': 1, 'valor': 'MDDRD@7', '_level': 1, 'tempo': 1674166273421},
+  {'doc_id': 'ce1dbebe', 'carta': 'parte_0', 'casa': 'Fase4', 'move': 'dialogo', 'ponto': 2, 'valor': 'MDDRD@7', '_level': 1, 'tempo': 1674166278680},
