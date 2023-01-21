@@ -4241,3 +4241,4 @@
   {'doc_id': '3202b7ee', 'carta': 'parte_1', 'casa': 'Fase9', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1674251187858},
   {'doc_id': '3202b7ee', 'carta': 'parte_2', 'casa': 'Fase9', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1674251191565},
   {'doc_id': '3202b7ee', 'carta': 'parte_3', 'casa': 'Fase9', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1674251197441},
+  {'doc_id': '3202b7ee', 'carta': 'parte_4', 'casa': 'Fase7', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1674251239345},
