@@ -100,7 +100,7 @@ class Fase3():
         self.npc.afala = "Roboide: ele não é muito simpático"
         self.npc.responde = self.parte_4
         maria_texto= "Maria:   quem é você?"
-        self.dna=Personagem(img= DNA, y=400,x=200, responde=self.npc.fala, afala="COMO, VOCÊ NÃO SABE MEU NOME? DE QUE PLANETA VOCÊ É?EU SOU O MAIORAL! ")
+        self.dna=Personagem(img= DNA, y=400,x=200, responde=self.npc.fala, afala="COMO, VOCÊ NÃO SABE MEU NOME? DE QUE PLANETA VOCÊ É?EU SOU O MAIORAL!Mas tenho ajuda de enzimas como a DNA polimerase, DNA primase, DNA helicase, DNA ligase e topoisomerase. para fazer tudo funcionar aqui. ")
         self.dna.entra(self.laboratorio_3)
         self.maria.fala(self.laboratorio_3,responde=self.dna.fala, texto=maria_texto) 
         self.laboratorio_3.direita=Cena(vai=self.parte_4)
