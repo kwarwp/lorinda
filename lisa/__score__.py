@@ -4245,3 +4245,4 @@
   {'doc_id': '3202b7ee', 'carta': 'parte_5', 'casa': 'Fase7', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1674251241949},
   {'doc_id': '3202b7ee', 'carta': 'parte_0', 'casa': 'Fase11', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1674251249647},
   {'doc_id': '3202b7ee', 'carta': 'parte_1', 'casa': 'Fase11', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1674251252947},
+  {'doc_id': 'f4a0b907', 'carta': 'parte_0', 'casa': 'Fase1', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1676986554235},
