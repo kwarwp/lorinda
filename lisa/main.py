@@ -1,6 +1,6 @@
 # lorinda.lisa.main.py
 from _spy.vitollino.main import Cena, Elemento, Labirinto, Texto, Codigo, Sala, STYLE,INVENTARIO
-from _spy.vittolino.main import INVENTARIO as inv
+from _spy.vitollino.main import INVENTARIO as inv
 sco = INVENTARIO.score
 score = dict(casa="lisa", carta="", move="local", ponto=0, valor="local")
 STYLE["width"] = 1150
