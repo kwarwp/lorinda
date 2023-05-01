@@ -179,3 +179,4 @@
   {'doc_id': 'a1ca9368', 'carta': 'parte_3', 'casa': 'Fase5', 'move': 'pergunta', 'ponto': 5, 'valor': 'local', '_level': 1, 'tempo': 1674164020943},
   {'doc_id': 'a1ca9368', 'carta': 'parte_3', 'casa': 'Fase5', 'move': 'pergunta', 'ponto': 4, 'valor': 'True', '_level': 1, 'tempo': 1674164031970},
   {'doc_id': 'a1ca9368', 'carta': 'parte_0', 'casa': 'Fase6', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1674164034945},
+  {'doc_id': '7438f5db', 'carta': '', 'casa': 'heather', 'move': 'local', 'ponto': 0, 'valor': 'local', '_level': 1, 'tempo': 1682978040297},
