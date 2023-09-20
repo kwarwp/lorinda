@@ -62,3 +62,10 @@ SyntaxError: invalid syntax
                            ^
 SyntaxError: invalid syntax
 '''},
+{'date': 'Wed Sep 20 2023 15:25:11.960 GMt-0300 (Horário Padrão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 2
+  from_supy.vitolino.main.import Cena,Elemento,Texto, STYLE
+                           ^
+SyntaxError: invalid syntax
+'''},
